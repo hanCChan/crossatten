@@ -20,8 +20,13 @@ def main():
     ap.add_argument("--gpus", default="0,1,2,3")
     ap.add_argument("--per-gpu", type=int, default=4)
     ap.add_argument("--threads", type=int, default=4)
+    ap.add_argument("--max-minutes", type=float, default=None, help="stop dispatching new jobs after this budget")
+    ap.add_argument("--only", default=None, help="comma-separated arm-name prefixes to run")
     a = ap.parse_args()
+    t_begin = time.time()
     jobs = [json.loads(line) for line in Path(a.jobs).read_text().splitlines() if line.strip()]
+    if a.only:
+        jobs = [j for j in jobs if any(j["arm"].startswith(p) for p in a.only.split(","))]
     todo = [j for j in jobs if not (Path(j["out"]) / "metrics.json").is_file()]
     lock = threading.Lock()
     status = dict(total=len(jobs), skipped=len(jobs) - len(todo), done=0, failed=[], started=time.strftime("%F %T"))
@@ -30,7 +35,7 @@ def main():
     def worker(gpu):
         while True:
             with lock:
-                if not todo:
+                if not todo or (a.max_minutes is not None and time.time() - t_begin > 60 * a.max_minutes):
                     return
                 j = todo.pop(0)
             out = Path(j["out"])

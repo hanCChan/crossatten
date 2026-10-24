@@ -1,0 +1,22 @@
+{
+ "rules": "README.md section 4",
+ "crossattn_recipe_arm": "xa_cos_awgn",
+ "recipe_ladder_acc": {
+  "xa_const": 45.37,
+  "xa_cos": 45.38,
+  "xa_cos_awgn": 56.73
+ },
+ "band_choice": "trueib",
+ "band_acc": {
+  "full": 56.73,
+  "oobnear": 48.86,
+  "lp200": 54.14,
+  "nooob": 37.55,
+  "trueib": 91.48
+ },
+ "token_design": "mixed",
+ "cis_gap_no_material_loss": false,
+ "confirmation": "all registered arms, seeds 201-203, dev_val + confirm RX",
+ "run_table_sha256": "50aa2dc75bb566e5ad1d9cd940739a3ac3f10f28f6698661ca5bb8f1f0ede208",
+ "n_runs": 76
+}

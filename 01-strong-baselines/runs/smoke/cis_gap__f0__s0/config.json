@@ -1,0 +1,58 @@
+{
+ "arm": {
+  "name": "cis_gap",
+  "q": "Q2",
+  "family": "shen_cis",
+  "recipe": "shen",
+  "awgn": [
+   0,
+   50
+  ],
+  "head": "gap",
+  "desc": "Flatten -> global average pool (0.27M params), otherwise identical"
+ },
+ "fold": 0,
+ "seed": 0,
+ "stage": "explore",
+ "recipe": {
+  "opt": "sgd",
+  "lr": 0.001,
+  "momentum": 0.9,
+  "sched": "plateau",
+  "factor": 0.2,
+  "patience": 10,
+  "early_stop": 20,
+  "epochs": 2,
+  "ckpt": "last_at_stop"
+ },
+ "data_seed": 3537703208,
+ "batch": 64,
+ "roles": {
+  "source": [
+   "b210_1",
+   "rtl_1",
+   "rtl_3",
+   "rtl_6",
+   "rtl_9"
+  ],
+  "dev_val": [
+   "b200_mini_1",
+   "pluto_1",
+   "rtl_2",
+   "rtl_5",
+   "rtl_7"
+  ],
+  "confirm": [
+   "b200_1",
+   "n210_1",
+   "rtl_4",
+   "rtl_8"
+  ]
+ },
+ "protocol_sha256": "1311eb35852a63f216a3f0c8e87ca9833ece8614975f9ff79ec28079b70b9127",
+ "code_sha256": "c15f5abc997722e4af704d81f92349d967c7990372c8416fdb475012fa2971c9",
+ "torch": "2.5.0+cu124",
+ "gpu": "NVIDIA A100-SXM4-40GB",
+ "decision_file": null,
+ "smoke": true
+}

@@ -85,7 +85,8 @@ def main():
             row[f"{role}_worst"] = round(100 * sm["worst_acc"], 2)
             row[f"{role}_worst_rx"] = sm["worst_rx"]
             alt = [k for k in r if k in ("last", "best_val")][0]
-            row[f"{role}_acc_{alt}ckpt"] = round(100 * r[alt][role]["summary"]["acc_mean"], 2)
+            row["alt_ckpt"] = alt
+            row[f"{role}_acc_altckpt"] = round(100 * r[alt][role]["summary"]["acc_mean"], 2)
         rows.append(row)
     with open(SUM / f"{stage}_runs.csv", "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0].keys()))

@@ -1,0 +1,22 @@
+q,role,b,a,desc,n_pairs,delta_mean,delta_min,delta_max,pos_pairs,rx_pos,rx_n,worst_rx_delta,verdict
+Q1,dev_val,xa_const,xa_p1fixed,horizon 100ep + source-val checkpoint,4,8.3,2.64,12.89,4,9,10,-4.12,unclear
+Q1,dev_val,xa_cos,xa_const,warmup+cosine schedule,4,0.01,-1.96,2.29,2,5,10,-7.2,unclear
+Q1,dev_val,xa_cos_awgn,xa_cos,"AWGN U[0,50) dB",4,11.35,4.4,19.08,4,7,10,32.4,improves
+Q2,dev_val,cis_gap,cis_flat,GAP head vs Flatten-Dense (AWGN),4,-36.99,-45.99,-19.43,0,0,10,-49.02,harms
+Q2,dev_val,cis_gap_noawgn,cis_flat_noawgn,GAP head vs Flatten-Dense (no AWGN),4,-15.45,-20.96,-9.6,0,1,10,-8.73,harms
+Q2,dev_val,cis_flat,cis_flat_noawgn,AWGN on CIS (flatten),4,8.74,6.25,10.71,4,10,10,16.3,improves
+Q2,dev_val,cis_gap,cis_gap_noawgn,AWGN on CIS (GAP),4,-12.79,-17.47,0.62,1,2,10,-24.0,harms
+Q2,dev_val,cis_ib_flat,cis_flat,strict-IB CIS vs Shen crop (-203..+195 kHz),4,0.86,-0.64,2.73,2,6,10,-13.1,unclear
+Q2*,dev_val,cis_flat,xa_cos_awgn,SYSTEM-LEVEL: Shen-CIS vs CrossAttn (different input/model/recipe),4,36.47,34.03,39.63,4,10,10,38.32,system-level (no verdict)
+Q3,dev_val,xa_oobnear_cos,xa_cos,OOB pathway near band only (no AWGN),4,0.68,-2.62,4.94,2,8,10,-0.68,unclear
+Q3,dev_val,xa_oobnear_cos_awgn,xa_cos_awgn,OOB pathway near band only (AWGN),4,-7.87,-14.44,-2.45,0,1,10,-21.92,harms
+Q3,dev_val,xa_lp200_cos,xa_cos,input band-limited |f|<=200k (no AWGN),4,1.57,-1.29,3.64,3,7,10,0.8,improves
+Q3,dev_val,xa_lp200_cos_awgn,xa_cos_awgn,input band-limited |f|<=200k (AWGN),4,-2.59,-3.68,-0.98,0,3,10,-6.5,harms
+Q3,dev_val,xa_nooob_cos,xa_cos,remove explicit OOB pathway (no AWGN),4,0.2,-32.39,20.35,3,4,10,11.82,unclear
+Q3,dev_val,xa_nooob_cos_awgn,xa_cos_awgn,remove explicit OOB pathway (AWGN),4,-19.18,-34.08,1.16,1,1,10,-25.07,harms
+Q3,dev_val,xa_trueib_cos,xa_nooob_cos,"strict IB input vs full input, both without OOB pathway (no AWGN)",4,35.4,6.31,73.0,4,10,10,51.1,improves
+Q3,dev_val,xa_trueib_cos_awgn,xa_nooob_cos_awgn,"strict IB input vs full input, both without OOB pathway (AWGN)",4,53.92,33.56,71.56,4,10,10,58.7,improves
+Q3,dev_val,xa_trueib_cos,xa_cos,TrueIB vs full CrossAttn-OOB (no AWGN),4,35.6,22.35,52.78,4,10,10,62.93,improves
+Q3,dev_val,xa_trueib_cos_awgn,xa_cos_awgn,TrueIB vs full CrossAttn-OOB (AWGN),4,34.75,25.55,40.59,4,10,10,33.62,improves
+Q4,dev_val,tf_cos,xa_cos,time/frequency split tokens (no AWGN),4,-5.59,-13.36,0.79,1,2,10,10.17,harms
+Q4,dev_val,tf_cos_awgn,xa_cos_awgn,time/frequency split tokens (AWGN),4,-7.93,-17.2,-1.92,0,1,10,-17.9,harms
