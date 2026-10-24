@@ -1,0 +1,29 @@
+{
+  "stage": "01-strong-baselines",
+  "registered": "2026-10-25 (before any stage-01 fit)",
+  "notes": "One factor changes per comparison; see README.md section 3 for the pre-registered comparisons and decision rules.",
+  "arms": [
+    {"name": "xa_p1fixed",        "q": "Q1", "family": "crossattn", "recipe": "p1_fixed",   "awgn": null,      "desc": "paper-1 CrossAttn-OOB, paper-1 recipe literally (AdamW 1e-3, wd 5e-4, 4 epochs, last weights)"},
+    {"name": "xa_const",          "q": "Q1", "family": "crossattn", "recipe": "long_const", "awgn": null,      "desc": "+ 100-epoch horizon, source_val-CE checkpoint (constant LR)"},
+    {"name": "xa_cos",            "q": "Q1", "family": "crossattn", "recipe": "long_cos",   "awgn": null,      "desc": "+ warmup/cosine LR schedule"},
+    {"name": "xa_cos_awgn",       "q": "Q1", "family": "crossattn", "recipe": "long_cos",   "awgn": [0, 50],   "desc": "+ Shen AWGN augmentation, SNR~U[0,50) dB"},
+
+    {"name": "xa_oobnear_cos",      "q": "Q3", "family": "crossattn", "recipe": "long_cos", "awgn": null,    "oob_keep": [62500, 200000], "desc": "OOB pathway keeps only 62.5<|f|<=200 kHz (main pathway unchanged)"},
+    {"name": "xa_oobnear_cos_awgn", "q": "Q3", "family": "crossattn", "recipe": "long_cos", "awgn": [0, 50], "oob_keep": [62500, 200000], "desc": "same + AWGN"},
+    {"name": "xa_lp200_cos",        "q": "Q3", "family": "crossattn", "recipe": "long_cos", "awgn": null,    "input_fmax": 200000, "desc": "whole input band-limited to |f|<=200 kHz, all views regenerated"},
+    {"name": "xa_lp200_cos_awgn",   "q": "Q3", "family": "crossattn", "recipe": "long_cos", "awgn": [0, 50], "input_fmax": 200000, "desc": "same + AWGN"},
+    {"name": "xa_nooob_cos",        "q": "Q3", "family": "crossattn", "recipe": "long_cos", "awgn": null,    "fusion": "no_oob", "desc": "no explicit OOB pathway, full-band input (NOT strict IB: FFT/IQ still contain OOB)"},
+    {"name": "xa_nooob_cos_awgn",   "q": "Q3", "family": "crossattn", "recipe": "long_cos", "awgn": [0, 50], "fusion": "no_oob", "desc": "same + AWGN"},
+    {"name": "xa_trueib_cos",       "q": "Q3", "family": "crossattn", "recipe": "long_cos", "awgn": null,    "fusion": "no_oob", "input_fmax": 62500, "desc": "paper-1 CrossAttn-TrueIB (input |f|<=62.5 kHz, no OOB pathway)"},
+    {"name": "xa_trueib_cos_awgn",  "q": "Q3", "family": "crossattn", "recipe": "long_cos", "awgn": [0, 50], "fusion": "no_oob", "input_fmax": 62500, "desc": "same + AWGN"},
+
+    {"name": "tf_cos",            "q": "Q4", "family": "tfsplit",   "recipe": "long_cos",   "awgn": null,      "desc": "time stem (I/Q,amp/phase) and frequency stem (FFT) as separate token streams with own positions; OOB keys carry frequency positions; params ~= legacy"},
+    {"name": "tf_cos_awgn",       "q": "Q4", "family": "tfsplit",   "recipe": "long_cos",   "awgn": [0, 50],   "desc": "same + AWGN"},
+
+    {"name": "cis_flat",          "q": "Q2", "family": "shen_cis",  "recipe": "shen", "awgn": [0, 50], "head": "flatten", "desc": "Shen-CIS official port: CIS 52x126 (rows -203..+195 kHz), Flatten-Dense512 (13.44M), Shen recipe"},
+    {"name": "cis_gap",           "q": "Q2", "family": "shen_cis",  "recipe": "shen", "awgn": [0, 50], "head": "gap",     "desc": "Flatten -> global average pool (0.27M params), otherwise identical"},
+    {"name": "cis_flat_noawgn",   "q": "Q2", "family": "shen_cis",  "recipe": "shen", "awgn": null,    "head": "flatten", "desc": "official port without AWGN"},
+    {"name": "cis_gap_noawgn",    "q": "Q2", "family": "shen_cis",  "recipe": "shen", "awgn": null,    "head": "gap",     "desc": "GAP without AWGN"},
+    {"name": "cis_ib_flat",       "q": "Q2", "family": "shen_cis",  "recipe": "shen", "awgn": [0, 50], "head": "flatten", "input_fmax": 62500, "desc": "strict-IB CIS (FFT mask |f|<=62.5 kHz before STFT), official head/recipe"}
+  ]
+}
