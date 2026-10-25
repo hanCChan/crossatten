@@ -72,6 +72,10 @@ After confirmation, evaluate all six resid checkpoints with residual channels
 unchanged, zeroed, or packet-shuffled (one-packet cyclic shift within evaluation
 batches; batch 64). Evaluate all six symstack checkpoints with original,
 reversed symbol order, or different circular shifts per symbol (64*s samples).
+Before any exploration fits completed, add symstack diagnostics replacing the
+IB waveform with its coherent mean chirp (zero symbol residual) or reassigning
+raw symbol residuals by the same within-batch packet shift. These operate after
+the IB frontend and before views, so no extra filtering is introduced.
 These are diagnostic interventions, not additional selection criteria or
 evidence that no other information is used. Their effect is recorded per RX
 on dev_val and report-only confirm, without fitting new weights.

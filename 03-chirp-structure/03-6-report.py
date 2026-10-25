@@ -2,10 +2,8 @@
 """Build a complete round-1 results document from structured, already-frozen artifacts."""
 import csv
 import json
-import sys
 from pathlib import Path
 
-import numpy as np
 
 HERE = Path(__file__).resolve().parent
 
@@ -31,6 +29,8 @@ def main():
     decision = json.loads((HERE / "decision_confirm.json").read_text())
     bench = json.loads((summary / "bench.json").read_text())
     mechanisms = json.loads((summary / "mechanisms.json").read_text())
+    if not mechanisms["rows"]:
+        raise SystemExit("mechanism evaluation is empty")
     status = {stage: json.loads((HERE / "runs" / f"jobs_{stage}.jsonl.status.json").read_text())
               for stage in ("smoke", "explore", "confirm")}
     if any(v["failed"] or v["done"] + v["skipped"] != v["total"] for v in status.values()):

@@ -11,6 +11,14 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent / "lib"))
 from xa.data import fold_roles, load_rx
 from xa.models import build_pipeline
+from xa.models3 import symbol_residual
+
+
+def intervene_symbols(module, inputs, mode):
+    x = inputs[0]
+    raw = symbol_residual(x, normalized=False)
+    mean = x - raw
+    return (mean if mode == "mean_chirp" else mean + raw.roll(1, 0),)
 
 
 def main():
@@ -26,7 +34,7 @@ def main():
             model = build_pipeline(arms[name]).cuda().eval()
             model.load_state_dict(torch.load(path, map_location="cuda", weights_only=True))
             interventions = (["original", "zero_residual", "shuffle_residual"] if name == "s03_resid"
-                             else ["original", "reverse_symbols", "misalign_symbols"])
+                             else ["original", "reverse_symbols", "misalign_symbols", "mean_chirp", "shuffle_symbol_residual"])
             target = model.net.embedder if name == "s03_resid" else model.net.embedder.cnn_stem
             roles = fold_roles(cfg["fold"])
             for role in ("dev_val", "confirm"):
@@ -37,7 +45,13 @@ def main():
                     y = torch.from_numpy(data["y"]).cuda()
                     original = None
                     for intervention in interventions:
-                        target.intervention = None if intervention == "original" else intervention
+                        hook = None
+                        if intervention in ("mean_chirp", "shuffle_symbol_residual"):
+                            hook = model.net.embedder.register_forward_pre_hook(
+                                lambda module, inputs: intervene_symbols(module, inputs, intervention))
+                            target.intervention = None
+                        else:
+                            target.intervention = None if intervention == "original" else intervention
                         correct = 0
                         with torch.no_grad():
                             for i in range(0, len(x), 64):
@@ -48,6 +62,8 @@ def main():
                             original = acc
                         rows.append(dict(arm=name, fold=cfg["fold"], seed=cfg["seed"], role=role, rx=rx,
                                          intervention=intervention, acc=acc, delta_pp=acc - original))
+                        if hook is not None:
+                            hook.remove()
                     del x, y, data
             del model
             torch.cuda.empty_cache()
