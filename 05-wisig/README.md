@@ -6,6 +6,11 @@ audit, and released-weight validation gates in
 No WiSig training or target-domain hyperparameter selection is authorized in
 this milestone. Stop on any count mismatch or >0.5 pp released-weight mismatch.
 
+Reproducible preparation: `bash 05-wisig/05-0-fetch-data.sh` verifies/reuses
+the existing archives, resumes ManySig only from the UCLA-published file,
+and verifies SHA256 before extraction. It does not download a mirror or
+overwrite existing extracted files.
+
 ManyRx reuses the user's `gai` Kaggle v1 archive, SHA256
 `b0eca705816b03a47290286fd23ca1a10e02c6f9bd29b5461cfd92c13a86fbdd`.
 ManySig is downloaded only from the Google Drive file linked by the UCLA
