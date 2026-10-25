@@ -26,9 +26,9 @@
 | 阶段 | 内容 | 状态 |
 |---|---|---|
 | 03-chirp-structure（Shen，dev_val 筛选） | 第一轮：基线重跑、Pre-LN、depth4、残差输入通道、nofft 对照、共享符号 stem 的等参数 symstack、ifreq、分层 stem；融合和训练目标留待后续 | 已完成 8 smoke、32 探索、48 新 seed 确认，88/88 核验通过；仅 hstem 判为 improves（97.48/96.84，142,392 参数），见 [RESULTS](03-chirp-structure/RESULTS.md) |
-| 04-sota-on-shen | FAN/IB-RFF、WaveMLP 适配到 8192 点，在 P-H5x160 上重跑；Ma 2025 按论文复现 | 文献与实施规格已保存，训练未启动（[LITERATURE](docs/LITERATURE_2025_2026.md)） |
-| 05-wisig | IB-RFF 官方 CR/CRD 协议：先复现 FAN/IB-RFF/WaveMLP 的官方数字，再在同一管线、多 seed 下运行本方法 | M2 已完成：ManyRx/ManySig 数量、转换与发布权重通过；实测 25 MHz，256 点 crop 无法验证完整 LTF；官方/公平重训未启动，见 [RESULTS](05-wisig/RESULTS.md) |
-| 06-final | 冻结方法的完整消融、多 seed、精度–计算量 Pareto；历史 14→6 协议标注为复用 | 最后 |
+| 04-sota-on-shen | 原 FAN/IB-RFF、WaveMLP、Ma 实施规格 | FAN/IB-RFF、WaveMLP 已由阶段06承接；Ma 不在本轮注册矩阵内 |
+| 05-wisig | 数据与发布权重核验；原公平重训安排 | M2 已完成；公平重训由阶段06承接；256 点 crop 仍无法验证完整 LTF |
+| 06-paper-validation | WiSig W0/W1/W2 与两强基线、FAN、CNN控制；Shen同协议强基线与结构消融 | 已注册并执行；源域选择、最终矩阵与结果见 [验证报告](06-paper-validation/RESULTS.md) |
 
 旧的 03–06 规划（组合 / 融合 / 训练 / 确认）由上表取代。**阶段 03–05 的逐项实施规格（交给 Codex 实现）见 [docs/S03_S05_IMPLEMENTATION_SPEC.md](docs/S03_S05_IMPLEMENTATION_SPEC.md)。**
 
@@ -47,6 +47,8 @@
 该授权解除“第一轮之后不启动后续训练”的停止点，但只针对本轮有界实验，不授权新Loss/复杂Chirp分支搜索。
 WiSig先源RX内部选模再冻结重训；Shen各方法/配方按源验证CE选配置，confirm仍仅报告。00–03历史结果不改。
 本轮完成后重新停止汇报，不能根据WiSig测试结果追加结构或更换频带。
+WiSig 的176个源域fit已全部核验，2026-10-25 19:48:50提交冻结决策`4babf3a`，19:49:18才首次读取本阶段目标数据；240个最终fit已启动。Shen仍先完成注册源域矩阵，冻结后才允许confirm评估。
+以下阶段03/04/05的具体路线保留为历史规划；本次训练、选择与停止规则以阶段06预登记为准，不自动执行旧的组合或新增Loss安排。
 
 ### 阶段 03 第一轮（按实施规格执行）
 
