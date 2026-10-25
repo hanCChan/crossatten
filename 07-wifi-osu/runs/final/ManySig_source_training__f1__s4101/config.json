@@ -1,0 +1,66 @@
+{
+ "job": {
+  "dataset": "ManySig",
+  "fold": 1,
+  "frontend": "frequency",
+  "recipe": "official",
+  "phase": "final",
+  "pipeline": "source_training",
+  "seed": 4101,
+  "factor": "source_training",
+  "id": "ManySig_source_training__f1__s4101"
+ },
+ "roles": {
+  "source": [
+   "1-1",
+   "1-19",
+   "2-1",
+   "7-14",
+   "8-8",
+   "14-7",
+   "18-2",
+   "19-2",
+   "20-1"
+  ],
+  "fit_rx": [
+   "1-1",
+   "1-19",
+   "2-1",
+   "7-14",
+   "8-8",
+   "14-7",
+   "18-2",
+   "19-2",
+   "20-1"
+  ],
+  "held_rx": [],
+  "target": [
+   "2-19",
+   "3-19",
+   "7-7"
+  ]
+ },
+ "recipe": {
+  "opt": "adam",
+  "lr": 0.001,
+  "wd": 0.0,
+  "batch": 128,
+  "epochs": 200,
+  "sched": "plateau",
+  "patience": 5,
+  "early_stop": 10,
+  "min_lr": 1e-06
+ },
+ "arm": {
+  "frontend": "frequency",
+  "num_classes": 6,
+  "stf_stop": 160,
+  "fusion": "pooled_concat"
+ },
+ "data_seed": 2851581109,
+ "smoke": false,
+ "registration_sha256": "c6d0855be6ae4787151daad93c8d57653e6e5c09323f921bfa0ff32240beee35",
+ "code_sha256": "0e99bc90e257a9736384ef6acf0c433b6365ab8c96cbddd604c0900dfeeea047",
+ "dataset_manifest_sha256": "74e95fb87ef2a898fdd9b85b552cf2a7f3af0e7b7a20eb8a5f1744f4ba99673d",
+ "decision_sha256": "80c219b324045b39c6fcaa7db6ac73cef90c9b7e2ffa24b8846ad452a3b9d8b4"
+}
