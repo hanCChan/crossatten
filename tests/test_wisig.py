@@ -6,7 +6,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "lib"))
-from xa.wisig import RX, log_counts, power_normalize, receivers
+from xa.wisig import RX, log_counts, power_normalize, receivers, released_log_result
 
 
 def main():
@@ -20,6 +20,10 @@ def main():
             assert min(log_counts(dataset, fold)) > 0
         assert targets == RX[dataset]
     assert log_counts("ManyRx", 0) == (32527, 13941)
+    log_root = ROOT / "external/IB-RFF/logs"
+    assert released_log_result(log_root / "stage1/ManyRx_pre0_a0.0_round0.log") == ("CR", 90.66)
+    exp, acc = released_log_result(log_root / "stage2/ManyRx_CRD_pre1_a0.01_round0.log")
+    assert exp == "CRD" and abs(acc - 91.15) < 1e-6
     rng = np.random.default_rng(4)
     x = power_normalize(rng.normal(size=(4, 2, 256)))
     assert np.allclose((x ** 2).sum(1).mean(-1), 1)

@@ -47,6 +47,15 @@ def log_counts(dataset, fold):
     return int(tr[1]), int(va[1])
 
 
+def released_log_result(path):
+    text = Path(path).read_text()
+    matches = re.findall(r"-+(CRD|CR) Testing-+\s+Test Accuracy: ([0-9.]+)", text)
+    if len(matches) != 1:
+        raise ValueError(f"expected one labeled test result in {path}")
+    exp, value = matches[0]
+    return exp, float(value) * 100
+
+
 def build_dataset(dataset):
     source = DATA / f"{dataset}.pkl"
     # Inputs are the user-provided Kaggle archive or UCLA's official compact archive.

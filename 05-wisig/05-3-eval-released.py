@@ -3,7 +3,6 @@
 import argparse
 import importlib
 import json
-import re
 import sys
 import types
 from pathlib import Path
@@ -15,7 +14,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 sys.path.insert(0, str(ROOT / "lib"))
 from xa.data import sha256_file
-from xa.wisig import DATA, RX, load_cell, receivers
+from xa.wisig import RX, load_cell, receivers, released_log_result
 
 
 def activate(repo):
@@ -55,13 +54,10 @@ def upstream_log(dataset, fold, alpha, stage):
         path = ROOT / f"external/IB-RFF/logs/stage1/{dataset}_pre0_a0.0_round{fold}.log"
     else:
         path = ROOT / f"external/IB-RFF/logs/stage2/{dataset}_CRD_pre1_a{alpha}_round{fold}.log"
-    matches = re.findall(r"Test Accuracy: ([0-9.]+)", path.read_text())
-    if len(matches) != 1:
-        raise ValueError(path)
-    return float(matches[0]) * 100
+    return released_log_result(path)
 
 
-def evaluate(model, dataset, fold, repo, loader):
+def evaluate(model, dataset, fold, repo, loader, exp):
     _, test = receivers(dataset, fold)
     per_rx = {}
     model = model.cuda().eval()
@@ -69,7 +65,7 @@ def evaluate(model, dataset, fold, repo, loader):
         for rx in test:
             correct = total = 0
             ri = RX[dataset].index(rx)
-            for day in (3, 4):
+            for day in ((1, 2) if exp == "CR" else (3, 4)):
                 x, y = loader.load_single_dataset(dataset, ri, day, 10 if dataset == "ManyRx" else 6, "non_equalized")
                 x = torch.from_numpy(x.astype(np.float32)).cuda()
                 y = torch.from_numpy(y).cuda()
@@ -117,8 +113,10 @@ def main():
                     model.load_state_dict(old.state_dict(), strict=True)
                     assert all(torch.equal(v, model.state_dict()[k]) for k, v in old.state_dict().items())
                     del old
-                    expected = upstream_log(dataset, fold, alpha, stage)
+                    exp, expected = upstream_log(dataset, fold, alpha, stage)
                     method = "FAN" if stage == 1 else "IB-RFF"
+                    if exp != ("CR" if stage == 1 else "CRD"):
+                        raise ValueError("unexpected test protocol in the published log")
                 else:
                     cls = importlib.import_module("backbones.MyModel").MyModel
                     level, kernel, nc = (5, 32, 10) if dataset == "ManyRx" else (4, 16, 6)
@@ -130,9 +128,10 @@ def main():
                     expected = None
                     alpha = None
                     method = "WaveMLP"
-                metrics = evaluate(model, dataset, fold, args.repo, loader)
+                    exp = "CRD"
+                metrics = evaluate(model, dataset, fold, args.repo, loader, exp)
                 delta = metrics["packet_acc"] - expected if expected is not None else None
-                result = dict(dataset=dataset, fold=fold, method=method, alpha=alpha, expected_log_acc=expected,
+                result = dict(dataset=dataset, fold=fold, method=method, exp=exp, alpha=alpha, expected_log_acc=expected,
                               delta_pp=delta, weight_sha256=sha256_file(path), **metrics)
                 results.append(result)
                 print(json.dumps(result), flush=True)

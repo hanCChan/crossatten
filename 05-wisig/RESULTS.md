@@ -1,7 +1,8 @@
 # M2: WiSig Data And Released-Weight Validation
 
-Observed on 2026-10-25. **Data preparation passed; WaveMLP released weights
-passed; IB-RFF/FAN released-weight gate failed and its pipeline is stopped.**
+Observed on 2026-10-25. **Compact count and released-weight gates passed
+for both datasets and all inspected methods.** LTF alignment remains limited
+by the 256-sample crop, as described below.
 No WiSig retraining or target-guided hyperparameter selection has been run.
 
 ## Data
@@ -59,27 +60,34 @@ symstack design must respect this limitation and must not use LoRa lengths.
 
 ## Released Weights
 
-All evaluation uses days 3,4 on target RX, unchanged published weights, batch
-32, official normalization and packet-weighted accuracy. No training occurred.
+Evaluation uses the days matching each official log: FAN stage1 logs are CR
+(days1,2); IB-RFF stage2 CRD and WaveMLP use days3,4. All use target RX,
+unchanged published weights, batch32, official normalization and packet-weighted
+accuracy. No training occurred.
 
 | Method | Dataset | Fold0 | Fold1 | Fold2 | Fold3 | Four-fold mean | Official mean |
 |---|---|---:|---:|---:|---:|---:|---:|
 | WaveMLP | ManyRx | 88.5696 | 88.0570 | 91.9177 | 86.1593 | 88.6759 | 88.68 |
 | WaveMLP | ManySig | 90.8611 | 89.6389 | 95.9722 | 96.0278 | 93.1250 | 93.13 |
+| FAN (CR) | ManyRx | 90.6709 | 85.5506 | 92.8013 | 89.7133 | 89.6840 | 89.68 |
+| FAN (CR) | ManySig | 95.6389 | 87.9444 | 96.6111 | 92.0556 | 93.0625 | 93.06 |
+| IB-RFF (CRD) | ManyRx | 91.1456 | 87.8671 | 92.1456 | 85.5935 | 89.1879 | 89.19 |
+| IB-RFF (CRD) | ManySig | 95.8889 | 88.5278 | 96.2778 | 93.5833 | 93.5694 | 93.57 |
 
 WaveMLP means round to the official README values. Per-fold upstream logs
 are not included in that repository, so the acceptance comparison uses its
 published aggregate, with all our folds and per-RX counts reported in
 `out/05-3-released-WaveMLP-RFF.json`.
 
-FAN (IB-RFF stage1), ManyRx fold0: **89.9367% vs log 90.6600%, delta
--0.7233 pp**, outside the preregistered +/-0.5pp tolerance. Stop before
-evaluating subsequent FAN/IB-RFF weights or retraining this pipeline.
-This does not establish why they differ: count equality, loader equality, and
-WaveMLP equality validate important parts of the pipe but do not prove that
-the FAN released checkpoint corresponds to the provided log or that every
-legacy serialization behavior is identical. Evidence is preserved in
-`out/05-3-released-IB-RFF.json`.
+The initial FAN fold0 comparison incorrectly compared CRD (89.9367%) with
+the stage1 **CR** log (90.6600%). Its apparent -0.7233pp mismatch was an
+evaluation-script error, not evidence against the released model. This was
+caught by inspecting the log's `CR Testing` marker; the evaluation now uses
+days1,2 for stage1. The corrected matched-protocol verification passed all
+16 FAN/IB-RFF fits; the largest absolute log difference is 0.0109pp.
+The script now parses each log's explicit CR/CRD marker and tests cover this
+distinction. This correction is retained here for transparency, not presented
+as a model failure.
 
 The historical IB-RFF whole-model pickle could not directly forward on
 PyTorch 2.5 because old GELU instances lacked `approximate`. For compatibility,
@@ -99,5 +107,7 @@ source, architecture, weight, input, or training recipe was edited.
   byte-identical to the UCLA original despite matching counts and WaveMLP
   accuracy. Download provenance and hashes are retained.
 
-M2 is **not fully passed**. Resolve the FAN checkpoint/log mismatch and LTF
-alignment limitation before running WiSig training milestones.
+M2's data and published-weight checks are **passed**, with the source signal
+audit and frozen cutoff recorded. Full LTF alignment cannot be validated from
+the crop; keep that restriction explicit when planning WiFi components.
+No stage05 training follows automatically: the S03 first-round stop still applies.
