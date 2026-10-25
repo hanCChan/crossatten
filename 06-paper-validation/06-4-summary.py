@@ -140,6 +140,34 @@ def paired(left, right, label, expected):
                 pairs=[dict(fold=k[0], seed=k[1], delta_pp=v) for k, v in zip(keys, deltas)])
 
 
+def paper_route(checks, comparisons, summary):
+    if not checks["complete"]:
+        return dict(route="pending", explanation="Complete the registered matrix before choosing the paper scope.")
+    wifi, hstu, competitive = {}, {}, {}
+    for dataset in ("ManyRx", "ManySig"):
+        wifi[dataset] = comparisons[f"{dataset}:W1-W0:CRD"]["status"] == "improves"
+        hstu[dataset] = all(comparisons[f"{dataset}:W1-{control}:CRD"]["status"] == "improves"
+                           for control in ("C0", "CP", "CF"))
+        # Descriptive system comparison, not configuration selection or a significance test.
+        w1 = summary[f"{dataset}:W1:CRD"]["metrics"]["packet_acc"]["mean"]
+        reference = max(summary[f"{dataset}:{method}:CRD"]["metrics"]["packet_acc"]["mean"]
+                        for method in ("IB-RFF", "WaveMLP", "FAN_source_selected"))
+        competitive[dataset] = dict(w1_packet_acc=w1, strongest_fair_reference=reference,
+                                   delta_pp=w1 - reference, within_one_pp=w1 >= reference - 1.0)
+    shen_hstu = all(comparisons[f"Shen:S_hstem-{control}:dev_val"]["status"] == "improves"
+                   for control in ("S_cnnonly", "S_cnnparam", "S_cnnflops"))
+    if all(wifi.values()) and all(hstu.values()) and all(v["within_one_pp"] for v in competitive.values()) and shen_hstu:
+        route = "cross_LoRa_WiFi_validation_supported"
+    elif shen_hstu and not all(wifi.values()):
+        route = "narrow_to_LoRa_specific_evidence"
+    else:
+        route = "engineering_or_limited_method_evidence"
+    return dict(route=route, wifi_hstem_improves_w0=wifi, wifi_hstu_controls=hstu,
+                shen_hstu_controls=shen_hstu, competitive_comparisons=competitive,
+                explanation="Evidence routing, not a submission decision. Novelty and independent evaluation still require review.",
+                posthoc_reporting_rule="within one pp of strongest fair reference is descriptive only; never changes registered choices")
+
+
 def collect():
     import hashlib
     registration = json.loads((HERE / "arms.json").read_text())
@@ -276,6 +304,27 @@ def main():
             lines.append(f"| {row['arm']} | {row['params']} | {row['mflops_per_packet']} | "
                          f"{row['gpu_b1_ms_p50']} | {row['gpu_b1_ms_p95']} | "
                          f"{row['gpu_b512_pkts_per_s']} | {row['cpu4t_b1_ms_p50']} |")
+    lines += ["", "## Source And Exploration", "",
+              "All candidate configurations are retained below. Shen dev_val is report-only; selection uses source CE.",
+              "Source RX WiSig scores use only internally held-out source receivers on days 1-2 and are not CRD test scores.",
+              "", "| Dataset | Arm | Fits | Source CE | Source Packet Acc | Internal RX Acc | Shen dev_val |",
+              "|---|---|---:|---:|---:|---:|---:|"]
+    source_groups = defaultdict(list)
+    for result in results:
+        if result["stage"] in ("source", "explore"):
+            source_groups[(result["dataset"], result["arm"])].append(result)
+    for (dataset, name), records in sorted(source_groups.items()):
+        internal = (f"{100*np.mean([r['source_rx_val']['summary']['acc_mean'] for r in records]):.2f}"
+                    if dataset != "Shen" else "-")
+        dev = (f"{100*np.mean([r['selected']['dev_val']['summary']['acc_mean'] for r in records]):.2f}"
+               if dataset == "Shen" else "-")
+        lines.append(f"| {dataset} | {name} | {len(records)} | "
+                     f"{np.mean([r['source_val_ce'] for r in records]):.4f} | "
+                     f"{100*np.mean([r['source_val_acc'] for r in records]):.2f} | {internal} | {dev} |")
+    route = paper_route(checks, comparisons, summary)
+    lines += ["", "## Paper Route", "", f"**{route['route']}**. {route['explanation']}",
+              "A route based on completed comparisons is not a claim of sufficient novelty or submission readiness.",
+              "External IB-RFF uses two training stages (FAN initialization plus HSIC); both stages and their time are retained."]
     lines += ["", "## Interpretation Limits", "",
               "- CRD is the primary WiSig task. W0/W1/W2 remain separate; no target-based winner selection.",
               "- Final configuration choices use only source RX days 1-2; source evidence and decisions are committed before target access.",
@@ -288,6 +337,7 @@ def main():
               "", "Full per-fit metrics, configurations, source choices and failures: `summary/report.json`; costs: `summary/cost_*/bench.md`.",
               "The bounded experiment matrix must finish before choosing a general RF, LoRa-only, or engineering-only paper route.", ""]
     output = dict(registration=registration, checks=checks, groups=summary, costs_by_arm=costs,
+                  paper_route=route,
                   comparisons=comparisons, results=results,
                   configs={f"{stage}:{run}": c for (stage, run), c in configs.items()})
     (HERE / "summary").mkdir(exist_ok=True)

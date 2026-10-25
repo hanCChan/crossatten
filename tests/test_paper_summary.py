@@ -31,6 +31,20 @@ def main():
     assert report.paired(base, base, "CRD", 12)["status"] == "unclear"
     assert report.paired(improved[:-1], base, "CRD", 12)["status"] == "incomplete"
     assert abs(report.pooled_f1(base[0]["selected"]["CRD"]["per_rx"]) - .80) < 1e-10
+    assert report.paper_route({"complete": False}, {}, {})["route"] == "pending"
+    comparisons, groups = {}, {}
+    for dataset in ("ManyRx", "ManySig"):
+        for right in ("W0", "C0", "CP", "CF"):
+            comparisons[f"{dataset}:W1-{right}:CRD"] = {"status": "improves"}
+        for method in ("W1", "IB-RFF", "WaveMLP", "FAN_source_selected"):
+            groups[f"{dataset}:{method}:CRD"] = {"metrics": {"packet_acc": {"mean": 90}}}
+    for right in ("S_cnnonly", "S_cnnparam", "S_cnnflops"):
+        comparisons[f"Shen:S_hstem-{right}:dev_val"] = {"status": "improves"}
+    assert report.paper_route({"complete": True}, comparisons, groups)["route"] == "cross_LoRa_WiFi_validation_supported"
+    comparisons["ManyRx:W1-W0:CRD"]["status"] = "unclear"
+    assert report.paper_route({"complete": True}, comparisons, groups)["route"] == "narrow_to_LoRa_specific_evidence"
+    comparisons["Shen:S_hstem-S_cnnonly:dev_val"]["status"] = "unclear"
+    assert report.paper_route({"complete": True}, comparisons, groups)["route"] == "engineering_or_limited_method_evidence"
     with tempfile.TemporaryDirectory() as directory:
         root = Path(directory)
         report.ROOT = root
