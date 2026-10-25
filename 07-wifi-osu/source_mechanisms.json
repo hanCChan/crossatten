@@ -1,0 +1,5356 @@
+{
+ "post_hoc": true,
+ "selection_use": "none",
+ "device": "cpu",
+ "threshold_abs_score": 6,
+ "rows": [
+  {
+   "id": "ManyRx_legacy__f0__s3101",
+   "dataset": "ManyRx",
+   "fold": 0,
+   "frontend": "legacy",
+   "packets": 118,
+   "baseline_accuracy_pct": 67.79661178588867,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9992302060127258,
+      "score_abs_median": 0.5832870602607727,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999954700469971,
+      "score_abs_median": 0.5915603041648865,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "mixed": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.9980449676513672,
+      0.6645364165306091,
+      0.5798412561416626
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9820765256881714,
+      "score_abs_median": 5.351641654968262,
+      "saturation_frac": 0.43937864899635315
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9930956363677979,
+      "score_abs_median": 7.063353538513184,
+      "saturation_frac": 0.5812036395072937
+     }
+    ],
+    "channel_rms": {
+     "mixed": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.9980449676513672,
+      0.6645364165306091,
+      0.5798412561416626
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "mixed:IQ",
+     "accuracy_pct": 67.79661178588867,
+     "delta_pp": 0.0
+    },
+    {
+     "group": "mixed:FFT",
+     "accuracy_pct": 10.169491171836853,
+     "delta_pp": -57.62712061405182
+    },
+    {
+     "group": "mixed:amplitude",
+     "accuracy_pct": 29.661017656326294,
+     "delta_pp": -38.13559412956238
+    },
+    {
+     "group": "mixed:absolute_phase",
+     "accuracy_pct": 68.64407062530518,
+     "delta_pp": 0.8474588394165039
+    }
+   ],
+   "checkpoint_sha256": "c51830eb7a963bba2f41d79559a70421dc25e0788461ad39a38593b49a28b8fd"
+  },
+  {
+   "id": "ManyRx_time__f0__s3101",
+   "dataset": "ManyRx",
+   "fold": 0,
+   "frontend": "time",
+   "packets": 118,
+   "baseline_accuracy_pct": 53.38982939720154,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9991618394851685,
+      "score_abs_median": 0.28272920846939087,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999951720237732,
+      "score_abs_median": 0.29152101278305054,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.6645364165306091,
+      0.5798412561416626
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9125909805297852,
+      "score_abs_median": 3.3198130130767822,
+      "saturation_frac": 0.20686572790145874
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9705010056495667,
+      "score_abs_median": 3.2528162002563477,
+      "saturation_frac": 0.2424854338169098
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.6645364165306091,
+      0.5798412561416626
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 11.016949266195297,
+     "delta_pp": -42.37288013100624
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 16.101695597171783,
+     "delta_pp": -37.288133800029755
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 55.084747076034546,
+     "delta_pp": 1.6949176788330078
+    }
+   ],
+   "checkpoint_sha256": "777ccba6cbdbea9ae825d34f26fce5dc94af656394d2ced91faa527575e97e5c"
+  },
+  {
+   "id": "ManyRx_diff__f0__s3101",
+   "dataset": "ManyRx",
+   "fold": 0,
+   "frontend": "diff",
+   "packets": 118,
+   "baseline_accuracy_pct": 31.355932354927063,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9992303848266602,
+      "score_abs_median": 0.5826621651649475,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999954700469971,
+      "score_abs_median": 0.5898383259773254,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.6645364165306091,
+      0.6849312782287598,
+      0.7259221076965332
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9639701843261719,
+      "score_abs_median": 3.251019239425659,
+      "saturation_frac": 0.19532905519008636
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9794052839279175,
+      "score_abs_median": 2.4680535793304443,
+      "saturation_frac": 0.12168961763381958
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.6645364165306091,
+      0.6849312782287598,
+      0.7259221076965332
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 13.55932205915451,
+     "delta_pp": -17.796610295772552
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 10.169491171836853,
+     "delta_pp": -21.18644118309021
+    },
+    {
+     "group": "time:phase_product",
+     "accuracy_pct": 21.18644118309021,
+     "delta_pp": -10.169491171836853
+    }
+   ],
+   "checkpoint_sha256": "e5745304087977aff6b01061c2a69bae61cf920f7d2139b387716074819bf956"
+  },
+  {
+   "id": "ManyRx_split__f0__s3101",
+   "dataset": "ManyRx",
+   "fold": 0,
+   "frontend": "split",
+   "packets": 118,
+   "baseline_accuracy_pct": 77.11864113807678,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9991232752799988,
+      "score_abs_median": 0.1295090764760971,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999951124191284,
+      "score_abs_median": 0.20013771951198578,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.6645364165306091,
+      0.5798412561416626
+     ],
+     "frequency": [
+      0.711601972579956,
+      0.702582836151123,
+      0.9980449676513672
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9949393272399902,
+      "score_abs_median": 3.274291515350342,
+      "saturation_frac": 0.24108679592609406
+     },
+     {
+      "block": 1,
+      "token_rms": 0.997309684753418,
+      "score_abs_median": 2.5537188053131104,
+      "saturation_frac": 0.11421643197536469
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.6645364165306091,
+      0.5798412561416626
+     ],
+     "frequency": [
+      0.711601972579956,
+      0.702582836151123,
+      0.9980449676513672
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 55.93220591545105,
+     "delta_pp": -21.186435222625732
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 22.033898532390594,
+     "delta_pp": -55.08474260568619
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 77.96609997749329,
+     "delta_pp": 0.8474588394165039
+    },
+    {
+     "group": "frequency:spectrum_complex",
+     "accuracy_pct": 9.322033822536469,
+     "delta_pp": -67.79660731554031
+    },
+    {
+     "group": "frequency:spectrum_magnitude",
+     "accuracy_pct": 45.76271176338196,
+     "delta_pp": -31.355929374694824
+    },
+    {
+     "group": "frequency:frequency_all",
+     "accuracy_pct": 12.711864709854126,
+     "delta_pp": -64.40677642822266
+    }
+   ],
+   "checkpoint_sha256": "6e9df50f089389f25d12e03cb7e4ee145a68db4156e8acc360fdb5207b600bb7"
+  },
+  {
+   "id": "ManyRx_stf__f0__s3101",
+   "dataset": "ManyRx",
+   "fold": 0,
+   "frontend": "stf",
+   "packets": 118,
+   "baseline_accuracy_pct": 67.79661178588867,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9990696310997009,
+      "score_abs_median": 0.09626287966966629,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999950528144836,
+      "score_abs_median": 0.6573808789253235,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.6645364165306091,
+      0.5798412561416626,
+      0.7004916667938232,
+      0.237036794424057
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9706782698631287,
+      "score_abs_median": 2.198378324508667,
+      "saturation_frac": 0.07600635290145874
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9780516624450684,
+      "score_abs_median": 2.4723381996154785,
+      "saturation_frac": 0.12139996141195297
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.6645364165306091,
+      0.5798412561416626,
+      0.7004916667938232,
+      0.237036794424057
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 14.406779408454895,
+     "delta_pp": -53.38983237743378
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 16.949152946472168,
+     "delta_pp": -50.847458839416504
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 66.10169410705566,
+     "delta_pp": -1.6949176788330078
+    },
+    {
+     "group": "time:STF_product",
+     "accuracy_pct": 33.898305892944336,
+     "delta_pp": -33.898305892944336
+    }
+   ],
+   "checkpoint_sha256": "0710585af2ecda1b2c7218119b3d2341d3723a682a8a68498617e514e38de179"
+  },
+  {
+   "id": "ManyRx_filter__f0__s3101",
+   "dataset": "ManyRx",
+   "fold": 0,
+   "frontend": "filter",
+   "packets": 118,
+   "baseline_accuracy_pct": 61.86440587043762,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9991618394851685,
+      "score_abs_median": 0.2827329933643341,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999951720237732,
+      "score_abs_median": 0.29152560234069824,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7060846090316772,
+      0.7081269025802612,
+      0.6645364165306091,
+      0.5798413157463074
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9425218105316162,
+      "score_abs_median": 2.6367928981781006,
+      "saturation_frac": 0.12771451473236084
+     },
+     {
+      "block": 1,
+      "token_rms": 0.988386332988739,
+      "score_abs_median": 3.1300132274627686,
+      "saturation_frac": 0.2184520661830902
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7359169721603394,
+      0.7399692535400391,
+      0.684293270111084,
+      0.579511284828186
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 10.169491171836853,
+     "delta_pp": -51.69491469860077
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 15.25423675775528,
+     "delta_pp": -46.61016911268234
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 59.32203531265259,
+     "delta_pp": -2.542370557785034
+    }
+   ],
+   "checkpoint_sha256": "80603b4930bc9f2776f70c10d9f47619c0832d76913a8da8e054284cbf4cbb30"
+  },
+  {
+   "id": "ManyRx_frequency__f0__s3101",
+   "dataset": "ManyRx",
+   "fold": 0,
+   "frontend": "frequency",
+   "packets": 118,
+   "baseline_accuracy_pct": 84.74576473236084,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9990910291671753,
+      "score_abs_median": 0.8778345584869385,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999954104423523,
+      "score_abs_median": 0.292940229177475,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "frequency": [
+      0.711601972579956,
+      0.702582836151123,
+      0.9980449676513672
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 1.0014640092849731,
+      "score_abs_median": 3.505498170852661,
+      "saturation_frac": 0.22421212494373322
+     },
+     {
+      "block": 1,
+      "token_rms": 1.002808690071106,
+      "score_abs_median": 5.997634410858154,
+      "saturation_frac": 0.499710351228714
+     }
+    ],
+    "channel_rms": {
+     "frequency": [
+      0.711601972579956,
+      0.702582836151123,
+      0.9980449676513672
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "frequency:spectrum_complex",
+     "accuracy_pct": 11.016949266195297,
+     "delta_pp": -73.72881546616554
+    },
+    {
+     "group": "frequency:spectrum_magnitude",
+     "accuracy_pct": 76.27118825912476,
+     "delta_pp": -8.474576473236084
+    },
+    {
+     "group": "frequency:frequency_all",
+     "accuracy_pct": 10.169491171836853,
+     "delta_pp": -74.57627356052399
+    }
+   ],
+   "checkpoint_sha256": "3b0d9b281ed070d134374c7a4144a70b71a5f8016dc18002237b3f2cf36c0318"
+  },
+  {
+   "id": "ManyRx_legacy__f1__s3101",
+   "dataset": "ManyRx",
+   "fold": 1,
+   "frontend": "legacy",
+   "packets": 118,
+   "baseline_accuracy_pct": 56.779658794403076,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9989873170852661,
+      "score_abs_median": 0.2843852639198303,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999952912330627,
+      "score_abs_median": 0.20045103132724762,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "mixed": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.9980449676513672,
+      0.6645364165306091,
+      0.5798412561416626
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.8890502452850342,
+      "score_abs_median": 4.69187068939209,
+      "saturation_frac": 0.35807567834854126
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9602875113487244,
+      "score_abs_median": 8.488401412963867,
+      "saturation_frac": 0.6426774263381958
+     }
+    ],
+    "channel_rms": {
+     "mixed": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.9980449676513672,
+      0.6645364165306091,
+      0.5798412561416626
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "mixed:IQ",
+     "accuracy_pct": 54.23728823661804,
+     "delta_pp": -2.542370557785034
+    },
+    {
+     "group": "mixed:FFT",
+     "accuracy_pct": 11.864406615495682,
+     "delta_pp": -44.915252178907394
+    },
+    {
+     "group": "mixed:amplitude",
+     "accuracy_pct": 38.98304998874664,
+     "delta_pp": -17.796608805656433
+    },
+    {
+     "group": "mixed:absolute_phase",
+     "accuracy_pct": 54.23728823661804,
+     "delta_pp": -2.542370557785034
+    }
+   ],
+   "checkpoint_sha256": "647c410239d200925cb3c28279305f7f415cdd6e63caea0df6acbf2762415ea0"
+  },
+  {
+   "id": "ManyRx_time__f1__s3101",
+   "dataset": "ManyRx",
+   "fold": 1,
+   "frontend": "time",
+   "packets": 118,
+   "baseline_accuracy_pct": 48.30508530139923,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9989840388298035,
+      "score_abs_median": 0.07011444121599197,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999951124191284,
+      "score_abs_median": 0.3236222565174103,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.6645364165306091,
+      0.5798412561416626
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.8351825475692749,
+      "score_abs_median": 2.9353950023651123,
+      "saturation_frac": 0.1798364669084549
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9065753817558289,
+      "score_abs_median": 2.7006595134735107,
+      "saturation_frac": 0.15426376461982727
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.6645364165306091,
+      0.5798412561416626
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 10.169491171836853,
+     "delta_pp": -38.13559412956238
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 32.20339119434357,
+     "delta_pp": -16.101694107055664
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 46.61017060279846,
+     "delta_pp": -1.694914698600769
+    }
+   ],
+   "checkpoint_sha256": "5ba703e3daf15d0920aaff1712d136c3023e9378e3dc40a5e7085a013378732f"
+  },
+  {
+   "id": "ManyRx_diff__f1__s3101",
+   "dataset": "ManyRx",
+   "fold": 1,
+   "frontend": "diff",
+   "packets": 118,
+   "baseline_accuracy_pct": 30.50847351551056,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.998988687992096,
+      "score_abs_median": 0.2820453941822052,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999952912330627,
+      "score_abs_median": 0.19826382398605347,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.6645364165306091,
+      0.6849312782287598,
+      0.7259221076965332
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.8491069078445435,
+      "score_abs_median": 2.597592830657959,
+      "saturation_frac": 0.11358746141195297
+     },
+     {
+      "block": 1,
+      "token_rms": 0.8918331265449524,
+      "score_abs_median": 2.910618305206299,
+      "saturation_frac": 0.18658137321472168
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.6645364165306091,
+      0.6849312782287598,
+      0.7259221076965332
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 13.55932205915451,
+     "delta_pp": -16.94915145635605
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 18.644067645072937,
+     "delta_pp": -11.864405870437622
+    },
+    {
+     "group": "time:phase_product",
+     "accuracy_pct": 25.423729419708252,
+     "delta_pp": -5.084744095802307
+    }
+   ],
+   "checkpoint_sha256": "1eb09e2a4c9cecdd5afa65b340bbbd53c5388a6fe0a06d11158bb1fd20626aa0"
+  },
+  {
+   "id": "ManyRx_split__f1__s3101",
+   "dataset": "ManyRx",
+   "fold": 1,
+   "frontend": "split",
+   "packets": 118,
+   "baseline_accuracy_pct": 58.474576473236084,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9990211129188538,
+      "score_abs_median": 0.257698118686676,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999954700469971,
+      "score_abs_median": 0.6215251684188843,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.6645364165306091,
+      0.5798412561416626
+     ],
+     "frequency": [
+      0.711601972579956,
+      0.702582836151123,
+      0.9980449676513672
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9637002944946289,
+      "score_abs_median": 5.856533527374268,
+      "saturation_frac": 0.4896550476551056
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9678152203559875,
+      "score_abs_median": 5.087831497192383,
+      "saturation_frac": 0.4346282482147217
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.6645364165306091,
+      0.5798412561416626
+     ],
+     "frequency": [
+      0.711601972579956,
+      0.702582836151123,
+      0.9980449676513672
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 63.55932354927063,
+     "delta_pp": 5.084747076034546
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 52.542370557785034,
+     "delta_pp": -5.93220591545105
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 57.62711763381958,
+     "delta_pp": -0.8474588394165039
+    },
+    {
+     "group": "frequency:spectrum_complex",
+     "accuracy_pct": 17.796610295772552,
+     "delta_pp": -40.67796617746353
+    },
+    {
+     "group": "frequency:spectrum_magnitude",
+     "accuracy_pct": 33.898305892944336,
+     "delta_pp": -24.576270580291748
+    },
+    {
+     "group": "frequency:frequency_all",
+     "accuracy_pct": 12.711864709854126,
+     "delta_pp": -45.76271176338196
+    }
+   ],
+   "checkpoint_sha256": "c6b7adcc2e52ee33a502a18bb36c6dccf63e27654451475b08a431db32b33340"
+  },
+  {
+   "id": "ManyRx_stf__f1__s3101",
+   "dataset": "ManyRx",
+   "fold": 1,
+   "frontend": "stf",
+   "packets": 118,
+   "baseline_accuracy_pct": 41.525423526763916,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9990584850311279,
+      "score_abs_median": 0.18460868299007416,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999954700469971,
+      "score_abs_median": 0.4318870007991791,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.6645364165306091,
+      0.5798412561416626,
+      0.7004916667938232,
+      0.237036794424057
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9198882579803467,
+      "score_abs_median": 2.980736017227173,
+      "saturation_frac": 0.18160751461982727
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9162701964378357,
+      "score_abs_median": 2.6061766147613525,
+      "saturation_frac": 0.13570907711982727
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.6645364165306091,
+      0.5798412561416626,
+      0.7004916667938232,
+      0.237036794424057
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 3.3898305147886276,
+     "delta_pp": -38.13559301197529
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 20.338982343673706,
+     "delta_pp": -21.18644118309021
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 44.06779706478119,
+     "delta_pp": 2.542373538017273
+    },
+    {
+     "group": "time:STF_product",
+     "accuracy_pct": 20.338982343673706,
+     "delta_pp": -21.18644118309021
+    }
+   ],
+   "checkpoint_sha256": "e3f6dae09e176bf0bce3879edd3954bf17e0a9abd6bb39cb94e6c9ac30e2e580"
+  },
+  {
+   "id": "ManyRx_filter__f1__s3101",
+   "dataset": "ManyRx",
+   "fold": 1,
+   "frontend": "filter",
+   "packets": 118,
+   "baseline_accuracy_pct": 50.0,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9989840388298035,
+      "score_abs_median": 0.07011549919843674,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999951124191284,
+      "score_abs_median": 0.32362085580825806,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7060846090316772,
+      0.7081269025802612,
+      0.6645364165306091,
+      0.5798413157463074
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.8273658156394958,
+      "score_abs_median": 2.479313373565674,
+      "saturation_frac": 0.10224112868309021
+     },
+     {
+      "block": 1,
+      "token_rms": 0.8900285959243774,
+      "score_abs_median": 3.146900177001953,
+      "saturation_frac": 0.21414856612682343
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.8037431836128235,
+      0.8090749382972717,
+      0.7279577255249023,
+      0.5785869359970093
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 11.016949266195297,
+     "delta_pp": -38.9830507338047
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 25.423729419708252,
+     "delta_pp": -24.576270580291748
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 49.152541160583496,
+     "delta_pp": -0.8474588394165039
+    }
+   ],
+   "checkpoint_sha256": "484c2a3f39fd9374e0bea2cc36d79bf70671abeb08ec14d9d787c32851596665"
+  },
+  {
+   "id": "ManyRx_frequency__f1__s3101",
+   "dataset": "ManyRx",
+   "fold": 1,
+   "frontend": "frequency",
+   "packets": 118,
+   "baseline_accuracy_pct": 80.5084764957428,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9990139007568359,
+      "score_abs_median": 0.08696229755878448,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999950528144836,
+      "score_abs_median": 0.11624016612768173,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "frequency": [
+      0.711601972579956,
+      0.702582836151123,
+      0.9980449676513672
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9678117632865906,
+      "score_abs_median": 5.353607177734375,
+      "saturation_frac": 0.437210351228714
+     },
+     {
+      "block": 1,
+      "token_rms": 0.980249285697937,
+      "score_abs_median": 5.824316024780273,
+      "saturation_frac": 0.48601365089416504
+     }
+    ],
+    "channel_rms": {
+     "frequency": [
+      0.711601972579956,
+      0.702582836151123,
+      0.9980449676513672
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "frequency:spectrum_complex",
+     "accuracy_pct": 13.55932205915451,
+     "delta_pp": -66.94915443658829
+    },
+    {
+     "group": "frequency:spectrum_magnitude",
+     "accuracy_pct": 65.25423526763916,
+     "delta_pp": -15.254241228103638
+    },
+    {
+     "group": "frequency:frequency_all",
+     "accuracy_pct": 10.169491171836853,
+     "delta_pp": -70.33898532390594
+    }
+   ],
+   "checkpoint_sha256": "59bf93e20f745a6850beddeb8affba507edcd26fe723e8a7b3693a34bcda77d6"
+  },
+  {
+   "id": "ManyRx_legacy__f2__s3101",
+   "dataset": "ManyRx",
+   "fold": 2,
+   "frontend": "legacy",
+   "packets": 118,
+   "baseline_accuracy_pct": 70.3389823436737,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9990326166152954,
+      "score_abs_median": 0.08879932016134262,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999948143959045,
+      "score_abs_median": 0.03689702972769737,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "mixed": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.9980449676513672,
+      0.6645364165306091,
+      0.5798412561416626
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9875549077987671,
+      "score_abs_median": 5.709288597106934,
+      "saturation_frac": 0.47742319107055664
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9897662997245789,
+      "score_abs_median": 4.613364219665527,
+      "saturation_frac": 0.3761834502220154
+     }
+    ],
+    "channel_rms": {
+     "mixed": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.9980449676513672,
+      0.6645364165306091,
+      0.5798412561416626
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "mixed:IQ",
+     "accuracy_pct": 48.30508530139923,
+     "delta_pp": -22.033897042274475
+    },
+    {
+     "group": "mixed:FFT",
+     "accuracy_pct": 18.644067645072937,
+     "delta_pp": -51.69491469860077
+    },
+    {
+     "group": "mixed:amplitude",
+     "accuracy_pct": 38.98304998874664,
+     "delta_pp": -31.355932354927063
+    },
+    {
+     "group": "mixed:absolute_phase",
+     "accuracy_pct": 68.64407062530518,
+     "delta_pp": -1.6949117183685303
+    }
+   ],
+   "checkpoint_sha256": "27dedae783d350d4d1bb938aa6832cf1df44ba6ae1b62ab8a84810cf4aada1aa"
+  },
+  {
+   "id": "ManyRx_time__f2__s3101",
+   "dataset": "ManyRx",
+   "fold": 2,
+   "frontend": "time",
+   "packets": 118,
+   "baseline_accuracy_pct": 56.779658794403076,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9990499019622803,
+      "score_abs_median": 0.08191468566656113,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999952912330627,
+      "score_abs_median": 0.16016885638237,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.6645364165306091,
+      0.5798412561416626
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9546006917953491,
+      "score_abs_median": 2.7723777294158936,
+      "saturation_frac": 0.16249006986618042
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9587098360061646,
+      "score_abs_median": 2.530531883239746,
+      "saturation_frac": 0.11303297430276871
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.6645364165306091,
+      0.5798412561416626
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 11.016949266195297,
+     "delta_pp": -45.76270952820778
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 14.406779408454895,
+     "delta_pp": -42.37287938594818
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 52.542370557785034,
+     "delta_pp": -4.237288236618042
+    }
+   ],
+   "checkpoint_sha256": "1ea3334c0b7eec4bd9abc381c7a94177f33f2ca3afb570fc5fad278bfe3a37bd"
+  },
+  {
+   "id": "ManyRx_diff__f2__s3101",
+   "dataset": "ManyRx",
+   "fold": 2,
+   "frontend": "diff",
+   "packets": 118,
+   "baseline_accuracy_pct": 50.0,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9990313649177551,
+      "score_abs_median": 0.08942025899887085,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999948143959045,
+      "score_abs_median": 0.03563134744763374,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.6645364165306091,
+      0.6849312782287598,
+      0.7259221076965332
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9602032899856567,
+      "score_abs_median": 3.0154192447662354,
+      "saturation_frac": 0.16580872237682343
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9778319597244263,
+      "score_abs_median": 2.1351423263549805,
+      "saturation_frac": 0.08591267466545105
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.6645364165306091,
+      0.6849312782287598,
+      0.7259221076965332
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 19.49152499437332,
+     "delta_pp": -30.50847500562668
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 11.864406615495682,
+     "delta_pp": -38.13559338450432
+    },
+    {
+     "group": "time:phase_product",
+     "accuracy_pct": 48.30508530139923,
+     "delta_pp": -1.694914698600769
+    }
+   ],
+   "checkpoint_sha256": "ee616091b9ee78f9fe755bdb1433ab08a6a57fe7215b962dc84c6a94bdd86f88"
+  },
+  {
+   "id": "ManyRx_split__f2__s3101",
+   "dataset": "ManyRx",
+   "fold": 2,
+   "frontend": "split",
+   "packets": 118,
+   "baseline_accuracy_pct": 71.18644118309021,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9991466403007507,
+      "score_abs_median": 0.2000163346529007,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999953508377075,
+      "score_abs_median": 0.02079964242875576,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.6645364165306091,
+      0.5798412561416626
+     ],
+     "frequency": [
+      0.711601972579956,
+      0.702582836151123,
+      0.9980449676513672
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 1.0028676986694336,
+      "score_abs_median": 5.039246559143066,
+      "saturation_frac": 0.425094336271286
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9946337938308716,
+      "score_abs_median": 3.007049560546875,
+      "saturation_frac": 0.22843286395072937
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.6645364165306091,
+      0.5798412561416626
+     ],
+     "frequency": [
+      0.711601972579956,
+      0.702582836151123,
+      0.9980449676513672
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 57.62711763381958,
+     "delta_pp": -13.55932354927063
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 49.152541160583496,
+     "delta_pp": -22.033900022506714
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 72.03390002250671,
+     "delta_pp": 0.8474588394165039
+    },
+    {
+     "group": "frequency:spectrum_complex",
+     "accuracy_pct": 13.55932205915451,
+     "delta_pp": -57.6271191239357
+    },
+    {
+     "group": "frequency:spectrum_magnitude",
+     "accuracy_pct": 61.01694703102112,
+     "delta_pp": -10.169494152069092
+    },
+    {
+     "group": "frequency:frequency_all",
+     "accuracy_pct": 16.101695597171783,
+     "delta_pp": -55.08474558591843
+    }
+   ],
+   "checkpoint_sha256": "6d307e71a52ab96b8187186beff99dfe68d7350f977f6c1937ee82fe4f564893"
+  },
+  {
+   "id": "ManyRx_stf__f2__s3101",
+   "dataset": "ManyRx",
+   "fold": 2,
+   "frontend": "stf",
+   "packets": 118,
+   "baseline_accuracy_pct": 64.40678238868713,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9989352226257324,
+      "score_abs_median": 0.00524702575057745,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999950528144836,
+      "score_abs_median": 0.3128381073474884,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.6645364165306091,
+      0.5798412561416626,
+      0.7004916667938232,
+      0.237036794424057
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9549487829208374,
+      "score_abs_median": 2.5420637130737305,
+      "saturation_frac": 0.0965307205915451
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9809214472770691,
+      "score_abs_median": 2.5434577465057373,
+      "saturation_frac": 0.13200145959854126
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7060845494270325,
+      0.7081269025802612,
+      0.6645364165306091,
+      0.5798412561416626,
+      0.7004916667938232,
+      0.237036794424057
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 22.88135588169098,
+     "delta_pp": -41.525426506996155
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 16.949152946472168,
+     "delta_pp": -47.457629442214966
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 61.86440587043762,
+     "delta_pp": -2.5423765182495117
+    },
+    {
+     "group": "time:STF_product",
+     "accuracy_pct": 32.20339119434357,
+     "delta_pp": -32.20339119434357
+    }
+   ],
+   "checkpoint_sha256": "a1df25857603f1d4977f2f4c0039386c55c5a8087050bbcffd9a5dbd3bd16cc4"
+  },
+  {
+   "id": "ManyRx_filter__f2__s3101",
+   "dataset": "ManyRx",
+   "fold": 2,
+   "frontend": "filter",
+   "packets": 118,
+   "baseline_accuracy_pct": 53.38982939720154,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9990499019622803,
+      "score_abs_median": 0.08191574364900589,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999952912330627,
+      "score_abs_median": 0.16016408801078796,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7060846090316772,
+      0.7081269025802612,
+      0.6645364165306091,
+      0.5798413157463074
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9513503313064575,
+      "score_abs_median": 2.780768394470215,
+      "saturation_frac": 0.160255566239357
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9587963223457336,
+      "score_abs_median": 2.736778736114502,
+      "saturation_frac": 0.13226628303527832
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7523520588874817,
+      0.7545031905174255,
+      0.6946128010749817,
+      0.5797889232635498
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 10.169491171836853,
+     "delta_pp": -43.220338225364685
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 11.864406615495682,
+     "delta_pp": -41.525422781705856
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 55.084747076034546,
+     "delta_pp": 1.6949176788330078
+    }
+   ],
+   "checkpoint_sha256": "1f19be50a9cb4c5a0a00ac079b5e5a98bed570bf075e1730ebae25ad123ff7cd"
+  },
+  {
+   "id": "ManyRx_frequency__f2__s3101",
+   "dataset": "ManyRx",
+   "fold": 2,
+   "frontend": "frequency",
+   "packets": 118,
+   "baseline_accuracy_pct": 87.28813529014587,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9991792440414429,
+      "score_abs_median": 0.21369901299476624,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.999995231628418,
+      "score_abs_median": 0.5423660278320312,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "frequency": [
+      0.711601972579956,
+      0.702582836151123,
+      0.9980449676513672
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9983634352684021,
+      "score_abs_median": 5.927034854888916,
+      "saturation_frac": 0.49459579586982727
+     },
+     {
+      "block": 1,
+      "token_rms": 1.0115563869476318,
+      "score_abs_median": 10.129344940185547,
+      "saturation_frac": 0.775564432144165
+     }
+    ],
+    "channel_rms": {
+     "frequency": [
+      0.711601972579956,
+      0.702582836151123,
+      0.9980449676513672
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "frequency:spectrum_complex",
+     "accuracy_pct": 17.796610295772552,
+     "delta_pp": -69.49152499437332
+    },
+    {
+     "group": "frequency:spectrum_magnitude",
+     "accuracy_pct": 77.96609997749329,
+     "delta_pp": -9.322035312652588
+    },
+    {
+     "group": "frequency:frequency_all",
+     "accuracy_pct": 10.169491171836853,
+     "delta_pp": -77.11864411830902
+    }
+   ],
+   "checkpoint_sha256": "1b8e961d3de08cecdef356591f53e61529ef578054ac3231f848ce7f654317fe"
+  },
+  {
+   "id": "ManyRx_legacy__f3__s3101",
+   "dataset": "ManyRx",
+   "fold": 3,
+   "frontend": "legacy",
+   "packets": 118,
+   "baseline_accuracy_pct": 49.152541160583496,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9991803765296936,
+      "score_abs_median": 0.39696452021598816,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999952912330627,
+      "score_abs_median": 0.09820886701345444,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "mixed": [
+      0.7067921757698059,
+      0.7074205875396729,
+      0.9980449676513672,
+      0.6643710732460022,
+      0.5752621293067932
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9363060593605042,
+      "score_abs_median": 5.431646347045898,
+      "saturation_frac": 0.4467276930809021
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9463996887207031,
+      "score_abs_median": 6.937527656555176,
+      "saturation_frac": 0.5717359781265259
+     }
+    ],
+    "channel_rms": {
+     "mixed": [
+      0.7067921757698059,
+      0.7074205875396729,
+      0.9980449676513672,
+      0.6643710732460022,
+      0.5752621293067932
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "mixed:IQ",
+     "accuracy_pct": 48.30508530139923,
+     "delta_pp": -0.8474558591842651
+    },
+    {
+     "group": "mixed:FFT",
+     "accuracy_pct": 9.322033822536469,
+     "delta_pp": -39.83050733804703
+    },
+    {
+     "group": "mixed:amplitude",
+     "accuracy_pct": 16.949152946472168,
+     "delta_pp": -32.20338821411133
+    },
+    {
+     "group": "mixed:absolute_phase",
+     "accuracy_pct": 49.152541160583496,
+     "delta_pp": 0.0
+    }
+   ],
+   "checkpoint_sha256": "7d462ebab014947641a77d421947ed306087154341e765247d60a7331cd47886"
+  },
+  {
+   "id": "ManyRx_time__f3__s3101",
+   "dataset": "ManyRx",
+   "fold": 3,
+   "frontend": "time",
+   "packets": 118,
+   "baseline_accuracy_pct": 61.01694703102112,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9991275668144226,
+      "score_abs_median": 0.026205191388726234,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999950528144836,
+      "score_abs_median": 0.324303537607193,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7067921757698059,
+      0.7074205875396729,
+      0.6643710732460022,
+      0.5752621293067932
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9529237151145935,
+      "score_abs_median": 2.3075270652770996,
+      "saturation_frac": 0.08472093194723129
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9745578169822693,
+      "score_abs_median": 2.173288106918335,
+      "saturation_frac": 0.07390426099300385
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7067921757698059,
+      0.7074205875396729,
+      0.6643710732460022,
+      0.5752621293067932
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 10.169491171836853,
+     "delta_pp": -50.847455859184265
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 12.711864709854126,
+     "delta_pp": -48.30508232116699
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 61.86440587043762,
+     "delta_pp": 0.8474588394165039
+    }
+   ],
+   "checkpoint_sha256": "5f4cf1df373db74cc7746af8cfb2b2790967ba3b4818487402677caf0f2faf96"
+  },
+  {
+   "id": "ManyRx_diff__f3__s3101",
+   "dataset": "ManyRx",
+   "fold": 3,
+   "frontend": "diff",
+   "packets": 118,
+   "baseline_accuracy_pct": 41.525423526763916,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9991811513900757,
+      "score_abs_median": 0.3967006504535675,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999953508377075,
+      "score_abs_median": 0.10241015255451202,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7067921757698059,
+      0.7074205875396729,
+      0.6643710732460022,
+      0.6958933472633362,
+      0.7154203057289124
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9668867588043213,
+      "score_abs_median": 2.829171657562256,
+      "saturation_frac": 0.1788599044084549
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9839587211608887,
+      "score_abs_median": 2.650909185409546,
+      "saturation_frac": 0.13534493744373322
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7067921757698059,
+      0.7074205875396729,
+      0.6643710732460022,
+      0.6958933472633362,
+      0.7154203057289124
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 17.796610295772552,
+     "delta_pp": -23.728813230991364
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 12.711864709854126,
+     "delta_pp": -28.81355881690979
+    },
+    {
+     "group": "time:phase_product",
+     "accuracy_pct": 27.966102957725525,
+     "delta_pp": -13.559320569038391
+    }
+   ],
+   "checkpoint_sha256": "79250c45180fc8cb3d245ad254aa6e46ddd3936bf520edb18964a67dd99ba91f"
+  },
+  {
+   "id": "ManyRx_split__f3__s3101",
+   "dataset": "ManyRx",
+   "fold": 3,
+   "frontend": "split",
+   "packets": 118,
+   "baseline_accuracy_pct": 81.35592937469482,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9991351366043091,
+      "score_abs_median": 0.16989731788635254,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999950528144836,
+      "score_abs_median": 0.2264830321073532,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7067921757698059,
+      0.7074205875396729,
+      0.6643710732460022,
+      0.5752621293067932
+     ],
+     "frequency": [
+      0.7082744836807251,
+      0.7059371471405029,
+      0.9980449676513672
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 1.0005137920379639,
+      "score_abs_median": 4.855221748352051,
+      "saturation_frac": 0.41507217288017273
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9880232810974121,
+      "score_abs_median": 2.894550085067749,
+      "saturation_frac": 0.22918598353862762
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7067921757698059,
+      0.7074205875396729,
+      0.6643710732460022,
+      0.5752621293067932
+     ],
+     "frequency": [
+      0.7082744836807251,
+      0.7059371471405029,
+      0.9980449676513672
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 44.06779706478119,
+     "delta_pp": -37.288132309913635
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 26.271185278892517,
+     "delta_pp": -55.08474409580231
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 80.5084764957428,
+     "delta_pp": -0.8474528789520264
+    },
+    {
+     "group": "frequency:spectrum_complex",
+     "accuracy_pct": 30.50847351551056,
+     "delta_pp": -50.847455859184265
+    },
+    {
+     "group": "frequency:spectrum_magnitude",
+     "accuracy_pct": 52.542370557785034,
+     "delta_pp": -28.81355881690979
+    },
+    {
+     "group": "frequency:frequency_all",
+     "accuracy_pct": 11.016949266195297,
+     "delta_pp": -70.33898010849953
+    }
+   ],
+   "checkpoint_sha256": "2fb0d28bd2836733f35d49b3fef1d4b1ff18c159b089f9a829caf44a42b45afd"
+  },
+  {
+   "id": "ManyRx_stf__f3__s3101",
+   "dataset": "ManyRx",
+   "fold": 3,
+   "frontend": "stf",
+   "packets": 118,
+   "baseline_accuracy_pct": 57.62711763381958,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9991423487663269,
+      "score_abs_median": 0.09495330601930618,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999951124191284,
+      "score_abs_median": 0.07850567996501923,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7067921757698059,
+      0.7074205875396729,
+      0.6643710732460022,
+      0.5752621293067932,
+      0.722375750541687,
+      0.15826661884784698
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9458996057510376,
+      "score_abs_median": 2.4924468994140625,
+      "saturation_frac": 0.10513771325349808
+     },
+     {
+      "block": 1,
+      "token_rms": 0.975714385509491,
+      "score_abs_median": 2.8290505409240723,
+      "saturation_frac": 0.17567366361618042
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7067921757698059,
+      0.7074205875396729,
+      0.6643710732460022,
+      0.5752621293067932,
+      0.722375750541687,
+      0.15826661884784698
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 10.169491171836853,
+     "delta_pp": -47.45762646198273
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 32.20339119434357,
+     "delta_pp": -25.423726439476013
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 61.01694703102112,
+     "delta_pp": 3.389829397201538
+    },
+    {
+     "group": "time:STF_product",
+     "accuracy_pct": 41.525423526763916,
+     "delta_pp": -16.101694107055664
+    }
+   ],
+   "checkpoint_sha256": "207370c1c078b6f13cb562d394e5bd5739716d6c48ba93f646fa4544749da287"
+  },
+  {
+   "id": "ManyRx_filter__f3__s3101",
+   "dataset": "ManyRx",
+   "fold": 3,
+   "frontend": "filter",
+   "packets": 118,
+   "baseline_accuracy_pct": 65.25423526763916,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9991276264190674,
+      "score_abs_median": 0.02620280720293522,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999949932098389,
+      "score_abs_median": 0.3243052363395691,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7067921757698059,
+      0.7074205875396729,
+      0.6643710732460022,
+      0.5752621293067932
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9572572708129883,
+      "score_abs_median": 2.2417385578155518,
+      "saturation_frac": 0.08196504414081573
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9723677039146423,
+      "score_abs_median": 2.190124273300171,
+      "saturation_frac": 0.06523934006690979
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7456104159355164,
+      0.7453120946884155,
+      0.6892911195755005,
+      0.5750827193260193
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 10.169491171836853,
+     "delta_pp": -55.08474409580231
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 11.864406615495682,
+     "delta_pp": -53.38982865214348
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 67.79661178588867,
+     "delta_pp": 2.5423765182495117
+    }
+   ],
+   "checkpoint_sha256": "b7c4619c1a9e4e09beec49c3a9957714adc5dffdee030d0e3e8ff199fce65b2e"
+  },
+  {
+   "id": "ManyRx_frequency__f3__s3101",
+   "dataset": "ManyRx",
+   "fold": 3,
+   "frontend": "frequency",
+   "packets": 118,
+   "baseline_accuracy_pct": 81.35592937469482,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9990985989570618,
+      "score_abs_median": 0.102721206843853,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999950528144836,
+      "score_abs_median": 0.20373041927814484,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "frequency": [
+      0.7082744836807251,
+      0.7059371471405029,
+      0.9980449676513672
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9817339181900024,
+      "score_abs_median": 6.359048843383789,
+      "saturation_frac": 0.5333520770072937
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9910544753074646,
+      "score_abs_median": 4.923033714294434,
+      "saturation_frac": 0.41261419653892517
+     }
+    ],
+    "channel_rms": {
+     "frequency": [
+      0.7082744836807251,
+      0.7059371471405029,
+      0.9980449676513672
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "frequency:spectrum_complex",
+     "accuracy_pct": 25.423729419708252,
+     "delta_pp": -55.93219995498657
+    },
+    {
+     "group": "frequency:spectrum_magnitude",
+     "accuracy_pct": 66.10169410705566,
+     "delta_pp": -15.25423526763916
+    },
+    {
+     "group": "frequency:frequency_all",
+     "accuracy_pct": 10.169491171836853,
+     "delta_pp": -71.18643820285797
+    }
+   ],
+   "checkpoint_sha256": "b1c8a042d26de5a0271fa462f0668212af057342a3d6215597344a45d6c5447c"
+  },
+  {
+   "id": "ManySig_legacy__f0__s3101",
+   "dataset": "ManySig",
+   "fold": 0,
+   "frontend": "legacy",
+   "packets": 24,
+   "baseline_accuracy_pct": 62.5,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9990403652191162,
+      "score_abs_median": 0.5110840797424316,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999951124191284,
+      "score_abs_median": 0.5015453100204468,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "mixed": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.9980449676513672,
+      0.6656121015548706,
+      0.5807958245277405
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9958322644233704,
+      "score_abs_median": 1.8703960180282593,
+      "saturation_frac": 0.0577392578125
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9983958005905151,
+      "score_abs_median": 2.1706297397613525,
+      "saturation_frac": 0.1653238981962204
+     }
+    ],
+    "channel_rms": {
+     "mixed": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.9980449676513672,
+      0.6656121015548706,
+      0.5807958245277405
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "mixed:IQ",
+     "accuracy_pct": 37.5,
+     "delta_pp": -25.0
+    },
+    {
+     "group": "mixed:FFT",
+     "accuracy_pct": 12.5,
+     "delta_pp": -50.0
+    },
+    {
+     "group": "mixed:amplitude",
+     "accuracy_pct": 29.16666567325592,
+     "delta_pp": -33.33333432674408
+    },
+    {
+     "group": "mixed:absolute_phase",
+     "accuracy_pct": 58.33333134651184,
+     "delta_pp": -4.166668653488159
+    }
+   ],
+   "checkpoint_sha256": "4733c680b4f60414a9555fb252a9b1f39eb5e1dc894bf0abe405cf790051e818"
+  },
+  {
+   "id": "ManySig_time__f0__s3101",
+   "dataset": "ManySig",
+   "fold": 0,
+   "frontend": "time",
+   "packets": 24,
+   "baseline_accuracy_pct": 45.83333432674408,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9987570643424988,
+      "score_abs_median": 0.1232617050409317,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.999995231628418,
+      "score_abs_median": 0.047648392617702484,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.6656121015548706,
+      0.5807958245277405
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9901951551437378,
+      "score_abs_median": 2.8701155185699463,
+      "saturation_frac": 0.1637369841337204
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9895063638687134,
+      "score_abs_median": 1.8341822624206543,
+      "saturation_frac": 0.0649007186293602
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.6656121015548706,
+      0.5807958245277405
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 16.66666716337204,
+     "delta_pp": -29.16666716337204
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 20.83333283662796,
+     "delta_pp": -25.00000149011612
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 37.5,
+     "delta_pp": -8.33333432674408
+    }
+   ],
+   "checkpoint_sha256": "db443ca2081e10899a59779ea369d2e815d3ce02e27d50680c85d5521ff9e852"
+  },
+  {
+   "id": "ManySig_diff__f0__s3101",
+   "dataset": "ManySig",
+   "fold": 0,
+   "frontend": "diff",
+   "packets": 24,
+   "baseline_accuracy_pct": 41.66666567325592,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9990381002426147,
+      "score_abs_median": 0.5136731863021851,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999951124191284,
+      "score_abs_median": 0.4982640743255615,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.6656121015548706,
+      0.7045449614524841,
+      0.7069017887115479
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9992009997367859,
+      "score_abs_median": 5.633831977844238,
+      "saturation_frac": 0.4704996645450592
+     },
+     {
+      "block": 1,
+      "token_rms": 0.993815004825592,
+      "score_abs_median": 2.518451690673828,
+      "saturation_frac": 0.1353759765625
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.6656121015548706,
+      0.7045449614524841,
+      0.7069017887115479
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 25.0,
+     "delta_pp": -16.66666567325592
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 16.66666716337204,
+     "delta_pp": -24.99999850988388
+    },
+    {
+     "group": "time:phase_product",
+     "accuracy_pct": 12.5,
+     "delta_pp": -29.16666567325592
+    }
+   ],
+   "checkpoint_sha256": "f7ab764bc21e95f3c84ed7cc5e3b7fe8d41f6f8159e72fd70ce8b1b17d31c696"
+  },
+  {
+   "id": "ManySig_split__f0__s3101",
+   "dataset": "ManySig",
+   "fold": 0,
+   "frontend": "split",
+   "packets": 24,
+   "baseline_accuracy_pct": 62.5,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9991734027862549,
+      "score_abs_median": 0.16771547496318817,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999948740005493,
+      "score_abs_median": 0.11125394701957703,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.6656121015548706,
+      0.5807958245277405
+     ],
+     "frequency": [
+      0.728498101234436,
+      0.6850478053092957,
+      0.9980449676513672
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9994611144065857,
+      "score_abs_median": 1.1442594528198242,
+      "saturation_frac": 0.00040690103196538985
+     },
+     {
+      "block": 1,
+      "token_rms": 0.987221896648407,
+      "score_abs_median": 2.0453691482543945,
+      "saturation_frac": 0.0809733048081398
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.6656121015548706,
+      0.5807958245277405
+     ],
+     "frequency": [
+      0.728498101234436,
+      0.6850478053092957,
+      0.9980449676513672
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 54.16666865348816,
+     "delta_pp": -8.33333134651184
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 25.0,
+     "delta_pp": -37.5
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 62.5,
+     "delta_pp": 0.0
+    },
+    {
+     "group": "frequency:spectrum_complex",
+     "accuracy_pct": 20.83333283662796,
+     "delta_pp": -41.66666716337204
+    },
+    {
+     "group": "frequency:spectrum_magnitude",
+     "accuracy_pct": 58.33333134651184,
+     "delta_pp": -4.166668653488159
+    },
+    {
+     "group": "frequency:frequency_all",
+     "accuracy_pct": 20.83333283662796,
+     "delta_pp": -41.66666716337204
+    }
+   ],
+   "checkpoint_sha256": "adcebf9cda901137f73c3c403c2a4948663c03f06bebb9362ccfd78e279fc805"
+  },
+  {
+   "id": "ManySig_stf__f0__s3101",
+   "dataset": "ManySig",
+   "fold": 0,
+   "frontend": "stf",
+   "packets": 24,
+   "baseline_accuracy_pct": 33.33333432674408,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9989610314369202,
+      "score_abs_median": 0.05664287880063057,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.999995231628418,
+      "score_abs_median": 0.15361930429935455,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.6656121015548706,
+      0.5807958245277405,
+      0.6909329891204834,
+      0.26360321044921875
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9972683191299438,
+      "score_abs_median": 2.2790403366088867,
+      "saturation_frac": 0.0914713516831398
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9959121346473694,
+      "score_abs_median": 1.2259076833724976,
+      "saturation_frac": 0.0360921211540699
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.6656121015548706,
+      0.5807958245277405,
+      0.6909329891204834,
+      0.26360321044921875
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 16.66666716337204,
+     "delta_pp": -16.66666716337204
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 16.66666716337204,
+     "delta_pp": -16.66666716337204
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 33.33333432674408,
+     "delta_pp": 0.0
+    },
+    {
+     "group": "time:STF_product",
+     "accuracy_pct": 41.66666567325592,
+     "delta_pp": 8.33333134651184
+    }
+   ],
+   "checkpoint_sha256": "7ad45b4321e047a153e681eca29c7a555283c63ba243df71cda6d55f7b910c5c"
+  },
+  {
+   "id": "ManySig_filter__f0__s3101",
+   "dataset": "ManySig",
+   "fold": 0,
+   "frontend": "filter",
+   "packets": 24,
+   "baseline_accuracy_pct": 58.33333134651184,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9987570643424988,
+      "score_abs_median": 0.12326166033744812,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.999995231628418,
+      "score_abs_median": 0.047648463398218155,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.700566291809082,
+      0.7135868072509766,
+      0.6656121015548706,
+      0.5807958245277405
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9934062957763672,
+      "score_abs_median": 2.549656629562378,
+      "saturation_frac": 0.1156819686293602
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9895290732383728,
+      "score_abs_median": 2.0946671962738037,
+      "saturation_frac": 0.1219482421875
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7195137739181519,
+      0.7346121072769165,
+      0.6785405874252319,
+      0.5805058479309082
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 16.66666716337204,
+     "delta_pp": -41.6666641831398
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 25.0,
+     "delta_pp": -33.33333134651184
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 50.0,
+     "delta_pp": -8.33333134651184
+    }
+   ],
+   "checkpoint_sha256": "1c6dfd0825fc5559268c8036a371fe136d4c042bfb7d418d77d00d6f68a41599"
+  },
+  {
+   "id": "ManySig_frequency__f0__s3101",
+   "dataset": "ManySig",
+   "fold": 0,
+   "frontend": "frequency",
+   "packets": 24,
+   "baseline_accuracy_pct": 70.83333134651184,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9991093873977661,
+      "score_abs_median": 0.18067926168441772,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999953508377075,
+      "score_abs_median": 0.5418241024017334,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "frequency": [
+      0.728498101234436,
+      0.6850478053092957,
+      0.9980449676513672
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9877896904945374,
+      "score_abs_median": 4.5273871421813965,
+      "saturation_frac": 0.3334554135799408
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9991358518600464,
+      "score_abs_median": 6.7011003494262695,
+      "saturation_frac": 0.5458984375
+     }
+    ],
+    "channel_rms": {
+     "frequency": [
+      0.728498101234436,
+      0.6850478053092957,
+      0.9980449676513672
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "frequency:spectrum_complex",
+     "accuracy_pct": 20.83333283662796,
+     "delta_pp": -49.99999850988388
+    },
+    {
+     "group": "frequency:spectrum_magnitude",
+     "accuracy_pct": 54.16666865348816,
+     "delta_pp": -16.66666269302368
+    },
+    {
+     "group": "frequency:frequency_all",
+     "accuracy_pct": 16.66666716337204,
+     "delta_pp": -54.1666641831398
+    }
+   ],
+   "checkpoint_sha256": "d8b88b23811cd4690c7dae317aea4ff48d5234000893054b05a7c14f4cd2a989"
+  },
+  {
+   "id": "ManySig_legacy__f1__s3101",
+   "dataset": "ManySig",
+   "fold": 1,
+   "frontend": "legacy",
+   "packets": 24,
+   "baseline_accuracy_pct": 54.16666865348816,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9991122484207153,
+      "score_abs_median": 0.5511346459388733,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999949932098389,
+      "score_abs_median": 0.6851491928100586,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "mixed": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.9980449676513672,
+      0.6656121015548706,
+      0.5807958245277405
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9889724850654602,
+      "score_abs_median": 3.0712482929229736,
+      "saturation_frac": 0.2038981169462204
+     },
+     {
+      "block": 1,
+      "token_rms": 1.0063230991363525,
+      "score_abs_median": 4.069035530090332,
+      "saturation_frac": 0.3286539614200592
+     }
+    ],
+    "channel_rms": {
+     "mixed": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.9980449676513672,
+      0.6656121015548706,
+      0.5807958245277405
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "mixed:IQ",
+     "accuracy_pct": 62.5,
+     "delta_pp": 8.33333134651184
+    },
+    {
+     "group": "mixed:FFT",
+     "accuracy_pct": 16.66666716337204,
+     "delta_pp": -37.50000149011612
+    },
+    {
+     "group": "mixed:amplitude",
+     "accuracy_pct": 20.83333283662796,
+     "delta_pp": -33.3333358168602
+    },
+    {
+     "group": "mixed:absolute_phase",
+     "accuracy_pct": 54.16666865348816,
+     "delta_pp": 0.0
+    }
+   ],
+   "checkpoint_sha256": "ffa931ea78d3fb9f82c7bea604d49b834736b5bda300b0a3a372b1f064aae294"
+  },
+  {
+   "id": "ManySig_time__f1__s3101",
+   "dataset": "ManySig",
+   "fold": 1,
+   "frontend": "time",
+   "packets": 24,
+   "baseline_accuracy_pct": 33.33333432674408,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9988687038421631,
+      "score_abs_median": 0.11243506520986557,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999951720237732,
+      "score_abs_median": 0.19919975101947784,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.6656121015548706,
+      0.5807958245277405
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9974901080131531,
+      "score_abs_median": 3.1758182048797607,
+      "saturation_frac": 0.1820882111787796
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9930810928344727,
+      "score_abs_median": 1.6453213691711426,
+      "saturation_frac": 0.0498453788459301
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.6656121015548706,
+      0.5807958245277405
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 16.66666716337204,
+     "delta_pp": -16.66666716337204
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 33.33333432674408,
+     "delta_pp": 0.0
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 41.66666567325592,
+     "delta_pp": 8.33333134651184
+    }
+   ],
+   "checkpoint_sha256": "23d4ea75ba548ef9a7f80de334ab29beccd781354aa4c3dac52420d813e9631a"
+  },
+  {
+   "id": "ManySig_diff__f1__s3101",
+   "dataset": "ManySig",
+   "fold": 1,
+   "frontend": "diff",
+   "packets": 24,
+   "baseline_accuracy_pct": 41.66666567325592,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9991109371185303,
+      "score_abs_median": 0.5575295090675354,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999950528144836,
+      "score_abs_median": 0.6813497543334961,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.6656121015548706,
+      0.7045449614524841,
+      0.7069017887115479
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9919562935829163,
+      "score_abs_median": 3.8653788566589355,
+      "saturation_frac": 0.29052734375
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9867569804191589,
+      "score_abs_median": 2.684410572052002,
+      "saturation_frac": 0.154541015625
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.6656121015548706,
+      0.7045449614524841,
+      0.7069017887115479
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 20.83333283662796,
+     "delta_pp": -20.83333283662796
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 25.0,
+     "delta_pp": -16.66666567325592
+    },
+    {
+     "group": "time:phase_product",
+     "accuracy_pct": 29.16666567325592,
+     "delta_pp": -12.5
+    }
+   ],
+   "checkpoint_sha256": "5753d6acad9a35b29ebee90055fb88da04eb560d99b353dc29811c2822212570"
+  },
+  {
+   "id": "ManySig_split__f1__s3101",
+   "dataset": "ManySig",
+   "fold": 1,
+   "frontend": "split",
+   "packets": 24,
+   "baseline_accuracy_pct": 62.5,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9986677169799805,
+      "score_abs_median": 0.5465151071548462,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999949932098389,
+      "score_abs_median": 0.047710563987493515,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.6656121015548706,
+      0.5807958245277405
+     ],
+     "frequency": [
+      0.728498101234436,
+      0.6850478053092957,
+      0.9980449676513672
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9931102395057678,
+      "score_abs_median": 1.38533616065979,
+      "saturation_frac": 0.015584309585392475
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9886059165000916,
+      "score_abs_median": 1.4227100610733032,
+      "saturation_frac": 0.0056559243239462376
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.6656121015548706,
+      0.5807958245277405
+     ],
+     "frequency": [
+      0.728498101234436,
+      0.6850478053092957,
+      0.9980449676513672
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 75.0,
+     "delta_pp": 12.5
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 58.33333134651184,
+     "delta_pp": -4.166668653488159
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 58.33333134651184,
+     "delta_pp": -4.166668653488159
+    },
+    {
+     "group": "frequency:spectrum_complex",
+     "accuracy_pct": 16.66666716337204,
+     "delta_pp": -45.83333283662796
+    },
+    {
+     "group": "frequency:spectrum_magnitude",
+     "accuracy_pct": 41.66666567325592,
+     "delta_pp": -20.83333432674408
+    },
+    {
+     "group": "frequency:frequency_all",
+     "accuracy_pct": 8.33333358168602,
+     "delta_pp": -54.16666641831398
+    }
+   ],
+   "checkpoint_sha256": "033af2cf429fa3c53978cec3a1d90af9a0994a39647feaaf59009bb3386ab6b5"
+  },
+  {
+   "id": "ManySig_stf__f1__s3101",
+   "dataset": "ManySig",
+   "fold": 1,
+   "frontend": "stf",
+   "packets": 24,
+   "baseline_accuracy_pct": 41.66666567325592,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9989782571792603,
+      "score_abs_median": 0.03518630936741829,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999948740005493,
+      "score_abs_median": 0.16759105026721954,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.6656121015548706,
+      0.5807958245277405,
+      0.6909329891204834,
+      0.26360321044921875
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9878299832344055,
+      "score_abs_median": 1.9176661968231201,
+      "saturation_frac": 0.03108724020421505
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9986985325813293,
+      "score_abs_median": 2.1012537479400635,
+      "saturation_frac": 0.1009928360581398
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.6656121015548706,
+      0.5807958245277405,
+      0.6909329891204834,
+      0.26360321044921875
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 20.83333283662796,
+     "delta_pp": -20.83333283662796
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 16.66666716337204,
+     "delta_pp": -24.99999850988388
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 37.5,
+     "delta_pp": -4.16666567325592
+    },
+    {
+     "group": "time:STF_product",
+     "accuracy_pct": 33.33333432674408,
+     "delta_pp": -8.33333134651184
+    }
+   ],
+   "checkpoint_sha256": "b5558eeaab6b4b66e1d5e3a9feebe34277cbcfdb4b6ee6c6ef2fe68b213a110c"
+  },
+  {
+   "id": "ManySig_filter__f1__s3101",
+   "dataset": "ManySig",
+   "fold": 1,
+   "frontend": "filter",
+   "packets": 24,
+   "baseline_accuracy_pct": 50.0,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9988687038421631,
+      "score_abs_median": 0.11243497580289841,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999951720237732,
+      "score_abs_median": 0.1991998553276062,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.700566291809082,
+      0.7135868072509766,
+      0.6656121015548706,
+      0.5807958245277405
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9960730075836182,
+      "score_abs_median": 2.944908380508423,
+      "saturation_frac": 0.1609293669462204
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9929432272911072,
+      "score_abs_median": 1.6377657651901245,
+      "saturation_frac": 0.010457356460392475
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7198338508605957,
+      0.7365818023681641,
+      0.678779125213623,
+      0.5804005861282349
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 16.66666716337204,
+     "delta_pp": -33.33333283662796
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 16.66666716337204,
+     "delta_pp": -33.33333283662796
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 50.0,
+     "delta_pp": 0.0
+    }
+   ],
+   "checkpoint_sha256": "f82675722c8826e7d49d14ab5834892772561379bd769e7b25ee7baf36cf343c"
+  },
+  {
+   "id": "ManySig_frequency__f1__s3101",
+   "dataset": "ManySig",
+   "fold": 1,
+   "frontend": "frequency",
+   "packets": 24,
+   "baseline_accuracy_pct": 75.0,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9989186525344849,
+      "score_abs_median": 0.08968506753444672,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999949336051941,
+      "score_abs_median": 0.009278480894863605,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "frequency": [
+      0.728498101234436,
+      0.6850478053092957,
+      0.9980449676513672
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 1.0022015571594238,
+      "score_abs_median": 4.561586380004883,
+      "saturation_frac": 0.3825276792049408
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9971640110015869,
+      "score_abs_median": 4.775595664978027,
+      "saturation_frac": 0.41943359375
+     }
+    ],
+    "channel_rms": {
+     "frequency": [
+      0.728498101234436,
+      0.6850478053092957,
+      0.9980449676513672
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "frequency:spectrum_complex",
+     "accuracy_pct": 16.66666716337204,
+     "delta_pp": -58.33333283662796
+    },
+    {
+     "group": "frequency:spectrum_magnitude",
+     "accuracy_pct": 62.5,
+     "delta_pp": -12.5
+    },
+    {
+     "group": "frequency:frequency_all",
+     "accuracy_pct": 16.66666716337204,
+     "delta_pp": -58.33333283662796
+    }
+   ],
+   "checkpoint_sha256": "24baba7054da6bb2791e0a6dd9edbef8fd65122d864d629a202dc61e47c05f80"
+  },
+  {
+   "id": "ManySig_legacy__f2__s3101",
+   "dataset": "ManySig",
+   "fold": 2,
+   "frontend": "legacy",
+   "packets": 24,
+   "baseline_accuracy_pct": 50.0,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9991167187690735,
+      "score_abs_median": 0.2865121364593506,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999954700469971,
+      "score_abs_median": 0.0065297698602080345,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "mixed": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.9980449676513672,
+      0.6656121015548706,
+      0.5807958245277405
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9924306273460388,
+      "score_abs_median": 3.638526439666748,
+      "saturation_frac": 0.2905680239200592
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9959869980812073,
+      "score_abs_median": 2.734051465988159,
+      "saturation_frac": 0.1884358674287796
+     }
+    ],
+    "channel_rms": {
+     "mixed": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.9980449676513672,
+      0.6656121015548706,
+      0.5807958245277405
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "mixed:IQ",
+     "accuracy_pct": 54.16666865348816,
+     "delta_pp": 4.166668653488159
+    },
+    {
+     "group": "mixed:FFT",
+     "accuracy_pct": 16.66666716337204,
+     "delta_pp": -33.33333283662796
+    },
+    {
+     "group": "mixed:amplitude",
+     "accuracy_pct": 29.16666567325592,
+     "delta_pp": -20.83333432674408
+    },
+    {
+     "group": "mixed:absolute_phase",
+     "accuracy_pct": 50.0,
+     "delta_pp": 0.0
+    }
+   ],
+   "checkpoint_sha256": "1c1e3c3431e107b41126afa747c53ff1a1cb4678ddb59b62cb696efd0c92eb25"
+  },
+  {
+   "id": "ManySig_time__f2__s3101",
+   "dataset": "ManySig",
+   "fold": 2,
+   "frontend": "time",
+   "packets": 24,
+   "baseline_accuracy_pct": 45.83333432674408,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9990532994270325,
+      "score_abs_median": 0.11255855858325958,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999951720237732,
+      "score_abs_median": 0.12113270908594131,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.6656121015548706,
+      0.5807958245277405
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9766013622283936,
+      "score_abs_median": 2.879056453704834,
+      "saturation_frac": 0.1459553986787796
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9775972962379456,
+      "score_abs_median": 1.7474510669708252,
+      "saturation_frac": 0.1021728515625
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.6656121015548706,
+      0.5807958245277405
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 16.66666716337204,
+     "delta_pp": -29.16666716337204
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 16.66666716337204,
+     "delta_pp": -29.16666716337204
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 50.0,
+     "delta_pp": 4.16666567325592
+    }
+   ],
+   "checkpoint_sha256": "55949ec05636879e2e851e1a297d7ce8ee3e743bb36a8dd7467e40c08ccccdc6"
+  },
+  {
+   "id": "ManySig_diff__f2__s3101",
+   "dataset": "ManySig",
+   "fold": 2,
+   "frontend": "diff",
+   "packets": 24,
+   "baseline_accuracy_pct": 41.66666567325592,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9991179704666138,
+      "score_abs_median": 0.28558576107025146,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999954700469971,
+      "score_abs_median": 0.00475687813013792,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.6656121015548706,
+      0.7045449614524841,
+      0.7069017887115479
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9958844780921936,
+      "score_abs_median": 4.791820526123047,
+      "saturation_frac": 0.3787841796875
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9897644519805908,
+      "score_abs_median": 2.745126247406006,
+      "saturation_frac": 0.1763102263212204
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.6656121015548706,
+      0.7045449614524841,
+      0.7069017887115479
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 37.5,
+     "delta_pp": -4.16666567325592
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 25.0,
+     "delta_pp": -16.66666567325592
+    },
+    {
+     "group": "time:phase_product",
+     "accuracy_pct": 25.0,
+     "delta_pp": -16.66666567325592
+    }
+   ],
+   "checkpoint_sha256": "a798efddc8ba9c26275fdca5880ec8ee854ffa2580539d2e62494ff0766eb176"
+  },
+  {
+   "id": "ManySig_split__f2__s3101",
+   "dataset": "ManySig",
+   "fold": 2,
+   "frontend": "split",
+   "packets": 24,
+   "baseline_accuracy_pct": 70.83333134651184,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9991955757141113,
+      "score_abs_median": 0.08721687644720078,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999949932098389,
+      "score_abs_median": 0.22492696344852448,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.6656121015548706,
+      0.5807958245277405
+     ],
+     "frequency": [
+      0.728498101234436,
+      0.6850478053092957,
+      0.9980449676513672
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9985227584838867,
+      "score_abs_median": 1.5076607465744019,
+      "saturation_frac": 0.01688639260828495
+     },
+     {
+      "block": 1,
+      "token_rms": 1.006034255027771,
+      "score_abs_median": 2.2204461097717285,
+      "saturation_frac": 0.1129964217543602
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.6656121015548706,
+      0.5807958245277405
+     ],
+     "frequency": [
+      0.728498101234436,
+      0.6850478053092957,
+      0.9980449676513672
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 54.16666865348816,
+     "delta_pp": -16.66666269302368
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 41.66666567325592,
+     "delta_pp": -29.16666567325592
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 62.5,
+     "delta_pp": -8.33333134651184
+    },
+    {
+     "group": "frequency:spectrum_complex",
+     "accuracy_pct": 16.66666716337204,
+     "delta_pp": -54.1666641831398
+    },
+    {
+     "group": "frequency:spectrum_magnitude",
+     "accuracy_pct": 45.83333432674408,
+     "delta_pp": -24.99999701976776
+    },
+    {
+     "group": "frequency:frequency_all",
+     "accuracy_pct": 12.5,
+     "delta_pp": -58.33333134651184
+    }
+   ],
+   "checkpoint_sha256": "22339d6825b0bc7234dfdb68b266ad793f8b206580f37a9a012664159c8849e6"
+  },
+  {
+   "id": "ManySig_stf__f2__s3101",
+   "dataset": "ManySig",
+   "fold": 2,
+   "frontend": "stf",
+   "packets": 24,
+   "baseline_accuracy_pct": 50.0,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.999054491519928,
+      "score_abs_median": 0.3764386773109436,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999954104423523,
+      "score_abs_median": 0.6008918285369873,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.6656121015548706,
+      0.5807958245277405,
+      0.6909329891204834,
+      0.26360321044921875
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9805760979652405,
+      "score_abs_median": 2.4411909580230713,
+      "saturation_frac": 0.1063639298081398
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9908261299133301,
+      "score_abs_median": 1.7350599765777588,
+      "saturation_frac": 0.0329182930290699
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7005662322044373,
+      0.713586688041687,
+      0.6656121015548706,
+      0.5807958245277405,
+      0.6909329891204834,
+      0.26360321044921875
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 33.33333432674408,
+     "delta_pp": -16.66666567325592
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 33.33333432674408,
+     "delta_pp": -16.66666567325592
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 50.0,
+     "delta_pp": 0.0
+    },
+    {
+     "group": "time:STF_product",
+     "accuracy_pct": 37.5,
+     "delta_pp": -12.5
+    }
+   ],
+   "checkpoint_sha256": "53dff6f5d3f91077197bf752549e7c84c85dccedc1b88596ba1e562436d92bcf"
+  },
+  {
+   "id": "ManySig_filter__f2__s3101",
+   "dataset": "ManySig",
+   "fold": 2,
+   "frontend": "filter",
+   "packets": 24,
+   "baseline_accuracy_pct": 41.66666567325592,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9990532994270325,
+      "score_abs_median": 0.1125585287809372,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999951720237732,
+      "score_abs_median": 0.12113279849290848,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.700566291809082,
+      0.7135868072509766,
+      0.6656121015548706,
+      0.5807958245277405
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9840591549873352,
+      "score_abs_median": 2.4134738445281982,
+      "saturation_frac": 0.1337076872587204
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9852949380874634,
+      "score_abs_median": 1.3695054054260254,
+      "saturation_frac": 0.008544921875
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7326974272727966,
+      0.7494205832481384,
+      0.6864916086196899,
+      0.581619381904602
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 33.33333432674408,
+     "delta_pp": -8.33333134651184
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 16.66666716337204,
+     "delta_pp": -24.99999850988388
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 41.66666567325592,
+     "delta_pp": 0.0
+    }
+   ],
+   "checkpoint_sha256": "f9b06e5d04569403f041a6f39173b83b6824917d61fe2c5f071ff99cfe078304"
+  },
+  {
+   "id": "ManySig_frequency__f2__s3101",
+   "dataset": "ManySig",
+   "fold": 2,
+   "frontend": "frequency",
+   "packets": 24,
+   "baseline_accuracy_pct": 75.0,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9991902709007263,
+      "score_abs_median": 0.34332436323165894,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999949336051941,
+      "score_abs_median": 0.8191738128662109,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "frequency": [
+      0.728498101234436,
+      0.6850478053092957,
+      0.9980449676513672
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 1.001122236251831,
+      "score_abs_median": 5.538137435913086,
+      "saturation_frac": 0.46044921875
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9938521981239319,
+      "score_abs_median": 4.563146114349365,
+      "saturation_frac": 0.3876953125
+     }
+    ],
+    "channel_rms": {
+     "frequency": [
+      0.728498101234436,
+      0.6850478053092957,
+      0.9980449676513672
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "frequency:spectrum_complex",
+     "accuracy_pct": 16.66666716337204,
+     "delta_pp": -58.33333283662796
+    },
+    {
+     "group": "frequency:spectrum_magnitude",
+     "accuracy_pct": 50.0,
+     "delta_pp": -25.0
+    },
+    {
+     "group": "frequency:frequency_all",
+     "accuracy_pct": 16.66666716337204,
+     "delta_pp": -58.33333283662796
+    }
+   ],
+   "checkpoint_sha256": "8bde77cacfa7ad24bc5bd17c6fda5c6ec1f74c6a7d1ae0e2a38c2ed5045d1ab1"
+  },
+  {
+   "id": "ManySig_legacy__f3__s3101",
+   "dataset": "ManySig",
+   "fold": 3,
+   "frontend": "legacy",
+   "packets": 24,
+   "baseline_accuracy_pct": 58.33333134651184,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9992499351501465,
+      "score_abs_median": 0.22490258514881134,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999952912330627,
+      "score_abs_median": 0.0846509113907814,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "mixed": [
+      0.7044941782951355,
+      0.709709107875824,
+      0.9980449676513672,
+      0.6637604832649231,
+      0.5800539255142212
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9890982508659363,
+      "score_abs_median": 3.307786703109741,
+      "saturation_frac": 0.21630859375
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9987249970436096,
+      "score_abs_median": 4.117958068847656,
+      "saturation_frac": 0.3350830078125
+     }
+    ],
+    "channel_rms": {
+     "mixed": [
+      0.7044941782951355,
+      0.709709107875824,
+      0.9980449676513672,
+      0.6637604832649231,
+      0.5800539255142212
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "mixed:IQ",
+     "accuracy_pct": 37.5,
+     "delta_pp": -20.83333134651184
+    },
+    {
+     "group": "mixed:FFT",
+     "accuracy_pct": 4.16666679084301,
+     "delta_pp": -54.16666455566883
+    },
+    {
+     "group": "mixed:amplitude",
+     "accuracy_pct": 12.5,
+     "delta_pp": -45.83333134651184
+    },
+    {
+     "group": "mixed:absolute_phase",
+     "accuracy_pct": 58.33333134651184,
+     "delta_pp": 0.0
+    }
+   ],
+   "checkpoint_sha256": "c26d9a3c195b4fe31816314dd16d1942a44e40aaac6674672c8afe46e1ff0167"
+  },
+  {
+   "id": "ManySig_time__f3__s3101",
+   "dataset": "ManySig",
+   "fold": 3,
+   "frontend": "time",
+   "packets": 24,
+   "baseline_accuracy_pct": 33.33333432674408,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9989016056060791,
+      "score_abs_median": 0.27133533358573914,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999947547912598,
+      "score_abs_median": 0.05355173349380493,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7044941782951355,
+      0.709709107875824,
+      0.6637604832649231,
+      0.5800539255142212
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9872491359710693,
+      "score_abs_median": 2.1705613136291504,
+      "saturation_frac": 0.0980224609375
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9889991879463196,
+      "score_abs_median": 1.3832048177719116,
+      "saturation_frac": 0.02323404885828495
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7044941782951355,
+      0.709709107875824,
+      0.6637604832649231,
+      0.5800539255142212
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 16.66666716337204,
+     "delta_pp": -16.66666716337204
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 29.16666567325592,
+     "delta_pp": -4.166668653488159
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 33.33333432674408,
+     "delta_pp": 0.0
+    }
+   ],
+   "checkpoint_sha256": "ca7f74560a7c15ed86730583f836128a76ad577ffefc44a5d4159956ba7b4c26"
+  },
+  {
+   "id": "ManySig_diff__f3__s3101",
+   "dataset": "ManySig",
+   "fold": 3,
+   "frontend": "diff",
+   "packets": 24,
+   "baseline_accuracy_pct": 45.83333432674408,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.999249279499054,
+      "score_abs_median": 0.22461630403995514,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999952912330627,
+      "score_abs_median": 0.0852041020989418,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7044941782951355,
+      0.709709107875824,
+      0.6637604832649231,
+      0.7114823460578918,
+      0.6999190449714661
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9908329844474792,
+      "score_abs_median": 2.313182830810547,
+      "saturation_frac": 0.1350911408662796
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9927276372909546,
+      "score_abs_median": 1.9404680728912354,
+      "saturation_frac": 0.0988362655043602
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7044941782951355,
+      0.709709107875824,
+      0.6637604832649231,
+      0.7114823460578918,
+      0.6999190449714661
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 25.0,
+     "delta_pp": -20.83333432674408
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 16.66666716337204,
+     "delta_pp": -29.16666716337204
+    },
+    {
+     "group": "time:phase_product",
+     "accuracy_pct": 33.33333432674408,
+     "delta_pp": -12.5
+    }
+   ],
+   "checkpoint_sha256": "4d4f7a35842997d44dc83fc2525ab65241e0a6671341462cfc9a889020592324"
+  },
+  {
+   "id": "ManySig_split__f3__s3101",
+   "dataset": "ManySig",
+   "fold": 3,
+   "frontend": "split",
+   "packets": 24,
+   "baseline_accuracy_pct": 62.5,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9994058012962341,
+      "score_abs_median": 0.30645501613616943,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999949336051941,
+      "score_abs_median": 0.7269887328147888,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7044941782951355,
+      0.709709107875824,
+      0.6637604832649231,
+      0.5800539255142212
+     ],
+     "frequency": [
+      0.698874831199646,
+      0.7152439951896667,
+      0.9980449676513672
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 1.0021368265151978,
+      "score_abs_median": 3.457099199295044,
+      "saturation_frac": 0.2854410707950592
+     },
+     {
+      "block": 1,
+      "token_rms": 1.0071345567703247,
+      "score_abs_median": 2.6661860942840576,
+      "saturation_frac": 0.2333170622587204
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7044941782951355,
+      0.709709107875824,
+      0.6637604832649231,
+      0.5800539255142212
+     ],
+     "frequency": [
+      0.698874831199646,
+      0.7152439951896667,
+      0.9980449676513672
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 50.0,
+     "delta_pp": -12.5
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 50.0,
+     "delta_pp": -12.5
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 66.66666865348816,
+     "delta_pp": 4.166668653488159
+    },
+    {
+     "group": "frequency:spectrum_complex",
+     "accuracy_pct": 33.33333432674408,
+     "delta_pp": -29.16666567325592
+    },
+    {
+     "group": "frequency:spectrum_magnitude",
+     "accuracy_pct": 54.16666865348816,
+     "delta_pp": -8.33333134651184
+    },
+    {
+     "group": "frequency:frequency_all",
+     "accuracy_pct": 29.16666567325592,
+     "delta_pp": -33.33333432674408
+    }
+   ],
+   "checkpoint_sha256": "a7f627947f4a1415879892a90d159722932bf274b07b070f51dcf0324a9d637a"
+  },
+  {
+   "id": "ManySig_stf__f3__s3101",
+   "dataset": "ManySig",
+   "fold": 3,
+   "frontend": "stf",
+   "packets": 24,
+   "baseline_accuracy_pct": 54.16666865348816,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9991304874420166,
+      "score_abs_median": 0.3943285346031189,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999953508377075,
+      "score_abs_median": 0.46348410844802856,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7044941782951355,
+      0.709709107875824,
+      0.6637604832649231,
+      0.5800539255142212,
+      0.726235032081604,
+      0.13949063420295715
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9975549578666687,
+      "score_abs_median": 1.3032711744308472,
+      "saturation_frac": 0.02628580667078495
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9963607788085938,
+      "score_abs_median": 1.0018360614776611,
+      "saturation_frac": 0.0084228515625
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7044941782951355,
+      0.709709107875824,
+      0.6637604832649231,
+      0.5800539255142212,
+      0.726235032081604,
+      0.13949063420295715
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 16.66666716337204,
+     "delta_pp": -37.50000149011612
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 20.83333283662796,
+     "delta_pp": -33.3333358168602
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 50.0,
+     "delta_pp": -4.166668653488159
+    },
+    {
+     "group": "time:STF_product",
+     "accuracy_pct": 20.83333283662796,
+     "delta_pp": -33.3333358168602
+    }
+   ],
+   "checkpoint_sha256": "7faa4ca2bf79e4d90fba2c0429b9b3ddb2caa00ea2e624421555c2914a904bcb"
+  },
+  {
+   "id": "ManySig_filter__f3__s3101",
+   "dataset": "ManySig",
+   "fold": 3,
+   "frontend": "filter",
+   "packets": 24,
+   "baseline_accuracy_pct": 29.16666567325592,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9989016056060791,
+      "score_abs_median": 0.2713369131088257,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999947547912598,
+      "score_abs_median": 0.05355095490813255,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.7044941782951355,
+      0.709709107875824,
+      0.6637604832649231,
+      0.580053985118866
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.988481342792511,
+      "score_abs_median": 2.3393006324768066,
+      "saturation_frac": 0.133544921875
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9944061636924744,
+      "score_abs_median": 1.6199572086334229,
+      "saturation_frac": 0.0381266288459301
+     }
+    ],
+    "channel_rms": {
+     "time": [
+      0.736911416053772,
+      0.7436423301696777,
+      0.685258150100708,
+      0.5809285640716553
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "time:IQ",
+     "accuracy_pct": 16.66666716337204,
+     "delta_pp": -12.49999850988388
+    },
+    {
+     "group": "time:amplitude",
+     "accuracy_pct": 20.83333283662796,
+     "delta_pp": -8.33333283662796
+    },
+    {
+     "group": "time:absolute_phase",
+     "accuracy_pct": 29.16666567325592,
+     "delta_pp": 0.0
+    }
+   ],
+   "checkpoint_sha256": "13aabdad61c70f072ac2466cd0eb102a901a0afd70246a759930d705a790d0a4"
+  },
+  {
+   "id": "ManySig_frequency__f3__s3101",
+   "dataset": "ManySig",
+   "fold": 3,
+   "frontend": "frequency",
+   "packets": 24,
+   "baseline_accuracy_pct": 75.0,
+   "initial": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.998858630657196,
+      "score_abs_median": 0.4115341603755951,
+      "saturation_frac": 0.0
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9999949932098389,
+      "score_abs_median": 0.17545416951179504,
+      "saturation_frac": 0.0
+     }
+    ],
+    "channel_rms": {
+     "frequency": [
+      0.698874831199646,
+      0.7152439951896667,
+      0.9980449676513672
+     ]
+    }
+   },
+   "trained": {
+    "blocks": [
+     {
+      "block": 0,
+      "token_rms": 0.9808434247970581,
+      "score_abs_median": 3.8484132289886475,
+      "saturation_frac": 0.3005777895450592
+     },
+     {
+      "block": 1,
+      "token_rms": 0.9727455973625183,
+      "score_abs_median": 3.708674192428589,
+      "saturation_frac": 0.2489420622587204
+     }
+    ],
+    "channel_rms": {
+     "frequency": [
+      0.698874831199646,
+      0.7152439951896667,
+      0.9980449676513672
+     ]
+    }
+   },
+   "masking": [
+    {
+     "group": "frequency:spectrum_complex",
+     "accuracy_pct": 16.66666716337204,
+     "delta_pp": -58.33333283662796
+    },
+    {
+     "group": "frequency:spectrum_magnitude",
+     "accuracy_pct": 54.16666865348816,
+     "delta_pp": -20.83333134651184
+    },
+    {
+     "group": "frequency:frequency_all",
+     "accuracy_pct": 16.66666716337204,
+     "delta_pp": -58.33333283662796
+    }
+   ],
+   "checkpoint_sha256": "4fb5237f743fc910448c5b26963869cbcd33b6d429905f0383dc1bc241e0783c"
+  }
+ ],
+ "samples": {
+  "ManyRx:0": [
+   {
+    "rx": "23-6",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     0,
+     1,
+     100,
+     101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501,
+     600,
+     601,
+     700,
+     701,
+     800,
+     801,
+     900,
+     901
+    ]
+   },
+   {
+    "rx": "23-7",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     0,
+     1,
+     100,
+     101,
+     1100,
+     1101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501,
+     600,
+     601,
+     700,
+     701,
+     800,
+     801
+    ]
+   },
+   {
+    "rx": "24-5",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     0,
+     1,
+     100,
+     101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501,
+     600,
+     601,
+     700,
+     701,
+     800,
+     801
+    ]
+   },
+   {
+    "rx": "24-6",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     900,
+     901,
+     0,
+     1,
+     100,
+     101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501,
+     600,
+     601,
+     700,
+     701,
+     800,
+     801
+    ]
+   },
+   {
+    "rx": "24-13",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     0,
+     1,
+     100,
+     101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501,
+     600,
+     601,
+     700,
+     701,
+     800,
+     801,
+     900,
+     901
+    ]
+   },
+   {
+    "rx": "24-16",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     900,
+     901,
+     0,
+     1,
+     100,
+     101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501,
+     600,
+     601,
+     700,
+     701,
+     800,
+     801
+    ]
+   }
+  ],
+  "ManyRx:1": [
+   {
+    "rx": "23-6",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     0,
+     1,
+     100,
+     101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501,
+     600,
+     601,
+     700,
+     701,
+     800,
+     801,
+     900,
+     901
+    ]
+   },
+   {
+    "rx": "23-7",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     0,
+     1,
+     100,
+     101,
+     1100,
+     1101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501,
+     600,
+     601,
+     700,
+     701,
+     800,
+     801
+    ]
+   },
+   {
+    "rx": "24-5",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     0,
+     1,
+     100,
+     101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501,
+     600,
+     601,
+     700,
+     701,
+     800,
+     801
+    ]
+   },
+   {
+    "rx": "24-6",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     900,
+     901,
+     0,
+     1,
+     100,
+     101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501,
+     600,
+     601,
+     700,
+     701,
+     800,
+     801
+    ]
+   },
+   {
+    "rx": "24-13",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     0,
+     1,
+     100,
+     101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501,
+     600,
+     601,
+     700,
+     701,
+     800,
+     801,
+     900,
+     901
+    ]
+   },
+   {
+    "rx": "24-16",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     900,
+     901,
+     0,
+     1,
+     100,
+     101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501,
+     600,
+     601,
+     700,
+     701,
+     800,
+     801
+    ]
+   }
+  ],
+  "ManyRx:2": [
+   {
+    "rx": "23-6",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     0,
+     1,
+     100,
+     101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501,
+     600,
+     601,
+     700,
+     701,
+     800,
+     801,
+     900,
+     901
+    ]
+   },
+   {
+    "rx": "23-7",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     0,
+     1,
+     100,
+     101,
+     1100,
+     1101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501,
+     600,
+     601,
+     700,
+     701,
+     800,
+     801
+    ]
+   },
+   {
+    "rx": "24-5",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     0,
+     1,
+     100,
+     101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501,
+     600,
+     601,
+     700,
+     701,
+     800,
+     801
+    ]
+   },
+   {
+    "rx": "24-6",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     900,
+     901,
+     0,
+     1,
+     100,
+     101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501,
+     600,
+     601,
+     700,
+     701,
+     800,
+     801
+    ]
+   },
+   {
+    "rx": "24-13",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     0,
+     1,
+     100,
+     101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501,
+     600,
+     601,
+     700,
+     701,
+     800,
+     801,
+     900,
+     901
+    ]
+   },
+   {
+    "rx": "24-16",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     900,
+     901,
+     0,
+     1,
+     100,
+     101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501,
+     600,
+     601,
+     700,
+     701,
+     800,
+     801
+    ]
+   }
+  ],
+  "ManyRx:3": [
+   {
+    "rx": "19-19",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     0,
+     1,
+     100,
+     101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501,
+     600,
+     601,
+     700,
+     701,
+     800,
+     801
+    ]
+   },
+   {
+    "rx": "19-20",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     0,
+     1,
+     100,
+     101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501,
+     1400,
+     1401,
+     600,
+     601,
+     700,
+     701,
+     800,
+     801
+    ]
+   },
+   {
+    "rx": "20-1",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     0,
+     1,
+     100,
+     101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501,
+     600,
+     601,
+     700,
+     701,
+     800,
+     801,
+     900,
+     901
+    ]
+   },
+   {
+    "rx": "20-19",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     0,
+     1,
+     100,
+     101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501,
+     600,
+     601,
+     700,
+     701,
+     800,
+     801,
+     900,
+     901
+    ]
+   },
+   {
+    "rx": "20-20",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     0,
+     1,
+     100,
+     101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501,
+     600,
+     601,
+     700,
+     701,
+     800,
+     801,
+     900,
+     901
+    ]
+   },
+   {
+    "rx": "23-1",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     0,
+     1,
+     100,
+     101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501,
+     600,
+     601,
+     700,
+     701,
+     800,
+     801,
+     900,
+     901
+    ]
+   }
+  ],
+  "ManySig:0": [
+   {
+    "rx": "19-2",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     0,
+     1,
+     100,
+     101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501
+    ]
+   },
+   {
+    "rx": "20-1",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     0,
+     1,
+     100,
+     101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501
+    ]
+   }
+  ],
+  "ManySig:1": [
+   {
+    "rx": "19-2",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     0,
+     1,
+     100,
+     101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501
+    ]
+   },
+   {
+    "rx": "20-1",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     0,
+     1,
+     100,
+     101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501
+    ]
+   }
+  ],
+  "ManySig:2": [
+   {
+    "rx": "19-2",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     0,
+     1,
+     100,
+     101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501
+    ]
+   },
+   {
+    "rx": "20-1",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     0,
+     1,
+     100,
+     101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501
+    ]
+   }
+  ],
+  "ManySig:3": [
+   {
+    "rx": "8-8",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     0,
+     1,
+     100,
+     101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501
+    ]
+   },
+   {
+    "rx": "14-7",
+    "days": [
+     1,
+     2
+    ],
+    "concatenated_rows": [
+     0,
+     1,
+     100,
+     101,
+     200,
+     201,
+     300,
+     301,
+     400,
+     401,
+     500,
+     501
+    ]
+   }
+  ]
+ },
+ "policy": "first two held-source day1-2 packets per TX/RX; seed3101 feature fits only",
+ "masking_caution": "Zeroed channels are out-of-distribution; not causal feature importance."
+}

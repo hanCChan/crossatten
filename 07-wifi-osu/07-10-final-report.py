@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 """Frozen WiSig CR/CRD comparison with receiver-clustered, seed-unpaired intervals."""
 import csv
+import hashlib
+import importlib.util
 import json
+import subprocess
+import sys
 from collections import defaultdict
 from pathlib import Path
 
@@ -9,6 +13,8 @@ import numpy as np
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
+sys.path.insert(0, str(ROOT / "lib"))
+from xa.paper_train import require_committed, sha
 
 
 def save_csv(path, rows):
@@ -19,8 +25,19 @@ def save_csv(path, rows):
 
 
 def main():
+    spec = importlib.util.spec_from_file_location("s07_final_audit", HERE / "07-7-audit.py")
+    audit = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(audit)
+    audit.audit_wifi("final")
     decision = json.loads((HERE / "decision_final.json").read_text())
     jobs = decision["jobs"]
+    expected = {(dataset, pipeline, fold, seed)
+                for dataset in ("ManyRx", "ManySig")
+                for pipeline in ("source_frontend", "source_training", "source_combination")
+                for fold in range(4) for seed in (4101, 4102, 4103)}
+    actual = {(j["dataset"], j["pipeline"], j["fold"], j["seed"]) for j in jobs}
+    if actual != expected or len(actual) != len(jobs):
+        raise ValueError("missing or duplicate frozen final cell")
     rows, fits = [], defaultdict(list)
     for job in jobs:
         path = HERE / "runs" / "final" / job["id"] / "metrics.json"
@@ -58,7 +75,15 @@ def main():
                             parameters=";".join(str(p) for p in sorted({v["params"] for v in values}))))
     save_csv(HERE / "wifi_final_receiver_metrics.csv", rows)
     save_csv(HERE / "wifi_final_metrics.csv", summary)
-    frozen = list(csv.DictReader((ROOT / "06-paper-validation/summary/paper/receiver_metrics.csv").open()))
+    baseline_path = ROOT / "06-paper-validation/summary/paper/receiver_metrics.csv"
+    baseline_commit = json.loads((HERE / "registration.json").read_text())["baseline"]
+    old = subprocess.check_output(
+        ["git", "show", f"{baseline_commit}:{baseline_path.relative_to(ROOT).as_posix()}"], cwd=ROOT
+    )
+    if hashlib.sha256(old).hexdigest() != sha(baseline_path):
+        raise ValueError("historical baseline comparison changed since S07 registration")
+    require_committed(baseline_path)
+    frozen = list(csv.DictReader(baseline_path.open()))
     intervals = []
     rng = np.random.default_rng(7101)
     for row in summary:
@@ -85,6 +110,15 @@ def main():
                                   improved_receivers=int((delta>0).sum()),
                                   inference="RX-cluster bootstrap of seed-mean deltas; seeds not paired"))
     save_csv(HERE / "wifi_comparison_intervals.csv", intervals)
+    equivalents = {}
+    for dataset in ("ManyRx", "ManySig"):
+        for pipeline in ("source_frontend", "source_training", "source_combination"):
+            specification = [{k: v for k, v in j.items()
+                              if k not in ("id", "phase", "pipeline", "factor")}
+                             for j in jobs if j["dataset"] == dataset and j["pipeline"] == pipeline]
+            equivalents[f"{dataset}:{pipeline}"] = specification
+    duplicated = [(a, b) for a in equivalents for b in equivalents if a < b
+                  and equivalents[a] == equivalents[b]]
     lines = ["# S07 WiSig Final Results\n\n",
              f"Completed all {len(jobs)} frozen final fits. Four RX folds x three seeds. ",
              "Source-selected configurations are disclosed in `decision_final.json`.\n\n",
@@ -105,9 +139,32 @@ def main():
         lines.append(f"| {r['dataset']} | {r['pipeline']} | {r['baseline']} | {r['delta_pp']:+.2f} | "
                      f"[{r['ci95_low_pp']:+.2f}, {r['ci95_high_pp']:+.2f}] | "
                      f"{r['improved_receivers']}/{r['receiver_count']} |\n")
+    lines.extend(["\n## Frozen Per-Fold Configurations\n\n",
+                  "| Dataset | Fold | Pipeline | Frontend | Recipe | Augmentation | Balanced | Noise | Checkpoint | Epoch budget |\n",
+                  "|---|---:|---|---|---|---|---|---|---|---:|\n"])
+    for j in jobs:
+        if j["seed"] != 4101:
+            continue
+        lines.append(f"| {j['dataset']} | {j['fold']} | {j['pipeline']} | {j['frontend']} | "
+                     f"{j['recipe']} | {j.get('augmentation', 'none')} | {j.get('balanced', False)} | "
+                     f"{j.get('noise', 'default')} | {j.get('checkpoint', 'packet')} | {j.get('epochs', 200)} |\n")
+    if duplicated:
+        lines.append("\nIdentical registered pipelines, not independent methods: " +
+                     "; ".join(f"`{a}` = `{b}`" for a, b in duplicated) + ".\n")
     lines.append("\nNo method should be selected after seeing this table. All registered pipelines are reported. "
                  "These results support only tested-protocol statements; SOTA requires a separate primary-source review.\n")
     (HERE / "S07_WIFI_FINAL_RESULTS.md").write_text("".join(lines))
+    report_files = ("wifi_final_receiver_metrics.csv", "wifi_final_metrics.csv",
+                    "wifi_comparison_intervals.csv", "S07_WIFI_FINAL_RESULTS.md")
+    evidence = dict(
+        final_decision_sha256=sha(HERE / "decision_final.json"),
+        baseline_commit=baseline_commit, baseline_receiver_metrics_sha256=sha(baseline_path),
+        final_fits={j["id"]: sha(HERE / "runs/final" / j["id"] / "metrics.json") for j in jobs},
+        files={name: sha(HERE / name) for name in report_files},
+        duplicate_pipelines=duplicated,
+        uncertainty="RX-cluster seed-mean bootstrap, conditional on trained models; not full seed/dataset uncertainty",
+    )
+    (HERE / "wifi_final_report_evidence.json").write_text(json.dumps(evidence, indent=1) + "\n")
     print(json.dumps(dict(final_fits=len(jobs), summary=summary, intervals=intervals)), flush=True)
 
 
