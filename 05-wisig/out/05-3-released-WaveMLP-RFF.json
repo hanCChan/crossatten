@@ -1,0 +1,343 @@
+{
+ "repo": "WaveMLP-RFF",
+ "code_state": "released weights only",
+ "loader_max_abs_delta": {
+  "ManyRx": 0.0,
+  "ManySig": 0.0
+ },
+ "rows": [
+  {
+   "dataset": "ManyRx",
+   "fold": 0,
+   "method": "WaveMLP",
+   "alpha": null,
+   "expected_log_acc": null,
+   "delta_pp": null,
+   "weight_sha256": "308303a6f09e4feb33370a9af5de5c9012cf5109fe92beb5b72bbde7f3db993f",
+   "packet_acc": 88.56962025316456,
+   "rx_equal_acc": 88.54791666666667,
+   "per_rx": {
+    "1-1": {
+     "correct": 1725,
+     "total": 2000,
+     "acc": 86.25
+    },
+    "1-19": {
+     "correct": 1588,
+     "total": 2000,
+     "acc": 79.4
+    },
+    "1-20": {
+     "correct": 1812,
+     "total": 2000,
+     "acc": 90.6
+    },
+    "2-1": {
+     "correct": 1819,
+     "total": 2000,
+     "acc": 90.95
+    },
+    "2-19": {
+     "correct": 1776,
+     "total": 2000,
+     "acc": 88.8
+    },
+    "3-19": {
+     "correct": 1811,
+     "total": 2000,
+     "acc": 90.55
+    },
+    "7-7": {
+     "correct": 1900,
+     "total": 2000,
+     "acc": 95.0
+    },
+    "7-14": {
+     "correct": 1563,
+     "total": 1800,
+     "acc": 86.83333333333333
+    }
+   }
+  },
+  {
+   "dataset": "ManyRx",
+   "fold": 1,
+   "method": "WaveMLP",
+   "alpha": null,
+   "expected_log_acc": null,
+   "delta_pp": null,
+   "weight_sha256": "d38300e48e5a5cfe81bfc79ff5af75e28c9ae37fdd7a8e54304a5bb0fffefaeb",
+   "packet_acc": 88.05696202531645,
+   "rx_equal_acc": 88.00972222222222,
+   "per_rx": {
+    "8-7": {
+     "correct": 1583,
+     "total": 2000,
+     "acc": 79.15
+    },
+    "8-8": {
+     "correct": 1977,
+     "total": 2000,
+     "acc": 98.85
+    },
+    "8-14": {
+     "correct": 1554,
+     "total": 2000,
+     "acc": 77.7
+    },
+    "13-7": {
+     "correct": 1517,
+     "total": 1800,
+     "acc": 84.27777777777777
+    },
+    "13-14": {
+     "correct": 1853,
+     "total": 2000,
+     "acc": 92.65
+    },
+    "14-7": {
+     "correct": 1971,
+     "total": 2000,
+     "acc": 98.55
+    },
+    "18-2": {
+     "correct": 1800,
+     "total": 2000,
+     "acc": 90.0
+    },
+    "18-19": {
+     "correct": 1658,
+     "total": 2000,
+     "acc": 82.9
+    }
+   }
+  },
+  {
+   "dataset": "ManyRx",
+   "fold": 2,
+   "method": "WaveMLP",
+   "alpha": null,
+   "expected_log_acc": null,
+   "delta_pp": null,
+   "weight_sha256": "0064233e794dffc42793350d88b2b5e7ce6cf68c23e7daee68b9e802b3d25558",
+   "packet_acc": 91.91772151898734,
+   "rx_equal_acc": 91.94444444444446,
+   "per_rx": {
+    "19-1": {
+     "correct": 1774,
+     "total": 2000,
+     "acc": 88.7
+    },
+    "19-2": {
+     "correct": 1867,
+     "total": 2000,
+     "acc": 93.35
+    },
+    "19-19": {
+     "correct": 1693,
+     "total": 1800,
+     "acc": 94.05555555555556
+    },
+    "19-20": {
+     "correct": 1877,
+     "total": 2000,
+     "acc": 93.85
+    },
+    "20-1": {
+     "correct": 1946,
+     "total": 2000,
+     "acc": 97.3
+    },
+    "20-19": {
+     "correct": 1808,
+     "total": 2000,
+     "acc": 90.4
+    },
+    "20-20": {
+     "correct": 1803,
+     "total": 2000,
+     "acc": 90.15
+    },
+    "23-1": {
+     "correct": 1755,
+     "total": 2000,
+     "acc": 87.75
+    }
+   }
+  },
+  {
+   "dataset": "ManyRx",
+   "fold": 3,
+   "method": "WaveMLP",
+   "alpha": null,
+   "expected_log_acc": null,
+   "delta_pp": null,
+   "weight_sha256": "b5043c02d2dfe45194b7c2af3a3c6e41b00376f2c75ebd7ddd48000f44cc816b",
+   "packet_acc": 86.15934959349593,
+   "rx_equal_acc": 86.17717885270832,
+   "per_rx": {
+    "23-3": {
+     "correct": 1596,
+     "total": 2000,
+     "acc": 79.8
+    },
+    "23-5": {
+     "correct": 1614,
+     "total": 1800,
+     "acc": 89.66666666666667
+    },
+    "23-6": {
+     "correct": 1625,
+     "total": 1800,
+     "acc": 90.27777777777777
+    },
+    "23-7": {
+     "correct": 1786,
+     "total": 2000,
+     "acc": 89.3
+    },
+    "24-5": {
+     "correct": 1297,
+     "total": 1890,
+     "acc": 68.62433862433862
+    },
+    "24-6": {
+     "correct": 1668,
+     "total": 1985,
+     "acc": 84.03022670025189
+    },
+    "24-13": {
+     "correct": 1774,
+     "total": 1900,
+     "acc": 93.36842105263158
+    },
+    "24-16": {
+     "correct": 1887,
+     "total": 2000,
+     "acc": 94.35
+    }
+   }
+  },
+  {
+   "dataset": "ManySig",
+   "fold": 0,
+   "method": "WaveMLP",
+   "alpha": null,
+   "expected_log_acc": null,
+   "delta_pp": null,
+   "weight_sha256": "8561461b4e0cc1dd354fc53e36b375d968f9894bebd066b60e360bd02d294ab2",
+   "packet_acc": 90.86111111111111,
+   "rx_equal_acc": 90.8611111111111,
+   "per_rx": {
+    "1-1": {
+     "correct": 1119,
+     "total": 1200,
+     "acc": 93.25
+    },
+    "1-19": {
+     "correct": 1002,
+     "total": 1200,
+     "acc": 83.5
+    },
+    "2-1": {
+     "correct": 1150,
+     "total": 1200,
+     "acc": 95.83333333333333
+    }
+   }
+  },
+  {
+   "dataset": "ManySig",
+   "fold": 1,
+   "method": "WaveMLP",
+   "alpha": null,
+   "expected_log_acc": null,
+   "delta_pp": null,
+   "weight_sha256": "80832ec42d637358f1e8b4cbf5a0f1e0916d0087f9cfbcee842a23bfe4c6481b",
+   "packet_acc": 89.63888888888889,
+   "rx_equal_acc": 89.63888888888887,
+   "per_rx": {
+    "2-19": {
+     "correct": 1105,
+     "total": 1200,
+     "acc": 92.08333333333333
+    },
+    "3-19": {
+     "correct": 970,
+     "total": 1200,
+     "acc": 80.83333333333333
+    },
+    "7-7": {
+     "correct": 1152,
+     "total": 1200,
+     "acc": 96.0
+    }
+   }
+  },
+  {
+   "dataset": "ManySig",
+   "fold": 2,
+   "method": "WaveMLP",
+   "alpha": null,
+   "expected_log_acc": null,
+   "delta_pp": null,
+   "weight_sha256": "a6362bdba763ad6b68f16ecebe678937be60ea35168412cbaa3597a13a56019b",
+   "packet_acc": 95.97222222222223,
+   "rx_equal_acc": 95.97222222222223,
+   "per_rx": {
+    "7-14": {
+     "correct": 1137,
+     "total": 1200,
+     "acc": 94.75
+    },
+    "8-8": {
+     "correct": 1190,
+     "total": 1200,
+     "acc": 99.16666666666667
+    },
+    "14-7": {
+     "correct": 1128,
+     "total": 1200,
+     "acc": 94.0
+    }
+   }
+  },
+  {
+   "dataset": "ManySig",
+   "fold": 3,
+   "method": "WaveMLP",
+   "alpha": null,
+   "expected_log_acc": null,
+   "delta_pp": null,
+   "weight_sha256": "b8718bc18c2400f7a0ebc06b9a72bbee6d05cc562a2dad1f01892e28938085f6",
+   "packet_acc": 96.02777777777777,
+   "rx_equal_acc": 96.02777777777777,
+   "per_rx": {
+    "18-2": {
+     "correct": 1132,
+     "total": 1200,
+     "acc": 94.33333333333333
+    },
+    "19-2": {
+     "correct": 1179,
+     "total": 1200,
+     "acc": 98.25
+    },
+    "20-1": {
+     "correct": 1146,
+     "total": 1200,
+     "acc": 95.5
+    }
+   }
+  }
+ ],
+ "means": {
+  "ManyRx": 88.67591334774107,
+  "ManySig": 93.125
+ },
+ "expected_readme": {
+  "ManyRx": 88.68,
+  "ManySig": 93.13
+ },
+ "release_gate_passed": true
+}

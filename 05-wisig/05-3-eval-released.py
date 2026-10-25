@@ -2,9 +2,7 @@
 """Evaluate inspected upstream released weights only; never train or choose variants."""
 import argparse
 import importlib
-import importlib.util
 import json
-import pickle
 import re
 import sys
 import types
@@ -104,13 +102,21 @@ def main():
             stages = (1, 2) if args.repo == "IB-RFF" else (1,)
             for stage in stages:
                 if args.repo == "IB-RFF":
-                    importlib.import_module("backbones.FAN")
+                    cls = importlib.import_module("backbones.FAN").FAN
                     alpha = 0.0 if stage == 1 else alphas[dataset][fold]
                     patch = 16 if dataset == "ManyRx" else 32
                     path = ROOT / "external/IB-RFF/weights" / (
                         f"FAN_DSCNN_{patch}_128_2.0_{alpha}_{int(stage == 2)}_{dataset}_[1, 2]_test_round={fold}_seed=2023.pth")
                     # Upstream publishes whole-module pickles; source and repository have been inspected.
-                    model = torch.load(path, map_location="cpu", weights_only=False)
+                    old = torch.load(path, map_location="cpu", weights_only=False)
+                    # Historical whole-module pickles lack modern GELU attributes.
+                    # Rebuild the unchanged official architecture and strictly load all state.
+                    model = cls(seq_len=256, in_chans=2, patch_size=patch, embed_dim=128,
+                                mlp_ratio=2.0, num_classes=10 if dataset == "ManyRx" else 6,
+                                bottleneck_type="DSCNN", use_SAF=True, use_FAF=True)
+                    model.load_state_dict(old.state_dict(), strict=True)
+                    assert all(torch.equal(v, model.state_dict()[k]) for k, v in old.state_dict().items())
+                    del old
                     expected = upstream_log(dataset, fold, alpha, stage)
                     method = "FAN" if stage == 1 else "IB-RFF"
                 else:
@@ -131,6 +137,7 @@ def main():
                 results.append(result)
                 print(json.dumps(result), flush=True)
                 out_path.write_text(json.dumps(dict(repo=args.repo, code_state="released weights only",
+                                                   compatibility="IB-RFF rebuilds official model; strict identical released state",
                                                    loader_max_abs_delta=validations, rows=results), indent=1) + "\n")
                 if delta is not None and abs(delta) > 0.5:
                     raise SystemExit(f"released weight mismatch: {dataset} fold{fold} {method}: {delta:+.3f} pp; STOP")

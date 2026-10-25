@@ -14,6 +14,11 @@ in the conversion manifests. Archives, pickles, and packet caches are ignored.
 
 ## Layout Correction
 
+The downloaded official ManySig compact pickle has `max_sig=1000`, whereas
+ManyRx has `max_sig=200`. The specification mistakenly assigned 200 to both.
+Validate these dataset-specific maxima and still select only the first 100
+packets per TX/RX/day, exactly as upstream does.
+
 The specification's loader layout description is inconsistent with both
 upstream loaders. Their actual code transposes the stored arrays from
 `(N,256,2)` to `(N,2,256)` and then power-normalizes them. Our official layout

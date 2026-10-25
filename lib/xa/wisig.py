@@ -31,8 +31,7 @@ def receivers(dataset, fold):
 
 
 def power_normalize(x):
-    power = (x[:, 0].square() + x[:, 1].square()).mean(-1) if hasattr(x, "square") else (
-        x[:, 0] ** 2 + x[:, 1] ** 2).mean(-1)
+    power = (x[:, 0] ** 2 + x[:, 1] ** 2).mean(-1)
     if np.any(power <= 0) or not np.isfinite(power).all():
         raise ValueError("nonfinite or zero-power WiSig packet")
     return x / np.sqrt(power)[:, None, None]
@@ -53,7 +52,8 @@ def build_dataset(dataset):
     # Inputs are the user-provided Kaggle archive or UCLA's official compact archive.
     with source.open("rb") as f:
         d = pickle.load(f)
-    if d["equalized_list"] != [0, 1] or d["max_sig"] != 200:
+    max_sig = {"ManyRx": 200, "ManySig": 1000}[dataset]
+    if d["equalized_list"] != [0, 1] or d["max_sig"] != max_sig:
         raise ValueError("unexpected equalization/max_sig metadata")
     nc = {"ManyRx": 10, "ManySig": 6}[dataset]
     if len(d["tx_list"]) != nc or len(d["capture_date_list"]) != 4:
@@ -69,7 +69,7 @@ def build_dataset(dataset):
             arrays, xs, ys = [], [], []
             for tx in range(nc):
                 a = np.asarray(d["data"][tx][ri][di][0])
-                if a.ndim != 3 or a.shape[1:] != (256, 2) or len(a) > 200:
+                if a.ndim != 3 or a.shape[1:] != (256, 2) or len(a) > max_sig:
                     raise ValueError((dataset, rx, day, tx, a.shape))
                 a = a[:100]
                 arrays.append(a)
@@ -96,7 +96,8 @@ def build_dataset(dataset):
                            expected_train=expected_train, expected_val=expected_val,
                            matches=(actual_train, actual_val) == (expected_train, expected_val),
                            train_rx=train, test_rx=test))
-    return dict(dataset=dataset, tx_list=d["tx_list"], capture_dates=[d["capture_date_list"][i] for i in days],
+    return dict(dataset=dataset, tx_list=d["tx_list"], max_sig=max_sig,
+                capture_dates=[d["capture_date_list"][i] for i in days],
                 official_rx_order=RX[dataset], non_equalized_index=0, first_packets_per_cell=100,
                 counts=counts, checks=checks, counts_match=all(c["matches"] for c in checks),
                 official_layout="raw float64 (N,256,2); official loader transposes and power-normalizes",

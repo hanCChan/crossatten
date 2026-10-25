@@ -1,0 +1,64 @@
+{
+ "repo": "IB-RFF",
+ "code_state": "released weights only",
+ "compatibility": "IB-RFF rebuilds official model; strict identical released state",
+ "loader_max_abs_delta": {
+  "ManyRx": 0.0,
+  "ManySig": 0.0
+ },
+ "rows": [
+  {
+   "dataset": "ManyRx",
+   "fold": 0,
+   "method": "FAN",
+   "alpha": 0.0,
+   "expected_log_acc": 90.66,
+   "delta_pp": -0.7232911392405015,
+   "weight_sha256": "8ee36b3939640249c346332e9fa2b1b42a6c58a02e9c876d8074d856ae7dd7c2",
+   "packet_acc": 89.9367088607595,
+   "rx_equal_acc": 89.97916666666666,
+   "per_rx": {
+    "1-1": {
+     "correct": 1740,
+     "total": 2000,
+     "acc": 87.0
+    },
+    "1-19": {
+     "correct": 1765,
+     "total": 2000,
+     "acc": 88.25
+    },
+    "1-20": {
+     "correct": 1840,
+     "total": 2000,
+     "acc": 92.0
+    },
+    "2-1": {
+     "correct": 1823,
+     "total": 2000,
+     "acc": 91.15
+    },
+    "2-19": {
+     "correct": 1779,
+     "total": 2000,
+     "acc": 88.95
+    },
+    "3-19": {
+     "correct": 1771,
+     "total": 2000,
+     "acc": 88.55
+    },
+    "7-7": {
+     "correct": 1812,
+     "total": 2000,
+     "acc": 90.6
+    },
+    "7-14": {
+     "correct": 1680,
+     "total": 1800,
+     "acc": 93.33333333333333
+    }
+   }
+  }
+ ]
+}
