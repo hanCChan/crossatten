@@ -1,0 +1,3 @@
+/workspace/crossatten/lib/xa/explore_train.py:218: UserWarning: cumsum_cuda_kernel does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:91.)
+  perm = (torch.multinomial(weights, steps * batch, replacement=True, generator=order)
+{"run": "smoke_train_balanced", "epoch": 1, "source_ce": 1.98027, "seconds": 2}

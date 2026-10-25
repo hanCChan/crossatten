@@ -4,6 +4,7 @@ import hashlib
 import json
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -45,11 +46,22 @@ def candidates():
 
 
 def main():
-    active = subprocess.check_output(
-        ["nvidia-smi", "--query-compute-apps=process_name", "--format=csv,noheader"], text=True
-    ).splitlines()
-    if any("python" in name.lower() for name in active):
-        raise SystemExit("GPU Python processes still active; defer isolated cost measurements")
+    snapshots = []
+    for _ in range(2):
+        active = subprocess.check_output(
+            ["nvidia-smi", "--query-compute-apps=process_name,used_gpu_memory",
+             "--format=csv,noheader,nounits"], text=True
+        ).splitlines()
+        utilization = subprocess.check_output(
+            ["nvidia-smi", "--query-gpu=utilization.gpu", "--format=csv,noheader,nounits"],
+            text=True
+        ).splitlines()
+        # Containerized MPS clients may have hidden host process names.
+        if any(float(line.rsplit(",", 1)[1]) > 64 or "python" in line.lower()
+               for line in active) or any(float(v) > 0 for v in utilization):
+            raise SystemExit("GPU work still active; defer isolated cost measurements")
+        snapshots.append(dict(processes=active, utilization=utilization))
+        time.sleep(2)
     torch.set_num_threads(4)
     torch.backends.cudnn.benchmark = True
     torch.manual_seed(7102)
@@ -76,9 +88,19 @@ def main():
                  weights="random; no target data", final_job_aliases=aliases,
                  final_decision_sha256=hashlib.sha256(
                      (HERE / "decision_final.json").read_bytes()).hexdigest(),
-                 note="Resident IQ to logits, excludes transfer/detection; no concurrent GPU Python processes. "
+                 quiescence_snapshots=snapshots,
+                 note="Resident IQ to logits, excludes transfer/detection; two idle-GPU snapshots required. "
                       "FFT and scalar operations counted in timing, partially omitted in FLOPs")
     (HERE / "costs.json").write_text(json.dumps(value, indent=1) + "\n")
+    columns = list(rows[0])
+    lines = ["# S07 Measured Costs\n\n", f"{value['gpu']}; PyTorch {value['torch']}; CPU 4 threads. ",
+             value["note"], ". Random weights, synthetic input; not end-to-end raw capture detection.\n\n",
+             "| " + " | ".join(columns) + " |\n", "|" + "---|" * len(columns) + "\n"]
+    lines.extend("| " + " | ".join(str(row[k]) for k in columns) + " |\n" for row in rows)
+    lines.append("\nClass counts and final fusion configurations are included. "
+                 "Training recipe differences do not change inference graphs. "
+                 "Parameter count alone does not imply latency or throughput.\n")
+    (HERE / "S07_COSTS.md").write_text("".join(lines))
 
 
 if __name__ == "__main__":
