@@ -1,0 +1,10 @@
+q,role,b,a,desc,n_pairs,delta_mean,delta_min,delta_max,pos_pairs,rx_pos,rx_n,worst_rx_delta,verdict
+P1,dev_val,s03_preln,s03_base,Pre-LN engineering control,4,1.04,-1.07,3.82,3,8,10,2.6,improves
+P1,dev_val,s03_preln_d4,s03_preln,depth 4 after Pre-LN,4,0.73,-0.14,1.36,3,8,10,0.55,unclear
+P2,dev_val,s03_resid,s03_preln,unit-RMS complex residual channels,4,-7.21,-8.39,-6.6,0,0,10,-6.45,harms
+P2,dev_val,s03_nofft,s03_preln,remove whole-packet FFT channel,4,0.47,-0.11,1.16,3,7,10,0.8,unclear
+P2,dev_val,s03_symstack,s03_nofft,equal-parameter symbol-aligned tokenizer,4,-3.96,-5.05,-2.64,0,0,10,-6.9,harms
+ref_structure,dev_val,s03_symstack,s03_preln,system reference (also removes FFT),4,-3.5,-4.89,-2.24,0,0,10,-6.1,reference (no verdict)
+P3,dev_val,s03_ifreq,s03_preln,instantaneous-frequency deviation channel,4,0.62,-0.09,1.25,3,8,10,-0.35,unclear
+P4,dev_val,s03_hstem,s03_preln,hierarchical tokenizer,4,1.96,1.1,3.1,4,10,10,2.3,improves
+ref_determinism,dev_val,s03_base,s02_ep200,bit-deterministic baseline rerun,4,0.0,0.0,0.0,0,0,10,0.0,reference (no verdict)

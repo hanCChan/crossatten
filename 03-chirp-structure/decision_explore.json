@@ -1,0 +1,16 @@
+{
+ "stage": "explore",
+ "rules": "README.md",
+ "run_table_sha256": "77130e0159b2d3c993ddebaffaf5bcc964f2be7ad12573cb059539914085eee8",
+ "verdicts_dev_val": {
+  "s03_preln": "improves",
+  "s03_preln_d4": "unclear",
+  "s03_resid": "harms",
+  "s03_nofft": "unclear",
+  "s03_symstack": "harms",
+  "s03_ifreq": "unclear",
+  "s03_hstem": "improves"
+ },
+ "confirm_role": "report only; repeatedly inspected; never used for decisions",
+ "confirmation": "ALL eight registered arms; seeds 201,202,203 x folds 0,1"
+}
