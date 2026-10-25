@@ -83,8 +83,8 @@ def main():
                         status["done" if code == 0 else "failed"].append(job["id"])
                         status_path.write_text(json.dumps(status, indent=1) + "\n")
             print(f"[gpu{gpu}] rc={code} {job['id']}", flush=True)
-    threads = [threading.Thread(target=worker, args=(gpu,)) for gpu in args.gpus.split(",")
-               for _ in range(args.per_gpu)]
+    threads = [threading.Thread(target=worker, args=(gpu,)) for _ in range(args.per_gpu)
+               for gpu in args.gpus.split(",")]
     for thread in threads:
         thread.start()
         time.sleep(.25)
