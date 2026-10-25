@@ -1,6 +1,6 @@
 # crossatten 全部结果汇报
 
-证据截止：**2026-10-25**。范围：Shen 阶段 00–03、WiSig 数据与发布权重验证（M2）。
+证据截止：**2026-10-25**。范围：Shen 阶段 00–03、WiSig 数据与发布权重验证（M2），以及阶段06论文验证的实施状态。
 阶段 00–03 与 WiSig 发布权重参考保持冻结。2026-10-25 按用户授权新增[论文验证阶段06](06-paper-validation/README.md)，已完成预登记、69/69运行检查与成本实测，正式源域训练已启动，最终目标域结果尚待完成。本报告不把运行检查或实施规格中的预测当成结论。
 
 ## 1. 核心结论
@@ -30,9 +30,10 @@ Shen 使用冻结协议 **P-H5x160**：10 个 TX，每折 5 台源 RX，160 包/
 | 01 | 训练配方、Shen-CIS/GAP、输入频带、时频分离 | 19 臂；76 探索 + 114 确认 fit | 全部完成；[完整结果](01-strong-baselines/RESULTS.md) |
 | 02 | 强基线上的 Chirp/OOB/结构/训练单因素及 rank-16 CIS | 13 臂；52 探索 + 78 确认 fit | 全部完成；[完整确认表](02-single-factor-screen/summary/confirm_tables.md) |
 | 03 | 基线重跑、Pre-LN、加深、残差、符号堆叠、瞬时频率、分层 stem | 8 smoke + 32 探索 + 48 确认 fit | 88/88 核验通过；[完整结果](03-chirp-structure/RESULTS.md) |
-| 04 | Shen 同协议 FAN/IB-RFF、WaveMLP、Ma 对照 | 未训练 | [实施规格](docs/S03_S05_IMPLEMENTATION_SPEC.md) |
+| 04 | 原 Shen 外部方法实施规格 | 历史目录未训练 | FAN/IB-RFF、WaveMLP 已转入阶段06；Ma 不在本次注册矩阵内 |
 | 05/M2 | 两份 WiSig 数据转换、源域审计、发布权重验证 | 两数据集、四折、三个方法系列 | 已完成；[M2 结果](05-wisig/RESULTS.md) |
-| 05/M4 | 官方重训、公平多 seed、本方法 WiSig 验证 | 未训练 | 停止点保持有效 |
+| 05/M4 | 原 WiSig 公平重训安排 | 历史目录未训练 | 本方法、FAN/IB-RFF、WaveMLP 已转入阶段06执行 |
+| 06 | WiSig W0/W1/W2 与 CNN 控制、两个外部强基线；Shen 同协议比较与机制消融 | 69/69 smoke 完成；正式源域矩阵进行中 | [预登记](06-paper-validation/README.md)、[实时验证报告](06-paper-validation/RESULTS.md)；完成冻结提交后才允许最终评估 |
 
 阶段 01–03 共保存 **400 个正式训练记录**，包含对照重跑；这些不是 400 个独立泛化实验。逐臂、逐 seed、逐 RX、F1、训练曲线、预测与失败/跳过状态均保存在对应 `runs/`、`summary/`。
 协议与来源见 [PROTOCOL](docs/PROTOCOL.md)、[PROVENANCE](docs/PROVENANCE.md)。

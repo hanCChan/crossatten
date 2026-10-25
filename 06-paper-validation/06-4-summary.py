@@ -4,6 +4,7 @@ import argparse
 import csv
 import json
 from collections import defaultdict
+from datetime import datetime
 from pathlib import Path
 
 import numpy as np
@@ -217,6 +218,7 @@ def main():
     parser.add_argument("--check-weights", action="store_true")
     args = parser.parse_args()
     registration, results, configs, checks = collect()
+    generated_at = datetime.now().astimezone().isoformat(timespec="seconds")
     if args.check_weights:
         import torch
         torch.set_num_threads(2)
@@ -255,12 +257,15 @@ def main():
                 candidate = {k: v for k, v in arm.items() if k not in ("name", "recipe", "alpha", "init_arm", "method")}
                 if signature == candidate:
                     costs[name] = row
-    lines = ["# Paper Validation Results", "", "Evidence date: 2026-10-25. Registration: `bc30820`.",
+    lines = ["# Paper Validation Results", "", f"Evidence updated: {generated_at}. Registration: `bc30820`.",
              "This report includes only finished, audited fits. Smoke results are not accuracy evidence.",
              f"**Status: {'complete' if checks['complete'] else 'in progress'}**; audited fits: {checks['validated']}.",
              "", "## Completion", "", "| Stage | Finished | Missing |", "|---|---:|---:|"]
     for stage in ("source", "explore", "final", "confirm"):
-        lines.append(f"| {stage} | {sum(r['stage'] == stage for r in results)} | {len(checks['missing'][stage])} |")
+        frozen = HERE / ("decision_wifi.json" if stage == "final" else "decision_shen.json")
+        missing = ("awaiting source freeze" if stage in ("final", "confirm") and not frozen.exists()
+                   else str(len(checks["missing"][stage])))
+        lines.append(f"| {stage} | {sum(r['stage'] == stage for r in results)} | {missing} |")
     lines += ["", f"Artifact audit issues: {len(checks['problems'])}; recorded failure/interruption entries: {len(checks['failures'])}.",
               "A failed execution is not discarded; a subsequent successful retry may complete its registered fit.",
               "", "## Final Comparisons", "",
@@ -336,7 +341,7 @@ def main():
               "- No new Loss, feature branch, architecture or target-selected hyperparameter is added after this registration.",
               "", "Full per-fit metrics, configurations, source choices and failures: `summary/report.json`; costs: `summary/cost_*/bench.md`.",
               "The bounded experiment matrix must finish before choosing a general RF, LoRa-only, or engineering-only paper route.", ""]
-    output = dict(registration=registration, checks=checks, groups=summary, costs_by_arm=costs,
+    output = dict(generated_at=generated_at, registration=registration, checks=checks, groups=summary, costs_by_arm=costs,
                   paper_route=route,
                   comparisons=comparisons, results=results,
                   configs={f"{stage}:{run}": c for (stage, run), c in configs.items()})
