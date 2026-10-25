@@ -1,0 +1,12 @@
+{"run": "S_cnnonly__f0__s102", "epoch": 1, "source_ce": 2.31626, "train_s": 3.4}
+{"run": "S_cnnonly__f0__s102", "epoch": 20, "source_ce": 0.56233, "train_s": 51.3}
+{"run": "S_cnnonly__f0__s102", "epoch": 40, "source_ce": 0.3558, "train_s": 101.0}
+{"run": "S_cnnonly__f0__s102", "epoch": 60, "source_ce": 0.27005, "train_s": 149.8}
+{"run": "S_cnnonly__f0__s102", "epoch": 80, "source_ce": 0.27948, "train_s": 198.6}
+{"run": "S_cnnonly__f0__s102", "epoch": 100, "source_ce": 0.24303, "train_s": 246.4}
+{"run": "S_cnnonly__f0__s102", "epoch": 120, "source_ce": 0.17046, "train_s": 294.2}
+{"run": "S_cnnonly__f0__s102", "epoch": 140, "source_ce": 0.12407, "train_s": 340.7}
+{"run": "S_cnnonly__f0__s102", "epoch": 160, "source_ce": 0.12574, "train_s": 386.7}
+{"run": "S_cnnonly__f0__s102", "epoch": 180, "source_ce": 0.10997, "train_s": 432.8}
+{"run": "S_cnnonly__f0__s102", "epoch": 200, "source_ce": 0.10894, "train_s": 478.6}
+{"run_id": "S_cnnonly__f0__s102", "arm": "S_cnnonly", "dataset": "Shen", "fold": 0, "seed": 102, "stage": "explore", "params": 100154, "best_val_epoch": 184, "stop_epoch": 200, "epochs_budget": 200, "source_val_ce": 0.1049514189362526, "source_val_acc": 0.9690000414848328, "train_seconds": 478.6, "wall_seconds": 509.0, "gpu_peak_mem_gb": 1.205}

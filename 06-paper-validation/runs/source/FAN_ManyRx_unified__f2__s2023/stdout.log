@@ -1,0 +1,16 @@
+/workspace/crossatten/external/IB-RFF/backbones/Adaptive_Filter_Module.py:23: UserWarning: median CUDA with indices output does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:91.)
+  median_energy = flat_energy.median(dim=1, keepdim=True)[0]
+/workspace/crossatten/external/IB-RFF/backbones/Adaptive_Filter_Module.py:75: UserWarning: median CUDA with indices output does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:91.)
+  median_energy = flat_energy.median(dim=1, keepdim=True)[0]
+{"run": "FAN_ManyRx_unified__f2__s2023", "epoch": 1, "source_ce": 2.30238, "train_s": 5.6}
+{"run": "FAN_ManyRx_unified__f2__s2023", "epoch": 20, "source_ce": 0.29837, "train_s": 116.6}
+{"run": "FAN_ManyRx_unified__f2__s2023", "epoch": 40, "source_ce": 0.26749, "train_s": 231.1}
+{"run": "FAN_ManyRx_unified__f2__s2023", "epoch": 60, "source_ce": 0.24609, "train_s": 335.5}
+{"run": "FAN_ManyRx_unified__f2__s2023", "epoch": 80, "source_ce": 0.2224, "train_s": 423.5}
+{"run": "FAN_ManyRx_unified__f2__s2023", "epoch": 100, "source_ce": 0.21876, "train_s": 514.3}
+{"run": "FAN_ManyRx_unified__f2__s2023", "epoch": 120, "source_ce": 0.22047, "train_s": 599.1}
+{"run": "FAN_ManyRx_unified__f2__s2023", "epoch": 140, "source_ce": 0.21468, "train_s": 677.5}
+{"run": "FAN_ManyRx_unified__f2__s2023", "epoch": 160, "source_ce": 0.21562, "train_s": 751.4}
+{"run": "FAN_ManyRx_unified__f2__s2023", "epoch": 180, "source_ce": 0.21572, "train_s": 828.0}
+{"run": "FAN_ManyRx_unified__f2__s2023", "epoch": 200, "source_ce": 0.21566, "train_s": 904.0}
+{"run_id": "FAN_ManyRx_unified__f2__s2023", "arm": "FAN_ManyRx_unified", "dataset": "ManyRx", "fold": 2, "seed": 2023, "stage": "source", "params": 151761, "best_val_epoch": 150, "stop_epoch": 200, "epochs_budget": 200, "source_val_ce": 0.2124987542629242, "source_val_acc": 0.9385269284248352, "train_seconds": 904.0, "wall_seconds": 908.3, "gpu_peak_mem_gb": 0.163}

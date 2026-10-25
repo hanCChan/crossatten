@@ -1,0 +1,4 @@
+{"run": "WaveMLP_alternate_ManySig_official__f1__s2023", "epoch": 1, "source_ce": 1.39067, "train_s": 3.5}
+{"run": "WaveMLP_alternate_ManySig_official__f1__s2023", "epoch": 20, "source_ce": 0.10001, "train_s": 50.2}
+{"run": "WaveMLP_alternate_ManySig_official__f1__s2023", "epoch": 40, "source_ce": 0.0855, "train_s": 96.1}
+{"run_id": "WaveMLP_alternate_ManySig_official__f1__s2023", "arm": "WaveMLP_alternate_ManySig_official", "dataset": "ManySig", "fold": 1, "seed": 2023, "stage": "source", "params": 84742, "best_val_epoch": 33, "stop_epoch": 43, "epochs_budget": 200, "source_val_ce": 0.08149613440036774, "source_val_acc": 0.982539713382721, "train_seconds": 102.8, "wall_seconds": 106.4, "gpu_peak_mem_gb": 0.094}

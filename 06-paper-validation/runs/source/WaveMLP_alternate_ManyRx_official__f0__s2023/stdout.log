@@ -1,0 +1,5 @@
+{"run": "WaveMLP_alternate_ManyRx_official__f0__s2023", "epoch": 1, "source_ce": 1.73834, "train_s": 6.4}
+{"run": "WaveMLP_alternate_ManyRx_official__f0__s2023", "epoch": 20, "source_ce": 0.2877, "train_s": 118.1}
+{"run": "WaveMLP_alternate_ManyRx_official__f0__s2023", "epoch": 40, "source_ce": 0.25975, "train_s": 241.2}
+{"run": "WaveMLP_alternate_ManyRx_official__f0__s2023", "epoch": 60, "source_ce": 0.23834, "train_s": 363.0}
+{"run_id": "WaveMLP_alternate_ManyRx_official__f0__s2023", "arm": "WaveMLP_alternate_ManyRx_official", "dataset": "ManyRx", "fold": 0, "seed": 2023, "stage": "source", "params": 84490, "best_val_epoch": 65, "stop_epoch": 75, "epochs_budget": 200, "source_val_ce": 0.2374078780412674, "source_val_acc": 0.9299145340919495, "train_seconds": 460.5, "wall_seconds": 470.8, "gpu_peak_mem_gb": 0.145}

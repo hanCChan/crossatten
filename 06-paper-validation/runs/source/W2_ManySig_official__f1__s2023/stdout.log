@@ -1,0 +1,2 @@
+{"run": "W2_ManySig_official__f1__s2023", "epoch": 1, "source_ce": 0.81704, "train_s": 3.4}
+{"run_id": "W2_ManySig_official__f1__s2023", "arm": "W2_ManySig_official", "dataset": "ManySig", "fold": 1, "seed": 2023, "stage": "source", "params": 90868, "best_val_epoch": 8, "stop_epoch": 18, "epochs_budget": 200, "source_val_ce": 0.06080855801701546, "source_val_acc": 0.9821428656578064, "train_seconds": 36.3, "wall_seconds": 42.4, "gpu_peak_mem_gb": 0.141}

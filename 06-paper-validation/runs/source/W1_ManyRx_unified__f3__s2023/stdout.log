@@ -1,0 +1,12 @@
+{"run": "W1_ManyRx_unified__f3__s2023", "epoch": 1, "source_ce": 1.49015, "train_s": 9.1}
+{"run": "W1_ManyRx_unified__f3__s2023", "epoch": 20, "source_ce": 0.15985, "train_s": 161.0}
+{"run": "W1_ManyRx_unified__f3__s2023", "epoch": 40, "source_ce": 0.15671, "train_s": 316.7}
+{"run": "W1_ManyRx_unified__f3__s2023", "epoch": 60, "source_ce": 0.1655, "train_s": 466.3}
+{"run": "W1_ManyRx_unified__f3__s2023", "epoch": 80, "source_ce": 0.17763, "train_s": 613.2}
+{"run": "W1_ManyRx_unified__f3__s2023", "epoch": 100, "source_ce": 0.2004, "train_s": 755.1}
+{"run": "W1_ManyRx_unified__f3__s2023", "epoch": 120, "source_ce": 0.23952, "train_s": 888.9}
+{"run": "W1_ManyRx_unified__f3__s2023", "epoch": 140, "source_ce": 0.24206, "train_s": 1034.6}
+{"run": "W1_ManyRx_unified__f3__s2023", "epoch": 160, "source_ce": 0.2708, "train_s": 1193.1}
+{"run": "W1_ManyRx_unified__f3__s2023", "epoch": 180, "source_ce": 0.28145, "train_s": 1352.2}
+{"run": "W1_ManyRx_unified__f3__s2023", "epoch": 200, "source_ce": 0.28914, "train_s": 1514.2}
+{"run_id": "W1_ManyRx_unified__f3__s2023", "arm": "W1_ManyRx_unified", "dataset": "ManyRx", "fold": 3, "seed": 2023, "stage": "source", "params": 91128, "best_val_epoch": 35, "stop_epoch": 200, "epochs_budget": 200, "source_val_ce": 0.14587630331516266, "source_val_acc": 0.9540262222290039, "train_seconds": 1514.2, "wall_seconds": 1518.7, "gpu_peak_mem_gb": 0.164}

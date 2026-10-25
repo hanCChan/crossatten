@@ -1,0 +1,12 @@
+{"run": "WaveMLP_alternate_ManySig_unified__f2__s2023", "epoch": 1, "source_ce": 1.63538, "train_s": 3.4}
+{"run": "WaveMLP_alternate_ManySig_unified__f2__s2023", "epoch": 20, "source_ce": 0.11312, "train_s": 61.0}
+{"run": "WaveMLP_alternate_ManySig_unified__f2__s2023", "epoch": 40, "source_ce": 0.09239, "train_s": 123.2}
+{"run": "WaveMLP_alternate_ManySig_unified__f2__s2023", "epoch": 60, "source_ce": 0.07938, "train_s": 184.0}
+{"run": "WaveMLP_alternate_ManySig_unified__f2__s2023", "epoch": 80, "source_ce": 0.07413, "train_s": 245.6}
+{"run": "WaveMLP_alternate_ManySig_unified__f2__s2023", "epoch": 100, "source_ce": 0.07176, "train_s": 304.9}
+{"run": "WaveMLP_alternate_ManySig_unified__f2__s2023", "epoch": 120, "source_ce": 0.07265, "train_s": 365.2}
+{"run": "WaveMLP_alternate_ManySig_unified__f2__s2023", "epoch": 140, "source_ce": 0.07599, "train_s": 425.1}
+{"run": "WaveMLP_alternate_ManySig_unified__f2__s2023", "epoch": 160, "source_ce": 0.07577, "train_s": 486.1}
+{"run": "WaveMLP_alternate_ManySig_unified__f2__s2023", "epoch": 180, "source_ce": 0.07547, "train_s": 542.1}
+{"run": "WaveMLP_alternate_ManySig_unified__f2__s2023", "epoch": 200, "source_ce": 0.07556, "train_s": 600.6}
+{"run_id": "WaveMLP_alternate_ManySig_unified__f2__s2023", "arm": "WaveMLP_alternate_ManySig_unified", "dataset": "ManySig", "fold": 2, "seed": 2023, "stage": "source", "params": 84742, "best_val_epoch": 102, "stop_epoch": 200, "epochs_budget": 200, "source_val_ce": 0.06383689492940903, "source_val_acc": 0.9845238327980042, "train_seconds": 600.6, "wall_seconds": 602.6, "gpu_peak_mem_gb": 0.087}
