@@ -143,6 +143,14 @@ class WorkflowTest(unittest.TestCase):
                 self.assertEqual(job["recipe"], "official")
                 self.assertNotIn("checkpoint", job)
 
+    def test_held_epoch_budget_requires_identical_fusion_graph(self):
+        job = dict(frontend="split", recipe="unified", checkpoint="held_epoch")
+        self.assertTrue(select.held_budget_matches(job, dict(job, fusion="pooled_concat")))
+        self.assertFalse(select.held_budget_matches(job, dict(job, fusion="gate")))
+        self.assertTrue(select.held_budget_matches(dict(job, fusion="gate"),
+                                                   dict(job, fusion="gate")))
+        self.assertFalse(select.held_budget_matches(job, dict(job, augmentation="phase")))
+
 
 if __name__ == "__main__":
     unittest.main()

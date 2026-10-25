@@ -73,6 +73,13 @@ def supported(first, second, controls):
     return all(d > 0 for d in deltas) and sum(deltas) / 2 >= 1 and min(worst) >= -2
 
 
+def held_budget_matches(job, pipeline):
+    defaults = dict(recipe="unified", augmentation="none", noise="default",
+                    balanced=False, fusion="pooled_concat")
+    return all(job.get(k, defaults.get(k)) == pipeline.get(k, defaults.get(k))
+               for k in ("frontend", "recipe", "augmentation", "noise", "balanced", "fusion"))
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("step", choices=("features", "replicate", "training", "training_replicate", "combine"))
@@ -167,8 +174,7 @@ def main():
                 if pipeline.get("checkpoint") == "held_epoch":
                     epochs = [r["result"]["held_best_epoch"] for p in ("training", "training_replicate", "combine")
                               for r in local[p] if r["job"].get("checkpoint") == "held_epoch"
-                              and all(r["job"].get(k) == pipeline.get(k)
-                                      for k in ("frontend", "recipe", "augmentation", "noise", "balanced"))]
+                              and held_budget_matches(r["job"], pipeline)]
                     if not epochs:
                         raise ValueError("missing held-RX source budget")
                     pipeline["epochs"] = int(sorted(epochs)[len(epochs) // 2])
