@@ -3,6 +3,7 @@ import importlib.util
 import sys
 from pathlib import Path
 
+import numpy as np
 import torch
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -13,6 +14,12 @@ from xa.models3 import ChirpPipeline, symbol_residual
 spec = importlib.util.spec_from_file_location("mechanisms", ROOT / "03-chirp-structure/03-5-mechanisms.py")
 mechanisms = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(mechanisms)
+
+scale_spec = importlib.util.spec_from_file_location(
+    "token_scale", ROOT / "03-chirp-structure/03-8-token-scale.py"
+)
+token_scale = importlib.util.module_from_spec(scale_spec)
+scale_spec.loader.exec_module(token_scale)
 
 
 def test_symbol_interventions():
@@ -55,8 +62,24 @@ def test_restore_hooks_and_state():
         assert all(torch.equal(v, model.state_dict()[k]) for k, v in state.items())
 
 
+def test_scale_probe_is_read_only():
+    model = ChirpPipeline().eval()
+    x = torch.randn(3, 2, 8192)
+    state = {k: v.clone() for k, v in model.state_dict().items()}
+    with torch.no_grad():
+        original = model(x)
+    result = token_scale.probe(model, x, batch=2)
+    assert result["packets"] == 3
+    assert 0 <= result["score_saturated_frac"] <= 1
+    assert all(np.isfinite(value) for value in result.values())
+    assert not model.net.encoder.blocks[0]._forward_pre_hooks
+    assert all(torch.equal(v, model.state_dict()[k]) for k, v in state.items())
+    with torch.no_grad():
+        assert torch.equal(model(x), original)
+
+
 if __name__ == "__main__":
     torch.set_num_threads(1)
-    for test in (test_symbol_interventions, test_restore_hooks_and_state):
+    for test in (test_symbol_interventions, test_restore_hooks_and_state, test_scale_probe_is_read_only):
         test()
         print("PASS", test.__name__, flush=True)

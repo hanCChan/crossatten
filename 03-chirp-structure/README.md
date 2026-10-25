@@ -84,3 +84,12 @@ Benchmark all arms end-to-end: raw IQ on device to logits, counted convolution/
 matrix FLOPs (FFT and scalar operations not fully counted), GPU batch1
 50 warmup/300 trials p50,p95,p99, batch512 5/20 throughput, CPU four threads
 20/100 trials p50,p95. Run benchmarks without competing GPU training.
+
+## Post-Hoc Diagnostic Addendum
+
+After exploration was frozen, add `03-8-token-scale.py`: CPU-only first-mixer
+token RMS and sigmoid-score saturation, comparing stable-seed initialization
+against all 32 selected exploration checkpoints. Use ten source-validation
+packets per TX/source RX, identical across arms; no target data. This is a
+numerical diagnostic, not an additional selection rule or proof of the cause
+of historical depth4 instability.

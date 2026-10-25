@@ -39,6 +39,35 @@ def receiver_tables(registered):
     return "".join(sections)
 
 
+def token_scale_summary(summary):
+    path = summary / "token_scale.json"
+    if not path.exists():
+        return ""
+    records = json.loads(path.read_text())
+    if len(records["rows"]) != 32 or records["selection_use"] != "none":
+        raise ValueError("token-scale diagnostic must include all 32 exploration fits")
+    rows = []
+    for arm in sorted({r["arm"] for r in records["rows"]}):
+        trained = [r["trained"] for r in records["rows"] if r["arm"] == arm]
+        rms = [r["token_rms"] for r in trained]
+        saturation = [100 * r["score_saturated_frac"] for r in trained]
+        rows.append(dict(arm=arm, trained_rms_range=f"{min(rms):.3f}-{max(rms):.3f}",
+                         saturated_pct_range=f"{min(saturation):.2f}-{max(saturation):.2f}"))
+    return (
+        "## Post-Hoc Token Scale\n\n"
+        "A CPU-only diagnostic compares initialization and selected exploration "
+        "weights on balanced source-validation packets, without target data or "
+        "decision changes. All arms, both folds, and both exploration seeds are "
+        "reported in [token_scale.md](summary/token_scale.md). This diagnostic "
+        "was added after the exploration freeze and is not a preregistered "
+        "selection criterion.\n\n"
+        + table(rows, ["arm", "trained_rms_range", "saturated_pct_range"])
+        + "\nPre-LN controls token amplitude but does not eliminate large learned "
+        "q/k scores or sigmoid saturation. These measurements do not establish "
+        "a causal explanation of historical depth4 failures.\n\n"
+    )
+
+
 def main():
     summary = HERE / "summary"
     arms = csv_rows(summary / "confirm_arms.csv")
@@ -103,6 +132,7 @@ def main():
         "most tokenizer weights but executes extra convolutions at higher resolution. "
         "Single-packet GPU times include host dispatch variability; use distributions, "
         "not isolated p50 differences, for efficiency claims.\n\n",
+        token_scale_summary(summary),
         "## Mechanisms\n\n",
         (summary / "mechanisms.md").read_text().replace("# Confirmation interventions\n", ""),
         "\nInterventions use each of the six confirmed checkpoints, without fitting or "
