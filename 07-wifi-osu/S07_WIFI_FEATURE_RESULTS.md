@@ -1,6 +1,6 @@
 # S07_WIFI_FEATURE_RESULTS
 
-Completed 67/79 source fits. No new target RX metrics are used in this report.
+Completed 79/79 source fits. No new target RX metrics are used in this report.
 
 Fold-specific selections must only use that fold's legal source RX. The following table is descriptive, not a cross-fold selection rule.
 
@@ -62,6 +62,18 @@ Fold-specific selections must only use that fold's legal source RX. The followin
 | features | ManySig | 3 | 3101 | stf / frontend | 99.84 | 45.17 | 39.17 | 91092 |
 | features | ManySig | 3 | 3101 | filter / frontend | 99.72 | 31.37 | 26.33 | 90676 |
 | features | ManySig | 3 | 3101 | frequency / frontend | 99.80 | 72.00 | 62.75 | 90420 |
+| replicate | ManyRx | 0 | 3102 | frequency / frontend | 94.28 | 85.61 | 72.00 | 90680 |
+| replicate | ManyRx | 0 | 3102 | split / frontend | 95.09 | 73.44 | 58.11 | 142536 |
+| replicate | ManyRx | 0 | 3102 | legacy / frontend | 95.24 | 65.31 | 53.16 | 91128 |
+| replicate | ManyRx | 1 | 3102 | frequency / frontend | 99.13 | 66.54 | 47.42 | 90680 |
+| replicate | ManyRx | 1 | 3102 | split / frontend | 99.22 | 64.62 | 51.11 | 142536 |
+| replicate | ManyRx | 1 | 3102 | legacy / frontend | 99.37 | 54.53 | 36.79 | 91128 |
+| replicate | ManyRx | 2 | 3102 | frequency / frontend | 94.85 | 85.04 | 71.17 | 90680 |
+| replicate | ManyRx | 2 | 3102 | split / frontend | 95.35 | 74.55 | 64.72 | 142536 |
+| replicate | ManyRx | 2 | 3102 | legacy / frontend | 95.47 | 62.41 | 48.93 | 91128 |
+| replicate | ManyRx | 3 | 3102 | frequency / frontend | 95.03 | 79.74 | 69.39 | 90680 |
+| replicate | ManyRx | 3 | 3102 | split / frontend | 95.24 | 74.99 | 69.65 | 142536 |
+| replicate | ManyRx | 3 | 3102 | legacy / frontend | 95.01 | 56.44 | 47.55 | 91128 |
 | replicate | ManySig | 0 | 3102 | frequency / frontend | 99.29 | 78.75 | 66.58 | 90420 |
 | replicate | ManySig | 0 | 3102 | split / frontend | 99.52 | 74.58 | 64.58 | 142276 |
 | replicate | ManySig | 0 | 3102 | legacy / frontend | 99.29 | 75.38 | 59.75 | 90868 |

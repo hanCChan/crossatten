@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-25T23:24:21.688435+08:00",
- "commit": "48da1cd1080c882d3b772c49b5bd2d46a19cd6b8",
+ "generated_at": "2026-10-25T23:37:06.915187+08:00",
+ "commit": "ac9f25c12c2c2fee15b2d7968bce0c4f7dd79280",
  "wifi_complete": false,
  "osu_complete": true,
  "counts": [
@@ -14,14 +14,14 @@
   {
    "phase": "replicate",
    "registered": 23,
-   "completed": 11,
+   "completed": 23,
    "failed": 0,
    "archived_attempts": 0
   },
   {
    "phase": "training",
-   "registered": 0,
-   "completed": 0,
+   "registered": 72,
+   "completed": 2,
    "failed": 0,
    "archived_attempts": 0
   },
@@ -62,7 +62,7 @@
   }
  ],
  "failures": [],
- "formal_wifi_completed": 67,
+ "formal_wifi_completed": 81,
  "max_formal_wifi_fits": 280,
  "note": "WiSig INCOMPLETE. Source screening numbers are not CRD results."
 }
