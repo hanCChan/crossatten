@@ -1,0 +1,12 @@
+{"run": "WaveMLP_absolute_ib_unified__f1__s101", "epoch": 1, "source_ce": 2.30453, "train_s": 96.7}
+{"run": "WaveMLP_absolute_ib_unified__f1__s101", "epoch": 20, "source_ce": 1.33264, "train_s": 1839.5}
+{"run": "WaveMLP_absolute_ib_unified__f1__s101", "epoch": 40, "source_ce": 1.20655, "train_s": 2906.7}
+{"run": "WaveMLP_absolute_ib_unified__f1__s101", "epoch": 60, "source_ce": 1.15787, "train_s": 3374.2}
+{"run": "WaveMLP_absolute_ib_unified__f1__s101", "epoch": 80, "source_ce": 1.20436, "train_s": 3738.7}
+{"run": "WaveMLP_absolute_ib_unified__f1__s101", "epoch": 100, "source_ce": 1.0349, "train_s": 4001.9}
+{"run": "WaveMLP_absolute_ib_unified__f1__s101", "epoch": 120, "source_ce": 0.93635, "train_s": 4231.5}
+{"run": "WaveMLP_absolute_ib_unified__f1__s101", "epoch": 140, "source_ce": 0.86741, "train_s": 4418.3}
+{"run": "WaveMLP_absolute_ib_unified__f1__s101", "epoch": 160, "source_ce": 0.79993, "train_s": 4559.0}
+{"run": "WaveMLP_absolute_ib_unified__f1__s101", "epoch": 180, "source_ce": 0.77274, "train_s": 4699.8}
+{"run": "WaveMLP_absolute_ib_unified__f1__s101", "epoch": 200, "source_ce": 0.76619, "train_s": 4840.0}
+{"run_id": "WaveMLP_absolute_ib_unified__f1__s101", "arm": "WaveMLP_absolute_ib_unified", "dataset": "Shen", "fold": 1, "seed": 101, "stage": "explore", "params": 85258, "best_val_epoch": 193, "stop_epoch": 200, "epochs_budget": 200, "source_val_ce": 0.7653540372848511, "source_val_acc": 0.6975000500679016, "train_seconds": 4840.0, "wall_seconds": 4877.9, "gpu_peak_mem_gb": 0.928}

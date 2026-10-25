@@ -1,0 +1,12 @@
+{"run": "S_base__f1__s102", "epoch": 1, "source_ce": 2.31248, "train_s": 4.4}
+{"run": "S_base__f1__s102", "epoch": 20, "source_ce": 0.5812, "train_s": 57.6}
+{"run": "S_base__f1__s102", "epoch": 40, "source_ce": 0.4152, "train_s": 113.0}
+{"run": "S_base__f1__s102", "epoch": 60, "source_ce": 0.27344, "train_s": 168.3}
+{"run": "S_base__f1__s102", "epoch": 80, "source_ce": 0.50493, "train_s": 222.3}
+{"run": "S_base__f1__s102", "epoch": 100, "source_ce": 0.32524, "train_s": 280.2}
+{"run": "S_base__f1__s102", "epoch": 120, "source_ce": 0.31098, "train_s": 340.4}
+{"run": "S_base__f1__s102", "epoch": 140, "source_ce": 0.17379, "train_s": 397.4}
+{"run": "S_base__f1__s102", "epoch": 160, "source_ce": 0.15953, "train_s": 454.6}
+{"run": "S_base__f1__s102", "epoch": 180, "source_ce": 0.17198, "train_s": 512.7}
+{"run": "S_base__f1__s102", "epoch": 200, "source_ce": 0.1519, "train_s": 569.6}
+{"run_id": "S_base__f1__s102", "arm": "S_base", "dataset": "Shen", "fold": 1, "seed": 102, "stage": "explore", "params": 580136, "best_val_epoch": 173, "stop_epoch": 200, "epochs_budget": 200, "source_val_ce": 0.14387284219264984, "source_val_acc": 0.9635000228881836, "train_seconds": 569.6, "wall_seconds": 576.0, "gpu_peak_mem_gb": 1.139}

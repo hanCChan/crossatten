@@ -1,0 +1,477 @@
+{
+ "selection": "mean source-validation CE over four fits; dev_val/confirm never used",
+ "registration_sha256": "fa84885482665cdde235b4e0af947cecb61494bb7de1d06954e721004d52eabe",
+ "source_result_hashes": {
+  "runs/explore/FAN_full_official__f0__s101/metrics.json": "7d9126273b2ab0577c88c85b0c1fc775706f3c452957143ac8dd12326afb793e",
+  "runs/explore/FAN_full_official__f0__s102/metrics.json": "50a7c27c36c21297080fbfd705442d65a45b0208c4f7e8f356a94f47660e3b17",
+  "runs/explore/FAN_full_official__f1__s101/metrics.json": "5e8fea4b51b7c94b7581b853026d0585b70cd729dd79374fd03ae79123ac3aae",
+  "runs/explore/FAN_full_official__f1__s102/metrics.json": "23e440567ee5f2c5e070e8d3a2868d92cb19154fe7e422c5bec87c4dc9a0c0c6",
+  "runs/explore/WaveMLP_absolute_full_official__f0__s101/metrics.json": "448668c67ccf17f19ac9df404476f61a12dc7041796f882868c14788307806f8",
+  "runs/explore/WaveMLP_absolute_full_official__f0__s102/metrics.json": "f65b321d4974068afcadc30d0faab6a8640d97e564195ce3245c793b04294b55",
+  "runs/explore/WaveMLP_absolute_full_official__f1__s101/metrics.json": "a2b75e5cd0a9a12a8094d2da8deb280ca85174b4ae23c93b78585a71eb42691a",
+  "runs/explore/WaveMLP_absolute_full_official__f1__s102/metrics.json": "cd28f0adb1e6e26fe7b0fe4659869438ef4c465fd47de4f7e8562c6b7fea32cc",
+  "runs/explore/WaveMLP_scaled_full_official__f0__s101/metrics.json": "e855ed50b6eac53bc216ad482425f2882e0d2abf9eb960ae2d2b61b550b17604",
+  "runs/explore/WaveMLP_scaled_full_official__f0__s102/metrics.json": "b81da0567ba0205d64129ef14b7f966b41916bc60cf9c8c37d30f915748cbf2c",
+  "runs/explore/WaveMLP_scaled_full_official__f1__s101/metrics.json": "8111af31ffc00644d5f5958e7450831bb428b8e17d62fa3bed8237779081c57e",
+  "runs/explore/WaveMLP_scaled_full_official__f1__s102/metrics.json": "3e488f07bbdc1c9a44fe54702387efd7dfa439d2cc898729c23548b7f9dc002a",
+  "runs/explore/IB-RFF_a0.004_full_official__f0__s101/metrics.json": "196411764d08b9a6ba34dcdd382b6d874eb4a5fce836a632ebb1dc36c225194d",
+  "runs/explore/IB-RFF_a0.004_full_official__f0__s102/metrics.json": "44267f07ac046409edb80d8fef1b8e9512dea6304a78f05764a1bf0686b222ff",
+  "runs/explore/IB-RFF_a0.004_full_official__f1__s101/metrics.json": "d6e4c52dd674e5084b6fe4aa93b94c329b034db4dda1cf0be988bb27fe97f163",
+  "runs/explore/IB-RFF_a0.004_full_official__f1__s102/metrics.json": "98eaede09f5675e2ea6a559117637799354d90b21581cd9ddc3115598470d35c",
+  "runs/explore/IB-RFF_a0.04_full_official__f0__s101/metrics.json": "414b7bd616637a90d69db47183ff04501b53b86b2fb0f99b4ff225682771542f",
+  "runs/explore/IB-RFF_a0.04_full_official__f0__s102/metrics.json": "902418e590cf10d36846eb9756d339b448d70f140f85b9987080f6e443ce84b8",
+  "runs/explore/IB-RFF_a0.04_full_official__f1__s101/metrics.json": "14447a71d1fda30c103e85a7a22792cf2ddfaa92fd6313c73cd95756bcf48456",
+  "runs/explore/IB-RFF_a0.04_full_official__f1__s102/metrics.json": "340771222890b96e215b7b29e7b213df722de3669f95564383bdb215835c4cf4",
+  "runs/explore/FAN_ib_official__f0__s101/metrics.json": "296ec67820835adf9800f72d13efccf76b3c9070a61382f120e13b5caa34f604",
+  "runs/explore/FAN_ib_official__f0__s102/metrics.json": "134856859ca745bc93be1e6c8bb7c00f114a6c62298cd8fb4a2bc528c5d8a62f",
+  "runs/explore/FAN_ib_official__f1__s101/metrics.json": "242710c8b8fef8eaae64f2636252c82346fc86e83e617195a468cec90376a3e1",
+  "runs/explore/FAN_ib_official__f1__s102/metrics.json": "bf62accceb27b85e83d78f784aea801781f121966e31641e116e6f688ef9347d",
+  "runs/explore/WaveMLP_absolute_ib_official__f0__s101/metrics.json": "b0a874f1c1cc5f05dda4666ea1886cfe70ca13084b81aeca630bf25f98ff6231",
+  "runs/explore/WaveMLP_absolute_ib_official__f0__s102/metrics.json": "24747f02cd15ba34a3563f9b620ee8eb37b6e8c5b339d7297f410b23591854ca",
+  "runs/explore/WaveMLP_absolute_ib_official__f1__s101/metrics.json": "89cf66c7ea455239eb6efab333f50aa4652893b30778d27c996a00a403b0fe2d",
+  "runs/explore/WaveMLP_absolute_ib_official__f1__s102/metrics.json": "75aca2319b53a934ec496d37a1643fb7c33a26e834e11a59045814a389708532",
+  "runs/explore/WaveMLP_scaled_ib_official__f0__s101/metrics.json": "65e31c39c8ea6d3660aa1c347d81442b74d2a8df509ca842bb2d0771d724780f",
+  "runs/explore/WaveMLP_scaled_ib_official__f0__s102/metrics.json": "55e2a77eeddb2021eac9d19b0d3a06aa6a1612954f5cf666a3a125551499b002",
+  "runs/explore/WaveMLP_scaled_ib_official__f1__s101/metrics.json": "9eb616f2050925e1d36c0b30725c4808bd3c9260744e7bd0a8fe237a440936bd",
+  "runs/explore/WaveMLP_scaled_ib_official__f1__s102/metrics.json": "b13564ef1307cf463349442cd4d0997e3552f615df90de2d2557b6fcd21cbb41",
+  "runs/explore/IB-RFF_a0.004_ib_official__f0__s101/metrics.json": "e20b24c396251b35284e3779606c0a364d4268b1500284054aa8234aa8171a49",
+  "runs/explore/IB-RFF_a0.004_ib_official__f0__s102/metrics.json": "e087ece1395adc89c55deca9373a006e3a34556fed218d1a5544213bcc1fb119",
+  "runs/explore/IB-RFF_a0.004_ib_official__f1__s101/metrics.json": "917d83a48b3e7f9d0d3e647f60e380c52e6cd103d4aa9249d277a8a475a42daf",
+  "runs/explore/IB-RFF_a0.004_ib_official__f1__s102/metrics.json": "4b012dbc462fe8ceee8b0c537803c86daab665c1c713f2a5a15ce028080647ff",
+  "runs/explore/IB-RFF_a0.04_ib_official__f0__s101/metrics.json": "ec2ab35d635920918673e6d264849edf2bf3e1811defdc6baeb513817d58f9f3",
+  "runs/explore/IB-RFF_a0.04_ib_official__f0__s102/metrics.json": "3050d6575a34249bec715a4f1b878b97a88a2f4c8e029ce1b022536e5d075a29",
+  "runs/explore/IB-RFF_a0.04_ib_official__f1__s101/metrics.json": "4f3f29715543a34a2db6de6ee1eb3f005017037dbe756ede537feb4bbda6185e",
+  "runs/explore/IB-RFF_a0.04_ib_official__f1__s102/metrics.json": "50fea364feec7387416f5491ae5bf300faf42e846b0da1864c3b48bfe6088e53",
+  "runs/explore/FAN_full_unified__f0__s101/metrics.json": "bed03240061cfdab3d4731acb3642cc564d55ccd14af2bab1fa78a794dbe450c",
+  "runs/explore/FAN_full_unified__f0__s102/metrics.json": "a8c63ff0f8d674033fbb476da57532a0e43797da452af84cf2b64c474ed03391",
+  "runs/explore/FAN_full_unified__f1__s101/metrics.json": "8562372ef8a5c7573c47443e17c25f4e0e2d8a348b24ab89c986d97d592b6e65",
+  "runs/explore/FAN_full_unified__f1__s102/metrics.json": "b335b8bf2136b030a99f80a86e21d1cf230ffd4b83873da0b0fed971cfbacd0f",
+  "runs/explore/WaveMLP_absolute_full_unified__f0__s101/metrics.json": "cd6fd70727270f6d68b1143757aee50f1634123818e3321ec26b8a73cad7d3c6",
+  "runs/explore/WaveMLP_absolute_full_unified__f0__s102/metrics.json": "ec7966c57106a8670dd5549a3e4491ae6ea8ae6d1b21be7962f2d2015f879287",
+  "runs/explore/WaveMLP_absolute_full_unified__f1__s101/metrics.json": "d24e0eb0639ad85e9c98edec19fd82c1a7516d31c7c33c15ba560ec3de5a7398",
+  "runs/explore/WaveMLP_absolute_full_unified__f1__s102/metrics.json": "bee5b095502fd21dbafd5bf7f24453ab3ad92d6a2f0b9f9c0e01bf82f50d59e6",
+  "runs/explore/WaveMLP_scaled_full_unified__f0__s101/metrics.json": "4b428b3a8fa388ff9cc1c2cdb7d5a8fc49bba721d2bd69af8bc21ec6af03927e",
+  "runs/explore/WaveMLP_scaled_full_unified__f0__s102/metrics.json": "8a1d243860efd1a5bee8559a88a61bcc286de16e6a731823268949ec1230c56a",
+  "runs/explore/WaveMLP_scaled_full_unified__f1__s101/metrics.json": "0fe29acf87439021fe2d0f3f4bc177c8e38d912fcdbd004f3354fee048fa28a9",
+  "runs/explore/WaveMLP_scaled_full_unified__f1__s102/metrics.json": "13383e9bbc9063f2d7cccfab3c21b88e44b7a6ec2d27aad36ab4517277fd01ce",
+  "runs/explore/IB-RFF_a0.004_full_unified__f0__s101/metrics.json": "ab323849f40f4b7c672dd6e47a2a766190fb4f88d7e06eb5d38079cb967be59c",
+  "runs/explore/IB-RFF_a0.004_full_unified__f0__s102/metrics.json": "d76d2b0cd69397e576e03e480e1a9305f99ab970450457da9bedddfc31b2f4d3",
+  "runs/explore/IB-RFF_a0.004_full_unified__f1__s101/metrics.json": "90e6e7ed6734f921e2bc32886e2ed77483ece1f85f559717c5a1fde35c1c2198",
+  "runs/explore/IB-RFF_a0.004_full_unified__f1__s102/metrics.json": "d7efa94dfb76adcea2aaa7a4845eb144844ee5d87d1fe5f681a09b558013dee2",
+  "runs/explore/IB-RFF_a0.04_full_unified__f0__s101/metrics.json": "f1856753b2380dd5362fd0b1299091fc2cce50e2a32aa4528273f075c342011d",
+  "runs/explore/IB-RFF_a0.04_full_unified__f0__s102/metrics.json": "f697622f3042c5fa2984886a3ab8155302614c3cadf88fa03af0957e1d342623",
+  "runs/explore/IB-RFF_a0.04_full_unified__f1__s101/metrics.json": "7e998a45c7d29b1262677de86b5929e3c026d65bb46d49898fe50fcc77eb35ad",
+  "runs/explore/IB-RFF_a0.04_full_unified__f1__s102/metrics.json": "67ff30c7c3de22fcad71ffd32f90146418c0fd9c80165c82afbc2d107af8101e",
+  "runs/explore/FAN_ib_unified__f0__s101/metrics.json": "775ae4a4a52dccfdc76b288d93b4e5aeb5539c040f039ee61dd437caef1feb22",
+  "runs/explore/FAN_ib_unified__f0__s102/metrics.json": "14745da5669a767758cb40106ba73193bbcf22ab9a85e68e1737c8a593174bf7",
+  "runs/explore/FAN_ib_unified__f1__s101/metrics.json": "bf122e9ef477c66e8a550a29ed03bb368399fa27f7e7e0ece490fd5f4f06f2fa",
+  "runs/explore/FAN_ib_unified__f1__s102/metrics.json": "3559d627c8b9b4de41093539e8142900598c32aebf19014ae797989ee8cd2cc4",
+  "runs/explore/WaveMLP_absolute_ib_unified__f0__s101/metrics.json": "e6a49303cbd49e94aa83f90c8fe3abc21e67deea466eeaa87238cb6656705d16",
+  "runs/explore/WaveMLP_absolute_ib_unified__f0__s102/metrics.json": "cdceb906ed9bb331397930bf2611001adc235d4bfcc99246d47fe09dc7e2486c",
+  "runs/explore/WaveMLP_absolute_ib_unified__f1__s101/metrics.json": "183662be8b93e3d5d931bca1e4c1d60ffc7e0d702beb0390dae1eb4344349960",
+  "runs/explore/WaveMLP_absolute_ib_unified__f1__s102/metrics.json": "3fef210fe4ac98e6a064ef3712ab5aad959ff2f278f781a620e802f37f9b9dad",
+  "runs/explore/WaveMLP_scaled_ib_unified__f0__s101/metrics.json": "13d178285764f5f487a86005576ccfb8219d3a78b2ea38c40cbcebc1308ba147",
+  "runs/explore/WaveMLP_scaled_ib_unified__f0__s102/metrics.json": "42bda38dbba6dfb8dd98a596e89f6fc14d05c021688b08c9873da083ba56975c",
+  "runs/explore/WaveMLP_scaled_ib_unified__f1__s101/metrics.json": "b8b9d6e70fb40dd7251fbc76cfcd1c572b081f7928a4cde157ab2092c3f6f322",
+  "runs/explore/WaveMLP_scaled_ib_unified__f1__s102/metrics.json": "e366fcb3a3c8cf523f22b0d63edd2d40786ff310e3d0c59aaf85f2702d161c9a",
+  "runs/explore/IB-RFF_a0.004_ib_unified__f0__s101/metrics.json": "e80ba78bb0a19f473868e7bbd9efd79f14a0270cbd7ac1f5e23beeb2e4a69840",
+  "runs/explore/IB-RFF_a0.004_ib_unified__f0__s102/metrics.json": "bff90138cb83253504e2c4e5d64cc5427c0d2707b87ea8d9e21fcf4e272a73bc",
+  "runs/explore/IB-RFF_a0.004_ib_unified__f1__s101/metrics.json": "84cabd7441e937f579139c4a4b7ee90f91cb8868f195358b6162f0d38e6ef4fa",
+  "runs/explore/IB-RFF_a0.004_ib_unified__f1__s102/metrics.json": "bccef085d8830dcffbbe8c328a93cdabd3d61d6192bb788917b77f38be063dc7",
+  "runs/explore/IB-RFF_a0.04_ib_unified__f0__s101/metrics.json": "5071861c21c834c84af6336b264a3e211803f850586312ef67a0d228eb236893",
+  "runs/explore/IB-RFF_a0.04_ib_unified__f0__s102/metrics.json": "86b8753e7039b31b76f90f676180ed101cee5b13a16b9b67f6322616d25424b0",
+  "runs/explore/IB-RFF_a0.04_ib_unified__f1__s101/metrics.json": "0dff2fe46cfe61178b924a892feee74a2d567c161427ec65b5c710ac0adaf833",
+  "runs/explore/IB-RFF_a0.04_ib_unified__f1__s102/metrics.json": "1c98a4f45968c2d4fcbfc17134d69f71bfa0aa37cd835e60133d1002d7976ce1",
+  "runs/explore/S_base__f0__s101/metrics.json": "9c63cfc797f8dffc7f6be83eacbe9f8a1729b78c5729fb1a8278aa6d20d64e66",
+  "runs/explore/S_base__f0__s102/metrics.json": "e060d491984eae3cd560cd054c0398adc9ab39d8cf11fdce26cf9da52ab0845c",
+  "runs/explore/S_base__f1__s101/metrics.json": "37e749f2646d38fd0b8ba62099c1ff7c4152c60ce409beb07f059f2a971dc7e0",
+  "runs/explore/S_base__f1__s102/metrics.json": "06c6400f8e9800af1fcf3ab77bfe49d522c0d54e01410b6ebae980222a4c1d8e",
+  "runs/explore/S_hstem__f0__s101/metrics.json": "91ce8775bfa1959abece327ad8ce4526ac969dc6c954c226df16f805b2fc825f",
+  "runs/explore/S_hstem__f0__s102/metrics.json": "778987883a4d26555e21b6386d1336676ed94585f34a063c623397e9a88668c4",
+  "runs/explore/S_hstem__f1__s101/metrics.json": "25815f4e1a08c2538e372e4a09ac8628186217835a79f685d9652c29532b66c4",
+  "runs/explore/S_hstem__f1__s102/metrics.json": "721648042822114a2826a2ae4b8c4e04409eec57e6b9522971d18113bc588e80",
+  "runs/explore/S_cnnonly__f0__s101/metrics.json": "1c65325fd816f6963ba96f0c1fe8c1bae9caaf6ea64bab52ee7f785eaba5703d",
+  "runs/explore/S_cnnonly__f0__s102/metrics.json": "2f766c6717261e74982d309af5aba5f133a29a04b8f0fd29d05fdf43aafd8464",
+  "runs/explore/S_cnnonly__f1__s101/metrics.json": "ac3344c4674e5c3002fa997711f507213daeee9e1a8fd2247eb952b1ecaad20b",
+  "runs/explore/S_cnnonly__f1__s102/metrics.json": "01cae8f7bd30e0578c4c7938ea8def170b44e4101428b38fb8ee27ba026b7487",
+  "runs/explore/S_cnnparam__f0__s101/metrics.json": "9be5b133836138f5bcc6deae6a141bdecf9c13f2d5239937fe42de1946b70460",
+  "runs/explore/S_cnnparam__f0__s102/metrics.json": "2627dd5e873b1ecf92732a1839e49bb1cf212d622a89cf833dd5a42fd76a9451",
+  "runs/explore/S_cnnparam__f1__s101/metrics.json": "82b76548ff77fd1355d112d70419206a0f95dd482b89f3e4bda28fcfc5741286",
+  "runs/explore/S_cnnparam__f1__s102/metrics.json": "71d00b82c0daeb5868e9e451d01cc1efe3a8ab4190be6152c3a098a4d733c915",
+  "runs/explore/S_cnnflops__f0__s101/metrics.json": "5100f66f42448e5efecf00490b0a7634b2eef711af0eb0dfca1db7fb2b8f86d8",
+  "runs/explore/S_cnnflops__f0__s102/metrics.json": "cdcb513022eeb53a567a0a02f8796caf7602bb7a16ba5430b981a2c03762fbfa",
+  "runs/explore/S_cnnflops__f1__s101/metrics.json": "3bcd59b26beb6d1790e6cf2918c9dc44f7b297829faad3cdf8ec298895d060fe",
+  "runs/explore/S_cnnflops__f1__s102/metrics.json": "d05bd102173c464542683f0680f39d8e72d465eb822c64eba5ccee64e96372ad"
+ },
+ "choices": {
+  "FAN:official": "FAN_full_official",
+  "FAN:unified": "FAN_full_unified",
+  "IB-RFF:official": "IB-RFF_a0.04_full_official",
+  "IB-RFF:unified": "IB-RFF_a0.004_ib_unified",
+  "WaveMLP:official": "WaveMLP_scaled_full_official",
+  "WaveMLP:unified": "WaveMLP_scaled_full_unified"
+ },
+ "allowed_final_jobs": [
+  [
+   "FAN_full_official",
+   0,
+   201
+  ],
+  [
+   "FAN_full_official",
+   0,
+   202
+  ],
+  [
+   "FAN_full_official",
+   0,
+   203
+  ],
+  [
+   "FAN_full_official",
+   1,
+   201
+  ],
+  [
+   "FAN_full_official",
+   1,
+   202
+  ],
+  [
+   "FAN_full_official",
+   1,
+   203
+  ],
+  [
+   "FAN_full_unified",
+   0,
+   201
+  ],
+  [
+   "FAN_full_unified",
+   0,
+   202
+  ],
+  [
+   "FAN_full_unified",
+   0,
+   203
+  ],
+  [
+   "FAN_full_unified",
+   1,
+   201
+  ],
+  [
+   "FAN_full_unified",
+   1,
+   202
+  ],
+  [
+   "FAN_full_unified",
+   1,
+   203
+  ],
+  [
+   "FAN_ib_unified",
+   0,
+   201
+  ],
+  [
+   "FAN_ib_unified",
+   0,
+   202
+  ],
+  [
+   "FAN_ib_unified",
+   0,
+   203
+  ],
+  [
+   "FAN_ib_unified",
+   1,
+   201
+  ],
+  [
+   "FAN_ib_unified",
+   1,
+   202
+  ],
+  [
+   "FAN_ib_unified",
+   1,
+   203
+  ],
+  [
+   "IB-RFF_a0.004_ib_unified",
+   0,
+   201
+  ],
+  [
+   "IB-RFF_a0.004_ib_unified",
+   0,
+   202
+  ],
+  [
+   "IB-RFF_a0.004_ib_unified",
+   0,
+   203
+  ],
+  [
+   "IB-RFF_a0.004_ib_unified",
+   1,
+   201
+  ],
+  [
+   "IB-RFF_a0.004_ib_unified",
+   1,
+   202
+  ],
+  [
+   "IB-RFF_a0.004_ib_unified",
+   1,
+   203
+  ],
+  [
+   "IB-RFF_a0.04_full_official",
+   0,
+   201
+  ],
+  [
+   "IB-RFF_a0.04_full_official",
+   0,
+   202
+  ],
+  [
+   "IB-RFF_a0.04_full_official",
+   0,
+   203
+  ],
+  [
+   "IB-RFF_a0.04_full_official",
+   1,
+   201
+  ],
+  [
+   "IB-RFF_a0.04_full_official",
+   1,
+   202
+  ],
+  [
+   "IB-RFF_a0.04_full_official",
+   1,
+   203
+  ],
+  [
+   "S_base",
+   0,
+   201
+  ],
+  [
+   "S_base",
+   0,
+   202
+  ],
+  [
+   "S_base",
+   0,
+   203
+  ],
+  [
+   "S_base",
+   1,
+   201
+  ],
+  [
+   "S_base",
+   1,
+   202
+  ],
+  [
+   "S_base",
+   1,
+   203
+  ],
+  [
+   "S_cnnflops",
+   0,
+   201
+  ],
+  [
+   "S_cnnflops",
+   0,
+   202
+  ],
+  [
+   "S_cnnflops",
+   0,
+   203
+  ],
+  [
+   "S_cnnflops",
+   1,
+   201
+  ],
+  [
+   "S_cnnflops",
+   1,
+   202
+  ],
+  [
+   "S_cnnflops",
+   1,
+   203
+  ],
+  [
+   "S_cnnonly",
+   0,
+   201
+  ],
+  [
+   "S_cnnonly",
+   0,
+   202
+  ],
+  [
+   "S_cnnonly",
+   0,
+   203
+  ],
+  [
+   "S_cnnonly",
+   1,
+   201
+  ],
+  [
+   "S_cnnonly",
+   1,
+   202
+  ],
+  [
+   "S_cnnonly",
+   1,
+   203
+  ],
+  [
+   "S_cnnparam",
+   0,
+   201
+  ],
+  [
+   "S_cnnparam",
+   0,
+   202
+  ],
+  [
+   "S_cnnparam",
+   0,
+   203
+  ],
+  [
+   "S_cnnparam",
+   1,
+   201
+  ],
+  [
+   "S_cnnparam",
+   1,
+   202
+  ],
+  [
+   "S_cnnparam",
+   1,
+   203
+  ],
+  [
+   "S_hstem",
+   0,
+   201
+  ],
+  [
+   "S_hstem",
+   0,
+   202
+  ],
+  [
+   "S_hstem",
+   0,
+   203
+  ],
+  [
+   "S_hstem",
+   1,
+   201
+  ],
+  [
+   "S_hstem",
+   1,
+   202
+  ],
+  [
+   "S_hstem",
+   1,
+   203
+  ],
+  [
+   "WaveMLP_scaled_full_official",
+   0,
+   201
+  ],
+  [
+   "WaveMLP_scaled_full_official",
+   0,
+   202
+  ],
+  [
+   "WaveMLP_scaled_full_official",
+   0,
+   203
+  ],
+  [
+   "WaveMLP_scaled_full_official",
+   1,
+   201
+  ],
+  [
+   "WaveMLP_scaled_full_official",
+   1,
+   202
+  ],
+  [
+   "WaveMLP_scaled_full_official",
+   1,
+   203
+  ],
+  [
+   "WaveMLP_scaled_full_unified",
+   0,
+   201
+  ],
+  [
+   "WaveMLP_scaled_full_unified",
+   0,
+   202
+  ],
+  [
+   "WaveMLP_scaled_full_unified",
+   0,
+   203
+  ],
+  [
+   "WaveMLP_scaled_full_unified",
+   1,
+   201
+  ],
+  [
+   "WaveMLP_scaled_full_unified",
+   1,
+   202
+  ],
+  [
+   "WaveMLP_scaled_full_unified",
+   1,
+   203
+  ]
+ ],
+ "confirm_role": "report only; repeatedly inspected"
+}

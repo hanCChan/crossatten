@@ -1,0 +1,8 @@
+/workspace/crossatten/external/IB-RFF/backbones/Adaptive_Filter_Module.py:23: UserWarning: median CUDA with indices output does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:91.)
+  median_energy = flat_energy.median(dim=1, keepdim=True)[0]
+/workspace/crossatten/external/IB-RFF/backbones/Adaptive_Filter_Module.py:75: UserWarning: median CUDA with indices output does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:91.)
+  median_energy = flat_energy.median(dim=1, keepdim=True)[0]
+{"run": "IB-RFF_a0.004_ib_official__f1__s101", "epoch": 1, "source_ce": 0.63794, "train_s": 2.8}
+{"run": "IB-RFF_a0.004_ib_official__f1__s101", "epoch": 20, "source_ce": 0.4577, "train_s": 44.5}
+{"run": "IB-RFF_a0.004_ib_official__f1__s101", "epoch": 40, "source_ce": 0.45272, "train_s": 86.7}
+{"run_id": "IB-RFF_a0.004_ib_official__f1__s101", "arm": "IB-RFF_a0.004_ib_official", "dataset": "Shen", "fold": 1, "seed": 101, "stage": "explore", "params": 310481, "best_val_epoch": 34, "stop_epoch": 44, "epochs_budget": 200, "source_val_ce": 0.4293256402015686, "source_val_acc": 0.830500066280365, "train_seconds": 94.5, "wall_seconds": 101.9, "gpu_peak_mem_gb": 0.878}

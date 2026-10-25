@@ -1,0 +1,16 @@
+/workspace/crossatten/external/IB-RFF/backbones/Adaptive_Filter_Module.py:23: UserWarning: median CUDA with indices output does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:91.)
+  median_energy = flat_energy.median(dim=1, keepdim=True)[0]
+/workspace/crossatten/external/IB-RFF/backbones/Adaptive_Filter_Module.py:75: UserWarning: median CUDA with indices output does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:91.)
+  median_energy = flat_energy.median(dim=1, keepdim=True)[0]
+{"run": "IB-RFF_a0.004_ib_unified__f1__s102", "epoch": 1, "source_ce": 0.31013, "train_s": 24.1}
+{"run": "IB-RFF_a0.004_ib_unified__f1__s102", "epoch": 20, "source_ce": 0.50068, "train_s": 447.7}
+{"run": "IB-RFF_a0.004_ib_unified__f1__s102", "epoch": 40, "source_ce": 0.42256, "train_s": 685.2}
+{"run": "IB-RFF_a0.004_ib_unified__f1__s102", "epoch": 60, "source_ce": 0.38642, "train_s": 859.7}
+{"run": "IB-RFF_a0.004_ib_unified__f1__s102", "epoch": 80, "source_ce": 0.36968, "train_s": 981.5}
+{"run": "IB-RFF_a0.004_ib_unified__f1__s102", "epoch": 100, "source_ce": 0.2879, "train_s": 1055.4}
+{"run": "IB-RFF_a0.004_ib_unified__f1__s102", "epoch": 120, "source_ce": 0.24387, "train_s": 1123.6}
+{"run": "IB-RFF_a0.004_ib_unified__f1__s102", "epoch": 140, "source_ce": 0.2182, "train_s": 1187.7}
+{"run": "IB-RFF_a0.004_ib_unified__f1__s102", "epoch": 160, "source_ce": 0.18143, "train_s": 1243.5}
+{"run": "IB-RFF_a0.004_ib_unified__f1__s102", "epoch": 180, "source_ce": 0.17559, "train_s": 1300.5}
+{"run": "IB-RFF_a0.004_ib_unified__f1__s102", "epoch": 200, "source_ce": 0.17481, "train_s": 1345.6}
+{"run_id": "IB-RFF_a0.004_ib_unified__f1__s102", "arm": "IB-RFF_a0.004_ib_unified", "dataset": "Shen", "fold": 1, "seed": 102, "stage": "explore", "params": 310481, "best_val_epoch": 185, "stop_epoch": 200, "epochs_budget": 200, "source_val_ce": 0.1723010390996933, "source_val_acc": 0.9380000233650208, "train_seconds": 1345.6, "wall_seconds": 1371.5, "gpu_peak_mem_gb": 0.878}
