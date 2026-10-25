@@ -1,0 +1,118 @@
+{
+ "job": {
+  "dataset": "ManyRx",
+  "fold": 1,
+  "group": "last",
+  "seed": 6102,
+  "condition": "official",
+  "feature": "frequency",
+  "phase": "manyrx",
+  "id": "ManyRx_official_frequency__f1__last__s6102"
+ },
+ "recipe": {
+  "opt": "adam",
+  "lr": 0.001,
+  "wd": 0.0,
+  "batch": 128,
+  "epochs": 200,
+  "sched": "plateau",
+  "patience": 5,
+  "early_stop": 10,
+  "min_lr": 1e-06,
+  "stop": true
+ },
+ "data_seed": 2469180033,
+ "params": 90680,
+ "roles": {
+  "source": [
+   "1-1",
+   "1-19",
+   "1-20",
+   "2-1",
+   "2-19",
+   "3-19",
+   "7-7",
+   "7-14",
+   "19-1",
+   "19-2",
+   "19-19",
+   "19-20",
+   "20-1",
+   "20-19",
+   "20-20",
+   "23-1",
+   "23-3",
+   "23-5",
+   "23-6",
+   "23-7",
+   "24-5",
+   "24-6",
+   "24-13",
+   "24-16"
+  ],
+  "fit_rx": [
+   "1-1",
+   "1-19",
+   "1-20",
+   "2-1",
+   "2-19",
+   "3-19",
+   "7-7",
+   "7-14",
+   "19-1",
+   "19-2",
+   "19-19",
+   "19-20",
+   "20-1",
+   "20-19",
+   "20-20",
+   "23-1",
+   "23-3",
+   "23-5"
+  ],
+  "held_rx": [
+   "23-6",
+   "23-7",
+   "24-5",
+   "24-6",
+   "24-13",
+   "24-16"
+  ],
+  "target": [
+   "8-7",
+   "8-8",
+   "8-14",
+   "13-7",
+   "13-14",
+   "14-7",
+   "18-2",
+   "18-19"
+  ],
+  "source_days": [
+   1,
+   2
+  ]
+ },
+ "train_packets": 24570,
+ "val_packets": 10530,
+ "held_packets": {
+  "23-6": 1900,
+  "23-7": 1900,
+  "24-5": 1800,
+  "24-6": 1868,
+  "24-13": 2000,
+  "24-16": 1900
+ },
+ "ema": {
+  "half_life_epochs": 1,
+  "decay_per_step": 0.9963963671608146,
+  "average_buffers": false,
+  "bn_calibration": "every epoch; clean fit-training subset only"
+ },
+ "registration_sha256": "739eafcc22ce1cbc89b4631b2fff5f162ed66b8ce797abe0d5685152e9e99e41",
+ "decision_sha256": null,
+ "dataset_manifest_sha256": "3a193b563ef733a6f4cd53e4830c6fcb0e93ebe80e8b319f385b53def2c8449b",
+ "torch": "2.5.0+cu124",
+ "gpu": "NVIDIA A100-SXM4-40GB",
+ "smoke": false
+}

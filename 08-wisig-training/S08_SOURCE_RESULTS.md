@@ -4,6 +4,14 @@ Source RX days1-2 only; two held groups x two seeds. Checkpoints from the same f
 
 | Dataset | Condition | Feature | Rule | Cells | Mean held RX % | Mean worst RX % | Median epoch |
 |---|---|---|---|---:|---:|---:|---:|
+| ManyRx | official | frequency | ema_held | 16 | 89.49 | 80.19 | 4.0 |
+| ManyRx | official | frequency | ema_packet | 16 | 89.82 | 80.81 | 8.0 |
+| ManyRx | official | frequency | raw_held | 16 | 88.92 | 80.18 | 4.0 |
+| ManyRx | official | frequency | raw_packet | 16 | 88.77 | 79.87 | 7.0 |
+| ManyRx | official_awgn | frequency | ema_held | 16 | 89.80 | 78.99 | 5.5 |
+| ManyRx | official_awgn | frequency | ema_packet | 16 | 89.94 | 79.12 | 12.0 |
+| ManyRx | official_awgn | frequency | raw_held | 16 | 89.16 | 80.60 | 6.0 |
+| ManyRx | official_awgn | frequency | raw_packet | 16 | 88.79 | 78.14 | 16.5 |
 | ManySig | official | frequency | ema_held | 16 | 89.62 | 85.19 | 8.0 |
 | ManySig | official | frequency | ema_packet | 16 | 88.95 | 83.69 | 9.0 |
 | ManySig | official | frequency | raw_held | 16 | 89.52 | 85.59 | 7.5 |
@@ -33,6 +41,10 @@ Source RX days1-2 only; two held groups x two seeds. Checkpoints from the same f
 | ManySig | 1 | True | official:phase:raw_held | +3.31 | +0.13 |
 | ManySig | 2 | True | official:phase:ema_held | +7.28 | +0.92 |
 | ManySig | 3 | True | official:phase:raw_held | +3.50 | -2.33 |
+| ManyRx | 0 | True | official:frequency:ema_packet | +1.31 | -0.83 |
+| ManyRx | 1 | False | official:frequency:raw_packet | +0.00 | +0.00 |
+| ManyRx | 2 | False | official:frequency:raw_packet | +0.00 | +0.00 |
+| ManyRx | 3 | True | official_awgn:frequency:raw_held | +1.96 | -0.88 |
 
 Admission requires supported candidates on at least3/4 folds. Unsupported folds fall back to official/raw packet-CE. Held-CE rules refit all source RX for the source-frozen upper median epoch.
 
