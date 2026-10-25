@@ -13,7 +13,7 @@ HERE = Path(__file__).resolve().parent
 
 
 def export_tables(report, out):
-    metrics, receivers, ablations, costs = [], [], [], []
+    metrics, receivers, ablations, costs, initializations = [], [], [], [], []
     for key, row in sorted(report["groups"].items()):
         dataset, model, task = key.split(":")
         scores, training = row["metrics"], row["training_cost"]
@@ -32,7 +32,10 @@ def export_tables(report, out):
         for receiver, accuracy in sorted(row["per_fold_rx_mean"].items()):
             fold, rx = receiver.split(":")
             receivers.append(dict(dataset=dataset, model=model, task=task,
-                                  fold=int(fold), rx=rx, seed_mean_accuracy_pct=accuracy))
+                                  fold=int(fold), rx=rx, seed_mean_accuracy_pct=accuracy,
+                                  accuracy_seed_sd_pp=row.get("per_fold_rx_seed_sd", {}).get(receiver, ""),
+                                  seed_mean_macro_f1_pct=row.get("per_fold_rx_f1_mean", {}).get(receiver, ""),
+                                  macro_f1_seed_sd_pp=row.get("per_fold_rx_f1_seed_sd", {}).get(receiver, "")))
     for key, row in sorted(report["comparisons"].items()):
         dataset, pair, task = key.split(":")
         ablations.append(dict(dataset=dataset, pair=pair, task=task, fits=row["n"],
@@ -44,8 +47,14 @@ def export_tables(report, out):
     for arm, row in sorted(report["costs_by_arm"].items()):
         costs.append(dict(registered_arm=arm, measured_representative=row["arm"],
                           **{k: v for k, v in row.items() if k != "arm"}))
+    for key, row in sorted(report.get("initialization_comparisons", {}).items()):
+        dataset, model, task = key.split(":")
+        for pair in row["pairs"]:
+            initializations.append(dict(dataset=dataset, model=model, task=task,
+                                        complete=row["complete"], **pair))
     for name, rows in (("main_metrics", metrics), ("receiver_metrics", receivers),
-                       ("registered_ablations", ablations), ("measured_costs", costs)):
+                       ("registered_ablations", ablations), ("measured_costs", costs),
+                       ("ib_initialization_pairs", initializations)):
         if rows:
             with (out / f"{name}.csv").open("w", newline="") as stream:
                 writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
@@ -175,6 +184,8 @@ def conclusion(report):
     lines += ["", "W0 为普通 Stem；W1 为分层 Stem；W2 为 W1 加冻结截止点。"
               "全部固定 32×64 Token 和两层 HSTU。各折 RF 臂共用源域选出的训练配方。",
               "竞争方法按各自内部源 RX 选配置；IB 包含匹配 FAN 初始化与 HSIC 微调两阶段。", "",
+              "IB 与其实际 FAN 初始化的收益见 `ib_initialization_pairs.csv`。"
+              "配对是描述性补充，不改变冻结决策或增加新的选择标准。", "",
               "## Shen 同协议", "",
               "P-H5x160：10 TX、每折 5 台源 RX、每 TX/RX 160 训练包和 40 源验证包。"
               "每台评估 RX 为 2,000 包。确认训练为两 fold × seed201/202/203。",

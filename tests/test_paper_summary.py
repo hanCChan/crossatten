@@ -28,6 +28,9 @@ def main():
     summary = report.aggregate(base, "CRD")
     assert abs(summary["metrics"]["acc_mean"]["mean"] - 81.5) < 1e-10
     assert summary["seed_sd"] == 0 and summary["fold_sd"] > 0
+    assert abs(summary["per_fold_rx_f1_mean"]["0:rx"] - 80.0) < 1e-10
+    assert summary["per_fold_rx_seed_sd"]["0:rx"] == 0
+    assert summary["per_fold_rx_f1_seed_sd"]["0:rx"] == 0
     assert report.paired(improved, base, "CRD", 12)["status"] == "improves"
     assert report.paired(base, improved, "CRD", 12)["status"] == "harms"
     assert report.paired(base, base, "CRD", 12)["status"] == "unclear"

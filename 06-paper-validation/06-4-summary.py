@@ -126,6 +126,7 @@ def moments(values):
 
 def aggregate(records, label):
     seeds, folds, rx = defaultdict(list), defaultdict(list), defaultdict(list)
+    rx_f1 = defaultdict(list)
     values = defaultdict(list)
     for result in records:
         entry = result["selected"][label]
@@ -137,6 +138,7 @@ def aggregate(records, label):
         folds[result["fold"]].append(scores["acc_mean"] * 100)
         for name, score in entry["per_rx"].items():
             rx[(result["fold"], name)].append(score["acc"] * 100)
+            rx_f1[(result["fold"], name)].append(score["macro_f1"] * 100)
     return dict(n=len(records), metrics={k: moments(v) for k, v in values.items()},
                 seed_means={str(k): float(np.mean(v)) for k, v in seeds.items()},
                 seed_sd=moments([np.mean(v) for v in seeds.values()])["sd"],
@@ -144,6 +146,9 @@ def aggregate(records, label):
                 fold_sd=moments([np.mean(v) for v in folds.values()])["sd"],
                 worst_fold_rx_mean=min(float(np.mean(v)) for v in rx.values()),
                 per_fold_rx_mean={f"{f}:{r}": float(np.mean(v)) for (f, r), v in rx.items()},
+                per_fold_rx_seed_sd={f"{f}:{r}": moments(v)["sd"] for (f, r), v in rx.items()},
+                per_fold_rx_f1_mean={f"{f}:{r}": float(np.mean(v)) for (f, r), v in rx_f1.items()},
+                per_fold_rx_f1_seed_sd={f"{f}:{r}": moments(v)["sd"] for (f, r), v in rx_f1.items()},
                 params=sorted({r["params"] for r in records}),
                 train_seconds=moments([r["train_seconds"] for r in records]))
 
@@ -369,6 +374,32 @@ def main():
                 worst = f"{row['worst_fold_rx_delta_pp']:+.2f}" if "delta_pp" in row else "pending"
                 lines.append(f"| {dataset} | {label} | {left}-{right} | {row['n']} | {delta} | "
                              f"{row.get('positive', '-')}/{row['n']} | {worst} | {row['status']} |")
+    initialization_comparisons = {}
+    lines += ["", "## IB Versus Matching Initialization", "",
+              "Descriptive paired effects of HSIC fine-tuning; not a new model-selection criterion.",
+              "Each IB checkpoint is compared with its actual same-fold, same-seed FAN initialization.",
+              "", "| Dataset | IB Configuration | Task | Fits | Delta pp | Positive |",
+              "|---|---|---|---:|---:|---:|"]
+    for (dataset, model), records in sorted(groups.items()):
+        if model != "IB-RFF" and not model.startswith("IB-RFF_"):
+            continue
+        expected = 12 if dataset != "Shen" else 6
+        for label in ("CR", "CRD") if dataset != "Shen" else ("dev_val", "confirm"):
+            effects = []
+            for result in records:
+                config = configs[(result["stage"], result["run_id"])]
+                initial = json.loads(Path(config["init"]["path"]).with_name("metrics.json").read_text())
+                effects.append(dict(
+                    fold=result["fold"], seed=result["seed"], initialization=initial["arm"],
+                    delta_pp=100 * (result["selected"][label]["summary"]["acc_mean"] -
+                                    initial["selected"][label]["summary"]["acc_mean"])))
+            values = [effect["delta_pp"] for effect in effects]
+            row = dict(n=len(effects), expected=expected, complete=len(effects) == expected,
+                       delta_pp=moments(values), positive=sum(v > 0 for v in values),
+                       negative=sum(v < 0 for v in values), pairs=effects)
+            initialization_comparisons[f"{dataset}:{model}:{label}"] = row
+            lines.append(f"| {dataset} | {model} | {label} | {row['n']} | "
+                         f"{row['delta_pp']['mean']:+.2f} | {row['positive']}/{row['n']} |")
     lines += ["", "## Measured Cost", "",
               "Measurements precede formal training on an otherwise idle A100. Random weights, FP32, device IQ to logits.",
               "Batch latency excludes host transfer. Repeated timing samples measure system variability, not accuracy seeds.",
@@ -414,7 +445,7 @@ def main():
               "The bounded experiment matrix must finish before choosing a general RF, LoRa-only, or engineering-only paper route.", ""]
     output = dict(generated_at=generated_at, registration=registration, checks=checks, groups=summary, costs_by_arm=costs,
                   paper_route=route,
-                  comparisons=comparisons, results=results,
+                  comparisons=comparisons, initialization_comparisons=initialization_comparisons, results=results,
                   configs={f"{stage}:{run}": c for (stage, run), c in configs.items()})
     (HERE / "summary").mkdir(exist_ok=True)
     (HERE / "summary/report.json").write_text(json.dumps(output, indent=1) + "\n")
