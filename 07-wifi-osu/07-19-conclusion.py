@@ -31,10 +31,29 @@ def main():
     osu = read_csv("osu_summary.csv")
     costs = json.loads((HERE / "costs.json").read_text())
     now = datetime.now(ZoneInfo("Asia/Shanghai")).isoformat(timespec="seconds")
+    training = [next(r for r in rows if r["dataset"] == dataset and
+                     r["pipeline"] == "source_training" and r["task"] == "CRD")
+                for dataset in ("ManyRx", "ManySig")]
+    w1_deltas = [next(r for r in contrasts if r["dataset"] == dataset and
+                     r["pipeline"] == "source_training" and r["baseline"] == "W1")
+                 for dataset in ("ManyRx", "ManySig")]
+    strong = [r for r in contrasts if r["pipeline"] == "source_training" and
+              r["baseline"] in ("IB-RFF", "WaveMLP")]
+    comparison = "两项均值仍低于 IB-RFF 和 WaveMLP。" if all(
+        float(r["delta_pp"]) < 0 for r in strong) else \
+        "与强基线的差值和接收机级不确定性见完整对照表。"
+    osu_hstem = next(r for r in osu if r["method"] == "hstem_hstu")
     lines = [
         "# 阶段07中文结论\n\n",
         f"生成时间：{now}。基线 `ebe3225`，实验分支 `exp/s07-wifi-osu`。\n\n",
         "## 结论\n\n",
+        "源域选训练配方的 ManyRx / ManySig CRD 为 "
+        f"**{float(training[0]['rx_accuracy_pct']):.2f}% / "
+        f"{float(training[1]['rx_accuracy_pct']):.2f}%**，比原 W1 分别 "
+        f"**{float(w1_deltas[0]['delta_pp']):+.2f} / "
+        f"{float(w1_deltas[1]['delta_pp']):+.2f} pp**。{comparison} ",
+        f"OSU HStem-HSTU 跨 RX 包准确率为 **{float(osu_hstem['accuracy_pct']):.2f}%**，",
+        "未通过独立泛化验证。**本轮没有达成 WiSig / OSU 双 SOTA。**\n\n",
         "**本轮注册实验完成并停止，不根据测试成绩继续追加搜索。** ",
         "下表全部来自四折 RX、三个训练种子的正式评测；内部留源 RX 的探索分数不替代 CRD。 ",
         "三条流水线均报告，不在测试集上挑出表现最好的流水线作为最终方法。\n\n",
@@ -131,6 +150,7 @@ def main():
         "- [OSU数据卡](S07_OSU_DATA_CARD.md)、[正式结果](S07_OSU_RESULTS.md)",
         "与[事后诊断](S07_OSU_POSTHOC.md)。\n",
         "- [实测成本](S07_COSTS.md)、[新颖性与SOTA证据限制](S07_NOVELTY_AND_SOTA_REVIEW.md)。\n",
+        "- [执行记录](S07_EXECUTION.md)：环境、正式运行数量与耗时口径。\n",
         "- `acceptance.json`、`wifi_final_report_evidence.json`、`decision_final.json`、",
         "`runs/`：验收、冻结谱系、完整配置/训练曲线/预测。权重不纳入Git，未自动推送或合并。\n",
     ])

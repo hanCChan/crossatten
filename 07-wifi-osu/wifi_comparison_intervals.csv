@@ -1,0 +1,25 @@
+dataset,pipeline,baseline,task,receiver_count,delta_pp,ci95_low_pp,ci95_high_pp,min_rx_delta_pp,improved_receivers,inference
+ManyRx,source_frontend,W1,CRD,32,-6.321872671711581,-9.126307800636798,-3.699779947097398,-29.766666666666673,3,RX-cluster bootstrap of seed-mean deltas; seeds not paired
+ManyRx,source_frontend,IB-RFF,CRD,32,-10.828914805628798,-14.466285389819566,-7.499367566985805,-39.850000000000016,4,RX-cluster bootstrap of seed-mean deltas; seeds not paired
+ManyRx,source_frontend,WaveMLP,CRD,32,-10.814843740683925,-14.292820152362127,-7.609408998609695,-40.95000000000001,3,RX-cluster bootstrap of seed-mean deltas; seeds not paired
+ManyRx,source_frontend,FAN_source_selected,CRD,32,-10.316549638846045,-13.988450956085906,-6.830104653459057,-39.050000000000004,6,RX-cluster bootstrap of seed-mean deltas; seeds not paired
+ManyRx,source_training,W1,CRD,32,4.087388683116858,2.7052705749802683,5.582207260046445,-1.9629629629629477,27,RX-cluster bootstrap of seed-mean deltas; seeds not paired
+ManyRx,source_training,IB-RFF,CRD,32,-0.41965345080036,-1.8618560434651423,1.0570485819572724,-10.216666666666683,14,RX-cluster bootstrap of seed-mean deltas; seeds not paired
+ManyRx,source_training,WaveMLP,CRD,32,-0.40558238585548523,-1.7579104264025136,0.9364676212970666,-11.316666666666677,14,RX-cluster bootstrap of seed-mean deltas; seeds not paired
+ManyRx,source_training,FAN_source_selected,CRD,32,0.09271171598239514,-1.3813359916318884,1.6430620601588066,-9.416666666666671,18,RX-cluster bootstrap of seed-mean deltas; seeds not paired
+ManyRx,source_combination,W1,CRD,32,4.087388683116858,2.724180815530716,5.583790953617837,-1.9629629629629477,27,RX-cluster bootstrap of seed-mean deltas; seeds not paired
+ManyRx,source_combination,IB-RFF,CRD,32,-0.41965345080036,-1.869607390337802,1.0284883251241557,-10.216666666666683,14,RX-cluster bootstrap of seed-mean deltas; seeds not paired
+ManyRx,source_combination,WaveMLP,CRD,32,-0.40558238585548523,-1.7402688035192142,0.9531311677631618,-11.316666666666677,14,RX-cluster bootstrap of seed-mean deltas; seeds not paired
+ManyRx,source_combination,FAN_source_selected,CRD,32,0.09271171598239514,-1.4439731213898226,1.598277598655205,-9.416666666666671,18,RX-cluster bootstrap of seed-mean deltas; seeds not paired
+ManySig,source_frontend,W1,CRD,12,-6.349537037037034,-15.67604166666667,1.6736689814814856,-46.47222222222223,4,RX-cluster bootstrap of seed-mean deltas; seeds not paired
+ManySig,source_frontend,IB-RFF,CRD,12,-25.11342592592592,-30.877835648148142,-19.383680555555557,-46.44444444444444,0,RX-cluster bootstrap of seed-mean deltas; seeds not paired
+ManySig,source_frontend,WaveMLP,CRD,12,-25.057870370370367,-32.16226851851851,-18.30271990740741,-45.52777777777777,0,RX-cluster bootstrap of seed-mean deltas; seeds not paired
+ManySig,source_frontend,FAN_source_selected,CRD,12,-22.29166666666666,-28.22008101851853,-16.574016203703696,-45.36111111111113,0,RX-cluster bootstrap of seed-mean deltas; seeds not paired
+ManySig,source_training,W1,CRD,12,14.287037037037033,6.145601851851847,22.84027777777777,-8.249999999999993,10,RX-cluster bootstrap of seed-mean deltas; seeds not paired
+ManySig,source_training,IB-RFF,CRD,12,-4.476851851851856,-9.210995370370373,-0.10416666666667139,-22.111111111111107,4,RX-cluster bootstrap of seed-mean deltas; seeds not paired
+ManySig,source_training,WaveMLP,CRD,12,-4.4212962962963,-11.002372685185188,0.5556134259259149,-35.916666666666664,5,RX-cluster bootstrap of seed-mean deltas; seeds not paired
+ManySig,source_training,FAN_source_selected,CRD,12,-1.655092592592598,-6.083391203703711,2.6344328703703606,-15.833333333333336,6,RX-cluster bootstrap of seed-mean deltas; seeds not paired
+ManySig,source_combination,W1,CRD,12,14.287037037037033,6.259143518518516,22.606828703703698,-8.249999999999993,10,RX-cluster bootstrap of seed-mean deltas; seeds not paired
+ManySig,source_combination,IB-RFF,CRD,12,-4.476851851851856,-9.166898148148151,-0.11111111111111895,-22.111111111111107,4,RX-cluster bootstrap of seed-mean deltas; seeds not paired
+ManySig,source_combination,WaveMLP,CRD,12,-4.4212962962963,-11.343229166666669,0.5023148148148131,-35.916666666666664,5,RX-cluster bootstrap of seed-mean deltas; seeds not paired
+ManySig,source_combination,FAN_source_selected,CRD,12,-1.655092592592598,-6.129803240740744,2.690046296296286,-15.833333333333336,6,RX-cluster bootstrap of seed-mean deltas; seeds not paired

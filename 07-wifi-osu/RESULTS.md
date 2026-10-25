@@ -1,6 +1,6 @@
 # Stage 07 Results
 
-Generated 2026-10-26T00:06:37+08:00. WiSig INCOMPLETE. Source screening numbers are not CRD results.
+Generated 2026-10-26T01:25:41+08:00. Complete registered exploration; STOP, no extra target-directed search.
 
 Baseline `ebe3225`, branch `exp/s07-wifi-osu`. S00-S06 are unchanged. No automatic merge, GitHub push, model-weight publication or target-driven extension.
 
@@ -11,9 +11,9 @@ Baseline `ebe3225`, branch `exp/s07-wifi-osu`. S00-S06 are unchanged. No automat
 | features | 56 | 56 | 0 | 0 |
 | replicate | 23 | 23 | 0 | 0 |
 | training | 72 | 72 | 0 | 0 |
-| training_replicate | 23 | 8 | 0 | 0 |
-| combine | 0 | 0 | 0 | 0 |
-| final | 0 | 0 | 0 | 0 |
+| training_replicate | 23 | 23 | 0 | 0 |
+| combine | 9 | 9 | 0 | 0 |
+| final | 72 | 72 | 0 | 0 |
 | smoke | 14 | 14 | 0 | 0 |
 | osu | 24 | 24 | 0 | 0 |
 
@@ -23,7 +23,16 @@ Interrupted attempts and detector pilot failure are retained; they are not addit
 
 Four official RX folds, three final seeds; CRD primary. Selections use each fold's source RX days1-2 only. S06 public targets are not new blind tests. All three pipelines are reported, with fold-specific source decisions disclosed; their configurations may coincide. Reused S06 baseline seeds are unpaired with S07.
 
-Formal target evaluation is not yet complete. Do not substitute internal held-source scores.
+| Dataset | Pipeline | CRD RX acc % | Macro-F1 % | Seed SD pp | Worst RX % |
+|---|---|---:|---:|---:|---:|
+| ManyRx | source_frontend | 77.24 | 73.51 | 0.37 | 50.95 |
+| ManyRx | source_training | 87.65 | 85.43 | 0.61 | 68.01 |
+| ManyRx | source_combination | 87.65 | 85.43 | 0.61 | 68.01 |
+| ManySig | source_frontend | 65.98 | 63.20 | 1.56 | 43.75 |
+| ManySig | source_training | 86.62 | 85.96 | 0.94 | 54.67 |
+| ManySig | source_combination | 86.62 | 85.96 | 0.94 | 54.67 |
+
+Full CR/CRD, packet/RX weightings, baseline differences and conditional RX bootstrap intervals: `S07_WIFI_FINAL_RESULTS.md`. No target-ranked pipeline is designated the method.
 
 Single-seed first-pass source evidence, descriptive only:
 
@@ -49,7 +58,7 @@ HStem-HSTU did not validate cross-RX transfer under this frozen pipeline. Post-h
 
 ## Decision And Claims
 
-Wait for all frozen WiSig fits before any WiSig competitiveness decision. OSU does not currently support independent LoRa transfer or SOTA. No further OSU method search is authorized by its failed target results.
+The registered comparison does not establish consistent conditional-RX superiority over both strong fair baselines on both WiSig datasets. OSU independent cross-RX validation failed. A general LoRa/WiFi SOTA claim is not supported. Keep the Shen findings, disclose WiSig/OSU applicability limits, and stop this exploration.
 
 ## Evidence
 
@@ -58,5 +67,8 @@ Wait for all frozen WiSig fits before any WiSig competitiveness decision. OSU do
 - `S07_CODE_AUDIT.md`, `S07_SOURCE_MECHANISMS.md`: code and read-only source diagnostics.
 - `S07_WIFI_FEATURE_RESULTS.md`, `S07_WIFI_TRAINING_RESULTS.md`, `S07_WIFI_FINAL_RESULTS.md`: sequential outcomes.
 - `S07_OSU_DATA_CARD.md`, `S07_OSU_RESULTS.md`, `S07_OSU_POSTHOC.md`: provenance and negative results.
-- `S07_COSTS.md`: isolated inference costs, when complete; parameters alone imply no speed claim.
+- `S07_COSTS.md`, `S07_EXECUTION.md`: measured inference costs and execution-time accounting.
+- `CONCLUSION_ZH.md`: complete audited Chinese research conclusion.
+- `acceptance.json`, `wifi_final_report_evidence.json`: acceptance and frozen evidence hashes.
+- `S07_SOURCE_DECISIONS.md`: source-only frontend, recipe and combination decisions.
 - `S07_NOVELTY_AND_SOTA_REVIEW.md`: primary-source limits and existing ideas.

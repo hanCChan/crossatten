@@ -1,0 +1,347 @@
+{
+ "gpu": "NVIDIA A100-SXM4-40GB",
+ "torch": "2.5.0+cu124",
+ "cpu_threads": 4,
+ "rows": [
+  {
+   "model": "WiSig:ManyRx:diff:pooled_concat",
+   "params": 91128,
+   "mflops": 10.798336,
+   "cpu4t_b1_ms": 2.052702009677887,
+   "gpu_b1_ms": 2.6941120624542236,
+   "gpu_b1_p95_ms": 3.56770715713501,
+   "gpu_b256_packets_per_second": 100344.93913746899
+  },
+  {
+   "model": "WiSig:ManyRx:filter:pooled_concat",
+   "params": 90936,
+   "mflops": 10.683648,
+   "cpu4t_b1_ms": 2.0537450909614563,
+   "gpu_b1_ms": 2.767983913421631,
+   "gpu_b1_p95_ms": 4.194732880592346,
+   "gpu_b256_packets_per_second": 97853.34098911502
+  },
+  {
+   "model": "WiSig:ManyRx:frequency:pooled_concat",
+   "params": 90680,
+   "mflops": 10.56896,
+   "cpu4t_b1_ms": 1.5427358448505402,
+   "gpu_b1_ms": 1.799456000328064,
+   "gpu_b1_p95_ms": 1.8730960011482238,
+   "gpu_b256_packets_per_second": 137607.1865139445
+  },
+  {
+   "model": "WiSig:ManyRx:legacy:pooled_concat",
+   "params": 91128,
+   "mflops": 10.798336,
+   "cpu4t_b1_ms": 1.8121898174285889,
+   "gpu_b1_ms": 2.212847948074341,
+   "gpu_b1_p95_ms": 2.2866175055503843,
+   "gpu_b256_packets_per_second": 108890.20629717238
+  },
+  {
+   "model": "WiSig:ManyRx:split:pooled_concat",
+   "params": 142536,
+   "mflops": 18.367744,
+   "cpu4t_b1_ms": 3.3819936215877533,
+   "gpu_b1_ms": 3.229871988296509,
+   "gpu_b1_p95_ms": 4.026144051551818,
+   "gpu_b256_packets_per_second": 66556.01851210478
+  },
+  {
+   "model": "WiSig:ManyRx:stf:pooled_concat",
+   "params": 91352,
+   "mflops": 10.913024,
+   "cpu4t_b1_ms": 1.9972659647464752,
+   "gpu_b1_ms": 2.6892160177230835,
+   "gpu_b1_p95_ms": 3.6685568213462827,
+   "gpu_b256_packets_per_second": 94148.10585282568
+  },
+  {
+   "model": "WiSig:ManyRx:time:pooled_concat",
+   "params": 90904,
+   "mflops": 10.683648,
+   "cpu4t_b1_ms": 1.7324797809123993,
+   "gpu_b1_ms": 2.200608015060425,
+   "gpu_b1_p95_ms": 3.0523679733276365,
+   "gpu_b256_packets_per_second": 113961.73478092461
+  },
+  {
+   "model": "WiSig:ManyRx:FAN_IB-RFF",
+   "params": 151761,
+   "mflops": 10.59712,
+   "cpu4t_b1_ms": 1.476377248764038,
+   "gpu_b1_ms": 1.5346879959106445,
+   "gpu_b1_p95_ms": 2.0302847027778625,
+   "gpu_b256_packets_per_second": 169240.53317596798
+  },
+  {
+   "model": "WiSig:ManyRx:WaveMLP_default",
+   "params": 85258,
+   "mflops": 1.403392,
+   "cpu4t_b1_ms": 3.9007477462291718,
+   "gpu_b1_ms": 5.903792142868042,
+   "gpu_b1_p95_ms": 7.517790603637695,
+   "gpu_b256_packets_per_second": 40309.57781256848
+  },
+  {
+   "model": "WiSig:ManyRx:WaveMLP_alternate",
+   "params": 84490,
+   "mflops": 1.27232,
+   "cpu4t_b1_ms": 3.044791519641876,
+   "gpu_b1_ms": 4.487648010253906,
+   "gpu_b1_p95_ms": 5.2168942213058465,
+   "gpu_b256_packets_per_second": 52222.21879610515
+  },
+  {
+   "model": "WiSig:ManySig:diff:pooled_concat",
+   "params": 90868,
+   "mflops": 10.797824,
+   "cpu4t_b1_ms": 2.0209550857543945,
+   "gpu_b1_ms": 2.8939520120620728,
+   "gpu_b1_p95_ms": 4.383633494377136,
+   "gpu_b256_packets_per_second": 83220.20458569101
+  },
+  {
+   "model": "WiSig:ManySig:filter:pooled_concat",
+   "params": 90676,
+   "mflops": 10.683136,
+   "cpu4t_b1_ms": 2.5417953729629517,
+   "gpu_b1_ms": 2.5259039402008057,
+   "gpu_b1_p95_ms": 3.7365857124328614,
+   "gpu_b256_packets_per_second": 78725.82367451464
+  },
+  {
+   "model": "WiSig:ManySig:frequency:pooled_concat",
+   "params": 90420,
+   "mflops": 10.568448,
+   "cpu4t_b1_ms": 1.7743483185768127,
+   "gpu_b1_ms": 2.329904079437256,
+   "gpu_b1_p95_ms": 3.1022975683212275,
+   "gpu_b256_packets_per_second": 105639.85071487364
+  },
+  {
+   "model": "WiSig:ManySig:legacy:pooled_concat",
+   "params": 90868,
+   "mflops": 10.797824,
+   "cpu4t_b1_ms": 1.9847974181175232,
+   "gpu_b1_ms": 2.4958720207214355,
+   "gpu_b1_p95_ms": 3.7037376165390015,
+   "gpu_b256_packets_per_second": 87554.17230914625
+  },
+  {
+   "model": "WiSig:ManySig:split:pooled_concat",
+   "params": 142276,
+   "mflops": 18.367232,
+   "cpu4t_b1_ms": 3.422193229198456,
+   "gpu_b1_ms": 3.504703998565674,
+   "gpu_b1_p95_ms": 4.8833822965621945,
+   "gpu_b256_packets_per_second": 60772.034791695936
+  },
+  {
+   "model": "WiSig:ManySig:stf:pooled_concat",
+   "params": 91092,
+   "mflops": 10.912512,
+   "cpu4t_b1_ms": 2.057388424873352,
+   "gpu_b1_ms": 2.555504083633423,
+   "gpu_b1_p95_ms": 3.5736015915870665,
+   "gpu_b256_packets_per_second": 95109.01848517085
+  },
+  {
+   "model": "WiSig:ManySig:time:pooled_concat",
+   "params": 90644,
+   "mflops": 10.683136,
+   "cpu4t_b1_ms": 1.801326870918274,
+   "gpu_b1_ms": 2.191472053527832,
+   "gpu_b1_p95_ms": 2.270620858669281,
+   "gpu_b256_packets_per_second": 103573.28119855962
+  },
+  {
+   "model": "WiSig:ManySig:FAN_IB-RFF",
+   "params": 146605,
+   "mflops": 4.697856,
+   "cpu4t_b1_ms": 1.5791729092597961,
+   "gpu_b1_ms": 1.472208023071289,
+   "gpu_b1_p95_ms": 1.64795361161232,
+   "gpu_b256_packets_per_second": 164455.0880264527
+  },
+  {
+   "model": "WiSig:ManySig:WaveMLP_default",
+   "params": 83974,
+   "mflops": 1.271296,
+   "cpu4t_b1_ms": 2.902381122112274,
+   "gpu_b1_ms": 5.195839881896973,
+   "gpu_b1_p95_ms": 6.904950594902038,
+   "gpu_b256_packets_per_second": 50065.08505953699
+  },
+  {
+   "model": "WiSig:ManySig:WaveMLP_alternate",
+   "params": 84742,
+   "mflops": 1.402368,
+   "cpu4t_b1_ms": 3.791898488998413,
+   "gpu_b1_ms": 5.294863939285278,
+   "gpu_b1_p95_ms": 5.457793736457824,
+   "gpu_b256_packets_per_second": 46150.73798976729
+  },
+  {
+   "model": "OSU:patch_hstu",
+   "params": 581111,
+   "mflops": 139.201664,
+   "cpu4t_b1_ms": 4.6465471386909485,
+   "gpu_b1_ms": 2.3302398920059204,
+   "gpu_b1_p95_ms": 2.5280176281929014,
+   "gpu_b256_packets_per_second": 38639.97007957033
+  },
+  {
+   "model": "OSU:hstem_hstu",
+   "params": 143367,
+   "mflops": 190.581888,
+   "cpu4t_b1_ms": 6.672941148281097,
+   "gpu_b1_ms": 3.2921119928359985,
+   "gpu_b1_p95_ms": 3.8331759810447688,
+   "gpu_b256_packets_per_second": 33593.190143127635
+  },
+  {
+   "model": "OSU:hstem_cnn",
+   "params": 101129,
+   "mflops": 187.43616,
+   "cpu4t_b1_ms": 5.202252417802811,
+   "gpu_b1_ms": 1.8472319841384888,
+   "gpu_b1_p95_ms": 2.0364592194557187,
+   "gpu_b256_packets_per_second": 35286.35929217604
+  },
+  {
+   "model": "OSU:cis_rank16",
+   "params": 660249,
+   "mflops": 556.274304,
+   "cpu4t_b1_ms": 7.003318518400192,
+   "gpu_b1_ms": 1.4782559871673584,
+   "gpu_b1_p95_ms": 1.630676847696304,
+   "gpu_b256_packets_per_second": 29676.178372284252
+  }
+ ],
+ "weights": "random; no target data",
+ "final_job_aliases": {
+  "WiSig:ManyRx:frequency:pooled_concat": [
+   "ManyRx_source_combination__f0__s4101",
+   "ManyRx_source_combination__f0__s4102",
+   "ManyRx_source_combination__f0__s4103",
+   "ManyRx_source_combination__f1__s4101",
+   "ManyRx_source_combination__f1__s4102",
+   "ManyRx_source_combination__f1__s4103",
+   "ManyRx_source_combination__f2__s4101",
+   "ManyRx_source_combination__f2__s4102",
+   "ManyRx_source_combination__f2__s4103",
+   "ManyRx_source_combination__f3__s4101",
+   "ManyRx_source_combination__f3__s4102",
+   "ManyRx_source_combination__f3__s4103",
+   "ManyRx_source_frontend__f0__s4101",
+   "ManyRx_source_frontend__f0__s4102",
+   "ManyRx_source_frontend__f0__s4103",
+   "ManyRx_source_frontend__f1__s4101",
+   "ManyRx_source_frontend__f1__s4102",
+   "ManyRx_source_frontend__f1__s4103",
+   "ManyRx_source_frontend__f2__s4101",
+   "ManyRx_source_frontend__f2__s4102",
+   "ManyRx_source_frontend__f2__s4103",
+   "ManyRx_source_frontend__f3__s4101",
+   "ManyRx_source_frontend__f3__s4102",
+   "ManyRx_source_frontend__f3__s4103",
+   "ManyRx_source_training__f0__s4101",
+   "ManyRx_source_training__f0__s4102",
+   "ManyRx_source_training__f0__s4103",
+   "ManyRx_source_training__f1__s4101",
+   "ManyRx_source_training__f1__s4102",
+   "ManyRx_source_training__f1__s4103",
+   "ManyRx_source_training__f2__s4101",
+   "ManyRx_source_training__f2__s4102",
+   "ManyRx_source_training__f2__s4103",
+   "ManyRx_source_training__f3__s4101",
+   "ManyRx_source_training__f3__s4102",
+   "ManyRx_source_training__f3__s4103"
+  ],
+  "WiSig:ManySig:frequency:pooled_concat": [
+   "ManySig_source_combination__f0__s4101",
+   "ManySig_source_combination__f0__s4102",
+   "ManySig_source_combination__f0__s4103",
+   "ManySig_source_combination__f1__s4101",
+   "ManySig_source_combination__f1__s4102",
+   "ManySig_source_combination__f1__s4103",
+   "ManySig_source_combination__f2__s4101",
+   "ManySig_source_combination__f2__s4102",
+   "ManySig_source_combination__f2__s4103",
+   "ManySig_source_frontend__f0__s4101",
+   "ManySig_source_frontend__f0__s4102",
+   "ManySig_source_frontend__f0__s4103",
+   "ManySig_source_frontend__f1__s4101",
+   "ManySig_source_frontend__f1__s4102",
+   "ManySig_source_frontend__f1__s4103",
+   "ManySig_source_frontend__f2__s4101",
+   "ManySig_source_frontend__f2__s4102",
+   "ManySig_source_frontend__f2__s4103",
+   "ManySig_source_training__f0__s4101",
+   "ManySig_source_training__f0__s4102",
+   "ManySig_source_training__f0__s4103",
+   "ManySig_source_training__f1__s4101",
+   "ManySig_source_training__f1__s4102",
+   "ManySig_source_training__f1__s4103",
+   "ManySig_source_training__f2__s4101",
+   "ManySig_source_training__f2__s4102",
+   "ManySig_source_training__f2__s4103"
+  ],
+  "WiSig:ManySig:split:pooled_concat": [
+   "ManySig_source_combination__f3__s4101",
+   "ManySig_source_combination__f3__s4102",
+   "ManySig_source_combination__f3__s4103",
+   "ManySig_source_frontend__f3__s4101",
+   "ManySig_source_frontend__f3__s4102",
+   "ManySig_source_frontend__f3__s4103",
+   "ManySig_source_training__f3__s4101",
+   "ManySig_source_training__f3__s4102",
+   "ManySig_source_training__f3__s4103"
+  ],
+  "WiSig:ManyRx:legacy:pooled_concat": [],
+  "WiSig:ManyRx:time:pooled_concat": [],
+  "WiSig:ManyRx:diff:pooled_concat": [],
+  "WiSig:ManyRx:split:pooled_concat": [],
+  "WiSig:ManyRx:stf:pooled_concat": [],
+  "WiSig:ManyRx:filter:pooled_concat": [],
+  "WiSig:ManySig:legacy:pooled_concat": [],
+  "WiSig:ManySig:time:pooled_concat": [],
+  "WiSig:ManySig:diff:pooled_concat": [],
+  "WiSig:ManySig:stf:pooled_concat": [],
+  "WiSig:ManySig:filter:pooled_concat": []
+ },
+ "final_decision_sha256": "80c219b324045b39c6fcaa7db6ac73cef90c9b7e2ffa24b8846ad452a3b9d8b4",
+ "quiescence_snapshots": [
+  {
+   "processes": [
+    "[Not Found], 30",
+    "[Not Found], 30",
+    "[Not Found], 30",
+    "[Not Found], 30"
+   ],
+   "utilization": [
+    "0",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "processes": [
+    "[Not Found], 30",
+    "[Not Found], 30",
+    "[Not Found], 30",
+    "[Not Found], 30"
+   ],
+   "utilization": [
+    "0",
+    "0",
+    "0",
+    "0"
+   ]
+  }
+ ],
+ "note": "Resident IQ to logits, excludes transfer/detection; two idle-GPU snapshots required. FFT and scalar operations counted in timing, partially omitted in FLOPs"
+}

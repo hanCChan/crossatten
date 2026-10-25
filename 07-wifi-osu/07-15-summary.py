@@ -131,7 +131,10 @@ def main():
                   "- `S07_WIFI_FEATURE_RESULTS.md`, `S07_WIFI_TRAINING_RESULTS.md`, "
                   "`S07_WIFI_FINAL_RESULTS.md`: sequential outcomes.\n",
                   "- `S07_OSU_DATA_CARD.md`, `S07_OSU_RESULTS.md`, `S07_OSU_POSTHOC.md`: provenance and negative results.\n",
-                  "- `S07_COSTS.md`: isolated inference costs, when complete; parameters alone imply no speed claim.\n",
+                  "- `S07_COSTS.md`, `S07_EXECUTION.md`: measured inference costs and execution-time accounting.\n",
+                  "- `CONCLUSION_ZH.md`: complete audited Chinese research conclusion.\n",
+                  "- `acceptance.json`, `wifi_final_report_evidence.json`: acceptance and frozen evidence hashes.\n",
+                  "- `S07_SOURCE_DECISIONS.md`: source-only frontend, recipe and combination decisions.\n",
                   "- `S07_NOVELTY_AND_SOTA_REVIEW.md`: primary-source limits and existing ideas.\n"])
     (HERE / "RESULTS.md").write_text("".join(lines))
     status = dict(generated_at=datetime.now(ZoneInfo("Asia/Shanghai")).isoformat(),

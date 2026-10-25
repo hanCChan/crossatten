@@ -5,6 +5,23 @@ Independent branch `exp/s07-wifi-osu`; no edits to stages00–06, their protocol
 Goal: improve strict source-only WiSig CRD and evaluate LoRa on OSU.
 SOTA is a research target, not a promised result or an unlimited-search stopping rule.
 
+## Completed Outcome
+
+All registered stages completed: 255 formal WiSig fits within the 280-fit cap,
+24 formal OSU fits, and retained smoke/pilot/interrupted-attempt records.
+Source-selected training reached ManyRx/ManySig CRD 87.65%/86.62%, improving W1
+by 4.09/14.29pp but remaining below both frozen strong fair baselines.
+The frontend-only pipeline regressed; training/combination pipelines have identical
+final configurations and are not independent evidence. OSU HStem-HSTU cross-RX
+accuracy was 1.42%; independent transfer was not validated. No dual-SOTA claim.
+
+Read [Chinese conclusion](CONCLUSION_ZH.md), [complete results](RESULTS.md),
+[formal WiSig comparisons](S07_WIFI_FINAL_RESULTS.md), [source decisions](S07_SOURCE_DECISIONS.md),
+[OSU results](S07_OSU_RESULTS.md), [costs](S07_COSTS.md) and [execution record](S07_EXECUTION.md).
+[Acceptance](acceptance.json) verifies frozen lineage, predictions, data roles and
+unchanged historical files. Stop here; no additional target-directed search,
+automatic merge, GitHub push or model-weight publication.
+
 ## Bounded Sequence
 
 1. Read-only S06 diagnostics; per-fold source-only feature audit; OSU metadata inventory.

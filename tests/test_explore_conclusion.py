@@ -67,6 +67,10 @@ class ConclusionTest(unittest.TestCase):
             self.assertIn("参数少不等于推理快", text)
             self.assertIn("最终配置相同", text)
             self.assertIn("不认证全球 SOTA", text)
+            self.assertIn("85.00% / 85.00%", text)
+            self.assertIn("-3.00 / -3.00 pp", text)
+            self.assertIn("两项均值仍低于 IB-RFF 和 WaveMLP", text)
+            self.assertIn("本轮没有达成 WiSig / OSU 双 SOTA", text)
 
 
 if __name__ == "__main__":

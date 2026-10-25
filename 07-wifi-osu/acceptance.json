@@ -1,0 +1,122 @@
+{
+ "status": "PASS",
+ "timestamp": "2026-10-26T01:26:19.066507+08:00",
+ "baseline": "ebe322507d9d274265572d4f86545e93540a565d",
+ "final_freeze_committed_at": "2026-10-26T00:47:00+08:00",
+ "formal_wifi_fits": 255,
+ "wifi_access": {
+  "reads": 10266,
+  "distinct_events": 10266,
+  "duplicate_events": 0,
+  "note": "Duplicates from retained attempts are allowed; every role must remain legal."
+ },
+ "osu_formal_fits": {
+  "RX1_to_RX2_patch_hstu__s5101": {
+   "metrics_sha256": "5edfcf5a0966ae877390e5a17cced83b492f6fe0e09155d06d6cdbaf7c4b52b4",
+   "predictions_sha256": "f19ee9d43400d07dd279b6b3f9add070e3a94f6e345778da97f8747c7cbd00e5"
+  },
+  "RX1_to_RX2_patch_hstu__s5102": {
+   "metrics_sha256": "a23dc54252bd71a28a1e61234a717ac0ddb160b9d2aeba9f503b4078204abf30",
+   "predictions_sha256": "9317b3ff365ddd28848582b5131136b47c0d37b7bb2ca9d4f2071ccf3de0ec56"
+  },
+  "RX1_to_RX2_patch_hstu__s5103": {
+   "metrics_sha256": "78149448eae88548e2d6a30a3c89ed2e19f863b814b19fdf8ac0a49b2d2508a6",
+   "predictions_sha256": "82aa10ac10db733ebaa344affd9a5e82e7ce73c765cb24f0ae1b80482c8d7fc9"
+  },
+  "RX1_to_RX2_hstem_hstu__s5101": {
+   "metrics_sha256": "8ea49db2c1c6167e0ca3c2fea6072a2473556cca4b360eac6360b92072caecbb",
+   "predictions_sha256": "37aa8bf19021d8495d6396c098d905f6e2b7dbc85ecb8cf59bd01f3808efc960"
+  },
+  "RX1_to_RX2_hstem_hstu__s5102": {
+   "metrics_sha256": "9a405531417166eb276985557173a88f0f4eee34667316709b5fee0c5fc69bab",
+   "predictions_sha256": "e4dfc3a358beb228c590c6407ca6ceefbfe1cb32bdbd7c8cd0c2a17b7386db41"
+  },
+  "RX1_to_RX2_hstem_hstu__s5103": {
+   "metrics_sha256": "7449e23842313dfffae29a2cad3758cdb662e354268cf0647cdcab5a1fe8cf64",
+   "predictions_sha256": "ae1cb00c442d0c05fe1e26af6fd487acbb79f075b8661eb5ec3a08baeb2a9d44"
+  },
+  "RX1_to_RX2_hstem_cnn__s5101": {
+   "metrics_sha256": "abc45a43c40e5852930d9f5b1c0bab2996bebd0eea01b70dbe471289c33002ec",
+   "predictions_sha256": "6ceaae2029d6a5e028a8ab339ac5ce13ca0c65936d1c13d042fef826e030c7ed"
+  },
+  "RX1_to_RX2_hstem_cnn__s5102": {
+   "metrics_sha256": "79b0c5a023a7014868107d58e782e386abb4e0eca169b87ea15ea1b3b80b6ff7",
+   "predictions_sha256": "d814661dd2b4d835f4d4c48f6c940a0fa4cefdc019e37f13fcde9a95801b4e81"
+  },
+  "RX1_to_RX2_hstem_cnn__s5103": {
+   "metrics_sha256": "d5e2f12531562ef7306cdcff7146a123aff31c3ca1efc83f3a81385788d82874",
+   "predictions_sha256": "e0d7134a41cd959cd3e307e41d37d352c4b29f31cbaffa944e19f2b3087a1377"
+  },
+  "RX1_to_RX2_cis_rank16__s5101": {
+   "metrics_sha256": "6c3370d4a53722c0cd35c2146816360700d6f5eb5b2fc91f5b847dcd581a34da",
+   "predictions_sha256": "01a59eb0d3d31e727783a37e9ebf8252488877f40e6b519d0e5f410bd2ad0773"
+  },
+  "RX1_to_RX2_cis_rank16__s5102": {
+   "metrics_sha256": "39b3d975681d68318115a34db4e1fb7e80df8af27e30f7f276ade6bd67c3efb5",
+   "predictions_sha256": "c73911ca87a9e20f624f9922b1644a04addfb70b9f502ada7fd831aba795f606"
+  },
+  "RX1_to_RX2_cis_rank16__s5103": {
+   "metrics_sha256": "1114300719211c3b925e8ccf0e8857d72aa0b55644d73b2c66c4a86659011501",
+   "predictions_sha256": "8952bfc8205a586ce8ad6cba70264221d4eedb590d9ab15b67cf6d8d9ac3a9db"
+  },
+  "RX2_to_RX1_patch_hstu__s5101": {
+   "metrics_sha256": "d74007629904580c66c085b6b55965769afd1ac0f31814ba8c62ae7575e9856c",
+   "predictions_sha256": "db7fdda753e3e646dfacf04ecff8cc95da96128954fc542bd3699bf4d09eb999"
+  },
+  "RX2_to_RX1_patch_hstu__s5102": {
+   "metrics_sha256": "cd60ac2fc893a93c3031b6c7e74fbb7cb9a2ae44070c3df03d21707e1d7ad499",
+   "predictions_sha256": "ba3456af047345a45fed761f6cd2f0e0d55dcec68bfccf827f00aeff47ce69e4"
+  },
+  "RX2_to_RX1_patch_hstu__s5103": {
+   "metrics_sha256": "fc365d74df645be86a5388ced01c75680f0a80d0b416ebb4b3d4c7f8621bdc71",
+   "predictions_sha256": "65cddfce1a473a3ff45edabb7e9a31241168713bb946686d4cb4a528cf29e0c3"
+  },
+  "RX2_to_RX1_hstem_hstu__s5101": {
+   "metrics_sha256": "db7b361fe47fcf67e75a4d25bb06feecf4600134529a3f0f9a1ac43f38015e91",
+   "predictions_sha256": "191371d7cdb463ca9cf159f28f950ee6cc911e26264b3f62c0e73f217af0f4a5"
+  },
+  "RX2_to_RX1_hstem_hstu__s5102": {
+   "metrics_sha256": "bcfdb01eb37e2411b24b3a6177836a0654dd79f439ef90b5239678cc339515d2",
+   "predictions_sha256": "b965728b1c15adb97934348202e2506eba12015c9ecd1cddb5d99ff7c4cb9d18"
+  },
+  "RX2_to_RX1_hstem_hstu__s5103": {
+   "metrics_sha256": "83eb3d7ee623f412ec40bf96f1ed4dbf7b59c69056499a3c2dacd7229f0c0184",
+   "predictions_sha256": "f96e5433c1e6ea3a925df092592163f5f13dda6aa674737d1c064804a5419308"
+  },
+  "RX2_to_RX1_hstem_cnn__s5101": {
+   "metrics_sha256": "c4a9eac95c1c2f01faf21ba7a64c95b12a353c1c4b98f52f4a50746c2708aa54",
+   "predictions_sha256": "1b3dded3f06cc7d4b5ebe70cb96d3ebbdb92122214f6c98480b1e418e1f3c0a4"
+  },
+  "RX2_to_RX1_hstem_cnn__s5102": {
+   "metrics_sha256": "120020ec9e020003d061173912455bd9e83ab59a524c3562224dd30659fca162",
+   "predictions_sha256": "be2226e8040509eafa60398ef03f9f034730fc7bf0d9cddb8cb02b80bbeb9d42"
+  },
+  "RX2_to_RX1_hstem_cnn__s5103": {
+   "metrics_sha256": "b3c8a787312edc83ddbf160a0bf563d46c922d4b07358a6c2458a75ac3f35f09",
+   "predictions_sha256": "40959ed722b65a211797f69add0abb03f1506ef78e5b0b05a39d7ed9b09e4ab1"
+  },
+  "RX2_to_RX1_cis_rank16__s5101": {
+   "metrics_sha256": "3b716c02233224e36627016177cef79e8b920fb273121d63b60fba54ad753058",
+   "predictions_sha256": "d9b5d7f6e61967ab810d29d4fdd8d49de4113020fff60fbabd0f65eff62ff6a5"
+  },
+  "RX2_to_RX1_cis_rank16__s5102": {
+   "metrics_sha256": "21d93b95b8657d3feeb60c2ae2defbd7a8bf2fa9a844ebbab16b89be9b62d5ef",
+   "predictions_sha256": "b0a83c430064bc4a2d5840db22831d435a5508f522e9b896f06c767b7ff166ea"
+  },
+  "RX2_to_RX1_cis_rank16__s5103": {
+   "metrics_sha256": "2f3b60662538d3d57538568a44b5085fa127b8ec49feb9409f338f50a7d66094",
+   "predictions_sha256": "efba7a19bc392c1bdd8346e09a023585d3d058331b5218746f8bf7c073d5d5f7"
+  }
+ },
+ "files": {
+  "registration.json": "c6d0855be6ae4787151daad93c8d57653e6e5c09323f921bfa0ff32240beee35",
+  "decision_final.json": "80c219b324045b39c6fcaa7db6ac73cef90c9b7e2ffa24b8846ad452a3b9d8b4",
+  "access.jsonl": "6a516eba602f27a928209d6782550bac1f0b58742d3264eef7156e6989186683",
+  "osu_access.jsonl": "b6b51a726a7268d11957e777d3e492288b2c5866b3ec36d65102cec9775ff8b6",
+  "osu_data_manifest.json": "4b0bb375894c02c8956c59b9d57b0fafd9429fb476d103c698869331f5e269cc",
+  "osu_cache_audit.json": "4cc2552c280de34ef1c636d6e4143da07917ff096807dc1ae885ac7ad2e55252",
+  "costs.json": "07738de66a3fcd561c0990a984f053c54c8468bbfcdd7c66540c79c93439af4a",
+  "wifi_final_report_evidence.json": "03721dbb58840e3cf165900720f141a141d23a282c2debb97c8fdd3a69df8e77"
+ },
+ "note": "No new fits, target-based decisions, merge, push or weight publication."
+}
