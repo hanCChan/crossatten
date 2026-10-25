@@ -4,6 +4,8 @@ import csv
 import json
 from pathlib import Path
 
+import numpy as np
+
 
 HERE = Path(__file__).resolve().parent
 
@@ -16,6 +18,25 @@ def csv_rows(path):
 def table(rows, columns):
     return ("| " + " | ".join(columns) + " |\n|" + "---|" * len(columns) + "\n" +
             "".join("| " + " | ".join(str(r.get(k, "")) for k in columns) + " |\n" for r in rows))
+
+
+def receiver_tables(registered):
+    runs = [json.loads(p.read_text()) for p in (HERE / "runs/confirm").glob("*/metrics.json")]
+    sections = []
+    for role in ("dev_val", "confirm"):
+        keys = sorted({(r["fold"], rx) for r in runs for rx in r["selected"][role]["summary"]["per_rx_acc"]})
+        columns = ["arm"] + [f"f{fold}:{rx}" for fold, rx in keys]
+        rows = []
+        for arm in sorted(registered):
+            row = {"arm": arm}
+            for fold, rx in keys:
+                values = [100 * r["selected"][role]["summary"]["per_rx_acc"][rx]
+                          for r in runs if r["arm"] == arm and r["fold"] == fold and
+                          rx in r["selected"][role]["summary"]["per_rx_acc"]]
+                row[f"f{fold}:{rx}"] = f"{np.mean(values):.2f}" if values else ""
+            rows.append(row)
+        sections.append(f"\n### {role}\n\n" + table(rows, columns))
+    return "".join(sections)
 
 
 def main():
@@ -65,6 +86,10 @@ def main():
         table([p for p in pairs if p["role"] == "dev_val"],
               ["q", "b", "a", "n_pairs", "delta_mean", "delta_min", "delta_max",
                "pos_pairs", "worst_rx_delta", "verdict"]),
+        "\n## Per-Receiver Accuracy\n\n",
+        "Seed-mean accuracy (%) within each fold; all three confirmation seeds. "
+        "Confirm receivers repeat across folds and are report-only.\n",
+        receiver_tables(registered),
         "\n## Cost\n\n",
         f"{bench['env']['gpu']}, PyTorch {bench['env']['torch']}; random weights. "
         "Input is raw IQ already on device; preprocessing and all model execution "
