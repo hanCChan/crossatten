@@ -2,6 +2,8 @@
 """Build a complete round-1 results document from structured, already-frozen artifacts."""
 import csv
 import json
+import subprocess
+import sys
 from pathlib import Path
 
 import numpy as np
@@ -69,6 +71,7 @@ def token_scale_summary(summary):
 
 
 def main():
+    subprocess.run([sys.executable, str(HERE / "03-9-verify-results.py")], check=True)
     summary = HERE / "summary"
     arms = csv_rows(summary / "confirm_arms.csv")
     pairs = csv_rows(summary / "confirm_pairs.csv")
@@ -147,6 +150,11 @@ def main():
         "exact legacy weights/logits, equal-parameter symstack/nofft shared initialization, "
         "finite gradients, unit-RMS residual/reconstruction/periodic-zero behavior, "
         "instantaneous-frequency reference, and symbol-local token receptive field.\n\n",
+        "Saved-result checks passed for every smoke, exploration, and confirmation "
+        "fit: arm/recipe, protocol hash, seed, parameters, full epoch budget, "
+        "source-CE-minimum checkpoint, per-RX confusion denominators, macro-F1, "
+        "RX-equal summaries, finite weights, and frozen table hashes. See "
+        "[verification.json](summary/verification.json).\n\n",
         table([dict(stage=k, total=v["total"], skipped=v["skipped"], completed=v["done"],
                     failures=len(v["failed"])) for k, v in status.items()],
               ["stage", "total", "skipped", "completed", "failures"]),

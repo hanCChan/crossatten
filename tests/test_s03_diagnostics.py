@@ -21,6 +21,12 @@ scale_spec = importlib.util.spec_from_file_location(
 token_scale = importlib.util.module_from_spec(scale_spec)
 scale_spec.loader.exec_module(token_scale)
 
+verify_spec = importlib.util.spec_from_file_location(
+    "verify_results", ROOT / "03-chirp-structure/03-9-verify-results.py"
+)
+verify_results = importlib.util.module_from_spec(verify_spec)
+verify_spec.loader.exec_module(verify_results)
+
 
 def test_symbol_interventions():
     x = band_limit(rms_normalize(torch.randn(3, 2, 8192)), 62500)
@@ -78,8 +84,25 @@ def test_scale_probe_is_read_only():
         assert torch.equal(model(x), original)
 
 
+def test_saved_metric_checks_reject_corruption():
+    from xa.evaluate import summarize
+
+    confusion = np.eye(10, dtype=np.int64) * 200
+    metrics = dict(acc=1.0, macro_f1=1.0, confusion=confusion.tolist())
+    role = dict(per_rx={"synthetic": metrics}, summary=summarize({"synthetic": metrics}))
+    verify_results.verify_role(role, ["synthetic"])
+    role["per_rx"]["synthetic"]["acc"] = 0.5
+    try:
+        verify_results.verify_role(role, ["synthetic"])
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("corrupted metrics must not pass")
+
+
 if __name__ == "__main__":
     torch.set_num_threads(1)
-    for test in (test_symbol_interventions, test_restore_hooks_and_state, test_scale_probe_is_read_only):
+    for test in (test_symbol_interventions, test_restore_hooks_and_state,
+                 test_scale_probe_is_read_only, test_saved_metric_checks_reject_corruption):
         test()
         print("PASS", test.__name__, flush=True)
