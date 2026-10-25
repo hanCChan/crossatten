@@ -4,7 +4,10 @@
 
 **全部结果：[RESULTS.md](RESULTS.md)（2026-10-25）。** 阶段 03 第一轮已完成：
 分层 stem 为 **97.48±0.41% dev_val / 96.84±0.58% confirm，142,392 参数**。
-残差通道、符号堆叠均确认有害，重复结构方法贡献尚未成立。WiSig 两份数据和发布权重验证通过，阶段 04 与 WiSig 重训未启动。
+残差通道、符号堆叠均确认有害，重复结构方法贡献尚未成立。WiSig 两份数据和发布权重验证通过。
+2026-10-25 已按新授权进入[阶段06论文验证](06-paper-validation/README.md)：
+WiSig 176/176 源域选型与 Shen 100/100 源域比较均已冻结提交，公平多 seed 最终验证正在运行。
+实时结果与完整性审计见[阶段06结果](06-paper-validation/RESULTS.md)，最终结论以完整注册矩阵为准。
 
 ## 目录
 
@@ -24,6 +27,7 @@ RESULTS.md                 全部结果、参数/成本、负面证据、复现�
 02-single-factor-screen/  阶段 02：13 臂单因素探索与确认
 03-chirp-structure/       阶段 03：8 臂第一轮及确认、成本和机制诊断
 05-wisig/                 WiSig M2：数据准备、源域审计、发布权重验证
+06-paper-validation/      WiSig 公平重训、Shen 强基线、CNN 机制消融及成本验证
 logs/                      数据访问日志（data_access.jsonl）、运行日志
 ```
 
@@ -37,6 +41,7 @@ logs/                      数据访问日志（data_access.jsonl）、运行日
 | 03 | Pre-LN / 残差 / 符号堆叠 / ifreq / 分层 stem | [README](03-chirp-structure/README.md) | [RESULTS](03-chirp-structure/RESULTS.md) |
 | 04 | Shen 同协议强方法复现（未训练） | [实施规格](docs/S03_S05_IMPLEMENTATION_SPEC.md) | 尚无结果 |
 | 05/M2 | WiSig 数据与发布权重验证（未重训） | [README](05-wisig/README.md) | [RESULTS](05-wisig/RESULTS.md) |
+| 06 | WiSig 公平多 seed、Shen 强基线与结构消融 | [预登记](06-paper-validation/README.md) | [实时结果](06-paper-validation/RESULTS.md) |
 
 ## GitHub 快照与模型权重
 
@@ -60,6 +65,7 @@ sha256sum -c artifacts/checkpoints.sha256
 以及 WiSig M2 的准备/验证代码与结果。发布整理本身未重新训练、未修改冻结协议或实验判定规则，
 也未改动阶段 00–02 的历史文件。
 用户最新发布请求覆盖实施规格中旧的“不要 push”约束，但不授权自动启动阶段 04 或 WiSig 重训。
+随后用户明确授权阶段06的注册验证矩阵；该授权不扩展为新 Loss 或模型搜索，也不重新开放 Shen blind RX。
 
 ## 命名与规则
 

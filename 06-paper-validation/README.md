@@ -55,9 +55,14 @@ smoke仅用于检查代码可运行，不选配方或配置，也不作为准确
 ```bash
 env PYTHONPATH=lib python 06-paper-validation/06-4-summary.py
 env PYTHONPATH=lib python 06-paper-validation/06-4-summary.py --require-complete
+env PYTHONPATH=lib python 06-paper-validation/06-4-summary.py --require-complete --check-weights
+env PYTHONPATH=lib python 06-paper-validation/06-7-export.py --require-complete
 ```
 
 汇总会拒绝损坏/不完整记录，显示缺失fit和失败日志，将fold与seed的波动分开报告。
+最终完整审计增加 `--check-weights --require-complete`，检查保存权重的有限值与预测/混淆矩阵。
+指标来自原始 float32 logits，存档为 float16；最高分可能因量化平分。审计验证所有非平分决策、
+真实标签分母及平分兼容的混淆计数边界，不从量化存档覆盖原始指标。
 正式完成后以 `RESULTS.md` 与 `summary/report.json` 为准。FAN上游CUDA median存在非确定性警告，保留上游实现，不宣称固定seed能保证逐比特复现。
 
 18:12 调度切换中，旧会话终止了10个尚未完成的fit。其 stdout/config/history 均保留在对应 `attempt_*` 目录，使用相同注册配置从头重跑，已完成fit不重跑。
@@ -66,3 +71,11 @@ env PYTHONPATH=lib python 06-paper-validation/06-4-summary.py --require-complete
 
 18:21 启用本机CUDA MPS，后续新进程接入，既有训练不中断。18:48 增加Shen已注册任务的辅助调度；18:51 ManySig源域88/88全部完成后，GPU1协助ManyRx。均只改变调度，模型、batch、预算、seed、决策规则与注册hash不变。
 辅助队列与主队列共享run锁，不新增配置，不重复已完成fit，所有失败/中断均保留。
+
+19:48 WiSig 176/176 源域fit通过审计，`4babf3a` 在任何本阶段WiSig目标评估之前提交冻结决策。
+20:33 Shen 100/100 源域fit通过审计，`88be16b` 提交冻结决策，随后启动72个确认fit。
+其中60个基础fit、12个IB fit；IB等待相同fold/seed/输入/配方的FAN完成。
+20:35 IB辅助队列开始按已完成初始化接续；20:38 GPU0/1接入Shen确认基础和IB辅助队列。
+这些更改仅涉及调度，注册模型、batch、预算、seed和选型规则均未修改。
+`8e07036` 增强保存预测审计，合成测试与既有已完成fit均通过；不改变训练代码或历史成绩。
+`465df20` 增加只读审计汇总的CSV/图表导出与合成测试，导出文件包含来源hash，不改变选型。

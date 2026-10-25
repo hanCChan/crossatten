@@ -98,20 +98,23 @@ def accuracy_cost_plot(report, out):
             if row is None:
                 continue
             if dataset == "Shen":
-                arm_name = model
+                matches = [model]
                 label = model.removeprefix("S_") if model.startswith("S_") else arms[model]["method"]
             else:
                 matches = [r["arm"] for r in report["results"] if r["stage"] == "final"
                            and r["dataset"] == dataset and arms[r["arm"]]["method"] == model]
                 if not matches:
                     continue
-                arm_name = sorted(matches)[0]
                 label = model
-            cost = report["costs_by_arm"][arm_name]["mflops_per_packet"]
+            model_costs = [report["costs_by_arm"][name]["mflops_per_packet"] for name in matches]
+            cost = sum(model_costs) / len(model_costs)
             acc = row["metrics"]["acc_mean"]["mean"]
             px = left + width * (math.log10(cost) - xmin) / (xmax - xmin)
             py = top + height * (ymax - acc) / (ymax - ymin)
             color = colors.get(label, "#555555")
+            low = left + width * (math.log10(min(model_costs)) - xmin) / (xmax - xmin)
+            high = left + width * (math.log10(max(model_costs)) - xmin) / (xmax - xmin)
+            draw.line((low, py, high, py), fill=color, width=3)
             draw.ellipse((px - 10, py - 10, px + 10, py + 10), fill=color)
             draw.text((px - 5, py - 9), str(index), font=small, fill="white")
             legend_y = 620 + ((index - 1) // 3) * 28
