@@ -100,9 +100,16 @@ def test_saved_metric_checks_reject_corruption():
         raise AssertionError("corrupted metrics must not pass")
 
 
+def test_shuffle_donor_identity():
+    assert mechanisms.shuffle_cross_tx_fraction(np.zeros(10, dtype=np.int64), batch=4) == 0
+    assert mechanisms.shuffle_cross_tx_fraction(np.array([0, 1, 2, 3]), batch=4) == 1
+    assert mechanisms.shuffle_cross_tx_fraction(np.array([0, 0, 1, 1]), batch=4) == 0.5
+
+
 if __name__ == "__main__":
     torch.set_num_threads(1)
     for test in (test_symbol_interventions, test_restore_hooks_and_state,
-                 test_scale_probe_is_read_only, test_saved_metric_checks_reject_corruption):
+                 test_scale_probe_is_read_only, test_saved_metric_checks_reject_corruption,
+                 test_shuffle_donor_identity):
         test()
         print("PASS", test.__name__, flush=True)
