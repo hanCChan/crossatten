@@ -1,0 +1,100 @@
+{
+ "gpu": "NVIDIA A100-SXM4-40GB",
+ "torch": "2.5.0+cu124",
+ "cpu_threads": 4,
+ "quiescence_snapshots": [
+  {
+   "processes": [
+    "[Not Found], 30",
+    "[Not Found], 30",
+    "[Not Found], 30",
+    "[Not Found], 30"
+   ],
+   "utilization": [
+    "0",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "processes": [
+    "[Not Found], 30",
+    "[Not Found], 30",
+    "[Not Found], 30",
+    "[Not Found], 30"
+   ],
+   "utilization": [
+    "0",
+    "0",
+    "0",
+    "0"
+   ]
+  }
+ ],
+ "rows": [
+  {
+   "dataset": "ManySig",
+   "feature": "frequency",
+   "params": 90420,
+   "mflops": 10.568448,
+   "cpu4t_b1_ms": 1.7854683101177216,
+   "gpu_b1_p50_ms": 3.5211520195007324,
+   "gpu_b1_p95_ms": 5.602102184295655,
+   "gpu_b256_packets_per_second": 82555.92982903968
+  },
+  {
+   "dataset": "ManySig",
+   "feature": "phase",
+   "params": 90868,
+   "mflops": 10.797824,
+   "cpu4t_b1_ms": 1.720372587442398,
+   "gpu_b1_p50_ms": 3.4412319660186768,
+   "gpu_b1_p95_ms": 5.776232051849364,
+   "gpu_b256_packets_per_second": 63112.635060598
+  },
+  {
+   "dataset": "ManySig",
+   "feature": "phase_null",
+   "params": 90868,
+   "mflops": 10.797824,
+   "cpu4t_b1_ms": 2.019070088863373,
+   "gpu_b1_p50_ms": 3.9986079931259155,
+   "gpu_b1_p95_ms": 5.748699402809143,
+   "gpu_b256_packets_per_second": 56360.05708326519
+  },
+  {
+   "dataset": "ManyRx",
+   "feature": "frequency",
+   "params": 90680,
+   "mflops": 10.56896,
+   "cpu4t_b1_ms": 1.5718713402748108,
+   "gpu_b1_p50_ms": 3.125808000564575,
+   "gpu_b1_p95_ms": 3.8222352504730224,
+   "gpu_b256_packets_per_second": 82166.31652772259
+  },
+  {
+   "dataset": "ManyRx",
+   "feature": "phase",
+   "params": 91128,
+   "mflops": 10.798336,
+   "cpu4t_b1_ms": 2.0736195147037506,
+   "gpu_b1_p50_ms": 3.9115679264068604,
+   "gpu_b1_p95_ms": 5.481531047821044,
+   "gpu_b256_packets_per_second": 54207.888063784
+  },
+  {
+   "dataset": "ManyRx",
+   "feature": "phase_null",
+   "params": 91128,
+   "mflops": 10.798336,
+   "cpu4t_b1_ms": 1.990199089050293,
+   "gpu_b1_p50_ms": 3.3614240884780884,
+   "gpu_b1_p95_ms": 4.55566554069519,
+   "gpu_b256_packets_per_second": 72081.48643327146
+  }
+ ],
+ "registration_sha256": "739eafcc22ce1cbc89b4631b2fff5f162ed66b8ce797abe0d5685152e9e99e41",
+ "decision_sha256": "cea438591865a8adba7b4ba2bce4253275e1fcbe5683cd23f714158d6db8702d",
+ "note": "Random weights, synthetic resident IQ to logits; excludes transfer and detection. FFT/scalar work included in timing but not completely counted in FLOPs. EMA and source checkpoint rules do not change inference graphs."
+}

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-26T02:05:20+08:00",
+ "generated_at": "2026-10-26T02:14:58+08:00",
  "source": {
   "screen": {
    "registered": 48,
@@ -16,9 +16,125 @@
  },
  "final": {
   "registered": 24,
-  "completed": 0
+  "completed": 24,
+  "admitted": {
+   "ManySig": true,
+   "ManyRx": false
+  },
+  "summary": [
+   {
+    "dataset": "ManySig",
+    "variant": "candidate",
+    "task": "CR",
+    "rx_accuracy_pct": 94.13425925925928,
+    "packet_accuracy_pct": 94.13425925925925,
+    "rx_macro_f1_pct": 94.00304781776224,
+    "worst_rx_pct": 87.77777777777779,
+    "seed_sd_pp": 1.2722618969230046,
+    "fold_sd_pp": 0.7205782174999673,
+    "params": "90868"
+   },
+   {
+    "dataset": "ManySig",
+    "variant": "candidate",
+    "task": "CRD",
+    "rx_accuracy_pct": 93.01157407407406,
+    "packet_accuracy_pct": 93.01157407407406,
+    "rx_macro_f1_pct": 92.79701835745362,
+    "worst_rx_pct": 84.66666666666667,
+    "seed_sd_pp": 1.3162302468630702,
+    "fold_sd_pp": 1.0799746129465588,
+    "params": "90868"
+   },
+   {
+    "dataset": "ManySig",
+    "variant": "control",
+    "task": "CR",
+    "rx_accuracy_pct": 88.87268518518518,
+    "packet_accuracy_pct": 88.87268518518518,
+    "rx_macro_f1_pct": 88.33969042511094,
+    "worst_rx_pct": 77.1388888888889,
+    "seed_sd_pp": 1.8680598581803622,
+    "fold_sd_pp": 5.441353866863953,
+    "params": "90420"
+   },
+   {
+    "dataset": "ManySig",
+    "variant": "control",
+    "task": "CRD",
+    "rx_accuracy_pct": 87.5625,
+    "packet_accuracy_pct": 87.5625,
+    "rx_macro_f1_pct": 86.67226581877428,
+    "worst_rx_pct": 70.5,
+    "seed_sd_pp": 1.944481646469519,
+    "fold_sd_pp": 5.714507839822657,
+    "params": "90420"
+   }
+  ],
+  "intervals": [
+   {
+    "dataset": "ManySig",
+    "baseline": "S08-paired-control",
+    "delta_pp": 5.449074074074075,
+    "ci95_low_pp": 2.085590277777777,
+    "ci95_high_pp": 8.805555555555555,
+    "improved_receivers": 11,
+    "receivers": 12,
+    "seeds_paired": true
+   },
+   {
+    "dataset": "ManySig",
+    "baseline": "IB-RFF",
+    "delta_pp": 1.918981481481481,
+    "ci95_low_pp": -1.326446759259262,
+    "ci95_high_pp": 5.039351851851851,
+    "improved_receivers": 8,
+    "receivers": 12,
+    "seeds_paired": false
+   },
+   {
+    "dataset": "ManySig",
+    "baseline": "WaveMLP",
+    "delta_pp": 1.9745370370370356,
+    "ci95_low_pp": -0.185243055555556,
+    "ci95_high_pp": 4.034780092592595,
+    "improved_receivers": 8,
+    "receivers": 12,
+    "seeds_paired": false
+   },
+   {
+    "dataset": "ManySig",
+    "baseline": "FAN_source_selected",
+    "delta_pp": 4.740740740740738,
+    "ci95_low_pp": 0.4928819444444356,
+    "ci95_high_pp": 8.844965277777769,
+    "improved_receivers": 9,
+    "receivers": 12,
+    "seeds_paired": false
+   },
+   {
+    "dataset": "ManySig",
+    "baseline": "W1",
+    "delta_pp": 20.68287037037037,
+    "ci95_low_pp": 14.191724537037034,
+    "ci95_high_pp": 27.319849537037033,
+    "improved_receivers": 12,
+    "receivers": 12,
+    "seeds_paired": false
+   },
+   {
+    "dataset": "ManySig",
+    "baseline": "S07-source-training",
+    "delta_pp": 6.395833333333336,
+    "ci95_low_pp": 2.324074074074076,
+    "ci95_high_pp": 11.736111111111114,
+    "improved_receivers": 10,
+    "receivers": 12,
+    "seeds_paired": false
+   }
+  ]
  },
- "formal_completed": 112,
- "stopped": false,
+ "formal_completed": 136,
+ "stopped": true,
  "no_extra_target_search": true
 }

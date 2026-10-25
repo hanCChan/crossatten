@@ -4,6 +4,32 @@ Authorized 2026-10-26. Frozen baseline `74f594312949f18613030d59743dba88fc20eca7
 branch `exp/s08-wisig-training`. S00-S07, shared library code, old weights and
 predictions remain unchanged. No automatic push, merge or weight publication.
 
+## Completed Outcome
+
+All admitted jobs completed: 136 formal fits (48 training controls, 32 phase/null
+fits, 32 ManyRx source fits and 24 ManySig final fits), plus five smoke fits.
+All sixteen extended-budget controls ran the full200 epochs.
+
+ManySig source-selected phase/epoch/EMA achieved **CR94.13%, CRD93.01%**,
+Macro-F1 92.80%, worst RX84.67%, with90,868 parameters. Relative to the new
+paired frequency-only official control: **+5.45pp CRD**, improving11/12 RX.
+It is +6.40pp above S07 and +1.92/+1.97pp above the frozen fair IB-RFF/WaveMLP
+means. The external-baseline RX intervals cross zero; released-weight references
+remain higher (93.57%/93.13%). No stable-SOTA claim.
+
+ManyRx supported only2/4 source folds, below the registered3/4 gate. No new
+ManyRx target evaluation was run. Do not combine its historical S07 score with
+the new ManySig score as if both belonged to a confirmed S08 method.
+AWGN/full200 did not yield a general source improvement. Final ManySig folds
+selected phase features and source-frozen epochs, without AWGN; folds0/2 use
+EMA, folds1/3 raw weights. The joint gain is not isolated component causality.
+
+Read [Chinese results](RESULTS.md), [source results](S08_SOURCE_RESULTS.md),
+[formal comparison](S08_WIFI_FINAL_RESULTS.md), [execution](S08_EXECUTION.md)
+and [costs](S08_COSTS.md). [Acceptance](acceptance.json) verifies all completed
+artifacts, source roles, committed final freeze and historical preservation.
+The registered exploration is complete and stopped.
+
 ## Registered Sequence
 
 1. CPU-only audit of S07 source histories, held-source predictions, spectral

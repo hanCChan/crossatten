@@ -1,0 +1,43 @@
+{
+ "decision_sha256": "cea438591865a8adba7b4ba2bce4253275e1fcbe5683cd23f714158d6db8702d",
+ "files": {
+  "final_metrics.csv": "cd6921c7b9c7ce03948811e94e326a6be019459c7ed1bd0a6dbe73d637d0d2fe",
+  "final_receiver_metrics.csv": "c637fcfb4a59070e52e6275953d8121f022c89f24fde4522c21101e776c53575",
+  "final_run_metrics.csv": "d40a6b85e5edf104acd97ba390a7cf7ba6f2a74b3ad89b1df5954ed8ef62b7f2",
+  "final_fold_metrics.csv": "316699fe83fe9324fcece1f1a59f34f27a1ca1e58711ef92bbd443c5d8e39c75",
+  "final_seed_metrics.csv": "ecad24f72970aa921c8e149db91c9970b7aa9dc2088b5c9cfadf9e143ac850cc",
+  "paired_seed_deltas.csv": "d19e5672a03064d5b44e8ff21d5105f9fb2b7a9becb74fe60c2485dad400f57d",
+  "comparison_intervals.csv": "f7632fb834b3ad031c5b69215ae5cb1c7b9d796e6aa1f0358215ffc966e0c690",
+  "S08_WIFI_FINAL_RESULTS.md": "19fecc44f1638282550bef3208f7b7170554291cd255769350cae9011b80d5bb"
+ },
+ "baseline_sha256": {
+  "06-paper-validation/summary/paper/receiver_metrics.csv": "6e6777a80dac448285392980092717f1e75abdf26dee81897ccf55affbfe85c8",
+  "07-wifi-osu/wifi_final_receiver_metrics.csv": "941538e4bf9f8d839d0c1489b06cc52c2faf15d077b970a1c840f1ba205a4f50"
+ },
+ "fits": {
+  "ManySig_candidate_phase__f0__all__s7101": "64b40627014839b5547056c66c68dba95939b2e0e2b0040bef646c879a5c3ba6",
+  "ManySig_control_frequency__f0__all__s7101": "c7fc20f3e27d67a19a3495fec31bd6ebb791d991af963124f0c3eb7b22bec2f8",
+  "ManySig_candidate_phase__f0__all__s7102": "5dd8694fde71aecd406a8087653475686a1fe3a8b5059553fb8a455e32cc3c33",
+  "ManySig_control_frequency__f0__all__s7102": "0ab6e79b7d32774e22bf1f7a744af9846101b12faac49f48f0752d2f96dd13ef",
+  "ManySig_candidate_phase__f0__all__s7103": "473aced3a1cb7562c113fa1cc3fd54194f2310b1776f320c2203acfecd49166f",
+  "ManySig_control_frequency__f0__all__s7103": "eec604fe439d5610d4d306e72ba0ed7712a692ed82c126c5a9a464f253a98912",
+  "ManySig_candidate_phase__f1__all__s7101": "5314b65a2c81e2241c57a237796f3bfb222f0061d4788fbdb88d502b6f2b9a33",
+  "ManySig_control_frequency__f1__all__s7101": "1460105b1be552055a3ffca88861d56604b672a742b201a1153fc0a91fbe69d8",
+  "ManySig_candidate_phase__f1__all__s7102": "6f45da4e661ac866724273e382237d895fe2e1102bb647cf946b9b485b99cb7c",
+  "ManySig_control_frequency__f1__all__s7102": "cc5bcb2958003025f184d919a00f951400269dc262385a8b34fe148cbae9e520",
+  "ManySig_candidate_phase__f1__all__s7103": "8ef6c501e1d8f3d0d28d06402388e6778d6256dd1180d87ee398a8c5ac6cf9cd",
+  "ManySig_control_frequency__f1__all__s7103": "f78bf212a9ba6be043aeb3ac2c3f8ba1cfaa7928733cee9bfee2ca764ebbc134",
+  "ManySig_candidate_phase__f2__all__s7101": "668adaa51ea7a31a1034052bb2931897cb337164da71b3422096c3f02fbf6b95",
+  "ManySig_control_frequency__f2__all__s7101": "af7a1eba1222a91e952be10cc49007bebfd20f2be327805366efa74b490c425f",
+  "ManySig_candidate_phase__f2__all__s7102": "f69ec21b946631d6aaedb0cf3f3384fc64e51ccb7a95e53ad55a5771aabfc855",
+  "ManySig_control_frequency__f2__all__s7102": "77469b17aa3f79dbe6fbb73fbd8ece0120a69d0d0ae9d2a89c15c119d0660c03",
+  "ManySig_candidate_phase__f2__all__s7103": "ee3f6ddd2790add840417180af4631f9524e00d2869218e5c0a85eead192b077",
+  "ManySig_control_frequency__f2__all__s7103": "0780e71b34e88f0dca8873f6ce74001ed40d015aca00511c33d2cd54fb554c96",
+  "ManySig_candidate_phase__f3__all__s7101": "ae9440ad52e7f20aa6c99ced5723c000387db60d9fa633a9c9d674330da91001",
+  "ManySig_control_frequency__f3__all__s7101": "72c14aa21b3b150e7b7c63e7388203b3a76979cd4242ab033924c7cff7123294",
+  "ManySig_candidate_phase__f3__all__s7102": "9d66a19dd9714b717de5a3a0888490285e4ba603160b68a0bc33b349d6b7c42a",
+  "ManySig_control_frequency__f3__all__s7102": "3d188921d7086a67d46b50909a1d277662af3866fcc8111f3c426864d2f6dfc9",
+  "ManySig_candidate_phase__f3__all__s7103": "fa3a858847d2855f1c58bb2ed208a607d67bd1c1b8d436a8fbfb5f450dc2fafd",
+  "ManySig_control_frequency__f3__all__s7103": "317ae9c585ef6feb38d18a8bda24e22caee518dbcc274b3c4d17c883d9f7562e"
+ }
+}

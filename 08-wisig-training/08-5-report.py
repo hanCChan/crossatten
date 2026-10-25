@@ -151,6 +151,30 @@ def final_report():
     s07_path = ROOT / "07-wifi-osu/wifi_final_receiver_metrics.csv"
     with s07_path.open() as stream:
         s07 = list(csv.DictReader(stream))
+    fold_rows, seed_rows, paired_seed_rows = [], [], []
+    for dataset in sorted({j["dataset"] for j in jobs}):
+        for variant in ("candidate", "control"):
+            for task in ("CR", "CRD"):
+                for fold in range(4):
+                    cells = [r for r in receivers if (r["dataset"], r["variant"], r["task"], r["fold"]) ==
+                             (dataset, variant, task, fold)]
+                    fold_rows.append(dict(dataset=dataset, variant=variant, task=task, fold=fold,
+                                          rx_accuracy_pct=float(np.mean([r["accuracy_pct"] for r in cells])),
+                                          rx_macro_f1_pct=float(np.mean([r["macro_f1_pct"] for r in cells]))))
+                for seed in (7101, 7102, 7103):
+                    cells = [r for r in receivers if (r["dataset"], r["variant"], r["task"], r["seed"]) ==
+                             (dataset, variant, task, seed)]
+                    seed_rows.append(dict(dataset=dataset, variant=variant, task=task, seed=seed,
+                                          rx_accuracy_pct=float(np.mean([r["accuracy_pct"] for r in cells]))))
+        for seed in (7101, 7102, 7103):
+            values = {r["variant"]: r["rx_accuracy_pct"] for r in seed_rows
+                      if r["dataset"] == dataset and r["task"] == "CRD" and r["seed"] == seed}
+            paired_seed_rows.append(dict(dataset=dataset, seed=seed, candidate_pct=values["candidate"],
+                                         control_pct=values["control"],
+                                         delta_pp=values["candidate"] - values["control"]))
+    save_csv("final_fold_metrics.csv", fold_rows)
+    save_csv("final_seed_metrics.csv", seed_rows)
+    save_csv("paired_seed_deltas.csv", paired_seed_rows)
     intervals = []
     rng = np.random.default_rng(8101)
     for dataset in sorted({j["dataset"] for j in jobs}):
@@ -200,16 +224,77 @@ def final_report():
     lines.append("\nRX-cluster bootstrap conditions on seed-averaged trained models; "
                  "it does not capture full seed/dataset uncertainty and is not multiplicity corrected. "
                  "S06/S07 seeds are unpaired; only new S08 control seeds are paired. "
-                 "Noise/EMA/stopping changes are training and selection effects, not new architecture. "
                  "No target-ranked pipeline or global-SOTA claim.\n")
+    lines.extend(["\n## Frozen Source Decisions\n\n",
+                  "| Dataset | Fold | Feature | Recipe | Checkpoint rule | Exact refit epochs |\n",
+                  "|---|---:|---|---|---|---:|\n"])
+    for job in jobs:
+        if job["variant"] == "candidate" and job["seed"] == 7101:
+            lines.append(f"| {job['dataset']} | {job['fold']} | {job['feature']} | "
+                         f"{job['condition']} | {job['rule']} | {job.get('fixed_epochs', 'packet early-stop')} |\n")
+    lines.append("\nOne pre-registered fold-local selection algorithm, not four target-selected models. "
+                 "The upper median of two held-source groups x two seeds determined exact refit "
+                 "epochs before final fitting. Final fits use all legal source RX with the same "
+                 "70/30 packet budget. The same held RX are not independent final validation. "
+                 "The candidate uses no AWGN on any final fold. Rules retain raw weights on "
+                 "folds1/3 and use EMA on folds0/2; this is disclosed source selection.\n")
+    lines.extend(["\n## CRD By Fold\n\n",
+                  "| Dataset | Fold | S08 candidate % | S08 control % | S07 % | IB-RFF % | WaveMLP % |\n",
+                  "|---|---:|---:|---:|---:|---:|---:|\n"])
+    for dataset in sorted({j["dataset"] for j in jobs}):
+        for fold in range(4):
+            values = {r["variant"]: r["rx_accuracy_pct"] for r in fold_rows
+                      if r["dataset"] == dataset and r["task"] == "CRD" and r["fold"] == fold}
+            ref = {name: np.mean([float(r["seed_mean_accuracy_pct"]) for r in frozen
+                                if r["dataset"] == dataset and r["task"] == "CRD" and
+                                r["model"] == name and int(r["fold"]) == fold])
+                   for name in ("IB-RFF", "WaveMLP")}
+            old_score = np.mean([float(r["accuracy_pct"]) for r in s07
+                                 if r["dataset"] == dataset and r["task"] == "CRD" and
+                                 r["pipeline"] == "source_training" and int(r["fold"]) == fold])
+            lines.append(f"| {dataset} | {fold} | {values['candidate']:.2f} | {values['control']:.2f} | "
+                         f"{old_score:.2f} | {ref['IB-RFF']:.2f} | {ref['WaveMLP']:.2f} |\n")
+    lines.extend(["\n## Paired CRD Seeds\n\n",
+                  "| Dataset | Seed | Candidate % | Control % | Delta pp |\n",
+                  "|---|---:|---:|---:|---:|\n"])
+    for row in paired_seed_rows:
+        lines.append(f"| {row['dataset']} | {row['seed']} | {row['candidate_pct']:.2f} | "
+                     f"{row['control_pct']:.2f} | {row['delta_pp']:+.2f} |\n")
+    lines.append("\nPairing means the same new data split, seed identifiers and training shuffle. "
+                 "The phase architecture has extra input weights and a different initialization "
+                 "graph; pairing does not imply identical shared initial parameters.\n")
+    lines.extend(["\n## Released-Weight Reference\n\n",
+                  "Frozen S05 packet-weighted official-weight results, separate from fair multi-seed "
+                  "retraining: IB-RFF ManyRx/ManySig89.19/93.57%, WaveMLP88.68/93.13%. "
+                  "S08 ManySig packet and RX weighting coincide. Its93.01% is below both released "
+                  "ManySig reference means; this is not global-SOTA evidence.\n\n",
+                  "## Attribution And Limits\n\n",
+                  "ManySig phase input adds448 weights to90420 (90868 total), keeping32x64 tokens "
+                  "and two HSTU blocks. New features are reliability-masked adjacent complex-spectrum "
+                  "products, not receiver-invariant fingerprints. Source phase/null fits suggest "
+                  "information beyond extra input capacity, but there is no new formal target "
+                  "phase-only, null, or fixed-budget three-channel ablation. The final gain is "
+                  "joint evidence for representation plus source-selected epoch/EMA policy; "
+                  "it cannot be assigned independently to one component. The local phase gate "
+                  "requires at least0.5pp gain over its matched null rule in addition to the control gate.\n\n",
+                  "Held-RX source CE minima are used for both checkpoint selection and research ranking "
+                  "on those same groups. The source gains therefore include selection optimism, "
+                  "not independent source confirmation. Fresh-seed final target results remain a "
+                  "retest of an already examined public benchmark.\n\n",
+                  "Full200 AWGN training ran to completion but selected early checkpoints for most "
+                  "rules. It did not support a general 'more epochs is better' conclusion. "
+                  "ManyRx supported only2/4 source folds and was not admitted to new final evaluation. "
+                  "No target-based retry or unregistered model/loss was added after final scores.\n"])
     (HERE / "S08_WIFI_FINAL_RESULTS.md").write_text("".join(lines))
     report_files = ["final_metrics.csv", "final_receiver_metrics.csv", "final_run_metrics.csv",
+                    "final_fold_metrics.csv", "final_seed_metrics.csv", "paired_seed_deltas.csv",
                     "comparison_intervals.csv", "S08_WIFI_FINAL_RESULTS.md"]
     evidence = dict(decision_sha256=sha(decision_path), files={n: sha(HERE / n) for n in report_files},
                     baseline_sha256={str(p.relative_to(ROOT)): sha(p) for p in (frozen_path, s07_path)},
                     fits={j["id"]: sha(HERE / "runs/final" / j["id"] / "metrics.json") for j in jobs})
     (HERE / "final_report_evidence.json").write_text(json.dumps(evidence, indent=1) + "\n")
-    return dict(registered=len(jobs), completed=len(jobs), admitted=decision["admitted"], summary=summary)
+    return dict(registered=len(jobs), completed=len(jobs), admitted=decision["admitted"],
+                summary=summary, intervals=intervals)
 
 
 def main():
@@ -236,8 +321,25 @@ def main():
                 lines.append(f"| {row['dataset']} | {row['variant']} | {row['rx_accuracy_pct']:.2f}% | "
                              f"{row['rx_macro_f1_pct']:.2f}% | {row['seed_sd_pp']:.2f} | "
                              f"{row['worst_rx_pct']:.2f}% |\n")
-        lines.append("\n正式测试已完成并停止，不按目标成绩追加Loss、特征或模型搜索。"
-                     "与强基线的完整差值及接收机级区间见英文正式报告。\n\n")
+        lines.extend(["\n## 对照结论\n\n",
+                      "| 数据集 | 对照 | CRD差值 pp | 接收机聚类95%区间 pp | 改善RX |\n",
+                      "|---|---|---:|---|---:|\n"])
+        for row in final["intervals"]:
+            if row["baseline"] not in ("S08-paired-control", "S07-source-training", "IB-RFF", "WaveMLP"):
+                continue
+            lines.append(f"| {row['dataset']} | {row['baseline']} | {row['delta_pp']:+.2f} | "
+                         f"[{row['ci95_low_pp']:+.2f}, {row['ci95_high_pp']:+.2f}] | "
+                         f"{row['improved_receivers']}/{row['receivers']} |\n")
+        lines.append("\n**ManySig 的公平重训均值超过两个强基线，但接收机级区间跨0，"
+                     "尚不能宣称稳定领先或SOTA。** 官方发布权重的ManySig参考为"
+                     "IB-RFF93.57%、WaveMLP93.13%，本轮93.01%仍低于这两项历史参考。\n\n"
+                     "**ManyRx只通过2/4源域折，未开展新的正式CRD评测。** "
+                     "S07的87.65%继续作为历史结果，不能把它与S08拼成新方法的完整双数据集成绩。\n\n"
+                     "本轮首先充分验证训练策略，包括16次完整200 epoch对照；"
+                     "温和AWGN原checkpoint不如Official，延长训练没有普遍收益。"
+                     "条件触发的频谱相邻相位特征与源域选预算/EMA联合策略取得了ManySig提升。"
+                     "最终各折无AWGN，特征与轮数由源域冻结；总收益尚不能拆分归因。\n\n"
+                     "正式测试已完成并停止，不按目标成绩追加Loss、特征或模型搜索。\n\n")
     else:
         lines.append("**仍在执行注册实验，暂无完整正式CRD结论。**\n\n")
     lines.append("## 证据\n\n"
@@ -247,6 +349,8 @@ def main():
                  "- `S08_WIFI_FINAL_RESULTS.md`、`final_*metrics.csv`：仅在完整确认后生成。\n"
                  "- `runs/`：配置、曲线、预测与失败记录；新权重仅本地保存。\n"
                  "- `S08_COSTS.md`：停止训练后实测成本；参数量不等于速度。\n\n"
+                 "- `S08_EXECUTION.md`：运行数、环境及耗时口径。\n"
+                 "- `acceptance.json`：配置、权重哈希、预测、数据角色与历史保留验收。\n\n"
                  "不自动合并、推送或发布权重；旧测试RX已被查看，本轮不是全新盲测。\n")
     (HERE / "RESULTS.md").write_text("".join(lines))
     print(json.dumps(dict(formal_completed=completed, stopped=stopped, final_complete=bool(

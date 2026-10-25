@@ -1,0 +1,28 @@
+{
+ "status": "PASS",
+ "timestamp": "2026-10-26T02:16:28.424860+08:00",
+ "baseline": "74f594312949f18613030d59743dba88fc20eca7",
+ "phases": [
+  "smoke",
+  "screen",
+  "phase",
+  "manyrx",
+  "final"
+ ],
+ "formal_fits": 136,
+ "smoke_fits": 5,
+ "final_freeze_committed_at": "2026-10-26T02:06:13+08:00",
+ "access": {
+  "distinct_events": 3786,
+  "repeated_events": 0
+ },
+ "historical_files": "unchanged",
+ "weights": "untracked",
+ "files": {
+  "registration.json": "739eafcc22ce1cbc89b4631b2fff5f162ed66b8ce797abe0d5685152e9e99e41",
+  "decision_final.json": "cea438591865a8adba7b4ba2bce4253275e1fcbe5683cd23f714158d6db8702d",
+  "access.jsonl": "296744537df1ee81edad4c02edd85d6be7b14f2b6296c9698bd7d205f8c2ce79",
+  "costs.json": "12820b3f39032bc17df0a6cf09db2cba86a6597db030d02694675c7988c12b8e"
+ },
+ "note": "No new target-driven search, automatic merge, push or weight publication."
+}
