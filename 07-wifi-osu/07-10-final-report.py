@@ -83,7 +83,8 @@ def main():
     if hashlib.sha256(old).hexdigest() != sha(baseline_path):
         raise ValueError("historical baseline comparison changed since S07 registration")
     require_committed(baseline_path)
-    frozen = list(csv.DictReader(baseline_path.open()))
+    with baseline_path.open() as stream:
+        frozen = list(csv.DictReader(stream))
     intervals = []
     rng = np.random.default_rng(7101)
     for row in summary:
@@ -139,6 +140,13 @@ def main():
         lines.append(f"| {r['dataset']} | {r['pipeline']} | {r['baseline']} | {r['delta_pp']:+.2f} | "
                      f"[{r['ci95_low_pp']:+.2f}, {r['ci95_high_pp']:+.2f}] | "
                      f"{r['improved_receivers']}/{r['receiver_count']} |\n")
+    lines.extend(["\n## Historical Released-Weight References\n\n",
+                  "Separate unchanged published-weight verification from S05, not fair S07 multi-seed fits. ",
+                  "These CRD aggregates use official packet weighting; do not equate them with RX-equal scores.\n\n",
+                  "| Method | ManyRx CRD % | ManySig CRD % |\n",
+                  "|---|---:|---:|\n",
+                  "| IB-RFF | 89.19 | 93.57 |\n",
+                  "| WaveMLP | 88.68 | 93.13 |\n"])
     lines.extend(["\n## Frozen Per-Fold Configurations\n\n",
                   "| Dataset | Fold | Pipeline | Frontend | Recipe | Augmentation | Balanced | Noise | Checkpoint | Epoch budget |\n",
                   "|---|---:|---|---|---|---|---|---|---|---:|\n"])

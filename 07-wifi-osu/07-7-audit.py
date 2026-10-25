@@ -65,6 +65,10 @@ def audit_wifi(phase):
             raise ValueError("registration mismatch")
         if result["code_sha256"] != config["code_sha256"]:
             raise ValueError("config/result code mismatch")
+        manifest_path = HERE.parent / f"05-wisig/out/05-1-{job['dataset']}-manifest.json"
+        if config["dataset_manifest_sha256"] != sha(manifest_path):
+            raise ValueError("dataset manifest changed")
+        manifest = json.loads(manifest_path.read_text())
         source, target = receivers(job["dataset"], job["fold"])
         held_count = 6 if job["dataset"] == "ManyRx" else 2
         held = [] if phase == "final" else source[-held_count:]
@@ -102,6 +106,12 @@ def audit_wifi(phase):
                     logits, y = archive[rx], archive[f"y_{rx}"]
                     if logits.dtype != np.float32 or not np.isfinite(logits).all():
                         raise ValueError("invalid float32 logits")
+                    classes = 10 if job["dataset"] == "ManyRx" else 6
+                    days = (3, 4) if label == "CRD" else (1, 2)
+                    expected_counts = np.sum([manifest["counts"][rx][str(day)] for day in days], axis=0)
+                    if logits.shape != (int(expected_counts.sum()), classes) or \
+                            not np.array_equal(np.bincount(y, minlength=classes), expected_counts):
+                        raise ValueError("prediction TX/day counts differ from frozen dataset")
                     actual = metrics(logits, y, logits.shape[1])
                     same_metrics(actual, value)
                     per_rx[rx] = actual

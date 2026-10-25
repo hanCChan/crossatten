@@ -16,7 +16,7 @@ from torch.utils.flop_counter import FlopCounterMode
 from xa.bench import cpu_lat, gpu_lat
 from xa.explore_models import build_explore_model
 from xa.models import ShenCISPipeline, n_params
-from xa.paper_models import ValidationRF
+from xa.paper_models import ValidationRF, build_paper_model
 
 
 def candidates():
@@ -36,6 +36,11 @@ def candidates():
             _, _, frontend, fusion = name.split(":")
             models.append((name, 256, build_explore_model(dict(
                 frontend=frontend, num_classes=classes, fusion=fusion))))
+        registered = json.loads((HERE.parent / "06-paper-validation/arms.json").read_text())["arms"]
+        for method in ("FAN", "WaveMLP_default", "WaveMLP_alternate"):
+            arm = next(a for a in registered if a["name"] == f"{method}_{dataset}_official")
+            label = "FAN_IB-RFF" if method == "FAN" else method
+            models.append((f"WiSig:{dataset}:{label}", 256, build_paper_model(arm)))
     models.extend((f"OSU:{method}", 8192, ValidationRF(dict(
         length=8192, stem="patch" if method == "patch_hstu" else "hierarchical",
         mixer=method != "hstem_cnn", num_classes=25, input_fmax=62500)))
@@ -99,6 +104,7 @@ def main():
     lines.extend("| " + " | ".join(str(row[k]) for k in columns) + " |\n" for row in rows)
     lines.append("\nClass counts and final fusion configurations are included. "
                  "Training recipe differences do not change inference graphs. "
+                 "FAN and IB-RFF share an inference graph; IB regularization is training-only. "
                  "Parameter count alone does not imply latency or throughput.\n")
     (HERE / "S07_COSTS.md").write_text("".join(lines))
 
