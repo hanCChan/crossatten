@@ -1,0 +1,164 @@
+{
+ "job": {
+  "dataset": "ManySig",
+  "fold": 2,
+  "frontend": "frequency",
+  "recipe": "official",
+  "phase": "training_replicate",
+  "seed": 3102,
+  "factor": "official",
+  "id": "ManySig_official__f2__s3102"
+ },
+ "params": 90420,
+ "stop_epoch": 27,
+ "selected_epoch": 17,
+ "best_packet_epoch": 17,
+ "source_val_ce": 0.05834673345088959,
+ "source_val_acc": 0.9884920716285706,
+ "held_best_epoch": 0,
+ "seconds": 24.46,
+ "selected_source_ce": 0.05834673345088959,
+ "selected_source_acc": 0.9884920716285706,
+ "selected": {
+  "held_source": {
+   "summary": {
+    "acc_mean": 0.8583333333333334,
+    "f1_mean": 0.85470020869441,
+    "worst_rx": "20-1",
+    "worst_acc": 0.7541666666666667,
+    "per_rx_acc": {
+     "19-2": 0.9625,
+     "20-1": 0.7541666666666667
+    },
+    "per_rx_f1": {
+     "19-2": 0.9623496103139001,
+     "20-1": 0.7470508070749199
+    },
+    "packet_acc": 0.8583333333333333,
+    "ce_mean": 0.732740230858326
+   },
+   "per_rx": {
+    "19-2": {
+     "acc": 0.9625,
+     "macro_f1": 0.9623496103139001,
+     "ce": 0.2481229454278946,
+     "correct": 1155,
+     "total": 1200,
+     "confusion": [
+      [
+       195,
+       1,
+       1,
+       2,
+       1,
+       0
+      ],
+      [
+       1,
+       197,
+       0,
+       1,
+       1,
+       0
+      ],
+      [
+       4,
+       2,
+       184,
+       4,
+       3,
+       3
+      ],
+      [
+       0,
+       1,
+       1,
+       195,
+       1,
+       2
+      ],
+      [
+       0,
+       1,
+       0,
+       1,
+       197,
+       1
+      ],
+      [
+       0,
+       2,
+       8,
+       1,
+       2,
+       187
+      ]
+     ]
+    },
+    "20-1": {
+     "acc": 0.7541666666666667,
+     "macro_f1": 0.7470508070749199,
+     "ce": 1.2173575162887573,
+     "correct": 905,
+     "total": 1200,
+     "confusion": [
+      [
+       190,
+       1,
+       2,
+       1,
+       4,
+       2
+      ],
+      [
+       0,
+       60,
+       0,
+       131,
+       9,
+       0
+      ],
+      [
+       2,
+       2,
+       169,
+       4,
+       6,
+       17
+      ],
+      [
+       26,
+       75,
+       0,
+       97,
+       2,
+       0
+      ],
+      [
+       0,
+       3,
+       0,
+       0,
+       197,
+       0
+      ],
+      [
+       0,
+       3,
+       2,
+       0,
+       3,
+       192
+      ]
+     ]
+    }
+   }
+  }
+ },
+ "code_sha256": "0e99bc90e257a9736384ef6acf0c433b6365ab8c96cbddd604c0900dfeeea047",
+ "registration_sha256": "c6d0855be6ae4787151daad93c8d57653e6e5c09323f921bfa0ff32240beee35",
+ "weights_sha256": "9a266f56dca3089a8401ca4b1178d0316025a2cfad668105a4bcbf9906d23a2b",
+ "predictions_sha256": {
+  "preds_held_source.npz": "c10f247254ab2c1df552fb5d8976fee84149121027a7a541c997c4ef026f39c0"
+ }
+}

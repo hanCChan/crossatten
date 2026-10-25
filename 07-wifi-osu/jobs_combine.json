@@ -1,0 +1,95 @@
+[
+ {
+  "dataset": "ManyRx",
+  "fold": 0,
+  "frontend": "frequency",
+  "recipe": "unified",
+  "phase": "combine",
+  "seed": 3101,
+  "factor": "single_frozen",
+  "noise": "mild",
+  "id": "ManyRx_single_frozen__f0__s3101"
+ },
+ {
+  "dataset": "ManyRx",
+  "fold": 1,
+  "frontend": "frequency",
+  "recipe": "official",
+  "phase": "combine",
+  "seed": 3101,
+  "factor": "single_frozen",
+  "id": "ManyRx_single_frozen__f1__s3101"
+ },
+ {
+  "dataset": "ManyRx",
+  "fold": 2,
+  "frontend": "frequency",
+  "recipe": "unified",
+  "phase": "combine",
+  "seed": 3101,
+  "factor": "single_frozen",
+  "noise": "mild",
+  "id": "ManyRx_single_frozen__f2__s3101"
+ },
+ {
+  "dataset": "ManyRx",
+  "fold": 3,
+  "frontend": "frequency",
+  "recipe": "official",
+  "phase": "combine",
+  "seed": 3101,
+  "factor": "single_frozen",
+  "id": "ManyRx_single_frozen__f3__s3101"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 0,
+  "frontend": "frequency",
+  "recipe": "official",
+  "phase": "combine",
+  "seed": 3101,
+  "factor": "single_frozen",
+  "id": "ManySig_single_frozen__f0__s3101"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 1,
+  "frontend": "frequency",
+  "recipe": "official",
+  "phase": "combine",
+  "seed": 3101,
+  "factor": "single_frozen",
+  "id": "ManySig_single_frozen__f1__s3101"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 2,
+  "frontend": "frequency",
+  "recipe": "official",
+  "phase": "combine",
+  "seed": 3101,
+  "factor": "single_frozen",
+  "id": "ManySig_single_frozen__f2__s3101"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 3,
+  "frontend": "split",
+  "recipe": "official",
+  "phase": "combine",
+  "seed": 3101,
+  "factor": "single_frozen",
+  "id": "ManySig_single_frozen__f3__s3101"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 3,
+  "frontend": "split",
+  "recipe": "official",
+  "phase": "combine",
+  "seed": 3101,
+  "factor": "single_gate",
+  "id": "ManySig_single_gate__f3__s3101",
+  "fusion": "gate"
+ }
+]
