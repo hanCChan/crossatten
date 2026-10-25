@@ -28,14 +28,28 @@ def active():
     return found
 
 
+def initialization_ready(job, arm):
+    name = arm.get("init_arm")
+    if name is None:
+        return True
+    out = Path(job["out"])
+    init = out.parent / f"{name}__f{job['fold']}__s{job['seed']}"
+    return (init / "metrics.json").is_file() and (init / "model.pt").is_file()
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--jobs", required=True)
     parser.add_argument("--gpus", required=True)
     parser.add_argument("--per-gpu", type=int, default=8)
     parser.add_argument("--threads", type=int, default=2)
+    parser.add_argument("--wait-init", action="store_true")
     args = parser.parse_args()
     jobs = [json.loads(line) for line in Path(args.jobs).read_text().splitlines() if line]
+    arms = {}
+    if args.wait_init:
+        for registration in {job["arms"] for job in jobs}:
+            arms[registration] = {arm["name"]: arm for arm in json.loads(Path(registration).read_text())["arms"]}
     attempted, lock = set(), threading.Lock()
     status_path = Path(args.jobs + ".status.json")
     if status_path.exists():
@@ -57,7 +71,8 @@ def main():
                         not (Path(j["out"]) / "metrics.json").is_file()]
                 if not todo:
                     return
-                free = [j for j in todo if str(Path(j["out"]).resolve()) not in running]
+                free = [j for j in todo if str(Path(j["out"]).resolve()) not in running and
+                        (not args.wait_init or initialization_ready(j, arms[j["arms"]][j["arm"]]))]
                 if not free:
                     job = None
                 else:
