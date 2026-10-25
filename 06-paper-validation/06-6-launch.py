@@ -44,6 +44,7 @@ def main():
     parser.add_argument("--per-gpu", type=int, default=8)
     parser.add_argument("--threads", type=int, default=2)
     parser.add_argument("--wait-init", action="store_true")
+    parser.add_argument("--status-file")
     args = parser.parse_args()
     jobs = [json.loads(line) for line in Path(args.jobs).read_text().splitlines() if line]
     arms = {}
@@ -51,7 +52,8 @@ def main():
         for registration in {job["arms"] for job in jobs}:
             arms[registration] = {arm["name"]: arm for arm in json.loads(Path(registration).read_text())["arms"]}
     attempted, lock = set(), threading.Lock()
-    status_path = Path(args.jobs + ".status.json")
+    status_path = Path(args.status_file or args.jobs + ".status.json")
+    status_path.parent.mkdir(parents=True, exist_ok=True)
     if status_path.exists():
         archive = Path(args.jobs + f".status.{time.time_ns()}.json")
         archive.write_bytes(status_path.read_bytes())
