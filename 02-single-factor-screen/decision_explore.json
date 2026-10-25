@@ -1,0 +1,19 @@
+{
+ "rules": "README.md section 4",
+ "stage": "explore",
+ "run_table_sha256": "4391e921c671901399d425b676b416cfe52d7f07ba254839c5782d5b1f65da71",
+ "verdicts_dev_val": {
+  "s02_meanchirp": "harms",
+  "s02_combfft": "improves",
+  "s02_dechirp": "unclear",
+  "s02_rawoob_full": "unclear",
+  "s02_rawoob_near": "harms",
+  "s02_rawoob_nearL": "harms",
+  "s02_cisoob": "unclear",
+  "s02_depth4": "unclear",
+  "s02_tfsplit": "unclear",
+  "s02_ep200": "improves",
+  "s02_awgn10": "harms"
+ },
+ "confirmation": "ALL registered arms, seeds 201-203, dev_val + confirm RX (no selection)"
+}

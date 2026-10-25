@@ -1,0 +1,15 @@
+q,role,b,a,desc,n_pairs,delta_mean,delta_min,delta_max,pos_pairs,rx_pos,rx_n,worst_rx_delta,verdict
+B,dev_val,s02_meanchirp,s02_base,coherent 8-symbol mean chirp (drops residual/transient),1,-0.16,-0.16,-0.16,0,1,5,0.05,unclear
+B,dev_val,s02_combfft,s02_base,FFT view: comb bins only,1,-0.07,-0.07,-0.07,0,2,5,0.05,unclear
+B,dev_val,s02_dechirp,s02_base,dechirped input,1,-0.27,-0.27,-0.27,0,1,5,-0.15,unclear
+A,dev_val,s02_rawoob_full,s02_base,"+ raw OOB keys/values, all |f|>62.5 kHz",1,-0.06,-0.06,-0.06,0,2,5,-0.3,unclear
+A,dev_val,s02_rawoob_near,s02_base,"+ raw OOB keys/values, 62.5-200 kHz",1,-0.4,-0.4,-0.4,0,0,5,-0.5,unclear
+A,dev_val,s02_rawoob_nearL,s02_base,"+ raw OOB keys/values, left near band only",1,-0.18,-0.18,-0.18,0,1,5,-0.4,unclear
+A,dev_val,s02_cisoob,s02_base,+ CIS-quotient OOB keys/values,1,-0.08,-0.08,-0.08,0,2,5,-0.5,unclear
+C,dev_val,s02_depth4,s02_base,4 mixer blocks,1,0.38,0.38,0.38,1,5,5,0.25,unclear
+C,dev_val,s02_tfsplit,s02_base,time/frequency split tokens (strict IB),1,-0.12,-0.12,-0.12,0,1,5,-0.05,unclear
+D,dev_val,s02_ep200,s02_base,200-epoch horizon,1,0.0,0.0,0.0,0,0,5,0.0,unclear
+D,dev_val,s02_awgn10,s02_base,"AWGN U[10,50) instead of U[0,50)",1,0.0,0.0,0.0,0,0,5,0.0,unclear
+eff,dev_val,s02_cis_rank16,cis_flat,"rank-16 head vs Flatten-Dense (stage-01 fits, same data streams)",1,1.94,1.94,1.94,1,4,5,0.3,unclear
+ref,dev_val,s02_base,xa_trueib_cos_awgn,determinism check: re-run of stage-01 arm (expected 0.00),1,0.0,0.0,0.0,0,0,5,0.0,reference (no verdict)
+ref,dev_val,s02_base,s02_cis_rank16,SYSTEM: CrossAttn-TrueIB vs rank-16 CIS,1,-1.71,-1.71,-1.71,0,1,5,0.45,reference (no verdict)
