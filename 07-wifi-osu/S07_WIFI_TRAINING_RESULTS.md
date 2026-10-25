@@ -1,15 +1,47 @@
 # S07_WIFI_TRAINING_RESULTS
 
-Completed 40/72 source fits. No new target RX metrics are used in this report.
+Completed 80/95 source fits. No new target RX metrics are used in this report.
 
 Fold-specific selections must only use that fold's legal source RX. The following table is descriptive, not a cross-fold selection rule.
 
 | Phase | Dataset | Fold | Seed | Frontend / factor | Packet val % | Held RX % | Worst RX % | Params |
 |---|---|---:|---:|---|---:|---:|---:|---:|
+| training | ManyRx | 0 | 3101 | frequency / unified | 94.48 | 84.40 | 69.56 | 90680 |
 | training | ManyRx | 0 | 3101 | frequency / official | 93.58 | 88.40 | 75.67 | 90680 |
+| training | ManyRx | 0 | 3101 | frequency / balanced | 94.33 | 84.38 | 67.78 | 90680 |
+| training | ManyRx | 0 | 3101 | frequency / held_epoch | 92.35 | 86.42 | 71.33 | 90680 |
+| training | ManyRx | 0 | 3101 | frequency / phase | 95.32 | 76.77 | 67.22 | 90680 |
+| training | ManyRx | 0 | 3101 | frequency / shift | 94.98 | 79.50 | 65.94 | 90680 |
+| training | ManyRx | 0 | 3101 | frequency / cfo | 94.72 | 80.38 | 65.72 | 90680 |
+| training | ManyRx | 0 | 3101 | frequency / channel | 94.16 | 85.83 | 73.17 | 90680 |
+| training | ManyRx | 0 | 3101 | frequency / mild_noise | 94.27 | 88.86 | 76.33 | 90680 |
+| training | ManyRx | 1 | 3101 | frequency / unified | 99.11 | 77.27 | 64.11 | 90680 |
 | training | ManyRx | 1 | 3101 | frequency / official | 97.79 | 88.53 | 75.83 | 90680 |
+| training | ManyRx | 1 | 3101 | frequency / balanced | 99.27 | 69.71 | 48.32 | 90680 |
+| training | ManyRx | 1 | 3101 | frequency / held_epoch | 97.08 | 87.27 | 70.11 | 90680 |
+| training | ManyRx | 1 | 3101 | frequency / phase | 99.48 | 68.37 | 52.95 | 90680 |
+| training | ManyRx | 1 | 3101 | frequency / shift | 99.30 | 67.97 | 58.63 | 90680 |
+| training | ManyRx | 1 | 3101 | frequency / cfo | 99.19 | 69.01 | 59.16 | 90680 |
+| training | ManyRx | 1 | 3101 | frequency / channel | 99.06 | 77.65 | 67.39 | 90680 |
+| training | ManyRx | 1 | 3101 | frequency / mild_noise | 98.76 | 86.54 | 69.78 | 90680 |
+| training | ManyRx | 2 | 3101 | frequency / unified | 94.95 | 84.14 | 72.00 | 90680 |
 | training | ManyRx | 2 | 3101 | frequency / official | 93.87 | 87.97 | 76.22 | 90680 |
+| training | ManyRx | 2 | 3101 | frequency / balanced | 95.17 | 78.15 | 65.00 | 90680 |
+| training | ManyRx | 2 | 3101 | frequency / held_epoch | 92.13 | 86.61 | 73.17 | 90680 |
+| training | ManyRx | 2 | 3101 | frequency / phase | 95.71 | 80.78 | 67.22 | 90680 |
+| training | ManyRx | 2 | 3101 | frequency / shift | 95.37 | 80.24 | 66.67 | 90680 |
+| training | ManyRx | 2 | 3101 | frequency / cfo | 95.21 | 79.53 | 61.44 | 90680 |
+| training | ManyRx | 2 | 3101 | frequency / channel | 94.87 | 83.27 | 69.17 | 90680 |
+| training | ManyRx | 2 | 3101 | frequency / mild_noise | 94.02 | 88.67 | 77.44 | 90680 |
+| training | ManyRx | 3 | 3101 | frequency / unified | 95.20 | 81.50 | 74.56 | 90680 |
 | training | ManyRx | 3 | 3101 | frequency / official | 93.99 | 92.11 | 86.25 | 90680 |
+| training | ManyRx | 3 | 3101 | frequency / balanced | 94.90 | 85.94 | 79.17 | 90680 |
+| training | ManyRx | 3 | 3101 | frequency / held_epoch | 92.28 | 87.30 | 83.20 | 90680 |
+| training | ManyRx | 3 | 3101 | frequency / phase | 95.66 | 82.65 | 78.60 | 90680 |
+| training | ManyRx | 3 | 3101 | frequency / shift | 95.76 | 75.30 | 60.83 | 90680 |
+| training | ManyRx | 3 | 3101 | frequency / cfo | 95.21 | 82.47 | 80.70 | 90680 |
+| training | ManyRx | 3 | 3101 | frequency / channel | 95.25 | 83.94 | 76.67 | 90680 |
+| training | ManyRx | 3 | 3101 | frequency / mild_noise | 94.85 | 90.07 | 86.33 | 90680 |
 | training | ManySig | 0 | 3101 | frequency / unified | 99.25 | 81.29 | 71.83 | 90420 |
 | training | ManySig | 0 | 3101 | frequency / official | 98.89 | 91.33 | 86.83 | 90420 |
 | training | ManySig | 0 | 3101 | frequency / balanced | 99.37 | 78.29 | 69.42 | 90420 |
@@ -46,3 +78,11 @@ Fold-specific selections must only use that fold's legal source RX. The followin
 | training | ManySig | 3 | 3101 | split / cfo | 99.64 | 68.25 | 62.67 | 142276 |
 | training | ManySig | 3 | 3101 | split / channel | 99.72 | 67.79 | 66.83 | 142276 |
 | training | ManySig | 3 | 3101 | split / mild_noise | 99.37 | 73.46 | 61.42 | 142276 |
+| training_replicate | ManyRx | 0 | 3102 | frequency / official | 93.64 | 87.72 | 75.56 | 90680 |
+| training_replicate | ManyRx | 1 | 3102 | frequency / official | 97.83 | 88.64 | 76.06 | 90680 |
+| training_replicate | ManyRx | 2 | 3102 | frequency / official | 94.24 | 87.74 | 77.33 | 90680 |
+| training_replicate | ManyRx | 3 | 3102 | frequency / official | 93.56 | 91.25 | 85.90 | 90680 |
+| training_replicate | ManySig | 0 | 3102 | frequency / official | 98.73 | 93.58 | 90.75 | 90420 |
+| training_replicate | ManySig | 1 | 3102 | frequency / official | 98.57 | 96.29 | 95.58 | 90420 |
+| training_replicate | ManySig | 2 | 3102 | frequency / official | 98.85 | 85.83 | 75.42 | 90420 |
+| training_replicate | ManySig | 3 | 3102 | split / official | 99.29 | 75.25 | 67.08 | 142276 |

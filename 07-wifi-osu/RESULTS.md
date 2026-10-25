@@ -1,6 +1,6 @@
 # Stage 07 Results
 
-Generated 2026-10-25T23:37:06+08:00. WiSig INCOMPLETE. Source screening numbers are not CRD results.
+Generated 2026-10-26T00:06:37+08:00. WiSig INCOMPLETE. Source screening numbers are not CRD results.
 
 Baseline `ebe3225`, branch `exp/s07-wifi-osu`. S00-S06 are unchanged. No automatic merge, GitHub push, model-weight publication or target-driven extension.
 
@@ -10,8 +10,8 @@ Baseline `ebe3225`, branch `exp/s07-wifi-osu`. S00-S06 are unchanged. No automat
 |---|---:|---:|---:|---:|
 | features | 56 | 56 | 0 | 0 |
 | replicate | 23 | 23 | 0 | 0 |
-| training | 72 | 2 | 0 | 0 |
-| training_replicate | 0 | 0 | 0 | 0 |
+| training | 72 | 72 | 0 | 0 |
+| training_replicate | 23 | 8 | 0 | 0 |
 | combine | 0 | 0 | 0 | 0 |
 | final | 0 | 0 | 0 | 0 |
 | smoke | 14 | 14 | 0 | 0 |
