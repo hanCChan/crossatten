@@ -1,0 +1,30 @@
+{
+ "job": {
+  "source": "RX1",
+  "target": "RX2",
+  "method": "patch_hstu",
+  "seed": 5102,
+  "id": "RX1_to_RX2_patch_hstu__s5102"
+ },
+ "registration_sha256": "6798d45a9dba3322d92df36f7096e4ae0fbe4b2af15a34e194a054f8668908ec",
+ "manifest_sha256": "4b0bb375894c02c8956c59b9d57b0fafd9429fb476d103c698869331f5e269cc",
+ "trainer_sha256": "5ad1657033ea1958cc4d74047f3668a010c627298ac94b3344bb1e70c56c3698",
+ "source_train": 874,
+ "source_val": 303,
+ "params": 581111,
+ "smoke": false,
+ "seed": 3122298066,
+ "recipe": {
+  "optimizer": "AdamW",
+  "lr": 0.001,
+  "weight_decay": 0.01,
+  "epochs": 200,
+  "warmup_epochs": 5,
+  "awgn": [
+   0,
+   50
+  ],
+  "batch": 64,
+  "checkpoint": "minimum source temporal-val CE"
+ }
+}

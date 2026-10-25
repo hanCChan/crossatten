@@ -2,7 +2,6 @@
 """Advance a bounded source-only phase; never load target metrics or raw IQ."""
 import argparse
 import csv
-import hashlib
 import json
 import sys
 from pathlib import Path
@@ -22,6 +21,11 @@ def write_once(path, value):
 
 
 def load_phase(phase):
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("s07_audit", HERE / "07-7-audit.py")
+    audit = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(audit)
+    audit.audit_wifi(phase)
     jobs = json.loads((HERE / f"jobs_{phase}.json").read_text())
     rows = []
     for job in jobs:
@@ -74,6 +78,7 @@ def main():
     parser.add_argument("step", choices=("features", "replicate", "training", "training_replicate", "combine"))
     args = parser.parse_args()
     require_committed(HERE / "registration.json")
+    require_committed(Path(__file__).resolve())
     steps = ["features", "replicate", "training", "training_replicate", "combine"]
     previous = {phase: load_phase(phase) for phase in steps[:steps.index(args.step) + 1]}
     evidence = {r["evidence"]: r["sha256"] for rows in previous.values() for r in rows}
