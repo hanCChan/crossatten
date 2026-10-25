@@ -43,3 +43,17 @@ WiSig配对：W1−W0、W2−W1、W1−C0/CP/CF；Shen配对：S_hstem−S_base/
 
 完成注册实验后停止报告，按证据判断通用LoRa/WiFi方法、LoRa特定方法或工程优化价值，不自动追加模型/Loss。
 测试故障修复可重跑，原失败日志和运行尝试必须保留。
+
+## 执行记录
+
+`bc30820` 已在任何本阶段训练之前提交注册配置。`3649963` 提交源域访问/冻结哈希/最终白名单的门槛补强、69/69 smoke 检查和独占设备上的成本实测。
+2026-10-25 已启动正式源域训练：ManyRx、ManySig 各72个基础fit，Shen 68个基础fit；对应32个WiSig及32个Shen IB fit必须等待匹配FAN checkpoint完成。
+smoke仅用于检查代码可运行，不选配方或配置，也不作为准确率证据。
+
+```bash
+env PYTHONPATH=lib python 06-paper-validation/06-4-summary.py
+env PYTHONPATH=lib python 06-paper-validation/06-4-summary.py --require-complete
+```
+
+汇总会拒绝损坏/不完整记录，显示缺失fit和失败日志，将fold与seed的波动分开报告。
+正式完成后以 `RESULTS.md` 与 `summary/report.json` 为准。FAN上游CUDA median存在非确定性警告，保留上游实现，不宣称固定seed能保证逐比特复现。
