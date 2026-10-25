@@ -1,0 +1,4 @@
+{"run": "CP_ManyRx_official__f1__s2025", "epoch": 1, "source_ce": 0.75164, "train_s": 2.4}
+{"run": "CP_ManyRx_official__f1__s2025", "epoch": 20, "source_ce": 0.13956, "train_s": 38.5}
+{"run": "CP_ManyRx_official__f1__s2025", "epoch": 40, "source_ce": 0.11817, "train_s": 73.9}
+{"run_id": "CP_ManyRx_official__f1__s2025", "arm": "CP_ManyRx_official", "dataset": "ManyRx", "fold": 1, "seed": 2025, "stage": "final", "params": 91716, "best_val_epoch": 35, "stop_epoch": 45, "epochs_budget": 200, "source_val_ce": 0.11729638278484344, "source_val_acc": 0.9756832122802734, "train_seconds": 81.6, "wall_seconds": 86.8, "gpu_peak_mem_gb": 0.226}

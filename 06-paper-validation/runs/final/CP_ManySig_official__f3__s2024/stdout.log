@@ -1,0 +1,4 @@
+{"run": "CP_ManySig_official__f3__s2024", "epoch": 1, "source_ce": 1.41061, "train_s": 1.0}
+{"run": "CP_ManySig_official__f3__s2024", "epoch": 20, "source_ce": 0.01696, "train_s": 9.2}
+{"run": "CP_ManySig_official__f3__s2024", "epoch": 40, "source_ce": 0.01332, "train_s": 17.0}
+{"run_id": "CP_ManySig_official__f3__s2024", "arm": "CP_ManySig_official", "dataset": "ManySig", "fold": 3, "seed": 2024, "stage": "final", "params": 91456, "best_val_epoch": 33, "stop_epoch": 43, "epochs_budget": 200, "source_val_ce": 0.012913450598716736, "source_val_acc": 0.9962963461875916, "train_seconds": 18.3, "wall_seconds": 21.2, "gpu_peak_mem_gb": 0.155}

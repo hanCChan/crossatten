@@ -1,0 +1,12 @@
+{"run": "CP_ManySig_unified__f2__s2025", "epoch": 1, "source_ce": 1.63637, "train_s": 2.1}
+{"run": "CP_ManySig_unified__f2__s2025", "epoch": 20, "source_ce": 0.06615, "train_s": 19.0}
+{"run": "CP_ManySig_unified__f2__s2025", "epoch": 40, "source_ce": 0.04613, "train_s": 37.6}
+{"run": "CP_ManySig_unified__f2__s2025", "epoch": 60, "source_ce": 0.05089, "train_s": 56.3}
+{"run": "CP_ManySig_unified__f2__s2025", "epoch": 80, "source_ce": 0.05935, "train_s": 77.0}
+{"run": "CP_ManySig_unified__f2__s2025", "epoch": 100, "source_ce": 0.04661, "train_s": 96.3}
+{"run": "CP_ManySig_unified__f2__s2025", "epoch": 120, "source_ce": 0.04002, "train_s": 114.9}
+{"run": "CP_ManySig_unified__f2__s2025", "epoch": 140, "source_ce": 0.04545, "train_s": 133.4}
+{"run": "CP_ManySig_unified__f2__s2025", "epoch": 160, "source_ce": 0.03779, "train_s": 153.0}
+{"run": "CP_ManySig_unified__f2__s2025", "epoch": 180, "source_ce": 0.03852, "train_s": 173.7}
+{"run": "CP_ManySig_unified__f2__s2025", "epoch": 200, "source_ce": 0.03906, "train_s": 194.5}
+{"run_id": "CP_ManySig_unified__f2__s2025", "arm": "CP_ManySig_unified", "dataset": "ManySig", "fold": 2, "seed": 2025, "stage": "final", "params": 91456, "best_val_epoch": 88, "stop_epoch": 200, "epochs_budget": 200, "source_val_ce": 0.037273846566677094, "source_val_acc": 0.9925926327705383, "train_seconds": 194.5, "wall_seconds": 196.5, "gpu_peak_mem_gb": 0.133}

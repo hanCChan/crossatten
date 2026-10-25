@@ -1,0 +1,2 @@
+{"run": "C0_ManyRx_official__f0__s2023", "epoch": 1, "source_ce": 0.57906, "train_s": 3.3}
+{"run_id": "C0_ManyRx_official__f0__s2023", "arm": "C0_ManyRx_official", "dataset": "ManyRx", "fold": 0, "seed": 2023, "stage": "final", "params": 48890, "best_val_epoch": 7, "stop_epoch": 17, "epochs_budget": 200, "source_val_ce": 0.22220711410045624, "source_val_acc": 0.9340793490409851, "train_seconds": 43.1, "wall_seconds": 48.4, "gpu_peak_mem_gb": 0.195}

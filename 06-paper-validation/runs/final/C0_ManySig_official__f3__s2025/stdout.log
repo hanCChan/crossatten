@@ -1,0 +1,3 @@
+{"run": "C0_ManySig_official__f3__s2025", "epoch": 1, "source_ce": 0.59967, "train_s": 1.1}
+{"run": "C0_ManySig_official__f3__s2025", "epoch": 20, "source_ce": 0.02743, "train_s": 12.1}
+{"run_id": "C0_ManySig_official__f3__s2025", "arm": "C0_ManySig_official", "dataset": "ManySig", "fold": 3, "seed": 2025, "stage": "final", "params": 48630, "best_val_epoch": 24, "stop_epoch": 34, "epochs_budget": 200, "source_val_ce": 0.027343187481164932, "source_val_acc": 0.9925926327705383, "train_seconds": 19.6, "wall_seconds": 22.8, "gpu_peak_mem_gb": 0.124}

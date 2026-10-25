@@ -1,0 +1,85 @@
+{
+ "arm": {
+  "name": "IB-RFF_a0.04_ManySig_unified",
+  "family": "paper_upstream",
+  "method": "IB-RFF",
+  "length": 256,
+  "recipe": "unified",
+  "input_fmax": null,
+  "alpha": 0.04,
+  "num_classes": 6,
+  "sample_rate": 25000000.0,
+  "dataset": "ManySig",
+  "patch_size": 32,
+  "init_arm": "FAN_ManySig_unified",
+  "expected_params": 146605
+ },
+ "fold": 2,
+ "seed": 2023,
+ "stage": "final",
+ "recipe": {
+  "opt": "adamw",
+  "lr": 0.001,
+  "wd": 0.0005,
+  "batch": 64,
+  "epochs": 200,
+  "sched": "warmcos",
+  "warmup": 5,
+  "awgn": [
+   0,
+   50
+  ]
+ },
+ "data_seed": 2118051513,
+ "roles": {
+  "source": [
+   "1-1",
+   "1-19",
+   "2-1",
+   "2-19",
+   "3-19",
+   "7-7",
+   "18-2",
+   "19-2",
+   "20-1"
+  ],
+  "fit_rx": [
+   "1-1",
+   "1-19",
+   "2-1",
+   "2-19",
+   "3-19",
+   "7-7",
+   "18-2",
+   "19-2",
+   "20-1"
+  ],
+  "internal_val_rx": [],
+  "target": [
+   "7-14",
+   "8-8",
+   "14-7"
+  ],
+  "source_days": [
+   1,
+   2
+  ]
+ },
+ "upstream": {
+  "IB-RFF": "5a03a04da86c4bbf5cf90f41a55c268bf2152203",
+  "WaveMLP-RFF": "1ade72d0082428db2087633a44ae533f1022ca22"
+ },
+ "code_sha256": "2e55e39d8376f59fa346bb15122b880edfe76697b5ce2ccc011ef9421b30d50c",
+ "init": {
+  "path": "/workspace/crossatten/06-paper-validation/runs/final/FAN_ManySig_unified__f2__s2023/model.pt",
+  "sha256": "2888897c0638dbee19e8f8db480ba959e3550f6b62d4e348eba8d7fe9db9f9fe"
+ },
+ "registration_sha256": "fa84885482665cdde235b4e0af947cecb61494bb7de1d06954e721004d52eabe",
+ "decision_file": "/workspace/crossatten/06-paper-validation/decision_wifi.json",
+ "decision_sha256": "e7486f99dd4dca953a389f6f1bbfbd8f992fa4eee83213f891d1d79126ab9287",
+ "protocol_sha256": "1311eb35852a63f216a3f0c8e87ca9833ece8614975f9ff79ec28079b70b9127",
+ "smoke": false,
+ "torch": "2.5.0+cu124",
+ "gpu": "NVIDIA A100-SXM4-40GB",
+ "checkpoint": "minimum source packet-validation CE; no target evaluation during training"
+}

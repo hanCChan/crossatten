@@ -43,6 +43,7 @@ def main():
             row = next(csv.DictReader(stream))
         assert row["task"] == "CRD" and float(row["rx_accuracy_pct"]) == 83.5
         assert row["parameters"] == "91128" and int(row["fits"]) == 12
+        assert b"\r" not in (out / "main_metrics.csv").read_bytes()
         with (out / "registered_ablations.csv").open() as stream:
             assert next(csv.DictReader(stream))["status"] == "incomplete"
         evidence = json.loads((out / "evidence.json").read_text())

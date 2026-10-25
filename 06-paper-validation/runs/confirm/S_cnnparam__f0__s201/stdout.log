@@ -1,0 +1,12 @@
+{"run": "S_cnnparam__f0__s201", "epoch": 1, "source_ce": 2.32152, "train_s": 3.4}
+{"run": "S_cnnparam__f0__s201", "epoch": 20, "source_ce": 0.90788, "train_s": 57.4}
+{"run": "S_cnnparam__f0__s201", "epoch": 40, "source_ce": 0.65814, "train_s": 113.9}
+{"run": "S_cnnparam__f0__s201", "epoch": 60, "source_ce": 0.48, "train_s": 173.9}
+{"run": "S_cnnparam__f0__s201", "epoch": 80, "source_ce": 0.42171, "train_s": 234.6}
+{"run": "S_cnnparam__f0__s201", "epoch": 100, "source_ce": 0.4241, "train_s": 295.1}
+{"run": "S_cnnparam__f0__s201", "epoch": 120, "source_ce": 0.37661, "train_s": 355.4}
+{"run": "S_cnnparam__f0__s201", "epoch": 140, "source_ce": 0.36649, "train_s": 416.0}
+{"run": "S_cnnparam__f0__s201", "epoch": 160, "source_ce": 0.36254, "train_s": 476.5}
+{"run": "S_cnnparam__f0__s201", "epoch": 180, "source_ce": 0.35821, "train_s": 536.6}
+{"run": "S_cnnparam__f0__s201", "epoch": 200, "source_ce": 0.35646, "train_s": 596.8}
+{"run_id": "S_cnnparam__f0__s201", "arm": "S_cnnparam", "dataset": "Shen", "fold": 0, "seed": 201, "stage": "confirm", "params": 138898, "best_val_epoch": 177, "stop_epoch": 200, "epochs_budget": 200, "source_val_ce": 0.35192370414733887, "source_val_acc": 0.8765000700950623, "train_seconds": 596.8, "wall_seconds": 622.6, "gpu_peak_mem_gb": 0.987}

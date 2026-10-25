@@ -48,7 +48,7 @@ def export_tables(report, out):
                        ("registered_ablations", ablations), ("measured_costs", costs)):
         if rows:
             with (out / f"{name}.csv").open("w", newline="") as stream:
-                writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
+                writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
                 writer.writeheader()
                 writer.writerows(rows)
     return metrics

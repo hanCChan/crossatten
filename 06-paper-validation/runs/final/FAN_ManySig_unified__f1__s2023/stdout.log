@@ -1,0 +1,16 @@
+/workspace/crossatten/external/IB-RFF/backbones/Adaptive_Filter_Module.py:23: UserWarning: median CUDA with indices output does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:91.)
+  median_energy = flat_energy.median(dim=1, keepdim=True)[0]
+/workspace/crossatten/external/IB-RFF/backbones/Adaptive_Filter_Module.py:75: UserWarning: median CUDA with indices output does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:91.)
+  median_energy = flat_energy.median(dim=1, keepdim=True)[0]
+{"run": "FAN_ManySig_unified__f1__s2023", "epoch": 1, "source_ce": 1.79299, "train_s": 2.1}
+{"run": "FAN_ManySig_unified__f1__s2023", "epoch": 20, "source_ce": 0.12396, "train_s": 28.4}
+{"run": "FAN_ManySig_unified__f1__s2023", "epoch": 40, "source_ce": 0.10402, "train_s": 55.9}
+{"run": "FAN_ManySig_unified__f1__s2023", "epoch": 60, "source_ce": 0.10765, "train_s": 82.1}
+{"run": "FAN_ManySig_unified__f1__s2023", "epoch": 80, "source_ce": 0.10838, "train_s": 109.0}
+{"run": "FAN_ManySig_unified__f1__s2023", "epoch": 100, "source_ce": 0.10052, "train_s": 135.9}
+{"run": "FAN_ManySig_unified__f1__s2023", "epoch": 120, "source_ce": 0.10926, "train_s": 160.7}
+{"run": "FAN_ManySig_unified__f1__s2023", "epoch": 140, "source_ce": 0.11139, "train_s": 186.4}
+{"run": "FAN_ManySig_unified__f1__s2023", "epoch": 160, "source_ce": 0.1087, "train_s": 212.5}
+{"run": "FAN_ManySig_unified__f1__s2023", "epoch": 180, "source_ce": 0.1057, "train_s": 239.5}
+{"run": "FAN_ManySig_unified__f1__s2023", "epoch": 200, "source_ce": 0.10665, "train_s": 266.6}
+{"run_id": "FAN_ManySig_unified__f1__s2023", "arm": "FAN_ManySig_unified", "dataset": "ManySig", "fold": 1, "seed": 2023, "stage": "final", "params": 146605, "best_val_epoch": 67, "stop_epoch": 200, "epochs_budget": 200, "source_val_ce": 0.09350638836622238, "source_val_acc": 0.9762346148490906, "train_seconds": 266.6, "wall_seconds": 270.0, "gpu_peak_mem_gb": 0.104}

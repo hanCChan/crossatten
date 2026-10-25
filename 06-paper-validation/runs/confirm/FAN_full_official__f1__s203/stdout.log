@@ -1,0 +1,7 @@
+/workspace/crossatten/external/IB-RFF/backbones/Adaptive_Filter_Module.py:23: UserWarning: median CUDA with indices output does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:91.)
+  median_energy = flat_energy.median(dim=1, keepdim=True)[0]
+/workspace/crossatten/external/IB-RFF/backbones/Adaptive_Filter_Module.py:75: UserWarning: median CUDA with indices output does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:91.)
+  median_energy = flat_energy.median(dim=1, keepdim=True)[0]
+{"run": "FAN_full_official__f1__s203", "epoch": 1, "source_ce": 2.30276, "train_s": 1.9}
+{"run": "FAN_full_official__f1__s203", "epoch": 20, "source_ce": 0.47106, "train_s": 26.0}
+{"run_id": "FAN_full_official__f1__s203", "arm": "FAN_full_official", "dataset": "Shen", "fold": 1, "seed": 203, "stage": "confirm", "params": 310481, "best_val_epoch": 24, "stop_epoch": 34, "epochs_budget": 200, "source_val_ce": 0.333721786737442, "source_val_acc": 0.8765000700950623, "train_seconds": 43.7, "wall_seconds": 47.8, "gpu_peak_mem_gb": 0.873}

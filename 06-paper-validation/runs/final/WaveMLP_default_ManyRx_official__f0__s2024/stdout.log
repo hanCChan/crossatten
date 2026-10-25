@@ -1,0 +1,4 @@
+{"run": "WaveMLP_default_ManyRx_official__f0__s2024", "epoch": 1, "source_ce": 1.52472, "train_s": 9.7}
+{"run": "WaveMLP_default_ManyRx_official__f0__s2024", "epoch": 20, "source_ce": 0.25917, "train_s": 200.6}
+{"run": "WaveMLP_default_ManyRx_official__f0__s2024", "epoch": 40, "source_ce": 0.23558, "train_s": 401.0}
+{"run_id": "WaveMLP_default_ManyRx_official__f0__s2024", "arm": "WaveMLP_default_ManyRx_official", "dataset": "ManyRx", "fold": 0, "seed": 2024, "stage": "final", "params": 85258, "best_val_epoch": 47, "stop_epoch": 57, "epochs_budget": 200, "source_val_ce": 0.22729024291038513, "source_val_acc": 0.933648943901062, "train_seconds": 560.8, "wall_seconds": 566.9, "gpu_peak_mem_gb": 0.168}

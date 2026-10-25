@@ -1,0 +1,14 @@
+/workspace/crossatten/external/IB-RFF/backbones/Adaptive_Filter_Module.py:23: UserWarning: median CUDA with indices output does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:91.)
+  median_energy = flat_energy.median(dim=1, keepdim=True)[0]
+/workspace/crossatten/external/IB-RFF/backbones/Adaptive_Filter_Module.py:75: UserWarning: median CUDA with indices output does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:91.)
+  median_energy = flat_energy.median(dim=1, keepdim=True)[0]
+{"run": "IB-RFF_a0.04_ManySig_official__f0__s2023", "epoch": 1, "source_ce": 0.11659, "train_s": 2.0}
+{"run": "IB-RFF_a0.04_ManySig_official__f0__s2023", "epoch": 20, "source_ce": 0.10505, "train_s": 21.9}
+{"run": "IB-RFF_a0.04_ManySig_official__f0__s2023", "epoch": 40, "source_ce": 0.09511, "train_s": 43.5}
+{"run": "IB-RFF_a0.04_ManySig_official__f0__s2023", "epoch": 60, "source_ce": 0.08852, "train_s": 65.0}
+{"run": "IB-RFF_a0.04_ManySig_official__f0__s2023", "epoch": 80, "source_ce": 0.08666, "train_s": 87.7}
+{"run": "IB-RFF_a0.04_ManySig_official__f0__s2023", "epoch": 100, "source_ce": 0.08567, "train_s": 109.4}
+{"run": "IB-RFF_a0.04_ManySig_official__f0__s2023", "epoch": 120, "source_ce": 0.08511, "train_s": 132.7}
+{"run": "IB-RFF_a0.04_ManySig_official__f0__s2023", "epoch": 140, "source_ce": 0.08504, "train_s": 156.1}
+{"run": "IB-RFF_a0.04_ManySig_official__f0__s2023", "epoch": 160, "source_ce": 0.08499, "train_s": 178.1}
+{"run_id": "IB-RFF_a0.04_ManySig_official__f0__s2023", "arm": "IB-RFF_a0.04_ManySig_official", "dataset": "ManySig", "fold": 0, "seed": 2023, "stage": "final", "params": 146605, "best_val_epoch": 151, "stop_epoch": 161, "epochs_budget": 200, "source_val_ce": 0.0849173367023468, "source_val_acc": 0.9725309014320374, "train_seconds": 179.2, "wall_seconds": 182.2, "gpu_peak_mem_gb": 0.112}

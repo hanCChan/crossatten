@@ -1,0 +1,16 @@
+/workspace/crossatten/external/IB-RFF/backbones/Adaptive_Filter_Module.py:23: UserWarning: median CUDA with indices output does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:91.)
+  median_energy = flat_energy.median(dim=1, keepdim=True)[0]
+/workspace/crossatten/external/IB-RFF/backbones/Adaptive_Filter_Module.py:75: UserWarning: median CUDA with indices output does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:91.)
+  median_energy = flat_energy.median(dim=1, keepdim=True)[0]
+{"run": "IB-RFF_a0.04_ManySig_unified__f2__s2023", "epoch": 1, "source_ce": 0.10968, "train_s": 3.3}
+{"run": "IB-RFF_a0.04_ManySig_unified__f2__s2023", "epoch": 20, "source_ce": 0.1388, "train_s": 44.6}
+{"run": "IB-RFF_a0.04_ManySig_unified__f2__s2023", "epoch": 40, "source_ce": 0.10671, "train_s": 86.0}
+{"run": "IB-RFF_a0.04_ManySig_unified__f2__s2023", "epoch": 60, "source_ce": 0.09693, "train_s": 126.1}
+{"run": "IB-RFF_a0.04_ManySig_unified__f2__s2023", "epoch": 80, "source_ce": 0.10209, "train_s": 167.5}
+{"run": "IB-RFF_a0.04_ManySig_unified__f2__s2023", "epoch": 100, "source_ce": 0.08767, "train_s": 210.5}
+{"run": "IB-RFF_a0.04_ManySig_unified__f2__s2023", "epoch": 120, "source_ce": 0.10275, "train_s": 251.1}
+{"run": "IB-RFF_a0.04_ManySig_unified__f2__s2023", "epoch": 140, "source_ce": 0.08951, "train_s": 290.7}
+{"run": "IB-RFF_a0.04_ManySig_unified__f2__s2023", "epoch": 160, "source_ce": 0.08738, "train_s": 330.3}
+{"run": "IB-RFF_a0.04_ManySig_unified__f2__s2023", "epoch": 180, "source_ce": 0.08844, "train_s": 373.0}
+{"run": "IB-RFF_a0.04_ManySig_unified__f2__s2023", "epoch": 200, "source_ce": 0.0873, "train_s": 413.4}
+{"run_id": "IB-RFF_a0.04_ManySig_unified__f2__s2023", "arm": "IB-RFF_a0.04_ManySig_unified", "dataset": "ManySig", "fold": 2, "seed": 2023, "stage": "final", "params": 146605, "best_val_epoch": 156, "stop_epoch": 200, "epochs_budget": 200, "source_val_ce": 0.08423635363578796, "source_val_acc": 0.9750000238418579, "train_seconds": 413.4, "wall_seconds": 415.6, "gpu_peak_mem_gb": 0.104}
