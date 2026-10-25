@@ -1,0 +1,57 @@
+[
+ {
+  "dataset": "ManySig",
+  "fold": 0,
+  "group": "first",
+  "seed": 0,
+  "condition": "official",
+  "feature": "frequency",
+  "phase": "smoke",
+  "variant": "smoke0",
+  "id": "ManySig_smoke0_frequency__f0__first__s0"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 0,
+  "group": "first",
+  "seed": 0,
+  "condition": "official_awgn",
+  "feature": "frequency",
+  "phase": "smoke",
+  "variant": "smoke1",
+  "id": "ManySig_smoke1_frequency__f0__first__s0"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 0,
+  "group": "first",
+  "seed": 0,
+  "condition": "official_awgn_full200",
+  "feature": "frequency",
+  "phase": "smoke",
+  "variant": "smoke2",
+  "id": "ManySig_smoke2_frequency__f0__first__s0"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 0,
+  "group": "first",
+  "seed": 0,
+  "condition": "official",
+  "feature": "phase",
+  "phase": "smoke",
+  "variant": "smoke3",
+  "id": "ManySig_smoke3_phase__f0__first__s0"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 0,
+  "group": "first",
+  "seed": 0,
+  "condition": "official",
+  "feature": "phase_null",
+  "phase": "smoke",
+  "variant": "smoke4",
+  "id": "ManySig_smoke4_phase_null__f0__first__s0"
+ }
+]
