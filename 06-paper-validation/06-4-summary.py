@@ -116,6 +116,24 @@ def aggregate(records, label):
                 train_seconds=moments([r["train_seconds"] for r in records]))
 
 
+def training_cost(records, configs):
+    stage, initial, total = [], [], []
+    for result in records:
+        config = configs[(result["stage"], result["run_id"])]
+        seconds = result["train_seconds"]
+        init = config.get("init")
+        init_seconds = 0.0
+        if init:
+            evidence = json.loads(Path(init["path"]).with_name("metrics.json").read_text())
+            assert evidence["fold"] == result["fold"] and evidence["seed"] == result["seed"]
+            init_seconds = evidence["train_seconds"]
+        stage.append(seconds)
+        initial.append(init_seconds)
+        total.append(seconds + init_seconds)
+    return dict(stage_seconds=moments(stage), initialization_seconds=moments(initial),
+                total_seconds=moments(total))
+
+
 def paired(left, right, label, expected):
     a = {(r["fold"], r["seed"]): r for r in left}
     b = {(r["fold"], r["seed"]): r for r in right}
@@ -277,6 +295,7 @@ def main():
     for (dataset, model), records in sorted(groups.items()):
         for label in ("CR", "CRD") if dataset != "Shen" else ("dev_val", "confirm"):
             row = aggregate(records, label)
+            row["training_cost"] = training_cost(records, configs)
             summary[f"{dataset}:{model}:{label}"] = row
             m = row["metrics"]
             lines.append(f"| {dataset} | {model} | {label} | {row['n']} | "
@@ -284,6 +303,17 @@ def main():
                          f"{m['packet_acc']['mean']:.2f} | {m['f1_mean']['mean']:.2f} | "
                          f"{row['seed_sd']:.2f} | {row['fold_sd']:.2f} | "
                          f"{row['worst_fold_rx_mean']:.2f} | {','.join(map(str, row['params']))} |")
+    lines += ["", "## Training Cost", "",
+              "Observed wall-clock training under concurrent scheduling; not isolated speed benchmarks.",
+              "IB-RFF total includes its matching FAN initialization and HSIC fine-tuning. Model-selection search is excluded.",
+              "", "| Dataset | Model | Fits | This Stage s | Initialization s | Total s |",
+              "|---|---|---:|---:|---:|---:|"]
+    for (dataset, model), records in sorted(groups.items()):
+        cost = training_cost(records, configs)
+        lines.append(f"| {dataset} | {model} | {len(records)} | "
+                     f"{cost['stage_seconds']['mean']:.1f} | "
+                     f"{cost['initialization_seconds']['mean']:.1f} | "
+                     f"{cost['total_seconds']['mean']:.1f} |")
     lines += ["", "## Registered Ablations", "",
               "| Dataset | Task | Pair | Fits | Delta pp | Positive | Worst RX Delta | Decision |",
               "|---|---|---|---:|---:|---:|---:|---|"]

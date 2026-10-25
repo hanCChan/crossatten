@@ -47,6 +47,15 @@ def main():
     assert report.paper_route({"complete": True}, comparisons, groups)["route"] == "engineering_or_limited_method_evidence"
     with tempfile.TemporaryDirectory() as directory:
         root = Path(directory)
+        init = root / "init"
+        init.mkdir()
+        (init / "metrics.json").write_text(json.dumps(dict(fold=0, seed=2023, train_seconds=20)))
+        timed = dict(stage="final", run_id="synthetic", fold=0, seed=2023, train_seconds=10)
+        configs = {("final", "synthetic"): {"init": {"path": str(init / "model.pt")}}}
+        cost = report.training_cost([timed], configs)
+        assert cost["initialization_seconds"]["mean"] == 20 and cost["total_seconds"]["mean"] == 30
+        configs[("final", "synthetic")]["init"] = None
+        assert report.training_cost([timed], configs)["total_seconds"]["mean"] == 10
         report.ROOT = root
         (root / "configs").mkdir()
         (root / "configs/protocol.json").write_text("{}")
