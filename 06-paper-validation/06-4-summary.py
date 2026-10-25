@@ -21,6 +21,38 @@ def pooled_f1(per_rx):
     return float(np.mean(2 * precision * recall / np.maximum(precision + recall, 1e-12)))
 
 
+def audit_predictions(path, result, classes):
+    totals = dict(packets=0, tied_packets=0, absolute_correct_count_delta=0)
+    entries = list(result["selected"].items())
+    if "source_rx_val" in result:
+        entries.append(("source_rx_val", result["source_rx_val"]))
+    for label, entry in entries:
+        archive = path.parent / f"preds_{label}.npz"
+        with np.load(archive, allow_pickle=False) as predictions:
+            expected_keys = {key for rx in entry["per_rx"] for key in (rx, f"y_{rx}")}
+            assert set(predictions.files) == expected_keys, archive
+            for rx, scores in entry["per_rx"].items():
+                logits, y = predictions[rx], predictions[f"y_{rx}"]
+                assert logits.shape == (scores["total"], classes), (archive, rx)
+                assert y.shape == (scores["total"],) and np.issubdtype(y.dtype, np.integer), (archive, rx)
+                assert np.isfinite(logits).all() and ((0 <= y) & (y < classes)).all(), (archive, rx)
+                candidates = logits == logits.max(1, keepdims=True)
+                tied = candidates.sum(1) > 1
+                pred = logits.argmax(1)
+                cm = np.asarray(scores["confusion"])
+                assert np.array_equal(cm.sum(1), np.bincount(y, minlength=classes)), (archive, rx)
+                fixed = np.bincount(y[~tied] * classes + pred[~tied],
+                                    minlength=classes ** 2).reshape(classes, classes)
+                # Half-precision storage can merge distinct winning float32 scores.
+                upper = fixed.copy()
+                np.add.at(upper, y[tied], candidates[tied].astype(np.int64))
+                assert ((fixed <= cm) & (cm <= upper)).all(), (archive, rx, "prediction/confusion mismatch")
+                totals["packets"] += len(y)
+                totals["tied_packets"] += int(tied.sum())
+                totals["absolute_correct_count_delta"] += abs(int((pred == y).sum()) - scores["correct"])
+    return totals
+
+
 def audit(path, registration_sha):
     import hashlib
     result = json.loads(path.read_text())
@@ -240,18 +272,20 @@ def main():
     if args.check_weights:
         import torch
         torch.set_num_threads(2)
+        prediction_totals = dict(packets=0, tied_packets=0, absolute_correct_count_delta=0)
         for result in results:
             path = HERE / "runs" / result["stage"] / result["run_id"] / "model.pt"
-            state = torch.load(path, map_location="cpu", weights_only=True)
-            if not all(torch.isfinite(tensor).all() for tensor in state.values()):
-                checks["problems"].append(dict(path=str(path.relative_to(HERE)), error="nonfinite saved checkpoint"))
-            for label in result["selected"]:
-                with np.load(path.parent / f"preds_{label}.npz") as predictions:
-                    for rx, scores in result["selected"][label]["per_rx"].items():
-                        logits, y = predictions[rx], predictions[f"y_{rx}"]
-                        assert logits.shape == (scores["total"], configs[(result["stage"], result["run_id"])]["arm"]["num_classes"])
-                        assert y.shape == (scores["total"],) and np.isfinite(logits).all()
+            try:
+                state = torch.load(path, map_location="cpu", weights_only=True)
+                assert all(torch.isfinite(tensor).all() for tensor in state.values()), "nonfinite saved checkpoint"
+                classes = configs[(result["stage"], result["run_id"])]["arm"]["num_classes"]
+                totals = audit_predictions(path, result, classes)
+                for key, value in totals.items():
+                    prediction_totals[key] += value
+            except (AssertionError, ValueError, KeyError, OSError, RuntimeError) as error:
+                checks["problems"].append(dict(path=str(path.relative_to(HERE)), error=str(error)))
         checks["saved_weights_checked"] = len(results)
+        checks["prediction_audit"] = prediction_totals
         checks["complete"] = checks["complete"] and not checks["problems"]
     groups, arms = defaultdict(list), {a["name"]: a for a in registration["arms"]}
     wifi_path = HERE / "decision_wifi.json"
@@ -285,8 +319,14 @@ def main():
                    else str(len(checks["missing"][stage])))
         lines.append(f"| {stage} | {sum(r['stage'] == stage for r in results)} | {missing} |")
     lines += ["", f"Artifact audit issues: {len(checks['problems'])}; recorded failure/interruption entries: {len(checks['failures'])}.",
-              "A failed execution is not discarded; a subsequent successful retry may complete its registered fit.",
-              "", "## Final Comparisons", "",
+              "A failed execution is not discarded; a subsequent successful retry may complete its registered fit."]
+    if args.check_weights:
+        p = checks["prediction_audit"]
+        lines += [f"Saved finite checkpoints checked: {checks['saved_weights_checked']}; "
+                  f"prediction/confusion audit: {p['packets']} packets, {p['tied_packets']} stored-logit ties.",
+                  "Accuracy uses original float32 logits. Stored float16 logits may merge top scores; "
+                  "all untied decisions and tie-compatible confusion counts are verified."]
+    lines += ["", "## Final Comparisons", "",
               "All values are percent. RX accuracy SD across fits combines fold and seed variation.",
               "Seed SD is computed from fold-averaged seed results; folds and packets are not extra independent RX.",
               "Incomplete rows are provisional and cannot establish improvement.",

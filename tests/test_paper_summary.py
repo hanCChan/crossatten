@@ -6,6 +6,8 @@ import json
 import tempfile
 from pathlib import Path
 
+import numpy as np
+
 ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location("paper_summary", ROOT / "06-paper-validation/06-4-summary.py")
 report = importlib.util.module_from_spec(spec)
@@ -47,6 +49,31 @@ def main():
     assert report.paper_route({"complete": True}, comparisons, groups)["route"] == "engineering_or_limited_method_evidence"
     with tempfile.TemporaryDirectory() as directory:
         root = Path(directory)
+        saved = root / "saved"
+        saved.mkdir()
+        logits = np.array([[2, 1], [1, 1], [0, 2]], dtype=np.float16)
+        labels = np.array([0, 1, 0], dtype=np.int64)
+        np.savez_compressed(saved / "preds_CRD.npz", rx=logits, y_rx=labels)
+        prediction_result = {"selected": {"CRD": {"per_rx": {
+            "rx": {"total": 3, "correct": 2, "confusion": [[1, 1], [0, 1]]}
+        }}}}
+        checked = report.audit_predictions(saved / "model.pt", prediction_result, 2)
+        assert checked == dict(packets=3, tied_packets=1, absolute_correct_count_delta=1)
+        damaged = copy.deepcopy(prediction_result)
+        damaged["selected"]["CRD"]["per_rx"]["rx"]["confusion"] = [[0, 2], [0, 1]]
+        try:
+            report.audit_predictions(saved / "model.pt", damaged, 2)
+        except AssertionError:
+            pass
+        else:
+            raise AssertionError("untied prediction corruption was accepted")
+        np.savez_compressed(saved / "preds_CRD.npz", rx=logits, y_rx=np.array([0, 2, 0]))
+        try:
+            report.audit_predictions(saved / "model.pt", prediction_result, 2)
+        except AssertionError:
+            pass
+        else:
+            raise AssertionError("out-of-range prediction labels were accepted")
         init = root / "init"
         init.mkdir()
         (init / "metrics.json").write_text(json.dumps(dict(fold=0, seed=2023, train_seconds=20)))
@@ -97,7 +124,7 @@ def main():
                 pass
             else:
                 raise AssertionError(f"corruption was accepted: {mutation}")
-    print("PASS paired completeness, source checkpoints, corruption rejection, pooled F1, seed/fold variation")
+    print("PASS paired completeness, source checkpoints, prediction/confusion audit, corruption rejection, pooled F1, seed/fold variation")
 
 
 if __name__ == "__main__":
