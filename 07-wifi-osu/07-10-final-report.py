@@ -94,7 +94,7 @@ def main():
         for r in rows:
             if (r["dataset"], r["pipeline"], r["task"]) == (dataset, pipeline, task):
                 ours[r["rx"]].append(r["accuracy_pct"])
-        for baseline in ("IB-RFF", "WaveMLP", "FAN_source_selected"):
+        for baseline in ("W1", "IB-RFF", "WaveMLP", "FAN_source_selected"):
             theirs = {r["rx"]: float(r["seed_mean_accuracy_pct"]) for r in frozen
                       if (r["dataset"], r["model"], r["task"]) == (dataset, baseline, task)}
             if set(ours) != set(theirs):

@@ -1,0 +1,68 @@
+{
+ "generated_at": "2026-10-25T23:24:21.688435+08:00",
+ "commit": "48da1cd1080c882d3b772c49b5bd2d46a19cd6b8",
+ "wifi_complete": false,
+ "osu_complete": true,
+ "counts": [
+  {
+   "phase": "features",
+   "registered": 56,
+   "completed": 56,
+   "failed": 0,
+   "archived_attempts": 0
+  },
+  {
+   "phase": "replicate",
+   "registered": 23,
+   "completed": 11,
+   "failed": 0,
+   "archived_attempts": 0
+  },
+  {
+   "phase": "training",
+   "registered": 0,
+   "completed": 0,
+   "failed": 0,
+   "archived_attempts": 0
+  },
+  {
+   "phase": "training_replicate",
+   "registered": 0,
+   "completed": 0,
+   "failed": 0,
+   "archived_attempts": 0
+  },
+  {
+   "phase": "combine",
+   "registered": 0,
+   "completed": 0,
+   "failed": 0,
+   "archived_attempts": 0
+  },
+  {
+   "phase": "final",
+   "registered": 0,
+   "completed": 0,
+   "failed": 0,
+   "archived_attempts": 0
+  },
+  {
+   "phase": "smoke",
+   "registered": 14,
+   "completed": 14,
+   "failed": 0,
+   "archived_attempts": 0
+  },
+  {
+   "phase": "osu",
+   "registered": 24,
+   "completed": 24,
+   "failed": 0,
+   "archived_attempts": 0
+  }
+ ],
+ "failures": [],
+ "formal_wifi_completed": 67,
+ "max_formal_wifi_fits": 280,
+ "note": "WiSig INCOMPLETE. Source screening numbers are not CRD results."
+}
