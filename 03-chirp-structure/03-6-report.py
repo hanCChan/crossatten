@@ -92,6 +92,8 @@ def main():
     if any(v["failed"] or v["done"] + v["skipped"] != v["total"] for v in status.values()):
         raise SystemExit("launcher failures/incomplete runs must be resolved and separately documented")
     verdicts = decision["verdicts_dev_val"]
+    explore_decision = json.loads((HERE / "decision_explore.json").read_text())
+    explore_arms = [row for row in csv_rows(summary / "explore_arms.csv") if row["arm"] in registered]
     structural = ["s03_resid", "s03_symstack", "s03_ifreq"]
     eligible = decision["eligible_factors"]
     text = [
@@ -109,11 +111,21 @@ def main():
         "also removes FFT and is only a system reference. "
         "Pre-LN is an engineering change, not claimed as the method contribution.\n\n",
         "## Confirmation Accuracy\n\n",
-        "RX-equal mean and fit SD (%), selected checkpoint; all six fits per arm.\n\n",
+        "RX-equal mean and fit SD (%), selected checkpoint; all six fits per arm. "
+        "Fit SD includes fold differences; within-fold seed SD is reported separately. "
+        "Seeds are training repeats, not additional independent receivers.\n\n",
         table(arms, ["arm", "n_fits", "params", "dev_val_acc_mean", "dev_val_acc_sd",
                      "dev_val_within_fold_seed_sd", "dev_val_worst_rx_seedmean",
                      "dev_val_f1_mean", "confirm_acc_mean", "confirm_acc_sd",
                      "confirm_worst_rx_seedmean", "src_val_acc", "best_epoch_median"]),
+        "\n## Exploration Versus Confirmation\n\n",
+        "All four exploration fits per arm, dev_val only; none were used to remove "
+        "arms from confirmation. Compare against the six new-seed fits above.\n\n",
+        table(explore_arms, ["arm", "n_fits", "dev_val_acc_mean", "dev_val_acc_sd",
+                            "dev_val_within_fold_seed_sd", "dev_val_worst_rx_seedmean"]),
+        "\n" + table([dict(arm=name, exploration=explore_decision["verdicts_dev_val"][name],
+                          confirmation=verdicts[name]) for name in sorted(verdicts)],
+                     ["arm", "exploration", "confirmation"]),
         "\n## Paired Comparisons\n\n",
         "Delta is B minus A, pp. Decisions below use dev_val only. "
         "Confirm comparisons and every per-RX mean are in "
