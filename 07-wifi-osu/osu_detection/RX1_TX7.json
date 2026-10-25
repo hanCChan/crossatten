@@ -1,0 +1,493 @@
+{
+ "rx": "RX1",
+ "tx": 7,
+ "raw_bytes": 160000000,
+ "raw_sha256": "f9b4b857e5e4a5457b8108e0e5dac8c26a20ea26e88cc80d952b1c1f4c911d3e",
+ "metadata_sha256": "c5ba76b665bf5f6cf6035123f03ad579f8c723fd94a2366bb1cc2b99988c3f95",
+ "registration_sha256": "6798d45a9dba3322d92df36f7096e4ae0fbe4b2af15a34e194a054f8668908ec",
+ "records": [
+  {
+   "start": 15007,
+   "coherence": 0.99852617084461,
+   "up_tone": 0.9735634332150469,
+   "tone_spread": 0.0,
+   "down_tone": 0.5247195499347297
+  },
+  {
+   "start": 424010,
+   "coherence": 0.9984724311609365,
+   "up_tone": 0.9803486574304723,
+   "tone_spread": 0.0,
+   "down_tone": 0.46749047413450434
+  },
+  {
+   "start": 833013,
+   "coherence": 0.9984874322119872,
+   "up_tone": 0.9755442666074334,
+   "tone_spread": 0.0,
+   "down_tone": 0.5145613315646762
+  },
+  {
+   "start": 1242019,
+   "coherence": 0.9986138689670355,
+   "up_tone": 0.9497907745275774,
+   "tone_spread": 0.0,
+   "down_tone": 0.610359918850587
+  },
+  {
+   "start": 1651020,
+   "coherence": 0.9985567641906821,
+   "up_tone": 0.9807939339038494,
+   "tone_spread": 0.0,
+   "down_tone": 0.4520932501644784
+  },
+  {
+   "start": 2060022,
+   "coherence": 0.9984114426078191,
+   "up_tone": 0.9778268636738117,
+   "tone_spread": 0.0,
+   "down_tone": 0.4979218803377199
+  },
+  {
+   "start": 2469028,
+   "coherence": 0.9985816061814975,
+   "up_tone": 0.9685661912051091,
+   "tone_spread": 0.0,
+   "down_tone": 0.5475324889351081
+  },
+  {
+   "start": 2878028,
+   "coherence": 0.9985331255657958,
+   "up_tone": 0.980821234433438,
+   "tone_spread": 0.0,
+   "down_tone": 0.4335328615522732
+  },
+  {
+   "start": 3287034,
+   "coherence": 0.9986231139533611,
+   "up_tone": 0.9790299416147628,
+   "tone_spread": 0.0,
+   "down_tone": 0.48533734448976096
+  },
+  {
+   "start": 3696037,
+   "coherence": 0.998628279516342,
+   "up_tone": 0.9722485887266046,
+   "tone_spread": 0.0,
+   "down_tone": 0.5304519099358217
+  },
+  {
+   "start": 4105036,
+   "coherence": 0.9984332924274636,
+   "up_tone": 0.9183338515481979,
+   "tone_spread": 0.0,
+   "down_tone": 0.6761795938510874
+  },
+  {
+   "start": 4514040,
+   "coherence": 0.9984832080353593,
+   "up_tone": 0.9798419223689154,
+   "tone_spread": 0.0,
+   "down_tone": 0.47491964080430765
+  },
+  {
+   "start": 4923043,
+   "coherence": 0.9984812336128184,
+   "up_tone": 0.9743213980051739,
+   "tone_spread": 0.0,
+   "down_tone": 0.5193825323772098
+  },
+  {
+   "start": 5332046,
+   "coherence": 0.9985318396100397,
+   "up_tone": 0.9796837107639488,
+   "tone_spread": 0.0,
+   "down_tone": 0.41449940511892336
+  },
+  {
+   "start": 5741047,
+   "coherence": 0.9982302418458916,
+   "up_tone": 0.6158289666471415,
+   "tone_spread": 0.0,
+   "down_tone": 0.8982115527753286
+  },
+  {
+   "start": 6150054,
+   "coherence": 0.9985833411159116,
+   "up_tone": 0.9484978671036882,
+   "tone_spread": 0.0,
+   "down_tone": 0.6120282295635663
+  },
+  {
+   "start": 6559058,
+   "coherence": 0.9986029198592151,
+   "up_tone": 0.9756878313829139,
+   "tone_spread": 0.0,
+   "down_tone": 0.5095540605506251
+  },
+  {
+   "start": 6968058,
+   "coherence": 0.9984881117718865,
+   "up_tone": 0.9805635421435576,
+   "tone_spread": 0.0,
+   "down_tone": 0.46096324077937817
+  },
+  {
+   "start": 7377061,
+   "coherence": 0.9984579854869513,
+   "up_tone": 0.9806979955965183,
+   "tone_spread": 0.0,
+   "down_tone": 0.45418416292068436
+  },
+  {
+   "start": 7786117,
+   "coherence": 0.9986281507663085,
+   "up_tone": 0.9732895800686143,
+   "tone_spread": 0.0,
+   "down_tone": 0.5260463163773059
+  },
+  {
+   "start": 8195067,
+   "coherence": 0.9985564533008614,
+   "up_tone": 0.9783481230916478,
+   "tone_spread": 0.0,
+   "down_tone": 0.41006449615383
+  },
+  {
+   "start": 8604073,
+   "coherence": 0.9986317767297773,
+   "up_tone": 0.9807667903174606,
+   "tone_spread": 0.0,
+   "down_tone": 0.45328707408288704
+  },
+  {
+   "start": 9013076,
+   "coherence": 0.9985021816006717,
+   "up_tone": 0.9770217124180005,
+   "tone_spread": 0.0,
+   "down_tone": 0.5019270273059403
+  },
+  {
+   "start": 9422079,
+   "coherence": 0.9984105363327989,
+   "up_tone": 0.9774863922376538,
+   "tone_spread": 0.0,
+   "down_tone": 0.4143010021446164
+  },
+  {
+   "start": 9831082,
+   "coherence": 0.9985398567092104,
+   "up_tone": 0.9777494169224017,
+   "tone_spread": 0.0,
+   "down_tone": 0.49861316057560356
+  },
+  {
+   "start": 10157417,
+   "coherence": 0.9986454152424992,
+   "up_tone": 0.976395173369883,
+   "tone_spread": 0.0,
+   "down_tone": 0.426948861858097
+  },
+  {
+   "start": 10566416,
+   "coherence": 0.9984200575195182,
+   "up_tone": 0.9712155683394792,
+   "tone_spread": 0.0,
+   "down_tone": 0.5360702152023968
+  },
+  {
+   "start": 10975419,
+   "coherence": 0.9983234133494655,
+   "up_tone": 0.9590949578319092,
+   "tone_spread": 0.0,
+   "down_tone": 0.5818366673149459
+  },
+  {
+   "start": 11384426,
+   "coherence": 0.9985878044631097,
+   "up_tone": 0.9755269246751122,
+   "tone_spread": 0.0,
+   "down_tone": 0.43077380662736403
+  },
+  {
+   "start": 11793429,
+   "coherence": 0.998662651274449,
+   "up_tone": 0.9805786699228902,
+   "tone_spread": 0.0,
+   "down_tone": 0.4314413411158195
+  },
+  {
+   "start": 12202429,
+   "coherence": 0.998678770305724,
+   "up_tone": 0.9759421476424158,
+   "tone_spread": 0.0,
+   "down_tone": 0.4278607464554349
+  },
+  {
+   "start": 12611434,
+   "coherence": 0.9986282092512713,
+   "up_tone": 0.9731174022429419,
+   "tone_spread": 0.0,
+   "down_tone": 0.5294178142587965
+  },
+  {
+   "start": 13020438,
+   "coherence": 0.9987326264398056,
+   "up_tone": 0.9750740164444193,
+   "tone_spread": 0.0,
+   "down_tone": 0.4332225943431952
+  },
+  {
+   "start": 13429441,
+   "coherence": 0.9987395659222835,
+   "up_tone": 0.975221102353618,
+   "tone_spread": 0.0,
+   "down_tone": 0.43230031403259195
+  },
+  {
+   "start": 13838440,
+   "coherence": 0.9985382145604124,
+   "up_tone": 0.9725870847154124,
+   "tone_spread": 0.0,
+   "down_tone": 0.529295853911507
+  },
+  {
+   "start": 14247446,
+   "coherence": 0.9987001038456725,
+   "up_tone": 0.9736543591030637,
+   "tone_spread": 0.0,
+   "down_tone": 0.5236565572476914
+  },
+  {
+   "start": 14656450,
+   "coherence": 0.9987242321580351,
+   "up_tone": 0.9745719868581488,
+   "tone_spread": 0.0,
+   "down_tone": 0.43815291802839496
+  },
+  {
+   "start": 15065453,
+   "coherence": 0.9987469947350711,
+   "up_tone": 0.9804078491600945,
+   "tone_spread": 0.0,
+   "down_tone": 0.42595975150695764
+  },
+  {
+   "start": 15474454,
+   "coherence": 0.9986620964528361,
+   "up_tone": 0.9631486244142935,
+   "tone_spread": 0.0,
+   "down_tone": 0.48564557471949105
+  },
+  {
+   "start": 15883456,
+   "coherence": 0.9986544401309257,
+   "up_tone": 0.9751309386620635,
+   "tone_spread": 0.0,
+   "down_tone": 0.43451128031432085
+  },
+  {
+   "start": 16292461,
+   "coherence": 0.9986525200830573,
+   "up_tone": 0.9206834479037553,
+   "tone_spread": 0.0,
+   "down_tone": 0.6741758187730725
+  },
+  {
+   "start": 16701464,
+   "coherence": 0.9986115415010921,
+   "up_tone": 0.9435837546437763,
+   "tone_spread": 0.0,
+   "down_tone": 0.6241324943771024
+  },
+  {
+   "start": 17110468,
+   "coherence": 0.9987022254281391,
+   "up_tone": 0.9801723512713272,
+   "tone_spread": 0.0,
+   "down_tone": 0.4237757076962233
+  },
+  {
+   "start": 17519470,
+   "coherence": 0.9986656853849482,
+   "up_tone": 0.9740694651808917,
+   "tone_spread": 0.0,
+   "down_tone": 0.5252047551241339
+  },
+  {
+   "start": 17928473,
+   "coherence": 0.9986457067214425,
+   "up_tone": 0.9615717058839233,
+   "tone_spread": 0.0,
+   "down_tone": 0.57705076545025
+  },
+  {
+   "start": 18337477,
+   "coherence": 0.9986893821110971,
+   "up_tone": 0.9798399109194194,
+   "tone_spread": 0.0,
+   "down_tone": 0.419684016812584
+  },
+  {
+   "start": 18746480,
+   "coherence": 0.9987747571439322,
+   "up_tone": 0.9799999086076618,
+   "tone_spread": 0.0,
+   "down_tone": 0.41865049027056916
+  },
+  {
+   "start": 19155480,
+   "coherence": 0.998677532198601,
+   "up_tone": 0.9735085727429791,
+   "tone_spread": 0.0,
+   "down_tone": 0.44094862326071016
+  },
+  {
+   "start": 19564486,
+   "coherence": 0.9987194608941243,
+   "up_tone": 0.979988712350352,
+   "tone_spread": 0.0,
+   "down_tone": 0.42191439549188176
+  },
+  {
+   "start": 19973485,
+   "coherence": 0.9985974476498547,
+   "up_tone": 0.9623937241474326,
+   "tone_spread": 0.0,
+   "down_tone": 0.5738444274160925
+  }
+ ],
+ "rejected": [
+  {
+   "coarse_start": 5888,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 414720,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 823808,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 2050688,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 2459776,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 2868864,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 4913920,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 5322752,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 6549888,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 7776896,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 8185856,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 8594944,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 9003776,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 9412864,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 10557056,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 11375232,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 11784064,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 12193280,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 13011200,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 13420288,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 13829120,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 14238080,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 15056256,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 15465344,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 15874176,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 17101312,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 17510144,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 18328192,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 18737280,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 19146368,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  },
+  {
+   "coarse_start": 19555200,
+   "reason": "chirp-boundary/tone/SFD gate failed"
+  }
+ ],
+ "counts": {
+  "train": 25,
+  "val": 9,
+  "target": 13
+ },
+ "cache_sha256": "f00a3671c7b0bd9cbfd2a28769b85339bca13d1461f90b54ae1debef967d9058",
+ "finite": true
+}
