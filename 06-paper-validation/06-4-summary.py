@@ -333,6 +333,7 @@ def main():
     lines += ["", "## Interpretation Limits", "",
               "- CRD is the primary WiSig task. W0/W1/W2 remain separate; no target-based winner selection.",
               "- Final configuration choices use only source RX days 1-2; source evidence and decisions are committed before target access.",
+              "- W2's fixed cutoff comes from the earlier fold-0 source PSD audit, not independent per-fold estimation. Those RX can be targets in other folds; W2 is not pristine per-fold source-only preprocessing evidence. W0/W1 do not use this cutoff.",
               "- Shen confirm RX were inspected repeatedly and are report-only, not independent blind-test evidence.",
               "- Published weights in `05-wisig/RESULTS.md` are historical references, not fair multiseed retraining.",
               "- HSTU attribution requires W1 vs C0 and matched CNN controls; parameter efficiency does not imply faster inference.",
