@@ -173,6 +173,9 @@ def collect():
     for path in sorted((HERE / "runs").glob("*/*/stdout.log")):
         if "Traceback (most recent call last)" in path.read_text(errors="replace"):
             failures.append(dict(log=str(path.relative_to(HERE))))
+    for path in sorted((HERE / "runs").glob("*/*/attempt_*")):
+        failures.append(dict(attempt=str(path.relative_to(HERE)),
+                             disposition="retained incomplete attempt before same-config retry"))
     checks = dict(validated=len(results), problems=problems, missing=missing,
                   extra=extra, failures=failures,
                   complete=not problems and not any(missing.values()) and not any(extra.values())
@@ -213,7 +216,7 @@ def main():
              "", "## Completion", "", "| Stage | Finished | Missing |", "|---|---:|---:|"]
     for stage in ("source", "explore", "final", "confirm"):
         lines.append(f"| {stage} | {sum(r['stage'] == stage for r in results)} | {len(checks['missing'][stage])} |")
-    lines += ["", f"Artifact audit issues: {len(checks['problems'])}; recorded failure entries: {len(checks['failures'])}.",
+    lines += ["", f"Artifact audit issues: {len(checks['problems'])}; recorded failure/interruption entries: {len(checks['failures'])}.",
               "A failed execution is not discarded; a subsequent successful retry may complete its registered fit.",
               "", "## Final Comparisons", "",
               "All values are percent. RX accuracy SD across fits combines fold and seed variation.",

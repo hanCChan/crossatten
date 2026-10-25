@@ -57,3 +57,7 @@ env PYTHONPATH=lib python 06-paper-validation/06-4-summary.py --require-complete
 
 汇总会拒绝损坏/不完整记录，显示缺失fit和失败日志，将fold与seed的波动分开报告。
 正式完成后以 `RESULTS.md` 与 `summary/report.json` 为准。FAN上游CUDA median存在非确定性警告，保留上游实现，不宣称固定seed能保证逐比特复现。
+
+18:12 调度切换中，旧会话终止了10个尚未完成的fit。其 stdout/config/history 均保留在对应 `attempt_*` 目录，使用相同注册配置从头重跑，已完成fit不重跑。
+这不是模型收敛失败，也不能从总报告中删去该中断记录。后续由本阶段独立调度器保留每次尝试，并使用文件锁避免同一任务重复启动。
+源域决定通过完整性审计后自动提交，再允许对应目标域评估；任何未完成/失败队列都阻止该线向下一阶段推进。
