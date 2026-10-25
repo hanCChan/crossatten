@@ -68,6 +68,8 @@ def main():
         summary.append(dict(dataset=dataset, pipeline=pipeline, task=task, fits=len(values),
                             rx_accuracy_pct=100*np.mean([v["acc"] for v in values]),
                             packet_accuracy_pct=100*np.mean([v["packet_acc"] for v in values]),
+                            pooled_packet_accuracy_pct=100*sum(r["correct"] for r in selected) /
+                                                       sum(r["total"] for r in selected),
                             rx_macro_f1_pct=100*np.mean([v["f1"] for v in values]),
                             seed_sd_pp=100*np.std(list(seeds.values()), ddof=1),
                             fold_sd_pp=100*np.std(list(folds.values()), ddof=1),
@@ -126,7 +128,9 @@ def main():
              "CRD is primary. The public targets were previously inspected; this is not a fresh blind test. ",
              "S06 external fair baselines are frozen and use the same normalization and cell budgets. ",
              "S07 seeds4101/4102/4103 are not paired with S06 training seeds. ",
-             "Receiver-clustered intervals condition on trained models and do not represent independent datasets.\n\n",
+             "Receiver-clustered intervals condition on trained models and do not represent independent datasets. ",
+             "`Packet acc` is the official four-fold mean of packet-weighted scores; ",
+             "the CSV additionally contains accuracy pooled over all test packets/folds/seeds.\n\n",
              "| Dataset | Pipeline | Task | RX acc % | Packet acc % | Macro-F1 % | Seed SD pp | Worst RX % | Params |\n",
              "|---|---|---|---:|---:|---:|---:|---:|---:|\n"]
     for r in summary:

@@ -70,6 +70,8 @@ class ReportTest(unittest.TestCase):
                 self.assertEqual(len(intervals), 24)
                 self.assertEqual(len(evidence["duplicate_pipelines"]), 6)
                 self.assertTrue(all(float(r["seed_sd_pp"]) == 0 for r in metrics))
+                self.assertTrue(all(abs(float(r["pooled_packet_accuracy_pct"]) -
+                                        float(r["packet_accuracy_pct"])) < 1e-8 for r in metrics))
                 for row in intervals:
                     self.assertAlmostEqual(float(row["delta_pp"]), 5)
                     self.assertAlmostEqual(float(row["ci95_low_pp"]), 5)
