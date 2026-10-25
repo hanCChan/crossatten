@@ -1,0 +1,98 @@
+{
+ "env": {
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "torch": "2.5.0+cu124",
+  "cpu_threads": 4,
+  "note": "random weights; raw IQ on device to logits; FFT/scalar ops included in timing, not fully in FLOPs"
+ },
+ "arms": [
+  {
+   "arm": "s03_base",
+   "params": 580008,
+   "mflops_per_packet": 139.2,
+   "gpu_b1_ms_p50": 2.321,
+   "gpu_b1_ms_p95": 3.469,
+   "gpu_b1_ms_p99": 4.253,
+   "gpu_b512_pkts_per_s": 41375,
+   "cpu4t_b1_ms_p50": 6.44,
+   "cpu4t_b1_ms_p95": 8.17
+  },
+  {
+   "arm": "s03_preln",
+   "params": 580136,
+   "mflops_per_packet": 139.2,
+   "gpu_b1_ms_p50": 2.276,
+   "gpu_b1_ms_p95": 3.533,
+   "gpu_b1_ms_p99": 3.742,
+   "gpu_b512_pkts_per_s": 41234,
+   "cpu4t_b1_ms_p50": 7.12,
+   "cpu4t_b1_ms_p95": 9.05
+  },
+  {
+   "arm": "s03_preln_d4",
+   "params": 622374,
+   "mflops_per_packet": 142.3,
+   "gpu_b1_ms_p50": 3.075,
+   "gpu_b1_ms_p95": 4.524,
+   "gpu_b1_ms_p99": 5.033,
+   "gpu_b512_pkts_per_s": 39055,
+   "cpu4t_b1_ms_p50": 8.34,
+   "cpu4t_b1_ms_p95": 10.61
+  },
+  {
+   "arm": "s03_resid",
+   "params": 580584,
+   "mflops_per_packet": 146.5,
+   "gpu_b1_ms_p50": 2.328,
+   "gpu_b1_ms_p95": 3.744,
+   "gpu_b1_ms_p99": 4.521,
+   "gpu_b512_pkts_per_s": 40470,
+   "cpu4t_b1_ms_p50": 6.53,
+   "cpu4t_b1_ms_p95": 8.52
+  },
+  {
+   "arm": "s03_nofft",
+   "params": 579912,
+   "mflops_per_packet": 135.5,
+   "gpu_b1_ms_p50": 1.657,
+   "gpu_b1_ms_p95": 1.793,
+   "gpu_b1_ms_p99": 1.949,
+   "gpu_b512_pkts_per_s": 46354,
+   "cpu4t_b1_ms_p50": 4.64,
+   "cpu4t_b1_ms_p95": 5.43
+  },
+  {
+   "arm": "s03_symstack",
+   "params": 579912,
+   "mflops_per_packet": 135.5,
+   "gpu_b1_ms_p50": 1.726,
+   "gpu_b1_ms_p95": 1.794,
+   "gpu_b1_ms_p99": 1.816,
+   "gpu_b512_pkts_per_s": 46011,
+   "cpu4t_b1_ms_p50": 3.6,
+   "cpu4t_b1_ms_p95": 4.17
+  },
+  {
+   "arm": "s03_ifreq",
+   "params": 580360,
+   "mflops_per_packet": 142.9,
+   "gpu_b1_ms_p50": 2.45,
+   "gpu_b1_ms_p95": 3.457,
+   "gpu_b1_ms_p99": 3.887,
+   "gpu_b512_pkts_per_s": 40532,
+   "cpu4t_b1_ms_p50": 5.76,
+   "cpu4t_b1_ms_p95": 8.2
+  },
+  {
+   "arm": "s03_hstem",
+   "params": 142392,
+   "mflops_per_packet": 190.6,
+   "gpu_b1_ms_p50": 2.53,
+   "gpu_b1_ms_p95": 2.99,
+   "gpu_b1_ms_p99": 4.013,
+   "gpu_b512_pkts_per_s": 36101,
+   "cpu4t_b1_ms_p50": 6.08,
+   "cpu4t_b1_ms_p95": 7.57
+  }
+ ]
+}
