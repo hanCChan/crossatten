@@ -1,0 +1,2 @@
+{"run": "CP_ManySig_unified__f0__s0", "epoch": 1, "source_ce": 1.81102, "train_s": 0.6}
+{"run_id": "CP_ManySig_unified__f0__s0", "arm": "CP_ManySig_unified", "dataset": "ManySig", "fold": 0, "seed": 0, "stage": "smoke", "params": 91456, "best_val_epoch": 2, "stop_epoch": 2, "epochs_budget": 2, "source_val_ce": 1.8008301258087158, "source_val_acc": 0.16388890147209167, "train_seconds": 0.8, "wall_seconds": 3.8, "gpu_peak_mem_gb": 0.13}

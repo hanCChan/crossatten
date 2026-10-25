@@ -1,0 +1,18 @@
+{
+ "run_id": "CF_ManyRx_official__f0__s0",
+ "arm": "CF_ManyRx_official",
+ "dataset": "ManyRx",
+ "fold": 0,
+ "seed": 0,
+ "stage": "smoke",
+ "params": 52718,
+ "best_val_epoch": 2,
+ "stop_epoch": 2,
+ "epochs_budget": 2,
+ "source_val_ce": 2.299679756164551,
+ "source_val_acc": 0.11211533844470978,
+ "train_seconds": 1.2,
+ "selected": {},
+ "wall_seconds": 3.6,
+ "gpu_peak_mem_gb": 0.202
+}

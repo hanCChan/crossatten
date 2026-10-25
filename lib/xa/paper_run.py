@@ -12,7 +12,7 @@ def main():
     parser.add_argument("--arm", required=True)
     parser.add_argument("--fold", type=int, required=True)
     parser.add_argument("--seed", type=int, required=True)
-    parser.add_argument("--stage", required=True)
+    parser.add_argument("--stage", required=True, choices=("smoke", "source", "explore", "final", "confirm"))
     parser.add_argument("--out", required=True)
     parser.add_argument("--decision-file")
     args = parser.parse_args()

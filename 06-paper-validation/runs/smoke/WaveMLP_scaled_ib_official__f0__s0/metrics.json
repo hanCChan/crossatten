@@ -1,0 +1,18 @@
+{
+ "run_id": "WaveMLP_scaled_ib_official__f0__s0",
+ "arm": "WaveMLP_scaled_ib_official",
+ "dataset": "Shen",
+ "fold": 0,
+ "seed": 0,
+ "stage": "smoke",
+ "params": 594442,
+ "best_val_epoch": 1,
+ "stop_epoch": 2,
+ "epochs_budget": 2,
+ "source_val_ce": 2.3335845470428467,
+ "source_val_acc": 0.09350000321865082,
+ "train_seconds": 3.8,
+ "selected": {},
+ "wall_seconds": 23.8,
+ "gpu_peak_mem_gb": 1.054
+}

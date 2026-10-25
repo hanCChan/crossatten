@@ -1,0 +1,18 @@
+{
+ "run_id": "IB-RFF_a0.04_ManyRx_official__f0__s0",
+ "arm": "IB-RFF_a0.04_ManyRx_official",
+ "dataset": "ManyRx",
+ "fold": 0,
+ "seed": 0,
+ "stage": "smoke",
+ "params": 151761,
+ "best_val_epoch": 2,
+ "stop_epoch": 2,
+ "epochs_budget": 2,
+ "source_val_ce": 2.302762031555176,
+ "source_val_acc": 0.10444013774394989,
+ "train_seconds": 1.3,
+ "selected": {},
+ "wall_seconds": 3.7,
+ "gpu_peak_mem_gb": 0.213
+}

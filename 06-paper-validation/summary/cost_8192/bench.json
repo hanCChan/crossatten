@@ -1,0 +1,131 @@
+{
+ "env": {
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "torch": "2.5.0+cu124",
+  "cpu_threads": 4,
+  "note": "random weights; raw IQ on device to logits; FFT/scalar ops included in timing, not fully in FLOPs"
+ },
+ "arms": [
+  {
+   "arm": "FAN_full_official",
+   "params": 310481,
+   "mflops_per_packet": 18.5,
+   "gpu_b1_ms_p50": 1.711,
+   "gpu_b1_ms_p95": 2.842,
+   "gpu_b1_ms_p99": 3.374,
+   "gpu_b512_pkts_per_s": 204657,
+   "cpu4t_b1_ms_p50": 2.66,
+   "cpu4t_b1_ms_p95": 3.45
+  },
+  {
+   "arm": "WaveMLP_absolute_full_official",
+   "params": 85258,
+   "mflops_per_packet": 49.9,
+   "gpu_b1_ms_p50": 5.897,
+   "gpu_b1_ms_p95": 8.055,
+   "gpu_b1_ms_p99": 8.629,
+   "gpu_b512_pkts_per_s": 45503,
+   "cpu4t_b1_ms_p50": 14.17,
+   "cpu4t_b1_ms_p95": 16.24
+  },
+  {
+   "arm": "WaveMLP_scaled_full_official",
+   "params": 594442,
+   "mflops_per_packet": 16.6,
+   "gpu_b1_ms_p50": 10.789,
+   "gpu_b1_ms_p95": 14.273,
+   "gpu_b1_ms_p99": 15.076,
+   "gpu_b512_pkts_per_s": 34282,
+   "cpu4t_b1_ms_p50": 16.93,
+   "cpu4t_b1_ms_p95": 20.89
+  },
+  {
+   "arm": "FAN_ib_official",
+   "params": 310481,
+   "mflops_per_packet": 18.5,
+   "gpu_b1_ms_p50": 1.868,
+   "gpu_b1_ms_p95": 1.955,
+   "gpu_b1_ms_p99": 2.574,
+   "gpu_b512_pkts_per_s": 176435,
+   "cpu4t_b1_ms_p50": 2.57,
+   "cpu4t_b1_ms_p95": 2.65
+  },
+  {
+   "arm": "WaveMLP_absolute_ib_official",
+   "params": 85258,
+   "mflops_per_packet": 49.9,
+   "gpu_b1_ms_p50": 5.777,
+   "gpu_b1_ms_p95": 6.001,
+   "gpu_b1_ms_p99": 6.168,
+   "gpu_b512_pkts_per_s": 44375,
+   "cpu4t_b1_ms_p50": 12.74,
+   "cpu4t_b1_ms_p95": 13.75
+  },
+  {
+   "arm": "WaveMLP_scaled_ib_official",
+   "params": 594442,
+   "mflops_per_packet": 16.6,
+   "gpu_b1_ms_p50": 10.276,
+   "gpu_b1_ms_p95": 10.667,
+   "gpu_b1_ms_p99": 11.446,
+   "gpu_b512_pkts_per_s": 35276,
+   "cpu4t_b1_ms_p50": 14.05,
+   "cpu4t_b1_ms_p95": 14.84
+  },
+  {
+   "arm": "S_base",
+   "params": 580136,
+   "mflops_per_packet": 139.2,
+   "gpu_b1_ms_p50": 2.164,
+   "gpu_b1_ms_p95": 2.237,
+   "gpu_b1_ms_p99": 2.32,
+   "gpu_b512_pkts_per_s": 42602,
+   "cpu4t_b1_ms_p50": 4.34,
+   "cpu4t_b1_ms_p95": 4.64
+  },
+  {
+   "arm": "S_hstem",
+   "params": 142392,
+   "mflops_per_packet": 190.6,
+   "gpu_b1_ms_p50": 2.533,
+   "gpu_b1_ms_p95": 3.806,
+   "gpu_b1_ms_p99": 4.393,
+   "gpu_b512_pkts_per_s": 35867,
+   "cpu4t_b1_ms_p50": 5.02,
+   "cpu4t_b1_ms_p95": 6.05
+  },
+  {
+   "arm": "S_cnnonly",
+   "params": 100154,
+   "mflops_per_packet": 187.4,
+   "gpu_b1_ms_p50": 1.838,
+   "gpu_b1_ms_p95": 1.927,
+   "gpu_b1_ms_p99": 2.127,
+   "gpu_b512_pkts_per_s": 37895,
+   "cpu4t_b1_ms_p50": 4.88,
+   "cpu4t_b1_ms_p95": 5.84
+  },
+  {
+   "arm": "S_cnnparam",
+   "params": 138898,
+   "mflops_per_packet": 18.5,
+   "gpu_b1_ms_p50": 1.889,
+   "gpu_b1_ms_p95": 3.19,
+   "gpu_b1_ms_p99": 4.019,
+   "gpu_b512_pkts_per_s": 97639,
+   "cpu4t_b1_ms_p50": 2.6,
+   "cpu4t_b1_ms_p95": 3.8
+  },
+  {
+   "arm": "S_cnnflops",
+   "params": 655358,
+   "mflops_per_packet": 188.1,
+   "gpu_b1_ms_p50": 1.55,
+   "gpu_b1_ms_p95": 2.058,
+   "gpu_b1_ms_p99": 2.309,
+   "gpu_b512_pkts_per_s": 31735,
+   "cpu4t_b1_ms_p50": 6.73,
+   "cpu4t_b1_ms_p95": 8.4
+  }
+ ]
+}

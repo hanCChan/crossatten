@@ -1,0 +1,2 @@
+{"run": "WaveMLP_alternate_ManySig_unified__f0__s0", "epoch": 1, "source_ce": 1.79352, "train_s": 1.0}
+{"run_id": "WaveMLP_alternate_ManySig_unified__f0__s0", "arm": "WaveMLP_alternate_ManySig_unified", "dataset": "ManySig", "fold": 0, "seed": 0, "stage": "smoke", "params": 84742, "best_val_epoch": 2, "stop_epoch": 2, "epochs_budget": 2, "source_val_ce": 1.7895658016204834, "source_val_acc": 0.22067901492118835, "train_seconds": 1.4, "wall_seconds": 4.6, "gpu_peak_mem_gb": 0.089}

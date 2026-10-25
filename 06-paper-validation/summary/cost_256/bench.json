@@ -1,0 +1,208 @@
+{
+ "env": {
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "torch": "2.5.0+cu124",
+  "cpu_threads": 4,
+  "note": "random weights; raw IQ on device to logits; FFT/scalar ops included in timing, not fully in FLOPs"
+ },
+ "arms": [
+  {
+   "arm": "W0_ManyRx_official",
+   "params": 72232,
+   "mflops_per_packet": 7.7,
+   "gpu_b1_ms_p50": 2.015,
+   "gpu_b1_ms_p95": 2.836,
+   "gpu_b1_ms_p99": 3.27,
+   "gpu_b512_pkts_per_s": 242215,
+   "cpu4t_b1_ms_p50": 1.59,
+   "cpu4t_b1_ms_p95": 2.22
+  },
+  {
+   "arm": "W1_ManyRx_official",
+   "params": 91128,
+   "mflops_per_packet": 10.8,
+   "gpu_b1_ms_p50": 2.295,
+   "gpu_b1_ms_p95": 3.059,
+   "gpu_b1_ms_p99": 3.433,
+   "gpu_b512_pkts_per_s": 200982,
+   "cpu4t_b1_ms_p50": 1.87,
+   "cpu4t_b1_ms_p95": 2.09
+  },
+  {
+   "arm": "W2_ManyRx_official",
+   "params": 91128,
+   "mflops_per_packet": 10.8,
+   "gpu_b1_ms_p50": 2.494,
+   "gpu_b1_ms_p95": 3.446,
+   "gpu_b1_ms_p99": 4.08,
+   "gpu_b512_pkts_per_s": 185488,
+   "cpu4t_b1_ms_p50": 2.02,
+   "cpu4t_b1_ms_p95": 2.67
+  },
+  {
+   "arm": "C0_ManyRx_official",
+   "params": 48890,
+   "mflops_per_packet": 7.7,
+   "gpu_b1_ms_p50": 1.567,
+   "gpu_b1_ms_p95": 1.9,
+   "gpu_b1_ms_p99": 2.062,
+   "gpu_b512_pkts_per_s": 311151,
+   "cpu4t_b1_ms_p50": 1.26,
+   "cpu4t_b1_ms_p95": 1.42
+  },
+  {
+   "arm": "CP_ManyRx_official",
+   "params": 91716,
+   "mflops_per_packet": 23.6,
+   "gpu_b1_ms_p50": 1.329,
+   "gpu_b1_ms_p95": 1.757,
+   "gpu_b1_ms_p99": 1.876,
+   "gpu_b512_pkts_per_s": 247952,
+   "cpu4t_b1_ms_p50": 1.31,
+   "cpu4t_b1_ms_p95": 1.45
+  },
+  {
+   "arm": "CF_ManyRx_official",
+   "params": 52718,
+   "mflops_per_packet": 10.8,
+   "gpu_b1_ms_p50": 1.26,
+   "gpu_b1_ms_p95": 1.456,
+   "gpu_b1_ms_p99": 1.636,
+   "gpu_b512_pkts_per_s": 303505,
+   "cpu4t_b1_ms_p50": 1.02,
+   "cpu4t_b1_ms_p95": 1.3
+  },
+  {
+   "arm": "FAN_ManyRx_official",
+   "params": 151761,
+   "mflops_per_packet": 10.6,
+   "gpu_b1_ms_p50": 1.664,
+   "gpu_b1_ms_p95": 2.595,
+   "gpu_b1_ms_p99": 3.279,
+   "gpu_b512_pkts_per_s": 331868,
+   "cpu4t_b1_ms_p50": 1.83,
+   "cpu4t_b1_ms_p95": 2.98
+  },
+  {
+   "arm": "WaveMLP_default_ManyRx_official",
+   "params": 85258,
+   "mflops_per_packet": 1.4,
+   "gpu_b1_ms_p50": 5.521,
+   "gpu_b1_ms_p95": 7.296,
+   "gpu_b1_ms_p99": 7.746,
+   "gpu_b512_pkts_per_s": 75297,
+   "cpu4t_b1_ms_p50": 3.32,
+   "cpu4t_b1_ms_p95": 3.99
+  },
+  {
+   "arm": "WaveMLP_alternate_ManyRx_official",
+   "params": 84490,
+   "mflops_per_packet": 1.3,
+   "gpu_b1_ms_p50": 4.34,
+   "gpu_b1_ms_p95": 4.413,
+   "gpu_b1_ms_p99": 4.539,
+   "gpu_b512_pkts_per_s": 116966,
+   "cpu4t_b1_ms_p50": 2.7,
+   "cpu4t_b1_ms_p95": 2.78
+  },
+  {
+   "arm": "W0_ManySig_official",
+   "params": 71972,
+   "mflops_per_packet": 7.7,
+   "gpu_b1_ms_p50": 1.949,
+   "gpu_b1_ms_p95": 1.984,
+   "gpu_b1_ms_p99": 2.114,
+   "gpu_b512_pkts_per_s": 245934,
+   "cpu4t_b1_ms_p50": 1.46,
+   "cpu4t_b1_ms_p95": 1.52
+  },
+  {
+   "arm": "W1_ManySig_official",
+   "params": 90868,
+   "mflops_per_packet": 10.8,
+   "gpu_b1_ms_p50": 2.209,
+   "gpu_b1_ms_p95": 2.262,
+   "gpu_b1_ms_p99": 2.328,
+   "gpu_b512_pkts_per_s": 210251,
+   "cpu4t_b1_ms_p50": 1.8,
+   "cpu4t_b1_ms_p95": 1.91
+  },
+  {
+   "arm": "W2_ManySig_official",
+   "params": 90868,
+   "mflops_per_packet": 10.8,
+   "gpu_b1_ms_p50": 2.42,
+   "gpu_b1_ms_p95": 2.467,
+   "gpu_b1_ms_p99": 2.536,
+   "gpu_b512_pkts_per_s": 190376,
+   "cpu4t_b1_ms_p50": 1.93,
+   "cpu4t_b1_ms_p95": 2.01
+  },
+  {
+   "arm": "C0_ManySig_official",
+   "params": 48630,
+   "mflops_per_packet": 7.7,
+   "gpu_b1_ms_p50": 1.549,
+   "gpu_b1_ms_p95": 1.576,
+   "gpu_b1_ms_p99": 1.595,
+   "gpu_b512_pkts_per_s": 316597,
+   "cpu4t_b1_ms_p50": 1.22,
+   "cpu4t_b1_ms_p95": 1.28
+  },
+  {
+   "arm": "CP_ManySig_official",
+   "params": 91456,
+   "mflops_per_packet": 23.6,
+   "gpu_b1_ms_p50": 1.313,
+   "gpu_b1_ms_p95": 1.34,
+   "gpu_b1_ms_p99": 1.372,
+   "gpu_b512_pkts_per_s": 250440,
+   "cpu4t_b1_ms_p50": 1.33,
+   "cpu4t_b1_ms_p95": 1.45
+  },
+  {
+   "arm": "CF_ManySig_official",
+   "params": 52458,
+   "mflops_per_packet": 10.8,
+   "gpu_b1_ms_p50": 1.261,
+   "gpu_b1_ms_p95": 1.358,
+   "gpu_b1_ms_p99": 1.487,
+   "gpu_b512_pkts_per_s": 307799,
+   "cpu4t_b1_ms_p50": 0.99,
+   "cpu4t_b1_ms_p95": 1.07
+  },
+  {
+   "arm": "FAN_ManySig_official",
+   "params": 146605,
+   "mflops_per_packet": 4.7,
+   "gpu_b1_ms_p50": 1.496,
+   "gpu_b1_ms_p95": 1.969,
+   "gpu_b1_ms_p99": 2.293,
+   "gpu_b512_pkts_per_s": 333587,
+   "cpu4t_b1_ms_p50": 1.37,
+   "cpu4t_b1_ms_p95": 1.89
+  },
+  {
+   "arm": "WaveMLP_default_ManySig_official",
+   "params": 83974,
+   "mflops_per_packet": 1.3,
+   "gpu_b1_ms_p50": 4.412,
+   "gpu_b1_ms_p95": 6.327,
+   "gpu_b1_ms_p99": 6.63,
+   "gpu_b512_pkts_per_s": 114524,
+   "cpu4t_b1_ms_p50": 2.69,
+   "cpu4t_b1_ms_p95": 3.97
+  },
+  {
+   "arm": "WaveMLP_alternate_ManySig_official",
+   "params": 84742,
+   "mflops_per_packet": 1.4,
+   "gpu_b1_ms_p50": 5.291,
+   "gpu_b1_ms_p95": 5.775,
+   "gpu_b1_ms_p99": 8.522,
+   "gpu_b512_pkts_per_s": 96140,
+   "cpu4t_b1_ms_p50": 3.4,
+   "cpu4t_b1_ms_p95": 3.51
+  }
+ ]
+}

@@ -16,6 +16,22 @@ def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
+def checked_source(path, arm, fold, seed, stage):
+    result = json.loads(path.read_text())
+    config = json.loads((path.parent / "config.json").read_text())
+    if (result["arm"], result["fold"], result["seed"], result["stage"]) != (arm["name"], fold, seed, stage):
+        raise ValueError("source result identity mismatch")
+    if config["arm"] != arm or config.get("smoke") or config["registration_sha256"] != sha(REG):
+        raise ValueError("source result is not a formal registered configuration")
+    if stage == "source" and result["selected"]:
+        raise ValueError("WiSig source selection contains target results")
+    if stage == "explore" and set(result["selected"]) != {"dev_val"}:
+        raise ValueError("Shen exploration contains invalid target role")
+    if result["params"] != arm["expected_params"] or not np.isfinite(result["source_val_ce"]):
+        raise ValueError("invalid source result")
+    return result
+
+
 def write_jobs(kind, arms, seeds, folds, dataset=None, decision=None, ib=False):
     jobs = []
     for seed in seeds:
@@ -49,9 +65,7 @@ def freeze_wifi(arms):
             continue
         for fold in range(4):
             p = HERE / "runs/source" / f"{arm['name']}__f{fold}__s2023" / "metrics.json"
-            r = json.loads(p.read_text())
-            if r["selected"] or r["stage"] != "source" or r["seed"] != 2023:
-                raise ValueError("source choice contains target results or wrong stage")
+            r = checked_source(p, arm, fold, 2023, "source")
             records[(arm["name"], fold)] = r
             hashes[str(p.relative_to(HERE))] = sha(p)
     allowed, choices, fan_init = [], {}, {}
@@ -92,7 +106,7 @@ def freeze_shen(arms):
         for fold in range(2):
             for seed in (101, 102):
                 p = HERE / "runs/explore" / f"{arm['name']}__f{fold}__s{seed}" / "metrics.json"
-                rs.append(json.loads(p.read_text()))
+                rs.append(checked_source(p, arm, fold, seed, "explore"))
                 hashes[str(p.relative_to(HERE))] = sha(p)
         records[arm["name"]] = rs
     chosen = [a for a in candidates if a["family"] == "paper_rf"]

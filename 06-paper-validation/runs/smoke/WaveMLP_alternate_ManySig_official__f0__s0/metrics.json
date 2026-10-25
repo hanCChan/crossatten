@@ -1,0 +1,18 @@
+{
+ "run_id": "WaveMLP_alternate_ManySig_official__f0__s0",
+ "arm": "WaveMLP_alternate_ManySig_official",
+ "dataset": "ManySig",
+ "fold": 0,
+ "seed": 0,
+ "stage": "smoke",
+ "params": 84742,
+ "best_val_epoch": 2,
+ "stop_epoch": 2,
+ "epochs_budget": 2,
+ "source_val_ce": 1.4846768379211426,
+ "source_val_acc": 0.3410494029521942,
+ "train_seconds": 1.6,
+ "selected": {},
+ "wall_seconds": 4.0,
+ "gpu_peak_mem_gb": 0.098
+}

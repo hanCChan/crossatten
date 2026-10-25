@@ -1,0 +1,18 @@
+{
+ "run_id": "WaveMLP_default_ManyRx_unified__f0__s0",
+ "arm": "WaveMLP_default_ManyRx_unified",
+ "dataset": "ManyRx",
+ "fold": 0,
+ "seed": 0,
+ "stage": "smoke",
+ "params": 85258,
+ "best_val_epoch": 2,
+ "stop_epoch": 2,
+ "epochs_budget": 2,
+ "source_val_ce": 2.311404228210449,
+ "source_val_acc": 0.09798435866832733,
+ "train_seconds": 2.9,
+ "selected": {},
+ "wall_seconds": 6.3,
+ "gpu_peak_mem_gb": 0.16
+}

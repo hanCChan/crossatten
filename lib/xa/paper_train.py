@@ -8,6 +8,7 @@ import json
 import math
 import os
 import random
+import subprocess
 import time
 from pathlib import Path
 
@@ -40,6 +41,61 @@ def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
+def require_committed(path):
+    path = Path(path).resolve()
+    relative = path.relative_to(ROOT).as_posix()
+    saved = subprocess.run(["git", "show", f"HEAD:{relative}"], cwd=ROOT,
+                           check=True, capture_output=True).stdout
+    if hashlib.sha256(saved).hexdigest() != sha(path):
+        raise ValueError(f"frozen evidence is not committed: {relative}")
+
+
+def validate_fit(arm, fold, seed, stage, out, decision_file=None):
+    out = Path(out).resolve()
+    registration = out.parents[2] / "arms.json"
+    registered = json.loads(registration.read_text())
+    if arm not in registered["arms"]:
+        raise ValueError("arm differs from registered configuration")
+    wifi = bool(arm.get("dataset"))
+    valid = {
+        "smoke": (range(1), [0], None),
+        "source": (range(4), registered["wifi_selection_seed"], True),
+        "explore": (range(2), registered["shen_source_seeds"], False),
+        "final": (range(4), registered["wifi_final_seeds"], True),
+        "confirm": (range(2), registered["shen_confirm_seeds"], False),
+    }
+    if stage not in valid:
+        raise ValueError("unknown validation stage")
+    folds, seeds, expected_wifi = valid[stage]
+    if isinstance(seeds, int):
+        seeds = [seeds]
+    if fold not in folds or seed not in seeds or (expected_wifi is not None and wifi != expected_wifi):
+        raise ValueError("unregistered stage/dataset/fold/seed")
+    expected = registration.parent / "runs" / stage / f"{arm['name']}__f{fold}__s{seed}"
+    if out != expected:
+        raise ValueError("output path differs from registered run identity")
+    if stage not in ("final", "confirm"):
+        if decision_file is not None:
+            raise ValueError("source/smoke runs cannot use a final decision")
+        return registration, None
+    decision_path = registration.parent / ("decision_wifi.json" if wifi else "decision_shen.json")
+    if decision_file is None or Path(decision_file).resolve() != decision_path:
+        raise ValueError("final evaluation requires its canonical frozen decision")
+    decision = json.loads(decision_path.read_text())
+    if [arm["name"], fold, seed] not in decision["allowed_final_jobs"]:
+        raise ValueError("unregistered final arm/fold/seed")
+    if decision["registration_sha256"] != sha(registration):
+        raise ValueError("registration changed after source freeze")
+    require_committed(registration)
+    require_committed(decision_path)
+    for relative, expected_hash in decision["source_result_hashes"].items():
+        evidence = registration.parent / relative
+        if sha(evidence) != expected_hash:
+            raise ValueError(f"source evidence changed after freeze: {relative}")
+        require_committed(evidence)
+    return registration, decision
+
+
 def metrics(logits, y, classes):
     pred = logits.argmax(1)
     cm = np.bincount(y * classes + pred, minlength=classes ** 2).reshape(classes, classes)
@@ -52,7 +108,16 @@ def metrics(logits, y, classes):
                 correct=int((pred == y).sum()), total=len(y), confusion=cm.tolist())
 
 
-def read_wifi(dataset, names, days, purpose, run):
+def read_wifi(dataset, names, days, purpose, run, fold):
+    source, target = receivers(dataset, fold)
+    if purpose in ("source", "internal_rx_val"):
+        if not set(names).issubset(source) or tuple(days) != (1, 2):
+            raise ValueError("source access requested target RX or target days")
+    elif purpose == "target_report_only":
+        if not set(names).issubset(target) or tuple(days) not in ((1, 2), (3, 4)):
+            raise ValueError("invalid final target access")
+    else:
+        raise ValueError("unregistered WiSig access purpose")
     cells = {}
     log = ROOT / "logs/paper_data_access.jsonl"
     with log.open("a") as f:
@@ -75,14 +140,16 @@ def flatten(cells):
 
 
 def wifi_source(dataset, fold, seed, phase, run):
+    if phase not in ("source", "final"):
+        raise ValueError("unknown WiSig source phase")
     train_rx, test_rx = receivers(dataset, fold)
     internal_n = 6 if dataset == "ManyRx" else 2
     fit_rx = train_rx[:-internal_n] if phase == "source" else train_rx
     held_rx = train_rx[-internal_n:] if phase == "source" else []
-    data = flatten(read_wifi(dataset, fit_rx, (1, 2), "source", run))
+    data = flatten(read_wifi(dataset, fit_rx, (1, 2), "source", run, fold))
     tr, va = train_test_split(np.arange(len(data["y"])), test_size=0.3, random_state=seed)
     split = {tag: {k: v[idx] for k, v in data.items()} for tag, idx in (("train", tr), ("val", va))}
-    held = read_wifi(dataset, held_rx, (1, 2), "internal_rx_val", run) if held_rx else {}
+    held = read_wifi(dataset, held_rx, (1, 2), "internal_rx_val", run, fold) if held_rx else {}
     roles = dict(source=train_rx, fit_rx=fit_rx, internal_val_rx=held_rx, target=test_rx, source_days=[1, 2])
     return split["train"], split["val"], held, roles
 
@@ -135,6 +202,9 @@ def load_init(model, arm, out, fold, seed, stage, decision_file):
 
 def fit(arm, fold, seed, stage, out, decision_file=None, smoke=False):
     out = Path(out)
+    registration, decision = validate_fit(arm, fold, seed, stage, out, decision_file)
+    if smoke != (stage == "smoke"):
+        raise ValueError("smoke budget cannot be used for formal runs")
     out.mkdir(parents=True, exist_ok=True)
     t0 = time.time()
     torch.set_num_threads(int(os.environ.get("OMP_NUM_THREADS", "2")))
@@ -144,14 +214,6 @@ def fit(arm, fold, seed, stage, out, decision_file=None, smoke=False):
     torch.cuda.reset_peak_memory_stats()
     run = f"{arm['name']}__f{fold}__s{seed}"
     dataset = arm.get("dataset", "Shen")
-    if stage in ("final", "confirm") and (decision_file is None or not Path(decision_file).is_file()):
-        raise ValueError("final evaluation requires a frozen source decision")
-    if stage in ("final", "confirm"):
-        decision = json.loads(Path(decision_file).read_text())
-        if [arm["name"], fold, seed] not in decision["allowed_final_jobs"]:
-            raise ValueError("unregistered final arm/fold/seed")
-        if decision["registration_sha256"] != sha(out.parents[2] / "arms.json"):
-            raise ValueError("registration changed after source freeze")
     if dataset == "Shen":
         tr, va, held, roles = shen_source(fold, f"{stage}:{run}")
         data_seed = stable_seed("P-H5x160", fold, seed)
@@ -181,6 +243,7 @@ def fit(arm, fold, seed, stage, out, decision_file=None, smoke=False):
     budget = steps * rec["epochs"]
     config = dict(arm=arm, fold=fold, seed=seed, stage=stage, recipe=rec, data_seed=data_seed,
                   roles=roles, upstream=UPSTREAM, code_sha256=code_sha(), init=init,
+                  registration_sha256=sha(registration),
                   decision_file=decision_file, decision_sha256=sha(decision_file) if decision_file else None,
                   protocol_sha256=sha(PROTOCOL_PATH), smoke=smoke,
                   torch=torch.__version__, gpu=torch.cuda.get_device_name(0),
@@ -272,7 +335,7 @@ def fit(arm, fold, seed, stage, out, decision_file=None, smoke=False):
             result["selected"][role] = evaluate(model, cells, 10, out, role)
     elif not smoke and stage == "final":
         for label, days in (("CR", (1, 2)), ("CRD", (3, 4))):
-            cells = read_wifi(dataset, roles["target"], days, "target_report_only", run)
+            cells = read_wifi(dataset, roles["target"], days, "target_report_only", run, fold)
             result["selected"][label] = evaluate(model, cells, arm["num_classes"], out, label)
     result["wall_seconds"] = round(time.time() - t0, 1)
     result["gpu_peak_mem_gb"] = round(torch.cuda.max_memory_allocated() / 2 ** 30, 3)

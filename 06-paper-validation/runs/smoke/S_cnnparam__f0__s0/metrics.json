@@ -1,0 +1,18 @@
+{
+ "run_id": "S_cnnparam__f0__s0",
+ "arm": "S_cnnparam",
+ "dataset": "Shen",
+ "fold": 0,
+ "seed": 0,
+ "stage": "smoke",
+ "params": 138898,
+ "best_val_epoch": 2,
+ "stop_epoch": 2,
+ "epochs_budget": 2,
+ "source_val_ce": 2.3696296215057373,
+ "source_val_acc": 0.09650000184774399,
+ "train_seconds": 0.8,
+ "selected": {},
+ "wall_seconds": 14.8,
+ "gpu_peak_mem_gb": 0.864
+}

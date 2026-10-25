@@ -1,0 +1,18 @@
+{
+ "run_id": "WaveMLP_absolute_ib_unified__f0__s0",
+ "arm": "WaveMLP_absolute_ib_unified",
+ "dataset": "Shen",
+ "fold": 0,
+ "seed": 0,
+ "stage": "smoke",
+ "params": 85258,
+ "best_val_epoch": 2,
+ "stop_epoch": 2,
+ "epochs_budget": 2,
+ "source_val_ce": 2.309075355529785,
+ "source_val_acc": 0.09950000792741776,
+ "train_seconds": 1.8,
+ "selected": {},
+ "wall_seconds": 18.9,
+ "gpu_peak_mem_gb": 0.819
+}

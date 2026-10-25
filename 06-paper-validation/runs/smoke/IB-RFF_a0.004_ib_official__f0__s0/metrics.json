@@ -1,0 +1,18 @@
+{
+ "run_id": "IB-RFF_a0.004_ib_official__f0__s0",
+ "arm": "IB-RFF_a0.004_ib_official",
+ "dataset": "Shen",
+ "fold": 0,
+ "seed": 0,
+ "stage": "smoke",
+ "params": 310481,
+ "best_val_epoch": 1,
+ "stop_epoch": 2,
+ "epochs_budget": 2,
+ "source_val_ce": 2.3043220043182373,
+ "source_val_acc": 0.09800000488758087,
+ "train_seconds": 1.8,
+ "selected": {},
+ "wall_seconds": 4.4,
+ "gpu_peak_mem_gb": 0.813
+}
