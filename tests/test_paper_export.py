@@ -27,6 +27,7 @@ def main():
                 "per_fold_rx_mean": {"0:rx-a": 83.5},
             }
         }
+        groups["ManyRx:W1:CR"] = groups["ManyRx:W1:CRD"]
         report = {
             "generated_at": "2026-10-25T20:00:00+08:00", "checks": {"complete": False, "problems": [], "validated": 12},
             "groups": groups, "comparisons": {"ManyRx:W1-W0:CRD": {"n": 11, "status": "incomplete"}},
@@ -40,14 +41,17 @@ def main():
         with patch("sys.argv", ["export", "--report", str(path), "--out", str(out)]):
             export.main()
         with (out / "main_metrics.csv").open() as stream:
-            row = next(csv.DictReader(stream))
+            rows = list(csv.DictReader(stream))
+        assert {row["task"] for row in rows} == {"CR", "CRD"}
+        row = next(row for row in rows if row["task"] == "CRD")
         assert row["task"] == "CRD" and float(row["rx_accuracy_pct"]) == 83.5
         assert row["parameters"] == "91128" and int(row["fits"]) == 12
         assert b"\r" not in (out / "main_metrics.csv").read_bytes()
         with (out / "registered_ablations.csv").open() as stream:
             assert next(csv.DictReader(stream))["status"] == "incomplete"
         evidence = json.loads((out / "evidence.json").read_text())
-        assert not evidence["complete"] and len(evidence["files"]) == 5
+        assert not evidence["complete"] and len(evidence["files"]) == 6
+        assert "进行中" in (out / "CONCLUSION.md").read_text()
         assert Image.open(out / "accuracy_cost.png").size == (1680, 840)
         with patch("sys.argv", ["export", "--report", str(path), "--require-complete"]):
             try:
