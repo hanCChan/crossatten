@@ -1,0 +1,165 @@
+{
+ "job": {
+  "dataset": "ManySig",
+  "fold": 0,
+  "frontend": "frequency",
+  "recipe": "unified",
+  "phase": "training",
+  "seed": 3101,
+  "factor": "cfo",
+  "augmentation": "cfo",
+  "id": "ManySig_cfo__f0__s3101"
+ },
+ "params": 90420,
+ "stop_epoch": 200,
+ "selected_epoch": 114,
+ "best_packet_epoch": 114,
+ "source_val_ce": 0.031697191298007965,
+ "source_val_acc": 0.9944444298744202,
+ "held_best_epoch": 0,
+ "seconds": 541.29,
+ "selected_source_ce": 0.031697191298007965,
+ "selected_source_acc": 0.9944444298744202,
+ "selected": {
+  "held_source": {
+   "summary": {
+    "acc_mean": 0.74,
+    "f1_mean": 0.7285155507452792,
+    "worst_rx": "20-1",
+    "worst_acc": 0.625,
+    "per_rx_acc": {
+     "19-2": 0.855,
+     "20-1": 0.625
+    },
+    "per_rx_f1": {
+     "19-2": 0.848575730232121,
+     "20-1": 0.6084553712584374
+    },
+    "packet_acc": 0.74,
+    "ce_mean": 1.9823011755943298
+   },
+   "per_rx": {
+    "19-2": {
+     "acc": 0.855,
+     "macro_f1": 0.848575730232121,
+     "ce": 0.7732473611831665,
+     "correct": 1026,
+     "total": 1200,
+     "confusion": [
+      [
+       194,
+       3,
+       1,
+       0,
+       2,
+       0
+      ],
+      [
+       0,
+       200,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       2,
+       3,
+       189,
+       0,
+       5,
+       1
+      ],
+      [
+       3,
+       17,
+       0,
+       178,
+       1,
+       1
+      ],
+      [
+       0,
+       122,
+       0,
+       1,
+       76,
+       1
+      ],
+      [
+       0,
+       2,
+       6,
+       0,
+       3,
+       189
+      ]
+     ]
+    },
+    "20-1": {
+     "acc": 0.625,
+     "macro_f1": 0.6084553712584374,
+     "ce": 3.191354990005493,
+     "correct": 750,
+     "total": 1200,
+     "confusion": [
+      [
+       181,
+       15,
+       0,
+       0,
+       1,
+       3
+      ],
+      [
+       1,
+       7,
+       3,
+       186,
+       1,
+       2
+      ],
+      [
+       2,
+       2,
+       161,
+       2,
+       0,
+       33
+      ],
+      [
+       3,
+       94,
+       7,
+       46,
+       50,
+       0
+      ],
+      [
+       0,
+       2,
+       13,
+       0,
+       184,
+       1
+      ],
+      [
+       0,
+       1,
+       28,
+       0,
+       0,
+       171
+      ]
+     ]
+    }
+   }
+  }
+ },
+ "code_sha256": "0e99bc90e257a9736384ef6acf0c433b6365ab8c96cbddd604c0900dfeeea047",
+ "registration_sha256": "c6d0855be6ae4787151daad93c8d57653e6e5c09323f921bfa0ff32240beee35",
+ "weights_sha256": "a80355bcfb6c111d151f6cc0c65ebf1241c6a3a26fc1efb4d9602df6224d22d7",
+ "predictions_sha256": {
+  "preds_held_source.npz": "35aeb944f846dd4e0c6797d4209e89b067ff42c4335849afaff1b81d6f3f37eb"
+ }
+}

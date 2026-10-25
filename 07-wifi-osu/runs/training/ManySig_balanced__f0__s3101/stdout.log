@@ -1,0 +1,13 @@
+/workspace/crossatten/lib/xa/explore_train.py:218: UserWarning: cumsum_cuda_kernel does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:91.)
+  perm = (torch.multinomial(weights, steps * batch, replacement=True, generator=order)
+{"run": "ManySig_balanced__f0__s3101", "epoch": 1, "source_ce": 1.53113, "seconds": 4}
+{"run": "ManySig_balanced__f0__s3101", "epoch": 20, "source_ce": 0.04642, "seconds": 53}
+{"run": "ManySig_balanced__f0__s3101", "epoch": 40, "source_ce": 0.03871, "seconds": 103}
+{"run": "ManySig_balanced__f0__s3101", "epoch": 60, "source_ce": 0.03356, "seconds": 155}
+{"run": "ManySig_balanced__f0__s3101", "epoch": 80, "source_ce": 0.04515, "seconds": 208}
+{"run": "ManySig_balanced__f0__s3101", "epoch": 100, "source_ce": 0.03978, "seconds": 261}
+{"run": "ManySig_balanced__f0__s3101", "epoch": 120, "source_ce": 0.04519, "seconds": 317}
+{"run": "ManySig_balanced__f0__s3101", "epoch": 140, "source_ce": 0.039, "seconds": 372}
+{"run": "ManySig_balanced__f0__s3101", "epoch": 160, "source_ce": 0.04152, "seconds": 426}
+{"run": "ManySig_balanced__f0__s3101", "epoch": 180, "source_ce": 0.03958, "seconds": 479}
+{"run": "ManySig_balanced__f0__s3101", "epoch": 200, "source_ce": 0.04192, "seconds": 534}

@@ -1,0 +1,239 @@
+[
+ {
+  "dataset": "ManyRx",
+  "fold": 0,
+  "frontend": "frequency",
+  "recipe": "unified",
+  "phase": "training_replicate",
+  "seed": 3102,
+  "factor": "mild_noise",
+  "noise": "mild",
+  "id": "ManyRx_mild_noise__f0__s3102"
+ },
+ {
+  "dataset": "ManyRx",
+  "fold": 0,
+  "frontend": "frequency",
+  "recipe": "official",
+  "phase": "training_replicate",
+  "seed": 3102,
+  "factor": "official",
+  "id": "ManyRx_official__f0__s3102"
+ },
+ {
+  "dataset": "ManyRx",
+  "fold": 0,
+  "frontend": "frequency",
+  "recipe": "unified",
+  "phase": "training_replicate",
+  "seed": 3102,
+  "factor": "unified",
+  "id": "ManyRx_unified__f0__s3102"
+ },
+ {
+  "dataset": "ManyRx",
+  "fold": 1,
+  "frontend": "frequency",
+  "recipe": "official",
+  "phase": "training_replicate",
+  "seed": 3102,
+  "factor": "official",
+  "id": "ManyRx_official__f1__s3102"
+ },
+ {
+  "dataset": "ManyRx",
+  "fold": 1,
+  "frontend": "frequency",
+  "recipe": "unified",
+  "phase": "training_replicate",
+  "seed": 3102,
+  "factor": "held_epoch",
+  "checkpoint": "held_epoch",
+  "id": "ManyRx_held_epoch__f1__s3102"
+ },
+ {
+  "dataset": "ManyRx",
+  "fold": 1,
+  "frontend": "frequency",
+  "recipe": "unified",
+  "phase": "training_replicate",
+  "seed": 3102,
+  "factor": "unified",
+  "id": "ManyRx_unified__f1__s3102"
+ },
+ {
+  "dataset": "ManyRx",
+  "fold": 2,
+  "frontend": "frequency",
+  "recipe": "unified",
+  "phase": "training_replicate",
+  "seed": 3102,
+  "factor": "mild_noise",
+  "noise": "mild",
+  "id": "ManyRx_mild_noise__f2__s3102"
+ },
+ {
+  "dataset": "ManyRx",
+  "fold": 2,
+  "frontend": "frequency",
+  "recipe": "official",
+  "phase": "training_replicate",
+  "seed": 3102,
+  "factor": "official",
+  "id": "ManyRx_official__f2__s3102"
+ },
+ {
+  "dataset": "ManyRx",
+  "fold": 2,
+  "frontend": "frequency",
+  "recipe": "unified",
+  "phase": "training_replicate",
+  "seed": 3102,
+  "factor": "unified",
+  "id": "ManyRx_unified__f2__s3102"
+ },
+ {
+  "dataset": "ManyRx",
+  "fold": 3,
+  "frontend": "frequency",
+  "recipe": "official",
+  "phase": "training_replicate",
+  "seed": 3102,
+  "factor": "official",
+  "id": "ManyRx_official__f3__s3102"
+ },
+ {
+  "dataset": "ManyRx",
+  "fold": 3,
+  "frontend": "frequency",
+  "recipe": "unified",
+  "phase": "training_replicate",
+  "seed": 3102,
+  "factor": "mild_noise",
+  "noise": "mild",
+  "id": "ManyRx_mild_noise__f3__s3102"
+ },
+ {
+  "dataset": "ManyRx",
+  "fold": 3,
+  "frontend": "frequency",
+  "recipe": "unified",
+  "phase": "training_replicate",
+  "seed": 3102,
+  "factor": "unified",
+  "id": "ManyRx_unified__f3__s3102"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 0,
+  "frontend": "frequency",
+  "recipe": "official",
+  "phase": "training_replicate",
+  "seed": 3102,
+  "factor": "official",
+  "id": "ManySig_official__f0__s3102"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 0,
+  "frontend": "frequency",
+  "recipe": "unified",
+  "phase": "training_replicate",
+  "seed": 3102,
+  "factor": "held_epoch",
+  "checkpoint": "held_epoch",
+  "id": "ManySig_held_epoch__f0__s3102"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 0,
+  "frontend": "frequency",
+  "recipe": "unified",
+  "phase": "training_replicate",
+  "seed": 3102,
+  "factor": "unified",
+  "id": "ManySig_unified__f0__s3102"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 1,
+  "frontend": "frequency",
+  "recipe": "unified",
+  "phase": "training_replicate",
+  "seed": 3102,
+  "factor": "held_epoch",
+  "checkpoint": "held_epoch",
+  "id": "ManySig_held_epoch__f1__s3102"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 1,
+  "frontend": "frequency",
+  "recipe": "official",
+  "phase": "training_replicate",
+  "seed": 3102,
+  "factor": "official",
+  "id": "ManySig_official__f1__s3102"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 1,
+  "frontend": "frequency",
+  "recipe": "unified",
+  "phase": "training_replicate",
+  "seed": 3102,
+  "factor": "unified",
+  "id": "ManySig_unified__f1__s3102"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 2,
+  "frontend": "frequency",
+  "recipe": "official",
+  "phase": "training_replicate",
+  "seed": 3102,
+  "factor": "official",
+  "id": "ManySig_official__f2__s3102"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 2,
+  "frontend": "frequency",
+  "recipe": "unified",
+  "phase": "training_replicate",
+  "seed": 3102,
+  "factor": "unified",
+  "id": "ManySig_unified__f2__s3102"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 3,
+  "frontend": "split",
+  "recipe": "official",
+  "phase": "training_replicate",
+  "seed": 3102,
+  "factor": "official",
+  "id": "ManySig_official__f3__s3102"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 3,
+  "frontend": "split",
+  "recipe": "unified",
+  "phase": "training_replicate",
+  "seed": 3102,
+  "factor": "held_epoch",
+  "checkpoint": "held_epoch",
+  "id": "ManySig_held_epoch__f3__s3102"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 3,
+  "frontend": "split",
+  "recipe": "unified",
+  "phase": "training_replicate",
+  "seed": 3102,
+  "factor": "unified",
+  "id": "ManySig_unified__f3__s3102"
+ }
+]
