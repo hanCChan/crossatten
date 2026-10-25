@@ -174,4 +174,5 @@ def build_pipeline2(arm: dict) -> nn.Module:
                                 combfft=arm.get("combfft", False))
     if fam == "ib_tfsplit":
         return TFSplitPipeline(input_fmax=IB, use_oob=False)
-    raise ValueError(fam)
+    from .models3 import build_pipeline3
+    return build_pipeline3(arm)

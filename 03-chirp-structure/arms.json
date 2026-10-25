@@ -1,0 +1,13 @@
+{
+ "protocol": "P-H5x160",
+ "arms": [
+  {"name": "s03_base", "family": "ib_variant", "recipe": "long_cos_200", "awgn": [0,50], "expected_params": 580008},
+  {"name": "s03_preln", "family": "ib_variant", "preln": true, "recipe": "long_cos_200", "awgn": [0,50], "expected_params": 580136},
+  {"name": "s03_preln_d4", "family": "ib_variant", "preln": true, "depth": 4, "recipe": "long_cos_200", "awgn": [0,50], "expected_params": 622374},
+  {"name": "s03_resid", "family": "chirp", "channels": "resid", "recipe": "long_cos_200", "awgn": [0,50], "expected_params": 580584},
+  {"name": "s03_nofft", "family": "chirp", "channels": "nofft", "recipe": "long_cos_200", "awgn": [0,50], "expected_params": 579912},
+  {"name": "s03_symstack", "family": "chirp", "channels": "nofft", "stem": "symstack", "recipe": "long_cos_200", "awgn": [0,50], "expected_params": 579912},
+  {"name": "s03_ifreq", "family": "chirp", "channels": "ifreq", "recipe": "long_cos_200", "awgn": [0,50], "expected_params": 580360},
+  {"name": "s03_hstem", "family": "chirp", "stem": "hierarchical", "recipe": "long_cos_200", "awgn": [0,50], "expected_params": 142392}
+ ]
+}

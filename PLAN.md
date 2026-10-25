@@ -25,33 +25,34 @@
 
 | 阶段 | 内容 | 状态 |
 |---|---|---|
-| 03-chirp-structure（Shen，dev_val 筛选） | P0 冻结强基线（ep200、CIS、rank16、严格 IB 的 CIS）；P1 数值稳定（Pre-LN，深度）；P2 均值 chirp + 残差双路 / 符号堆叠；P3 瞬时频率 / 首符号瞬态；P4 分层 stem + 独立位置编码；P5 concat/gate/cross-attn 融合；P6 训练目标（IB-HSIC 作为竞争基线） | 待用户确认方案 |
+| 03-chirp-structure（Shen，dev_val 筛选） | 第一轮：基线重跑、Pre-LN、depth4、残差输入通道、nofft 对照、共享符号 stem 的等参数 symstack、ifreq、分层 stem；融合和训练目标留待后续 | 用户已要求执行规格，正在预登记 |
 | 04-sota-on-shen | FAN/IB-RFF、WaveMLP 适配到 8192 点，在 P-H5x160 上重跑；Ma 2025 按论文复现 | 文献核实中（[LITERATURE](docs/LITERATURE_2025_2026.md)） |
 | 05-wisig | IB-RFF 官方 CR/CRD 协议：先复现 FAN/IB-RFF/WaveMLP 的官方数字，再在同一管线、多 seed 下运行本方法（按 OFDM 前导码的重复结构重新定义） | 待 03 |
 | 06-final | 冻结方法的完整消融、多 seed、精度–计算量 Pareto；历史 14→6 协议标注为复用 | 最后 |
 
 旧的 03–06 规划（组合 / 融合 / 训练 / 确认）由上表取代。**阶段 03–05 的逐项实施规格（交给 Codex 实现）见 [docs/S03_S05_IMPLEMENTATION_SPEC.md](docs/S03_S05_IMPLEMENTATION_SPEC.md)。**
 
-### 阶段 03 第一轮（草案，用户确认后再预登记）
+### 阶段 03 第一轮（按实施规格执行）
 
-基线 `s03_base` 就是 s02_ep200（TrueIB + AWGN U[0,50) + cos 200 epoch）。这个配置没有 MHA，训练是确定性的，所以可以直接复用 s02 已有的探索结果，不必重跑。每个实验臂只比对照多一个因素。
+基线 `s03_base` 就是 s02_ep200（TrueIB + AWGN U[0,50) + cos 200 epoch）。按详细规格重跑，用同 fold/seed 的 s02 结果核对确定性。下面的旧草案由 `03-chirp-structure/README.md` 和 `arms.json` 的预登记取代：残差采用输入通道拼接，symstack 采用共享 k7/k5 stem，并以 nofft 为等参数对照。
 
 | 优先级 | 实验臂 | 相对谁 | 改动 | 物理/工程理由 |
 |---|---|---|---|---|
 | P1 | `s03_preln` | base | 第一个 mixer 前加 LayerNorm | 阶段 02 实测 token RMS 为 85–134，sigmoid 打分 100% 饱和，depth4 训练崩溃（SD 30）。这是工程修复，不是贡献 |
 | P1 | `s03_preln_d4` | preln | 4 层 mixer | 归一化之后，加深能否带来收益 |
-| P2 | `s03_resid` | preln | 增加残差流：严格 IB 包减去重复后的均值 chirp，按 RMS 归一化，用独立 stem 编码，与主流 token 拼接 | 均值 chirp 只占 0.3% 能量却丢 12–14 pp。残差在原始波形里被淹没，单独归一化后才能被网络看见（**候选贡献**） |
-| P2 | `s03_symstack` | preln | 符号堆叠 tokenizer：8 个符号作为通道（每符号含 I/Q/幅相/1024 点 FFT，共 40 通道 × 1024 点），每个 token 覆盖 8 个符号的同一 chirp 内位置 | 对 upchirp 来说，chirp 内的时间位置就是瞬时频率，所以 token 按频率对齐，第一层卷积就能直接比较符号之间的差异（**候选贡献**） |
+| P2 | `s03_resid` | preln | 严格 IB 包减去均值 chirp，单位 RMS 的实虚残差作为 2 个额外输入通道 | 检验低能量残差的身份信息（**候选贡献**） |
+| P2 | `s03_nofft` | preln | 去掉整包 FFT 输入，仅保留 IQ/幅相 | symstack 的干净对照 |
+| P2 | `s03_symstack` | nofft | 共享符号内 k7/k5 stem，再堆叠 8 个符号特征并按 32 点切 token；与 nofft 参数量相同 | 按 chirp 内位置对齐（**候选贡献**） |
 | P3 | `s03_ifreq` | preln | 增加瞬时频率偏差通道（严格 IB 信号的相位差减去理想 chirp 的瞬时频率） | 振荡器/PLL 的非线性会体现在瞬时频率上；需要与 Bothereau 2026 的瞬时相位差方法对照 |
 | P4 | `s03_hstem` | preln | 用分层步进卷积 stem 替换 k=256 的 patch 卷积（后者占 52 万参数） | 降参数，并保留局部时间结构 |
 
-- 规模：6 个新实验臂 × 4 次训练（2 fold × 2 seed），共 24 次，200 epoch，4×A100 大约 1 小时。
+- 规模：8 个实验臂（包含重跑基线和 nofft）探索 32 次，确认 48 次，均为 200 epoch。第一轮后必须停下汇报。
 - 判定规则与阶段 02 相同。确认阶段只用 dev_val 做结转决策；confirm RX 照常报告，但不参与选择。
 - 第二轮：只组合第一轮确认有效的因素，比较融合方式（P5：concat / gate / cross-attn），并加入竞争方法的训练机制作为对照（P6：IB-RFF 的 HSIC 信息瓶颈、Ma 2025 的跨 RX NT-Xent）。
 
 ### 阶段 04 / 05：强方法复现（详见 [LITERATURE](docs/LITERATURE_2025_2026.md) §6）
 
-- **04（Shen 同协议）**：FAN/IB-RFF 和 WaveMLP 使用官方模型代码，只改输入长度为 8192；Ma 2025 Spec+Siamese 按论文复现。每个方法跑官方配方和我们的配方两套，用源验证集决定采用哪套。
+- **04（Shen 同协议）**：FAN/IB-RFF 和 WaveMLP 使用官方模型代码，只改输入长度为 8192；Ma 2025 Spec+Siamese 按论文复现。各系列按探索 dev_val 选择配置；IB-RFF 另给源验证集选 alpha 的公平版。此轮不自动启动 04。
 - **05（WiSig）**：
   1. 数据审计：从数据中实测采样率、占用带宽边界、L-STF/L-LTF 的重复周期，据此定义 WiFi 版的"严格带内"和"重复结构"；
   2. 用官方代码复现 FAN、IB-RFF、WaveMLP 在 CRD/CR 上的数字；
