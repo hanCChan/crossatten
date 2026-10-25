@@ -1,0 +1,79 @@
+{
+ "job": {
+  "dataset": "ManySig",
+  "fold": 1,
+  "group": "last",
+  "seed": 6102,
+  "condition": "official",
+  "feature": "phase",
+  "phase": "phase",
+  "id": "ManySig_official_phase__f1__last__s6102"
+ },
+ "recipe": {
+  "opt": "adam",
+  "lr": 0.001,
+  "wd": 0.0,
+  "batch": 128,
+  "epochs": 200,
+  "sched": "plateau",
+  "patience": 5,
+  "early_stop": 10,
+  "min_lr": 1e-06,
+  "stop": true
+ },
+ "data_seed": 1732714211,
+ "params": 90868,
+ "roles": {
+  "source": [
+   "1-1",
+   "1-19",
+   "2-1",
+   "7-14",
+   "8-8",
+   "14-7",
+   "18-2",
+   "19-2",
+   "20-1"
+  ],
+  "fit_rx": [
+   "1-1",
+   "1-19",
+   "2-1",
+   "7-14",
+   "8-8",
+   "14-7",
+   "18-2"
+  ],
+  "held_rx": [
+   "19-2",
+   "20-1"
+  ],
+  "target": [
+   "2-19",
+   "3-19",
+   "7-7"
+  ],
+  "source_days": [
+   1,
+   2
+  ]
+ },
+ "train_packets": 5880,
+ "val_packets": 2520,
+ "held_packets": {
+  "19-2": 1200,
+  "20-1": 1200
+ },
+ "ema": {
+  "half_life_epochs": 1,
+  "decay_per_step": 0.9850445435358739,
+  "average_buffers": false,
+  "bn_calibration": "every epoch; clean fit-training subset only"
+ },
+ "registration_sha256": "739eafcc22ce1cbc89b4631b2fff5f162ed66b8ce797abe0d5685152e9e99e41",
+ "decision_sha256": null,
+ "dataset_manifest_sha256": "74e95fb87ef2a898fdd9b85b552cf2a7f3af0e7b7a20eb8a5f1744f4ba99673d",
+ "torch": "2.5.0+cu124",
+ "gpu": "NVIDIA A100-SXM4-40GB",
+ "smoke": false
+}
