@@ -38,12 +38,25 @@ def main():
     actual = {(j["dataset"], j["pipeline"], j["fold"], j["seed"]) for j in jobs}
     if actual != expected or len(actual) != len(jobs):
         raise ValueError("missing or duplicate frozen final cell")
-    rows, fits = [], defaultdict(list)
+    rows, run_rows, fits = [], [], defaultdict(list)
     for job in jobs:
         path = HERE / "runs" / "final" / job["id"] / "metrics.json"
         result = json.loads(path.read_text())
         if result["job"] != job:
             raise ValueError("final run differs from its whitelist")
+        run_rows.append(dict(
+            id=job["id"], dataset=job["dataset"], fold=job["fold"], seed=job["seed"],
+            pipeline=job["pipeline"], frontend=job["frontend"], recipe=job["recipe"],
+            augmentation=job.get("augmentation", "none"),
+            checkpoint=job.get("checkpoint", "packet"), epoch_budget=job.get("epochs", 200),
+            stop_epoch=result["stop_epoch"], selected_epoch=result["selected_epoch"],
+            selected_source_accuracy_pct=100 * result["selected_source_acc"],
+            selected_source_ce=result["selected_source_ce"],
+            CR_rx_accuracy_pct=100 * result["selected"]["CR"]["summary"]["acc_mean"],
+            CRD_rx_accuracy_pct=100 * result["selected"]["CRD"]["summary"]["acc_mean"],
+            CR_to_CRD_drop_pp=100 * (result["selected"]["CR"]["summary"]["acc_mean"] -
+                                    result["selected"]["CRD"]["summary"]["acc_mean"]),
+            params=result["params"], training_and_evaluation_seconds=result["seconds"]))
         for task in ("CR", "CRD"):
             entry = result["selected"][task]
             fits[(job["dataset"], job["pipeline"], task)].append(dict(
@@ -76,6 +89,7 @@ def main():
                             worst_rx_seed_mean_pct=min(np.mean(a) for a in by_rx.values()),
                             parameters=";".join(str(p) for p in sorted({v["params"] for v in values}))))
     save_csv(HERE / "wifi_final_receiver_metrics.csv", rows)
+    save_csv(HERE / "wifi_final_run_metrics.csv", run_rows)
     save_csv(HERE / "wifi_final_metrics.csv", summary)
     baseline_path = ROOT / "06-paper-validation/summary/paper/receiver_metrics.csv"
     baseline_commit = json.loads((HERE / "registration.json").read_text())["baseline"]
@@ -129,6 +143,7 @@ def main():
              "S06 external fair baselines are frozen and use the same normalization and cell budgets. ",
              "S07 seeds4101/4102/4103 are not paired with S06 training seeds. ",
              "Receiver-clustered intervals condition on trained models and do not represent independent datasets. ",
+             "Intervals are descriptive and not corrected for multiple pipeline/baseline comparisons. ",
              "`Packet acc` is the official four-fold mean of packet-weighted scores; ",
              "the CSV additionally contains accuracy pooled over all test packets/folds/seeds.\n\n",
              "| Dataset | Pipeline | Task | RX acc % | Packet acc % | Macro-F1 % | Seed SD pp | Worst RX % | Params |\n",
@@ -166,7 +181,7 @@ def main():
     lines.append("\nNo method should be selected after seeing this table. All registered pipelines are reported. "
                  "These results support only tested-protocol statements; SOTA requires a separate primary-source review.\n")
     (HERE / "S07_WIFI_FINAL_RESULTS.md").write_text("".join(lines))
-    report_files = ("wifi_final_receiver_metrics.csv", "wifi_final_metrics.csv",
+    report_files = ("wifi_final_receiver_metrics.csv", "wifi_final_run_metrics.csv", "wifi_final_metrics.csv",
                     "wifi_comparison_intervals.csv", "S07_WIFI_FINAL_RESULTS.md")
     evidence = dict(
         final_decision_sha256=sha(HERE / "decision_final.json"),

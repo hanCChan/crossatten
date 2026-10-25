@@ -49,7 +49,9 @@ class ReportTest(unittest.TestCase):
                                     per_rx={rx: dict(acc=accuracy, macro_f1=accuracy,
                                                      correct=int(100*accuracy), total=100) for rx in targets})
                             (out / "metrics.json").write_text(json.dumps(
-                                dict(job=job, params=90420, seconds=1, selected=selected)))
+                                dict(job=job, params=90420, seconds=1, selected=selected,
+                                     stop_epoch=200, selected_epoch=20, selected_source_acc=.99,
+                                     selected_source_ce=.1)))
             with baseline_path.open("w", newline="") as stream:
                 writer = csv.DictWriter(stream, fieldnames=list(baseline_rows[0]))
                 writer.writeheader()
@@ -69,6 +71,10 @@ class ReportTest(unittest.TestCase):
                 self.assertEqual(len(metrics), 12)
                 self.assertEqual(len(intervals), 24)
                 self.assertEqual(len(evidence["duplicate_pipelines"]), 6)
+                with (here / "wifi_final_run_metrics.csv").open() as stream:
+                    runs = list(csv.DictReader(stream))
+                self.assertEqual(len(runs), 72)
+                self.assertTrue(all(abs(float(r["CR_to_CRD_drop_pp"]) - 5) < 1e-8 for r in runs))
                 self.assertTrue(all(float(r["seed_sd_pp"]) == 0 for r in metrics))
                 self.assertTrue(all(abs(float(r["pooled_packet_accuracy_pct"]) -
                                         float(r["packet_accuracy_pct"])) < 1e-8 for r in metrics))
