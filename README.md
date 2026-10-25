@@ -25,6 +25,26 @@ logs/                      数据访问日志（data_access.jsonl）、运行日
 |---|---|---|---|
 | 00 | 数据是什么？哪些频段有可迁移的身份信息？ | [README](00-signal-audit/README.md) | [RESULTS](00-signal-audit/RESULTS.md) |
 | 01 | 训练配方 / Shen-CIS 与 GAP / 近带 OOB / 时频分离 | [README](01-strong-baselines/README.md) | [RESULTS](01-strong-baselines/RESULTS.md) |
+| 02 | 严格 IB 强基线上的单因素筛选 | [README](02-single-factor-screen/README.md) | [确认指标](02-single-factor-screen/summary/confirm_tables.md) |
+
+## GitHub 快照与模型权重
+
+仓库包含代码、协议、预登记、实验配置、逐次指标、训练曲线、预测结果和运行日志。
+原始数据软链接 `data/raw`、`data/cache/`、Python 缓存不上传。
+
+所有已有 `model.pt` 保持原相对路径，单独打包到同仓库的 GitHub Release
+`snapshot-2026-10-25`，不放入 Git 历史。附件分块的校验值见
+`artifacts/SHA256SUMS`，逐个模型的校验值见 `artifacts/checkpoints.sha256`。
+在仓库根目录、下载附件所在目录执行：
+
+```bash
+sha256sum -c artifacts/SHA256SUMS
+cat crossatten-checkpoints-2026-10-25.tar.zst.part-* | tar --zstd -xf -
+sha256sum -c artifacts/checkpoints.sha256
+```
+
+阶段 02 确认的自动汇总和事后诊断来自现有脚本；本次发布未重跑训练，
+未修改实验臂或判定规则，也未生成新的确认决策。
 
 ## 命名与规则
 

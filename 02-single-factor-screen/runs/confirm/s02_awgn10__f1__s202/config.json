@@ -1,0 +1,55 @@
+{
+ "arm": {
+  "name": "s02_awgn10",
+  "dir": "D",
+  "family": "ib_variant",
+  "recipe": "long_cos",
+  "awgn": [
+   10,
+   50
+  ],
+  "desc": "AWGN SNR ~ U[10,50) dB instead of U[0,50)"
+ },
+ "fold": 1,
+ "seed": 202,
+ "stage": "confirm",
+ "recipe": {
+  "opt": "adamw",
+  "lr": 0.001,
+  "wd": 0.0005,
+  "sched": "warmcos",
+  "warmup": 5,
+  "epochs": 100,
+  "ckpt": "best_val_ce"
+ },
+ "data_seed": 3680940992,
+ "batch": 64,
+ "roles": {
+  "source": [
+   "b200_mini_1",
+   "pluto_1",
+   "rtl_2",
+   "rtl_5",
+   "rtl_7"
+  ],
+  "dev_val": [
+   "b210_1",
+   "rtl_1",
+   "rtl_3",
+   "rtl_6",
+   "rtl_9"
+  ],
+  "confirm": [
+   "b200_1",
+   "n210_1",
+   "rtl_4",
+   "rtl_8"
+  ]
+ },
+ "protocol_sha256": "1311eb35852a63f216a3f0c8e87ca9833ece8614975f9ff79ec28079b70b9127",
+ "code_sha256": "b3d46a51d1ccb116ff8b589f9d831fcf4ba06782bfcec6e52f6e2c720ba80796",
+ "torch": "2.5.0+cu124",
+ "gpu": "NVIDIA A100-SXM4-40GB",
+ "decision_file": "/workspace/crossatten/02-single-factor-screen/decision_explore.json",
+ "smoke": false
+}

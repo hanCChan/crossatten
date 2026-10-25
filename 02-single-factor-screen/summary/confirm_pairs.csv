@@ -1,0 +1,29 @@
+q,role,b,a,desc,n_pairs,delta_mean,delta_min,delta_max,pos_pairs,rx_pos,rx_n,worst_rx_delta,verdict
+B,dev_val,s02_meanchirp,s02_base,coherent 8-symbol mean chirp (drops residual/transient),6,-13.64,-16.56,-11.75,0,0,10,-24.93,harms
+B,confirm,s02_meanchirp,s02_base,coherent 8-symbol mean chirp (drops residual/transient),6,-11.71,-15.82,-9.44,0,0,8,-14.7,harms
+B,dev_val,s02_combfft,s02_base,FFT view: comb bins only,6,-5.74,-28.43,0.51,1,0,10,-13.2,harms
+B,confirm,s02_combfft,s02_base,FFT view: comb bins only,6,-5.63,-27.85,-0.04,0,0,8,-10.9,harms
+B,dev_val,s02_dechirp,s02_base,dechirped input,6,-3.76,-13.12,2.49,2,0,10,-7.98,unclear
+B,confirm,s02_dechirp,s02_base,dechirped input,6,-3.45,-12.54,3.18,1,0,8,-7.48,harms
+A,dev_val,s02_rawoob_full,s02_base,"+ raw OOB keys/values, all |f|>62.5 kHz",6,-11.3,-14.39,-7.4,0,1,10,-29.3,harms
+A,confirm,s02_rawoob_full,s02_base,"+ raw OOB keys/values, all |f|>62.5 kHz",6,-8.48,-16.6,-1.85,0,2,8,-17.7,harms
+A,dev_val,s02_rawoob_near,s02_base,"+ raw OOB keys/values, 62.5-200 kHz",6,-10.63,-14.02,-4.18,0,2,10,-24.67,harms
+A,confirm,s02_rawoob_near,s02_base,"+ raw OOB keys/values, 62.5-200 kHz",6,-8.16,-18.74,1.18,1,3,8,-14.48,harms
+A,dev_val,s02_rawoob_nearL,s02_base,"+ raw OOB keys/values, left near band only",6,-10.48,-14.52,-5.73,0,1,10,-21.6,harms
+A,confirm,s02_rawoob_nearL,s02_base,"+ raw OOB keys/values, left near band only",6,-8.68,-10.81,-5.5,0,2,8,-17.13,harms
+A,dev_val,s02_cisoob,s02_base,+ CIS-quotient OOB keys/values,6,-0.62,-2.22,1.24,1,2,10,-1.7,unclear
+A,confirm,s02_cisoob,s02_base,+ CIS-quotient OOB keys/values,6,-0.15,-1.09,0.64,3,3,8,2.9,unclear
+C,dev_val,s02_depth4,s02_base,4 mixer blocks,6,-27.65,-66.21,2.12,2,0,10,-32.2,unclear
+C,confirm,s02_depth4,s02_base,4 mixer blocks,6,-26.52,-64.57,2.15,1,0,8,-26.5,harms
+C,dev_val,s02_tfsplit,s02_base,time/frequency split tokens (strict IB),6,-1.68,-3.38,-0.13,0,0,10,-2.82,harms
+C,confirm,s02_tfsplit,s02_base,time/frequency split tokens (strict IB),6,-1.69,-3.87,0.75,2,0,8,-2.72,unclear
+D,dev_val,s02_ep200,s02_base,200-epoch horizon,6,1.11,-0.11,1.96,5,10,10,1.03,improves
+D,confirm,s02_ep200,s02_base,200-epoch horizon,6,1.78,0.62,2.32,6,7,8,3.95,improves
+D,dev_val,s02_awgn10,s02_base,"AWGN U[10,50) instead of U[0,50)",6,-0.01,-3.09,1.65,4,6,10,-1.52,unclear
+D,confirm,s02_awgn10,s02_base,"AWGN U[10,50) instead of U[0,50)",6,0.03,-3.24,1.62,3,4,8,-1.83,unclear
+eff,dev_val,s02_cis_rank16,cis_flat,"rank-16 head vs Flatten-Dense (stage-01 fits, same data streams)",6,-0.76,-2.36,1.22,2,1,10,-1.18,unclear
+eff,confirm,s02_cis_rank16,cis_flat,"rank-16 head vs Flatten-Dense (stage-01 fits, same data streams)",6,-0.46,-1.41,0.81,2,1,8,-0.82,unclear
+ref,dev_val,s02_base,xa_trueib_cos_awgn,determinism check: re-run of stage-01 arm (expected 0.00),6,0.0,0.0,0.0,0,0,10,0.0,reference (no verdict)
+ref,confirm,s02_base,xa_trueib_cos_awgn,determinism check: re-run of stage-01 arm (expected 0.00),6,0.0,0.0,0.0,0,0,8,0.0,reference (no verdict)
+ref,dev_val,s02_base,s02_cis_rank16,SYSTEM: CrossAttn-TrueIB vs rank-16 CIS,6,2.37,0.02,4.17,6,7,10,10.82,reference (no verdict)
+ref,confirm,s02_base,s02_cis_rank16,SYSTEM: CrossAttn-TrueIB vs rank-16 CIS,6,-2.64,-5.01,-1.25,0,3,8,-9.7,reference (no verdict)

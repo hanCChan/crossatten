@@ -1,0 +1,60 @@
+{
+ "arm": {
+  "name": "s02_rawoob_nearL",
+  "dir": "A",
+  "family": "ib_rawoob",
+  "recipe": "long_cos",
+  "awgn": [
+   0,
+   50
+  ],
+  "oob_band": [
+   62500,
+   100000
+  ],
+  "oob_side": "L",
+  "desc": "same, OOB keys restricted to the left near band -100..-62.5 kHz (stage-00: most transferable OOB information)"
+ },
+ "fold": 0,
+ "seed": 202,
+ "stage": "confirm",
+ "recipe": {
+  "opt": "adamw",
+  "lr": 0.001,
+  "wd": 0.0005,
+  "sched": "warmcos",
+  "warmup": 5,
+  "epochs": 100,
+  "ckpt": "best_val_ce"
+ },
+ "data_seed": 2602222937,
+ "batch": 64,
+ "roles": {
+  "source": [
+   "b210_1",
+   "rtl_1",
+   "rtl_3",
+   "rtl_6",
+   "rtl_9"
+  ],
+  "dev_val": [
+   "b200_mini_1",
+   "pluto_1",
+   "rtl_2",
+   "rtl_5",
+   "rtl_7"
+  ],
+  "confirm": [
+   "b200_1",
+   "n210_1",
+   "rtl_4",
+   "rtl_8"
+  ]
+ },
+ "protocol_sha256": "1311eb35852a63f216a3f0c8e87ca9833ece8614975f9ff79ec28079b70b9127",
+ "code_sha256": "557903ac45f7e27d26dc4861007c9c9657b6650d9e45d09cb217f5544688000f",
+ "torch": "2.5.0+cu124",
+ "gpu": "NVIDIA A100-SXM4-40GB",
+ "decision_file": "/workspace/crossatten/02-single-factor-screen/decision_explore.json",
+ "smoke": false
+}

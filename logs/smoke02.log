@@ -1,0 +1,15 @@
+13 to run, 0 already done
+[gpu0] rc=0      8s s02_cis_rank16 f0 s0 :: {"run": "s02_cis_rank16__f0__s0", "dev_val_acc": 0.1187, "worst": "rtl_5", "best_epoch": 2, "stop": 2, "sec": 1.3}
+[gpu0] rc=0     10s s02_ep200 f0 s0 :: {"run": "s02_ep200__f0__s0", "dev_val_acc": 0.1016, "worst": "rtl_5", "best_epoch": 2, "stop": 2, "sec": 1.7}
+[gpu0] rc=0      9s s02_base f0 s0 :: {"run": "s02_base__f0__s0", "dev_val_acc": 0.1016, "worst": "rtl_5", "best_epoch": 2, "stop": 2, "sec": 1.5}
+[gpu0] rc=0      9s s02_meanchirp f0 s0 :: {"run": "s02_meanchirp__f0__s0", "dev_val_acc": 0.1, "worst": "b200_mini_1", "best_epoch": 2, "stop": 2, "sec": 1.6}
+[gpu1] rc=0     11s s02_combfft f0 s0 :: {"run": "s02_combfft__f0__s0", "dev_val_acc": 0.1009, "worst": "rtl_5", "best_epoch": 2, "stop": 2, "sec": 2.3}
+[gpu0] rc=0     11s s02_dechirp f0 s0 :: {"run": "s02_dechirp__f0__s0", "dev_val_acc": 0.0989, "worst": "pluto_1", "best_epoch": 2, "stop": 2, "sec": 2.1}
+[gpu1] rc=0     11s s02_rawoob_full f0 s0 :: {"run": "s02_rawoob_full__f0__s0", "dev_val_acc": 0.101, "worst": "pluto_1", "best_epoch": 1, "stop": 2, "sec": 2.3}
+[gpu1] rc=0     11s s02_rawoob_nearL f0 s0 :: {"run": "s02_rawoob_nearL__f0__s0", "dev_val_acc": 0.0998, "worst": "rtl_5", "best_epoch": 1, "stop": 2, "sec": 2.5}
+[gpu0] rc=0     11s s02_rawoob_near f0 s0 :: {"run": "s02_rawoob_near__f0__s0", "dev_val_acc": 0.0976, "worst": "rtl_5", "best_epoch": 1, "stop": 2, "sec": 2.6}
+[gpu1] rc=0     10s s02_depth4 f0 s0 :: {"run": "s02_depth4__f0__s0", "dev_val_acc": 0.1054, "worst": "rtl_7", "best_epoch": 2, "stop": 2, "sec": 1.8}
+[gpu2] rc=0      9s s02_awgn10 f0 s0 :: {"run": "s02_awgn10__f0__s0", "dev_val_acc": 0.1016, "worst": "rtl_5", "best_epoch": 2, "stop": 2, "sec": 1.5}
+[gpu0] rc=0     13s s02_cisoob f0 s0 :: {"run": "s02_cisoob__f0__s0", "dev_val_acc": 0.1008, "worst": "rtl_7", "best_epoch": 2, "stop": 2, "sec": 2.2}
+[gpu0] rc=0     11s s02_tfsplit f0 s0 :: {"run": "s02_tfsplit__f0__s0", "dev_val_acc": 0.1004, "worst": "rtl_2", "best_epoch": 2, "stop": 2, "sec": 2.9}
+{"total": 13, "skipped": 0, "done": 13, "started": "2026-10-25 09:37:51", "finished": "2026-10-25 09:38:23"} failed: 0

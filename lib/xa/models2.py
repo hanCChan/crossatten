@@ -58,11 +58,17 @@ class CombFFTEmbedder(RFPatchEmbedder):
 
 
 class IBVariantPipeline(nn.Module):
-    def __init__(self, meanchirp=False, combfft=False, dechirp=False, depth=2, num_classes=10):
+    """preln: LayerNorm on the main tokens before mixer 1 (stage 03). Without it the first sigmoid mixer sees
+    unnormalised tokens (RMS 85-134 after training -> saturated scores); the fusion module of the OOB arms has such a
+    LayerNorm (norm_out), so preln is the normalisation-only control for them. LayerNorm init uses no RNG, so all
+    other weights are initialised exactly as in the base for the same seed."""
+
+    def __init__(self, meanchirp=False, combfft=False, dechirp=False, depth=2, preln=False, num_classes=10):
         super().__init__()
         emb = CombFFTEmbedder(combfft=combfft, use_oob=False, **STEM)
         self.net = DeviceClassifier(emb, num_classes, dim=DIM, depth=depth, use_chirp_embedding=False)
         self.meanchirp, self.dechirp = meanchirp, dechirp
+        self.pre_ln = nn.LayerNorm(DIM) if preln else None
         if dechirp:
             self.register_buffer("cconj", torch.view_as_real(upchirp_tiled().conj().resolve_conj()), persistent=False)
 
@@ -75,28 +81,41 @@ class IBVariantPipeline(nn.Module):
         if self.dechirp:
             z = torch.complex(x[:, 0], x[:, 1]) * torch.view_as_complex(self.cconj)
             x = torch.stack([z.real, z.imag], 1)
-        return self.net(x)["logits"]
+        if self.pre_ln is None:
+            return self.net(x)["logits"]
+        # legacy DeviceClassifier.forward (no multiscale / mixstyle / CFO / OOB dropout) with the LayerNorm inserted
+        feats, views = self.net.embedder(x)
+        h = self.pre_ln(self.net.encoder.prepare_tokens(feats, oob_features=views.get("oob")))
+        for blk in self.net.encoder.blocks:
+            h = blk(h)
+        return self.net.classifier(self.net.encoder.final_norm(h).mean(1))
 
 
 class IBRawOOBEmbedder(BandRFPatchEmbedder):
-    def __init__(self, oob_band=(IB, 1e9), oob_side=None, **kw):
+    """oob_null: OOB keys/values carry no packet information (zeros -> oob_proj bias + positions only)."""
+
+    def __init__(self, oob_band=(IB, 1e9), oob_side=None, oob_null=False, **kw):
         super().__init__(oob_keep=None, **kw)
+        self.oob_null = oob_null
         m = band_side_mask(self.window_size, oob_band[0], oob_band[1], oob_side).view(1, 1, -1)
         self.register_buffer("oob_band_mask", patchify(m, self.patch_size), persistent=False)
 
     def forward(self, iq):
         main, views = super().forward(band_limit(iq, IB))
-        _, _, oob_v, _ = torch_rf_views(iq, self.sample_rate, self.lora_bandwidth, fft_norm=self.fft_norm, oob_norm=self.oob_norm)
         views = dict(views)
+        if self.oob_null:
+            views["oob"] = iq.new_zeros(iq.shape[0], self.num_patches, self.patch_size)
+            return main, views
+        _, _, oob_v, _ = torch_rf_views(iq, self.sample_rate, self.lora_bandwidth, fft_norm=self.fft_norm, oob_norm=self.oob_norm)
         views["oob"] = patchify(oob_v, self.patch_size) * self.oob_band_mask
         return main, views
 
 
 class IBRawOOBPipeline(nn.Module):
-    def __init__(self, oob_band=(IB, 1e9), oob_side=None, num_classes=10):
+    def __init__(self, oob_band=(IB, 1e9), oob_side=None, oob_null=False, num_classes=10):
         super().__init__()
-        emb = IBRawOOBEmbedder(oob_band=oob_band, oob_side=oob_side, use_oob=True, oob_fusion_type="cross_attn_oob",
-                               use_oob_cross_attention=True, **STEM)
+        emb = IBRawOOBEmbedder(oob_band=oob_band, oob_side=oob_side, oob_null=oob_null, use_oob=True,
+                               oob_fusion_type="cross_attn_oob", use_oob_cross_attention=True, **STEM)
         self.net = DeviceClassifier(emb, num_classes, dim=DIM, depth=2, use_chirp_embedding=False)
 
     def forward(self, x):
@@ -104,13 +123,21 @@ class IBRawOOBPipeline(nn.Module):
 
 
 class IBCISOOBPipeline(nn.Module):
-    def __init__(self, depth=2, num_classes=10):
+    """Strict-IB main tokens query channel-independent-spectrogram (CIS) row tokens.
+    cis_rows: 'oob' = 35 rows with |f|>62.5 kHz (stage 02), 'ib' = 17 rows with |f|<=62.5 kHz, 'all' = 52 rows.
+    oob_null: same module, CIS rows replaced by zeros (no packet information in the keys/values).
+    combfft: FFT view of the main tokens keeps comb bins only (stage-02 factor)."""
+
+    def __init__(self, depth=2, oob_null=False, cis_rows="oob", combfft=False, num_classes=10):
         super().__init__()
         P = WINDOW // PATCH
-        self.embedder = RFPatchEmbedder(use_oob=False, **STEM)
+        self.oob_null = oob_null
+        self.embedder = CombFFTEmbedder(combfft=combfft, use_oob=False, **STEM)
         self.input_proj = nn.Linear(DIM, DIM)
         self.position = nn.Parameter(torch.zeros(1, P, DIM))
-        rows = torch.nonzero(cis_row_freqs().abs() > IB).squeeze(1)
+        f = cis_row_freqs().abs()
+        sel = {"oob": f > IB, "ib": f <= IB, "all": f >= 0}[cis_rows]
+        rows = torch.nonzero(sel).squeeze(1)
         self.register_buffer("oob_rows", rows, persistent=False)
         self.oob_proj = nn.Linear(126, DIM)
         self.oob_pos = nn.Parameter(torch.zeros(1, len(rows), DIM))
@@ -123,7 +150,11 @@ class IBCISOOBPipeline(nn.Module):
         x = rms_normalize(x)
         main, _ = self.embedder(band_limit(x, IB))
         h = self.input_proj(main) + self.position
-        o = self.oob_proj(shen_cis(x)[:, 0][:, self.oob_rows]) + self.oob_pos
+        if self.oob_null:
+            cis = x.new_zeros(x.shape[0], len(self.oob_rows), 126)
+        else:
+            cis = shen_cis(x)[:, 0][:, self.oob_rows]
+        o = self.oob_proj(cis) + self.oob_pos
         h = self.fusion(h, o)
         for blk in self.blocks:
             h = blk(h)
@@ -134,11 +165,13 @@ def build_pipeline2(arm: dict) -> nn.Module:
     fam = arm["family"]
     if fam == "ib_variant":
         return IBVariantPipeline(meanchirp=arm.get("meanchirp", False), combfft=arm.get("combfft", False),
-                                 dechirp=arm.get("dechirp", False), depth=arm.get("depth", 2))
+                                 dechirp=arm.get("dechirp", False), depth=arm.get("depth", 2), preln=arm.get("preln", False))
     if fam == "ib_rawoob":
-        return IBRawOOBPipeline(oob_band=tuple(arm.get("oob_band", (IB, 1e9))), oob_side=arm.get("oob_side"))
+        return IBRawOOBPipeline(oob_band=tuple(arm.get("oob_band", (IB, 1e9))), oob_side=arm.get("oob_side"),
+                                oob_null=arm.get("oob_null", False))
     if fam == "ib_cisoob":
-        return IBCISOOBPipeline()
+        return IBCISOOBPipeline(oob_null=arm.get("oob_null", False), cis_rows=arm.get("cis_rows", "oob"),
+                                combfft=arm.get("combfft", False))
     if fam == "ib_tfsplit":
         return TFSplitPipeline(input_fmax=IB, use_oob=False)
     raise ValueError(fam)

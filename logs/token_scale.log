@@ -1,0 +1,25 @@
+/workspace/crossatten/02-single-factor-screen/02-6-token-scale.py:68: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  m.load_state_dict(torch.load(ck, map_location=dev))
+{"arm": "s02_base", "seed": 101, "init": {"token_rms": 0.07842183113098145, "score_abs_median": 0.002074137330055237, "score_saturated_frac": 0.0}, "trained": {"token_rms": 85.0262680053711, "score_abs_median": 17435.953125, "score_saturated_frac": 0.9997520446777344}, "dev_val_acc": 92.3}
+{"arm": "s02_base", "seed": 102, "init": {"token_rms": 0.08915869891643524, "score_abs_median": 0.006907232105731964, "score_saturated_frac": 0.0}, "trained": {"token_rms": 134.27772521972656, "score_abs_median": 41778.484375, "score_saturated_frac": 0.9999942779541016}, "dev_val_acc": 83.2}
+{"arm": "s02_tfsplit", "seed": 101, "init": {"token_rms": 0.08339376002550125, "score_abs_median": 0.003984375391155481, "score_saturated_frac": 0.0}, "trained": {"token_rms": 33.96803283691406, "score_abs_median": 1997.3228759765625, "score_saturated_frac": 0.9980716705322266}, "dev_val_acc": 93.9}
+{"arm": "s02_tfsplit", "seed": 102, "init": {"token_rms": 0.09689422696828842, "score_abs_median": 0.005188322626054287, "score_saturated_frac": 0.0}, "trained": {"token_rms": 56.962982177734375, "score_abs_median": 7878.08203125, "score_saturated_frac": 0.9999890327453613}, "dev_val_acc": 92.8}
+{"arm": "s02_rawoob_full", "seed": 101, "init": {"token_rms": 0.9998064637184143, "score_abs_median": 0.0676080733537674, "score_saturated_frac": 0.0}, "trained": {"token_rms": 0.995402991771698, "score_abs_median": 10.378022193908691, "score_saturated_frac": 0.7329883575439453}, "dev_val_acc": 92.6}
+{"arm": "s02_rawoob_full", "seed": 102, "init": {"token_rms": 0.9996286034584045, "score_abs_median": 0.09300999343395233, "score_saturated_frac": 0.0}, "trained": {"token_rms": 1.007280945777893, "score_abs_median": 16.808069229125977, "score_saturated_frac": 0.8985519409179688}, "dev_val_acc": 85.4}
+{"arm": "s02_cisoob", "seed": 101, "init": {"token_rms": 0.9996110200881958, "score_abs_median": 0.2339930236339569, "score_saturated_frac": 0.0}, "trained": {"token_rms": 1.0038645267486572, "score_abs_median": 8.064250946044922, "score_saturated_frac": 0.6223278045654297}, "dev_val_acc": 93.3}
+{"arm": "s02_cisoob", "seed": 102, "init": {"token_rms": 0.9997785687446594, "score_abs_median": 0.4449816942214966, "score_saturated_frac": 0.0}, "trained": {"token_rms": 0.9999746680259705, "score_abs_median": 10.804909706115723, "score_saturated_frac": 0.8370170593261719}, "dev_val_acc": 93.5}
+# Token scale entering the first HSTU mixer (POST-HOC; fold 0; 512 source_val packets of source RX)
+
+saturated = |q.k/sqrt(d) + bias| > 6.0 (sigmoid slope < 0.0025)
+
+| arm | seed | LayerNorm before mixer 1 | init token RMS | init sat. frac | trained token RMS | trained sat. frac | trained median abs(score) | dev_val acc |
+|---|---|---|---|---|---|---|---|---|
+| s02_base | 101 | no | 0.08 | 0.000 | 85.03 | 1.000 | 17435.95 | 92.3 |
+| s02_base | 102 | no | 0.09 | 0.000 | 134.28 | 1.000 | 41778.48 | 83.2 |
+| s02_tfsplit | 101 | no | 0.08 | 0.000 | 33.97 | 0.998 | 1997.32 | 93.9 |
+| s02_tfsplit | 102 | no | 0.10 | 0.000 | 56.96 | 1.000 | 7878.08 | 92.8 |
+| s02_rawoob_full | 101 | yes (fusion norm_out) | 1.00 | 0.000 | 1.00 | 0.733 | 10.38 | 92.6 |
+| s02_rawoob_full | 102 | yes (fusion norm_out) | 1.00 | 0.000 | 1.01 | 0.899 | 16.81 | 85.4 |
+| s02_cisoob | 101 | yes (fusion norm_out) | 1.00 | 0.000 | 1.00 | 0.622 | 8.06 | 93.3 |
+| s02_cisoob | 102 | yes (fusion norm_out) | 1.00 | 0.000 | 1.00 | 0.837 | 10.80 | 93.5 |
+

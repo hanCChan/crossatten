@@ -1,0 +1,84 @@
+# 02-single-factor-screen explore: auto-generated tables
+
+run table sha256: `4391e921c671901399d425b676b416cfe52d7f07ba254839c5782d5b1f65da71`
+
+## Arms (selected checkpoint; %, RX-equal mean over the role's receivers)
+
+| arm | n_fits | params | dev_val_acc_mean | dev_val_acc_sd | dev_val_fold0 | dev_val_fold1 | dev_val_f1_mean | dev_val_worst_rx_seedmean | dev_val_worst_rx_name | dev_val_within_fold_seed_sd | src_val_acc | best_epoch_median | train_s_mean |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| s02_ep200 | 4 | 580008 | 94.27 | 1.83 | 93.65 | 94.89 | 94.24 | 89.7 | b200_mini_1 | 1.85 | 94.15 | 181.5 | 1466.4 |
+| s02_combfft | 4 | 580008 | 94.2 | 2.33 | 92.42 | 95.97 | 94.16 | 87.62 | b200_mini_1 | 1.22 | 94.28 | 95.5 | 737.4 |
+| s02_cisoob | 4 | 619816 | 94.04 | 0.86 | 93.39 | 94.7 | 93.98 | 92.28 | pluto_1 | 0.41 | 96.83 | 96.5 | 752.7 |
+| s02_tfsplit | 4 | 583294 | 93.86 | 0.98 | 93.34 | 94.38 | 93.84 | 91.08 | b200_mini_1 | 0.94 | 94.2 | 96.0 | 922.1 |
+| cis_flat | 4 | 13442954 | 93.2 | 1.47 | 92.03 | 94.38 | 92.98 | 85.07 | pluto_1 | 0.58 | 97.61 | 255.0 | 1815.4 |
+| s02_cis_rank16 | 4 | 658314 | 91.58 | 2.53 | 89.58 | 93.59 | 91.29 | 79.88 | pluto_1 | 1.01 | 97.26 | 264.5 | 1516.1 |
+| xa_trueib_cos_awgn | 4 | 580008 | 91.48 | 5.71 | 87.75 | 95.22 | 91.29 | 80.38 | b200_mini_1 | 3.24 | 91.36 | 94.5 | 721.6 |
+| s02_base | 4 | 580008 | 91.48 | 5.71 | 87.75 | 95.22 | 91.29 | 80.38 | b200_mini_1 | 3.24 | 91.36 | 94.5 | 789.7 |
+| s02_rawoob_full | 4 | 625896 | 87.45 | 3.49 | 89.0 | 85.9 | 86.76 | 70.82 | rtl_6 | 3.12 | 95.76 | 84.0 | 820.7 |
+| s02_awgn10 | 4 | 580008 | 85.28 | 7.5 | 80.53 | 90.03 | 84.39 | 69.72 | b200_mini_1 | 5.43 | 84.98 | 97.0 | 736.3 |
+| s02_rawoob_near | 4 | 625896 | 85.22 | 1.35 | 85.35 | 85.09 | 83.89 | 64.65 | rtl_6 | 1.38 | 95.55 | 79.5 | 811.6 |
+| s02_rawoob_nearL | 4 | 625896 | 85.11 | 1.13 | 84.44 | 85.78 | 84.02 | 74.08 | rtl_7 | 0.88 | 94.45 | 72.5 | 874.5 |
+| s02_depth4 | 4 | 622246 | 84.94 | 12.3 | 82.54 | 87.35 | 84.26 | 74.57 | b200_mini_1 | 14.6 | 85.71 | 99.5 | 726.7 |
+| s02_meanchirp | 4 | 580008 | 82.27 | 2.45 | 80.28 | 84.26 | 81.98 | 66.9 | pluto_1 | 0.84 | 82.81 | 96.0 | 789.0 |
+| s02_dechirp | 4 | 580008 | 79.63 | 28.71 | 93.79 | 65.47 | 78.78 | 64.2 | rtl_1 | 20.74 | 80.09 | 94.5 | 665.3 |
+
+## Pre-registered comparisons (delta = B - A, pp)
+
+| Q | role | B | A | factor | pairs | mean | min | max | +pairs | +RX | worst-RX delta | verdict |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| B | dev_val | s02_meanchirp | s02_base | coherent 8-symbol mean chirp (drops residual/transient) | 4 | -9.21 | -13.07 | -1.87 | 0/4 | 0/10 | -13.47 | harms |
+| B | dev_val | s02_combfft | s02_base | FFT view: comb bins only | 4 | 2.72 | 0.32 | 7.96 | 4/4 | 10/10 | 7.25 | improves |
+| B | dev_val | s02_dechirp | s02_base | dechirped input | 4 | -11.85 | -58.63 | 10.19 | 2/4 | 5/10 | -16.17 | unclear |
+| A | dev_val | s02_rawoob_full | s02_base | + raw OOB keys/values, all |f|>62.5 kHz | 4 | -4.03 | -10.17 | 2.27 | 2/4 | 4/10 | -9.55 | unclear |
+| A | dev_val | s02_rawoob_near | s02_base | + raw OOB keys/values, 62.5-200 kHz | 4 | -6.26 | -11.74 | 1.85 | 1/4 | 2/10 | -15.72 | harms |
+| A | dev_val | s02_rawoob_nearL | s02_base | + raw OOB keys/values, left near band only | 4 | -6.37 | -9.73 | 2.22 | 1/4 | 3/10 | -6.3 | harms |
+| A | dev_val | s02_cisoob | s02_base | + CIS-quotient OOB keys/values | 4 | 2.56 | -1.01 | 10.3 | 2/4 | 6/10 | 11.9 | unclear |
+| C | dev_val | s02_depth4 | s02_base | 4 mixer blocks | 4 | -6.54 | -17.16 | 1.57 | 2/4 | 0/10 | -5.8 | unclear |
+| C | dev_val | s02_tfsplit | s02_base | time/frequency split tokens (strict IB) | 4 | 2.38 | -1.6 | 9.6 | 2/4 | 5/10 | 10.7 | unclear |
+| D | dev_val | s02_ep200 | s02_base | 200-epoch horizon | 4 | 2.79 | -1.01 | 8.53 | 3/4 | 5/10 | 9.33 | improves |
+| D | dev_val | s02_awgn10 | s02_base | AWGN U[10,50) instead of U[0,50) | 4 | -6.2 | -13.42 | 0.86 | 1/4 | 0/10 | -10.65 | harms |
+| eff | dev_val | s02_cis_rank16 | cis_flat | rank-16 head vs Flatten-Dense (stage-01 fits, same data streams) | 4 | -1.62 | -4.38 | -0.47 | 0/4 | 2/10 | -5.2 | harms |
+| ref | dev_val | s02_base | xa_trueib_cos_awgn | determinism check: re-run of stage-01 arm (expected 0.00) | 4 | 0.0 | 0.0 | 0.0 | 0/4 | 0/10 | 0.0 | reference (no verdict) |
+| ref | dev_val | s02_base | s02_cis_rank16 | SYSTEM: CrossAttn-TrueIB vs rank-16 CIS | 4 | -0.1 | -5.15 | 1.8 | 3/4 | 5/10 | 0.5 | reference (no verdict) |
+
+## Per-receiver seed-mean accuracy (%)
+
+### dev_val
+
+| arm | f0:b200_mini_1 | f0:pluto_1 | f0:rtl_2 | f0:rtl_5 | f0:rtl_7 | f1:b210_1 | f1:rtl_1 | f1:rtl_3 | f1:rtl_6 | f1:rtl_9 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| s02_ep200 | 89.7 | 93.2 | 94.3 | 94.4 | 96.6 | 94.7 | 94.1 | 94.0 | 94.8 | 96.8 |
+| s02_combfft | 87.6 | 91.8 | 93.3 | 94.2 | 95.0 | 96.0 | 95.3 | 95.0 | 96.2 | 97.4 |
+| s02_cisoob | 96.4 | 92.3 | 92.8 | 93.0 | 92.4 | 98.0 | 92.9 | 93.7 | 93.4 | 95.4 |
+| s02_tfsplit | 91.1 | 92.6 | 93.1 | 94.6 | 95.3 | 94.8 | 93.1 | 93.3 | 95.0 | 95.7 |
+| cis_flat | 98.7 | 85.1 | 88.4 | 91.1 | 96.9 | 98.9 | 88.5 | 91.2 | 97.8 | 95.5 |
+| s02_cis_rank16 | 98.2 | 79.9 | 86.4 | 90.0 | 93.4 | 99.0 | 87.9 | 88.6 | 96.8 | 95.6 |
+| xa_trueib_cos_awgn | 80.4 | 88.9 | 89.0 | 90.0 | 90.4 | 94.8 | 94.5 | 94.4 | 95.5 | 96.8 |
+| s02_base | 80.4 | 88.9 | 89.0 | 90.0 | 90.4 | 94.8 | 94.5 | 94.4 | 95.5 | 96.8 |
+| s02_rawoob_full | 94.3 | 93.5 | 89.3 | 89.6 | 78.3 | 96.3 | 88.9 | 86.4 | 70.8 | 87.0 |
+| s02_awgn10 | 69.7 | 84.0 | 81.7 | 82.5 | 84.8 | 87.2 | 89.8 | 89.8 | 90.7 | 92.5 |
+| s02_rawoob_near | 89.2 | 87.2 | 86.5 | 86.7 | 77.2 | 95.8 | 91.0 | 85.8 | 64.7 | 88.2 |
+| s02_rawoob_nearL | 88.5 | 89.0 | 84.9 | 85.7 | 74.1 | 95.8 | 86.2 | 83.8 | 76.2 | 86.9 |
+| s02_depth4 | 74.6 | 84.9 | 84.7 | 84.2 | 84.3 | 82.1 | 85.3 | 88.2 | 89.1 | 92.0 |
+| s02_meanchirp | 77.1 | 66.9 | 85.1 | 85.8 | 86.5 | 82.1 | 83.9 | 84.5 | 86.2 | 84.6 |
+| s02_dechirp | 92.2 | 94.3 | 92.8 | 94.2 | 95.5 | 65.3 | 64.2 | 65.0 | 66.6 | 66.3 |
+
+{
+ "rules": "README.md section 4",
+ "stage": "explore",
+ "run_table_sha256": "4391e921c671901399d425b676b416cfe52d7f07ba254839c5782d5b1f65da71",
+ "verdicts_dev_val": {
+  "s02_meanchirp": "harms",
+  "s02_combfft": "improves",
+  "s02_dechirp": "unclear",
+  "s02_rawoob_full": "unclear",
+  "s02_rawoob_near": "harms",
+  "s02_rawoob_nearL": "harms",
+  "s02_cisoob": "unclear",
+  "s02_depth4": "unclear",
+  "s02_tfsplit": "unclear",
+  "s02_ep200": "improves",
+  "s02_awgn10": "harms"
+ },
+ "confirmation": "ALL registered arms, seeds 201-203, dev_val + confirm RX (no selection)"
+}

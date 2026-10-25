@@ -74,9 +74,53 @@ def test_cis_oob_rows():
     assert len(m.oob_rows) == 35
 
 
+def test_preln_control():
+    torch.manual_seed(5)
+    base = M.build_pipeline2(dict(family="ib_variant")).eval()
+    torch.manual_seed(5)
+    pre = M.build_pipeline2(dict(family="ib_variant", preln=True)).eval()
+    assert n_params(pre) == n_params(base) + 128
+    sb, sp = base.state_dict(), pre.state_dict()
+    assert all(torch.equal(sb[k], sp[k]) for k in sb)          # identical shared initial weights
+    x = to_t(chirp_packet(2))
+    with torch.no_grad():
+        assert not torch.equal(base(x), pre(x)) and torch.isfinite(pre(x)).all()
+
+
+def test_null_oob_controls_carry_no_packet_information():
+    x = to_t(chirp_packet(2))
+    for fam, n in (("ib_rawoob", 625_896), ("ib_cisoob", 619_816)):
+        torch.manual_seed(3)
+        info = M.build_pipeline2(dict(family=fam)).eval()
+        torch.manual_seed(3)
+        null = M.build_pipeline2(dict(family=fam, oob_null=True)).eval()
+        assert n_params(null) == n_params(info) == n
+        si, sn = info.state_dict(), null.state_dict()
+        assert all(torch.equal(si[k], sn[k]) for k in si)
+        proj = null.net.encoder.oob_proj if fam == "ib_rawoob" else null.oob_proj
+        seen = []
+        h = proj.register_forward_hook(lambda m, inp, out: seen.append(inp[0].abs().max().item()))
+        with torch.no_grad():
+            null(x)
+        h.remove()
+        assert seen == [0.0], seen
+
+
+def test_cis_row_options():
+    x = to_t(chirp_packet(2))
+    for rows, n in (("oob", 35), ("ib", 17), ("all", 52)):
+        m = M.build_pipeline2(dict(family="ib_cisoob", cis_rows=rows)).eval()
+        assert len(m.oob_rows) == n and m.oob_pos.shape[1] == n
+        with torch.no_grad():
+            assert m(x).shape == (2, 10)
+    m = M.build_pipeline2(dict(family="ib_cisoob", combfft=True)).eval()
+    assert m.embedder.combfft
+
+
 if __name__ == "__main__":
     print(test_params_and_shapes())
     for fn in (test_cis_rank16_params, test_dispatch_through_build_pipeline, test_base_identical_to_stage01_trueib,
-               test_meanchirp_is_comb_projection, test_dechirp_ideal_chirp_is_tone, test_cis_oob_rows):
+               test_meanchirp_is_comb_projection, test_dechirp_ideal_chirp_is_tone, test_cis_oob_rows,
+               test_preln_control, test_null_oob_controls_carry_no_packet_information, test_cis_row_options):
         fn()
         print("PASS", fn.__name__)

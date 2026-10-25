@@ -1,0 +1,46 @@
+b200_mini_1 loaded
+b210_1 loaded
+pluto_1 loaded
+rtl_1 loaded
+rtl_2 loaded
+rtl_3 loaded
+rtl_5 loaded
+rtl_6 loaded
+rtl_7 loaded
+rtl_9 loaded
+IB|comb                      dim=  32 within=0.712 cross=0.738
+IB|offcomb                   dim=  32 within=0.509 cross=0.541
+near|comb                    dim=  19 within=0.673 cross=0.526
+near|offcomb                 dim=  19 within=0.621 cross=0.361
+near|ratio_scalar            dim=   1 within=0.429 cross=0.367
+near-L|comb                  dim=   9 within=0.643 cross=0.491
+near-L|offcomb               dim=   9 within=0.606 cross=0.337
+near-L|ratio_scalar          dim=   1 within=0.408 cross=0.314
+near-R|comb                  dim=   9 within=0.243 cross=0.210
+near-R|offcomb               dim=   9 within=0.154 cross=0.126
+near-R|ratio_scalar          dim=   1 within=0.129 cross=0.121
+mid|comb                     dim=  51 within=0.314 cross=0.246
+mid|offcomb                  dim=  51 within=0.362 cross=0.197
+mid|ratio_scalar             dim=   1 within=0.210 cross=0.119
+mid-L|comb                   dim=  25 within=0.270 cross=0.198
+mid-L|offcomb                dim=  25 within=0.333 cross=0.184
+mid-L|ratio_scalar           dim=   1 within=0.255 cross=0.125
+mid-R|comb                   dim=  25 within=0.219 cross=0.196
+mid-R|offcomb                dim=  25 within=0.191 cross=0.144
+mid-R|ratio_scalar           dim=   1 within=0.168 cross=0.128
+far|comb                     dim= 153 within=0.233 cross=0.181
+far|offcomb                  dim= 153 within=0.249 cross=0.157
+far|ratio_scalar             dim=   1 within=0.287 cross=0.147
+far-L|comb                   dim=  76 within=0.222 cross=0.152
+far-L|offcomb                dim=  76 within=0.244 cross=0.156
+far-L|ratio_scalar           dim=   1 within=0.293 cross=0.153
+far-R|comb                   dim=  76 within=0.221 cross=0.181
+far-R|offcomb                dim=  76 within=0.211 cross=0.147
+far-R|ratio_scalar           dim=   1 within=0.265 cross=0.147
+field|snr                    dim=   1 within=0.338 cross=0.089
+field|cfo                    dim=   1 within=0.628 cross=0.100
+meanchirp-IB|chirp           dim=  32 within=0.712 cross=0.738
+meanchirp-OOB<=200k|chirp    dim=  70 within=0.628 cross=0.502
+residual-IB|chirp            dim=  32 within=0.507 cross=0.525
+residual-OOB<=200k|chirp     dim=  70 within=0.688 cross=0.289
+wrote /workspace/crossatten/00-signal-audit/out/00-2-audit.json

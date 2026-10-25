@@ -1,0 +1,20 @@
+56 to run, 0 already done
+[gpu0] rc=0     31s xa_p1fixed f0 s101 :: {"run": "xa_p1fixed__f0__s101", "dev_val_acc": 0.3174, "worst": "rtl_2", "best_epoch": 4, "stop": 4, "sec": 20.6}
+[gpu3] rc=0     36s xa_p1fixed f1 s101 :: {"run": "xa_p1fixed__f1__s101", "dev_val_acc": 0.3444, "worst": "rtl_1", "best_epoch": 4, "stop": 4, "sec": 25.4}
+[gpu2] rc=0    534s xa_nooob_cos f0 s101 :: {"run": "xa_nooob_cos__f0__s101", "dev_val_acc": 0.5485, "worst": "rtl_2", "best_epoch": 9, "stop": 100, "sec": 525.4}
+[gpu2] rc=0    537s xa_nooob_cos_awgn f0 s101 :: {"run": "xa_nooob_cos_awgn__f0__s101", "dev_val_acc": 0.2076, "worst": "rtl_5", "best_epoch": 61, "stop": 100, "sec": 528.1}
+[gpu1] rc=0    567s xa_oobnear_cos_awgn f0 s101 :: {"run": "xa_oobnear_cos_awgn__f0__s101", "dev_val_acc": 0.4928, "worst": "rtl_7", "best_epoch": 31, "stop": 100, "sec": 557.3}
+[gpu1] rc=0    573s xa_oobnear_cos f0 s101 :: {"run": "xa_oobnear_cos__f0__s101", "dev_val_acc": 0.5186, "worst": "rtl_2", "best_epoch": 9, "stop": 100, "sec": 563.7}
+[gpu2] rc=0    586s xa_trueib_cos f0 s101 :: {"run": "xa_trueib_cos__f0__s101", "dev_val_acc": 0.6927, "worst": "b200_mini_1", "best_epoch": 31, "stop": 100, "sec": 577.8}
+[gpu2] rc=0    588s xa_trueib_cos_awgn f0 s101 :: {"run": "xa_trueib_cos_awgn__f0__s101", "dev_val_acc": 0.9232, "worst": "b200_mini_1", "best_epoch": 95, "stop": 100, "sec": 580.8}
+[gpu1] rc=0    630s xa_lp200_cos f0 s101 :: {"run": "xa_lp200_cos__f0__s101", "dev_val_acc": 0.5056, "worst": "rtl_2", "best_epoch": 8, "stop": 100, "sec": 621.6}
+[gpu1] rc=0    629s xa_lp200_cos_awgn f0 s101 :: {"run": "xa_lp200_cos_awgn__f0__s101", "dev_val_acc": 0.4876, "worst": "rtl_7", "best_epoch": 38, "stop": 100, "sec": 621.3}
+[gpu0] rc=0    647s xa_const f0 s101 :: {"run": "xa_const__f0__s101", "dev_val_acc": 0.4463, "worst": "rtl_2", "best_epoch": 12, "stop": 100, "sec": 636.6}
+[gpu0] rc=0    647s xa_cos f0 s101 :: {"run": "xa_cos__f0__s101", "dev_val_acc": 0.4692, "worst": "rtl_2", "best_epoch": 14, "stop": 100, "sec": 637.7}
+[gpu0] rc=0    647s xa_cos_awgn f0 s101 :: {"run": "xa_cos_awgn__f0__s101", "dev_val_acc": 0.5173, "worst": "rtl_2", "best_epoch": 31, "stop": 100, "sec": 639.2}
+[gpu3] rc=0    631s xa_const f1 s101 :: {"run": "xa_const__f1__s101", "dev_val_acc": 0.4533, "worst": "rtl_1", "best_epoch": 25, "stop": 100, "sec": 619.3}
+[gpu0] rc=0    635s xa_cos f1 s101 :: {"run": "xa_cos__f1__s101", "dev_val_acc": 0.4337, "worst": "rtl_1", "best_epoch": 19, "stop": 100, "sec": 626.9}
+[gpu3] rc=0    617s xa_cos_awgn f1 s101 :: {"run": "xa_cos_awgn__f1__s101", "dev_val_acc": 0.6049, "worst": "rtl_6", "best_epoch": 89, "stop": 100, "sec": 607.4}
+[gpu3] rc=0    759s tf_cos f0 s101 :: {"run": "tf_cos__f0__s101", "dev_val_acc": 0.3929, "worst": "rtl_2", "best_epoch": 7, "stop": 100, "sec": 751.6}
+[gpu3] rc=0    767s tf_cos_awgn f0 s101 :: {"run": "tf_cos_awgn__f0__s101", "dev_val_acc": 0.4981, "worst": "rtl_7", "best_epoch": 26, "stop": 100, "sec": 759.5}
+{"total": 56, "skipped": 0, "done": 18, "started": "2026-10-25 01:02:26", "finished": "2026-10-25 01:15:39"} failed: 0
