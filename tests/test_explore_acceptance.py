@@ -55,6 +55,24 @@ class AccessTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "predates"):
             self.check([job], early)
 
+    def test_osu_posthoc_is_separate_from_formal_receiver_roles(self):
+        legal = {
+            "formal": {("RX1", 1, "train"): 24, ("RX2", 1, "target"): 12},
+            "posthoc:formal": {("RX1", 1, "target"): 12},
+        }
+        required = {("formal", "RX1", 1, "train"), ("formal", "RX2", 1, "target")}
+        rows = [dict(run=run, rx=rx, tx=tx, split=split, count=count)
+                for run, events in legal.items() for (rx, tx, split), count in events.items()]
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "osu_access.jsonl"
+            path.write_text("".join(json.dumps(r) + "\n" for r in rows))
+            verify.check_osu_access(legal, required, path)
+            for bad in (dict(rows[-1], run="formal"), dict(rows[-1], rx="RX2"),
+                        dict(rows[-1], split="train"), dict(rows[-1], count=1)):
+                path.write_text("".join(json.dumps(r) + "\n" for r in rows + [bad]))
+                with self.subTest(bad=bad), self.assertRaises(ValueError):
+                    verify.check_osu_access(legal, required, path)
+
 
 if __name__ == "__main__":
     unittest.main()

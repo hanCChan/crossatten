@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Read-only acceptance checks for the completed, bounded Stage-07 artifacts."""
+import csv
 import importlib.util
 import json
 import subprocess
@@ -85,7 +86,6 @@ def osu_fits(audit):
             raise ValueError("OSU frozen trainer changed")
         if sha(out / "model.pt") != result["weights_sha256"]:
             raise ValueError("OSU weights changed")
-        import csv
         history = list(csv.DictReader((out / "history.csv").open()))
         if len(history) != reg["recipe"]["epochs"] or \
                 [int(r["epoch"]) for r in history] != list(range(1, len(history) + 1)):
@@ -126,13 +126,21 @@ def osu_fits(audit):
                 events[event] = entry["counts"][split]
                 expected_reads.add((job["id"], *event))
         legal_reads[job["id"]] = events
+        legal_reads[f"posthoc:{job['id']}"] = {
+            (r["rx"], r["tx"], "target"): r["counts"]["target"]
+            for r in manifest["records"] if r["rx"] == job["source"]}
         for split, key in (("train", "source_train"), ("val", "source_val")):
             if config[key] != sum(n for (rx, tx, s), n in events.items() if s == split):
                 raise ValueError("OSU source counts differ from manifest")
         results[job["id"]] = dict(metrics_sha256=sha(out / "metrics.json"),
                                  predictions_sha256=sha(out / "preds_target.npz"))
+    check_osu_access(legal_reads, expected_reads, HERE / "osu_access.jsonl")
+    return results
+
+
+def check_osu_access(legal_reads, expected_reads, path):
     seen = set()
-    for line in (HERE / "osu_access.jsonl").read_text().splitlines():
+    for line in path.read_text().splitlines():
         row = json.loads(line)
         event = (row["rx"], row["tx"], row["split"])
         if row["run"] not in legal_reads or legal_reads[row["run"]].get(event) != row["count"]:
@@ -140,7 +148,6 @@ def osu_fits(audit):
         seen.add((row["run"], *event))
     if not expected_reads <= seen:
         raise ValueError("missing OSU data access evidence")
-    return results
 
 
 def main():
