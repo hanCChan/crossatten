@@ -186,8 +186,25 @@ def collect():
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--require-complete", action="store_true")
+    parser.add_argument("--check-weights", action="store_true")
     args = parser.parse_args()
     registration, results, configs, checks = collect()
+    if args.check_weights:
+        import torch
+        torch.set_num_threads(2)
+        for result in results:
+            path = HERE / "runs" / result["stage"] / result["run_id"] / "model.pt"
+            state = torch.load(path, map_location="cpu", weights_only=True)
+            if not all(torch.isfinite(tensor).all() for tensor in state.values()):
+                checks["problems"].append(dict(path=str(path.relative_to(HERE)), error="nonfinite saved checkpoint"))
+            for label in result["selected"]:
+                with np.load(path.parent / f"preds_{label}.npz") as predictions:
+                    for rx, scores in result["selected"][label]["per_rx"].items():
+                        logits, y = predictions[rx], predictions[f"y_{rx}"]
+                        assert logits.shape == (scores["total"], configs[(result["stage"], result["run_id"])]["arm"]["num_classes"])
+                        assert y.shape == (scores["total"],) and np.isfinite(logits).all()
+        checks["saved_weights_checked"] = len(results)
+        checks["complete"] = checks["complete"] and not checks["problems"]
     groups, arms = defaultdict(list), {a["name"]: a for a in registration["arms"]}
     wifi_path = HERE / "decision_wifi.json"
     wifi = json.loads(wifi_path.read_text()) if wifi_path.exists() else None
@@ -249,6 +266,16 @@ def main():
                 worst = f"{row['worst_fold_rx_delta_pp']:+.2f}" if "delta_pp" in row else "pending"
                 lines.append(f"| {dataset} | {label} | {left}-{right} | {row['n']} | {delta} | "
                              f"{row.get('positive', '-')}/{row['n']} | {worst} | {row['status']} |")
+    lines += ["", "## Measured Cost", "",
+              "Measurements precede formal training on an otherwise idle A100. Random weights, FP32, device IQ to logits.",
+              "Batch latency excludes host transfer. Repeated timing samples measure system variability, not accuracy seeds.",
+              "", "| Architecture | Params | MFLOPs/packet | GPU b1 p50 ms | p95 ms | b512 packets/s | CPU4t p50 ms |",
+              "|---|---:|---:|---:|---:|---:|---:|"]
+    for length in (256, 8192):
+        for row in json.loads((HERE / f"summary/cost_{length}/bench.json").read_text())["arms"]:
+            lines.append(f"| {row['arm']} | {row['params']} | {row['mflops_per_packet']} | "
+                         f"{row['gpu_b1_ms_p50']} | {row['gpu_b1_ms_p95']} | "
+                         f"{row['gpu_b512_pkts_per_s']} | {row['cpu4t_b1_ms_p50']} |")
     lines += ["", "## Interpretation Limits", "",
               "- CRD is the primary WiSig task. W0/W1/W2 remain separate; no target-based winner selection.",
               "- Final configuration choices use only source RX days 1-2; source evidence and decisions are committed before target access.",
