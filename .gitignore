@@ -3,3 +3,7 @@ data/raw
 **/runs/**/model.pt
 __pycache__/
 *.pyc
+# third-party reference repos / downloads (URLs + commit SHAs recorded in docs/LITERATURE_2025_2026.md)
+external/*/
+external/papers/
+external/*.log
