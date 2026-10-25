@@ -1,0 +1,43 @@
+q,role,b,a,desc,n_pairs,delta_mean,delta_min,delta_max,pos_pairs,rx_pos,rx_n,worst_rx_delta,verdict
+Q1,dev_val,xa_const,xa_p1fixed,horizon 100ep + source-val checkpoint,6,4.06,0.89,10.87,6,8,10,-7.52,unclear
+Q1,confirm,xa_const,xa_p1fixed,horizon 100ep + source-val checkpoint,6,10.35,6.08,17.97,6,8,8,3.33,improves
+Q1,dev_val,xa_cos,xa_const,warmup+cosine schedule,6,-0.41,-6.66,8.92,2,4,10,2.83,unclear
+Q1,confirm,xa_cos,xa_const,warmup+cosine schedule,6,1.88,-6.13,14.89,4,6,8,7.7,unclear
+Q1,dev_val,xa_cos_awgn,xa_cos,"AWGN U[0,50) dB",6,6.38,-2.53,17.51,5,5,10,16.42,improves
+Q1,confirm,xa_cos_awgn,xa_cos,"AWGN U[0,50) dB",6,3.06,-4.89,10.95,4,4,8,11.6,unclear
+Q2,dev_val,cis_gap,cis_flat,GAP head vs Flatten-Dense (AWGN),6,-34.45,-43.16,-16.55,0,0,10,-41.68,harms
+Q2,confirm,cis_gap,cis_flat,GAP head vs Flatten-Dense (AWGN),6,-40.36,-49.76,-23.38,0,0,8,-62.73,harms
+Q2,dev_val,cis_gap_noawgn,cis_flat_noawgn,GAP head vs Flatten-Dense (no AWGN),6,-14.79,-22.52,-4.64,0,1,10,-11.08,harms
+Q2,confirm,cis_gap_noawgn,cis_flat_noawgn,GAP head vs Flatten-Dense (no AWGN),6,-16.59,-23.01,-8.44,0,0,8,-18.38,harms
+Q2,dev_val,cis_flat,cis_flat_noawgn,AWGN on CIS (flatten),6,8.79,6.47,11.51,6,10,10,15.47,improves
+Q2,confirm,cis_flat,cis_flat_noawgn,AWGN on CIS (flatten),6,6.69,5.79,8.02,6,8,8,12.38,improves
+Q2,dev_val,cis_gap,cis_gap_noawgn,AWGN on CIS (GAP),6,-10.87,-25.43,2.85,1,1,10,-15.13,harms
+Q2,confirm,cis_gap,cis_gap_noawgn,AWGN on CIS (GAP),6,-17.07,-34.3,-5.93,0,0,8,-31.97,harms
+Q2,dev_val,cis_ib_flat,cis_flat,strict-IB CIS vs Shen crop (-203..+195 kHz),6,1.5,-0.89,3.49,5,6,10,-9.98,unclear
+Q2,confirm,cis_ib_flat,cis_flat,strict-IB CIS vs Shen crop (-203..+195 kHz),6,0.52,-0.78,1.58,4,4,8,-2.7,unclear
+Q2*,dev_val,cis_flat,xa_cos_awgn,SYSTEM-LEVEL: Shen-CIS vs CrossAttn (different input/model/recipe),6,42.66,38.22,46.86,6,10,10,41.73,system-level (no verdict)
+Q2*,confirm,cis_flat,xa_cos_awgn,SYSTEM-LEVEL: Shen-CIS vs CrossAttn (different input/model/recipe),6,38.45,34.1,46.81,6,8,8,53.1,system-level (no verdict)
+Q3,dev_val,xa_oobnear_cos,xa_cos,OOB pathway near band only (no AWGN),6,-0.69,-5.23,2.74,3,4,10,-2.0,unclear
+Q3,confirm,xa_oobnear_cos,xa_cos,OOB pathway near band only (no AWGN),6,-1.05,-8.08,7.19,2,2,8,-5.4,unclear
+Q3,dev_val,xa_oobnear_cos_awgn,xa_cos_awgn,OOB pathway near band only (AWGN),6,1.86,-1.83,6.25,5,6,10,-4.65,unclear
+Q3,confirm,xa_oobnear_cos_awgn,xa_cos_awgn,OOB pathway near band only (AWGN),6,0.39,-4.5,4.96,3,4,8,-7.48,unclear
+Q3,dev_val,xa_lp200_cos,xa_cos,input band-limited |f|<=200k (no AWGN),6,1.39,-4.58,4.88,4,7,10,-3.73,unclear
+Q3,confirm,xa_lp200_cos,xa_cos,input band-limited |f|<=200k (no AWGN),6,0.32,-4.21,4.94,4,4,8,-4.62,unclear
+Q3,dev_val,xa_lp200_cos_awgn,xa_cos_awgn,input band-limited |f|<=200k (AWGN),6,1.92,-1.99,7.77,4,6,10,-3.8,unclear
+Q3,confirm,xa_lp200_cos_awgn,xa_cos_awgn,input band-limited |f|<=200k (AWGN),6,0.42,-4.15,4.01,4,5,8,-4.63,unclear
+Q3,dev_val,xa_nooob_cos,xa_cos,remove explicit OOB pathway (no AWGN),6,-7.27,-24.47,19.24,2,2,10,0.23,unclear
+Q3,confirm,xa_nooob_cos,xa_cos,remove explicit OOB pathway (no AWGN),6,-13.73,-35.17,11.84,2,0,8,-3.3,unclear
+Q3,dev_val,xa_nooob_cos_awgn,xa_cos_awgn,remove explicit OOB pathway (AWGN),6,-1.12,-17.68,14.52,4,4,10,5.42,unclear
+Q3,confirm,xa_nooob_cos_awgn,xa_cos_awgn,remove explicit OOB pathway (AWGN),6,-7.4,-27.05,6.49,1,3,8,2.0,harms
+Q3,dev_val,xa_trueib_cos,xa_nooob_cos,"strict IB input vs full input, both without OOB pathway (no AWGN)",6,44.94,3.49,72.73,6,10,10,49.77,improves
+Q3,confirm,xa_trueib_cos,xa_nooob_cos,"strict IB input vs full input, both without OOB pathway (no AWGN)",6,40.09,2.39,68.4,6,8,8,43.32,improves
+Q3,dev_val,xa_trueib_cos_awgn,xa_nooob_cos_awgn,"strict IB input vs full input, both without OOB pathway (AWGN)",6,45.39,33.08,62.55,6,10,10,45.95,improves
+Q3,confirm,xa_trueib_cos_awgn,xa_nooob_cos_awgn,"strict IB input vs full input, both without OOB pathway (AWGN)",6,42.76,30.07,59.49,6,8,8,40.58,improves
+Q3,dev_val,xa_trueib_cos,xa_cos,TrueIB vs full CrossAttn-OOB (no AWGN),6,37.67,22.73,56.44,6,10,10,50.0,improves
+Q3,confirm,xa_trueib_cos,xa_cos,TrueIB vs full CrossAttn-OOB (no AWGN),6,26.35,10.16,40.27,6,8,8,40.02,improves
+Q3,dev_val,xa_trueib_cos_awgn,xa_cos_awgn,TrueIB vs full CrossAttn-OOB (AWGN),6,44.27,38.77,48.59,6,10,10,51.37,improves
+Q3,confirm,xa_trueib_cos_awgn,xa_cos_awgn,TrueIB vs full CrossAttn-OOB (AWGN),6,35.36,31.71,43.99,6,8,8,42.58,improves
+Q4,dev_val,tf_cos,xa_cos,time/frequency split tokens (no AWGN),6,-5.46,-10.01,-0.3,0,3,10,3.33,harms
+Q4,confirm,tf_cos,xa_cos,time/frequency split tokens (no AWGN),6,-7.82,-14.49,-2.1,0,0,8,-6.38,harms
+Q4,dev_val,tf_cos_awgn,xa_cos_awgn,time/frequency split tokens (AWGN),6,0.24,-10.65,11.78,2,6,10,-9.53,unclear
+Q4,confirm,tf_cos_awgn,xa_cos_awgn,time/frequency split tokens (AWGN),6,-0.63,-15.06,9.64,3,4,8,-10.73,unclear

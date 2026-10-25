@@ -12,9 +12,9 @@
 | 阶段 | 方向 | 内容 | 状态 |
 |---|---|---|---|
 | [00-signal-audit](00-signal-audit/) | 数据与信号 | 物理核验、梳状谱剖面、各频段信息探针、SNR/CFO 捷径、CIS 坐标、残差 | ✅ 完成，见 [RESULTS](00-signal-audit/RESULTS.md) |
-| [01-strong-baselines](01-strong-baselines/) | A + C + D 的起点 | Q1 训练配方阶梯，Q2 Shen-CIS 及其 GAP 版本，Q3 频带，Q4 时频分离 token | 进行中 |
-| 02-chirp-structure | B：8 个重复 chirp | 均值 chirp + 残差双分支、梳状频点选择、首符号瞬态、dechirp 表征；非对称 OOB（左 ≤100k，右 ≤200k） | 待阶段 01 的决策 |
-| 03-spectral-representation | A：谱表征 | 相邻帧谱商（CIS 式）分别作用于 IB/近带 token，两路做 CrossAttn；多分辨率 STFT；噪底白化 | 待阶段 02 |
+| [01-strong-baselines](01-strong-baselines/) | A + C + D 的起点 | Q1 训练配方阶梯，Q2 Shen-CIS 及其 GAP 版本，Q3 频带，Q4 时频分离 token | ✅ 完成：严格 IB + AWGN 的 CrossAttn 达到 94.7/92.1（CIS 为 93.1/95.2），见 [RESULTS](01-strong-baselines/RESULTS.md) |
+| [02-single-factor-screen](02-single-factor-screen/) | A/B/C/D 单因素 | 以 TrueIB+AWGN 为基线：chirp 结构（均值 chirp/梳状/dechirp）、OOB 增量（独立的原始 OOB 路径或 CIS 谱商 OOB 路径）、结构（深度、时频分离）、训练（epoch 数、AWGN 范围），外加 rank-16 CIS 轻量对照 | 进行中 |
+| 03-combination | 组合 | 只组合在阶段 02 确认中判为 improves 的因素，并保留"组合减去一项"的对照；时域 IB 与 CIS 互补融合作为候选（两者最差的 RX 不同） | 待阶段 02 |
 | 04-fusion-architecture | C：融合结构 | 独立时域/频域 encoder；比较 concat、gate、cross-attn；mixer 深度/宽度；分层 stem（替换 52 万参数的 patch 卷积） | 待阶段 03 |
 | 05-training | D：训练机制 | RX 均衡采样、ccalign（只用源数据）、增强强度；必须先有某个具体缺陷的证据，才引入 GRL/SupCon/KD | 待阶段 04 |
 | 06-confirmation | 确认 | 冻结的组合加全部单因素对照，多 seed 确认；14→6 历史协议的兼容性复核（标注为复用）；效率 Pareto 与蒸馏 | 最后 |

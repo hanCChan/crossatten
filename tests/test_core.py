@@ -94,6 +94,16 @@ def test_awgn_snr():
 
 
 def test_guard():
+    import xa.guard as G
+    real_log = G.ACCESS_LOG
+    G.ACCESS_LOG = Path(tempfile.mkdtemp()) / "access.jsonl"   # keep the real access log free of test entries
+    try:
+        _guard_checks()
+    finally:
+        G.ACCESS_LOG = real_log
+
+
+def _guard_checks():
     for bad in ["b200_2_test.h5", "b200_mini_2_test.h5", "Location_A_n210_2_test.h5", "pluto_2_test.h5", "n210_3_test.h5"]:
         try:
             check_raw_path(bad)
