@@ -79,3 +79,19 @@ env PYTHONPATH=lib python 06-paper-validation/06-7-export.py --require-complete
 这些更改仅涉及调度，注册模型、batch、预算、seed和选型规则均未修改。
 `8e07036` 增强保存预测审计，合成测试与既有已完成fit均通过；不改变训练代码或历史成绩。
 `465df20` 增加只读审计汇总的CSV/图表导出与合成测试，导出文件包含来源hash，不改变选型。
+
+21:27 全部注册训练结束：WiSig源域176/176、Shen源域100/100、WiSig最终240/240、Shen确认72/72，
+合计588/588正式fit；69个smoke仅作运行检查。训练、主/辅助调度和监控进程均已退出，不再启动新实验。
+21:28 `--require-complete --check-weights` 全量通过：588份有限权重、8,127,978条保存预测记录，零审计问题，
+保留10次中断尝试。float16最高分平分为4,476条，按兼容混淆计数边界核验，不改写float32原指标。
+最终数据访问日志：Shen 7,678条、WiSig 20,640条，零Shen blind访问、零WiSig源域/内部验证RX或日期违规。
+
+所有588个正式fit的训练代码hash为
+`2e55e39d8376f59fa346bb15122b880edfe76697b5ce2ccc011ef9421b30d50c`，
+注册hash为 `fa84885482665cdde235b4e0af947cecb61494bb7de1d06954e721004d52eabe`；
+冻结决策、旧阶段、协议、legacy与guard未按目标结果修改。
+最终[中文结论](summary/paper/CONCLUSION.md)、[原始审计](summary/report.json)及CSV均已导出：
+证据路线为 `narrow_to_LoRa_specific_evidence`，不支持跨LoRa/WiFi通用主张，不等于投稿就绪。
+Shen官方WaveMLP的一次近随机运行原样保留；未丢掉负面结果或更换种子。
+阶段03与本阶段737份权重（含smoke）新增独立Release归档，范围及校验见[归档说明](../artifacts/PAPER_VALIDATION.md)。
+本轮到此停止，不自动追加Loss、特征或结构搜索。

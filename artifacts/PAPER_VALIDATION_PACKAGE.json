@@ -1,0 +1,38 @@
+{
+ "tag": "paper-validation-2026-10-25",
+ "checkpoints": 737,
+ "formal_fits": 588,
+ "bytes": 625001493,
+ "compressed_bytes": 571811752,
+ "assets": [
+  {
+   "name": "crossatten-paper-validation-2026-10-25.tar.zst.part-000",
+   "bytes": 134217728,
+   "sha256": "38966cea3d82ea41efee05c1d8c5434827c8c3710d0d683a5c871b4de3a36e92"
+  },
+  {
+   "name": "crossatten-paper-validation-2026-10-25.tar.zst.part-001",
+   "bytes": 134217728,
+   "sha256": "6ec88624b2124e7cf88b35b16f472b769643b6c010b8c6c4fe4e4853b987696c"
+  },
+  {
+   "name": "crossatten-paper-validation-2026-10-25.tar.zst.part-002",
+   "bytes": 134217728,
+   "sha256": "b6f93d9945d1b1a48e0613db969a02a88c63e1f0b1410ae396acaa984c3e6d5b"
+  },
+  {
+   "name": "crossatten-paper-validation-2026-10-25.tar.zst.part-003",
+   "bytes": 134217728,
+   "sha256": "9e1172f7f65ce5eadbf68ef7f3405bcdbc09fc72a51341fd8e39aa3a884d6275"
+  },
+  {
+   "name": "crossatten-paper-validation-2026-10-25.tar.zst.part-004",
+   "bytes": 34940840,
+   "sha256": "aa6bd987ece40f41e0a02efc5f0192787aa18f80dda8f7b07d612d9752518e74"
+  }
+ ],
+ "checkpoint_manifest_sha256": "8614dbd0fdfd075f7fe88577a7736a9974d73ec5c5fd48e48317468bf534fcec",
+ "parts_manifest_sha256": "33aa74a9f07c15353fbc677766db3985acaf329b3a89c7a9fe9d9fbedabb2ce4",
+ "report_sha256": "9b18024f28bd1fc08fb1f1e45acea844a374dcc52047d69bf1154027771c3d9d",
+ "scope": "Local trained S03 and S06 weights, including smoke. No datasets or third-party source."
+}

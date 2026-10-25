@@ -1,8 +1,8 @@
 # Paper Validation Results
 
-Evidence updated: 2026-10-25T20:55:43+08:00. Registration: `bc30820`.
+Evidence updated: 2026-10-25T21:28:26+08:00. Registration: `bc30820`.
 This report includes only finished, audited fits. Smoke results are not accuracy evidence.
-**Status: in progress**; audited fits: 554.
+**Status: complete**; audited fits: 588.
 
 ## Completion
 
@@ -10,12 +10,12 @@ This report includes only finished, audited fits. Smoke results are not accuracy
 |---|---:|---:|
 | source | 176 | 0 |
 | explore | 100 | 0 |
-| final | 238 | 2 |
-| confirm | 40 | 32 |
+| final | 240 | 0 |
+| confirm | 72 | 0 |
 
 Artifact audit issues: 0; recorded failure/interruption entries: 10.
 A failed execution is not discarded; a subsequent successful retry may complete its registered fit.
-Saved finite checkpoints checked: 554; prediction/confusion audit: 7488778 packets, 3804 stored-logit ties.
+Saved finite checkpoints checked: 588; prediction/confusion audit: 8127978 packets, 4476 stored-logit ties.
 Accuracy uses original float32 logits. Stored float16 logits may merge top scores; all untied decisions and tie-compatible confusion counts are verified.
 
 ## Final Comparisons
@@ -38,8 +38,8 @@ Incomplete rows are provisional and cannot establish improvement.
 | ManyRx | FAN_source_selected | CRD | 12 | 87.56 +/- 3.55 | 87.55 | 85.26 | 0.80 | 3.58 | 65.43 | 151761 |
 | ManyRx | FAN_unified | CR | 12 | 89.13 +/- 3.29 | 89.17 | 86.94 | 0.23 | 3.55 | 71.80 | 151761 |
 | ManyRx | FAN_unified | CRD | 12 | 86.39 +/- 3.30 | 86.39 | 83.84 | 0.54 | 3.19 | 63.74 | 151761 |
-| ManyRx | IB-RFF | CR | 10 | 89.96 +/- 3.14 | 89.99 | 87.82 | 0.88 | 3.11 | 69.90 | 151761 |
-| ManyRx | IB-RFF | CRD | 10 | 88.20 +/- 3.12 | 88.20 | 86.05 | 1.08 | 3.50 | 67.18 | 151761 |
+| ManyRx | IB-RFF | CR | 12 | 90.22 +/- 2.96 | 90.24 | 88.12 | 0.28 | 3.10 | 69.90 | 151761 |
+| ManyRx | IB-RFF | CRD | 12 | 88.07 +/- 2.85 | 88.08 | 85.86 | 0.88 | 2.87 | 67.18 | 151761 |
 | ManyRx | W0 | CR | 12 | 85.76 +/- 5.77 | 85.76 | 83.60 | 0.80 | 6.18 | 64.72 | 72232 |
 | ManyRx | W0 | CRD | 12 | 83.19 +/- 4.82 | 83.19 | 80.86 | 0.79 | 5.05 | 62.20 | 72232 |
 | ManyRx | W1 | CR | 12 | 86.74 +/- 6.41 | 86.75 | 84.57 | 0.52 | 6.95 | 64.17 | 91128 |
@@ -72,26 +72,28 @@ Incomplete rows are provisional and cannot establish improvement.
 | ManySig | WaveMLP | CRD | 12 | 91.04 +/- 3.57 | 91.04 | 90.41 | 1.15 | 3.59 | 78.75 | 83974,84742 |
 | Shen | FAN_full_official | dev_val | 6 | 73.62 +/- 3.12 | 73.62 | 72.60 | 2.13 | 2.18 | 64.63 | 310481 |
 | Shen | FAN_full_official | confirm | 6 | 75.50 +/- 4.52 | 75.50 | 74.51 | 4.87 | 0.82 | 60.20 | 310481 |
-| Shen | FAN_full_unified | dev_val | 4 | 83.44 +/- 1.82 | 83.44 | 82.23 | 1.31 | 1.04 | 74.72 | 310481 |
-| Shen | FAN_full_unified | confirm | 4 | 83.93 +/- 2.58 | 83.93 | 83.08 | 0.15 | 3.14 | 72.50 | 310481 |
-| Shen | FAN_ib_unified | dev_val | 5 | 89.56 +/- 4.02 | 89.56 | 89.26 | 1.48 | 0.75 | 87.48 | 310481 |
-| Shen | FAN_ib_unified | confirm | 5 | 86.58 +/- 3.55 | 86.58 | 86.29 | 0.93 | 0.47 | 73.90 | 310481 |
-| Shen | IB-RFF_a0.004_ib_unified | dev_val | 1 | 93.56 +/- 0.00 | 93.56 | 93.52 | 0.00 | 0.00 | 90.65 | 310481 |
-| Shen | IB-RFF_a0.004_ib_unified | confirm | 1 | 90.90 +/- 0.00 | 90.90 | 90.72 | 0.00 | 0.00 | 81.20 | 310481 |
+| Shen | FAN_full_unified | dev_val | 6 | 82.79 +/- 2.74 | 82.79 | 81.39 | 1.46 | 2.27 | 71.50 | 310481 |
+| Shen | FAN_full_unified | confirm | 6 | 82.85 +/- 4.34 | 82.85 | 81.90 | 1.87 | 4.68 | 72.00 | 310481 |
+| Shen | FAN_ib_unified | dev_val | 6 | 89.51 +/- 3.60 | 89.52 | 89.22 | 1.43 | 0.53 | 87.30 | 310481 |
+| Shen | FAN_ib_unified | confirm | 6 | 86.53 +/- 3.18 | 86.53 | 86.23 | 0.94 | 0.31 | 73.77 | 310481 |
+| Shen | IB-RFF_a0.004_ib_unified | dev_val | 6 | 94.94 +/- 1.27 | 94.94 | 94.90 | 0.80 | 0.38 | 92.60 | 310481 |
+| Shen | IB-RFF_a0.004_ib_unified | confirm | 6 | 92.21 +/- 1.34 | 92.21 | 92.07 | 0.68 | 0.49 | 81.77 | 310481 |
 | Shen | IB-RFF_a0.04_full_official | dev_val | 6 | 73.55 +/- 3.84 | 73.55 | 72.57 | 2.93 | 2.31 | 64.38 | 310481 |
 | Shen | IB-RFF_a0.04_full_official | confirm | 6 | 76.30 +/- 4.57 | 76.30 | 75.39 | 4.43 | 0.16 | 59.85 | 310481 |
-| Shen | S_base | dev_val | 3 | 95.19 +/- 1.00 | 95.19 | 95.16 | 0.74 | 1.21 | 92.38 | 580136 |
-| Shen | S_base | confirm | 3 | 93.67 +/- 0.55 | 93.67 | 93.54 | 0.28 | 0.39 | 82.80 | 580136 |
-| Shen | S_cnnflops | dev_val | 3 | 86.26 +/- 0.56 | 86.26 | 85.91 | 0.07 | 0.56 | 77.50 | 655358 |
-| Shen | S_cnnflops | confirm | 3 | 84.68 +/- 3.48 | 84.68 | 84.48 | 2.00 | 4.26 | 65.50 | 655358 |
-| Shen | S_cnnonly | dev_val | 3 | 94.01 +/- 0.83 | 94.01 | 93.86 | 0.44 | 1.01 | 82.35 | 100154 |
-| Shen | S_cnnonly | confirm | 3 | 93.05 +/- 1.29 | 93.05 | 92.90 | 0.80 | 1.58 | 82.10 | 100154 |
-| Shen | S_cnnparam | dev_val | 4 | 86.10 +/- 0.93 | 86.10 | 85.95 | 0.69 | 0.64 | 78.53 | 138898 |
-| Shen | S_cnnparam | confirm | 4 | 83.50 +/- 1.03 | 83.50 | 83.36 | 0.86 | 0.87 | 66.58 | 138898 |
-| Shen | S_hstem | dev_val | 3 | 97.25 +/- 0.46 | 97.25 | 97.25 | 0.48 | 0.48 | 94.80 | 142392 |
-| Shen | S_hstem | confirm | 3 | 97.07 +/- 0.26 | 97.07 | 96.98 | 0.30 | 0.04 | 91.38 | 142392 |
-| Shen | WaveMLP_scaled_full_official | dev_val | 2 | 34.75 +/- 34.68 | 34.75 | 32.22 | 34.68 | 34.68 | 10.00 | 594442 |
-| Shen | WaveMLP_scaled_full_official | confirm | 2 | 34.22 +/- 34.09 | 34.22 | 30.88 | 34.09 | 34.09 | 9.65 | 594442 |
+| Shen | S_base | dev_val | 6 | 95.50 +/- 0.90 | 95.50 | 95.47 | 0.14 | 1.15 | 91.03 | 580136 |
+| Shen | S_base | confirm | 6 | 93.78 +/- 0.58 | 93.77 | 93.65 | 0.45 | 0.00 | 83.40 | 580136 |
+| Shen | S_cnnflops | dev_val | 6 | 86.45 +/- 0.76 | 86.45 | 86.21 | 0.30 | 0.39 | 78.63 | 655358 |
+| Shen | S_cnnflops | confirm | 6 | 83.78 +/- 2.46 | 83.77 | 83.61 | 0.66 | 2.71 | 67.35 | 655358 |
+| Shen | S_cnnonly | dev_val | 6 | 94.38 +/- 0.99 | 94.38 | 94.26 | 0.25 | 1.24 | 82.25 | 100154 |
+| Shen | S_cnnonly | confirm | 6 | 92.99 +/- 1.03 | 92.99 | 92.85 | 0.38 | 1.17 | 82.05 | 100154 |
+| Shen | S_cnnparam | dev_val | 6 | 86.44 +/- 1.13 | 86.44 | 86.31 | 0.77 | 0.95 | 78.32 | 138898 |
+| Shen | S_cnnparam | confirm | 6 | 83.64 +/- 0.83 | 83.64 | 83.47 | 0.66 | 0.51 | 67.17 | 138898 |
+| Shen | S_hstem | dev_val | 6 | 97.48 +/- 0.42 | 97.48 | 97.47 | 0.07 | 0.46 | 95.52 | 142392 |
+| Shen | S_hstem | confirm | 6 | 96.84 +/- 0.57 | 96.84 | 96.78 | 0.34 | 0.17 | 90.22 | 142392 |
+| Shen | WaveMLP_scaled_full_official | dev_val | 6 | 56.68 +/- 23.56 | 56.68 | 54.92 | 12.22 | 12.90 | 43.13 | 594442 |
+| Shen | WaveMLP_scaled_full_official | confirm | 6 | 55.70 +/- 23.16 | 55.70 | 53.81 | 13.66 | 10.98 | 34.20 | 594442 |
+| Shen | WaveMLP_scaled_full_unified | dev_val | 6 | 81.02 +/- 3.86 | 81.02 | 79.50 | 1.12 | 3.22 | 66.00 | 594442 |
+| Shen | WaveMLP_scaled_full_unified | confirm | 6 | 78.67 +/- 4.88 | 78.67 | 77.88 | 2.11 | 4.75 | 57.53 | 594442 |
 
 ## Training Cost
 
@@ -106,7 +108,7 @@ IB-RFF total includes its matching FAN initialization and HSIC fine-tuning. Mode
 | ManyRx | FAN_official | 12 | 129.8 | 0.0 | 129.8 |
 | ManyRx | FAN_source_selected | 12 | 367.2 | 0.0 | 367.2 |
 | ManyRx | FAN_unified | 12 | 1083.8 | 0.0 | 1083.8 |
-| ManyRx | IB-RFF | 10 | 279.8 | 240.2 | 520.0 |
+| ManyRx | IB-RFF | 12 | 577.6 | 367.2 | 944.9 |
 | ManyRx | W0 | 12 | 122.0 | 0.0 | 122.0 |
 | ManyRx | W1 | 12 | 102.6 | 0.0 | 102.6 |
 | ManyRx | W2 | 12 | 119.3 | 0.0 | 119.3 |
@@ -123,16 +125,17 @@ IB-RFF total includes its matching FAN initialization and HSIC fine-tuning. Mode
 | ManySig | W2 | 12 | 142.0 | 0.0 | 142.0 |
 | ManySig | WaveMLP | 12 | 96.5 | 0.0 | 96.5 |
 | Shen | FAN_full_official | 6 | 65.1 | 0.0 | 65.1 |
-| Shen | FAN_full_unified | 4 | 475.4 | 0.0 | 475.4 |
-| Shen | FAN_ib_unified | 5 | 478.5 | 0.0 | 478.5 |
-| Shen | IB-RFF_a0.004_ib_unified | 1 | 716.4 | 581.9 | 1298.3 |
+| Shen | FAN_full_unified | 6 | 473.9 | 0.0 | 473.9 |
+| Shen | FAN_ib_unified | 6 | 487.7 | 0.0 | 487.7 |
+| Shen | IB-RFF_a0.004_ib_unified | 6 | 674.0 | 487.7 | 1161.7 |
 | Shen | IB-RFF_a0.04_full_official | 6 | 47.5 | 65.1 | 112.6 |
-| Shen | S_base | 3 | 777.8 | 0.0 | 777.8 |
-| Shen | S_cnnflops | 3 | 604.6 | 0.0 | 604.6 |
-| Shen | S_cnnonly | 3 | 723.9 | 0.0 | 723.9 |
-| Shen | S_cnnparam | 4 | 526.2 | 0.0 | 526.2 |
-| Shen | S_hstem | 3 | 944.6 | 0.0 | 944.6 |
-| Shen | WaveMLP_scaled_full_official | 2 | 647.9 | 0.0 | 647.9 |
+| Shen | S_base | 6 | 749.2 | 0.0 | 749.2 |
+| Shen | S_cnnflops | 6 | 611.4 | 0.0 | 611.4 |
+| Shen | S_cnnonly | 6 | 714.1 | 0.0 | 714.1 |
+| Shen | S_cnnparam | 6 | 505.0 | 0.0 | 505.0 |
+| Shen | S_hstem | 6 | 887.0 | 0.0 | 887.0 |
+| Shen | WaveMLP_scaled_full_official | 6 | 1166.5 | 0.0 | 1166.5 |
+| Shen | WaveMLP_scaled_full_unified | 6 | 2416.8 | 0.0 | 2416.8 |
 
 ## Registered Ablations
 
@@ -158,14 +161,30 @@ IB-RFF total includes its matching FAN initialization and HSIC fine-tuning. Mode
 | ManySig | CRD | W1-CP | 12 | +11.05 | 12/12 | -3.75 | unclear |
 | ManySig | CR | W1-CF | 12 | +8.37 | 10/12 | -2.72 | unclear |
 | ManySig | CRD | W1-CF | 12 | +8.37 | 11/12 | -4.19 | unclear |
-| Shen | dev_val | S_hstem-S_base | 3 | pending | -/3 | pending | incomplete |
-| Shen | confirm | S_hstem-S_base | 3 | pending | -/3 | pending | incomplete |
-| Shen | dev_val | S_hstem-S_cnnonly | 3 | pending | -/3 | pending | incomplete |
-| Shen | confirm | S_hstem-S_cnnonly | 3 | pending | -/3 | pending | incomplete |
-| Shen | dev_val | S_hstem-S_cnnparam | 3 | pending | -/3 | pending | incomplete |
-| Shen | confirm | S_hstem-S_cnnparam | 3 | pending | -/3 | pending | incomplete |
-| Shen | dev_val | S_hstem-S_cnnflops | 3 | pending | -/3 | pending | incomplete |
-| Shen | confirm | S_hstem-S_cnnflops | 3 | pending | -/3 | pending | incomplete |
+| Shen | dev_val | S_hstem-S_base | 6 | +1.98 | 6/6 | +1.22 | improves |
+| Shen | confirm | S_hstem-S_base | 6 | +3.07 | 6/6 | +1.20 | improves |
+| Shen | dev_val | S_hstem-S_cnnonly | 6 | +3.10 | 6/6 | +0.47 | improves |
+| Shen | confirm | S_hstem-S_cnnonly | 6 | +3.85 | 6/6 | +0.88 | improves |
+| Shen | dev_val | S_hstem-S_cnnparam | 6 | +11.04 | 6/6 | +8.25 | improves |
+| Shen | confirm | S_hstem-S_cnnparam | 6 | +13.20 | 6/6 | +8.43 | improves |
+| Shen | dev_val | S_hstem-S_cnnflops | 6 | +11.03 | 6/6 | +7.37 | improves |
+| Shen | confirm | S_hstem-S_cnnflops | 6 | +13.07 | 6/6 | +7.65 | improves |
+
+## IB Versus Matching Initialization
+
+Descriptive paired effects of HSIC fine-tuning; not a new model-selection criterion.
+Each IB checkpoint is compared with its actual same-fold, same-seed FAN initialization.
+
+| Dataset | IB Configuration | Task | Fits | Delta pp | Positive |
+|---|---|---|---:|---:|---:|
+| ManyRx | IB-RFF | CR | 12 | +0.03 | 9/12 |
+| ManyRx | IB-RFF | CRD | 12 | +0.51 | 7/12 |
+| ManySig | IB-RFF | CR | 12 | +1.95 | 9/12 |
+| ManySig | IB-RFF | CRD | 12 | +2.82 | 9/12 |
+| Shen | IB-RFF_a0.004_ib_unified | dev_val | 6 | +5.43 | 6/6 |
+| Shen | IB-RFF_a0.004_ib_unified | confirm | 6 | +5.68 | 6/6 |
+| Shen | IB-RFF_a0.04_full_official | dev_val | 6 | -0.07 | 4/6 |
+| Shen | IB-RFF_a0.04_full_official | confirm | 6 | +0.80 | 4/6 |
 
 ## Measured Cost
 
@@ -283,7 +302,7 @@ Source RX WiSig scores use only internally held-out source receivers on days 1-2
 
 ## Paper Route
 
-**pending**. Complete the registered matrix before choosing the paper scope.
+**narrow_to_LoRa_specific_evidence**. Evidence routing, not a submission decision. Novelty and independent evaluation still require review.
 A route based on completed comparisons is not a claim of sufficient novelty or submission readiness.
 External IB-RFF uses two training stages (FAN initialization plus HSIC); both stages and their time are retained.
 

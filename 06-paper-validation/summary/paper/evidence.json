@@ -1,14 +1,16 @@
 {
- "generated_at": "2026-10-25T20:55:43+08:00",
- "complete": false,
- "report_sha256": "506d6683211c908f5e75e288c81cc5fc2878b055161eba449393c5676166abb7",
- "registered_fits": 554,
+ "generated_at": "2026-10-25T21:28:26+08:00",
+ "complete": true,
+ "report_sha256": "9b18024f28bd1fc08fb1f1e45acea844a374dcc52047d69bf1154027771c3d9d",
+ "registered_fits": 588,
  "files": {
-  "accuracy_cost.png": "229e036df3da799ea3ab267c44107a542a985e737422fe0ef5bc0abab7fc8c82",
-  "main_metrics.csv": "ebb8b4da03f50e1b587a2cb1fba50b4f1adfb0634f48c7d7a3a4499c3ea09562",
+  "CONCLUSION.md": "80ef202b90126e453372c5bae897724b3ac3a6f392cb16cc3e83cba5b87dbc23",
+  "accuracy_cost.png": "00d565f7238f11ea56a70a3fa533193da13bde5ea471206d7e8b75ef797764ae",
+  "ib_initialization_pairs.csv": "204501677e207a35c7020de73a9a81bf6a678e9f423f8f4c2c753b3f13c89e6b",
+  "main_metrics.csv": "b2250239f519cde614ae416843acc0f9343fbea4d761c30f6692f7aebaca6276",
   "measured_costs.csv": "0cf49ca26ccae381c91ed4bda05afe70ccb7c7cba9a7cef9da9ec72039b66884",
-  "receiver_metrics.csv": "f199f2fa25a4e8ee5cbbe3184c4923d4b696ae090d27fe9793ddf74028dc56e6",
-  "registered_ablations.csv": "832505c7d3dc670059b26ecc29405339539a77df68290a02645f33ea6ab90263"
+  "receiver_metrics.csv": "6e6777a80dac448285392980092717f1e75abdf26dee81897ccf55affbfe85c8",
+  "registered_ablations.csv": "698bd1dc0a7295499024c5f7060bb18ae6e4079f2506c210a06e57b340585cd9"
  },
  "note": "Derived exports only; no model selection, training or new data access."
 }

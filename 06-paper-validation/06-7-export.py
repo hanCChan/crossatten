@@ -63,6 +63,29 @@ def export_tables(report, out):
     return metrics
 
 
+def badge_positions(points, bounds):
+    placed = []
+    left, top, right, bottom = bounds
+    offsets = [(0, 0)] + [(dx, dy) for radius in (24, 48, 72)
+                          for dx, dy in ((0, -radius), (radius, 0), (-radius, 0),
+                                         (0, radius), (radius, -radius), (-radius, -radius))]
+    for index, (px, py) in enumerate(points):
+        for dx, dy in offsets:
+            x, y = px + dx, py + dy
+            if not (left + 11 <= x <= right - 11 and top + 11 <= y <= bottom - 11):
+                continue
+            if any(math.hypot(x - a, y - b) < 24 for a, b in placed):
+                continue
+            if any(i != index and math.hypot(x - a, y - b) < 15
+                   for i, (a, b) in enumerate(points)):
+                continue
+            placed.append((x, y))
+            break
+        else:
+            raise ValueError("plot labels cannot be placed without overlap")
+    return placed
+
+
 def accuracy_cost_plot(report, out):
     image = Image.new("RGB", (1680, 840), "white")
     draw = ImageDraw.Draw(image)
@@ -101,7 +124,7 @@ def accuracy_cost_plot(report, out):
             draw.text((px - 9, top + height + 9), str(x), font=small, fill="#666666")
         draw.line((left, top, left, top + height, left + width, top + height), fill="#777777", width=2)
         draw.text((left + 100, top + height + 36), "MFLOPs / packet (log scale)", font=small, fill="#444444")
-        plotted = 0
+        points = []
         for index, model in enumerate(models, 1):
             row = report["groups"].get(f"{dataset}:{model}:{task}")
             if row is None:
@@ -123,14 +146,21 @@ def accuracy_cost_plot(report, out):
             color = colors.get(label, "#555555")
             low = left + width * (math.log10(min(model_costs)) - xmin) / (xmax - xmin)
             high = left + width * (math.log10(max(model_costs)) - xmin) / (xmax - xmin)
-            draw.line((low, py, high, py), fill=color, width=3)
-            draw.ellipse((px - 10, py - 10, px + 10, py + 10), fill=color)
-            draw.text((px - 5, py - 9), str(index), font=small, fill="white")
+            points.append((px, py, low, high, color, index))
             legend_y = 620 + ((index - 1) // 3) * 28
             legend_x = left + ((index - 1) % 3) * 145
             draw.text((legend_x, legend_y), f"{index} {label}", font=small, fill=color)
-            plotted += 1
-        if not plotted:
+        positions = badge_positions([(point[0], point[1]) for point in points],
+                                    (left, top, left + width, top + height))
+        for px, py, low, high, color, index in points:
+            draw.line((low, py, high, py), fill=color, width=3)
+            draw.ellipse((px - 3, py - 3, px + 3, py + 3), fill=color)
+        for (px, py, _, _, color, index), (x, y) in zip(points, positions):
+            if (x, y) != (px, py):
+                draw.line((px, py, x, y), fill=color, width=1)
+            draw.ellipse((x - 10, y - 10, x + 10, y + 10), fill=color)
+            draw.text((x - 5, y - 9), str(index), font=small, fill="white")
+        if not points:
             draw.text((left + 70, top + height // 2), "Awaiting completed confirm fits", font=font, fill="#777777")
         draw.text((left, 592), "Numbers identify models; no target-based selection.", font=small, fill="#666666")
     draw.text((32, 769), "Compute excludes some FFT and elementwise operations; it is not a latency proxy.",

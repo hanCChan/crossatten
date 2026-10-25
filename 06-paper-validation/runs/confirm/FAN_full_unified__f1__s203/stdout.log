@@ -1,0 +1,16 @@
+/workspace/crossatten/external/IB-RFF/backbones/Adaptive_Filter_Module.py:23: UserWarning: median CUDA with indices output does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:91.)
+  median_energy = flat_energy.median(dim=1, keepdim=True)[0]
+/workspace/crossatten/external/IB-RFF/backbones/Adaptive_Filter_Module.py:75: UserWarning: median CUDA with indices output does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:91.)
+  median_energy = flat_energy.median(dim=1, keepdim=True)[0]
+{"run": "FAN_full_unified__f1__s203", "epoch": 1, "source_ce": 2.30256, "train_s": 3.2}
+{"run": "FAN_full_unified__f1__s203", "epoch": 20, "source_ce": 0.73061, "train_s": 46.5}
+{"run": "FAN_full_unified__f1__s203", "epoch": 40, "source_ce": 0.39569, "train_s": 90.2}
+{"run": "FAN_full_unified__f1__s203", "epoch": 60, "source_ce": 0.36196, "train_s": 134.0}
+{"run": "FAN_full_unified__f1__s203", "epoch": 80, "source_ce": 0.31003, "train_s": 176.9}
+{"run": "FAN_full_unified__f1__s203", "epoch": 100, "source_ce": 0.29829, "train_s": 220.0}
+{"run": "FAN_full_unified__f1__s203", "epoch": 120, "source_ce": 0.29116, "train_s": 264.0}
+{"run": "FAN_full_unified__f1__s203", "epoch": 140, "source_ce": 0.21255, "train_s": 310.2}
+{"run": "FAN_full_unified__f1__s203", "epoch": 160, "source_ce": 0.19846, "train_s": 356.3}
+{"run": "FAN_full_unified__f1__s203", "epoch": 180, "source_ce": 0.17746, "train_s": 403.1}
+{"run": "FAN_full_unified__f1__s203", "epoch": 200, "source_ce": 0.18462, "train_s": 446.8}
+{"run_id": "FAN_full_unified__f1__s203", "arm": "FAN_full_unified", "dataset": "Shen", "fold": 1, "seed": 203, "stage": "confirm", "params": 310481, "best_val_epoch": 167, "stop_epoch": 200, "epochs_budget": 200, "source_val_ce": 0.16763488948345184, "source_val_acc": 0.9355000257492065, "train_seconds": 446.8, "wall_seconds": 456.8, "gpu_peak_mem_gb": 0.873}

@@ -1,0 +1,72 @@
+{
+ "arm": {
+  "name": "IB-RFF_a0.004_ib_unified",
+  "family": "paper_upstream",
+  "method": "IB-RFF",
+  "length": 8192,
+  "recipe": "unified",
+  "input_fmax": 62500,
+  "alpha": 0.004,
+  "num_classes": 10,
+  "sample_rate": 1000000.0,
+  "patch_size": 512,
+  "init_arm": "FAN_ib_unified",
+  "expected_params": 310481
+ },
+ "fold": 0,
+ "seed": 202,
+ "stage": "confirm",
+ "recipe": {
+  "opt": "adamw",
+  "lr": 0.001,
+  "wd": 0.0005,
+  "batch": 64,
+  "epochs": 200,
+  "sched": "warmcos",
+  "warmup": 5,
+  "awgn": [
+   0,
+   50
+  ]
+ },
+ "data_seed": 2602222937,
+ "roles": {
+  "source": [
+   "b210_1",
+   "rtl_1",
+   "rtl_3",
+   "rtl_6",
+   "rtl_9"
+  ],
+  "dev_val": [
+   "b200_mini_1",
+   "pluto_1",
+   "rtl_2",
+   "rtl_5",
+   "rtl_7"
+  ],
+  "confirm": [
+   "b200_1",
+   "n210_1",
+   "rtl_4",
+   "rtl_8"
+  ]
+ },
+ "upstream": {
+  "IB-RFF": "5a03a04da86c4bbf5cf90f41a55c268bf2152203",
+  "WaveMLP-RFF": "1ade72d0082428db2087633a44ae533f1022ca22"
+ },
+ "code_sha256": "2e55e39d8376f59fa346bb15122b880edfe76697b5ce2ccc011ef9421b30d50c",
+ "init": {
+  "path": "/workspace/crossatten/06-paper-validation/runs/confirm/FAN_ib_unified__f0__s202/model.pt",
+  "sha256": "0cd58dfe9770232a922e7a446f65c8ce82ee7b2465456117b785feb0c8224585"
+ },
+ "registration_sha256": "fa84885482665cdde235b4e0af947cecb61494bb7de1d06954e721004d52eabe",
+ "decision_file": "/workspace/crossatten/06-paper-validation/decision_shen.json",
+ "decision_sha256": "136015362c819ad035cb599296bb953bf3fa2db4e9e3210a59fc598a2ab7272c",
+ "protocol_sha256": "1311eb35852a63f216a3f0c8e87ca9833ece8614975f9ff79ec28079b70b9127",
+ "smoke": false,
+ "torch": "2.5.0+cu124",
+ "gpu": "NVIDIA A100-SXM4-40GB",
+ "checkpoint": "minimum source packet-validation CE; no target evaluation during training"
+}

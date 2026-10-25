@@ -1,17 +1,19 @@
 # crossatten 全部结果汇报
 
-证据截止：**2026-10-25**。范围：Shen 阶段 00–03、WiSig 数据与发布权重验证（M2），以及阶段06论文验证的实施状态。
-阶段 00–03 与 WiSig 发布权重参考保持冻结。2026-10-25 按用户授权新增[论文验证阶段06](06-paper-validation/README.md)，已完成预登记、69/69运行检查与成本实测，正式源域训练已启动，最终目标域结果尚待完成。本报告不把运行检查或实施规格中的预测当成结论。
+证据截止：**2026-10-25**。范围：Shen 阶段 00–03、WiSig 数据与发布权重验证（M2），以及[阶段06论文竞争力验证](06-paper-validation/README.md)。
+阶段 00–03 与 WiSig 发布权重参考保持冻结。本轮只完成用户授权的注册实验，不新增 Loss、复杂特征或模型搜索。
+阶段06的源域选型与最终数据分开归档；运行检查、实施规格预测和官方发布权重成绩不混入公平重训结果。
 
 ## 1. 核心结论
 
-1. **当前 Shen 最强已验证配置是 `s03_hstem`：dev_val 97.48±0.41%，confirm 96.84±0.58%，142,392 参数。** 相对预登记对照 `s03_preln`，dev_val 提升 2.00 pp，6/6 配对为正，判为 `improves`。
+1. **Shen 分层 Stem + HSTU 结果稳定重现：阶段06为 dev_val 97.48±0.42%，已使用 confirm 96.84±0.57%，142,392 参数。** 相对普通 Stem 和 CNN-only，dev_val 分别提高 1.98、3.10 pp，均为 6/6 正配对并通过注册改善门槛。旧 S03 为 97.48±0.41 / 96.84±0.58，原记录不覆盖。
 2. 从全频带原始表征转向**严格带内 + AWGN**是阶段 01 的决定性改善；阶段 02 再把训练周期延长到 200 epoch，达到 95.84 / 93.89。模型参数仍为 580,008。
 3. **重复结构主假设尚未成功。** 阶段 03 的单位 RMS 残差通道和等参数符号堆叠分别降低 7.47 pp、5.20 pp；瞬时频率通道为 `unclear`。不能把分层 stem 的工程收益写成已经证实的 Chirp 结构创新。
 4. **Shen 已完成 CIS + non_adv_net 的 PyTorch 重新实现和同协议训练，不是完整原版 TensorFlow/对抗训练流程复现。** rank-16 CIS 以 658,314 参数保留了接近原版的准确率，是有效的轻量对照。
-5. **WiSig ManyRx / ManySig 的数量、数据转换和发布权重验证已通过。** IB-RFF CRD 为 89.1879 / 93.5694；WaveMLP CRD 为 88.6759 / 93.1250。这是上游权重评估，不是我们的公平重训或跨数据集方法成功。
+5. **WiSig 公平多 seed 结果未支持通用方法主张。** W1 的 ManyRx / ManySig CRD 为 83.56 / 72.33；IB-RFF 为 88.07 / 91.09，WaveMLP 为 88.06 / 91.04。W1−W0 虽为 +0.37 / +2.63 pp，但注册判定均为 `unclear`；W2 在 ManySig 判为有害。官方发布权重参考单列，不替代这些重训结果。
+6. **参数更少不等于更快。** 阶段06 hstem 为 190.6 MFLOPs/包，普通 Stem 为 139.2；同设备 batch512 吞吐为 35,867 与 42,602 包/s。当前应收缩为 LoRa 特定证据路线，不能宣称跨 LoRa/WiFi 通用 SOTA 或投稿就绪。
 
-主要证据：[S01 结果](01-strong-baselines/RESULTS.md)、[S02 确认表](02-single-factor-screen/summary/confirm_tables.md)、[S03 结果](03-chirp-structure/RESULTS.md)、[WiSig M2 结果](05-wisig/RESULTS.md)。
+主要证据：[阶段06中文结论](06-paper-validation/summary/paper/CONCLUSION.md)、[阶段06完整审计表](06-paper-validation/RESULTS.md)、[S01 结果](01-strong-baselines/RESULTS.md)、[S02 确认表](02-single-factor-screen/summary/confirm_tables.md)、[S03 结果](03-chirp-structure/RESULTS.md)、[WiSig M2 结果](05-wisig/RESULTS.md)。
 
 ## 2. 口径与完成情况
 
@@ -33,9 +35,10 @@ Shen 使用冻结协议 **P-H5x160**：10 个 TX，每折 5 台源 RX，160 包/
 | 04 | 原 Shen 外部方法实施规格 | 历史目录未训练 | FAN/IB-RFF、WaveMLP 已转入阶段06；Ma 不在本次注册矩阵内 |
 | 05/M2 | 两份 WiSig 数据转换、源域审计、发布权重验证 | 两数据集、四折、三个方法系列 | 已完成；[M2 结果](05-wisig/RESULTS.md) |
 | 05/M4 | 原 WiSig 公平重训安排 | 历史目录未训练 | 本方法、FAN/IB-RFF、WaveMLP 已转入阶段06执行 |
-| 06 | WiSig W0/W1/W2 与 CNN 控制、两个外部强基线；Shen 同协议比较与机制消融 | 69/69 smoke 完成；正式源域矩阵进行中 | [预登记](06-paper-validation/README.md)、[实时验证报告](06-paper-validation/RESULTS.md)；完成冻结提交后才允许最终评估 |
+| 06 | WiSig W0/W1/W2 与 CNN 控制、两个外部强基线；Shen 同协议比较与机制消融 | 69/69 smoke；588/588正式fit（176源域 + 100源域 + 240 WiSig最终 + 72 Shen确认） | [预登记](06-paper-validation/README.md)、[完整审计报告](06-paper-validation/RESULTS.md)；源域冻结提交先于对应目标评估 |
 
 阶段 01–03 共保存 **400 个正式训练记录**，包含对照重跑；这些不是 400 个独立泛化实验。逐臂、逐 seed、逐 RX、F1、训练曲线、预测与失败/跳过状态均保存在对应 `runs/`、`summary/`。
+加上阶段06，本仓库共 **988 个正式训练记录**。源域选型和最终重训的统计用途不同，不能合并成同一种独立实验。
 协议与来源见 [PROTOCOL](docs/PROTOCOL.md)、[PROVENANCE](docs/PROVENANCE.md)。
 
 ## 3. 阶段 00：发现了什么
@@ -150,7 +153,7 @@ Shen 使用冻结协议 **P-H5x160**：10 个 TX，每折 5 台源 RX，160 包/
 **未复现的范围：** 没有完整运行原版 TensorFlow/对抗训练流程，没有声称严格复现论文原协议的数字。这里按 epoch 打乱不放回遍历而不是每 batch 随机抽样，源验证 AWGN 固定而不是每 epoch 重生成，并使用 P-H5x160 的源验证划分。
 详情见 [PROVENANCE](docs/PROVENANCE.md)、[CIS 测试](tests/test_core.py)、[实现](lib/xa/models.py)。
 
-## 7. WiSig：数据已齐，M2 已通过
+## 7. WiSig：历史权重参考与公平重训
 
 ManyRx 复用 `gai` 中已有 Kaggle archive；ManySig 从 UCLA 官方页面发布的 Google Drive 下载，校验值记录在 manifest。
 两个官方 loader 与我们 cache 的 float32 输入及标签在每个 RX/day **完全相同，最大差为 0.0**。
@@ -175,19 +178,82 @@ FAN/IB-RFF 全部 16 个 fold 验证通过，最大日志差 0.0109 pp。历史 
 旧 pickle 的 GELU 兼容问题通过重建**未改动的官方 FAN**并严格加载完全相同 state 解决。
 WaveMLP 未发现许可证，代码仅本地运行、未复制入仓库。
 
-新增阶段06已开始官方/统一配方的源域训练及内部源RX选模；公平seed2023/2024/2025最终重训必须等待源域决策冻结提交。当前尚无本方法WiSig目标域成绩。
-因此不能宣称本方法超过 89.19 / 93.57。证据、每折指标、上游 SHA、来源限制见 [05 RESULTS](05-wisig/RESULTS.md) 和 [文献报告](docs/LITERATURE_2025_2026.md)。
+### 阶段06公平重训
 
-## 8. 验证、发布与下一步
+四折 RX × seed2023/2024/2025，每模型 12 fit。主要口径为 RX 等权准确率，CRD 使用未见 RX 的第3–4天；CR 使用第1–2天。
+超参数只在各折源 RX 第1–2天的内部跨 RX 验证上选；最终 checkpoint 只按全部源 RX 内部70/30包划分的验证 CE。
+176 个源域 fit 的冻结决策 `4babf3a` 先于目标域评估提交，W0/W1/W2 分别报告，未按测试结果挑一个最终版本。
+
+| 模型 | ManyRx CR (%) | ManyRx CRD (%) | ManySig CR (%) | ManySig CRD (%) |
+|---|---:|---:|---:|---:|
+| W0 普通 Stem + HSTU | 85.76±5.77 | 83.19±4.82 | 72.97±9.72 | 69.70±11.17 |
+| W1 分层 Stem + HSTU | 86.74±6.41 | 83.56±6.38 | 75.90±8.63 | 72.33±8.22 |
+| W2 分层 Stem + 限带 | 85.51±6.67 | 80.55±5.69 | 70.00±10.15 | 66.50±10.28 |
+| FAN（源域所选） | 90.19±3.05 | 87.56±3.55 | 89.22±6.67 | 88.27±5.24 |
+| IB-RFF（公平 α） | 90.22±2.96 | 88.07±2.85 | 91.17±5.96 | 91.09±5.02 |
+| WaveMLP（源域所选） | 90.83±3.17 | 88.06±2.27 | 92.73±2.74 | 91.04±3.57 |
+
+±SD 为 fit 波动，包含 seed 与 fold，不是纯 seed SD。逐 RX 的 seed 波动与 Macro-F1、逐 fold/seed、两阶段训练时间和参数/成本见 [CSV](06-paper-validation/summary/paper/main_metrics.csv) 与[逐 RX CSV](06-paper-validation/summary/paper/receiver_metrics.csv)。
+WiSig 结构是在该数据集重训，不是 LoRa checkpoint 的零样本跨调制迁移。
+
+- W1−W0 CRD：ManyRx **+0.37 pp，7/12 正配对**；ManySig **+2.63 pp，8/12 正配对**。最差 RX 分别为 −5.95 / −7.42 pp，均判为 `unclear`，不能只看均值宣布稳定改善。
+- W2−W1 CRD：ManyRx **−3.02 pp，9/12 负**，判为 `unclear`；ManySig **−5.83 pp，10/12 负**，判为 `harms`。冻结 cutoff 来自历史 fold0 源 PSD，其 RX 在其他折可能属于目标域，**W2 不是每折预处理完全源域独立的证据**；W0/W1 不使用该 cutoff。
+- W1−CNN-only CRD 为 +3.98 / +3.37 pp，但逐 RX/配对门槛均未通过，判为 `unclear`。其他同参数/同 FLOPs CNN 控制也保留在完整表中。
+- IB 相对其**实际匹配 FAN 初始化**的 CRD 为 **+0.51 / +2.82 pp，7/12 与 9/12 正配对**；这与独立源域选型的 FAN 系统表不同。不能据早期文献风险断言公平 IB 没有收益。
+
+IB-RFF/WaveMLP 上游代码固定于 `5a03a04da86c4bbf5cf90f41a55c268bf2152203` /
+`1ade72d0082428db2087633a44ae533f1022ca22`。数据管线、官方日志和公平重训证据分别见 [05 RESULTS](05-wisig/RESULTS.md)、[阶段06结论](06-paper-validation/summary/paper/CONCLUSION.md) 与[文献报告](docs/LITERATURE_2025_2026.md)。
+
+## 8. Shen：新强基线与机制控制
+
+阶段06保持 P-H5x160。100 个源域 fit 只按四次源 CE 在每个方法/配方内选择输入频带、α、WaveMLP 输入适配，并在 `88be16b` 冻结；没有用 dev_val/confirm 选外部方法配置。
+确认每配置为两 fold × seed201/202/203。训练器的验证 batch 改为128，故与历史 S03不要求训练比特一致；旧结果仍冻结。
+
+| 固定模型/配方 | 参数 | dev_val (%) | 已使用 confirm (%) |
+|---|---:|---:|---:|
+| 普通 Stem + Pre-LN HSTU | 580,136 | 95.50±0.90 | 93.78±0.58 |
+| **分层 Stem + HSTU** | **142,392** | **97.48±0.42** | **96.84±0.57** |
+| 分层 Stem + CNN-only | 100,154 | 94.38±0.99 | 92.99±1.03 |
+| 同参数普通 CNN | 138,898 | 86.44±1.13 | 83.64±0.83 |
+| 同 FLOPs 普通 CNN | 655,358 | 86.45±0.76 | 83.78±2.46 |
+| FAN full，官方配方 | 310,481 | 73.62±3.12 | 75.50±4.52 |
+| FAN full，统一配方 | 310,481 | 82.79±2.74 | 82.85±4.34 |
+| FAN IB输入，统一配方（IB初始化） | 310,481 | 89.51±3.60 | 86.53±3.18 |
+| IB-RFF full，官方配方 α=0.04 | 310,481 | 73.55±3.84 | 76.30±4.57 |
+| IB-RFF 严格 IB，统一配方 α=0.004 | 310,481 | 94.94±1.27 | 92.21±1.34 |
+| WaveMLP scaled full，官方配方 | 594,442 | 56.68±23.56 | 55.70±23.16 |
+| WaveMLP scaled full，统一配方 | 594,442 | 81.02±3.86 | 78.67±4.88 |
+
+WaveMLP 8192点适配的两套冻结配方全部完成，官方配方包含一次接近随机的运行（dev_val 10.23%、confirm 10.11%），未剔除或换种子。
+不能从这套固定低预算适配表现推断 WaveMLP 在原 WiFi 任务上无效，也不能称为复现其原论文的 LoRa 数字。
+
+分层 Stem 相对普通 Stem / CNN-only / 同参数 CNN / 同 FLOPs CNN 的 dev_val 增益为
+**+1.98 / +3.10 / +11.04 / +11.03 pp**，对应已使用 confirm 为 **+3.07 / +3.85 / +13.20 / +13.07 pp**。
+八个注册比较均为 6/6 正配对、`improves`。这支持**本协议下**分层提取与 HSTU 有独立作用，不证明所有优化后的普通 CNN 均不可替代。
+成本匹配只搜索宽度来匹配结构预算，误差 <5%；不是准确率优化，也不同时匹配参数和 FLOPs。
+
+阶段06独占 A100 的 FP32 IQ→logits 实测：hstem 单包 p50/p95 **2.533/3.806 ms**、batch512 **35,867 包/s**；
+普通 Stem **2.164/2.237 ms、42,602 包/s**。测量不含主机传输，计数 FLOPs 不完整包含 FFT/逐元素操作。
+阶段03的旧成本表是独立历史测量，不覆盖；不能用参数缩减声称加速。
+
+## 9. 验证、发布与停止点
 
 测试覆盖 legacy core、models2 及比特回归、models3、S03 干预/状态恢复/损坏检测、WiSig 转换与 CR/CRD 区分。
 S03 的 88 个保存 fit 核验了完整预算、源 CE 最低 checkpoint、协议 hash、参数、逐 RX 分母/F1/汇总、有限权重和冻结结果表 hash，见 [verification.json](03-chirp-structure/summary/verification.json)。
+阶段06最终完整审计为 **588/588 fit、588份有限权重、8,127,978条保存预测记录，零审计问题**；
+保留10次中断尝试。float16存档会合并部分最高分，共4,476条平分，审计核验非平分决策和兼容混淆计数边界，不覆盖float32原指标。
+最终日志未发现Shen blind访问，或WiSig源域/内部验证读取目标RX及第3–4天。W2历史PSD cutoff的跨折限制仍须披露。
+legacy core、models2及比特回归、models3、S03诊断、WiSig、阶段06结构/门槛/选型/调度/审计/导出及Release测试全部通过。
 
-**2026-10-25 发布范围：** 用户最新请求“整理汇报所有结果并推送到github”授权发布，覆盖旧规格中的“不要 push”，不改变预登记或训练授权。
+**2026-10-25 发布范围：** 用户请求“整理汇报所有结果并推送到github”授权发布，覆盖旧规格中的“不要 push”，不改变预登记或训练授权。
 本次提交代码、实施规格、文献报告、全部已有指标/曲线/预测/日志和诊断，更新 `main` 与 `exp/s00-s01`。
 00–02 的历史文件、冻结协议、legacy 与 guard 均保持不变。
-数据集、cache、token、第三方仓库和 `model.pt` 不进入 Git。现有 Release `snapshot-2026-10-25` 只覆盖此前阶段 00–02 的 checkpoint；**新增 S03 checkpoint 保留本地，未上传到该 Release**。
+数据集、cache、token、第三方仓库和 `model.pt` 不进入 Git。旧 Release `snapshot-2026-10-25` 覆盖阶段 00–02 checkpoint。
+本轮为 S03/S06 权重新增独立 Release `paper-validation-2026-10-25`，包括 smoke，并附逐权重与分块 SHA256；不覆盖旧 Release。
+发布脚本见 [publish_validation.py](artifacts/publish_validation.py)，完整矩阵及保存权重审计通过后才允许打包。
 
 **新的用户授权：** 2026-10-25进入论文竞争力验证，停止Shen新Loss/复杂结构搜索，WiSig优先，Shen近期强基线与CNN机制消融并行。原有历史结果不覆盖，既有confirm RX不重新称为盲测。
-当前可成立的结论仍是“更强、更少参数的工程基线 + 重复结构负面结果与机制诊断”，不是已完成SOTA/新方法贡献。
-阶段06完整注册矩阵、源域选择和最终结果另见[验证报告](06-paper-validation/RESULTS.md)；注册矩阵完成后停止并报告，不自动追加实验。
+当前判断是**继续发展 LoRa 特定证据，不推进跨 LoRa/WiFi 通用方法主张**。Shen 强结果、两个新强基线和注册 CNN 消融构成实证基础；
+WiSig 未达竞争力、重复结构分支负面结果、成本不加速均必须写入边界。新颖性与独立评估仍未完成，不能直接宣称 SOTA 或投稿就绪。
+两个近期强基线可作为本轮主比较，但未覆盖 Ma 2025等其他方法，不等于穷尽所有竞争方法。
+阶段06完整注册矩阵、源域选择和最终结果另见[验证报告](06-paper-validation/RESULTS.md)；本轮完成后停止报告，不自动追加实验。

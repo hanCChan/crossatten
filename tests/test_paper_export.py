@@ -2,6 +2,7 @@
 import csv
 import importlib.util
 import json
+import math
 import tempfile
 from pathlib import Path
 from unittest.mock import patch
@@ -15,6 +16,10 @@ spec.loader.exec_module(export)
 
 
 def main():
+    points = [(200, 200), (200, 204), (201, 210)]
+    positions = export.badge_positions(points, (100, 100, 400, 400))
+    assert points == [(200, 200), (200, 204), (201, 210)]
+    assert all(math.dist(a, b) >= 24 for i, a in enumerate(positions) for b in positions[i + 1:])
     with tempfile.TemporaryDirectory() as directory:
         root = Path(directory)
         groups = {

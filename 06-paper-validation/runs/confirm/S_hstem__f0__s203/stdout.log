@@ -1,0 +1,12 @@
+{"run": "S_hstem__f0__s203", "epoch": 1, "source_ce": 2.31008, "train_s": 5.5}
+{"run": "S_hstem__f0__s203", "epoch": 20, "source_ce": 0.38387, "train_s": 100.9}
+{"run": "S_hstem__f0__s203", "epoch": 40, "source_ce": 0.21203, "train_s": 199.8}
+{"run": "S_hstem__f0__s203", "epoch": 60, "source_ce": 0.15887, "train_s": 298.3}
+{"run": "S_hstem__f0__s203", "epoch": 80, "source_ce": 0.12021, "train_s": 397.5}
+{"run": "S_hstem__f0__s203", "epoch": 100, "source_ce": 0.10345, "train_s": 496.0}
+{"run": "S_hstem__f0__s203", "epoch": 120, "source_ce": 0.10181, "train_s": 582.3}
+{"run": "S_hstem__f0__s203", "epoch": 140, "source_ce": 0.16285, "train_s": 637.7}
+{"run": "S_hstem__f0__s203", "epoch": 160, "source_ce": 0.07621, "train_s": 691.3}
+{"run": "S_hstem__f0__s203", "epoch": 180, "source_ce": 0.07924, "train_s": 743.2}
+{"run": "S_hstem__f0__s203", "epoch": 200, "source_ce": 0.07873, "train_s": 792.2}
+{"run_id": "S_hstem__f0__s203", "arm": "S_hstem", "dataset": "Shen", "fold": 0, "seed": 203, "stage": "confirm", "params": 142392, "best_val_epoch": 168, "stop_epoch": 200, "epochs_budget": 200, "source_val_ce": 0.07476358860731125, "source_val_acc": 0.9795000553131104, "train_seconds": 792.2, "wall_seconds": 796.3, "gpu_peak_mem_gb": 1.206}

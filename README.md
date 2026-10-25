@@ -2,12 +2,13 @@
 
 本目录用于在**严格 0-shot 跨接收机**场景下，系统地改进论文 1 的 CrossAttn-OOB。研究路线见 [PLAN.md](PLAN.md)，协议见 [docs/PROTOCOL.md](docs/PROTOCOL.md)。
 
-**全部结果：[RESULTS.md](RESULTS.md)（2026-10-25）。** 阶段 03 第一轮已完成：
-分层 stem 为 **97.48±0.41% dev_val / 96.84±0.58% confirm，142,392 参数**。
-残差通道、符号堆叠均确认有害，重复结构方法贡献尚未成立。WiSig 两份数据和发布权重验证通过。
-2026-10-25 已按新授权进入[阶段06论文验证](06-paper-validation/README.md)：
-WiSig 176/176 源域选型与 Shen 100/100 源域比较均已冻结提交，公平多 seed 最终验证正在运行。
-实时结果与完整性审计见[阶段06结果](06-paper-validation/RESULTS.md)，最终结论以完整注册矩阵为准。
+**全部结果：[RESULTS.md](RESULTS.md)（2026-10-25）。** [阶段06论文验证](06-paper-validation/README.md)已完成 **588/588 正式 fit**，另有69次运行检查。
+分层 Stem + HSTU 在 Shen 重训为 **97.48±0.42% dev_val / 96.84±0.57% 已使用 confirm，142,392 参数**，
+相对 CNN-only dev_val 提升3.10 pp，6/6正配对。S00–S03历史不覆盖，confirm不是新盲测。
+WiSig W1的 ManyRx / ManySig CRD为 **83.56 / 72.33%**，落后公平 IB-RFF **88.07 / 91.09%**
+与 WaveMLP **88.06 / 91.04%**；W1−W0未通过注册稳定改善门槛。
+**当前收缩为 LoRa 特定证据路线，不支持跨 LoRa/WiFi 通用方法或投稿就绪结论。**
+最终逐RX、F1、seed/fold波动及成本见[中文结论](06-paper-validation/summary/paper/CONCLUSION.md)和[完整审计](06-paper-validation/RESULTS.md)。
 
 ## 目录
 
@@ -39,9 +40,9 @@ logs/                      数据访问日志（data_access.jsonl）、运行日
 | 01 | 训练配方 / Shen-CIS 与 GAP / 近带 OOB / 时频分离 | [README](01-strong-baselines/README.md) | [RESULTS](01-strong-baselines/RESULTS.md) |
 | 02 | 严格 IB 强基线上的单因素筛选 | [README](02-single-factor-screen/README.md) | [确认指标](02-single-factor-screen/summary/confirm_tables.md) |
 | 03 | Pre-LN / 残差 / 符号堆叠 / ifreq / 分层 stem | [README](03-chirp-structure/README.md) | [RESULTS](03-chirp-structure/RESULTS.md) |
-| 04 | Shen 同协议强方法复现（未训练） | [实施规格](docs/S03_S05_IMPLEMENTATION_SPEC.md) | 尚无结果 |
-| 05/M2 | WiSig 数据与发布权重验证（未重训） | [README](05-wisig/README.md) | [RESULTS](05-wisig/RESULTS.md) |
-| 06 | WiSig 公平多 seed、Shen 强基线与结构消融 | [预登记](06-paper-validation/README.md) | [实时结果](06-paper-validation/RESULTS.md) |
+| 04 | 原 Shen 强方法规格；FAN/IB/Wave转入06，Ma未训练 | [实施规格](docs/S03_S05_IMPLEMENTATION_SPEC.md) | [06同协议结果](06-paper-validation/RESULTS.md) |
+| 05/M2 | WiSig 数据与发布权重验证；公平重训转入06 | [README](05-wisig/README.md) | [RESULTS](05-wisig/RESULTS.md) |
+| 06 | WiSig 公平多 seed、Shen 强基线与结构消融，已完成 | [预登记](06-paper-validation/README.md) | [中文结论](06-paper-validation/summary/paper/CONCLUSION.md) |
 
 ## GitHub 快照与模型权重
 
@@ -59,13 +60,16 @@ cat crossatten-checkpoints-2026-10-25.tar.zst.part-* | tar --zstd -xf -
 sha256sum -c artifacts/checkpoints.sha256
 ```
 
-新增的阶段 03 `model.pt` 保留本地，未上传到上述 Release，也不进入 Git 历史。
+阶段03与阶段06的737个本地权重（包括阶段06 smoke）另存独立 Release
+`paper-validation-2026-10-25`，不覆盖旧附件，也不进入 Git 历史。
+新归档校验、范围及复原步骤见[归档说明](artifacts/PAPER_VALIDATION.md)；
+逐块及逐权重清单为 `artifacts/PAPER_VALIDATION_SHA256SUMS` /
+`artifacts/paper-validation-checkpoints.sha256`。
 
-2026-10-25 本次更新发布阶段 03 已完成的 32 次探索、48 次确认、机制诊断和总报告，
-以及 WiSig M2 的准备/验证代码与结果。发布整理本身未重新训练、未修改冻结协议或实验判定规则，
-也未改动阶段 00–02 的历史文件。
-用户最新发布请求覆盖实施规格中旧的“不要 push”约束，但不授权自动启动阶段 04 或 WiSig 重训。
-随后用户明确授权阶段06的注册验证矩阵；该授权不扩展为新 Loss 或模型搜索，也不重新开放 Shen blind RX。
+2026-10-25 本次更新保留阶段03及WiSig M2，新增完成的阶段06全部指标、预测、曲线、配置与10次中断尝试。
+用户授权执行阶段06注册矩阵并发布，覆盖旧的“不要 push”约束；不修改历史协议、阶段00–03或实验判定规则。
+全部588个正式fit使用同一训练代码hash，源域选择先冻结提交再评估目标RX。
+注册实验完成后停止，不自动新增Loss、特征、架构或数据集实验，也不重新开放 Shen blind RX。
 
 ## 命名与规则
 
