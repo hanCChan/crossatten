@@ -1,0 +1,312 @@
+{
+ "step": "features",
+ "registration_sha256": "c6d0855be6ae4787151daad93c8d57653e6e5c09323f921bfa0ff32240beee35",
+ "decisions": {
+  "ManyRx:0": [
+   "frequency",
+   "split",
+   "legacy"
+  ],
+  "ManyRx:1": [
+   "frequency",
+   "split",
+   "legacy"
+  ],
+  "ManyRx:2": [
+   "frequency",
+   "split",
+   "legacy"
+  ],
+  "ManyRx:3": [
+   "frequency",
+   "split",
+   "legacy"
+  ],
+  "ManySig:0": [
+   "frequency",
+   "split",
+   "legacy"
+  ],
+  "ManySig:1": [
+   "frequency",
+   "legacy"
+  ],
+  "ManySig:2": [
+   "frequency",
+   "split",
+   "legacy"
+  ],
+  "ManySig:3": [
+   "frequency",
+   "split",
+   "legacy"
+  ]
+ },
+ "evidence": {
+  "runs/features/ManyRx_legacy__f0__s3101/metrics.json": "16495cb2e64a03f464eb13f12984f8d70a0750e5a78862e6dc1f26aec6ca0ed3",
+  "runs/features/ManyRx_time__f0__s3101/metrics.json": "724da22ae0615a51a795dee31b4e7bc20cb34c7d2cbb6d1b5a066bfdbd0240ad",
+  "runs/features/ManyRx_diff__f0__s3101/metrics.json": "0eb2cdb67beebf5c113e000b58706038f230f61b6c1ab87e0550d68720dfc097",
+  "runs/features/ManyRx_split__f0__s3101/metrics.json": "de3764394ff38c589857b778d9abc67eaf037b63fbe6f34cbff8e368f5ff3f3f",
+  "runs/features/ManyRx_stf__f0__s3101/metrics.json": "19d643be106d48009078d53ead5b98c3332962b1193aa63c9b7347caf98fe6c9",
+  "runs/features/ManyRx_filter__f0__s3101/metrics.json": "e10a1e0952605a4a16210cf4e8c8c4b8552c19e9ba610d2053f52b22af3ed66e",
+  "runs/features/ManyRx_frequency__f0__s3101/metrics.json": "a902052d5b81c4f5d1f00050169094e40abc77f3eed1e15aaf9b5870e833ac69",
+  "runs/features/ManyRx_legacy__f1__s3101/metrics.json": "6c6aa9f033c8c31dbb78bee2aa7afe18bb5a9ccecf96a12265f9f812a2ffc3cd",
+  "runs/features/ManyRx_time__f1__s3101/metrics.json": "118263be70419d36b1bf1cbda34446159d75cf93d235039b4e6164a0241dbcd5",
+  "runs/features/ManyRx_diff__f1__s3101/metrics.json": "6f7ff563b8f894423dcfc568d1f61eb8a9ea1faef79f9f3d450daa865f6084af",
+  "runs/features/ManyRx_split__f1__s3101/metrics.json": "34edda5e6cb89c4207dedd6d51e66d6d716f3f3e81dc0160f6a98c9dbe4b3d94",
+  "runs/features/ManyRx_stf__f1__s3101/metrics.json": "f8308ff77c2c4998b29e2412b803be844591ed8c818814e603e212c7b1d45c04",
+  "runs/features/ManyRx_filter__f1__s3101/metrics.json": "f3c040ce07f8d5cd6a55bd39b96c5612fad09d817b6901dc33f264d3e1c5970a",
+  "runs/features/ManyRx_frequency__f1__s3101/metrics.json": "8e061bdce3deb5e42e461828887f2629749979732d4a62d4c4c3dfa133dd028f",
+  "runs/features/ManyRx_legacy__f2__s3101/metrics.json": "b26ac3f285c3860e5cf2d43ade86607d02c718f3996203e2fba0ff7afde4bd91",
+  "runs/features/ManyRx_time__f2__s3101/metrics.json": "a05a3e1334a0b503ca91c8cc08013365f28b6bae89405ad30b946cf8c5d21644",
+  "runs/features/ManyRx_diff__f2__s3101/metrics.json": "881454df93b9fcc91524388208f11e4d137307a16d8b87b503d55e2e44a0cd9b",
+  "runs/features/ManyRx_split__f2__s3101/metrics.json": "e86fcbac2d0ed6b91936d6d8822b3cdc98568f6d7f9cd34194b862b06550f080",
+  "runs/features/ManyRx_stf__f2__s3101/metrics.json": "676a1e678ef9916fbfa877a2cc40383afb5d16cec237c3a04371c276cd9736d0",
+  "runs/features/ManyRx_filter__f2__s3101/metrics.json": "e3e316b821e0daa56250c358a279e5d211e0f1a5c607e670b3eb10c5673c3f51",
+  "runs/features/ManyRx_frequency__f2__s3101/metrics.json": "0e11090abb0b19c42c7f7bcf3291a8a9594000a8ec84dcba0b85c4b83aa9fc6d",
+  "runs/features/ManyRx_legacy__f3__s3101/metrics.json": "0b7ad488723934a701944c46f4d57e2861ff26d99e5a76c54fe21ed7fbfdfed8",
+  "runs/features/ManyRx_time__f3__s3101/metrics.json": "a3f7ce26c18fd3773b9505e5054492d23ce3227f4d6230fdd5fcfbb45373d0cd",
+  "runs/features/ManyRx_diff__f3__s3101/metrics.json": "9b97aaa1b18af82fa0f0d50293882648e52f865e04f2c53af7d33a4cf5150720",
+  "runs/features/ManyRx_split__f3__s3101/metrics.json": "f599cc4aeb9b6ebf0dd41c86db54869f5930784ca132dbe48b6fce9d0a33fc47",
+  "runs/features/ManyRx_stf__f3__s3101/metrics.json": "3cb4176b2b36975e7fed593e3bbf003bf5568a52d4a650cf5fa7f0f7faa04c44",
+  "runs/features/ManyRx_filter__f3__s3101/metrics.json": "bb3d1dd9a43d800c5c7d711f21352fcfc13cf79a2013593557de3e893d74fd7d",
+  "runs/features/ManyRx_frequency__f3__s3101/metrics.json": "9c62995be46cec223bbc8fefe623874e60b96f5b83e6dfb0502f51800dbe2df7",
+  "runs/features/ManySig_legacy__f0__s3101/metrics.json": "675d02bb1c861802c18681e92c45e57ae7425806072e4b1f083d73d7dc5d4008",
+  "runs/features/ManySig_time__f0__s3101/metrics.json": "79e708fdcc091674f999ef3160b7a3c90fe37f8ce56ed42f43ecbc8d27b2b0f0",
+  "runs/features/ManySig_diff__f0__s3101/metrics.json": "d77646299ecf48bfd912a46149393adee08219044a910ddfce668d2cbd0bfda4",
+  "runs/features/ManySig_split__f0__s3101/metrics.json": "20309dae69c7c59adda841c229c14ba4d101c3b28de531317ad4e0d8f383f35f",
+  "runs/features/ManySig_stf__f0__s3101/metrics.json": "d479c1b77381a92b6089e5ea809fa034c38c4203cf27fd5c3b060b8d8500dfb9",
+  "runs/features/ManySig_filter__f0__s3101/metrics.json": "db1b778d9d72e112442c8efc0749141b0545fd51c700ec901772279a48ec851c",
+  "runs/features/ManySig_frequency__f0__s3101/metrics.json": "cba08c948318f87e39bbf2623d1bc30029beb280d366f1a40cc4eddd247d0ad4",
+  "runs/features/ManySig_legacy__f1__s3101/metrics.json": "3d235919aa992dd87222af44391834acb7b859c3fadb1c744346c9653fac44de",
+  "runs/features/ManySig_time__f1__s3101/metrics.json": "661182eca9e3a646094be73d1a9a9da4b10513106a3b2e68f6e61706e97d136b",
+  "runs/features/ManySig_diff__f1__s3101/metrics.json": "90bfd2c916a6a89919c3debfe182a6872d855d22f339241c3975142eca00afd3",
+  "runs/features/ManySig_split__f1__s3101/metrics.json": "8b7d1b65bfcc90914077390d148f0291d0bde0280836988eecf856230cb1f48e",
+  "runs/features/ManySig_stf__f1__s3101/metrics.json": "c306ba48b330745c742f2a13e23ce727f95a0ca08ef759df31f6f433355e1f67",
+  "runs/features/ManySig_filter__f1__s3101/metrics.json": "25ddef2964390ae7c056292a000a11c1b8cdaf2f66bfbd4a296c095528b104b6",
+  "runs/features/ManySig_frequency__f1__s3101/metrics.json": "de3b9cfac375be783688dedb98b4222390f00802b8430b3da45aed2656818389",
+  "runs/features/ManySig_legacy__f2__s3101/metrics.json": "cb72c8912980e49dda24a1542b3cfd17db66c0115147e3d17db7c4f3c8e8d6f9",
+  "runs/features/ManySig_time__f2__s3101/metrics.json": "0705dfc94e3c5724ce110ad4a730797c5276974bf7221365a26831f5be3f6f87",
+  "runs/features/ManySig_diff__f2__s3101/metrics.json": "1000425bba402e56db95f8fd1bd061bec75de0a2fa4ae68f44e517e409e5d852",
+  "runs/features/ManySig_split__f2__s3101/metrics.json": "4546306c36edd2ed1cfa9e9378310b048795d842d51af7fd2658219a66e5652d",
+  "runs/features/ManySig_stf__f2__s3101/metrics.json": "923e3b791ac86c4e770ccb8f121ae8cc2a28f9f281e608db73b0104d8ebc154a",
+  "runs/features/ManySig_filter__f2__s3101/metrics.json": "e4501bd73890a92fd68f4bb2eaff73c3554dfbc541760d7285c9a1b930affdb4",
+  "runs/features/ManySig_frequency__f2__s3101/metrics.json": "55193f4d50d5f1dc0f9f4e322e470fa99fba022036c526b096d0bef5241aa5b3",
+  "runs/features/ManySig_legacy__f3__s3101/metrics.json": "88beb6f11df185718cd8873f28d38e7bba3892435db03c4e805645aa72515499",
+  "runs/features/ManySig_time__f3__s3101/metrics.json": "74730209ef4a524f1e8292d699d310a14cc7870856926c27191e67a39c3b8aad",
+  "runs/features/ManySig_diff__f3__s3101/metrics.json": "f061bd263f80ef39aa08020114776f574576dad1da6433db557ee91c2e24622d",
+  "runs/features/ManySig_split__f3__s3101/metrics.json": "8f2ecaf6130818d824a9e6f63cbc8f7a00f49cec325515817d5edb8c35ec9abb",
+  "runs/features/ManySig_stf__f3__s3101/metrics.json": "de548931c5cdbc08bd7fe6376c4574caa4f900dd96ac8aa9bfb2fb8c3d43023f",
+  "runs/features/ManySig_filter__f3__s3101/metrics.json": "fc5415c06d89325f36d0cde46f0978cc0312e39b6e32d8f42a92052540f3c010",
+  "runs/features/ManySig_frequency__f3__s3101/metrics.json": "94f27a887bdd9dc32c28227a82dcd5f6bd43e8581c43a41277e615b508e019fc"
+ },
+ "jobs": [
+  {
+   "dataset": "ManyRx",
+   "fold": 0,
+   "seed": 3102,
+   "phase": "replicate",
+   "frontend": "frequency",
+   "recipe": "unified",
+   "id": "ManyRx_frequency__f0__s3102"
+  },
+  {
+   "dataset": "ManyRx",
+   "fold": 0,
+   "seed": 3102,
+   "phase": "replicate",
+   "frontend": "split",
+   "recipe": "unified",
+   "id": "ManyRx_split__f0__s3102"
+  },
+  {
+   "dataset": "ManyRx",
+   "fold": 0,
+   "seed": 3102,
+   "phase": "replicate",
+   "frontend": "legacy",
+   "recipe": "unified",
+   "id": "ManyRx_legacy__f0__s3102"
+  },
+  {
+   "dataset": "ManyRx",
+   "fold": 1,
+   "seed": 3102,
+   "phase": "replicate",
+   "frontend": "frequency",
+   "recipe": "unified",
+   "id": "ManyRx_frequency__f1__s3102"
+  },
+  {
+   "dataset": "ManyRx",
+   "fold": 1,
+   "seed": 3102,
+   "phase": "replicate",
+   "frontend": "split",
+   "recipe": "unified",
+   "id": "ManyRx_split__f1__s3102"
+  },
+  {
+   "dataset": "ManyRx",
+   "fold": 1,
+   "seed": 3102,
+   "phase": "replicate",
+   "frontend": "legacy",
+   "recipe": "unified",
+   "id": "ManyRx_legacy__f1__s3102"
+  },
+  {
+   "dataset": "ManyRx",
+   "fold": 2,
+   "seed": 3102,
+   "phase": "replicate",
+   "frontend": "frequency",
+   "recipe": "unified",
+   "id": "ManyRx_frequency__f2__s3102"
+  },
+  {
+   "dataset": "ManyRx",
+   "fold": 2,
+   "seed": 3102,
+   "phase": "replicate",
+   "frontend": "split",
+   "recipe": "unified",
+   "id": "ManyRx_split__f2__s3102"
+  },
+  {
+   "dataset": "ManyRx",
+   "fold": 2,
+   "seed": 3102,
+   "phase": "replicate",
+   "frontend": "legacy",
+   "recipe": "unified",
+   "id": "ManyRx_legacy__f2__s3102"
+  },
+  {
+   "dataset": "ManyRx",
+   "fold": 3,
+   "seed": 3102,
+   "phase": "replicate",
+   "frontend": "frequency",
+   "recipe": "unified",
+   "id": "ManyRx_frequency__f3__s3102"
+  },
+  {
+   "dataset": "ManyRx",
+   "fold": 3,
+   "seed": 3102,
+   "phase": "replicate",
+   "frontend": "split",
+   "recipe": "unified",
+   "id": "ManyRx_split__f3__s3102"
+  },
+  {
+   "dataset": "ManyRx",
+   "fold": 3,
+   "seed": 3102,
+   "phase": "replicate",
+   "frontend": "legacy",
+   "recipe": "unified",
+   "id": "ManyRx_legacy__f3__s3102"
+  },
+  {
+   "dataset": "ManySig",
+   "fold": 0,
+   "seed": 3102,
+   "phase": "replicate",
+   "frontend": "frequency",
+   "recipe": "unified",
+   "id": "ManySig_frequency__f0__s3102"
+  },
+  {
+   "dataset": "ManySig",
+   "fold": 0,
+   "seed": 3102,
+   "phase": "replicate",
+   "frontend": "split",
+   "recipe": "unified",
+   "id": "ManySig_split__f0__s3102"
+  },
+  {
+   "dataset": "ManySig",
+   "fold": 0,
+   "seed": 3102,
+   "phase": "replicate",
+   "frontend": "legacy",
+   "recipe": "unified",
+   "id": "ManySig_legacy__f0__s3102"
+  },
+  {
+   "dataset": "ManySig",
+   "fold": 1,
+   "seed": 3102,
+   "phase": "replicate",
+   "frontend": "frequency",
+   "recipe": "unified",
+   "id": "ManySig_frequency__f1__s3102"
+  },
+  {
+   "dataset": "ManySig",
+   "fold": 1,
+   "seed": 3102,
+   "phase": "replicate",
+   "frontend": "legacy",
+   "recipe": "unified",
+   "id": "ManySig_legacy__f1__s3102"
+  },
+  {
+   "dataset": "ManySig",
+   "fold": 2,
+   "seed": 3102,
+   "phase": "replicate",
+   "frontend": "frequency",
+   "recipe": "unified",
+   "id": "ManySig_frequency__f2__s3102"
+  },
+  {
+   "dataset": "ManySig",
+   "fold": 2,
+   "seed": 3102,
+   "phase": "replicate",
+   "frontend": "split",
+   "recipe": "unified",
+   "id": "ManySig_split__f2__s3102"
+  },
+  {
+   "dataset": "ManySig",
+   "fold": 2,
+   "seed": 3102,
+   "phase": "replicate",
+   "frontend": "legacy",
+   "recipe": "unified",
+   "id": "ManySig_legacy__f2__s3102"
+  },
+  {
+   "dataset": "ManySig",
+   "fold": 3,
+   "seed": 3102,
+   "phase": "replicate",
+   "frontend": "frequency",
+   "recipe": "unified",
+   "id": "ManySig_frequency__f3__s3102"
+  },
+  {
+   "dataset": "ManySig",
+   "fold": 3,
+   "seed": 3102,
+   "phase": "replicate",
+   "frontend": "split",
+   "recipe": "unified",
+   "id": "ManySig_split__f3__s3102"
+  },
+  {
+   "dataset": "ManySig",
+   "fold": 3,
+   "seed": 3102,
+   "phase": "replicate",
+   "frontend": "legacy",
+   "recipe": "unified",
+   "id": "ManySig_legacy__f3__s3102"
+  }
+ ]
+}

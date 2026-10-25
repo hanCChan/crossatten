@@ -1,0 +1,13 @@
+/data/miniforge/envs/env-3.12/lib/python3.12/site-packages/torch/autograd/graph.py:825: UserWarning: upsample_linear1d_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:91.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+{"run": "ManySig_filter__f1__s3101", "epoch": 1, "source_ce": 1.55017, "seconds": 4}
+{"run": "ManySig_filter__f1__s3101", "epoch": 20, "source_ce": 0.02476, "seconds": 64}
+{"run": "ManySig_filter__f1__s3101", "epoch": 40, "source_ce": 0.01684, "seconds": 128}
+{"run": "ManySig_filter__f1__s3101", "epoch": 60, "source_ce": 0.01264, "seconds": 192}
+{"run": "ManySig_filter__f1__s3101", "epoch": 80, "source_ce": 0.02989, "seconds": 252}
+{"run": "ManySig_filter__f1__s3101", "epoch": 100, "source_ce": 0.01795, "seconds": 309}
+{"run": "ManySig_filter__f1__s3101", "epoch": 120, "source_ce": 0.02492, "seconds": 368}
+{"run": "ManySig_filter__f1__s3101", "epoch": 140, "source_ce": 0.02126, "seconds": 424}
+{"run": "ManySig_filter__f1__s3101", "epoch": 160, "source_ce": 0.02282, "seconds": 477}
+{"run": "ManySig_filter__f1__s3101", "epoch": 180, "source_ce": 0.02212, "seconds": 519}
+{"run": "ManySig_filter__f1__s3101", "epoch": 200, "source_ce": 0.02105, "seconds": 559}

@@ -1,0 +1,67 @@
+{
+ "job": {
+  "dataset": "ManySig",
+  "fold": 3,
+  "seed": 3101,
+  "phase": "features",
+  "frontend": "stf",
+  "recipe": "unified",
+  "id": "ManySig_stf__f3__s3101"
+ },
+ "roles": {
+  "source": [
+   "1-1",
+   "1-19",
+   "2-1",
+   "2-19",
+   "3-19",
+   "7-7",
+   "7-14",
+   "8-8",
+   "14-7"
+  ],
+  "fit_rx": [
+   "1-1",
+   "1-19",
+   "2-1",
+   "2-19",
+   "3-19",
+   "7-7",
+   "7-14"
+  ],
+  "held_rx": [
+   "8-8",
+   "14-7"
+  ],
+  "target": [
+   "18-2",
+   "19-2",
+   "20-1"
+  ]
+ },
+ "recipe": {
+  "opt": "adamw",
+  "lr": 0.001,
+  "wd": 0.0005,
+  "batch": 64,
+  "epochs": 200,
+  "sched": "warmcos",
+  "warmup": 5,
+  "awgn": [
+   0,
+   50
+  ]
+ },
+ "arm": {
+  "frontend": "stf",
+  "num_classes": 6,
+  "stf_stop": 160,
+  "fusion": "pooled_concat"
+ },
+ "data_seed": 3189089859,
+ "smoke": false,
+ "registration_sha256": "c6d0855be6ae4787151daad93c8d57653e6e5c09323f921bfa0ff32240beee35",
+ "code_sha256": "0e99bc90e257a9736384ef6acf0c433b6365ab8c96cbddd604c0900dfeeea047",
+ "dataset_manifest_sha256": "74e95fb87ef2a898fdd9b85b552cf2a7f3af0e7b7a20eb8a5f1744f4ba99673d",
+ "decision_sha256": null
+}

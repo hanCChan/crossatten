@@ -1,0 +1,13 @@
+/data/miniforge/envs/env-3.12/lib/python3.12/site-packages/torch/autograd/graph.py:825: UserWarning: upsample_linear1d_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:91.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+{"run": "ManyRx_filter__f2__s3101", "epoch": 1, "source_ce": 1.88175, "seconds": 9}
+{"run": "ManyRx_filter__f2__s3101", "epoch": 20, "source_ce": 0.16183, "seconds": 167}
+{"run": "ManyRx_filter__f2__s3101", "epoch": 40, "source_ce": 0.16493, "seconds": 393}
+{"run": "ManyRx_filter__f2__s3101", "epoch": 60, "source_ce": 0.17188, "seconds": 644}
+{"run": "ManyRx_filter__f2__s3101", "epoch": 80, "source_ce": 0.17822, "seconds": 833}
+{"run": "ManyRx_filter__f2__s3101", "epoch": 100, "source_ce": 0.19343, "seconds": 976}
+{"run": "ManyRx_filter__f2__s3101", "epoch": 120, "source_ce": 0.19483, "seconds": 1128}
+{"run": "ManyRx_filter__f2__s3101", "epoch": 140, "source_ce": 0.19874, "seconds": 1283}
+{"run": "ManyRx_filter__f2__s3101", "epoch": 160, "source_ce": 0.21139, "seconds": 1439}
+{"run": "ManyRx_filter__f2__s3101", "epoch": 180, "source_ce": 0.21185, "seconds": 1597}
+{"run": "ManyRx_filter__f2__s3101", "epoch": 200, "source_ce": 0.21335, "seconds": 1741}
