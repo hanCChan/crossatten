@@ -1,0 +1,118 @@
+[
+ {
+  "rx": "RX1",
+  "tx": 1,
+  "pilot_samples": 1000000,
+  "records": [
+   {
+    "start": 747307,
+    "coherence": 0.9984284744718256,
+    "up_tone": 0.9697423755469485,
+    "tone_spread": 0.0,
+    "down_tone": 0.9405531072870472
+   }
+  ],
+  "rejected": [
+   {
+    "coarse_start": 337920,
+    "reason": "chirp-boundary/tone/SFD gate failed"
+   }
+  ],
+  "dtype": "<c8",
+  "metadata_sha256": "1078584b596ecbd0e4b23f1c527dc8966f084d68d43fded9b0e39b7635ee08cf"
+ },
+ {
+  "rx": "RX1",
+  "tx": 2,
+  "pilot_samples": 1000000,
+  "records": [],
+  "rejected": [
+   {
+    "coarse_start": 186368,
+    "reason": "chirp-boundary/tone/SFD gate failed"
+   },
+   {
+    "coarse_start": 590336,
+    "reason": "chirp-boundary/tone/SFD gate failed"
+   }
+  ],
+  "dtype": "<c8",
+  "metadata_sha256": "d1aa90b922c10ebbf5abf3394408acefe60fb171c57fd242490874d21e6c3704"
+ },
+ {
+  "rx": "RX1",
+  "tx": 3,
+  "pilot_samples": 1000000,
+  "records": [
+   {
+    "start": 242659,
+    "coherence": 0.9989882058286726,
+    "up_tone": 0.4536187664910629,
+    "tone_spread": 0.0,
+    "down_tone": 0.4671243298206802
+   }
+  ],
+  "rejected": [
+   {
+    "coarse_start": 642048,
+    "reason": "chirp-boundary/tone/SFD gate failed"
+   }
+  ],
+  "dtype": "<c8",
+  "metadata_sha256": "f32fb2c792bdf747c74265ad91c83d85e5392cdade1a06bcbc3c6e3ef38d3a70"
+ },
+ {
+  "rx": "RX2",
+  "tx": 1,
+  "pilot_samples": 1000000,
+  "records": [],
+  "rejected": [
+   {
+    "coarse_start": 336896,
+    "reason": "chirp-boundary/tone/SFD gate failed"
+   },
+   {
+    "coarse_start": 741120,
+    "reason": "chirp-boundary/tone/SFD gate failed"
+   }
+  ],
+  "dtype": "<c8",
+  "metadata_sha256": "be744305a8e5b941e4eac5dcd8d1f4192418348365e4706b15ecdc69e0c19b6e"
+ },
+ {
+  "rx": "RX2",
+  "tx": 2,
+  "pilot_samples": 1000000,
+  "records": [],
+  "rejected": [
+   {
+    "coarse_start": 186112,
+    "reason": "chirp-boundary/tone/SFD gate failed"
+   },
+   {
+    "coarse_start": 590336,
+    "reason": "chirp-boundary/tone/SFD gate failed"
+   }
+  ],
+  "dtype": "<c8",
+  "metadata_sha256": "7e9de8d9e502690cfbfe7f40e373f1c70bcc62cfa128d8b53fe4b9549b1b9cf8"
+ },
+ {
+  "rx": "RX2",
+  "tx": 3,
+  "pilot_samples": 1000000,
+  "records": [],
+  "rejected": [
+   {
+    "coarse_start": 237312,
+    "reason": "chirp-boundary/tone/SFD gate failed"
+   },
+   {
+    "coarse_start": 641280,
+    "reason": "chirp-boundary/tone/SFD gate failed"
+   }
+  ],
+  "dtype": "<c8",
+  "metadata_sha256": "e063ae7a61801fddef8109e4b858889ee9be7934242301e058b965a050533a4a"
+ }
+]

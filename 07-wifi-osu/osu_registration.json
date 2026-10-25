@@ -1,0 +1,77 @@
+{
+ "date": "2026-10-25",
+ "dataset": "OSU Diff_Receivers Indoor SameTx",
+ "classes": 25,
+ "dtype": "<c8",
+ "sample_rate": 1000000,
+ "capture_samples": 20000000,
+ "chirp_samples": 1024,
+ "nominal_bandwidth": 125000,
+ "nominal_sf": 7,
+ "parameter_evidence": "source pilot chirp sweep/tone/repetition; metadata declares sample rate only",
+ "detector_sha256": "7c727581a275a5dcc8be70bd17e1c4b474da712fb4f1b1c3622895e7c87c1c28",
+ "pilot_sha256": "8e15cbef725564cf3f8faad6cb2ec894fb604a6010edb0b3fde0b896200eb3f2",
+ "source_train_seconds": [
+  0,
+  10
+ ],
+ "source_val_seconds": [
+  10.5,
+  14
+ ],
+ "target_seconds": [
+  15,
+  20
+ ],
+ "guard_samples": 500000,
+ "packet_crop_samples": 8192,
+ "detector_chunk_samples": 2000000,
+ "detection": {
+  "coherence": 0.8,
+  "tone_min": 0.25,
+  "tone_spread_bins": 2,
+  "down_tone_min": 0.25,
+  "symbol_energy_min_ratio": 0.4,
+  "reset_threshold": 0.07
+ },
+ "minimum_per_class": {
+  "train": 12,
+  "val": 6,
+  "target": 8
+ },
+ "methods": [
+  "patch_hstu",
+  "hstem_hstu",
+  "hstem_cnn",
+  "cis_rank16"
+ ],
+ "input_fmax": 62500,
+ "input_filter": "shared nominal strict-IB; pilot-derived bandwidth, not OSU metadata claim",
+ "seeds": [
+  5101,
+  5102,
+  5103
+ ],
+ "directions": [
+  "RX1_to_RX2",
+  "RX2_to_RX1"
+ ],
+ "recipe": {
+  "optimizer": "AdamW",
+  "lr": 0.001,
+  "weight_decay": 0.01,
+  "epochs": 200,
+  "warmup_epochs": 5,
+  "awgn": [
+   0,
+   50
+  ],
+  "batch": 64,
+  "checkpoint": "minimum source temporal-val CE"
+ },
+ "max_formal_fits": 24,
+ "target_gate": "commit complete data audit before first target model evaluation",
+ "limitation": "one capture per TX/RX; temporal source validation is not independent capture validation",
+ "cross_day_status": "not local; official requests denied by proxy 403; no cross-day claim",
+ "independent_record_sha256_required": true
+}
