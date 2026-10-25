@@ -30,6 +30,8 @@ RECIPES = {
     "long_const": dict(opt="adamw", lr=1e-3, wd=5e-4, sched="const", epochs=100, ckpt="best_val_ce"),
     # + warmup (5 ep) and cosine decay to 0
     "long_cos": dict(opt="adamw", lr=1e-3, wd=5e-4, sched="warmcos", warmup=5, epochs=100, ckpt="best_val_ce"),
+    # stage 02: same as long_cos with a 200-epoch horizon (stage-01 best epochs were 87-97 of 100)
+    "long_cos_200": dict(opt="adamw", lr=1e-3, wd=5e-4, sched="warmcos", warmup=5, epochs=200, ckpt="best_val_ce"),
     # Shen et al. main.py: SGD 1e-3 m0.9, ReduceLROnPlateau(0.2, 10), EarlyStopping(20), <=500 ep, final weights
     "shen": dict(opt="sgd", lr=1e-3, momentum=0.9, sched="plateau", factor=0.2, patience=10, early_stop=20,
                  epochs=500, ckpt="last_at_stop"),

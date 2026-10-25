@@ -147,28 +147,39 @@ class ShenRes(nn.Module):
 
 class ShenCISPipeline(nn.Module):
     """non_adv_net of Shen et al. (deep_learning_models.py). head='flatten': AvgPool2 -> Flatten(13*31*64) -> Dense512;
-    head='gap': global average pool -> Dense512. Then L2-normalise -> Dense128 -> ReLU -> Dense(classes)."""
+    head='gap': global average pool -> Dense512; head='rank16': flatten -> Dense16 (no bias) -> Dense512 (the rank-16
+    capacity control of gai src/shen_p2a/models.py::FactorizedAuthorCNN, 658,314 params; keeps position information).
+    Then L2-normalise -> Dense128 -> ReLU -> Dense(classes)."""
 
     def __init__(self, head="flatten", input_fmax=None, num_classes=10):
         super().__init__()
         self.head, self.input_fmax = head, input_fmax
         self.stem = nn.Conv2d(1, 32, 7, stride=2)
         self.blocks = nn.Sequential(ShenRes(32, 32), ShenRes(32, 32), ShenRes(32, 64, True), ShenRes(64, 64))
-        self.feat = nn.Linear(13 * 31 * 64 if head == "flatten" else 64, 512)
+        flat = 13 * 31 * 64
+        if head == "flatten":
+            self.feat = nn.Linear(flat, 512)
+        elif head == "gap":
+            self.feat = nn.Linear(64, 512)
+        elif head == "rank16":
+            self.feat = nn.Sequential(nn.Linear(flat, 16, bias=False), nn.Linear(16, 512))
+        else:
+            raise ValueError(head)
         self.tx_input = nn.Linear(512, 128)
         self.classifier = nn.Linear(128, num_classes)
         for m in self.modules():
             if isinstance(m, (nn.Conv2d, nn.Linear)):
                 nn.init.xavier_uniform_(m.weight)
-                nn.init.zeros_(m.bias)
+                if m.bias is not None:
+                    nn.init.zeros_(m.bias)
 
     def features(self, cis):
         h = F.relu(self.stem(F.pad(cis, (2, 3, 2, 3))))   # TF 'same' for k7/s2 on 52x126
         h = self.blocks(h)
-        if self.head == "flatten":
-            h = F.avg_pool2d(h, 2).permute(0, 2, 3, 1).reshape(h.shape[0], -1)   # Keras channels-last flatten
-        else:
+        if self.head == "gap":
             h = h.mean((2, 3))
+        else:
+            h = F.avg_pool2d(h, 2).permute(0, 2, 3, 1).reshape(h.shape[0], -1)   # Keras channels-last flatten
         return F.normalize(self.feat(h), p=2, dim=1, eps=1e-12)
 
     def forward(self, x):
@@ -185,7 +196,8 @@ def build_pipeline(arm: dict) -> nn.Module:
                                use_oob=arm.get("fusion", "cross_attn_oob") != "no_oob")
     if fam == "shen_cis":
         return ShenCISPipeline(head=arm.get("head", "flatten"), input_fmax=arm.get("input_fmax"))
-    raise ValueError(fam)
+    from .models2 import build_pipeline2   # stage-02 families (strict-IB base variants)
+    return build_pipeline2(arm)
 
 
 def n_params(m: nn.Module) -> int:

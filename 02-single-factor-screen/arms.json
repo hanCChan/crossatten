@@ -1,0 +1,26 @@
+{
+  "stage": "02-single-factor-screen",
+  "registered": "2026-10-25 (before any stage-02 fit)",
+  "base": "s02_base = stage-01 xa_trueib_cos_awgn (strict-IB input |f|<=62.5 kHz, CrossAttn embedder without OOB path, 2 HSTU mixers, long_cos, AWGN U[0,50) dB)",
+  "notes": "Every arm differs from s02_base in exactly one factor (except the CIS rank-16 reference, compared with stage-01 cis_flat). See README.md.",
+  "arms": [
+    {"name": "s02_base",        "dir": "base", "family": "ib_variant", "recipe": "long_cos", "awgn": [0, 50], "desc": "stage-01 winner re-run (also a determinism check against stage-01 xa_trueib_cos_awgn)"},
+
+    {"name": "s02_meanchirp",   "dir": "B", "family": "ib_variant", "recipe": "long_cos", "awgn": [0, 50], "meanchirp": true, "desc": "replace the packet by its coherent 8-symbol mean chirp (= keep only DFT comb bins k=0 mod 8) before the IB band limit; removes symbol-to-symbol residual/transient"},
+    {"name": "s02_combfft",     "dir": "B", "family": "ib_variant", "recipe": "long_cos", "awgn": [0, 50], "combfft": true, "desc": "FFT view keeps only comb bins (periodic part); I/Q and amp/phase views unchanged"},
+    {"name": "s02_dechirp",     "dir": "B", "family": "ib_variant", "recipe": "long_cos", "awgn": [0, 50], "dechirp": true, "desc": "after the IB band limit multiply by conj(ideal SF7 upchirp): every view sees the dechirped (tone-like) signal"},
+
+    {"name": "s02_rawoob_full",  "dir": "A", "family": "ib_rawoob", "recipe": "long_cos", "awgn": [0, 50], "oob_band": [62500, 1000000000], "desc": "+ paper-1 OOB pathway (ratio |X|/IB-RMS, all |f|>62.5k of the FULL-band packet) as cross-attention keys/values; main tokens stay strict IB"},
+    {"name": "s02_rawoob_near",  "dir": "A", "family": "ib_rawoob", "recipe": "long_cos", "awgn": [0, 50], "oob_band": [62500, 200000], "desc": "same, OOB keys restricted to 62.5<|f|<=200 kHz"},
+    {"name": "s02_rawoob_nearL", "dir": "A", "family": "ib_rawoob", "recipe": "long_cos", "awgn": [0, 50], "oob_band": [62500, 100000], "oob_side": "L", "desc": "same, OOB keys restricted to the left near band -100..-62.5 kHz (stage-00: most transferable OOB information)"},
+    {"name": "s02_cisoob",       "dir": "A", "family": "ib_cisoob", "recipe": "long_cos", "awgn": [0, 50], "desc": "+ OOB keys/values = channel-independent spectrogram rows with |f|>62.5 kHz (35 rows x 126 frames, adjacent-frame quotient) of the full-band packet"},
+
+    {"name": "s02_depth4",      "dir": "C", "family": "ib_variant", "recipe": "long_cos", "awgn": [0, 50], "depth": 4, "desc": "4 HSTU mixer blocks instead of 2"},
+    {"name": "s02_tfsplit",     "dir": "C", "family": "ib_tfsplit", "recipe": "long_cos", "awgn": [0, 50], "desc": "time stream (I/Q, amp/phase) and frequency stream (FFT) with separate positions, on strict-IB input"},
+
+    {"name": "s02_ep200",       "dir": "D", "family": "ib_variant", "recipe": "long_cos_200", "awgn": [0, 50], "desc": "200-epoch warmup/cosine horizon (stage-01 best epochs 87-97 of 100)"},
+    {"name": "s02_awgn10",      "dir": "D", "family": "ib_variant", "recipe": "long_cos", "awgn": [10, 50], "desc": "AWGN SNR ~ U[10,50) dB instead of U[0,50)"},
+
+    {"name": "s02_cis_rank16",  "dir": "ref", "family": "shen_cis", "recipe": "shen", "awgn": [0, 50], "head": "rank16", "desc": "Shen-CIS with the rank-16 head (658,314 params; keeps time-frequency position), official recipe + AWGN: fair lightweight CIS control"}
+  ]
+}
