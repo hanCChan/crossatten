@@ -1,0 +1,1444 @@
+{
+ "selection": "internal source RX days1,2 only; no target data",
+ "registration_sha256": "fa84885482665cdde235b4e0af947cecb61494bb7de1d06954e721004d52eabe",
+ "source_result_hashes": {
+  "runs/source/W0_ManyRx_official__f0__s2023/metrics.json": "ef06c242786b64e0593750fda0394cfc8a4b3e4a64c632d414f90dc7be40c636",
+  "runs/source/W0_ManyRx_official__f1__s2023/metrics.json": "4213ff1c19a4bead45c3c7205aa141b0ac82dd06c8faaad39421ac7f52e151e5",
+  "runs/source/W0_ManyRx_official__f2__s2023/metrics.json": "2d8d60090bb9c4b4a1889635f97695427fd5ebdf872ba123859b887f0ab82440",
+  "runs/source/W0_ManyRx_official__f3__s2023/metrics.json": "a96ee3ff9822ba59081ded9900947dd6d22dbfe556e643dda165f7ecae0126fc",
+  "runs/source/W1_ManyRx_official__f0__s2023/metrics.json": "3786e02f6aaed211b0133b7f52ac956c1336c4c9858888417487e087c34c8116",
+  "runs/source/W1_ManyRx_official__f1__s2023/metrics.json": "c6c83fc7257ad475b2761a6eb0a5af3b44dd26c2b6565715be005b09b979baf5",
+  "runs/source/W1_ManyRx_official__f2__s2023/metrics.json": "8784870bb2888e3618fc1ccc9683055d0a4b6bfd18de37134f3224bb4f4ab074",
+  "runs/source/W1_ManyRx_official__f3__s2023/metrics.json": "0813b97db2a540c5fcf7c5c93b708f880cb37a18a7824044860f28fe6cc73fa0",
+  "runs/source/W2_ManyRx_official__f0__s2023/metrics.json": "2d514e1c1dc8f09f1726b64637c5525849644fdf83343dbcb2c5f07539cc1e73",
+  "runs/source/W2_ManyRx_official__f1__s2023/metrics.json": "d8128695d8e0c7af614c1d482f6b9ef21fa206ab9cb18642dc0f337031ec6c79",
+  "runs/source/W2_ManyRx_official__f2__s2023/metrics.json": "3483d7678e00fd52c40ebc7f5d262de02bbcee5a19d542ca9838f2bdb0683253",
+  "runs/source/W2_ManyRx_official__f3__s2023/metrics.json": "aec421c5ac4e2dfaf6bcca40814477ce5538ba5f22a84d9fef0f69ed2597bd2b",
+  "runs/source/C0_ManyRx_official__f0__s2023/metrics.json": "9b54bd3ff1f60c57201ed0565bf0fc23d47fa3aa2672429630eaa49ccb2819d0",
+  "runs/source/C0_ManyRx_official__f1__s2023/metrics.json": "a556bed398b1f54af97ed043a7c5ae89fef0587b9c206472bb4c6dded1c9a0c1",
+  "runs/source/C0_ManyRx_official__f2__s2023/metrics.json": "78d759b59194b300b98c146e0c15ca46e0f49bfa2d2953bfd4a6cdd38c650153",
+  "runs/source/C0_ManyRx_official__f3__s2023/metrics.json": "7bf6fea2ed0c07ffa26b0c2f29258c4f08a5bf4c599f0843d2fc173abc117422",
+  "runs/source/CP_ManyRx_official__f0__s2023/metrics.json": "92dae7ff3175ea30596ee4ab04a965db6f8f341cacc219e9ebb55462e8ff8c4e",
+  "runs/source/CP_ManyRx_official__f1__s2023/metrics.json": "862d517549ab6fa6f13653d93a5ecb2a568859a5e12327e378c95140e9db7b84",
+  "runs/source/CP_ManyRx_official__f2__s2023/metrics.json": "a7af09890edf52265dbdce84fe99bebcc56ce7614da3520b6f9c14d213712d17",
+  "runs/source/CP_ManyRx_official__f3__s2023/metrics.json": "f2a187be84cb1994f5cee37b70c6f8b46bf5e1cc94c986a0c523911cd2a8bf40",
+  "runs/source/CF_ManyRx_official__f0__s2023/metrics.json": "745d511f679b5af2691688c9abceaf629e3a57f53e809383f81ffc1ad12b98b7",
+  "runs/source/CF_ManyRx_official__f1__s2023/metrics.json": "065ca9be02bf503a38eb868caf6789798079b7d2cbefec6d3192ddd028a5f40f",
+  "runs/source/CF_ManyRx_official__f2__s2023/metrics.json": "8761a580e01c6272b2443a96286742e93f72aa8fd79a8c06e32d06a9fcf83401",
+  "runs/source/CF_ManyRx_official__f3__s2023/metrics.json": "beb0f08840f98b25782b9bf0889b795245b64b8f5bc89e4f53c51b3a6dc43aa6",
+  "runs/source/FAN_ManyRx_official__f0__s2023/metrics.json": "2d457e89ea0a81a80f63ec0672ef57d6b2735f6e1d5e1d93ae00487ee41051ad",
+  "runs/source/FAN_ManyRx_official__f1__s2023/metrics.json": "c0dd547eb9f9e133fe04bca13426207edb975257fa1af33cbffa871885492221",
+  "runs/source/FAN_ManyRx_official__f2__s2023/metrics.json": "27024de80c343922540821452d4cee5a4369957ac9c9b58609d0615c41381635",
+  "runs/source/FAN_ManyRx_official__f3__s2023/metrics.json": "b16f83a259ac4c5ac0fc7a28b64a65e2d5715bc019b695c22815eeddaee556cd",
+  "runs/source/WaveMLP_default_ManyRx_official__f0__s2023/metrics.json": "85a95cbf3d6434db668e80d7bc2dea5768f5aeb92743f2c5c10583bd30ddf7d5",
+  "runs/source/WaveMLP_default_ManyRx_official__f1__s2023/metrics.json": "a31033e0241cab398d2c6c75ec85f18b1c7cf33ef1b95ddf11760a08e6747831",
+  "runs/source/WaveMLP_default_ManyRx_official__f2__s2023/metrics.json": "9f01df8dcca2d27b5d49776cc3b9a651ecf5cdbe319320a2a6c7b873ad22bf6c",
+  "runs/source/WaveMLP_default_ManyRx_official__f3__s2023/metrics.json": "904853d2575977c67ee38c44679bffe2fd29509e955eb5c1cade5cb6c97d67cc",
+  "runs/source/WaveMLP_alternate_ManyRx_official__f0__s2023/metrics.json": "e89e1fcb6501f3fa9c1869feb42aee9fe3d69201999934785213c5a48e7b358f",
+  "runs/source/WaveMLP_alternate_ManyRx_official__f1__s2023/metrics.json": "cb1d86ed069e55505c72fd5f7b008aef153e5311e2501d856e8a38faf4aad96b",
+  "runs/source/WaveMLP_alternate_ManyRx_official__f2__s2023/metrics.json": "e752300341f322eb93a9183a9de69c73f51890b332421659d75fb39b89981852",
+  "runs/source/WaveMLP_alternate_ManyRx_official__f3__s2023/metrics.json": "c8082a307d82fe6c81650fcce1c67f18ebdbdaa80daf0aa7e5f7cab7367f6258",
+  "runs/source/IB-RFF_a0.004_ManyRx_official__f0__s2023/metrics.json": "fda9de30350512601820478c95dac941b0447e6d55350d1869aad4f8015353bf",
+  "runs/source/IB-RFF_a0.004_ManyRx_official__f1__s2023/metrics.json": "e1a3e3e94bc2b0dfbb87e7fc4195e2ac6505acd4ef2f11ed12e4c1b46e6ef36c",
+  "runs/source/IB-RFF_a0.004_ManyRx_official__f2__s2023/metrics.json": "36410c590bedb308e4eaac154740da16a09151489102be5cc01af28526c09459",
+  "runs/source/IB-RFF_a0.004_ManyRx_official__f3__s2023/metrics.json": "fac388e7e84e87e8475120037d1504619195348ca7a13cdb473639cfacbc8934",
+  "runs/source/IB-RFF_a0.04_ManyRx_official__f0__s2023/metrics.json": "8ae9c6af13ae8e38b3f3c9eee4b65796c427ae0c2ca27fcd28bdf859109d3360",
+  "runs/source/IB-RFF_a0.04_ManyRx_official__f1__s2023/metrics.json": "ffbea929948b6bc58a880381749ed433518251577cc0e0915b173732059d150e",
+  "runs/source/IB-RFF_a0.04_ManyRx_official__f2__s2023/metrics.json": "2f3eebbb5def6289f7e4113f65f24ba2088f6a9cbededcc4f0975b3e38cd1eef",
+  "runs/source/IB-RFF_a0.04_ManyRx_official__f3__s2023/metrics.json": "1e3eee0fb3602440805972f085214b4235b83a1f1586ac473fdc805ca3ce9a0a",
+  "runs/source/W0_ManyRx_unified__f0__s2023/metrics.json": "9ddf659262c586948a449c7fed3607a17c400c53139a2757efca7870a009a85f",
+  "runs/source/W0_ManyRx_unified__f1__s2023/metrics.json": "10ffa1bccadd5b1602ab3f626478345677edc68268e48d5535caf7f67a9bbef7",
+  "runs/source/W0_ManyRx_unified__f2__s2023/metrics.json": "e409f4d932d33a2cb14303303985feeec62017813a0946bfc9534a60bc9778ba",
+  "runs/source/W0_ManyRx_unified__f3__s2023/metrics.json": "c8626b0cbf1f8fcdccc6687ab19c9e26f59c434feb7c466c429349de72155ac0",
+  "runs/source/W1_ManyRx_unified__f0__s2023/metrics.json": "3db1d9f8fb7e3244eae82042b5fee6b2d1b4f1c8881ada4ac32369e568ec301c",
+  "runs/source/W1_ManyRx_unified__f1__s2023/metrics.json": "a8d54bb1175b40cd1e3a1cfb1e7c26678239c03b4dcd40abe680a003434d8e11",
+  "runs/source/W1_ManyRx_unified__f2__s2023/metrics.json": "8bfd791893ec07f5dd2e9f3a737efb2029f23d469a42d8e7e7d5025c45b0ce7a",
+  "runs/source/W1_ManyRx_unified__f3__s2023/metrics.json": "ac4f07c51a4512dd8806cecab1ba29e401f24baf022335689376c4d99b7c0fd7",
+  "runs/source/W2_ManyRx_unified__f0__s2023/metrics.json": "311ec18eb8fe359cfb26131fdba8c914962c56715ca791caf2636858da799c95",
+  "runs/source/W2_ManyRx_unified__f1__s2023/metrics.json": "ead60c6b79965f24a97839a89868fe5d6f11d7b7fb21c94933c0187027c778ab",
+  "runs/source/W2_ManyRx_unified__f2__s2023/metrics.json": "c997b3d22694a3a01b0b2594cc136505e631a659adc4152d6011fefebcb155c0",
+  "runs/source/W2_ManyRx_unified__f3__s2023/metrics.json": "0f85ec28ce8e52b83c4bdbce49e8acb4ce0f0bd22b0743094f69013fd9c79236",
+  "runs/source/C0_ManyRx_unified__f0__s2023/metrics.json": "6904b5d4cb326d73de91c749277ba6f7f54f80a34f1a6a25472d248a86e72516",
+  "runs/source/C0_ManyRx_unified__f1__s2023/metrics.json": "32e6bbb1da2fd8d62d7b818e0918efff8fcd9fde279283220ce8348957fa1295",
+  "runs/source/C0_ManyRx_unified__f2__s2023/metrics.json": "d087f17937b04f5cfb13bd208862752dff8ebc46309aca48dff8a04f62e4df1f",
+  "runs/source/C0_ManyRx_unified__f3__s2023/metrics.json": "1c6fea8e2836ec9c055ea5df2bf03b4e67b4692e79a1f95fdc20c3ceacd0eea6",
+  "runs/source/CP_ManyRx_unified__f0__s2023/metrics.json": "d82d95473c0dcbb7e8a57068fb89fc87f788278d3141cef0229e017fee4e9339",
+  "runs/source/CP_ManyRx_unified__f1__s2023/metrics.json": "cf1efd1e2978fb9459b7d26df4cd2e745e413ac1e550fef7ef52f85397116ac3",
+  "runs/source/CP_ManyRx_unified__f2__s2023/metrics.json": "70c99aace55540cc548821ed31ea3c899a2e3a0865c8ee6a7afa7d6449ba2b81",
+  "runs/source/CP_ManyRx_unified__f3__s2023/metrics.json": "b7e04ae79c18c3c252202ca7f5d7a79d4c4d9d8b2f9ff812ab4f0d0144333d98",
+  "runs/source/CF_ManyRx_unified__f0__s2023/metrics.json": "c8a61dcb56947960953084c670f23bd1fc379da7838a04a33bfcbe74ba15434a",
+  "runs/source/CF_ManyRx_unified__f1__s2023/metrics.json": "525a516f9ec9246eae478ac019182f289ced2c958e3bc5a3e940c9011217ec40",
+  "runs/source/CF_ManyRx_unified__f2__s2023/metrics.json": "00ff6fd1e307cf28c1f3d693cc7aaa9a14a149a181d3f418dfb20ee508c03730",
+  "runs/source/CF_ManyRx_unified__f3__s2023/metrics.json": "548c503c77fc066872f22f7e352a0888a531a1dca7f0426775ba1b7257a32509",
+  "runs/source/FAN_ManyRx_unified__f0__s2023/metrics.json": "f207808f68933bc1f3ea214c8d57f658dea9d8798fe58be20bd012adc21a876d",
+  "runs/source/FAN_ManyRx_unified__f1__s2023/metrics.json": "c7a7ea3761921004740a39db033c922d85623ddfe31cd2449a8cda7412b2839b",
+  "runs/source/FAN_ManyRx_unified__f2__s2023/metrics.json": "e05257aeb733d65059ff2e2c6d73c2e05463987777f3414d6ae1f36125c6fdba",
+  "runs/source/FAN_ManyRx_unified__f3__s2023/metrics.json": "3d6023b75b64e18c6846098f4a84b26eef5c734191a77ddceb39a1e03bcb7bba",
+  "runs/source/WaveMLP_default_ManyRx_unified__f0__s2023/metrics.json": "a577e4fd2e7827e721b0faabf1428faf6522fda1abdd9fb1f68a630109d12267",
+  "runs/source/WaveMLP_default_ManyRx_unified__f1__s2023/metrics.json": "e573aec1139d085e502bb0df7d62c9f141092a4ee3daeb7483669de91f8561e1",
+  "runs/source/WaveMLP_default_ManyRx_unified__f2__s2023/metrics.json": "20615f1dbeb2d361794c732b97923106ce5837da5ed5c73b3b1a0fb61aec0d76",
+  "runs/source/WaveMLP_default_ManyRx_unified__f3__s2023/metrics.json": "c4770cdd0c01113c24bbeaa0de880563fd1ebf448d21815468e673a0f404dd27",
+  "runs/source/WaveMLP_alternate_ManyRx_unified__f0__s2023/metrics.json": "3fe4abd33516c275ee481cd09d3960db446da98a807439dc191936efe5b4df7d",
+  "runs/source/WaveMLP_alternate_ManyRx_unified__f1__s2023/metrics.json": "2f856f4f19df599658fc83565ac06dd8c22e05dec99823ba687754237143d502",
+  "runs/source/WaveMLP_alternate_ManyRx_unified__f2__s2023/metrics.json": "1d060ea854c0a34fb766b0590bc005e12f70c66bba27bdc856730e99014d12b3",
+  "runs/source/WaveMLP_alternate_ManyRx_unified__f3__s2023/metrics.json": "1d19c63f55b112e12aa67d92169b64030e554a1f330546796e369030cc1406de",
+  "runs/source/IB-RFF_a0.004_ManyRx_unified__f0__s2023/metrics.json": "3afb9fe962870bf233fa19208d02a1f721fe4326ac9233948285a189f8fffc12",
+  "runs/source/IB-RFF_a0.004_ManyRx_unified__f1__s2023/metrics.json": "c648e3f2e815732278a63f770aa7b776d732f7806872c26b4ca3311a6d092754",
+  "runs/source/IB-RFF_a0.004_ManyRx_unified__f2__s2023/metrics.json": "f856f7b2169bc0761bf2f17ea9783d4b6590b5f44a90e67fa04ca04878344a69",
+  "runs/source/IB-RFF_a0.004_ManyRx_unified__f3__s2023/metrics.json": "74e2dc1d547c7f38238db85ac9994951967d9e4fa82433823ba5751cf3a55bee",
+  "runs/source/IB-RFF_a0.04_ManyRx_unified__f0__s2023/metrics.json": "4ac95fac9c29595cabecc0955fb5c3ca19c7f697f11c3300c503bcaedac81aa8",
+  "runs/source/IB-RFF_a0.04_ManyRx_unified__f1__s2023/metrics.json": "aff6a4a4ae22c38390f09f5469eda2aaaf749e711c4077d009d68f9aa7a0c4ab",
+  "runs/source/IB-RFF_a0.04_ManyRx_unified__f2__s2023/metrics.json": "70f6920be0ee566b71f34f9c703b97f057284cb8ef05c4bcf9feba14771a3f39",
+  "runs/source/IB-RFF_a0.04_ManyRx_unified__f3__s2023/metrics.json": "8b02f88ce47be8f2cdf5d4de236a6d13bff3a2fa51b096b2a135afc2974c4457",
+  "runs/source/W0_ManySig_official__f0__s2023/metrics.json": "d9f9430dad2c87e550a90476cd2a8dd6e701f7f41ca72752cface5475a0fcf19",
+  "runs/source/W0_ManySig_official__f1__s2023/metrics.json": "53efc20362c28be197bdae666871cbb77f78f59cab3d3b56346f06babd549d6c",
+  "runs/source/W0_ManySig_official__f2__s2023/metrics.json": "686a8258fc8c1dd1411969d4da5d034161d5dacaf0b9c04f3ccc79eb279ad069",
+  "runs/source/W0_ManySig_official__f3__s2023/metrics.json": "d119b9be50c975dcbde29ec81b46d0e75ff0cbe967d297adf016f2e67472a0ed",
+  "runs/source/W1_ManySig_official__f0__s2023/metrics.json": "de01c976c1a6ec22994dc259e4390534380559ef6fc2264a977a76cddba39977",
+  "runs/source/W1_ManySig_official__f1__s2023/metrics.json": "c0b6c2932f41cda7d6e2bf140145b232bfefa12998f349b02c182d5d290dc35a",
+  "runs/source/W1_ManySig_official__f2__s2023/metrics.json": "0ac78203515fc879d7f55ff8cddf9ac7990b65f57bad81013bfe2d4981444719",
+  "runs/source/W1_ManySig_official__f3__s2023/metrics.json": "43b82c4003be47e5369436a08a804b881b4ce17c4e743b5ed58f5835707cb455",
+  "runs/source/W2_ManySig_official__f0__s2023/metrics.json": "ac174a474baecbcd97162593b7365d5837704df6c8c2ed1e0aec6ee4d1b9cc8d",
+  "runs/source/W2_ManySig_official__f1__s2023/metrics.json": "8835905934065feed1666200bcb03fa734c66c3441a83bbc1f4f05104cdecd2b",
+  "runs/source/W2_ManySig_official__f2__s2023/metrics.json": "25bb5a9a8a67ddfb1c6842f6b6b9b41ec188122548485e10c4f8e9cd340600ee",
+  "runs/source/W2_ManySig_official__f3__s2023/metrics.json": "ca02abc6bed97935acc64a1df2f34c09eda7b9780bf08163fbad0891e1c49599",
+  "runs/source/C0_ManySig_official__f0__s2023/metrics.json": "30591475460435c80bc6c647dde90b4a58f8a4d6785b02a1d611d8ebcaca4b60",
+  "runs/source/C0_ManySig_official__f1__s2023/metrics.json": "a126ad49e9e00723a6a31738ca072e3683d4521c1da8769ddfab24495bc0fb9a",
+  "runs/source/C0_ManySig_official__f2__s2023/metrics.json": "8b9526a2d1ea82f8a1b0a166d49c62191dd92808b856267b781b41c96058a372",
+  "runs/source/C0_ManySig_official__f3__s2023/metrics.json": "b549c8b7041c79626f1d4aa628f70f024c2e8f188a8dbda66b90a9fb043b760e",
+  "runs/source/CP_ManySig_official__f0__s2023/metrics.json": "b8809f01a4bef1b30da349607eef27f3b2b41b6d8f8ae3d8cf7de5ccd3bda128",
+  "runs/source/CP_ManySig_official__f1__s2023/metrics.json": "b40704da89deaf07a6f33c519c1fd94fa37aaf8f11800d2bf2c97b1a89c5ade4",
+  "runs/source/CP_ManySig_official__f2__s2023/metrics.json": "8567c4a94d8299f7d68411f9d4fce0ebb75dcdb776bce33d34efc0074bdc4349",
+  "runs/source/CP_ManySig_official__f3__s2023/metrics.json": "b91c7f58dc124560fbda6ba7018ea734580e28a06a57fe77a4a1239f0901ab01",
+  "runs/source/CF_ManySig_official__f0__s2023/metrics.json": "c725580619c1135aab97882e14e9405c7e84c44b82d9ed3c40236608bf4378d4",
+  "runs/source/CF_ManySig_official__f1__s2023/metrics.json": "9c98a3731b4b84d21b9cd48f2237d0ead6b8cd9337351c77e25de7fd822b01c0",
+  "runs/source/CF_ManySig_official__f2__s2023/metrics.json": "7c5d54aa2fa65031f90827d9b6ff82de7565497a655c43dedaf789cff85730af",
+  "runs/source/CF_ManySig_official__f3__s2023/metrics.json": "8308d5c023912567b4c01fe912193259ad4be315ddbe0590508ae25ad192138e",
+  "runs/source/FAN_ManySig_official__f0__s2023/metrics.json": "44ac1dd3a0e08ee73ba3a9dcc7338115fcfd5fd0e852654755817de8e240e574",
+  "runs/source/FAN_ManySig_official__f1__s2023/metrics.json": "e6a6d415f687e249f933345eee454944b00eb892c1fe27b107cc06bac9ea397b",
+  "runs/source/FAN_ManySig_official__f2__s2023/metrics.json": "9a0ace2dc1ea439ac91bfdbcd198513909e52dc08a8ec6ac6828bccccb26f4f9",
+  "runs/source/FAN_ManySig_official__f3__s2023/metrics.json": "c68ac45ff5de3716a9b42a3293aa7cdba93533f07f59c55f42e3cc4cd423bf16",
+  "runs/source/WaveMLP_default_ManySig_official__f0__s2023/metrics.json": "1b70dd5c7a4cd2734285d74bb677120c2d912aef449fc51f802c360ebca9eb05",
+  "runs/source/WaveMLP_default_ManySig_official__f1__s2023/metrics.json": "c6cebdaded51cdf06ca2c557271ecdfbf811258da1aa5244a2cda5f35b515608",
+  "runs/source/WaveMLP_default_ManySig_official__f2__s2023/metrics.json": "26ed74b9a66c3c4aee8c96163762547ac186f568f51f2b91c2402e4b03652c45",
+  "runs/source/WaveMLP_default_ManySig_official__f3__s2023/metrics.json": "ac16211afa6d5e63c18454b91c3675cad42dd327dc12cb44d103253653093fa2",
+  "runs/source/WaveMLP_alternate_ManySig_official__f0__s2023/metrics.json": "b8a39cb1049c75a60b5cf7a91be2e3fb5a9d078c892474a071f1545c67de8b00",
+  "runs/source/WaveMLP_alternate_ManySig_official__f1__s2023/metrics.json": "2beb35dc879bd2879956dd0f7ebe8980f184f61d5f8328f8cb1982cd38cd6a72",
+  "runs/source/WaveMLP_alternate_ManySig_official__f2__s2023/metrics.json": "6c097263b58786487c1525825ba8c76dbb4ce65920194c4681e887345d908893",
+  "runs/source/WaveMLP_alternate_ManySig_official__f3__s2023/metrics.json": "aaa4f6ca53a5c8a139ace56eeae6a9723aa71339966285bba428dfd9aa46db50",
+  "runs/source/IB-RFF_a0.004_ManySig_official__f0__s2023/metrics.json": "9493a97513bd38159f9b963529a8d70d79c539cf5cff8cf8239759af36c5127d",
+  "runs/source/IB-RFF_a0.004_ManySig_official__f1__s2023/metrics.json": "8b78362d3678cb35234b31a13348f68e08d1cec89cf014a6869d5a96f7cfe74d",
+  "runs/source/IB-RFF_a0.004_ManySig_official__f2__s2023/metrics.json": "a90a64719ba57ecffff2200b5a1a584484009be7c51e2f190bc0afc64e2c4d48",
+  "runs/source/IB-RFF_a0.004_ManySig_official__f3__s2023/metrics.json": "1af616bf7e1ded1751410af65ffc9a7a44323cf052a24ddb21464dcc1d7be8bc",
+  "runs/source/IB-RFF_a0.04_ManySig_official__f0__s2023/metrics.json": "197a78c44b039f2c46f79ac11fd211bd83e0010599d9df01c2866dcaf4ef84f1",
+  "runs/source/IB-RFF_a0.04_ManySig_official__f1__s2023/metrics.json": "e91e36bec32b7b3cb327fc87cbd2babbac78e90140a5fd64088fda9e1264cec7",
+  "runs/source/IB-RFF_a0.04_ManySig_official__f2__s2023/metrics.json": "419fa1baa8e133432b46a0d18d6dfcf25fc7e748c76cd378859f92a678ceafef",
+  "runs/source/IB-RFF_a0.04_ManySig_official__f3__s2023/metrics.json": "c765a15c2485e2070185dae857c1377ae7bfdc74c39c3f99918193f00e77de06",
+  "runs/source/W0_ManySig_unified__f0__s2023/metrics.json": "5cefd4ec2de6274a3f890a053b73502ded00190d818902e0e817601ddbc8dcab",
+  "runs/source/W0_ManySig_unified__f1__s2023/metrics.json": "4b7feda0548fe537a031c04a91cd1ae2382855f01d7d8c1ae91c76383a15b19b",
+  "runs/source/W0_ManySig_unified__f2__s2023/metrics.json": "a9f873c1ed948ac29ae6d67e75963402896794144a54f67f980b2c9a1102703c",
+  "runs/source/W0_ManySig_unified__f3__s2023/metrics.json": "351dde63d93178c00f5848f98eb01428c88d39c920134f3b0e6f944317c56e22",
+  "runs/source/W1_ManySig_unified__f0__s2023/metrics.json": "1fac7032806127360c5d76b86410c5f511653d14d3d5c9dd7fbd3c1e9d60139d",
+  "runs/source/W1_ManySig_unified__f1__s2023/metrics.json": "dccd7827e0362a67405e5c2d5613ec259fedfd3b15e173813216325bf5c98e51",
+  "runs/source/W1_ManySig_unified__f2__s2023/metrics.json": "9a751bb7692910edea6847b42156882bd5aef4a13c5583a092d5ca0f85e76254",
+  "runs/source/W1_ManySig_unified__f3__s2023/metrics.json": "005e4f8b85d7988ced345f022692579b3c70166e2d3e7cb460361beb5087aa0f",
+  "runs/source/W2_ManySig_unified__f0__s2023/metrics.json": "43108a285953aecc8c5f398e01e2cb5ea8e89575dbada7d929f489d719441cc9",
+  "runs/source/W2_ManySig_unified__f1__s2023/metrics.json": "ea5a1f3f6deabcad1d5e360b6db66bfe65e6d617e1f54e06181eb1ff722113a9",
+  "runs/source/W2_ManySig_unified__f2__s2023/metrics.json": "800dbfa123c1983b9a94b91ab507e38642ef692edfe777c8fa8434c8c95bb486",
+  "runs/source/W2_ManySig_unified__f3__s2023/metrics.json": "576db5f7bb22c069cf10a7143e18f1da6d25ca86489b7f83e293b7457f6c120c",
+  "runs/source/C0_ManySig_unified__f0__s2023/metrics.json": "c802d36340c9344e931fd78396656fa19f5c81ca14a13469bbb06015714eb154",
+  "runs/source/C0_ManySig_unified__f1__s2023/metrics.json": "dc5618cfd71eb7b0afcd38e05a844e0b96b063c4b5aeb7e90ad17ac86f6b373e",
+  "runs/source/C0_ManySig_unified__f2__s2023/metrics.json": "9f3134d0343a9c7ac331909ac1d49e45d01f65a7db094c88e409d2efe49112d5",
+  "runs/source/C0_ManySig_unified__f3__s2023/metrics.json": "cd68526904c834d9b3e1e14d25c15774b89c3e0fa932a02d7d8343f648d7b54d",
+  "runs/source/CP_ManySig_unified__f0__s2023/metrics.json": "19f542f6d2e4e379de3b2349546b52d097264a4136a413b3ae2c733f9abda6ae",
+  "runs/source/CP_ManySig_unified__f1__s2023/metrics.json": "48f719eb568be8cfdf6915b5e1b88b41e0ecc7b7324bebc085aec8b616bf76f1",
+  "runs/source/CP_ManySig_unified__f2__s2023/metrics.json": "97df92390bd3df37d4a9b880e946c465ef54188c24f1de94554cca85520c1fa9",
+  "runs/source/CP_ManySig_unified__f3__s2023/metrics.json": "959c321f178ccd0f6b051b2a488f50fba2e852c66c42c4fc634220a7e7abfd92",
+  "runs/source/CF_ManySig_unified__f0__s2023/metrics.json": "dc54590adb592a28110eec5121dc7d4808f4a3f369a575d07ee83f76cd840b38",
+  "runs/source/CF_ManySig_unified__f1__s2023/metrics.json": "08b4f9301ee4cf8da6a57f49bb9e40278714cc4c541848ceb8929c79829a3a02",
+  "runs/source/CF_ManySig_unified__f2__s2023/metrics.json": "651b8035b10aec376e78a6963993aa60eb8e0d230352ce1306345d292d25ddae",
+  "runs/source/CF_ManySig_unified__f3__s2023/metrics.json": "71c96ebf9abead08ed5192fa8cc5b3e5599da84c8f8c18d7cd7f16fd30d01539",
+  "runs/source/FAN_ManySig_unified__f0__s2023/metrics.json": "cd06e8eb4eea79df7b3a7488e0744bce855d278ce5a3ae62edebd4bd9b650f45",
+  "runs/source/FAN_ManySig_unified__f1__s2023/metrics.json": "960cf8d74a52a114674544aa524638f3651fcb039fdef3784afcd6278dc03cbc",
+  "runs/source/FAN_ManySig_unified__f2__s2023/metrics.json": "e9eaa6ec59747fb6f89fc7b4ea6d7dfa8499cf816cdd76f1816359a99e611db0",
+  "runs/source/FAN_ManySig_unified__f3__s2023/metrics.json": "4e031c4b9a2fe97777f1dfb864aea15c568ba6bea2296097f9d58f23a77beaa1",
+  "runs/source/WaveMLP_default_ManySig_unified__f0__s2023/metrics.json": "054ff4e4277bbddedffcaf189ef5156d140792add6c374899313f3e75bad58aa",
+  "runs/source/WaveMLP_default_ManySig_unified__f1__s2023/metrics.json": "d70c88002d231f62e6cb75b3db714d6bd516da7a04f79901bcaa98912ba036c4",
+  "runs/source/WaveMLP_default_ManySig_unified__f2__s2023/metrics.json": "f769d1112dcdae96c7fae4eb29674efbba0aece938b7b33b6efc2582aa20c75b",
+  "runs/source/WaveMLP_default_ManySig_unified__f3__s2023/metrics.json": "ccc53ae43d9353eb82148f64dca9204bd24e8b4e57448157403357f197d94df8",
+  "runs/source/WaveMLP_alternate_ManySig_unified__f0__s2023/metrics.json": "7af7d0540b806c03d65bfb116be147ec8e378cddf828981a978d7e3c32445a0a",
+  "runs/source/WaveMLP_alternate_ManySig_unified__f1__s2023/metrics.json": "20e7ca0f94e2a83a4ff55d7a3ef7e12f5a1c9529f582efba64c5b5b66e030fc8",
+  "runs/source/WaveMLP_alternate_ManySig_unified__f2__s2023/metrics.json": "867ff122526e54bbff65ef872375a9bbcb51d2fb4c5b448b39c8c9bec590b783",
+  "runs/source/WaveMLP_alternate_ManySig_unified__f3__s2023/metrics.json": "f33f159d273abae9be3ba92d52ef9099c84520c4b5a2bf25df6efacbcf9cd280",
+  "runs/source/IB-RFF_a0.004_ManySig_unified__f0__s2023/metrics.json": "bcd7a665793d280082dd3ad53c7070f857c8142493cf331b6702558edfe407f1",
+  "runs/source/IB-RFF_a0.004_ManySig_unified__f1__s2023/metrics.json": "c0328b9eaa1a8c4ed41053ad3f2c82e635edfef11b18d92681d600705cc81cd3",
+  "runs/source/IB-RFF_a0.004_ManySig_unified__f2__s2023/metrics.json": "b5dac4935ca5552881673508c40dc7391f94170ab1e411969a131fd8d4e8c2bb",
+  "runs/source/IB-RFF_a0.004_ManySig_unified__f3__s2023/metrics.json": "3e4c77bd7bde723d46019509f372a4c9e6479ad97ba9101a579adc90f87ae8a5",
+  "runs/source/IB-RFF_a0.04_ManySig_unified__f0__s2023/metrics.json": "e8a9a3551a555f88074f22ef571271cd41bce5197a8e5dd3b7e810e78603c594",
+  "runs/source/IB-RFF_a0.04_ManySig_unified__f1__s2023/metrics.json": "53c25700d8eeaa6d532d6ebbca3f81ad544f033b8fe048b1e98b876e205bf270",
+  "runs/source/IB-RFF_a0.04_ManySig_unified__f2__s2023/metrics.json": "854a32f57c7cb8ce8ba9a2f8d05b353124ecb3be4d75503ee72e79ed112eb8c7",
+  "runs/source/IB-RFF_a0.04_ManySig_unified__f3__s2023/metrics.json": "b4a5bb6c00fabf570ccd62d8e7f35d779023f9652512f6aefdfb655a07eb8c98"
+ },
+ "choices": {
+  "ManyRx:0": {
+   "shared_rf_recipe": "official",
+   "fan": "FAN_ManyRx_unified",
+   "ib": "IB-RFF_a0.04_ManyRx_unified",
+   "wave": "WaveMLP_default_ManyRx_official"
+  },
+  "ManyRx:1": {
+   "shared_rf_recipe": "official",
+   "fan": "FAN_ManyRx_official",
+   "ib": "IB-RFF_a0.004_ManyRx_official",
+   "wave": "WaveMLP_default_ManyRx_official"
+  },
+  "ManyRx:2": {
+   "shared_rf_recipe": "official",
+   "fan": "FAN_ManyRx_official",
+   "ib": "IB-RFF_a0.004_ManyRx_official",
+   "wave": "WaveMLP_alternate_ManyRx_official"
+  },
+  "ManyRx:3": {
+   "shared_rf_recipe": "official",
+   "fan": "FAN_ManyRx_official",
+   "ib": "IB-RFF_a0.004_ManyRx_official",
+   "wave": "WaveMLP_alternate_ManyRx_official"
+  },
+  "ManySig:0": {
+   "shared_rf_recipe": "official",
+   "fan": "FAN_ManySig_official",
+   "ib": "IB-RFF_a0.04_ManySig_official",
+   "wave": "WaveMLP_alternate_ManySig_official"
+  },
+  "ManySig:1": {
+   "shared_rf_recipe": "official",
+   "fan": "FAN_ManySig_official",
+   "ib": "IB-RFF_a0.04_ManySig_official",
+   "wave": "WaveMLP_default_ManySig_official"
+  },
+  "ManySig:2": {
+   "shared_rf_recipe": "unified",
+   "fan": "FAN_ManySig_unified",
+   "ib": "IB-RFF_a0.04_ManySig_unified",
+   "wave": "WaveMLP_alternate_ManySig_official"
+  },
+  "ManySig:3": {
+   "shared_rf_recipe": "official",
+   "fan": "FAN_ManySig_official",
+   "ib": "IB-RFF_a0.04_ManySig_official",
+   "wave": "WaveMLP_alternate_ManySig_official"
+  }
+ },
+ "fan_init": {
+  "ManyRx:0": "FAN_ManyRx_unified",
+  "ManyRx:1": "FAN_ManyRx_official",
+  "ManyRx:2": "FAN_ManyRx_official",
+  "ManyRx:3": "FAN_ManyRx_official",
+  "ManySig:0": "FAN_ManySig_official",
+  "ManySig:1": "FAN_ManySig_official",
+  "ManySig:2": "FAN_ManySig_unified",
+  "ManySig:3": "FAN_ManySig_official"
+ },
+ "allowed_final_jobs": [
+  [
+   "W0_ManyRx_official",
+   0,
+   2023
+  ],
+  [
+   "W0_ManyRx_official",
+   0,
+   2024
+  ],
+  [
+   "W0_ManyRx_official",
+   0,
+   2025
+  ],
+  [
+   "W1_ManyRx_official",
+   0,
+   2023
+  ],
+  [
+   "W1_ManyRx_official",
+   0,
+   2024
+  ],
+  [
+   "W1_ManyRx_official",
+   0,
+   2025
+  ],
+  [
+   "W2_ManyRx_official",
+   0,
+   2023
+  ],
+  [
+   "W2_ManyRx_official",
+   0,
+   2024
+  ],
+  [
+   "W2_ManyRx_official",
+   0,
+   2025
+  ],
+  [
+   "C0_ManyRx_official",
+   0,
+   2023
+  ],
+  [
+   "C0_ManyRx_official",
+   0,
+   2024
+  ],
+  [
+   "C0_ManyRx_official",
+   0,
+   2025
+  ],
+  [
+   "CP_ManyRx_official",
+   0,
+   2023
+  ],
+  [
+   "CP_ManyRx_official",
+   0,
+   2024
+  ],
+  [
+   "CP_ManyRx_official",
+   0,
+   2025
+  ],
+  [
+   "CF_ManyRx_official",
+   0,
+   2023
+  ],
+  [
+   "CF_ManyRx_official",
+   0,
+   2024
+  ],
+  [
+   "CF_ManyRx_official",
+   0,
+   2025
+  ],
+  [
+   "FAN_ManyRx_official",
+   0,
+   2023
+  ],
+  [
+   "FAN_ManyRx_official",
+   0,
+   2024
+  ],
+  [
+   "FAN_ManyRx_official",
+   0,
+   2025
+  ],
+  [
+   "FAN_ManyRx_unified",
+   0,
+   2023
+  ],
+  [
+   "FAN_ManyRx_unified",
+   0,
+   2024
+  ],
+  [
+   "FAN_ManyRx_unified",
+   0,
+   2025
+  ],
+  [
+   "IB-RFF_a0.04_ManyRx_unified",
+   0,
+   2023
+  ],
+  [
+   "IB-RFF_a0.04_ManyRx_unified",
+   0,
+   2024
+  ],
+  [
+   "IB-RFF_a0.04_ManyRx_unified",
+   0,
+   2025
+  ],
+  [
+   "WaveMLP_default_ManyRx_official",
+   0,
+   2023
+  ],
+  [
+   "WaveMLP_default_ManyRx_official",
+   0,
+   2024
+  ],
+  [
+   "WaveMLP_default_ManyRx_official",
+   0,
+   2025
+  ],
+  [
+   "W0_ManyRx_official",
+   1,
+   2023
+  ],
+  [
+   "W0_ManyRx_official",
+   1,
+   2024
+  ],
+  [
+   "W0_ManyRx_official",
+   1,
+   2025
+  ],
+  [
+   "W1_ManyRx_official",
+   1,
+   2023
+  ],
+  [
+   "W1_ManyRx_official",
+   1,
+   2024
+  ],
+  [
+   "W1_ManyRx_official",
+   1,
+   2025
+  ],
+  [
+   "W2_ManyRx_official",
+   1,
+   2023
+  ],
+  [
+   "W2_ManyRx_official",
+   1,
+   2024
+  ],
+  [
+   "W2_ManyRx_official",
+   1,
+   2025
+  ],
+  [
+   "C0_ManyRx_official",
+   1,
+   2023
+  ],
+  [
+   "C0_ManyRx_official",
+   1,
+   2024
+  ],
+  [
+   "C0_ManyRx_official",
+   1,
+   2025
+  ],
+  [
+   "CP_ManyRx_official",
+   1,
+   2023
+  ],
+  [
+   "CP_ManyRx_official",
+   1,
+   2024
+  ],
+  [
+   "CP_ManyRx_official",
+   1,
+   2025
+  ],
+  [
+   "CF_ManyRx_official",
+   1,
+   2023
+  ],
+  [
+   "CF_ManyRx_official",
+   1,
+   2024
+  ],
+  [
+   "CF_ManyRx_official",
+   1,
+   2025
+  ],
+  [
+   "FAN_ManyRx_official",
+   1,
+   2023
+  ],
+  [
+   "FAN_ManyRx_official",
+   1,
+   2024
+  ],
+  [
+   "FAN_ManyRx_official",
+   1,
+   2025
+  ],
+  [
+   "FAN_ManyRx_unified",
+   1,
+   2023
+  ],
+  [
+   "FAN_ManyRx_unified",
+   1,
+   2024
+  ],
+  [
+   "FAN_ManyRx_unified",
+   1,
+   2025
+  ],
+  [
+   "IB-RFF_a0.004_ManyRx_official",
+   1,
+   2023
+  ],
+  [
+   "IB-RFF_a0.004_ManyRx_official",
+   1,
+   2024
+  ],
+  [
+   "IB-RFF_a0.004_ManyRx_official",
+   1,
+   2025
+  ],
+  [
+   "WaveMLP_default_ManyRx_official",
+   1,
+   2023
+  ],
+  [
+   "WaveMLP_default_ManyRx_official",
+   1,
+   2024
+  ],
+  [
+   "WaveMLP_default_ManyRx_official",
+   1,
+   2025
+  ],
+  [
+   "W0_ManyRx_official",
+   2,
+   2023
+  ],
+  [
+   "W0_ManyRx_official",
+   2,
+   2024
+  ],
+  [
+   "W0_ManyRx_official",
+   2,
+   2025
+  ],
+  [
+   "W1_ManyRx_official",
+   2,
+   2023
+  ],
+  [
+   "W1_ManyRx_official",
+   2,
+   2024
+  ],
+  [
+   "W1_ManyRx_official",
+   2,
+   2025
+  ],
+  [
+   "W2_ManyRx_official",
+   2,
+   2023
+  ],
+  [
+   "W2_ManyRx_official",
+   2,
+   2024
+  ],
+  [
+   "W2_ManyRx_official",
+   2,
+   2025
+  ],
+  [
+   "C0_ManyRx_official",
+   2,
+   2023
+  ],
+  [
+   "C0_ManyRx_official",
+   2,
+   2024
+  ],
+  [
+   "C0_ManyRx_official",
+   2,
+   2025
+  ],
+  [
+   "CP_ManyRx_official",
+   2,
+   2023
+  ],
+  [
+   "CP_ManyRx_official",
+   2,
+   2024
+  ],
+  [
+   "CP_ManyRx_official",
+   2,
+   2025
+  ],
+  [
+   "CF_ManyRx_official",
+   2,
+   2023
+  ],
+  [
+   "CF_ManyRx_official",
+   2,
+   2024
+  ],
+  [
+   "CF_ManyRx_official",
+   2,
+   2025
+  ],
+  [
+   "FAN_ManyRx_official",
+   2,
+   2023
+  ],
+  [
+   "FAN_ManyRx_official",
+   2,
+   2024
+  ],
+  [
+   "FAN_ManyRx_official",
+   2,
+   2025
+  ],
+  [
+   "FAN_ManyRx_unified",
+   2,
+   2023
+  ],
+  [
+   "FAN_ManyRx_unified",
+   2,
+   2024
+  ],
+  [
+   "FAN_ManyRx_unified",
+   2,
+   2025
+  ],
+  [
+   "IB-RFF_a0.004_ManyRx_official",
+   2,
+   2023
+  ],
+  [
+   "IB-RFF_a0.004_ManyRx_official",
+   2,
+   2024
+  ],
+  [
+   "IB-RFF_a0.004_ManyRx_official",
+   2,
+   2025
+  ],
+  [
+   "WaveMLP_alternate_ManyRx_official",
+   2,
+   2023
+  ],
+  [
+   "WaveMLP_alternate_ManyRx_official",
+   2,
+   2024
+  ],
+  [
+   "WaveMLP_alternate_ManyRx_official",
+   2,
+   2025
+  ],
+  [
+   "W0_ManyRx_official",
+   3,
+   2023
+  ],
+  [
+   "W0_ManyRx_official",
+   3,
+   2024
+  ],
+  [
+   "W0_ManyRx_official",
+   3,
+   2025
+  ],
+  [
+   "W1_ManyRx_official",
+   3,
+   2023
+  ],
+  [
+   "W1_ManyRx_official",
+   3,
+   2024
+  ],
+  [
+   "W1_ManyRx_official",
+   3,
+   2025
+  ],
+  [
+   "W2_ManyRx_official",
+   3,
+   2023
+  ],
+  [
+   "W2_ManyRx_official",
+   3,
+   2024
+  ],
+  [
+   "W2_ManyRx_official",
+   3,
+   2025
+  ],
+  [
+   "C0_ManyRx_official",
+   3,
+   2023
+  ],
+  [
+   "C0_ManyRx_official",
+   3,
+   2024
+  ],
+  [
+   "C0_ManyRx_official",
+   3,
+   2025
+  ],
+  [
+   "CP_ManyRx_official",
+   3,
+   2023
+  ],
+  [
+   "CP_ManyRx_official",
+   3,
+   2024
+  ],
+  [
+   "CP_ManyRx_official",
+   3,
+   2025
+  ],
+  [
+   "CF_ManyRx_official",
+   3,
+   2023
+  ],
+  [
+   "CF_ManyRx_official",
+   3,
+   2024
+  ],
+  [
+   "CF_ManyRx_official",
+   3,
+   2025
+  ],
+  [
+   "FAN_ManyRx_official",
+   3,
+   2023
+  ],
+  [
+   "FAN_ManyRx_official",
+   3,
+   2024
+  ],
+  [
+   "FAN_ManyRx_official",
+   3,
+   2025
+  ],
+  [
+   "FAN_ManyRx_unified",
+   3,
+   2023
+  ],
+  [
+   "FAN_ManyRx_unified",
+   3,
+   2024
+  ],
+  [
+   "FAN_ManyRx_unified",
+   3,
+   2025
+  ],
+  [
+   "IB-RFF_a0.004_ManyRx_official",
+   3,
+   2023
+  ],
+  [
+   "IB-RFF_a0.004_ManyRx_official",
+   3,
+   2024
+  ],
+  [
+   "IB-RFF_a0.004_ManyRx_official",
+   3,
+   2025
+  ],
+  [
+   "WaveMLP_alternate_ManyRx_official",
+   3,
+   2023
+  ],
+  [
+   "WaveMLP_alternate_ManyRx_official",
+   3,
+   2024
+  ],
+  [
+   "WaveMLP_alternate_ManyRx_official",
+   3,
+   2025
+  ],
+  [
+   "W0_ManySig_official",
+   0,
+   2023
+  ],
+  [
+   "W0_ManySig_official",
+   0,
+   2024
+  ],
+  [
+   "W0_ManySig_official",
+   0,
+   2025
+  ],
+  [
+   "W1_ManySig_official",
+   0,
+   2023
+  ],
+  [
+   "W1_ManySig_official",
+   0,
+   2024
+  ],
+  [
+   "W1_ManySig_official",
+   0,
+   2025
+  ],
+  [
+   "W2_ManySig_official",
+   0,
+   2023
+  ],
+  [
+   "W2_ManySig_official",
+   0,
+   2024
+  ],
+  [
+   "W2_ManySig_official",
+   0,
+   2025
+  ],
+  [
+   "C0_ManySig_official",
+   0,
+   2023
+  ],
+  [
+   "C0_ManySig_official",
+   0,
+   2024
+  ],
+  [
+   "C0_ManySig_official",
+   0,
+   2025
+  ],
+  [
+   "CP_ManySig_official",
+   0,
+   2023
+  ],
+  [
+   "CP_ManySig_official",
+   0,
+   2024
+  ],
+  [
+   "CP_ManySig_official",
+   0,
+   2025
+  ],
+  [
+   "CF_ManySig_official",
+   0,
+   2023
+  ],
+  [
+   "CF_ManySig_official",
+   0,
+   2024
+  ],
+  [
+   "CF_ManySig_official",
+   0,
+   2025
+  ],
+  [
+   "FAN_ManySig_official",
+   0,
+   2023
+  ],
+  [
+   "FAN_ManySig_official",
+   0,
+   2024
+  ],
+  [
+   "FAN_ManySig_official",
+   0,
+   2025
+  ],
+  [
+   "FAN_ManySig_unified",
+   0,
+   2023
+  ],
+  [
+   "FAN_ManySig_unified",
+   0,
+   2024
+  ],
+  [
+   "FAN_ManySig_unified",
+   0,
+   2025
+  ],
+  [
+   "IB-RFF_a0.04_ManySig_official",
+   0,
+   2023
+  ],
+  [
+   "IB-RFF_a0.04_ManySig_official",
+   0,
+   2024
+  ],
+  [
+   "IB-RFF_a0.04_ManySig_official",
+   0,
+   2025
+  ],
+  [
+   "WaveMLP_alternate_ManySig_official",
+   0,
+   2023
+  ],
+  [
+   "WaveMLP_alternate_ManySig_official",
+   0,
+   2024
+  ],
+  [
+   "WaveMLP_alternate_ManySig_official",
+   0,
+   2025
+  ],
+  [
+   "W0_ManySig_official",
+   1,
+   2023
+  ],
+  [
+   "W0_ManySig_official",
+   1,
+   2024
+  ],
+  [
+   "W0_ManySig_official",
+   1,
+   2025
+  ],
+  [
+   "W1_ManySig_official",
+   1,
+   2023
+  ],
+  [
+   "W1_ManySig_official",
+   1,
+   2024
+  ],
+  [
+   "W1_ManySig_official",
+   1,
+   2025
+  ],
+  [
+   "W2_ManySig_official",
+   1,
+   2023
+  ],
+  [
+   "W2_ManySig_official",
+   1,
+   2024
+  ],
+  [
+   "W2_ManySig_official",
+   1,
+   2025
+  ],
+  [
+   "C0_ManySig_official",
+   1,
+   2023
+  ],
+  [
+   "C0_ManySig_official",
+   1,
+   2024
+  ],
+  [
+   "C0_ManySig_official",
+   1,
+   2025
+  ],
+  [
+   "CP_ManySig_official",
+   1,
+   2023
+  ],
+  [
+   "CP_ManySig_official",
+   1,
+   2024
+  ],
+  [
+   "CP_ManySig_official",
+   1,
+   2025
+  ],
+  [
+   "CF_ManySig_official",
+   1,
+   2023
+  ],
+  [
+   "CF_ManySig_official",
+   1,
+   2024
+  ],
+  [
+   "CF_ManySig_official",
+   1,
+   2025
+  ],
+  [
+   "FAN_ManySig_official",
+   1,
+   2023
+  ],
+  [
+   "FAN_ManySig_official",
+   1,
+   2024
+  ],
+  [
+   "FAN_ManySig_official",
+   1,
+   2025
+  ],
+  [
+   "FAN_ManySig_unified",
+   1,
+   2023
+  ],
+  [
+   "FAN_ManySig_unified",
+   1,
+   2024
+  ],
+  [
+   "FAN_ManySig_unified",
+   1,
+   2025
+  ],
+  [
+   "IB-RFF_a0.04_ManySig_official",
+   1,
+   2023
+  ],
+  [
+   "IB-RFF_a0.04_ManySig_official",
+   1,
+   2024
+  ],
+  [
+   "IB-RFF_a0.04_ManySig_official",
+   1,
+   2025
+  ],
+  [
+   "WaveMLP_default_ManySig_official",
+   1,
+   2023
+  ],
+  [
+   "WaveMLP_default_ManySig_official",
+   1,
+   2024
+  ],
+  [
+   "WaveMLP_default_ManySig_official",
+   1,
+   2025
+  ],
+  [
+   "W0_ManySig_unified",
+   2,
+   2023
+  ],
+  [
+   "W0_ManySig_unified",
+   2,
+   2024
+  ],
+  [
+   "W0_ManySig_unified",
+   2,
+   2025
+  ],
+  [
+   "W1_ManySig_unified",
+   2,
+   2023
+  ],
+  [
+   "W1_ManySig_unified",
+   2,
+   2024
+  ],
+  [
+   "W1_ManySig_unified",
+   2,
+   2025
+  ],
+  [
+   "W2_ManySig_unified",
+   2,
+   2023
+  ],
+  [
+   "W2_ManySig_unified",
+   2,
+   2024
+  ],
+  [
+   "W2_ManySig_unified",
+   2,
+   2025
+  ],
+  [
+   "C0_ManySig_unified",
+   2,
+   2023
+  ],
+  [
+   "C0_ManySig_unified",
+   2,
+   2024
+  ],
+  [
+   "C0_ManySig_unified",
+   2,
+   2025
+  ],
+  [
+   "CP_ManySig_unified",
+   2,
+   2023
+  ],
+  [
+   "CP_ManySig_unified",
+   2,
+   2024
+  ],
+  [
+   "CP_ManySig_unified",
+   2,
+   2025
+  ],
+  [
+   "CF_ManySig_unified",
+   2,
+   2023
+  ],
+  [
+   "CF_ManySig_unified",
+   2,
+   2024
+  ],
+  [
+   "CF_ManySig_unified",
+   2,
+   2025
+  ],
+  [
+   "FAN_ManySig_official",
+   2,
+   2023
+  ],
+  [
+   "FAN_ManySig_official",
+   2,
+   2024
+  ],
+  [
+   "FAN_ManySig_official",
+   2,
+   2025
+  ],
+  [
+   "FAN_ManySig_unified",
+   2,
+   2023
+  ],
+  [
+   "FAN_ManySig_unified",
+   2,
+   2024
+  ],
+  [
+   "FAN_ManySig_unified",
+   2,
+   2025
+  ],
+  [
+   "IB-RFF_a0.04_ManySig_unified",
+   2,
+   2023
+  ],
+  [
+   "IB-RFF_a0.04_ManySig_unified",
+   2,
+   2024
+  ],
+  [
+   "IB-RFF_a0.04_ManySig_unified",
+   2,
+   2025
+  ],
+  [
+   "WaveMLP_alternate_ManySig_official",
+   2,
+   2023
+  ],
+  [
+   "WaveMLP_alternate_ManySig_official",
+   2,
+   2024
+  ],
+  [
+   "WaveMLP_alternate_ManySig_official",
+   2,
+   2025
+  ],
+  [
+   "W0_ManySig_official",
+   3,
+   2023
+  ],
+  [
+   "W0_ManySig_official",
+   3,
+   2024
+  ],
+  [
+   "W0_ManySig_official",
+   3,
+   2025
+  ],
+  [
+   "W1_ManySig_official",
+   3,
+   2023
+  ],
+  [
+   "W1_ManySig_official",
+   3,
+   2024
+  ],
+  [
+   "W1_ManySig_official",
+   3,
+   2025
+  ],
+  [
+   "W2_ManySig_official",
+   3,
+   2023
+  ],
+  [
+   "W2_ManySig_official",
+   3,
+   2024
+  ],
+  [
+   "W2_ManySig_official",
+   3,
+   2025
+  ],
+  [
+   "C0_ManySig_official",
+   3,
+   2023
+  ],
+  [
+   "C0_ManySig_official",
+   3,
+   2024
+  ],
+  [
+   "C0_ManySig_official",
+   3,
+   2025
+  ],
+  [
+   "CP_ManySig_official",
+   3,
+   2023
+  ],
+  [
+   "CP_ManySig_official",
+   3,
+   2024
+  ],
+  [
+   "CP_ManySig_official",
+   3,
+   2025
+  ],
+  [
+   "CF_ManySig_official",
+   3,
+   2023
+  ],
+  [
+   "CF_ManySig_official",
+   3,
+   2024
+  ],
+  [
+   "CF_ManySig_official",
+   3,
+   2025
+  ],
+  [
+   "FAN_ManySig_official",
+   3,
+   2023
+  ],
+  [
+   "FAN_ManySig_official",
+   3,
+   2024
+  ],
+  [
+   "FAN_ManySig_official",
+   3,
+   2025
+  ],
+  [
+   "FAN_ManySig_unified",
+   3,
+   2023
+  ],
+  [
+   "FAN_ManySig_unified",
+   3,
+   2024
+  ],
+  [
+   "FAN_ManySig_unified",
+   3,
+   2025
+  ],
+  [
+   "IB-RFF_a0.04_ManySig_official",
+   3,
+   2023
+  ],
+  [
+   "IB-RFF_a0.04_ManySig_official",
+   3,
+   2024
+  ],
+  [
+   "IB-RFF_a0.04_ManySig_official",
+   3,
+   2025
+  ],
+  [
+   "WaveMLP_alternate_ManySig_official",
+   3,
+   2023
+  ],
+  [
+   "WaveMLP_alternate_ManySig_official",
+   3,
+   2024
+  ],
+  [
+   "WaveMLP_alternate_ManySig_official",
+   3,
+   2025
+  ]
+ ]
+}

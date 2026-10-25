@@ -1,0 +1,16 @@
+/workspace/crossatten/external/IB-RFF/backbones/Adaptive_Filter_Module.py:23: UserWarning: median CUDA with indices output does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:91.)
+  median_energy = flat_energy.median(dim=1, keepdim=True)[0]
+/workspace/crossatten/external/IB-RFF/backbones/Adaptive_Filter_Module.py:75: UserWarning: median CUDA with indices output does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True, warn_only=True)'. You can file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation. (Triggered internally at ../aten/src/ATen/Context.cpp:91.)
+  median_energy = flat_energy.median(dim=1, keepdim=True)[0]
+{"run": "IB-RFF_a0.04_ManyRx_unified__f2__s2023", "epoch": 1, "source_ce": 0.21082, "train_s": 9.4}
+{"run": "IB-RFF_a0.04_ManyRx_unified__f2__s2023", "epoch": 20, "source_ce": 0.31128, "train_s": 151.6}
+{"run": "IB-RFF_a0.04_ManyRx_unified__f2__s2023", "epoch": 40, "source_ce": 0.24926, "train_s": 302.8}
+{"run": "IB-RFF_a0.04_ManyRx_unified__f2__s2023", "epoch": 60, "source_ce": 0.2428, "train_s": 446.8}
+{"run": "IB-RFF_a0.04_ManyRx_unified__f2__s2023", "epoch": 80, "source_ce": 0.23478, "train_s": 585.9}
+{"run": "IB-RFF_a0.04_ManyRx_unified__f2__s2023", "epoch": 100, "source_ce": 0.22183, "train_s": 730.0}
+{"run": "IB-RFF_a0.04_ManyRx_unified__f2__s2023", "epoch": 120, "source_ce": 0.21141, "train_s": 869.5}
+{"run": "IB-RFF_a0.04_ManyRx_unified__f2__s2023", "epoch": 140, "source_ce": 0.20269, "train_s": 1001.4}
+{"run": "IB-RFF_a0.04_ManyRx_unified__f2__s2023", "epoch": 160, "source_ce": 0.20309, "train_s": 1138.8}
+{"run": "IB-RFF_a0.04_ManyRx_unified__f2__s2023", "epoch": 180, "source_ce": 0.19566, "train_s": 1283.8}
+{"run": "IB-RFF_a0.04_ManyRx_unified__f2__s2023", "epoch": 200, "source_ce": 0.19603, "train_s": 1421.8}
+{"run_id": "IB-RFF_a0.04_ManyRx_unified__f2__s2023", "arm": "IB-RFF_a0.04_ManyRx_unified", "dataset": "ManyRx", "fold": 2, "seed": 2023, "stage": "source", "params": 151761, "best_val_epoch": 180, "stop_epoch": 200, "epochs_budget": 200, "source_val_ce": 0.19565613567829132, "source_val_acc": 0.9355996251106262, "train_seconds": 1421.8, "wall_seconds": 1425.9, "gpu_peak_mem_gb": 0.164}
