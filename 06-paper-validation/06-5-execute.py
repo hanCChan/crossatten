@@ -80,10 +80,11 @@ def commit_evidence(stage, decision):
 
 
 def wifi(workers):
-    wait_existing([HERE / "runs/jobs_source_ManyRx_base.jsonl", HERE / "runs/jobs_source_ManySig_base.jsonl"])
-    paths = {d: generate("source", d, ib=True) for d in ("ManyRx", "ManySig")}
+    def source(dataset, gpu):
+        wait_existing([HERE / f"runs/jobs_source_{dataset}_base.jsonl"])
+        launch(generate("source", dataset, ib=True), str(gpu), workers)
     with ThreadPoolExecutor(max_workers=2) as pool:
-        futures = [pool.submit(launch, paths[d], str(gpu), workers) for gpu, d in enumerate(paths)]
+        futures = [pool.submit(source, dataset, gpu) for gpu, dataset in enumerate(("ManyRx", "ManySig"))]
         for future in futures:
             future.result()
     audit_sources("source", 176)
