@@ -3,6 +3,8 @@ data/raw
 data/wisig/
 **/runs/**/model.pt
 06-paper-validation/runs/**/*.lock
+07-wifi-osu/runs/**/*.lock
+07-wifi-osu/cache/
 __pycache__/
 *.pyc
 # third-party reference repos / downloads (URLs + commit SHAs recorded in docs/LITERATURE_2025_2026.md)

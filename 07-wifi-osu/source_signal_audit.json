@@ -1,0 +1,186 @@
+[
+ {
+  "dataset": "ManyRx",
+  "fold": 0,
+  "packets": 3720,
+  "stf_lag": 20,
+  "stf_region": [
+   0,
+   160
+  ],
+  "stf_coherence_median": 0.9918515086174011,
+  "stf_coherence_p10": 0.7875626981258392,
+  "cfo_p10_hz": -27276.57578125,
+  "cfo_p90_hz": -2000.4526977539065,
+  "absolute_phase_jump_fraction": 0.18274589233841687,
+  "feature_rms": [
+   0.7082046866416931,
+   0.7059925198554993,
+   0.9980456233024597,
+   0.66265869140625,
+   0.5779687166213989
+  ],
+  "normalized_power_mean": 0.9999999923411236
+ },
+ {
+  "dataset": "ManyRx",
+  "fold": 1,
+  "packets": 3720,
+  "stf_lag": 20,
+  "stf_region": [
+   0,
+   160
+  ],
+  "stf_coherence_median": 0.9934437572956085,
+  "stf_coherence_p10": 0.8124554514884949,
+  "cfo_p10_hz": -27680.6533203125,
+  "cfo_p90_hz": -3183.7852294921877,
+  "absolute_phase_jump_fraction": 0.18453839869281044,
+  "feature_rms": [
+   0.707021951675415,
+   0.7071824073791504,
+   0.9980456233024597,
+   0.6638116836547852,
+   0.5773388147354126
+  ],
+  "normalized_power_mean": 0.9999999927416925
+ },
+ {
+  "dataset": "ManyRx",
+  "fold": 2,
+  "packets": 3736,
+  "stf_lag": 20,
+  "stf_region": [
+   0,
+   160
+  ],
+  "stf_coherence_median": 0.9916193783283234,
+  "stf_coherence_p10": 0.8045712411403656,
+  "cfo_p10_hz": -27286.3388671875,
+  "cfo_p90_hz": -2010.2643432617188,
+  "absolute_phase_jump_fraction": 0.18377530410312273,
+  "feature_rms": [
+   0.7076253294944763,
+   0.7065749168395996,
+   0.9980456233024597,
+   0.6624857783317566,
+   0.5779325366020203
+  ],
+  "normalized_power_mean": 0.9999999923420156
+ },
+ {
+  "dataset": "ManyRx",
+  "fold": 3,
+  "packets": 3776,
+  "stf_lag": 20,
+  "stf_region": [
+   0,
+   160
+  ],
+  "stf_coherence_median": 0.99209064245224,
+  "stf_coherence_p10": 0.8396689891815186,
+  "cfo_p10_hz": -27017.1689453125,
+  "cfo_p90_hz": -2336.5283203125,
+  "absolute_phase_jump_fraction": 0.1822284631445171,
+  "feature_rms": [
+   0.707899272441864,
+   0.7063007354736328,
+   0.9980456233024597,
+   0.6621398329734802,
+   0.5772358775138855
+  ],
+  "normalized_power_mean": 0.999999992012725
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 0,
+  "packets": 864,
+  "stf_lag": 20,
+  "stf_region": [
+   0,
+   160
+  ],
+  "stf_coherence_median": 0.9923601150512695,
+  "stf_coherence_p10": 0.8462547242641449,
+  "cfo_p10_hz": -25911.9359375,
+  "cfo_p90_hz": -7277.981005859375,
+  "absolute_phase_jump_fraction": 0.18554829339143064,
+  "feature_rms": [
+   0.7085145115852356,
+   0.7056823968887329,
+   0.9980449676513672,
+   0.6608186960220337,
+   0.5777518153190613
+  ],
+  "normalized_power_mean": 0.9999999913766429
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 1,
+  "packets": 864,
+  "stf_lag": 20,
+  "stf_region": [
+   0,
+   160
+  ],
+  "stf_coherence_median": 0.9931183457374573,
+  "stf_coherence_p10": 0.8446612298488617,
+  "cfo_p10_hz": -25824.4421875,
+  "cfo_p90_hz": -9339.186425781249,
+  "absolute_phase_jump_fraction": 0.18681917211328977,
+  "feature_rms": [
+   0.7086530327796936,
+   0.7055395841598511,
+   0.9980449676513672,
+   0.6622706651687622,
+   0.5770400166511536
+  ],
+  "normalized_power_mean": 0.999999992273472
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 2,
+  "packets": 864,
+  "stf_lag": 20,
+  "stf_region": [
+   0,
+   160
+  ],
+  "stf_coherence_median": 0.9921750128269196,
+  "stf_coherence_p10": 0.8685816347599029,
+  "cfo_p10_hz": -26298.9533203125,
+  "cfo_p90_hz": -7779.71201171875,
+  "absolute_phase_jump_fraction": 0.1874001452432825,
+  "feature_rms": [
+   0.7076234817504883,
+   0.7065785527229309,
+   0.9980449676513672,
+   0.66086345911026,
+   0.5776034593582153
+  ],
+  "normalized_power_mean": 0.9999999926873931
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 3,
+  "packets": 864,
+  "stf_lag": 20,
+  "stf_region": [
+   0,
+   160
+  ],
+  "stf_coherence_median": 0.9932353496551514,
+  "stf_coherence_p10": 0.862945169210434,
+  "cfo_p10_hz": -25414.161328125,
+  "cfo_p90_hz": -7817.222998046875,
+  "absolute_phase_jump_fraction": 0.18595679012345678,
+  "feature_rms": [
+   0.7073974609375,
+   0.7067998647689819,
+   0.9980449676513672,
+   0.6615773439407349,
+   0.5776994824409485
+  ],
+  "normalized_power_mean": 0.9999999919975245
+ }
+]

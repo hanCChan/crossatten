@@ -1,0 +1,134 @@
+[
+ {
+  "dataset": "ManySig",
+  "fold": 0,
+  "seed": 0,
+  "phase": "smoke",
+  "frontend": "legacy",
+  "recipe": "unified",
+  "id": "smoke_legacy"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 0,
+  "seed": 0,
+  "phase": "smoke",
+  "frontend": "time",
+  "recipe": "unified",
+  "id": "smoke_time"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 0,
+  "seed": 0,
+  "phase": "smoke",
+  "frontend": "diff",
+  "recipe": "unified",
+  "id": "smoke_diff"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 0,
+  "seed": 0,
+  "phase": "smoke",
+  "frontend": "split",
+  "recipe": "unified",
+  "id": "smoke_split"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 0,
+  "seed": 0,
+  "phase": "smoke",
+  "frontend": "stf",
+  "recipe": "unified",
+  "id": "smoke_stf"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 0,
+  "seed": 0,
+  "phase": "smoke",
+  "frontend": "filter",
+  "recipe": "unified",
+  "id": "smoke_filter"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 0,
+  "seed": 0,
+  "phase": "smoke",
+  "frontend": "frequency",
+  "recipe": "unified",
+  "id": "smoke_frequency"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 0,
+  "seed": 0,
+  "phase": "smoke",
+  "frontend": "time",
+  "recipe": "unified",
+  "id": "smoke_train_phase",
+  "augmentation": "phase"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 0,
+  "seed": 0,
+  "phase": "smoke",
+  "frontend": "time",
+  "recipe": "unified",
+  "id": "smoke_train_shift",
+  "augmentation": "shift"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 0,
+  "seed": 0,
+  "phase": "smoke",
+  "frontend": "time",
+  "recipe": "unified",
+  "id": "smoke_train_cfo",
+  "augmentation": "cfo"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 0,
+  "seed": 0,
+  "phase": "smoke",
+  "frontend": "time",
+  "recipe": "unified",
+  "id": "smoke_train_channel",
+  "augmentation": "channel"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 0,
+  "seed": 0,
+  "phase": "smoke",
+  "frontend": "time",
+  "recipe": "unified",
+  "id": "smoke_train_balanced",
+  "balanced": true
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 0,
+  "seed": 0,
+  "phase": "smoke",
+  "frontend": "time",
+  "recipe": "unified",
+  "id": "smoke_train_held_epoch",
+  "checkpoint": "held_epoch"
+ },
+ {
+  "dataset": "ManySig",
+  "fold": 0,
+  "seed": 0,
+  "phase": "smoke",
+  "frontend": "time",
+  "recipe": "official",
+  "id": "smoke_train_official"
+ }
+]
