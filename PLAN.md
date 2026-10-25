@@ -25,12 +25,20 @@
 
 | 阶段 | 内容 | 状态 |
 |---|---|---|
-| 03-chirp-structure（Shen，dev_val 筛选） | 第一轮：基线重跑、Pre-LN、depth4、残差输入通道、nofft 对照、共享符号 stem 的等参数 symstack、ifreq、分层 stem；融合和训练目标留待后续 | 8 臂 smoke 与 32 次探索已通过核验；探索冻结提交 `8d482b4`，48 次新 seed 确认运行中；第一轮结束后停止汇报 |
-| 04-sota-on-shen | FAN/IB-RFF、WaveMLP 适配到 8192 点，在 P-H5x160 上重跑；Ma 2025 按论文复现 | 文献核实中（[LITERATURE](docs/LITERATURE_2025_2026.md)） |
-| 05-wisig | IB-RFF 官方 CR/CRD 协议：先复现 FAN/IB-RFF/WaveMLP 的官方数字，再在同一管线、多 seed 下运行本方法（按 OFDM 前导码的重复结构重新定义） | ManyRx/ManySig 转换计数与发布权重通过，实测 25 MHz；重训待 03 汇报 |
+| 03-chirp-structure（Shen，dev_val 筛选） | 第一轮：基线重跑、Pre-LN、depth4、残差输入通道、nofft 对照、共享符号 stem 的等参数 symstack、ifreq、分层 stem；融合和训练目标留待后续 | 已完成 8 smoke、32 探索、48 新 seed 确认，88/88 核验通过；仅 hstem 判为 improves（97.48/96.84，142,392 参数），见 [RESULTS](03-chirp-structure/RESULTS.md) |
+| 04-sota-on-shen | FAN/IB-RFF、WaveMLP 适配到 8192 点，在 P-H5x160 上重跑；Ma 2025 按论文复现 | 文献与实施规格已保存，训练未启动（[LITERATURE](docs/LITERATURE_2025_2026.md)） |
+| 05-wisig | IB-RFF 官方 CR/CRD 协议：先复现 FAN/IB-RFF/WaveMLP 的官方数字，再在同一管线、多 seed 下运行本方法 | M2 已完成：ManyRx/ManySig 数量、转换与发布权重通过；实测 25 MHz，256 点 crop 无法验证完整 LTF；官方/公平重训未启动，见 [RESULTS](05-wisig/RESULTS.md) |
 | 06-final | 冻结方法的完整消融、多 seed、精度–计算量 Pareto；历史 14→6 协议标注为复用 | 最后 |
 
 旧的 03–06 规划（组合 / 融合 / 训练 / 确认）由上表取代。**阶段 03–05 的逐项实施规格（交给 Codex 实现）见 [docs/S03_S05_IMPLEMENTATION_SPEC.md](docs/S03_S05_IMPLEMENTATION_SPEC.md)。**
+
+### 2026-10-25 第一轮结果与发布更新
+
+- 全部结果见 [RESULTS.md](RESULTS.md)。阶段 03 的 resid / symstack 为 harms，ifreq 为 unclear；重复结构方法的成功标准尚未达到。
+- 只有 `s03_hstem` 获得下一轮结转资格。相对预登记 preln，dev_val +2.00 pp、6/6 为正；减少参数不等于减少计算，MFLOPs 从 139.2 增至 190.6。
+- Pre-LN 将 token RMS 控制到约 1，但没有消除 q/k 打分饱和，也未获得确认精度增益；不能写成已证明历史崩溃原因。
+- 第一轮停止点保持有效：不自动组合、不启动阶段 04，不启动 WiSig 重训。由于 resid/symstack 未确认有效，规格中条件式 WiFi 残差/符号堆叠实现不结转。
+- 用户最新请求“整理汇报所有结果并推送到github”授权本次 GitHub 发布，覆盖旧规格 §0.2 的禁止 push；冻结协议、历史结果、预登记与训练授权均不变。
 
 ### 阶段 03 第一轮（按实施规格执行）
 
