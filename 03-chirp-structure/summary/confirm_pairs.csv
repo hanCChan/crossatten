@@ -1,0 +1,19 @@
+q,role,b,a,desc,n_pairs,delta_mean,delta_min,delta_max,pos_pairs,rx_pos,rx_n,worst_rx_delta,verdict
+P1,dev_val,s03_preln,s03_base,Pre-LN engineering control,6,-0.36,-0.8,0.29,2,3,10,-1.67,unclear
+P1,confirm,s03_preln,s03_base,Pre-LN engineering control,6,-0.1,-1.12,0.32,4,3,8,-0.52,unclear
+P1,dev_val,s03_preln_d4,s03_preln,depth 4 after Pre-LN,6,0.1,-2.04,0.99,4,4,10,3.0,unclear
+P1,confirm,s03_preln_d4,s03_preln,depth 4 after Pre-LN,6,-0.06,-1.69,1.82,2,3,8,-0.73,unclear
+P2,dev_val,s03_resid,s03_preln,unit-RMS complex residual channels,6,-7.47,-11.1,-5.44,0,0,10,-5.63,harms
+P2,confirm,s03_resid,s03_preln,unit-RMS complex residual channels,6,-6.58,-9.89,-4.78,0,0,8,-4.05,harms
+P2,dev_val,s03_nofft,s03_preln,remove whole-packet FFT channel,6,-0.0,-0.48,0.48,3,5,10,-0.35,unclear
+P2,confirm,s03_nofft,s03_preln,remove whole-packet FFT channel,6,-0.14,-0.61,0.22,3,4,8,-0.25,unclear
+P2,dev_val,s03_symstack,s03_nofft,equal-parameter symbol-aligned tokenizer,6,-5.2,-6.12,-4.35,0,0,10,-9.28,harms
+P2,confirm,s03_symstack,s03_nofft,equal-parameter symbol-aligned tokenizer,6,-4.63,-8.12,-2.47,0,0,8,-5.82,harms
+ref_structure,dev_val,s03_symstack,s03_preln,system reference (also removes FFT),6,-5.21,-6.6,-4.11,0,0,10,-9.63,reference (no verdict)
+ref_structure,confirm,s03_symstack,s03_preln,system reference (also removes FFT),6,-4.77,-8.45,-2.25,0,0,8,-6.07,reference (no verdict)
+P3,dev_val,s03_ifreq,s03_preln,instantaneous-frequency deviation channel,6,0.02,-0.6,0.77,3,8,10,-0.03,unclear
+P3,confirm,s03_ifreq,s03_preln,instantaneous-frequency deviation channel,6,0.15,-1.59,1.81,4,5,8,-2.27,unclear
+P4,dev_val,s03_hstem,s03_preln,hierarchical tokenizer,6,2.0,1.29,2.66,6,10,10,4.58,improves
+P4,confirm,s03_hstem,s03_preln,hierarchical tokenizer,6,3.06,1.66,4.26,6,8,8,6.82,improves
+ref_determinism,dev_val,s03_base,s02_ep200,bit-deterministic baseline rerun,6,0.0,0.0,0.0,0,0,10,0.0,reference (no verdict)
+ref_determinism,confirm,s03_base,s02_ep200,bit-deterministic baseline rerun,6,0.0,0.0,0.0,0,0,8,0.0,reference (no verdict)

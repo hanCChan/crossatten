@@ -192,7 +192,12 @@ def main():
         "and incomplete LTF crop. Literature and numerical-scale diagnostics do not "
         "establish novelty or prove the cause of historical depth4 instability.\n\n",
         "Round 1 is complete. User decides whether to proceed with combinations, "
-        "stage04, and WiSig training. No GitHub push was made.\n",
+        "stage04, and WiSig training. On 2026-10-25 the user's latest request "
+        "authorized organizing and publishing existing results to GitHub, "
+        "overriding the earlier no-push instruction without authorizing more "
+        "training. See the repository-wide [RESULTS.md](../RESULTS.md). "
+        "S03 model.pt files remain local and are not included in Git or the "
+        "earlier stage00-02 checkpoint release.\n",
     ]
     (HERE / "RESULTS.md").write_text("".join(text))
     print(f"wrote {HERE / 'RESULTS.md'}", flush=True)

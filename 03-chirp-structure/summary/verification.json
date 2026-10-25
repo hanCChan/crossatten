@@ -1,0 +1,627 @@
+{
+ "protocol_sha256": "1311eb35852a63f216a3f0c8e87ca9833ece8614975f9ff79ec28079b70b9127",
+ "stages": {
+  "smoke": [
+   {
+    "run": "s03_base__f0__s0",
+    "epochs": 2,
+    "best_epoch": 2,
+    "params": 580008,
+    "passed": true
+   },
+   {
+    "run": "s03_hstem__f0__s0",
+    "epochs": 2,
+    "best_epoch": 1,
+    "params": 142392,
+    "passed": true
+   },
+   {
+    "run": "s03_ifreq__f0__s0",
+    "epochs": 2,
+    "best_epoch": 1,
+    "params": 580360,
+    "passed": true
+   },
+   {
+    "run": "s03_nofft__f0__s0",
+    "epochs": 2,
+    "best_epoch": 2,
+    "params": 579912,
+    "passed": true
+   },
+   {
+    "run": "s03_preln__f0__s0",
+    "epochs": 2,
+    "best_epoch": 2,
+    "params": 580136,
+    "passed": true
+   },
+   {
+    "run": "s03_preln_d4__f0__s0",
+    "epochs": 2,
+    "best_epoch": 2,
+    "params": 622374,
+    "passed": true
+   },
+   {
+    "run": "s03_resid__f0__s0",
+    "epochs": 2,
+    "best_epoch": 2,
+    "params": 580584,
+    "passed": true
+   },
+   {
+    "run": "s03_symstack__f0__s0",
+    "epochs": 2,
+    "best_epoch": 2,
+    "params": 579912,
+    "passed": true
+   }
+  ],
+  "explore": [
+   {
+    "run": "s03_base__f0__s101",
+    "epochs": 200,
+    "best_epoch": 162,
+    "params": 580008,
+    "passed": true
+   },
+   {
+    "run": "s03_base__f0__s102",
+    "epochs": 200,
+    "best_epoch": 184,
+    "params": 580008,
+    "passed": true
+   },
+   {
+    "run": "s03_base__f1__s101",
+    "epochs": 200,
+    "best_epoch": 179,
+    "params": 580008,
+    "passed": true
+   },
+   {
+    "run": "s03_base__f1__s102",
+    "epochs": 200,
+    "best_epoch": 185,
+    "params": 580008,
+    "passed": true
+   },
+   {
+    "run": "s03_hstem__f0__s101",
+    "epochs": 200,
+    "best_epoch": 193,
+    "params": 142392,
+    "passed": true
+   },
+   {
+    "run": "s03_hstem__f0__s102",
+    "epochs": 200,
+    "best_epoch": 191,
+    "params": 142392,
+    "passed": true
+   },
+   {
+    "run": "s03_hstem__f1__s101",
+    "epochs": 200,
+    "best_epoch": 135,
+    "params": 142392,
+    "passed": true
+   },
+   {
+    "run": "s03_hstem__f1__s102",
+    "epochs": 200,
+    "best_epoch": 173,
+    "params": 142392,
+    "passed": true
+   },
+   {
+    "run": "s03_ifreq__f0__s101",
+    "epochs": 200,
+    "best_epoch": 168,
+    "params": 580360,
+    "passed": true
+   },
+   {
+    "run": "s03_ifreq__f0__s102",
+    "epochs": 200,
+    "best_epoch": 191,
+    "params": 580360,
+    "passed": true
+   },
+   {
+    "run": "s03_ifreq__f1__s101",
+    "epochs": 200,
+    "best_epoch": 164,
+    "params": 580360,
+    "passed": true
+   },
+   {
+    "run": "s03_ifreq__f1__s102",
+    "epochs": 200,
+    "best_epoch": 183,
+    "params": 580360,
+    "passed": true
+   },
+   {
+    "run": "s03_nofft__f0__s101",
+    "epochs": 200,
+    "best_epoch": 170,
+    "params": 579912,
+    "passed": true
+   },
+   {
+    "run": "s03_nofft__f0__s102",
+    "epochs": 200,
+    "best_epoch": 147,
+    "params": 579912,
+    "passed": true
+   },
+   {
+    "run": "s03_nofft__f1__s101",
+    "epochs": 200,
+    "best_epoch": 182,
+    "params": 579912,
+    "passed": true
+   },
+   {
+    "run": "s03_nofft__f1__s102",
+    "epochs": 200,
+    "best_epoch": 137,
+    "params": 579912,
+    "passed": true
+   },
+   {
+    "run": "s03_preln__f0__s101",
+    "epochs": 200,
+    "best_epoch": 135,
+    "params": 580136,
+    "passed": true
+   },
+   {
+    "run": "s03_preln__f0__s102",
+    "epochs": 200,
+    "best_epoch": 187,
+    "params": 580136,
+    "passed": true
+   },
+   {
+    "run": "s03_preln__f1__s101",
+    "epochs": 200,
+    "best_epoch": 148,
+    "params": 580136,
+    "passed": true
+   },
+   {
+    "run": "s03_preln__f1__s102",
+    "epochs": 200,
+    "best_epoch": 173,
+    "params": 580136,
+    "passed": true
+   },
+   {
+    "run": "s03_preln_d4__f0__s101",
+    "epochs": 200,
+    "best_epoch": 175,
+    "params": 622374,
+    "passed": true
+   },
+   {
+    "run": "s03_preln_d4__f0__s102",
+    "epochs": 200,
+    "best_epoch": 157,
+    "params": 622374,
+    "passed": true
+   },
+   {
+    "run": "s03_preln_d4__f1__s101",
+    "epochs": 200,
+    "best_epoch": 179,
+    "params": 622374,
+    "passed": true
+   },
+   {
+    "run": "s03_preln_d4__f1__s102",
+    "epochs": 200,
+    "best_epoch": 184,
+    "params": 622374,
+    "passed": true
+   },
+   {
+    "run": "s03_resid__f0__s101",
+    "epochs": 200,
+    "best_epoch": 94,
+    "params": 580584,
+    "passed": true
+   },
+   {
+    "run": "s03_resid__f0__s102",
+    "epochs": 200,
+    "best_epoch": 90,
+    "params": 580584,
+    "passed": true
+   },
+   {
+    "run": "s03_resid__f1__s101",
+    "epochs": 200,
+    "best_epoch": 56,
+    "params": 580584,
+    "passed": true
+   },
+   {
+    "run": "s03_resid__f1__s102",
+    "epochs": 200,
+    "best_epoch": 73,
+    "params": 580584,
+    "passed": true
+   },
+   {
+    "run": "s03_symstack__f0__s101",
+    "epochs": 200,
+    "best_epoch": 170,
+    "params": 579912,
+    "passed": true
+   },
+   {
+    "run": "s03_symstack__f0__s102",
+    "epochs": 200,
+    "best_epoch": 189,
+    "params": 579912,
+    "passed": true
+   },
+   {
+    "run": "s03_symstack__f1__s101",
+    "epochs": 200,
+    "best_epoch": 152,
+    "params": 579912,
+    "passed": true
+   },
+   {
+    "run": "s03_symstack__f1__s102",
+    "epochs": 200,
+    "best_epoch": 187,
+    "params": 579912,
+    "passed": true
+   }
+  ],
+  "confirm": [
+   {
+    "run": "s03_base__f0__s201",
+    "epochs": 200,
+    "best_epoch": 174,
+    "params": 580008,
+    "passed": true
+   },
+   {
+    "run": "s03_base__f0__s202",
+    "epochs": 200,
+    "best_epoch": 180,
+    "params": 580008,
+    "passed": true
+   },
+   {
+    "run": "s03_base__f0__s203",
+    "epochs": 200,
+    "best_epoch": 192,
+    "params": 580008,
+    "passed": true
+   },
+   {
+    "run": "s03_base__f1__s201",
+    "epochs": 200,
+    "best_epoch": 174,
+    "params": 580008,
+    "passed": true
+   },
+   {
+    "run": "s03_base__f1__s202",
+    "epochs": 200,
+    "best_epoch": 181,
+    "params": 580008,
+    "passed": true
+   },
+   {
+    "run": "s03_base__f1__s203",
+    "epochs": 200,
+    "best_epoch": 180,
+    "params": 580008,
+    "passed": true
+   },
+   {
+    "run": "s03_hstem__f0__s201",
+    "epochs": 200,
+    "best_epoch": 188,
+    "params": 142392,
+    "passed": true
+   },
+   {
+    "run": "s03_hstem__f0__s202",
+    "epochs": 200,
+    "best_epoch": 162,
+    "params": 142392,
+    "passed": true
+   },
+   {
+    "run": "s03_hstem__f0__s203",
+    "epochs": 200,
+    "best_epoch": 168,
+    "params": 142392,
+    "passed": true
+   },
+   {
+    "run": "s03_hstem__f1__s201",
+    "epochs": 200,
+    "best_epoch": 181,
+    "params": 142392,
+    "passed": true
+   },
+   {
+    "run": "s03_hstem__f1__s202",
+    "epochs": 200,
+    "best_epoch": 142,
+    "params": 142392,
+    "passed": true
+   },
+   {
+    "run": "s03_hstem__f1__s203",
+    "epochs": 200,
+    "best_epoch": 156,
+    "params": 142392,
+    "passed": true
+   },
+   {
+    "run": "s03_ifreq__f0__s201",
+    "epochs": 200,
+    "best_epoch": 178,
+    "params": 580360,
+    "passed": true
+   },
+   {
+    "run": "s03_ifreq__f0__s202",
+    "epochs": 200,
+    "best_epoch": 157,
+    "params": 580360,
+    "passed": true
+   },
+   {
+    "run": "s03_ifreq__f0__s203",
+    "epochs": 200,
+    "best_epoch": 192,
+    "params": 580360,
+    "passed": true
+   },
+   {
+    "run": "s03_ifreq__f1__s201",
+    "epochs": 200,
+    "best_epoch": 148,
+    "params": 580360,
+    "passed": true
+   },
+   {
+    "run": "s03_ifreq__f1__s202",
+    "epochs": 200,
+    "best_epoch": 172,
+    "params": 580360,
+    "passed": true
+   },
+   {
+    "run": "s03_ifreq__f1__s203",
+    "epochs": 200,
+    "best_epoch": 147,
+    "params": 580360,
+    "passed": true
+   },
+   {
+    "run": "s03_nofft__f0__s201",
+    "epochs": 200,
+    "best_epoch": 144,
+    "params": 579912,
+    "passed": true
+   },
+   {
+    "run": "s03_nofft__f0__s202",
+    "epochs": 200,
+    "best_epoch": 180,
+    "params": 579912,
+    "passed": true
+   },
+   {
+    "run": "s03_nofft__f0__s203",
+    "epochs": 200,
+    "best_epoch": 160,
+    "params": 579912,
+    "passed": true
+   },
+   {
+    "run": "s03_nofft__f1__s201",
+    "epochs": 200,
+    "best_epoch": 140,
+    "params": 579912,
+    "passed": true
+   },
+   {
+    "run": "s03_nofft__f1__s202",
+    "epochs": 200,
+    "best_epoch": 150,
+    "params": 579912,
+    "passed": true
+   },
+   {
+    "run": "s03_nofft__f1__s203",
+    "epochs": 200,
+    "best_epoch": 124,
+    "params": 579912,
+    "passed": true
+   },
+   {
+    "run": "s03_preln__f0__s201",
+    "epochs": 200,
+    "best_epoch": 136,
+    "params": 580136,
+    "passed": true
+   },
+   {
+    "run": "s03_preln__f0__s202",
+    "epochs": 200,
+    "best_epoch": 163,
+    "params": 580136,
+    "passed": true
+   },
+   {
+    "run": "s03_preln__f0__s203",
+    "epochs": 200,
+    "best_epoch": 182,
+    "params": 580136,
+    "passed": true
+   },
+   {
+    "run": "s03_preln__f1__s201",
+    "epochs": 200,
+    "best_epoch": 150,
+    "params": 580136,
+    "passed": true
+   },
+   {
+    "run": "s03_preln__f1__s202",
+    "epochs": 200,
+    "best_epoch": 166,
+    "params": 580136,
+    "passed": true
+   },
+   {
+    "run": "s03_preln__f1__s203",
+    "epochs": 200,
+    "best_epoch": 140,
+    "params": 580136,
+    "passed": true
+   },
+   {
+    "run": "s03_preln_d4__f0__s201",
+    "epochs": 200,
+    "best_epoch": 178,
+    "params": 622374,
+    "passed": true
+   },
+   {
+    "run": "s03_preln_d4__f0__s202",
+    "epochs": 200,
+    "best_epoch": 180,
+    "params": 622374,
+    "passed": true
+   },
+   {
+    "run": "s03_preln_d4__f0__s203",
+    "epochs": 200,
+    "best_epoch": 165,
+    "params": 622374,
+    "passed": true
+   },
+   {
+    "run": "s03_preln_d4__f1__s201",
+    "epochs": 200,
+    "best_epoch": 108,
+    "params": 622374,
+    "passed": true
+   },
+   {
+    "run": "s03_preln_d4__f1__s202",
+    "epochs": 200,
+    "best_epoch": 167,
+    "params": 622374,
+    "passed": true
+   },
+   {
+    "run": "s03_preln_d4__f1__s203",
+    "epochs": 200,
+    "best_epoch": 151,
+    "params": 622374,
+    "passed": true
+   },
+   {
+    "run": "s03_resid__f0__s201",
+    "epochs": 200,
+    "best_epoch": 81,
+    "params": 580584,
+    "passed": true
+   },
+   {
+    "run": "s03_resid__f0__s202",
+    "epochs": 200,
+    "best_epoch": 94,
+    "params": 580584,
+    "passed": true
+   },
+   {
+    "run": "s03_resid__f0__s203",
+    "epochs": 200,
+    "best_epoch": 76,
+    "params": 580584,
+    "passed": true
+   },
+   {
+    "run": "s03_resid__f1__s201",
+    "epochs": 200,
+    "best_epoch": 85,
+    "params": 580584,
+    "passed": true
+   },
+   {
+    "run": "s03_resid__f1__s202",
+    "epochs": 200,
+    "best_epoch": 97,
+    "params": 580584,
+    "passed": true
+   },
+   {
+    "run": "s03_resid__f1__s203",
+    "epochs": 200,
+    "best_epoch": 113,
+    "params": 580584,
+    "passed": true
+   },
+   {
+    "run": "s03_symstack__f0__s201",
+    "epochs": 200,
+    "best_epoch": 178,
+    "params": 579912,
+    "passed": true
+   },
+   {
+    "run": "s03_symstack__f0__s202",
+    "epochs": 200,
+    "best_epoch": 165,
+    "params": 579912,
+    "passed": true
+   },
+   {
+    "run": "s03_symstack__f0__s203",
+    "epochs": 200,
+    "best_epoch": 168,
+    "params": 579912,
+    "passed": true
+   },
+   {
+    "run": "s03_symstack__f1__s201",
+    "epochs": 200,
+    "best_epoch": 145,
+    "params": 579912,
+    "passed": true
+   },
+   {
+    "run": "s03_symstack__f1__s202",
+    "epochs": 200,
+    "best_epoch": 184,
+    "params": 579912,
+    "passed": true
+   },
+   {
+    "run": "s03_symstack__f1__s203",
+    "epochs": 200,
+    "best_epoch": 141,
+    "params": 579912,
+    "passed": true
+   }
+  ]
+ }
+}

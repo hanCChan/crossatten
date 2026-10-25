@@ -1,0 +1,19 @@
+{
+ "stage": "confirm",
+ "rules": "README.md",
+ "run_table_sha256": "50c91aee6160814ba3d979e7269c6a200f5dc729246d680bbaee52d2f6ad4470",
+ "verdicts_dev_val": {
+  "s03_preln": "unclear",
+  "s03_preln_d4": "unclear",
+  "s03_resid": "harms",
+  "s03_nofft": "unclear",
+  "s03_symstack": "harms",
+  "s03_ifreq": "unclear",
+  "s03_hstem": "improves"
+ },
+ "confirm_role": "report only; repeatedly inspected; never used for decisions",
+ "eligible_factors": [
+  "s03_hstem"
+ ],
+ "next_round": "STOP; user decides combinations and stage 04"
+}
