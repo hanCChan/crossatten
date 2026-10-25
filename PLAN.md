@@ -25,7 +25,7 @@
 
 | 阶段 | 内容 | 状态 |
 |---|---|---|
-| 03-chirp-structure（Shen，dev_val 筛选） | 第一轮：基线重跑、Pre-LN、depth4、残差输入通道、nofft 对照、共享符号 stem 的等参数 symstack、ifreq、分层 stem；融合和训练目标留待后续 | 已预登记提交，单测与 8 臂 smoke 通过，32 次探索运行中 |
+| 03-chirp-structure（Shen，dev_val 筛选） | 第一轮：基线重跑、Pre-LN、depth4、残差输入通道、nofft 对照、共享符号 stem 的等参数 symstack、ifreq、分层 stem；融合和训练目标留待后续 | 8 臂 smoke 与 32 次探索已通过核验；探索冻结提交 `8d482b4`，48 次新 seed 确认运行中；第一轮结束后停止汇报 |
 | 04-sota-on-shen | FAN/IB-RFF、WaveMLP 适配到 8192 点，在 P-H5x160 上重跑；Ma 2025 按论文复现 | 文献核实中（[LITERATURE](docs/LITERATURE_2025_2026.md)） |
 | 05-wisig | IB-RFF 官方 CR/CRD 协议：先复现 FAN/IB-RFF/WaveMLP 的官方数字，再在同一管线、多 seed 下运行本方法（按 OFDM 前导码的重复结构重新定义） | ManyRx/ManySig 转换计数与发布权重通过，实测 25 MHz；重训待 03 汇报 |
 | 06-final | 冻结方法的完整消融、多 seed、精度–计算量 Pareto；历史 14→6 协议标注为复用 | 最后 |

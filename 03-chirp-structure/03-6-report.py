@@ -82,8 +82,11 @@ def main():
     decision = json.loads((HERE / "decision_confirm.json").read_text())
     bench = json.loads((summary / "bench.json").read_text())
     mechanisms = json.loads((summary / "mechanisms.json").read_text())
-    if not mechanisms["rows"]:
-        raise SystemExit("mechanism evaluation is empty")
+    if len(mechanisms["rows"]) != 432:
+        raise SystemExit("need all 432 registered per-checkpoint/RX/intervention results")
+    confirmed_runs = [json.loads(path.read_text())
+                      for path in (HERE / "runs/confirm").glob("*/metrics.json")]
+    peak_memory = max(run["gpu_peak_mem_gb"] for run in confirmed_runs)
     status = {stage: json.loads((HERE / "runs" / f"jobs_{stage}.jsonl.status.json").read_text())
               for stage in ("smoke", "explore", "confirm")}
     if any(v["failed"] or v["done"] + v["skipped"] != v["total"] for v in status.values()):
@@ -131,6 +134,10 @@ def main():
         table(bench["arms"], ["arm", "params", "mflops_per_packet", "gpu_b1_ms_p50",
                              "gpu_b1_ms_p95", "gpu_b512_pkts_per_s", "cpu4t_b1_ms_p50",
                              "cpu4t_b1_ms_p95"]),
+        f"\nObserved maximum allocated GPU memory in confirmation training/evaluation: "
+        f"{peak_memory:.2f} GB per fit (includes saved-checkpoint batch500 evaluation). "
+        "This exceeds the specification's 3.1-GB estimate; no tasks were omitted "
+        "because of it. Training itself remains batch64.\n\n",
         "\nFewer parameters do not necessarily mean less compute: hstem removes "
         "most tokenizer weights but executes extra convolutions at higher resolution. "
         "Single-packet GPU times include host dispatch variability; use distributions, "
