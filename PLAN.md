@@ -40,6 +40,14 @@
 - 第一轮停止点保持有效：不自动组合、不启动阶段 04，不启动 WiSig 重训。由于 resid/symstack 未确认有效，规格中条件式 WiFi 残差/符号堆叠实现不结转。
 - 用户最新请求“整理汇报所有结果并推送到github”授权本次 GitHub 发布，覆盖旧规格 §0.2 的禁止 push；冻结协议、历史结果、预登记与训练授权均不变。
 
+### 2026-10-25 论文验证授权
+
+用户已明确授权进入论文验证：WiSig W0/W1/W2、FAN/IB-RFF/WaveMLP公平多seed、Shen两个近期方法系列的同协议比较，以及CNN-only/同参数/同FLOPs结构消融。
+新增阶段见 [06-paper-validation/README.md](06-paper-validation/README.md)，统一预登记见 [arms.json](06-paper-validation/arms.json)。
+该授权解除“第一轮之后不启动后续训练”的停止点，但只针对本轮有界实验，不授权新Loss/复杂Chirp分支搜索。
+WiSig先源RX内部选模再冻结重训；Shen各方法/配方按源验证CE选配置，confirm仍仅报告。00–03历史结果不改。
+本轮完成后重新停止汇报，不能根据WiSig测试结果追加结构或更换频带。
+
 ### 阶段 03 第一轮（按实施规格执行）
 
 基线 `s03_base` 就是 s02_ep200（TrueIB + AWGN U[0,50) + cos 200 epoch）。按详细规格重跑，用同 fold/seed 的 s02 结果核对确定性。下面的旧草案由 `03-chirp-structure/README.md` 和 `arms.json` 的预登记取代：残差采用输入通道拼接，symstack 采用共享 k7/k5 stem，并以 nofft 为等参数对照。

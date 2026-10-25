@@ -188,6 +188,9 @@ class ShenCISPipeline(nn.Module):
 
 def build_pipeline(arm: dict) -> nn.Module:
     fam = arm["family"]
+    if fam in ("paper_rf", "paper_upstream"):
+        from .paper_models import build_paper_model
+        return build_paper_model(arm)
     if fam == "crossattn":
         return CrossAttnPipeline(fusion=arm.get("fusion", "cross_attn_oob"), input_fmax=arm.get("input_fmax"),
                                  oob_keep=arm.get("oob_keep"))

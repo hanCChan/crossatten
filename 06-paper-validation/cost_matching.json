@@ -1,0 +1,42 @@
+{
+ "256": {
+  "length": 256,
+  "reference_params": 91128,
+  "reference_flops": 10798336,
+  "selected": {
+   "params": {
+    "width": 86,
+    "params": 91716,
+    "flops": 23556352,
+    "relative_error": 0.006452462470371346
+   },
+   "flops": {
+    "width": 55,
+    "params": 52718,
+    "flops": 10795264,
+    "relative_error": 0.00028448827671226384
+   }
+  },
+  "search": "widths 1..128; data-free nearest cost only"
+ },
+ "8192": {
+  "length": 8192,
+  "reference_params": 142392,
+  "reference_flops": 190579968,
+  "selected": {
+   "params": {
+    "width": 8,
+    "params": 138898,
+    "flops": 18482432,
+    "relative_error": 0.024537895387381315
+   },
+   "flops": {
+    "width": 39,
+    "params": 655358,
+    "flops": 188122368,
+    "relative_error": 0.01289537418749068
+   }
+  },
+  "search": "widths 1..128; data-free nearest cost only"
+ }
+}

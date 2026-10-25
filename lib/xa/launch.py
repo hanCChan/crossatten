@@ -40,7 +40,7 @@ def main():
                 j = todo.pop(0)
             out = Path(j["out"])
             out.mkdir(parents=True, exist_ok=True)
-            cmd = [sys.executable, "-m", "xa.run_job", "--arms", j["arms"], "--arm", j["arm"], "--fold", str(j["fold"]),
+            cmd = [sys.executable, "-m", j.get("runner", "xa.run_job"), "--arms", j["arms"], "--arm", j["arm"], "--fold", str(j["fold"]),
                    "--seed", str(j["seed"]), "--stage", j["stage"], "--out", str(out)]
             if j.get("decision_file"):
                 cmd += ["--decision-file", j["decision_file"]]
