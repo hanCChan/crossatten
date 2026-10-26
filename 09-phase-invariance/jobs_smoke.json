@@ -1,0 +1,57 @@
+[
+ {
+  "phase": "smoke",
+  "dataset": "ManySig",
+  "fold": 0,
+  "seed": 0,
+  "feature": "frequency",
+  "policy": "source",
+  "group": "first",
+  "epochs": 2,
+  "id": "ManySig__f0__first__s0__frequency__source"
+ },
+ {
+  "phase": "smoke",
+  "dataset": "ManySig",
+  "fold": 0,
+  "seed": 0,
+  "feature": "null",
+  "policy": "source",
+  "group": "first",
+  "epochs": 2,
+  "id": "ManySig__f0__first__s0__null__source"
+ },
+ {
+  "phase": "smoke",
+  "dataset": "ManySig",
+  "fold": 0,
+  "seed": 0,
+  "feature": "first",
+  "policy": "source",
+  "group": "first",
+  "epochs": 2,
+  "id": "ManySig__f0__first__s0__first__source"
+ },
+ {
+  "phase": "smoke",
+  "dataset": "ManySig",
+  "fold": 0,
+  "seed": 0,
+  "feature": "centered",
+  "policy": "source",
+  "group": "first",
+  "epochs": 2,
+  "id": "ManySig__f0__first__s0__centered__source"
+ },
+ {
+  "phase": "smoke",
+  "dataset": "ManySig",
+  "fold": 0,
+  "seed": 0,
+  "feature": "curvature",
+  "policy": "source",
+  "group": "first",
+  "epochs": 2,
+  "id": "ManySig__f0__first__s0__curvature__source"
+ }
+]

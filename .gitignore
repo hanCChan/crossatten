@@ -7,6 +7,8 @@ data/wisig/
 07-wifi-osu/cache/
 08-wisig-training/runs/**/*.lock
 08-wisig-training/runs/**/*.pt
+09-phase-invariance/runs/**/*.lock
+09-phase-invariance/runs/**/*.pt
 __pycache__/
 *.pyc
 # third-party reference repos / downloads (URLs + commit SHAs recorded in docs/LITERATURE_2025_2026.md)

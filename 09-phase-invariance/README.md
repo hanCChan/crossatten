@@ -50,3 +50,15 @@ views = phase_features_from_base(base, kind=job["feature"])
 ```
 
 Reuse the existing S08 source/target role guard, manifests, exact packet partitions, official optimizer, batch size, BN recalibration and deterministic run IDs. First verify exact numeric parity between S09 `first` and S08 phase features using a fixed real source IQ minibatch and matching model weights. Implement registered paired controls before new training. Never overwrite historical outputs.
+
+## Local execution registration (2026-10-26)
+
+- A: 36 fixed-policy fits plus 24 first/null official raw-packet early-stop fits, enabling a matched 2x2 feature/policy comparison.
+- B: 96 source-only fits, both datasets, four folds, first/last held-source groups, two fresh seeds, first/centered/curvature. All train exactly 40 epochs without early stopping; raw/EMA held-CE checkpoints are retained.
+- Final: at most 48 fresh fits, one admitted mechanism per dataset and its first-order control, using identical source-frozen epochs and raw/EMA rule. The same feature/rule requires at least 3/4 supported source folds in each dataset to claim universal support. Otherwise any admitted confirmation is explicitly dataset-limited.
+- Source gate: mean paired gain at least 0.5pp, both seeds positive, both group means nonnegative, no held RX seed-mean loss worse than 3pp. Rank accepted configurations only on source gains, worst-RX difference and lexical tie-break.
+- Fresh source seeds 8101/8102; final and attribution seeds 9101/9102/9103.
+- Shared initial parameters are copied from one canonical five-channel model. The three-channel model uses the identical first three convolution slices and all other identical parameters. Null and true phase have exactly identical complete initialization.
+- No target read until B finishes and its decision is committed. A is attribution, not candidate selection; its target scores cannot change B, the final recipe or the number of trials.
+- Centering weak-resultant fallback is retained exactly as in the CPU probe and reported explicitly. Only extra channels have the ideal invariance; the retained Re/Im channels and full classifier do not.
+- All weights stay local and ignored. No automatic merge or push.

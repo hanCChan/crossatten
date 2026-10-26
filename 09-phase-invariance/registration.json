@@ -1,0 +1,119 @@
+{
+ "baseline": "c0aceeb703de6d1a08b1b5b0fc14b1200062f0a8",
+ "cpu_probe": "ab9dd1e4a6fad01331105638169bf2f39ab6c85b",
+ "source_seeds": [
+  8101,
+  8102
+ ],
+ "final_seeds": [
+  9101,
+  9102,
+  9103
+ ],
+ "source_epochs": 40,
+ "source_groups": [
+  "first",
+  "last"
+ ],
+ "features": [
+  "frequency",
+  "null",
+  "first",
+  "centered",
+  "curvature"
+ ],
+ "threshold": 0.05,
+ "min_resultant": 0.1,
+ "attribution": {
+  "dataset": "ManySig",
+  "epochs": [
+   10,
+   6,
+   4,
+   13
+  ],
+  "rules": [
+   "ema",
+   "raw",
+   "ema",
+   "raw"
+  ],
+  "features": [
+   "first",
+   "null",
+   "frequency"
+  ],
+  "factorial_features": [
+   "first",
+   "null"
+  ]
+ },
+ "gate": {
+  "mean_delta_pp": 0.5,
+  "both_seeds_positive": true,
+  "both_groups_nonnegative": true,
+  "worst_rx_delta_pp": -3,
+  "required_folds": 3
+ },
+ "selection": "same feature/rule dataset-wide; source only; require 3/4 folds per dataset; universal requires both datasets. Rank admitted choices by mean source gain, worst RX delta, lexical name; no target retries.",
+ "source_rules": [
+  "raw_held",
+  "ema_held"
+ ],
+ "caps": {
+  "smoke": 5,
+  "attribution": 60,
+  "source": 96,
+  "final": 48
+ },
+ "max_formal_fits": 204,
+ "target_reads": "only after source decision is committed",
+ "expected_params": {
+  "ManyRx:frequency": 90680,
+  "ManyRx:null": 91128,
+  "ManyRx:first": 91128,
+  "ManyRx:centered": 91128,
+  "ManyRx:curvature": 91128,
+  "ManySig:frequency": 90420,
+  "ManySig:null": 90868,
+  "ManySig:first": 90868,
+  "ManySig:centered": 90868,
+  "ManySig:curvature": 90868
+ },
+ "code_manifest": {
+  "08-wisig-training/training.py": "b8766421d8aa9637e0952319835dca552804c40e4f94c23091bd0ab7afd57d48",
+  "09-phase-invariance/09-1-register.py": "89a68d62bb2afedef40cc55ecf15fa33b2a50e4af76461f79f94ff84dd750ca5",
+  "09-phase-invariance/09-2-launch.py": "94bd9426f10e1641a37cb4308c0d4911b31335d07b418bd7bc2f2c1d3b523ef9",
+  "09-phase-invariance/09-3-select.py": "71e54bdf5c3febbe6636cb5c9b30cc5fc9517b89a2b8361c9136b54c2a2d0892",
+  "09-phase-invariance/phase_features.py": "c0abc79224187180b0eea69266d0a38c37d02867761825fc329407db269b9015",
+  "09-phase-invariance/training.py": "aa5ba52e6d8afe9f580522b8b93ccb656fd809f1c5693161e638d2a1f8a4f6c2",
+  "lib/legacy_rfhstu/__init__.py": "007a27587dfbbeb92022331e553a0569802f56a6b1201b49e37a3892dc67544b",
+  "lib/legacy_rfhstu/cnn_stem.py": "137f5ad37f90599f6378d8614fab9911dad07d9def0cbda3071446f7828f24bb",
+  "lib/legacy_rfhstu/features.py": "c994e56497bebf015a98b469469ecb8838bbae6e9be26aa43ba95f0ba19a933d",
+  "lib/legacy_rfhstu/losses.py": "d77eeedd3c74d1e387ef2ecf0efebc1f567105b238fe9fc4158a22e6d0cef186",
+  "lib/legacy_rfhstu/mixstyle.py": "c23de1df2ff3b0cfad250323781f7d97fe04781e0f00c0ed9bb0772f9bf66bf7",
+  "lib/legacy_rfhstu/models.py": "28d865b46f8072d43778f440e51641b7b9b39c17d44820e418ab3d5f7fee3b0b",
+  "lib/legacy_rfhstu/multiscale.py": "e0888303717d611dbd9d84c272cfaa739d1e5765f9014640bc95a0464d2904ca",
+  "lib/legacy_rfhstu/oob_fusion.py": "06a2da3d660cc31dabc67305552cc5cad24a63231ca8a84ac7de1d26d351b1ab",
+  "lib/xa/__init__.py": "38609a82bc2617862765da5475286bdeba3995008db66ac8b1815b6a00b61d4f",
+  "lib/xa/aggregate.py": "02f436998f3e65b44d6cb1bfd1d34f2dea0f83e2a11c0f8cf20174c47415dd9c",
+  "lib/xa/bench.py": "a35198b9683102022bc56f5d2292d7a26036ffff81d3b39842cdc2b47497c8ee",
+  "lib/xa/data.py": "b5a2ea4351bf7a87556d72a87b47d8260a2e70c5c02dcb7b16a55848be9bcf51",
+  "lib/xa/evaluate.py": "b8bd6fa8364bf59e93748c2360989d901a3b755f1f5189ca951049012afc598c",
+  "lib/xa/explore_models.py": "927cc04a4ea4287eba8428f9ec27bad0033c1c121166dab7a81e7c1d305c4262",
+  "lib/xa/explore_train.py": "8d82a20be7fb40861fe01d7ef25da8bc0dda037254bbf17e3a0dcddd0eb1f9bf",
+  "lib/xa/frontends.py": "b5ce9c5a702234bbf06156b8ae1cc3fec69f7fbfee197c4eab46e2d2b2f146d0",
+  "lib/xa/guard.py": "66b2d17e49e4bbc17be7ead701e863670ac4fcf8686682ec2edc62a58c44bfbb",
+  "lib/xa/jobs.py": "de4c04de9a73b1c919e5dce80068a2e363f8ed1a8b4fb17c0091af1795266dda",
+  "lib/xa/launch.py": "3ba6497d75ac3e14076792a3f5305083808e3271d5e3a5bbf4031b6a72ecb963",
+  "lib/xa/models.py": "37062521feb82acdfe5a20064fb3002b502b6251ef62220576ac1519eef80ac3",
+  "lib/xa/models2.py": "a4aa30902790d445b99656d5a64a8d7b863e6d81f86f1665edb8dc222a00855c",
+  "lib/xa/models3.py": "5d0d11cd540c724571db8c25984c988e817b55013328a11399731dc9b33285a3",
+  "lib/xa/paper_models.py": "eff9c4f8f3e74b9fbc28eaf1dc3e6b32c625925e1dfb0fe722fc815d82ab9145",
+  "lib/xa/paper_run.py": "34ea459b36dcd2d574c604eee833c320c5eeb599123c5d125c3f5a47a9bcda26",
+  "lib/xa/paper_train.py": "4b740d709901c8dca9b3ba9774c9209701068d4babbe0284d6c56be55eb11e9e",
+  "lib/xa/run_job.py": "4d9d48c945a2493d4f67ce41566e70e4571fa682396ae4a9a3dadcf1c99cb07f",
+  "lib/xa/train.py": "f62bded00879a18c06da99aa44f27c27a35cf7efb1c503f7f1f98c534d57457e",
+  "lib/xa/wisig.py": "58d816ce8c6d7424cc073f95e5d272b6826ef4e018a58e26ea626191a80497f8"
+ }
+}
