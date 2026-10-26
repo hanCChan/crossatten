@@ -1,0 +1,109 @@
+{
+ "job": {
+  "phase": "smoke",
+  "dataset": "ManySig",
+  "fold": 0,
+  "feature": "F2",
+  "seed": 8101,
+  "group": "first",
+  "epochs": 2,
+  "policy": "source",
+  "id": "ManySig__f0__first__s8101__F2__smoke"
+ },
+ "params": 90868,
+ "recipe": {
+  "opt": "adam",
+  "lr": 0.001,
+  "wd": 0.0,
+  "batch": 128,
+  "epochs": 200,
+  "sched": "plateau",
+  "patience": 5,
+  "early_stop": 10,
+  "min_lr": 1e-06
+ },
+ "data_seed": 2073944941,
+ "roles": {
+  "source": [
+   "2-19",
+   "3-19",
+   "7-7",
+   "7-14",
+   "8-8",
+   "14-7",
+   "18-2",
+   "19-2",
+   "20-1"
+  ],
+  "target": [
+   "1-1",
+   "1-19",
+   "2-1"
+  ],
+  "fit_rx": [
+   "7-7",
+   "7-14",
+   "8-8",
+   "14-7",
+   "18-2",
+   "19-2",
+   "20-1"
+  ],
+  "held_rx": [
+   "2-19",
+   "3-19"
+  ],
+  "days": [
+   1,
+   2
+  ]
+ },
+ "split_sha256": {
+  "full_fit": {
+   "train": "51c85c6e010b0922a158e28481b7c15df36d045618138e41ce9c9156ab275587",
+   "val": "e0845156ed4b893aeb5ccf6e0c2d56a0ae6fb47230e2a309b4fcc7c38bf1682e",
+   "pool_y": "c04ade5e492b7adc0bb24d74c91ba359c578d7f9d35be6e712d42ce22502e55a"
+  },
+  "smoke_arrays": {
+   "train": {
+    "x": "c8a7914cb96814f10341d3d7c59475b8153e63b496018fc77552be9f0d95ca72",
+    "y": "53b170d69e2762c69c13721abaa53bf41d1e865e8e30543528abcd0f7ee80c7a",
+    "day": "53182cb1989f4ba150d96be56b0a3fd796d79d59d96aaa34925e24af69eaefc0",
+    "rx": "49e25e3cfff8b4a0dacefab9d693190f52360f3df20bda2bd8f8a64ea9d4fa68"
+   },
+   "val": {
+    "x": "2f25da8ab04befb0c8efebbae0a9eb268eede4669a3e3f27fa559c2991f69ce7",
+    "y": "6f9fb3c7098d809a5b1de32041bd325c0dda77f392dd39b06136bd57cad9818c",
+    "day": "5c289bf611930092f66f7e02e0cd1d69cdae087f2fe17390adab5486171ddaf3",
+    "rx": "c2a6a281d62023a3057ad0345284e99135a5ce47d01c31dd9986a7174b6654b7"
+   }
+  },
+  "smoke_held_arrays": {
+   "2-19": {
+    "x": "0d88423160425e8348cb467af932baaaa2391fe9c5791460b5ef9926eca16c92",
+    "y": "13f62d61b3ca94aebd5a4bcd0ed8bc20898d470d92e49030241c9053410cdef5",
+    "day": "eba1e1b0b8beedf9e35c47d485716fdd9228850dace55055d39567d927cd2b10"
+   },
+   "3-19": {
+    "x": "5c0ad49f52df2595a712d32c4d88e2a818b07143b03c2f159087c46b7d50482d",
+    "y": "13f62d61b3ca94aebd5a4bcd0ed8bc20898d470d92e49030241c9053410cdef5",
+    "day": "eba1e1b0b8beedf9e35c47d485716fdd9228850dace55055d39567d927cd2b10"
+   }
+  }
+ },
+ "shared_initialization_sha256": "49cbe1f2773b9309ef5c265b932fdbc0570749443769c10324d36a46d553f5d2",
+ "train_packets": 512,
+ "val_packets": 512,
+ "held_packets": {
+  "2-19": 64,
+  "3-19": 64
+ },
+ "ema": {
+  "half_life_epochs": 1,
+  "decay": 0.8408964152537145,
+  "buffers": "clean fit-only BN recalibration"
+ },
+ "registration_sha256": "d8a3d3ea3a5b6705c6b6902c24e715f92d001c569cdc816e9639bd7d51a3f676",
+ "torch": "2.5.0+cu124",
+ "gpu": "NVIDIA A100-SXM4-40GB"
+}

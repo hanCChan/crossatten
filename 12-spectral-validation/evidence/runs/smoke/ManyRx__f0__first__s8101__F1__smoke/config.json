@@ -1,0 +1,168 @@
+{
+ "job": {
+  "phase": "smoke",
+  "dataset": "ManyRx",
+  "fold": 0,
+  "feature": "F1",
+  "seed": 8101,
+  "group": "first",
+  "epochs": 2,
+  "policy": "source",
+  "id": "ManyRx__f0__first__s8101__F1__smoke"
+ },
+ "params": 91128,
+ "recipe": {
+  "opt": "adam",
+  "lr": 0.001,
+  "wd": 0.0,
+  "batch": 128,
+  "epochs": 200,
+  "sched": "plateau",
+  "patience": 5,
+  "early_stop": 10,
+  "min_lr": 1e-06
+ },
+ "data_seed": 64639987,
+ "roles": {
+  "source": [
+   "8-7",
+   "8-8",
+   "8-14",
+   "13-7",
+   "13-14",
+   "14-7",
+   "18-2",
+   "18-19",
+   "19-1",
+   "19-2",
+   "19-19",
+   "19-20",
+   "20-1",
+   "20-19",
+   "20-20",
+   "23-1",
+   "23-3",
+   "23-5",
+   "23-6",
+   "23-7",
+   "24-5",
+   "24-6",
+   "24-13",
+   "24-16"
+  ],
+  "target": [
+   "1-1",
+   "1-19",
+   "1-20",
+   "2-1",
+   "2-19",
+   "3-19",
+   "7-7",
+   "7-14"
+  ],
+  "fit_rx": [
+   "18-2",
+   "18-19",
+   "19-1",
+   "19-2",
+   "19-19",
+   "19-20",
+   "20-1",
+   "20-19",
+   "20-20",
+   "23-1",
+   "23-3",
+   "23-5",
+   "23-6",
+   "23-7",
+   "24-5",
+   "24-6",
+   "24-13",
+   "24-16"
+  ],
+  "held_rx": [
+   "8-7",
+   "8-8",
+   "8-14",
+   "13-7",
+   "13-14",
+   "14-7"
+  ],
+  "days": [
+   1,
+   2
+  ]
+ },
+ "split_sha256": {
+  "full_fit": {
+   "train": "cee1a660bcdb663ec35a197c7df769248d67fb9cddae40ffa6deef6614048c65",
+   "val": "a7f41ae59d98e1bcb4c2123cdd41125c1c768c88c99ef731b7556b0b2931c1d2",
+   "pool_y": "d45ce28395984874daa5d47819e413c54e8ff32306acc4537e43392a7ba6d750"
+  },
+  "smoke_arrays": {
+   "train": {
+    "x": "134ab3444d54136ef7b7eccba632e1a550a947e8fb9bf64cd4dfa0bfbcc37b7a",
+    "y": "dd7782d0d0a52a541e43c38244284b393a158a8fd7aba7a7ef47392b6b9a03e8",
+    "day": "7d78560bbb033c7a7da71705a6875e55719505e3e135343f1f180f6c256db5dc",
+    "rx": "8b3d5f3dcb921d2852e6f798af7157196fe45a954abd80aad8c8065892c6d26a"
+   },
+   "val": {
+    "x": "420116171b2ab91f2d81adf4bf163767f6fa632c353373c1cbcc601effd47224",
+    "y": "d3b86d3f0e514f2e3d92e5fb4a08f904b4ec4b0101c1ed19393aa524b87ef82d",
+    "day": "141ac83fd08452e4e3ca21c7ef1bfbb9bad411d83c14088684bc2f7cfb64eca3",
+    "rx": "e22d31a9fed52255900dc0e9453d2b2d72c4b601b50bf2de9e3b8d189c056e8f"
+   }
+  },
+  "smoke_held_arrays": {
+   "8-7": {
+    "x": "fb9204a7c19ab0ac065f33750793db5f0134ebf73725bd55a0cc2b7c30263cf6",
+    "y": "040cd2192400e2cf14d5c6f206469f84ea71cc2491f594e7fb2b5de1696fc760",
+    "day": "eb5f4567cdf8f47b06889808a0a3137ca3cb74f75006b2a314db6874c7acfff5"
+   },
+   "8-8": {
+    "x": "65dcbf1732f6b45dd3421376e711b068eb73b9d473f4d89a487b9adc5fe03883",
+    "y": "040cd2192400e2cf14d5c6f206469f84ea71cc2491f594e7fb2b5de1696fc760",
+    "day": "eb5f4567cdf8f47b06889808a0a3137ca3cb74f75006b2a314db6874c7acfff5"
+   },
+   "8-14": {
+    "x": "7801808ef08c2c7030101d9b391cd96a1b69b7c609b54073c33a295fb01c0412",
+    "y": "040cd2192400e2cf14d5c6f206469f84ea71cc2491f594e7fb2b5de1696fc760",
+    "day": "eb5f4567cdf8f47b06889808a0a3137ca3cb74f75006b2a314db6874c7acfff5"
+   },
+   "13-7": {
+    "x": "06d36eaa3d270ffa107cbf0161a18f1fb20931b03fb3b6e07ca98263f09d78db",
+    "y": "ee11047a10393414ec96edf268374942f0c3263034e94bd3e5ae0e670e9c07e4",
+    "day": "2308c8c40447c8738268c53044625f025c29c4fba16708d1451dc97706eec406"
+   },
+   "13-14": {
+    "x": "778c2560f714370d49633b91a80bd3adfdf4ea1786299c6214968602642b772a",
+    "y": "040cd2192400e2cf14d5c6f206469f84ea71cc2491f594e7fb2b5de1696fc760",
+    "day": "eb5f4567cdf8f47b06889808a0a3137ca3cb74f75006b2a314db6874c7acfff5"
+   },
+   "14-7": {
+    "x": "7c519333bebe1cbae0e074278903d750331edf1be897969592597cbf1ec17999",
+    "y": "040cd2192400e2cf14d5c6f206469f84ea71cc2491f594e7fb2b5de1696fc760",
+    "day": "eb5f4567cdf8f47b06889808a0a3137ca3cb74f75006b2a314db6874c7acfff5"
+   }
+  }
+ },
+ "shared_initialization_sha256": "95886e4d6a9257ba990d8301b88e1c628114f2666ccfe1b8f524732929f1213b",
+ "train_packets": 512,
+ "val_packets": 512,
+ "held_packets": {
+  "8-7": 64,
+  "8-8": 64,
+  "8-14": 64,
+  "13-7": 64,
+  "13-14": 64,
+  "14-7": 64
+ },
+ "ema": {
+  "half_life_epochs": 1,
+  "decay": 0.8408964152537145,
+  "buffers": "clean fit-only BN recalibration"
+ },
+ "registration_sha256": "d8a3d3ea3a5b6705c6b6902c24e715f92d001c569cdc816e9639bd7d51a3f676",
+ "torch": "2.5.0+cu124",
+ "gpu": "NVIDIA A100-SXM4-40GB"
+}
