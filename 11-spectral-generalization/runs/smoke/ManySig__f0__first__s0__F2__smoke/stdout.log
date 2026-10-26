@@ -1,0 +1,20 @@
+/dockerdata/741295a3-c730-4a4c-89a6-62abee1cbfb4/worktrees/crossatten-latest/11-spectral-generalization/spectral.py:60: RuntimeWarning: Degrees of freedom <= 0 for slice
+  uncertainty[key] = v[mask].var(0, ddof=1) / n
+/data/miniforge/envs/env-3.12/lib/python3.12/site-packages/numpy/core/_methods.py:195: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+Traceback (most recent call last):
+  File "/dockerdata/741295a3-c730-4a4c-89a6-62abee1cbfb4/worktrees/crossatten-latest/11-spectral-generalization/launch.py", line 78, in <module>
+    main()
+  File "/dockerdata/741295a3-c730-4a4c-89a6-62abee1cbfb4/worktrees/crossatten-latest/11-spectral-generalization/launch.py", line 22, in main
+    (evaluate if a.evaluate else fit)(json.loads(a.job))
+  File "/dockerdata/741295a3-c730-4a4c-89a6-62abee1cbfb4/worktrees/crossatten-latest/11-spectral-generalization/training.py", line 47, in fit
+    adapter(job).fit(job)
+  File "/dockerdata/741295a3-c730-4a4c-89a6-62abee1cbfb4/worktrees/crossatten-latest/09-phase-invariance/training.py", line 188, in fit
+    tr, va, held, roles, splits = load_data(job)
+                                  ^^^^^^^^^^^^^^
+  File "/dockerdata/741295a3-c730-4a4c-89a6-62abee1cbfb4/worktrees/crossatten-latest/11-spectral-generalization/training.py", line 22, in load_data
+    stats = estimate(value, fit["y"], fit["rx"], fit["day"],
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/dockerdata/741295a3-c730-4a4c-89a6-62abee1cbfb4/worktrees/crossatten-latest/11-spectral-generalization/spectral.py", line 92, in estimate
+    raise ValueError("nonfinite prior")
+ValueError: nonfinite prior

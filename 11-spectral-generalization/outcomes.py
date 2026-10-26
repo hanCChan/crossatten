@@ -1,0 +1,146 @@
+"""S11 report-only conclusion; never converts unsupported probes into accuracy claims."""
+import json
+import numpy as np
+import pandas as pd
+import torch
+from core import HERE,ROOT,save,sha,manifest
+from spectral import paired_model
+
+
+def table(frame):
+    cols=list(frame.columns)
+    lines=["| "+" | ".join(cols)+" |","|"+"---|"*len(cols)]
+    for row in frame.itertuples(index=False,name=None):
+        lines.append("| "+" | ".join(f"{v:.4f}" if isinstance(v,float) else str(v) for v in row)+" |")
+    return "\n".join(lines)
+
+
+def main():
+    decision=json.loads((HERE/"decision_physics.json").read_text())
+    reg=json.loads((HERE/"registration.json").read_text())
+    bn=json.loads((HERE/"bn_evidence.json").read_text())
+    statuses={name:json.loads((HERE/f"jobs_{name}.status.json").read_text())
+              for name in ("restore","smoke")}
+    proposals=[]
+    for kind,value in decision["choices"].items():
+        for d,result in value["details"].items():
+            proposals.append(dict(route=kind,dataset=d,
+                centroid_gain_pp=result["mean_centroid_gain_pp"],
+                tx_scatter_retention=result["tx_retention"],
+                nuisance_ratio_change=result["nuisance_ratio_change"],
+                reproducibility=result["half_weight_correlation"]))
+    grid=pd.DataFrame(proposals)
+    audit=(HERE/"S11_CODE_AND_CHECKPOINT_AUDIT.md").read_text()
+    audit=audit.split("\n## Executed Source Refits\n")[0]
+    audit=audit.replace("Two registered source-only S09 hard refits will be stored under S11",
+                        "Two registered source-only S09 hard refits were stored under S11")
+    audit += ("\n## Executed Source Refits\n"+
+        "Two hard-phase source-only refits completed at S09 fold0/last/seed8101. "
+        "Configs, initial state SHA and packet splits match S09. Checkpoint byte matches are explicitly "
+        "reported in `checkpoint_refit_replay.csv`; byte differences must not be labeled restored originals.\n"+
+        "F1 smoke completed on both datasets. F2 smoke failed before training because one-packet "
+        "cells make ddof1 mean-variance uncertainty undefined. Both failed attempts remain recorded; "
+        "no automatic retry or test-driven new seed was launched.\n")
+    (HERE/"S11_CODE_AND_CHECKPOINT_AUDIT.md").write_text(audit)
+    source=["# Source RX/Day Screening","",
+        f"Decision: **{decision['verdict']} at zero-fit mechanism admission**, not an empirical network STOP.",
+        table(grid),"",
+        "F1 and F2 improved the fit-only nearest-centroid held-RX probe, but did not both satisfy "
+        "the preregistered raw TX-scatter retention threshold0.65. No32-fit candidate network grid was admitted.",
+        "Raw between-TX scatter scales quadratically with gain. It is NOT a direct measure of mutual "
+        "information or classification sufficiency. A constant positive scalar gain can lower this score "
+        "without losing any information. This gate is conservative and cannot prove candidate uselessness.",
+        "In particular F1 has positive centroid gains and should be described as an untrained diagnostic "
+        "whose retention gate failed, NOT as another failed HStem-HSTU bandwidth experiment.",
+        "Ordinary source paired gains>=1pp, final hard comparisons and source RX/day confirmation "
+        "were NOT measured. The source day1->held RX day2 workflow was implemented but not admitted.",
+        "The protocol budget originally conflicted with full candidate/group/seed matrices; limits/resolution "
+        "were frozen before audit. Unselected jobs were not run.",
+        "Engineering: F2 smoke failure occurred before optimization, not a low classification result.",
+        "Evidence: `decision_physics.json`, `source_centroid_probes.csv`, `source_spectral_statistics.csv`, `runs/smoke/`."]
+    (HERE/"SOURCE_RX_DAY_SCREENING.md").write_text("\n".join(source)+"\n")
+    models=["# Model Ablations","",
+        "No new network efficacy or model ablation is established by S11. Only two hard source refits and "
+        "two successful F1 engineering smoke fits were completed.",
+        "No-selection, No-phase and No-HSTU conditional formal fits were not admitted by the zero-fit gate.",
+        "Historical S09 phase ablations remain valid in their old configuration, not proof of phase/HSTU "
+        "necessity under the new F2 distribution.",
+        "BN layer moments are real frozen-model diagnostics, not missing-checkpoint speculation.",
+        table(pd.read_csv(HERE/"source_bn_recalibration.csv")),"",
+        "BN->GN was NOT admitted: fold0-only coverage in both datasets cannot establish a systematic "
+        "normalization bottleneck. Fit-only BN recalibration is not a GroupNorm ablation.",
+        "Layer/RX pre-BN moments and normalized DTX/DRX: `source_bn_layer_rx.csv`."]
+    (HERE/"MODEL_ABLATIONS.md").write_text("\n".join(models)+"\n")
+    previous=pd.read_csv(ROOT/"10-tifs-validation/final_comparisons.csv")
+    previous=previous[(previous.task=="CRD")&previous.model.isin(["S10_ask","S07_frequency_mild","S08_hard","IB-RFF","WaveMLP"])]
+    compare=["# Final CRD Comparisons","",
+        "**No S11 formal target evaluation was authorized or performed.** The following is historical "
+        "S10-audited evidence, not newly obtained S11 scores.",
+        table(previous[["dataset","model","accuracy_pct","macro_f1_pct","worst_rx_pct","seed_sd_pp","fold_sd_pp"]]),"",
+        "No candidate90%/93.5% or SOTA achievement is claimed. No per-fold target-specific settings were selected.",
+        "Receiver-cluster comparisons and uncertainty are inherited from "
+        "`../10-tifs-validation/receiver_cluster_intervals.csv`; target data were not loaded again."]
+    (HERE/"FINAL_CRD_COMPARISONS.md").write_text("\n".join(compare)+"\n")
+    physics=["# Physical Mechanism","",
+        "Source-only observations support useful spectral discrimination/stability structure:",
+        table(grid),"",
+        "F2 weights reproducibly alter frequency emphasis and reduce the source nuisance/scatter ratio. "
+        "This is observational discrimination, not a causal proof of RX-independent hardware identity.",
+        "Cartesian real/imaginary phase means avoid phase unwrap. Missing cells require complete day pairs "
+        "and sufficient fit packets; mean estimation uncertainty appears in the denominator.",
+        "The registered raw TX-scatter retention gate is amplitude dependent. Higher probe accuracy and "
+        "lower scatter can coexist. Both results must be reported; raw scatter loss does not prove TX information loss.",
+        "Controlled AWGN/multipath/noncircular-shift classifier tests were not run for an unadmitted candidate. "
+        "S10 frozen perturbation evidence is retained as background, not reused as proof of S11 robustness.",
+        "No new target IQ or attack/open-set measurements were taken."]
+    (HERE/"PHYSICAL_MECHANISM.md").write_text("\n".join(physics)+"\n")
+    novelty=["# Novelty And TIFS Decision","","**STOP at the preregistered mechanism/engineering gate.**",
+        "S11 implements two candidates and fits only the minimal hard diagnostic refits. "
+        "It neither proves that HStem-HSTU has reached a ceiling nor demonstrates new SOTA.",
+        "Contribution boundaries:",
+        "- F1: fixed central63-bin feature masking is a diagnostic, not an original algorithm.",
+        "- F2: fixed TX/RX/day centroid variance-ratio residual prior is new local implementation; "
+        "Fisher-like between/within scatter and residual weighting are established primitives.",
+        "- Existing five-channel adjacent phase and HStem/HSTU belong to prior stages.",
+        "- S11 evidence contribution: real ASKNet checkpoint cutoff audit, fit-only spectral statistics, "
+        "uncertainty/reproducibility checks, actual source BN diagnostics and transparent failed smoke.",
+        "ASKNet uses learned discrete center-band selection and a unitary complex operator. "
+        "F2 weights precomputed feature channels and does not copy its Koopman model.",
+        "A targeted2026 publisher-metadata search found ASKNet and Spectral-SHAP "
+        "(DOI10.2139/ssrn.7389346,2026 preprint metadata). Only metadata was obtained for Spectral-SHAP; "
+        "no technical novelty distinction or protocol-equivalent performance comparison is inferred.",
+        "Ma et al. arXiv2512.12070v1 is known prior channel/receiver-independent LoRa research; "
+        "no first-invention claim for stable spectral selection is supported.",
+        "Search scope is targeted, not exhaustive as of2026-10-26. No newest-global-SOTA claim.",
+        "Primary sources:",
+        "- [ASKNet official pinned model](https://github.com/BeechburgPieStar/ASKNet-RFF/blob/f00846d68425315b68ae69b8c6b712e08559c2fe/WiSig/backbones/PatchNet.py)",
+        "- [ASKNet publisher](https://doi.org/10.1109/LCOMM.2026.3718894)",
+        "- [Spectral-SHAP metadata](https://doi.org/10.2139/ssrn.7389346)",
+        "- [Ma et al. preprint](https://arxiv.org/abs/2512.12070v1)",
+        "Any future experiment must resolve the amplitude-sensitive retention gate and the F2 small-sample "
+        "engineering defect in a new pre-outcome registration; neither is fixed by target-driven retuning here."]
+    (HERE/"NOVELTY_AND_TIFS_DECISION.md").write_text("\n".join(novelty)+"\n")
+    text=["# S11 Results","",
+        "**STOP_MECHANISM_GATE**, not a measured candidate-network failure.",
+        "Two hard source diagnostic refits, two successful F1 smoke fits, two F2 pretraining engineering failures.",
+        "No candidate source grid, new RX/day grid, final target fit or model ablation was admitted.",
+        "F1/F2 nearest-centroid gains: ManyRx+7.9024/+4.1702pp; ManySig+1.4271/+2.3646pp.",
+        "TX-scatter retention: F1~0.33; F2 ManyRx0.6528/ManySig0.6152 against frozen0.65 minimum.",
+        "The raw scatter gate is amplitude sensitive and cannot prove identity information loss.",
+        "No new90%/93.5% or SOTA claim. See `SOURCE_RX_DAY_SCREENING.md`, "
+        "`NOVELTY_AND_TIFS_DECISION.md`, `S11_CODE_AND_CHECKPOINT_AUDIT.md`."]
+    (HERE/"RESULTS.md").write_text("\n".join(text)+"\n")
+    evidence_paths=list(HERE.glob("*.md"))+[HERE/"decision_physics.json",HERE/"bn_evidence.json",
+        HERE/"decision_bn.json",HERE/"costs.json",HERE/"jobs_restore.status.json",
+        HERE/"jobs_smoke.status.json"]
+    save(HERE/"execution.json",dict(verdict="STOP_MECHANISM_GATE",source_refit_fits=2,
+        successful_smoke_fits=2,failed_smoke_pretraining_attempts=2,source_candidate_fits=0,
+        rx_day_fits=0,formal_target_fits=0,ablation_fits=0,gn_fits=0,
+        candidate_not_proved_ineffective=True,targets_achieved=False,
+        failures=statuses["smoke"]["failed"],no_retries=True,no_target_selection=True,
+        evidence=manifest(evidence_paths)))
+    print("S11 reports written; mechanism STOP and all failures disclosed.")
+
+
+if __name__=="__main__":
+    main()

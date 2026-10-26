@@ -1,0 +1,11 @@
+{
+ "purpose": "source-only layer/RX/TX moments of frozen hard refits, no target adaptation",
+ "layers": "all BatchNorm1d in unchanged HStem",
+ "statistic": "pre-BN normalized mean drift and log variance ratio; output pooled TX/RX scatter",
+ "intervention": "raw frozen model copied, BN recalibrated on original fit-training packets only",
+ "checkpoint_selection": "already frozen minimum source packet CE",
+ "minimum_distinct_folds": 3,
+ "minimum_recalibration_gain_pp": 1.0,
+ "gate_limit": "two fold0 refits cannot establish systematic normalization benefit or admit GN fits",
+ "additional_training": 0
+}

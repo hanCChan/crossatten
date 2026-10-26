@@ -1,0 +1,14 @@
+{
+ "job": {
+  "phase": "smoke",
+  "dataset": "ManySig",
+  "fold": 0,
+  "group": "first",
+  "seed": 0,
+  "feature": "F1",
+  "epochs": 2,
+  "policy": "source",
+  "id": "ManySig__f0__first__s0__F1__smoke"
+ },
+ "gpu": "3"
+}

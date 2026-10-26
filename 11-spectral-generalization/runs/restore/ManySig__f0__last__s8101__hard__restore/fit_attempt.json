@@ -1,0 +1,14 @@
+{
+ "job": {
+  "phase": "restore",
+  "dataset": "ManySig",
+  "fold": 0,
+  "group": "last",
+  "seed": 8101,
+  "feature": "hard",
+  "epochs": 40,
+  "policy": "source",
+  "id": "ManySig__f0__last__s8101__hard__restore"
+ },
+ "gpu": "1"
+}

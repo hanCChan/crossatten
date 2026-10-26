@@ -1,0 +1,88 @@
+{
+ "admitted": false,
+ "selected": null,
+ "choices": {
+  "F1": {
+   "admitted": false,
+   "checks": {
+    "manyrx_positive_folds": true,
+    "manyrx_centroid_gain": true,
+    "manysig_not_degraded": true,
+    "tx_retention": false,
+    "nuisance_ratio": true,
+    "prior_reproducibility": true
+   },
+   "details": {
+    "ManyRx": {
+     "mean_centroid_gain_pp": 7.902421437694878,
+     "positive_folds": 4,
+     "tx_retention": 0.3331184892162327,
+     "nuisance_ratio_change": 0.6575297181645888,
+     "half_weight_correlation": 0.9980353911021652
+    },
+    "ManySig": {
+     "mean_centroid_gain_pp": 1.4270833333333357,
+     "positive_folds": 3,
+     "tx_retention": 0.3309678779417907,
+     "nuisance_ratio_change": 0.6238880376851961,
+     "half_weight_correlation": 0.9936007686275637
+    }
+   }
+  },
+  "F2": {
+   "admitted": false,
+   "checks": {
+    "manyrx_positive_folds": true,
+    "manyrx_centroid_gain": true,
+    "manysig_not_degraded": true,
+    "tx_retention": false,
+    "nuisance_ratio": true,
+    "prior_reproducibility": true
+   },
+   "details": {
+    "ManyRx": {
+     "mean_centroid_gain_pp": 4.170212483981782,
+     "positive_folds": 4,
+     "tx_retention": 0.6528011434315601,
+     "nuisance_ratio_change": 0.80125945054805,
+     "half_weight_correlation": 0.9980353911021652
+    },
+    "ManySig": {
+     "mean_centroid_gain_pp": 2.3645833333333353,
+     "positive_folds": 4,
+     "tx_retention": 0.6151900906862601,
+     "nuisance_ratio_change": 0.8315444101598692,
+     "half_weight_correlation": 0.9936007686275637
+    }
+   }
+  }
+ },
+ "jobs": [],
+ "verdict": "STOP",
+ "evidence": {
+  "11-spectral-generalization/ask_checkpoint_bands.csv": "f53948d937da1ced4a8641f30f967603661621d0cfa34598e41094f3bf204c07",
+  "11-spectral-generalization/checkpoint_audit.json": "f88062c354f06fbcba1fba5861b7b80a8dcc3103b8ef8193e7df4b1eef630aff",
+  "11-spectral-generalization/priors/ManyRx__f0__first__s8101__hard__audit.json": "c1c49cecdec724d25c09a652607a609edc342c06116a777cedcd22b119cb16b0",
+  "11-spectral-generalization/priors/ManyRx__f0__last__s8101__hard__audit.json": "87140cf5b77e8a322cceafe6bb35b3ea613788ead48be8f22aabe9bc8f517e1c",
+  "11-spectral-generalization/priors/ManyRx__f1__first__s8101__hard__audit.json": "d1994093ca21e30d4a79cd6b7a1758217b97b42920e30e30739212ee1a107797",
+  "11-spectral-generalization/priors/ManyRx__f1__last__s8101__hard__audit.json": "811c2f114f4ac3983132d0a201ba7788ef408ef9554256b5a6e3824e0dc814bb",
+  "11-spectral-generalization/priors/ManyRx__f2__first__s8101__hard__audit.json": "2dd9cbbef8387bdd93497f72c9ff7bc064d4405d761f7cc7937b522824ab903a",
+  "11-spectral-generalization/priors/ManyRx__f2__last__s8101__hard__audit.json": "5a75dd4ec548ff9351fb199872fc965598964ba8676813a20fb4e0f29f622feb",
+  "11-spectral-generalization/priors/ManyRx__f3__first__s8101__hard__audit.json": "44648932420d90a8fc7483984531944478c9c51058c985f4fd85f29bf33404f6",
+  "11-spectral-generalization/priors/ManyRx__f3__last__s8101__hard__audit.json": "865590a9da074d8dc8710d7b7f2b15be269504b04a7d1df334503981a0f332f2",
+  "11-spectral-generalization/priors/ManySig__f0__first__s8101__hard__audit.json": "3a1731439d83106b32e446d179ea0e1bf4a72a96032756216a6ef1c7af625692",
+  "11-spectral-generalization/priors/ManySig__f0__last__s8101__hard__audit.json": "b6a9440899200b18c1b55ee7f3e1653172e9be8de36622fb4177ef48ab9303eb",
+  "11-spectral-generalization/priors/ManySig__f1__first__s8101__hard__audit.json": "1cb7f23592947da620b7f74b7b673f0d4f3edfb9b17691fc02068771d703e22b",
+  "11-spectral-generalization/priors/ManySig__f1__last__s8101__hard__audit.json": "d6f055e3dc70c34e7df34ae583e7ea6481406086de8a081f1e3bc2fe6e8ef3e4",
+  "11-spectral-generalization/priors/ManySig__f2__first__s8101__hard__audit.json": "3c37180ce5ddb1d9dfcf3dc92ad2947a57917f975e651d876bb7b9caad1aec24",
+  "11-spectral-generalization/priors/ManySig__f2__last__s8101__hard__audit.json": "2ce162555f97f9448ac9eb1b974f54c433e202f253d77e4bedc1919524acb858",
+  "11-spectral-generalization/priors/ManySig__f3__first__s8101__hard__audit.json": "d232f06877b211e7198ea27e65befe35dc92f66a4e81523b812c0b3970b4f7f6",
+  "11-spectral-generalization/priors/ManySig__f3__last__s8101__hard__audit.json": "913d3db0acae7a00886d64e083ef25da02f590db5dca5a540c5d1dab00b0b458",
+  "11-spectral-generalization/source_centroid_probes.csv": "a47840556cb9eea98bb86887e4d7a8d216ef48572cd00c814e8dc948a674379a",
+  "11-spectral-generalization/source_spectral_statistics.csv": "853e4052a18c0cbe4f58a88eecc10ebb3a9697063b44866bc4664d4fcd626369"
+ },
+ "zero_training_selection": true,
+ "no_target_predictions_read": true,
+ "source_probe_seed": 8101,
+ "limits": "linear nearest centroid is a necessary registered support probe, not final network efficacy; no unsupported GN/spectral combination; unselected route not trained"
+}

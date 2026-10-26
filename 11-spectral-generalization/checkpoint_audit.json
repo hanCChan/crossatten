@@ -1,0 +1,46 @@
+{
+ "ask_verified": 24,
+ "historical": {
+  "07-wifi-osu": {
+   "local_pt_files": 0,
+   "original_weights_available": false
+  },
+  "08-wisig-training": {
+   "local_pt_files": 0,
+   "original_weights_available": false
+  },
+  "09-phase-invariance": {
+   "local_pt_files": 0,
+   "original_weights_available": false
+  }
+ },
+ "recovery_evidence": "recovery/MEMORY.md: S00-S06 released, S07-S09 excluded from both releases",
+ "new_restore_fits": 2,
+ "no_target_predictions_read": true,
+ "evidence": {
+  "10-tifs-validation/runs/ask/ManyRx__f0__all__s2023__ask__packet/metrics.json": "c700fbe1c5b855b451bce2b58bbbec7610b8a5f380acb5a4fad907514deb7d80",
+  "10-tifs-validation/runs/ask/ManyRx__f0__all__s2024__ask__packet/metrics.json": "c160959b4fef9453bd93948b7b4296b0d1890df6074afad528bb8da7569264c7",
+  "10-tifs-validation/runs/ask/ManyRx__f0__all__s2025__ask__packet/metrics.json": "7d91ec36f20b834bfc2cce5d887f7fc2d2e2aab4eb67e15de7ceaf782d2db2da",
+  "10-tifs-validation/runs/ask/ManyRx__f1__all__s2023__ask__packet/metrics.json": "fcf043bfe83c8c076d5acca0d25e93515d2ca092a7ac549251bac19906e2a6bb",
+  "10-tifs-validation/runs/ask/ManyRx__f1__all__s2024__ask__packet/metrics.json": "304c28b72a937e2f77748bc35aaaefd18bb0e2479bb44c5f3fa2f34046474dbc",
+  "10-tifs-validation/runs/ask/ManyRx__f1__all__s2025__ask__packet/metrics.json": "32970bd415d6d0a13d8a6214cb6c1589c038b7ee897791a2d0fa8f5b1ca99133",
+  "10-tifs-validation/runs/ask/ManyRx__f2__all__s2023__ask__packet/metrics.json": "b496facabd22a9fce244f86e027145c01704c15886b986ed5307e96035b1a3e2",
+  "10-tifs-validation/runs/ask/ManyRx__f2__all__s2024__ask__packet/metrics.json": "9fba027660edf3461310d82e02be3e5a9e6dc9df6cd896f9fa5418e7de6c8c1a",
+  "10-tifs-validation/runs/ask/ManyRx__f2__all__s2025__ask__packet/metrics.json": "ecfbbcb8e7478e2a3e4da1a028382a381f08446914c8a081cdd494e40f8ec039",
+  "10-tifs-validation/runs/ask/ManyRx__f3__all__s2023__ask__packet/metrics.json": "fc1aa5ec1e52f24b78244be26909d00b6b3c24bc61997456a5ae754e722b2679",
+  "10-tifs-validation/runs/ask/ManyRx__f3__all__s2024__ask__packet/metrics.json": "43a5d679c4bc42de0d9849b2bf36256d92284f80f1cf30e4181bf7d2e81440a1",
+  "10-tifs-validation/runs/ask/ManyRx__f3__all__s2025__ask__packet/metrics.json": "6cf0502c7119841d1a796f73b3b57403a87554cd9b445b0aac1f417c65d05aed",
+  "10-tifs-validation/runs/ask/ManySig__f0__all__s2023__ask__packet/metrics.json": "bf20f58b3b9ac9d17b208562c181c26983b8660f2be9b13c0dbffb3311b6c40d",
+  "10-tifs-validation/runs/ask/ManySig__f0__all__s2024__ask__packet/metrics.json": "99814b00c34ff464f9712a40535880801397c631ea123f44cb4ad0d95d9bd732",
+  "10-tifs-validation/runs/ask/ManySig__f0__all__s2025__ask__packet/metrics.json": "a0ebc10e3123c081a286f3eff6defe5987655a42b58add541bfe57210bf200e8",
+  "10-tifs-validation/runs/ask/ManySig__f1__all__s2023__ask__packet/metrics.json": "3ed570017c0f9b0df8386b2db816a947a8398cae1d52df158610db0ec4d938b1",
+  "10-tifs-validation/runs/ask/ManySig__f1__all__s2024__ask__packet/metrics.json": "d98297f39978a63733efa912c74144a7aab9f2d2478c4cc90f4e7bc48a8fd8b6",
+  "10-tifs-validation/runs/ask/ManySig__f1__all__s2025__ask__packet/metrics.json": "59b65c20be7dc8e44366e991a0eeb5793fd5a90a40abd6feb20c4ec39359dc96",
+  "10-tifs-validation/runs/ask/ManySig__f2__all__s2023__ask__packet/metrics.json": "13e28a20f6e1b3bcd183b37b7338016c7be1da5448227f27ddd37cedd8569941",
+  "10-tifs-validation/runs/ask/ManySig__f2__all__s2024__ask__packet/metrics.json": "f61030153e2bf8b0132c5fbb4b0355215b486d8f0a6bb2ea3b8bba65d4a4e0cf",
+  "10-tifs-validation/runs/ask/ManySig__f2__all__s2025__ask__packet/metrics.json": "c0a06ffc008530ab9f94899337e4b8112b74df391480d8d165b576fc1fd9f854",
+  "10-tifs-validation/runs/ask/ManySig__f3__all__s2023__ask__packet/metrics.json": "07f52b3da70e478c9e7589d8cc2b88daef923387104aa9e8236a02580223d720",
+  "10-tifs-validation/runs/ask/ManySig__f3__all__s2024__ask__packet/metrics.json": "d1c2587205ddf98b7fc7dd2bffe3a457fff667add55db2440d2d0d963e0af395",
+  "10-tifs-validation/runs/ask/ManySig__f3__all__s2025__ask__packet/metrics.json": "748b0b93985ea6ddd5f94917d5c3d8fdacc25df6f134ed0132334f5508cab6f0"
+ }
+}
