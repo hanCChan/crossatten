@@ -1,0 +1,120 @@
+{
+ "job": {
+  "phase": "source",
+  "dataset": "ManyRx",
+  "fold": 0,
+  "seed": 8101,
+  "feature": "curvature",
+  "policy": "source",
+  "group": "first",
+  "epochs": 40,
+  "id": "ManyRx__f0__first__s8101__curvature__source"
+ },
+ "params": 91128,
+ "recipe": {
+  "opt": "adam",
+  "lr": 0.001,
+  "wd": 0.0,
+  "batch": 128,
+  "epochs": 200,
+  "sched": "plateau",
+  "patience": 5,
+  "early_stop": 10,
+  "min_lr": 1e-06
+ },
+ "data_seed": 64639987,
+ "roles": {
+  "source": [
+   "8-7",
+   "8-8",
+   "8-14",
+   "13-7",
+   "13-14",
+   "14-7",
+   "18-2",
+   "18-19",
+   "19-1",
+   "19-2",
+   "19-19",
+   "19-20",
+   "20-1",
+   "20-19",
+   "20-20",
+   "23-1",
+   "23-3",
+   "23-5",
+   "23-6",
+   "23-7",
+   "24-5",
+   "24-6",
+   "24-13",
+   "24-16"
+  ],
+  "target": [
+   "1-1",
+   "1-19",
+   "1-20",
+   "2-1",
+   "2-19",
+   "3-19",
+   "7-7",
+   "7-14"
+  ],
+  "fit_rx": [
+   "18-2",
+   "18-19",
+   "19-1",
+   "19-2",
+   "19-19",
+   "19-20",
+   "20-1",
+   "20-19",
+   "20-20",
+   "23-1",
+   "23-3",
+   "23-5",
+   "23-6",
+   "23-7",
+   "24-5",
+   "24-6",
+   "24-13",
+   "24-16"
+  ],
+  "held_rx": [
+   "8-7",
+   "8-8",
+   "8-14",
+   "13-7",
+   "13-14",
+   "14-7"
+  ],
+  "days": [
+   1,
+   2
+  ]
+ },
+ "split_sha256": {
+  "train": "cee1a660bcdb663ec35a197c7df769248d67fb9cddae40ffa6deef6614048c65",
+  "val": "a7f41ae59d98e1bcb4c2123cdd41125c1c768c88c99ef731b7556b0b2931c1d2",
+  "pool_y": "d45ce28395984874daa5d47819e413c54e8ff32306acc4537e43392a7ba6d750"
+ },
+ "shared_initialization_sha256": "95886e4d6a9257ba990d8301b88e1c628114f2666ccfe1b8f524732929f1213b",
+ "train_packets": 24267,
+ "val_packets": 10401,
+ "held_packets": {
+  "8-7": 2000,
+  "8-8": 2000,
+  "8-14": 2000,
+  "13-7": 1800,
+  "13-14": 2000,
+  "14-7": 2000
+ },
+ "ema": {
+  "half_life_epochs": 1,
+  "decay": 0.9963585033335157,
+  "buffers": "clean fit-only BN recalibration"
+ },
+ "registration_sha256": "ee13da9f582fa3ae1f097755cb7df930c56ab1173b501779e9942352a3a3d589",
+ "torch": "2.5.0+cu124",
+ "gpu": "NVIDIA A100-SXM4-40GB"
+}

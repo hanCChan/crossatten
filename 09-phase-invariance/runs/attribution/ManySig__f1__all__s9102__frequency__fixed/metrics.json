@@ -1,0 +1,39 @@
+{
+ "job": {
+  "phase": "attribution",
+  "dataset": "ManySig",
+  "fold": 1,
+  "seed": 9102,
+  "feature": "frequency",
+  "policy": "fixed",
+  "epochs": 6,
+  "rule": "raw",
+  "id": "ManySig__f1__all__s9102__frequency__fixed"
+ },
+ "params": 90420,
+ "stop_epoch": 6,
+ "best": {
+  "raw_packet": {
+   "ce": 0.06687477976083755,
+   "epoch": 4
+  },
+  "ema_packet": {
+   "ce": 0.06470730900764465,
+   "epoch": 6
+  }
+ },
+ "selected": {
+  "source_packet": {
+   "epoch": 6,
+   "ce": 0.08683870732784271,
+   "acc": 0.9805555939674377
+  }
+ },
+ "seconds": 9.943,
+ "weights_sha256": {
+  "model.pt": "d001836c2dff24a17f456f992108a6fe33e56a2f55034493486628805e725007"
+ },
+ "config_sha256": "954bb525df30605c8143a550fe6498197b98391e87a3f1786b2067510079a999",
+ "registration_sha256": "ee13da9f582fa3ae1f097755cb7df930c56ab1173b501779e9942352a3a3d589",
+ "predictions_sha256": {}
+}

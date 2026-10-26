@@ -1,0 +1,120 @@
+{
+ "job": {
+  "phase": "source",
+  "dataset": "ManyRx",
+  "fold": 3,
+  "seed": 8102,
+  "feature": "centered",
+  "policy": "source",
+  "group": "first",
+  "epochs": 40,
+  "id": "ManyRx__f3__first__s8102__centered__source"
+ },
+ "params": 91128,
+ "recipe": {
+  "opt": "adam",
+  "lr": 0.001,
+  "wd": 0.0,
+  "batch": 128,
+  "epochs": 200,
+  "sched": "plateau",
+  "patience": 5,
+  "early_stop": 10,
+  "min_lr": 1e-06
+ },
+ "data_seed": 2781277083,
+ "roles": {
+  "source": [
+   "1-1",
+   "1-19",
+   "1-20",
+   "2-1",
+   "2-19",
+   "3-19",
+   "7-7",
+   "7-14",
+   "8-7",
+   "8-8",
+   "8-14",
+   "13-7",
+   "13-14",
+   "14-7",
+   "18-2",
+   "18-19",
+   "19-1",
+   "19-2",
+   "19-19",
+   "19-20",
+   "20-1",
+   "20-19",
+   "20-20",
+   "23-1"
+  ],
+  "target": [
+   "23-3",
+   "23-5",
+   "23-6",
+   "23-7",
+   "24-5",
+   "24-6",
+   "24-13",
+   "24-16"
+  ],
+  "fit_rx": [
+   "7-7",
+   "7-14",
+   "8-7",
+   "8-8",
+   "8-14",
+   "13-7",
+   "13-14",
+   "14-7",
+   "18-2",
+   "18-19",
+   "19-1",
+   "19-2",
+   "19-19",
+   "19-20",
+   "20-1",
+   "20-19",
+   "20-20",
+   "23-1"
+  ],
+  "held_rx": [
+   "1-1",
+   "1-19",
+   "1-20",
+   "2-1",
+   "2-19",
+   "3-19"
+  ],
+  "days": [
+   1,
+   2
+  ]
+ },
+ "split_sha256": {
+  "train": "3786bee88bcbd878e42385f7123280e0a38d3afcba10ec597530404615651332",
+  "val": "7b2dcd769e31adab8dc25c3943541d9f16e6e0517ebe7d760404234862e11c57",
+  "pool_y": "2a68918f397c80b2fdf8c7acbcf855a8d5885d918ea213b743117bbbd34198bd"
+ },
+ "shared_initialization_sha256": "77f0288cafb91295cccc844fbcf1fb6bd12c7722c7017cdc8f6f0bfc960089b8",
+ "train_packets": 24640,
+ "val_packets": 10560,
+ "held_packets": {
+  "1-1": 2000,
+  "1-19": 2000,
+  "1-20": 2000,
+  "2-1": 2000,
+  "2-19": 2000,
+  "3-19": 2000
+ },
+ "ema": {
+  "half_life_epochs": 1,
+  "decay": 0.9964150053244614,
+  "buffers": "clean fit-only BN recalibration"
+ },
+ "registration_sha256": "ee13da9f582fa3ae1f097755cb7df930c56ab1173b501779e9942352a3a3d589",
+ "torch": "2.5.0+cu124",
+ "gpu": "NVIDIA A100-SXM4-40GB"
+}

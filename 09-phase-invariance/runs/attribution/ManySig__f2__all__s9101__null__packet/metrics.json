@@ -1,0 +1,38 @@
+{
+ "job": {
+  "phase": "attribution",
+  "dataset": "ManySig",
+  "fold": 2,
+  "seed": 9101,
+  "feature": "null",
+  "policy": "packet",
+  "epochs": 200,
+  "id": "ManySig__f2__all__s9101__null__packet"
+ },
+ "params": 90868,
+ "stop_epoch": 20,
+ "best": {
+  "raw_packet": {
+   "ce": 0.07038135826587677,
+   "epoch": 10
+  },
+  "ema_packet": {
+   "ce": 0.06521238386631012,
+   "epoch": 11
+  }
+ },
+ "selected": {
+  "source_packet": {
+   "epoch": 10,
+   "ce": 0.07038135826587677,
+   "acc": 0.9808642268180847
+  }
+ },
+ "seconds": 31.924,
+ "weights_sha256": {
+  "model.pt": "ac9730c433e545b8bde199b605bf23f40d6a8a0bdf8f81b605ddcb9925ad3d5c"
+ },
+ "config_sha256": "e2da6a1733549e3d62409ef480b8ee0f0961c29cf9b0f0e83f410c3e97f49447",
+ "registration_sha256": "ee13da9f582fa3ae1f097755cb7df930c56ab1173b501779e9942352a3a3d589",
+ "predictions_sha256": {}
+}

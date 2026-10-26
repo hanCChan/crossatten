@@ -1,0 +1,81 @@
+{
+ "job": {
+  "phase": "smoke",
+  "dataset": "ManySig",
+  "fold": 0,
+  "seed": 0,
+  "feature": "null",
+  "policy": "source",
+  "group": "first",
+  "epochs": 2,
+  "id": "ManySig__f0__first__s0__null__source"
+ },
+ "params": 90868,
+ "recipe": {
+  "opt": "adam",
+  "lr": 0.001,
+  "wd": 0.0,
+  "batch": 128,
+  "epochs": 200,
+  "sched": "plateau",
+  "patience": 5,
+  "early_stop": 10,
+  "min_lr": 1e-06
+ },
+ "data_seed": 1476567363,
+ "roles": {
+  "source": [
+   "2-19",
+   "3-19",
+   "7-7",
+   "7-14",
+   "8-8",
+   "14-7",
+   "18-2",
+   "19-2",
+   "20-1"
+  ],
+  "target": [
+   "1-1",
+   "1-19",
+   "2-1"
+  ],
+  "fit_rx": [
+   "7-7",
+   "7-14",
+   "8-8",
+   "14-7",
+   "18-2",
+   "19-2",
+   "20-1"
+  ],
+  "held_rx": [
+   "2-19",
+   "3-19"
+  ],
+  "days": [
+   1,
+   2
+  ]
+ },
+ "split_sha256": {
+  "train": "939df893cf282f10ca079a8a165300fabf8e4537bdb63ed8fce3e9dd792ff18a",
+  "val": "6b9dfdbb7cffef8d99e6951782cb7a4edb923c64f7cee3a5beee40ade9dcea27",
+  "pool_y": "c04ade5e492b7adc0bb24d74c91ba359c578d7f9d35be6e712d42ce22502e55a"
+ },
+ "shared_initialization_sha256": "0c9027e7cab490a20b8ec4082d0ccdbfc4ef48df5c8da44e505ab34c29bec980",
+ "train_packets": 256,
+ "val_packets": 128,
+ "held_packets": {
+  "2-19": 64,
+  "3-19": 64
+ },
+ "ema": {
+  "half_life_epochs": 1,
+  "decay": 0.7071067811865476,
+  "buffers": "clean fit-only BN recalibration"
+ },
+ "registration_sha256": "ee13da9f582fa3ae1f097755cb7df930c56ab1173b501779e9942352a3a3d589",
+ "torch": "2.5.0+cu124",
+ "gpu": "NVIDIA A100-SXM4-40GB"
+}
