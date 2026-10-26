@@ -1,0 +1,182 @@
+{
+ "accessed_utc": "2026-10-26T06:43:11.472372+00:00",
+ "scope": "two known DOIs; targeted metadata check, not exhaustive novelty search",
+ "sources": [
+  {
+   "doi": "10.1109/LCOMM.2026.3718894",
+   "url": "https://api.crossref.org/works/10.1109/LCOMM.2026.3718894",
+   "evidence_level": "publisher-deposited metadata only",
+   "metadata": {
+    "DOI": "10.1109/lcomm.2026.3718894",
+    "title": [
+     "ASKNet: Adaptive Spectral Koopman Network for Cross-Domain Radio Frequency Fingerprinting"
+    ],
+    "author": [
+     {
+      "given": "Zhengyang",
+      "family": "Liu",
+      "sequence": "first",
+      "affiliation": [
+       {
+        "name": "NJUPT",
+        "place": [
+         "Nanjing, China"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Zheyu",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "NJUPT",
+        "place": [
+         "Nanjing, China"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "ORCID": "https://orcid.org/0000-0001-7763-4261",
+      "authenticated-orcid": false,
+      "given": "Yu",
+      "family": "Wang",
+      "sequence": "additional",
+      "affiliation": [
+       {
+        "name": "NJUPT",
+        "place": [
+         "Nanjing, China"
+        ]
+       }
+      ],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "container-title": [
+     "IEEE Communications Letters"
+    ],
+    "type": "journal-article",
+    "published": {
+     "date-parts": [
+      [
+       2026
+      ]
+     ]
+    },
+    "created": {
+     "date-parts": [
+      [
+       2026,
+       8,
+       3
+      ]
+     ],
+     "date-time": "2026-08-03T19:02:28Z",
+     "timestamp": 1785783748000
+    },
+    "URL": "https://doi.org/10.1109/lcomm.2026.3718894"
+   },
+   "accessed": true,
+   "access_errors": [
+    "URLError"
+   ]
+  },
+  {
+   "doi": "10.2139/ssrn.7389346",
+   "url": "https://api.crossref.org/works/10.2139/ssrn.7389346",
+   "evidence_level": "publisher-deposited metadata only",
+   "metadata": {
+    "DOI": "10.2139/ssrn.7389346",
+    "title": [
+     "Spectral-SHAP: A Cross-Protocol Disjoint-Partition Shapley Framework for Explainable Radio Frequency Fingerprinting"
+    ],
+    "author": [
+     {
+      "given": "Zineb",
+      "family": "BOUDANGA",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Anthony",
+      "family": "Fiche",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     },
+     {
+      "given": "Roland",
+      "family": "Gautier",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "author"
+       }
+      ]
+     }
+    ],
+    "publisher": "Elsevier BV",
+    "container-title": [],
+    "type": "posted-content",
+    "published": {
+     "date-parts": [
+      [
+       2026
+      ]
+     ]
+    },
+    "created": {
+     "date-parts": [
+      [
+       2026,
+       9,
+       1
+      ]
+     ],
+     "date-time": "2026-09-01T15:43:58Z",
+     "timestamp": 1788277438000
+    },
+    "URL": "https://doi.org/10.2139/ssrn.7389346"
+   },
+   "accessed": true,
+   "access_errors": [
+    "URLError"
+   ]
+  }
+ ],
+ "technical_comparison_from_metadata": false
+}

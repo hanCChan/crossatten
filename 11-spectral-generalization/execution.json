@@ -1,0 +1,38 @@
+{
+ "verdict": "STOP_MECHANISM_GATE",
+ "source_refit_fits": 2,
+ "successful_smoke_fits": 2,
+ "failed_smoke_pretraining_attempts": 2,
+ "source_candidate_fits": 0,
+ "rx_day_fits": 0,
+ "formal_target_fits": 0,
+ "ablation_fits": 0,
+ "gn_fits": 0,
+ "candidate_not_proved_ineffective": true,
+ "targets_achieved": false,
+ "failures": [
+  "ManySig__f0__first__s0__F2__smoke",
+  "ManyRx__f0__first__s0__F2__smoke"
+ ],
+ "no_retries": true,
+ "no_target_selection": true,
+ "evidence": {
+  "11-spectral-generalization/FINAL_CRD_COMPARISONS.md": "960e5bdeb235d4b10859b869cab94c180a3a8f50ff0c24715acc8bd0c7b12ee3",
+  "11-spectral-generalization/MODEL_ABLATIONS.md": "40fb3b570883b3f5a4c8b7cfeee09c5bd76db8eb6aaafe905033bdb6543014e6",
+  "11-spectral-generalization/NOVELTY_AND_TIFS_DECISION.md": "0084bee40cd2d3099fa586a8f870b9407ec8893275ef540ab3b31782e740c467",
+  "11-spectral-generalization/PARAMETERS_AND_RUNTIME.md": "95fdf02057203cb63dd366767d28c15192d0020fa4312dc5f25ea66fc27a65eb",
+  "11-spectral-generalization/PHYSICAL_MECHANISM.md": "a997c8e092479f88a0854b094f938f408cbb610da10fbda80f56f33ca0c8962e",
+  "11-spectral-generalization/README.md": "71ee74a44da8cc7ddc186c8d3e31a339b2d10f43ab1117babe7425b77899fea9",
+  "11-spectral-generalization/RESULTS.md": "18ca13ff656858068e1ff2524793299c25e894910e8a2e677ee61ea007c19bff",
+  "11-spectral-generalization/S11_CODE_AND_CHECKPOINT_AUDIT.md": "d03cfbb2a4f42d1108ffdd171f7a88f121495fbec16961c8cfc541ce5f95b9f5",
+  "11-spectral-generalization/SOURCE_RX_DAY_SCREENING.md": "6cb5e5491973dd5bacbae3fa44c9920e7a3968cab8f762bd9fbbb0b6ca10ff93",
+  "11-spectral-generalization/SOURCE_SPECTRAL_PHYSICS.md": "315efdf7f63affe8b689302dabf0a2502c4e33c41f7ff01ab6ac1ed2e9791157",
+  "11-spectral-generalization/bn_evidence.json": "d5cf3ba4e1cac5d8ae834ac2eab330fc99be16b138f6031f1a0cac9ba6c17bb4",
+  "11-spectral-generalization/costs.json": "4a4893d9c614646d486f6498c422689cb8a25a6f34c1e25cafa12c48d1503940",
+  "11-spectral-generalization/decision_bn.json": "de08d3c5840d8db55605c074bea0f88ae8d5daf35355b227448ced1a18f196ce",
+  "11-spectral-generalization/decision_physics.json": "973e8065179cf9282b15d347b6462a579a9fb4fbd7fb90dd7f5d880af45950c1",
+  "11-spectral-generalization/jobs_restore.status.json": "4efca579e03bff557f468427a9c84fe1f1e319607b77f016fa2a1e77ca47a08c",
+  "11-spectral-generalization/jobs_smoke.status.json": "80cb09f26f33cc13f9ee181926b104f1afe7580fede6086a6afab5696a616bf1",
+  "11-spectral-generalization/sources.json": "1a70a70ef4b43f1675d075a4f4bf1e4e5b1100cf29bf66aac2cfe66d90196043"
+ }
+}

@@ -1,0 +1,51 @@
+{
+ "protocol": {
+  "purpose": "source-only layer/RX/TX moments of frozen hard refits, no target adaptation",
+  "layers": "all BatchNorm1d in unchanged HStem",
+  "statistic": "pre-BN normalized mean drift and log variance ratio; output pooled TX/RX scatter",
+  "intervention": "raw frozen model copied, BN recalibrated on original fit-training packets only",
+  "checkpoint_selection": "already frozen minimum source packet CE",
+  "minimum_distinct_folds": 3,
+  "minimum_recalibration_gain_pp": 1.0,
+  "gate_limit": "two fold0 refits cannot establish systematic normalization benefit or admit GN fits",
+  "additional_training": 0
+ },
+ "checkpoint_metrics": {
+  "11-spectral-generalization/runs/restore/ManyRx__f0__last__s8101__hard__restore/metrics.json": "e4813c508b84416c66891fba0fc9aa27136a44d50c7e01c187f630de42f52ff8",
+  "11-spectral-generalization/runs/restore/ManyRx__f0__last__s8101__hard__restore/config.json": "7b55c0f3cc3d4354acc8f61b773bd70ac75504195635e78b3903ad3c31f45aed",
+  "11-spectral-generalization/runs/restore/ManySig__f0__last__s8101__hard__restore/metrics.json": "a966616b1e845d131015afe46e99965f7c8f63af24d70bf237c590c9a22bdef4",
+  "11-spectral-generalization/runs/restore/ManySig__f0__last__s8101__hard__restore/config.json": "cdedefd9a6b36de6579e43d9cc9efbbf2987e19995acec8becbd084b8363fd31"
+ },
+ "effects": [
+  {
+   "dataset": "ManyRx",
+   "fold": 0,
+   "group": "last",
+   "seed": 8101,
+   "before_pct": 89.33092350493173,
+   "after_fit_only_recalibration_pct": 89.36707113966213,
+   "delta_pp": 0.03614763473039906,
+   "before_ce": 0.389683826516072,
+   "after_ce": 0.39766883850097656,
+   "no_target_adaptation": true,
+   "no_fit_or_model_selection": true
+  },
+  {
+   "dataset": "ManySig",
+   "fold": 0,
+   "group": "last",
+   "seed": 8101,
+   "before_pct": 96.16666666666667,
+   "after_fit_only_recalibration_pct": 96.29166666666666,
+   "delta_pp": 0.12499999999999734,
+   "before_ce": 0.18407795578241348,
+   "after_ce": 0.1903335154056549,
+   "no_target_adaptation": true,
+   "no_fit_or_model_selection": true
+  }
+ ],
+ "registered_refits": 2,
+ "additional_training": 0,
+ "original_weights_missing": true,
+ "refit_checkpoint_byte_matches": 8
+}

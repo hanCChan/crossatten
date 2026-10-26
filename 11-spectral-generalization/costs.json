@@ -1,0 +1,101 @@
+{
+ "gpu": "NVIDIA A100-SXM4-40GB",
+ "torch": "2.5.0+cu124",
+ "cpu_threads": 4,
+ "batch": 128,
+ "rows": [
+  {
+   "dataset": "ManyRx",
+   "model": "hard",
+   "parameter_elements": 91128,
+   "real_parameter_scalars": 91128,
+   "counted_mflops": 10.798336,
+   "cpu4t_b1_p50_ms": 1.6727447509765625,
+   "gpu_b1_p50_ms": 3.2395200729370117,
+   "gpu_b1_p95_ms": 3.400809586048126,
+   "gpu_b128_packets_per_s": 38628.4948396255
+  },
+  {
+   "dataset": "ManyRx",
+   "model": "F1",
+   "parameter_elements": 91128,
+   "real_parameter_scalars": 91128,
+   "counted_mflops": 10.798336,
+   "cpu4t_b1_p50_ms": 1.8344316631555557,
+   "gpu_b1_p50_ms": 3.359104037284851,
+   "gpu_b1_p95_ms": 3.55488486289978,
+   "gpu_b128_packets_per_s": 37393.13661903711
+  },
+  {
+   "dataset": "ManyRx",
+   "model": "F2",
+   "parameter_elements": 91128,
+   "real_parameter_scalars": 91128,
+   "counted_mflops": 10.798336,
+   "cpu4t_b1_p50_ms": 1.8027108162641525,
+   "gpu_b1_p50_ms": 3.284527897834778,
+   "gpu_b1_p95_ms": 3.5069424152374267,
+   "gpu_b128_packets_per_s": 37294.4719949987
+  },
+  {
+   "dataset": "ManyRx",
+   "model": "ASKNet",
+   "parameter_elements": 100240,
+   "real_parameter_scalars": 116369,
+   "counted_mflops": 9.378302,
+   "cpu4t_b1_p50_ms": 2.426266670227051,
+   "gpu_b1_p50_ms": 2.3103519678115845,
+   "gpu_b1_p95_ms": 2.613153505325317,
+   "gpu_b128_packets_per_s": 55250.14259662262
+  },
+  {
+   "dataset": "ManySig",
+   "model": "hard",
+   "parameter_elements": 90868,
+   "real_parameter_scalars": 90868,
+   "counted_mflops": 10.797824,
+   "cpu4t_b1_p50_ms": 1.7835292965173721,
+   "gpu_b1_p50_ms": 3.2233920097351074,
+   "gpu_b1_p95_ms": 3.4531728982925416,
+   "gpu_b128_packets_per_s": 38335.65761353921
+  },
+  {
+   "dataset": "ManySig",
+   "model": "F1",
+   "parameter_elements": 90868,
+   "real_parameter_scalars": 90868,
+   "counted_mflops": 10.797824,
+   "cpu4t_b1_p50_ms": 1.8305275589227676,
+   "gpu_b1_p50_ms": 3.351855993270874,
+   "gpu_b1_p95_ms": 3.56943678855896,
+   "gpu_b128_packets_per_s": 37690.15901489477
+  },
+  {
+   "dataset": "ManySig",
+   "model": "F2",
+   "parameter_elements": 90868,
+   "real_parameter_scalars": 90868,
+   "counted_mflops": 10.797824,
+   "cpu4t_b1_p50_ms": 1.7781797796487808,
+   "gpu_b1_p50_ms": 3.2726240158081055,
+   "gpu_b1_p95_ms": 3.677727913856506,
+   "gpu_b128_packets_per_s": 37541.06032075326
+  },
+  {
+   "dataset": "ManySig",
+   "model": "ASKNet",
+   "parameter_elements": 99724,
+   "real_parameter_scalars": 115853,
+   "counted_mflops": 9.377278,
+   "cpu4t_b1_p50_ms": 2.4677179753780365,
+   "gpu_b1_p50_ms": 2.2999199628829956,
+   "gpu_b1_p95_ms": 2.4611712098121643,
+   "gpu_b128_packets_per_s": 55282.59954122944
+  }
+ ],
+ "random_weights": true,
+ "asknet_random_tie_selected_k": 8,
+ "asknet_complex_operator_fixed_modes": 127,
+ "prior_estimation_cost_excluded_from_inference": true,
+ "counted_flops_incomplete": "supported conv/linear/matmul only; FFT/complex/QR/scalar not fully counted"
+}

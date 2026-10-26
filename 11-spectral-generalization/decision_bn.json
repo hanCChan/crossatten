@@ -1,0 +1,13 @@
+{
+ "admitted": false,
+ "jobs": [],
+ "evidence": {
+  "11-spectral-generalization/checkpoint_refit_replay.csv": "b720b38d0761e284ae109d9724b3f6366d5b8daa04c1ab5ad825911a8b0fb942",
+  "11-spectral-generalization/source_bn_layer_rx.csv": "32d2fe0e26495bdaf149d46d5179649627b381884d1b12d323a013a05b729817",
+  "11-spectral-generalization/source_bn_recalibration.csv": "d3b936a7ac770193ffc8735773977fd84dc1b8516334f97d06e2566ad7f253bb"
+ },
+ "verdict": "NOT_ADMITTED",
+ "coverage": "two dataset-specific fold0/last/seed8101 source refits only",
+ "no_target_data": true,
+ "limitations": "moment drift is descriptive; fit-only recalibration is not BN->GN efficacy; GN requires independently preregistered broader source evidence"
+}

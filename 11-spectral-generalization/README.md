@@ -20,3 +20,18 @@ F1 is fixed63 center bins, a diagnostic not a new contribution.
 F2 is a fixed fit-only variance-ratio prior, g in[.5,1]. No trainable spectral gate,
 new loss, extra depth or Soft reliability-threshold search.
 Targets90%/93.5% and novelty are conditional hypotheses, not promised outcomes.
+
+## Execution
+
+S11 stopped at the frozen zero-fit mechanism gate; see `RESULTS.md`. The agent-added
+raw scatter retention gate is amplitude dependent and is not a proof of identity
+information loss. No formal candidate network comparison or target fit ran.
+Two source hard refits reproduced all eight S09 checkpoint hashes exactly.
+Two F1 smoke fits passed; two F2 smoke attempts failed before training and were not retried.
+The eight reports distinguish completed diagnostics from unexecuted conditional experiments.
+Checkpoints stay in local `runs/` with SHA256 seals; `.pt` files are excluded from ordinary Git.
+
+```bash
+python -m unittest discover -s 11-spectral-generalization -p 'test*.py' -v
+python 11-spectral-generalization/verify.py
+```

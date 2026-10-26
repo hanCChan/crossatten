@@ -46,6 +46,7 @@ def main():
             del model
     save(HERE/"costs.json",dict(gpu=torch.cuda.get_device_name(0),torch=torch.__version__,
         cpu_threads=4,batch=128,rows=rows,random_weights=True,
+        asknet_random_tie_selected_k=8,asknet_complex_operator_fixed_modes=127,
         prior_estimation_cost_excluded_from_inference=True,
         counted_flops_incomplete="supported conv/linear/matmul only; FFT/complex/QR/scalar not fully counted"))
     lines=["# Parameters And Runtime","",
@@ -56,6 +57,9 @@ def main():
         "freedom are separate. No speed superiority claim based on parameter count.",
         "Torch counter omits/not fully counts FFT, QR, complex and scalar operations; counted FLOPs "
         "are partial and not a complete total-operation comparison.",
+        "ASKNet uses random weights with tied cutoff logits (eval k8), not trained checkpoints. "
+        "Its complex operator stays127modes for every cutoff; this is an architectural cost probe, "
+        "not a checkpoint-specific runtime superiority test.",
         "F2 buffer256floats is not a trainable parameter. Both F1/F2 preserve original token/HSTU dimensions."]
     (HERE/"PARAMETERS_AND_RUNTIME.md").write_text("\n".join(lines)+"\n")
 

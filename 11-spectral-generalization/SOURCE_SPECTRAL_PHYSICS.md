@@ -70,3 +70,8 @@ F1 k32 is a diagnostic control, not novelty. F2 is a Fisher-like variance-ratio 
 No target-derived per-fold cutoff or receiver-specific model is constructed.
 Missing TX/RX cells are excluded, not filled with zero. Both audits and final scores are RX equal.
 Raw per-bin/cell evidence: `source_spectral_statistics.csv`, `priors/`, `source_centroid_probes.csv`.
+
+## Interpretation Limits
+The 0.65 raw TX-scatter retention threshold was an agent-added pre-outcome admission rule, not a threshold specified in the supplied S11 plan. Raw scatter is amplitude dependent: uniform invertible scaling changes scatter without deleting information. Failure of this conservative gate does not establish classifier failure or identity-information loss.
+F1 is deterministic. The frozen audit JSON's half_weight_correlation fields on F1 repeat the simultaneously estimated F2 prior's stability; they are not F1 uncertainty estimates.
+Spectral scatter retention averages fit-statistic summaries across folds/groups. For F1 its scalar-bin proxy does not additionally apply the adjacent-phase boundary mask; the held-RX centroid probe and actual model do apply that mask.
