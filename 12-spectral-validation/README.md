@@ -43,3 +43,10 @@ After separate training approval and local preregistration commit, use
 Every attempt is exclusive; no automatic retries. Results: `RESULTS.md`.
 `execute.py` waits for the complete bounded source workflow and commits
 source evidence before conditional confirmation; it never pushes or reads targets.
+
+## Outcome
+
+4/4 smoke and 16/16 pilot fits completed without failure.
+Both candidates failed the frozen joint source gate; confirmation did not run.
+See `RESULTS.md` and `PILOT_SOURCE_RESULTS.md`. Do not rerun the finished
+workflow or reinterpret ManySig gains as authorization to bypass the gate.
