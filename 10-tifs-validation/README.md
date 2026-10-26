@@ -22,3 +22,14 @@ All outputs live here; data caches live in shared `data/wisig`.
 No automatic fit retries, no target reads during training, no target-driven tuning.
 Official ASKNet is imported at pinned commit, not copied/reimplemented.
 Goals of 90%/93% and a SOTA claim are conditional scientific outcomes, not guarantees.
+
+Completed: 32 source fits +24 ASKNet fits +4 smoke fits; no failed training.
+Candidate verdict **STOP**. ManyRx source gain-0.4881pp; only1/4fold positive.
+No conditional soft target fits or new trained ablations were admitted.
+ASKNet CRD88.7697%/93.4838% (ManyRx/ManySig). See `RESULTS.md`.
+Eight tests and independent prediction/access/checkpoint verification passed.
+
+`advance.py` is intentionally fail-closed: the attachment's24-ablation-fit ceiling
+cannot cover both arms x2datasets x4folds x3seeds (48). No such job set is generated.
+The source STOP makes that conditional ambiguity irrelevant to this completed execution;
+future re-registration must resolve it before any ablation fitting, never after target-driven tuning.

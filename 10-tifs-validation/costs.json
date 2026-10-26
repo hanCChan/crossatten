@@ -1,0 +1,121 @@
+{
+ "gpu": "NVIDIA A100-SXM4-40GB",
+ "torch": "2.5.0+cu124",
+ "input": "on-device raw IQ[batch,2,256] to logits; eval mode",
+ "batch": 128,
+ "cpu_threads": 4,
+ "scope": "random weights, same hardware; no training concurrency",
+ "flop_limit": "Torch counts supported convolution/linear/matmul only. FFT, QR, complex/scalar and normalization work not fully counted; not a complete total-FLOP comparison",
+ "rows": [
+  {
+   "dataset": "ManyRx",
+   "model": "hard",
+   "parameter_elements": 91128,
+   "real_parameter_scalars": 91128,
+   "counted_mflops": 10.798336,
+   "cpu4t_b1_p50_ms": 1.7878767102956772,
+   "gpu_b1_p50_ms": 3.31769597530365,
+   "gpu_b1_p95_ms": 3.4620719671249387,
+   "gpu_b128_packets_per_second": 38085.44555610849
+  },
+  {
+   "dataset": "ManyRx",
+   "model": "soft",
+   "parameter_elements": 91128,
+   "real_parameter_scalars": 91128,
+   "counted_mflops": 10.798336,
+   "cpu4t_b1_p50_ms": 1.798141747713089,
+   "gpu_b1_p50_ms": 3.350160002708435,
+   "gpu_b1_p95_ms": 3.437398409843445,
+   "gpu_b128_packets_per_second": 37429.87701851844
+  },
+  {
+   "dataset": "ManyRx",
+   "model": "unweighted",
+   "parameter_elements": 91128,
+   "real_parameter_scalars": 91128,
+   "counted_mflops": 10.798336,
+   "cpu4t_b1_p50_ms": 1.7469599843025208,
+   "gpu_b1_p50_ms": 3.2475039958953857,
+   "gpu_b1_p95_ms": 3.3925168037414553,
+   "gpu_b128_packets_per_second": 38725.73051259516
+  },
+  {
+   "dataset": "ManyRx",
+   "model": "no_hstu",
+   "parameter_elements": 48890,
+   "real_parameter_scalars": 48890,
+   "counted_mflops": 7.652608,
+   "cpu4t_b1_p50_ms": 1.1724140495061874,
+   "gpu_b1_p50_ms": 1.6767839789390564,
+   "gpu_b1_p95_ms": 1.7317616403102876,
+   "gpu_b128_packets_per_second": 72503.17254016048
+  },
+  {
+   "dataset": "ManyRx",
+   "model": "ask",
+   "parameter_elements": 100240,
+   "real_parameter_scalars": 116369,
+   "counted_mflops": 9.378302,
+   "cpu4t_b1_p50_ms": 2.3897364735603333,
+   "gpu_b1_p50_ms": 2.3490560054779053,
+   "gpu_b1_p95_ms": 2.4571071386337278,
+   "gpu_b128_packets_per_second": 54126.0998771889
+  },
+  {
+   "dataset": "ManySig",
+   "model": "hard",
+   "parameter_elements": 90868,
+   "real_parameter_scalars": 90868,
+   "counted_mflops": 10.797824,
+   "cpu4t_b1_p50_ms": 1.7952490597963333,
+   "gpu_b1_p50_ms": 3.300063967704773,
+   "gpu_b1_p95_ms": 3.3941807746887203,
+   "gpu_b128_packets_per_second": 38075.8377882846
+  },
+  {
+   "dataset": "ManySig",
+   "model": "soft",
+   "parameter_elements": 90868,
+   "real_parameter_scalars": 90868,
+   "counted_mflops": 10.797824,
+   "cpu4t_b1_p50_ms": 1.7819683998823166,
+   "gpu_b1_p50_ms": 3.3138879537582397,
+   "gpu_b1_p95_ms": 3.5424880504608156,
+   "gpu_b128_packets_per_second": 38288.31967893408
+  },
+  {
+   "dataset": "ManySig",
+   "model": "unweighted",
+   "parameter_elements": 90868,
+   "real_parameter_scalars": 90868,
+   "counted_mflops": 10.797824,
+   "cpu4t_b1_p50_ms": 1.7378628253936768,
+   "gpu_b1_p50_ms": 3.2329599857330322,
+   "gpu_b1_p95_ms": 3.366852819919586,
+   "gpu_b128_packets_per_second": 38934.934560347
+  },
+  {
+   "dataset": "ManySig",
+   "model": "no_hstu",
+   "parameter_elements": 48630,
+   "real_parameter_scalars": 48630,
+   "counted_mflops": 7.652096,
+   "cpu4t_b1_p50_ms": 1.1686719954013824,
+   "gpu_b1_p50_ms": 1.7085760235786438,
+   "gpu_b1_p95_ms": 1.7780847549438477,
+   "gpu_b128_packets_per_second": 73687.21657227312
+  },
+  {
+   "dataset": "ManySig",
+   "model": "ask",
+   "parameter_elements": 99724,
+   "real_parameter_scalars": 115853,
+   "counted_mflops": 9.377278,
+   "cpu4t_b1_p50_ms": 2.3898202925920486,
+   "gpu_b1_p50_ms": 2.3565919399261475,
+   "gpu_b1_p95_ms": 2.463731253147125,
+   "gpu_b128_packets_per_second": 54200.54379144512
+  }
+ ]
+}

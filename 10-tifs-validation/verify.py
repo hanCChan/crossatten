@@ -56,6 +56,8 @@ def main():
         elif row["role"] == "target":
             if row["rx"] not in target or row["phase"] not in ("ask", "final", "ablation"):
                 raise ValueError("illegal target access")
+            if row["day"] not in ({"CR": (1, 2), "CRD": (3, 4)}.get(row["task"], ())):
+                raise ValueError("target task/day mismatch")
             if row["phase"] != "ask" and not decision["admitted"]:
                 raise ValueError("STOP candidate accessed target")
         else:

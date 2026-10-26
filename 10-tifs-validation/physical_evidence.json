@@ -1,0 +1,79 @@
+{
+ "checkpoints": {
+  "runs/ask/ManyRx__f0__all__s2023__ask__packet/model.pt": "e35744ab80d60647bc405d3b25561a5c4619610843f936a2d42a3d0393ba3f48",
+  "runs/ask/ManyRx__f0__all__s2024__ask__packet/model.pt": "539ed7e5b4112b8b646b36233c84ee6ba7ef9349c3f93ae31ffad6105895cc9b",
+  "runs/ask/ManyRx__f0__all__s2025__ask__packet/model.pt": "0b9b97e31de9ff18523c67b1c1020b2b4240562a76a1a67d89de128be31ea3ed",
+  "runs/ask/ManyRx__f1__all__s2023__ask__packet/model.pt": "def756adbb1a8d94de86f4e9d30e326c0a2f439ae6b1c6409c6901f5c54a80b9",
+  "runs/ask/ManyRx__f1__all__s2024__ask__packet/model.pt": "2ea2f15a841ded9431940234de9a5bba8b0d7bfc720bd6302a4ea96256899d8a",
+  "runs/ask/ManyRx__f1__all__s2025__ask__packet/model.pt": "27ad9a33d0459cde9a02c3e84882972376fd5300eadf46698f2d153232a9fec9",
+  "runs/ask/ManyRx__f2__all__s2023__ask__packet/model.pt": "be58f920bb85103a88a493a03bd1223409831bb19cecc00a096d9196ad0eecb5",
+  "runs/ask/ManyRx__f2__all__s2024__ask__packet/model.pt": "f7b7904b95f919fde36eff110c99669a80a9af8c22c6e7dadf2012e2520cfeef",
+  "runs/ask/ManyRx__f2__all__s2025__ask__packet/model.pt": "ac0e29483c771c786fdb922a4dbdc39db19e080657da097e69b174895bb5a72d",
+  "runs/ask/ManyRx__f3__all__s2023__ask__packet/model.pt": "d9d109ae95c007532f74b72d50986172b8580cce9a1754ba374480bec6dfb016",
+  "runs/ask/ManyRx__f3__all__s2024__ask__packet/model.pt": "1c17a9b978c341c4eb42cc1bf3e209a661fe808d02a1548a93039eab17b88ef1",
+  "runs/ask/ManyRx__f3__all__s2025__ask__packet/model.pt": "d97f4f60cb2de82e1539562171ff845ca0a45909fb16b70eb0f9ec7ba6b209b7",
+  "runs/ask/ManySig__f0__all__s2023__ask__packet/model.pt": "ff9362e73eb59f037b6cf739cb6afedd3062f0f8fc928a9dd802c163ea6817ae",
+  "runs/ask/ManySig__f0__all__s2024__ask__packet/model.pt": "5657ceac69f7d79ea480a2d099479739c4ced26fbdc479470dc486b5d6e434a2",
+  "runs/ask/ManySig__f0__all__s2025__ask__packet/model.pt": "68d742d2e902f020721643b7f74f4c4f412686de9c1a0e861917bab70812b1e1",
+  "runs/ask/ManySig__f1__all__s2023__ask__packet/model.pt": "37545215be25540c58665be2525962116f9041bdb312894b1e58c05bc259f82c",
+  "runs/ask/ManySig__f1__all__s2024__ask__packet/model.pt": "24eb82309463ea10f8d6689fa0737aa66798f730b823b2b813efcf3b6f041523",
+  "runs/ask/ManySig__f1__all__s2025__ask__packet/model.pt": "e71402b378ba8a329ad8a041538b814b2ebb676d02fa3ee33d78b738cfbe93b4",
+  "runs/ask/ManySig__f2__all__s2023__ask__packet/model.pt": "60a58040113f72af01b13a882941a96a9c6919388200579d0eb1ae3128616b8a",
+  "runs/ask/ManySig__f2__all__s2024__ask__packet/model.pt": "df94235456e5658a17435b2704efdd84ccf83178c9f20a7eec80f74a076dbd9d",
+  "runs/ask/ManySig__f2__all__s2025__ask__packet/model.pt": "1646eec27d27674f684a9736fcae626897e99093c082aeec2e19dfd1f5498161",
+  "runs/ask/ManySig__f3__all__s2023__ask__packet/model.pt": "4fd9812853a33996bceeb10bffbd7e9ce568c5dc36b71e13aec3092ad7f15204",
+  "runs/ask/ManySig__f3__all__s2024__ask__packet/model.pt": "7e743c96743b29b9d36d44d40bd4927fbcda6f2860e2e5e9638045c42a63b38f",
+  "runs/ask/ManySig__f3__all__s2025__ask__packet/model.pt": "7218bedcd6e6204f9f0d299e48f539021b15458995cd64a95dbcc9723ef8957d"
+ },
+ "additional_fits": 0,
+ "conditions": {
+  "awgn_db": [
+   0,
+   5,
+   10,
+   20,
+   30
+  ],
+  "shifts": [
+   -4,
+   -2,
+   2,
+   4
+  ],
+  "multipath": [
+   [
+    2,
+    0.3
+   ],
+   [
+    4,
+    0.3
+   ],
+   [
+    8,
+    0.3
+   ],
+   [
+    2,
+    0.6
+   ],
+   [
+    4,
+    0.6
+   ],
+   [
+    8,
+    0.6
+   ]
+  ],
+  "reflection_phase_rad": 0.0,
+  "packets_per_tx_rx_day": 20,
+  "seed": 10101,
+  "scope": "all surviving S10 checkpoints, CRD only; no training/selection; zero padded not circular"
+ },
+ "source_normalization": "same clean hard source scalar RMS for all encoders",
+ "phase_variance": "wrapped perturbation angle variance on clean reliable pairs; high-SNR approximation only",
+ "d_tx": "mean squared pairwise TX-centroid distance / feature dimension",
+ "d_rx": "mean squared TX-conditioned RX-centroid displacement / feature dimension",
+ "missing_historical_hard_weights": true
+}

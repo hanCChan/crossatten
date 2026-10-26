@@ -8,6 +8,7 @@ from features import phase_view, paired_model
 from xa.explore_models import frequency_views
 from xa.frontends import rms_normalize
 from xa.wisig import load_cell
+from report_utils import table
 
 
 def sample(x, y, count=20):
@@ -155,8 +156,16 @@ def main():
     torch.set_num_threads(2)
     reg = json.loads((HERE / "registration.json").read_text())
     device = "cuda"
-    feature_rows = feature_probe(reg, device)
-    accuracy_rows, seals = accuracy_probe(reg, device)
+    if (HERE / "physical_evidence.json").exists():
+        feature_rows = pd.read_csv(HERE / "physical_feature_probes.csv").to_dict("records")
+        accuracy_rows = pd.read_csv(HERE / "physical_accuracy_probes.csv").to_dict("records")
+        seals = json.loads((HERE / "physical_evidence.json").read_text())["checkpoints"]
+        for path, digest in seals.items():
+            if sha(HERE / path) != digest:
+                raise ValueError("cached physical evidence checkpoint changed")
+    else:
+        feature_rows = feature_probe(reg, device)
+        accuracy_rows, seals = accuracy_probe(reg, device)
     pd.DataFrame(feature_rows).to_csv(HERE / "physical_feature_probes.csv", index=False)
     pd.DataFrame(accuracy_rows).to_csv(HERE / "physical_accuracy_probes.csv", index=False)
     save(HERE / "physical_evidence.json", dict(checkpoints=seals, additional_fits=0,
@@ -172,17 +181,27 @@ def main():
         "Frozen diagnostics only; zero additional fits. Conditions registered before source outcomes.",
         "Source phase encoder comparisons use identical packets and draws, common source-only RMS scaling.",
         "DTX=TX-centroid separation; DRX=TX-conditioned RX displacement, both divided by feature dimension.",
-        "", aggregate.to_markdown(index=False, floatfmt=".6f"), "",
+        "", table(aggregate, 6), "",
         "Accuracy curves: `physical_accuracy_probes.csv` (all surviving S10 formal checkpoints, CRD only).",
         "These are controlled distortions added to recorded IQ, not independently acquired electromagnetic environments.",
         "No claim of arbitrary-channel robustness, authentication security or causal RX independence is supported.",
         "Historical S07-S09 weights are missing. Consequently, soft-v-hard CLASSIFIER robustness cannot "
         "be supplied if the soft candidate fails its source gate. Encoder-only differences do not replace it.",
         "No target soft-model diagnostics are run after a STOP gate."]
+    awgn = frame[(frame.perturbation == "awgn") & (frame.value.astype(str) == "20")]
+    if not awgn.empty:
+        means = awgn.groupby(["dataset", "encoder"]).feature_mse.mean()
+        lines += ["", "At20dB AWGN, source normalized phase-feature MSE (hard -> soft): " +
+            "; ".join(f"{d}: {means[d, 'hard']:.6f} -> {means[d, 'soft']:.6f}"
+                      for d in ("ManyRx", "ManySig")) + ".",
+            "Lower feature MSE is consistent with attenuation of uncertain phase, but is NOT sufficient "
+            "to preserve identity discrimination: source ManyRx classification declined under the same candidate.",
+            "Amplitude shrinkage itself lowers MSE; DTX and DRX/DTX are reported to avoid equating "
+            "feature stability with useful RX invariance."]
     if accuracy_rows:
         scores = pd.DataFrame(accuracy_rows).groupby(
             ["dataset", "model", "perturbation", "value"]).accuracy_pct.mean().reset_index()
-        lines += ["", "RX/seed-equal frozen classifier accuracy:", "", scores.to_markdown(index=False, floatfmt=".4f")]
+        lines += ["", "RX/seed-equal frozen classifier accuracy:", "", table(scores)]
     (HERE / "PHYSICAL_ROBUSTNESS.md").write_text("\n".join(lines) + "\n")
 
 

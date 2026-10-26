@@ -1,0 +1,15 @@
+{
+ "job": {
+  "phase": "ask",
+  "dataset": "ManySig",
+  "fold": 3,
+  "seed": 2024,
+  "feature": "ask",
+  "group": "all",
+  "epochs": 200,
+  "policy": "packet",
+  "id": "ManySig__f3__all__s2024__ask__packet"
+ },
+ "gpu": "3",
+ "action": "evaluate"
+}

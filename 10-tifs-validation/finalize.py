@@ -3,6 +3,7 @@ import json
 import numpy as np
 import pandas as pd
 from stage import HERE, ROOT, ASK_SHA, save
+from report_utils import table
 
 
 def main():
@@ -81,7 +82,7 @@ def main():
     (HERE / "ASKNET_FAIR_REPRODUCTION.md").write_text("\n".join(lines) + "\n")
     c = pd.DataFrame(costs["rows"])
     text = ["# Ablations And Costs", "", "Common device, batch128; raw IQ to logits in evaluation mode.",
-        c.to_markdown(index=False, floatfmt=".4f"), "", costs["flop_limit"],
+        table(c), "", costs["flop_limit"],
         "ASKNet has complex parameters. Parameter ELEMENT count and real-scalar degrees are reported separately; "
         "they must not be treated as identical across real/complex models.",
         "Soft and hard have exactly equal parameter counts and identical initialized states.",
@@ -135,6 +136,16 @@ def main():
         checkpoints_preserved=True, private_historical_weights_missing=True))
     title = ["# S10 Final Decision", "", f"**{decision['verdict']}** for the sole soft-reliability candidate.",
         f"{totals} formal fits and4 smoke fits; no failed fits or automatic retries.",
+        "The requested scientific goals were not achieved: ManyRx90% and a new global-SOTA method are NOT established.",
+        "Soft source gain: ManyRx-0.4881pp (1/4fold positive), ManySig+0.5651pp with conflicting groups.",
+        "Frozen WiSig CRD evidence:",
+        "| Method | ManyRx (%) | ManySig (%) |", "|---|---:|---:|",
+        "| Existing own method (S07/S08) | 87.6506 | 93.0116 |",
+        "| Fair ASKNet (S10) | 88.7697 | 93.4838 |",
+        "| Fair IB-RFF (S06) | 88.0702 | 91.0926 |",
+        "| Fair WaveMLP (S06) | 88.0562 | 91.0370 |",
+        "This combines separately frozen dataset-specific evidence, not target-selected new S10 models.",
+        "ASKNet has the largest mean in this finite WiSig comparator set; uncertainty prevents a blanket superiority claim.",
         "Results: `SOURCE_SCREENING.md`, `FINAL_CR_CRD_COMPARISONS.md`, "
         "`TIFS_NOVELTY_ASSESSMENT.md`. No S00-S09/shared-library changes.",
         "No global SOTA or guaranteed90% claim. Outcomes and exclusions are fully disclosed."]
