@@ -1,0 +1,170 @@
+{
+ "phase": "pilot",
+ "admitted": false,
+ "selected": null,
+ "verdict": "STOP_SOURCE_GATE",
+ "choices": {
+  "F1": {
+   "admitted": false,
+   "checks": {
+    "manyrx_mean": false,
+    "manyrx_positive_folds": false,
+    "worst_rx": false,
+    "manysig_mean": true,
+    "manysig_nonnegative_folds": true
+   },
+   "details": {
+    "ManyRx": {
+     "mean_delta_pp": -1.7400462962962961,
+     "folds": {
+      "0": -1.2601851851851866,
+      "1": -1.1249999999999982,
+      "2": -3.1333333333333324,
+      "3": -1.441666666666667
+     },
+     "group_seed_means": {
+      "first:8101": -1.7400462962962961
+     },
+     "worst_rx": "8-14",
+     "worst_rx_delta_pp": -4.700000000000005,
+     "worst_single_pair_delta_pp": -9.599999999999998
+    },
+    "ManySig": {
+     "mean_delta_pp": 2.1666666666666643,
+     "folds": {
+      "0": 6.499999999999996,
+      "1": 2.166666666666667,
+      "2": 1.749999999999996,
+      "3": -1.7500000000000016
+     },
+     "group_seed_means": {
+      "first:8101": 2.1666666666666643
+     },
+     "worst_rx": "2-19",
+     "worst_rx_delta_pp": -3.166666666666673,
+     "worst_single_pair_delta_pp": -3.166666666666673
+    }
+   }
+  },
+  "F2": {
+   "admitted": false,
+   "checks": {
+    "manyrx_mean": false,
+    "manyrx_positive_folds": false,
+    "worst_rx": false,
+    "manysig_mean": true,
+    "manysig_nonnegative_folds": true
+   },
+   "details": {
+    "ManyRx": {
+     "mean_delta_pp": 0.07500000000000051,
+     "folds": {
+      "0": 0.4000000000000022,
+      "1": -2.300000000000002,
+      "2": -0.25833333333333264,
+      "3": 2.4583333333333344
+     },
+     "group_seed_means": {
+      "first:8101": 0.07500000000000051
+     },
+     "worst_rx": "3-19",
+     "worst_rx_delta_pp": -3.533333333333329,
+     "worst_single_pair_delta_pp": -6.950000000000001
+    },
+    "ManySig": {
+     "mean_delta_pp": 3.4062499999999982,
+     "folds": {
+      "0": 7.833333333333331,
+      "1": 3.749999999999998,
+      "2": 2.624999999999999,
+      "3": -0.5833333333333357
+     },
+     "group_seed_means": {
+      "first:8101": 3.4062499999999982
+     },
+     "worst_rx": "1-1",
+     "worst_rx_delta_pp": -0.5833333333333357,
+     "worst_single_pair_delta_pp": -2.9166666666666674
+    }
+   }
+  }
+ },
+ "jobs": [],
+ "evidence": {
+  "12-spectral-validation/runs/pilot/ManyRx__f0__first__s8101__F1__pilot/config.json": "aa98b733b61cf2974a54384ffb1c16a8756b51a85f988835a268a0810a570750",
+  "12-spectral-validation/runs/pilot/ManyRx__f0__first__s8101__F1__pilot/metrics.json": "427b517e2154e0ad054faa51c239a01d5d3422b3694abbfb4aa30c67b49229b8",
+  "12-spectral-validation/runs/pilot/ManyRx__f0__first__s8101__F1__pilot/history.csv": "3e8852402d3ee6bdc1ab2af1adf342dd3317a37e9f770691bb17b1077787e775",
+  "09-phase-invariance/runs/source/ManyRx__f0__first__s8101__first__source/config.json": "72f96fece20adaf68d7d47ad48a9817ef5186a42409f87cd170fa427ff7a2115",
+  "09-phase-invariance/runs/source/ManyRx__f0__first__s8101__first__source/metrics.json": "e584a639a35e0e4b6127fb3ff737ebd52005f5ffb326f1300ad6af0306a69116",
+  "09-phase-invariance/runs/source/ManyRx__f0__first__s8101__first__source/history.csv": "f050ef78c1fe898b455ee97af859d7803e76a87647f5e7b0ae6d2b368ee53ab5",
+  "12-spectral-validation/runs/pilot/ManyRx__f1__first__s8101__F1__pilot/config.json": "43073b3b1e9b15e54822f80059ac4ba3267feee329ae0febe564b87250c3fe0c",
+  "12-spectral-validation/runs/pilot/ManyRx__f1__first__s8101__F1__pilot/metrics.json": "046184f01d72e00fcb1baf9dfe8ff47a74520e35ba3f568eef95978711b014fc",
+  "12-spectral-validation/runs/pilot/ManyRx__f1__first__s8101__F1__pilot/history.csv": "29f61edde767d12f8f54809af621396b745007665f9b669d0aaba166e580ea77",
+  "09-phase-invariance/runs/source/ManyRx__f1__first__s8101__first__source/config.json": "ffe6816e0e768d03f6b2a5e239ecae245eba48bc752e2e856a6342a64232574e",
+  "09-phase-invariance/runs/source/ManyRx__f1__first__s8101__first__source/metrics.json": "08c536d6ef1540431f5a567c7e5f2a5cbe29e6238e8bc31dd1a57b779fa992e5",
+  "09-phase-invariance/runs/source/ManyRx__f1__first__s8101__first__source/history.csv": "0f82b34b6bbbd3376d2d7a1666c35f47d2122a66968ded29f5d4dc049338e1a3",
+  "12-spectral-validation/runs/pilot/ManyRx__f2__first__s8101__F1__pilot/config.json": "4be5a99dd0acc04c1bc10017b1c460c4eb959dae448768b8c355b49ec43c63e2",
+  "12-spectral-validation/runs/pilot/ManyRx__f2__first__s8101__F1__pilot/metrics.json": "9d73981a133e9b80da7911ff46349ea81e3a435415bad031b29b4ded4fd9267a",
+  "12-spectral-validation/runs/pilot/ManyRx__f2__first__s8101__F1__pilot/history.csv": "dd24de692a882de673ef34a3293bce5520dcdb129670ee9ca811d57a4324d228",
+  "09-phase-invariance/runs/source/ManyRx__f2__first__s8101__first__source/config.json": "e23103eb2e6d6f157e4f3b37dcfc30e27b3ad71862afafe377a8be413075591c",
+  "09-phase-invariance/runs/source/ManyRx__f2__first__s8101__first__source/metrics.json": "c0b3301aceea2a70db2b33bab2866f57d92f12a763dda771bbfab67621f79e37",
+  "09-phase-invariance/runs/source/ManyRx__f2__first__s8101__first__source/history.csv": "86dc74ac4c9b3c5a8063b48907336a3252d4d92436720cdd1f9a8d1e32186bed",
+  "12-spectral-validation/runs/pilot/ManyRx__f3__first__s8101__F1__pilot/config.json": "3a9f802b832a2bcee04308f21a911ada9f255231c2a269298b3fac3b6fa41cb5",
+  "12-spectral-validation/runs/pilot/ManyRx__f3__first__s8101__F1__pilot/metrics.json": "cfe98d52a9c007592efb4c493f182201801b5d4fa10900ffc49d19e87e9053d7",
+  "12-spectral-validation/runs/pilot/ManyRx__f3__first__s8101__F1__pilot/history.csv": "7486a5a9e6d76009193c1f11d4683bfcfada6c4586cd8875a4df74ca3f05c444",
+  "09-phase-invariance/runs/source/ManyRx__f3__first__s8101__first__source/config.json": "995169f66d550f3ab78eb7c20a8598c29d0068ebea60ac36f9f8dc1387a6ee22",
+  "09-phase-invariance/runs/source/ManyRx__f3__first__s8101__first__source/metrics.json": "566c873630efb6a5e0e6d3bd890e1534054363441b68046c735d79724459508b",
+  "09-phase-invariance/runs/source/ManyRx__f3__first__s8101__first__source/history.csv": "203d036231f5ff85f36a195db10167e91bd7026e1dec27cdc880f49878acd31f",
+  "12-spectral-validation/runs/pilot/ManySig__f0__first__s8101__F1__pilot/config.json": "2437a60cf34bb756c4932b459730dc54056e525c483b954428144ca00bfe4f1c",
+  "12-spectral-validation/runs/pilot/ManySig__f0__first__s8101__F1__pilot/metrics.json": "c2a973f1f38d6e56b4af50b0e242cdc8f4e39885db727647a95d43a3647085b0",
+  "12-spectral-validation/runs/pilot/ManySig__f0__first__s8101__F1__pilot/history.csv": "b790d6f155842827022a2ce2c0e677a898a96f4d71e24bad0f611deda81e64c8",
+  "09-phase-invariance/runs/source/ManySig__f0__first__s8101__first__source/config.json": "af19a8304ff77b25fbd3785253d5b02b8a961fb20edf9c2844209316eec1bada",
+  "09-phase-invariance/runs/source/ManySig__f0__first__s8101__first__source/metrics.json": "0989b4d37eb73498b0d9b7030f5bd5baae673fd7bc09e4e102b817cecdc3ce78",
+  "09-phase-invariance/runs/source/ManySig__f0__first__s8101__first__source/history.csv": "adf2dc2d42d3331c56267165c07775c7a4f74c14e848fc66d07c5473be608d2b",
+  "12-spectral-validation/runs/pilot/ManySig__f1__first__s8101__F1__pilot/config.json": "b341266486fd2d166d60ab1db6034d654d8d9570787855e2af0ee05ac2ec9a4b",
+  "12-spectral-validation/runs/pilot/ManySig__f1__first__s8101__F1__pilot/metrics.json": "19ae31cefc61da1451790e4ce355b940be0064da9e2b6eb741d3c17f469dec39",
+  "12-spectral-validation/runs/pilot/ManySig__f1__first__s8101__F1__pilot/history.csv": "992797e5ee376614d6ee6f37f89593a71d56ea3bda69efe111a8c174c32b8205",
+  "09-phase-invariance/runs/source/ManySig__f1__first__s8101__first__source/config.json": "78d13d8bb683bd93fde4b2a3f70dddf7573055f6dcd2221ad3a36f110c808742",
+  "09-phase-invariance/runs/source/ManySig__f1__first__s8101__first__source/metrics.json": "2b5e83d14b42d5f5eeb400a550a6c6a1dc3c9c806e766370501f7c4f05ae9a5e",
+  "09-phase-invariance/runs/source/ManySig__f1__first__s8101__first__source/history.csv": "18284ef4e7fa820711982e2c52856c4dcb6137bb760288bc07ff90cf59797bd2",
+  "12-spectral-validation/runs/pilot/ManySig__f2__first__s8101__F1__pilot/config.json": "632f0523ec0d79e63474dd4702c64c36b4cb28eff89c8bc8f7e7ac2740b0d685",
+  "12-spectral-validation/runs/pilot/ManySig__f2__first__s8101__F1__pilot/metrics.json": "a021ce50cd2b4a59634d6d88231ef1f3d83d1a3701624bc2734bdf14d4e8ade9",
+  "12-spectral-validation/runs/pilot/ManySig__f2__first__s8101__F1__pilot/history.csv": "60e9b25bb6b41e4a01dae9c3c79cd6e0332eb6ef6335836a105107813ea9457e",
+  "09-phase-invariance/runs/source/ManySig__f2__first__s8101__first__source/config.json": "4bd94767861d5c94d45addd8b320ab564cc88e03c83dc4f4e7818807e40d3199",
+  "09-phase-invariance/runs/source/ManySig__f2__first__s8101__first__source/metrics.json": "760eddc3be711c7b75b446d7e7159bf6255e9d14bfd7fb0862d8be6f1902d72e",
+  "09-phase-invariance/runs/source/ManySig__f2__first__s8101__first__source/history.csv": "7af7f99b6bf877207d51eeb6ae777ab72d6715f02e46b568af3d02d139cf3ca4",
+  "12-spectral-validation/runs/pilot/ManySig__f3__first__s8101__F1__pilot/config.json": "ba3a270162436bc80890fceffe354530e76b8692424ddffd01a76540378c292a",
+  "12-spectral-validation/runs/pilot/ManySig__f3__first__s8101__F1__pilot/metrics.json": "cad03a11f26d7549f16cff795f8011d98ec87dd157c81c290e67beb197bfa5da",
+  "12-spectral-validation/runs/pilot/ManySig__f3__first__s8101__F1__pilot/history.csv": "c0317153065ec9283b216e08b15477d7edd6b7d324ae9fb641574ea19a043e61",
+  "09-phase-invariance/runs/source/ManySig__f3__first__s8101__first__source/config.json": "72fe5afc125ed9b234c68f75cd1217f86e9cd1ef2ae72a45f4964857ccdbbf69",
+  "09-phase-invariance/runs/source/ManySig__f3__first__s8101__first__source/metrics.json": "e3b9b5ef98b3859c181d7dba789ac82186efebbe36589929b2f082b1b5f14217",
+  "09-phase-invariance/runs/source/ManySig__f3__first__s8101__first__source/history.csv": "1b580d35af7ead91bc3a1f3e5bc607345f8e8f6e92868bb8d787582837694c14",
+  "12-spectral-validation/runs/pilot/ManyRx__f0__first__s8101__F2__pilot/config.json": "66ee5ed409a35e4ee70d0fa396d72282d717e6273b77a70dfa4f59e3e210db82",
+  "12-spectral-validation/runs/pilot/ManyRx__f0__first__s8101__F2__pilot/metrics.json": "5c1da4277a7cd78055e0467286aa8be52f1de9a8cfd93264803fd93f92992288",
+  "12-spectral-validation/runs/pilot/ManyRx__f0__first__s8101__F2__pilot/history.csv": "7269fb5553fe3f7089e0da06afd1fbcdbba15ebe30f93808f0f1c02a5f3c4ee6",
+  "12-spectral-validation/runs/pilot/ManyRx__f1__first__s8101__F2__pilot/config.json": "ce3061738f29be3d60eb41fe9f3690bf71cb4272dbeb86178f67a5c0f5050934",
+  "12-spectral-validation/runs/pilot/ManyRx__f1__first__s8101__F2__pilot/metrics.json": "2ecce60f29f70e5e3c76cca4c99c9b455663fc97c7eeaace37cad79c906fc598",
+  "12-spectral-validation/runs/pilot/ManyRx__f1__first__s8101__F2__pilot/history.csv": "8ac3b4da451751f0d1654db98d475ccb5b03af8ab1f013101f9dc15233cc91b9",
+  "12-spectral-validation/runs/pilot/ManyRx__f2__first__s8101__F2__pilot/config.json": "958a163d055d30c92934b29369944725b75d595d6420d3ce24ced721884efec4",
+  "12-spectral-validation/runs/pilot/ManyRx__f2__first__s8101__F2__pilot/metrics.json": "fb9266132d806873b85490df33c211ccb27c6c7216f4af45e0b58639c321862a",
+  "12-spectral-validation/runs/pilot/ManyRx__f2__first__s8101__F2__pilot/history.csv": "782233dfcab7c9ce5b21022c58da688b43a21d0a56254d952f305bd8475a5dff",
+  "12-spectral-validation/runs/pilot/ManyRx__f3__first__s8101__F2__pilot/config.json": "f7499006a6f157cb2a8a7dec400a9f34a7e0a10d8326319f847d6acf2b2fe7f7",
+  "12-spectral-validation/runs/pilot/ManyRx__f3__first__s8101__F2__pilot/metrics.json": "b5f4f30720d5679bd9cf3b405fabda7b897a72c78e06e9297deb69a236fcea7a",
+  "12-spectral-validation/runs/pilot/ManyRx__f3__first__s8101__F2__pilot/history.csv": "9766085ebc0b49aee1fe6af44738d1436f2959c8ab18a0d41c1bb39bf7b3a59b",
+  "12-spectral-validation/runs/pilot/ManySig__f0__first__s8101__F2__pilot/config.json": "b941d0f47942acdeeec1dd0e58076f902937fbfd95b841a276dac785c2cf0adb",
+  "12-spectral-validation/runs/pilot/ManySig__f0__first__s8101__F2__pilot/metrics.json": "7be54eb07c38b896dba9e120d99714bb5dced8b2f74fe1d056823dd03737f8b9",
+  "12-spectral-validation/runs/pilot/ManySig__f0__first__s8101__F2__pilot/history.csv": "f4b14efee63e4ae516d43bbe19922a38dac135a712cb1afca1cbf6fa83a47dce",
+  "12-spectral-validation/runs/pilot/ManySig__f1__first__s8101__F2__pilot/config.json": "c5089953f5aa376bb24edbb6f361da497b7ff8108347e295e4cc364654dac1a0",
+  "12-spectral-validation/runs/pilot/ManySig__f1__first__s8101__F2__pilot/metrics.json": "0b69619286300e7a855cac82e7a6f6ff7eefe8c841fb2558202f98330c3fbac4",
+  "12-spectral-validation/runs/pilot/ManySig__f1__first__s8101__F2__pilot/history.csv": "254031185b667fbab304de584a88db001d2f509180b9447f8036fccd74a82282",
+  "12-spectral-validation/runs/pilot/ManySig__f2__first__s8101__F2__pilot/config.json": "b3293bceeb7706b9914a4ccb262f887fa6a3fcefa458228950585ae64375ee17",
+  "12-spectral-validation/runs/pilot/ManySig__f2__first__s8101__F2__pilot/metrics.json": "080dfc85d263c776d09958c1e05d2de1db7e7296d3fe50432fc857932e4302a8",
+  "12-spectral-validation/runs/pilot/ManySig__f2__first__s8101__F2__pilot/history.csv": "074144610784ddf07fa74209584a6f86aa6a379f97864e774b6951c01e902842",
+  "12-spectral-validation/runs/pilot/ManySig__f3__first__s8101__F2__pilot/config.json": "78da9c3cf3f65f7d82679aa2422ab8b0e0dd3d2e697c6182e7a287999b60fe32",
+  "12-spectral-validation/runs/pilot/ManySig__f3__first__s8101__F2__pilot/metrics.json": "2d578bada4d8d3786564da544461c38a431911a293187a7553cfe91d32448227",
+  "12-spectral-validation/runs/pilot/ManySig__f3__first__s8101__F2__pilot/history.csv": "24e8d4cd260447f43158ab632a5968a7af3b441038bd66563e1ea1d466adeb48"
+ },
+ "no_target_reads": true,
+ "primary_rule": "raw_packet",
+ "pilot_excluded_from_confirmation_inference": true
+}
