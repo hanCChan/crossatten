@@ -144,7 +144,7 @@ def target_report():
         external = list(csv.DictReader(stream))
     baseline_comparisons = []
     for dataset, phase, feature, policy, task in keys:
-        if task != "CRD" or (phase == "attribution" and (feature != "first" or policy != "fixed")) or \
+        if task != "CRD" or (phase == "attribution" and feature != "first") or \
                 (phase == "final" and feature == "first"):
             continue
         values = [r for r in raw_rx if (r["dataset"], r["phase"], r["feature"], r["policy"], r["task"]) ==

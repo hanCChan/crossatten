@@ -1,0 +1,139 @@
+{
+ "gpu": "NVIDIA A100-SXM4-40GB",
+ "torch": "2.5.0+cu124",
+ "cpu_threads": 4,
+ "snapshots": [
+  {
+   "processes": [
+    "[Not Found], 30",
+    "[Not Found], 30",
+    "[Not Found], 30",
+    "[Not Found], 30"
+   ],
+   "utilization": [
+    "0",
+    "0",
+    "0",
+    "0"
+   ]
+  },
+  {
+   "processes": [
+    "[Not Found], 30",
+    "[Not Found], 30",
+    "[Not Found], 30",
+    "[Not Found], 30"
+   ],
+   "utilization": [
+    "0",
+    "0",
+    "0",
+    "0"
+   ]
+  }
+ ],
+ "rows": [
+  {
+   "dataset": "ManySig",
+   "feature": "frequency",
+   "params": 90420,
+   "mflops": 10.568448,
+   "cpu4t_b1_ms": 1.5791654586791992,
+   "gpu_b1_p50_ms": 3.103999972343445,
+   "gpu_b1_p95_ms": 3.1662096261978148,
+   "gpu_b256_packets_per_second": 82169.68998584336
+  },
+  {
+   "dataset": "ManySig",
+   "feature": "null",
+   "params": 90868,
+   "mflops": 10.797824,
+   "cpu4t_b1_ms": 1.766066998243332,
+   "gpu_b1_p50_ms": 3.320479989051819,
+   "gpu_b1_p95_ms": 3.4092191815376283,
+   "gpu_b256_packets_per_second": 76571.51157950136
+  },
+  {
+   "dataset": "ManySig",
+   "feature": "first",
+   "params": 90868,
+   "mflops": 10.797824,
+   "cpu4t_b1_ms": 1.82337686419487,
+   "gpu_b1_p50_ms": 3.355952024459839,
+   "gpu_b1_p95_ms": 4.284542226791381,
+   "gpu_b256_packets_per_second": 73584.87071202531
+  },
+  {
+   "dataset": "ManySig",
+   "feature": "centered",
+   "params": 90868,
+   "mflops": 10.797824,
+   "cpu4t_b1_ms": 1.9295737147331238,
+   "gpu_b1_p50_ms": 4.001935958862305,
+   "gpu_b1_p95_ms": 5.674430537223816,
+   "gpu_b256_packets_per_second": 61192.95826822182
+  },
+  {
+   "dataset": "ManySig",
+   "feature": "curvature",
+   "params": 90868,
+   "mflops": 10.797824,
+   "cpu4t_b1_ms": 1.8579848110675812,
+   "gpu_b1_p50_ms": 3.518112063407898,
+   "gpu_b1_p95_ms": 4.997814416885376,
+   "gpu_b256_packets_per_second": 71666.60714149245
+  },
+  {
+   "dataset": "ManyRx",
+   "feature": "frequency",
+   "params": 90680,
+   "mflops": 10.56896,
+   "cpu4t_b1_ms": 1.6919448971748352,
+   "gpu_b1_p50_ms": 3.7540640830993652,
+   "gpu_b1_p95_ms": 4.626713800430298,
+   "gpu_b256_packets_per_second": 81103.41241571082
+  },
+  {
+   "dataset": "ManyRx",
+   "feature": "null",
+   "params": 91128,
+   "mflops": 10.798336,
+   "cpu4t_b1_ms": 1.7992742359638214,
+   "gpu_b1_p50_ms": 3.6865280866622925,
+   "gpu_b1_p95_ms": 5.35838086605072,
+   "gpu_b256_packets_per_second": 70680.43006415232
+  },
+  {
+   "dataset": "ManyRx",
+   "feature": "first",
+   "params": 91128,
+   "mflops": 10.798336,
+   "cpu4t_b1_ms": 1.8967166543006897,
+   "gpu_b1_p50_ms": 3.829584002494812,
+   "gpu_b1_p95_ms": 4.95845103263855,
+   "gpu_b256_packets_per_second": 51729.37988587412
+  },
+  {
+   "dataset": "ManyRx",
+   "feature": "centered",
+   "params": 91128,
+   "mflops": 10.798336,
+   "cpu4t_b1_ms": 2.308689057826996,
+   "gpu_b1_p50_ms": 3.632256031036377,
+   "gpu_b1_p95_ms": 4.57743694782257,
+   "gpu_b256_packets_per_second": 68537.16130735495
+  },
+  {
+   "dataset": "ManyRx",
+   "feature": "curvature",
+   "params": 91128,
+   "mflops": 10.798336,
+   "cpu4t_b1_ms": 1.8994733691215515,
+   "gpu_b1_p50_ms": 3.544991970062256,
+   "gpu_b1_p95_ms": 5.010969543457031,
+   "gpu_b256_packets_per_second": 65936.42169909705
+  }
+ ],
+ "registration_sha256": "ee13da9f582fa3ae1f097755cb7df930c56ab1173b501779e9942352a3a3d589",
+ "note": "Random initialized weights, synthetic resident IQ to logits. Includes features/FFT in time but not all scalar/FFT FLOPs. Excludes packet detection and transfers. Runtime variance prevents speedup claims from parameter count alone."
+}

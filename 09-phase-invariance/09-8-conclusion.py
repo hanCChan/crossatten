@@ -81,7 +81,7 @@ def main():
         "| 数据集 | 本轮模型 | 公平基线 | 本轮CRD | 基线CRD | 差值 pp | 条件RX95%区间 pp |\n",
         "|---|---|---|---:|---:|---:|---|\n"])
     for r in baseline:
-        lines.append(f"| {r['dataset']} | {r['phase']}:{r['feature']} | {r['baseline']} | "
+        lines.append(f"| {r['dataset']} | {r['feature']}:{r['policy']} | {r['baseline']} | "
                      f"{float(r['candidate_pct']):.2f}% | {float(r['baseline_pct']):.2f}% | "
                      f"{float(r['delta_pp']):+.2f} | [{float(r['ci95_low_pp']):+.2f}, "
                      f"{float(r['ci95_high_pp']):+.2f}] |\n")
@@ -89,8 +89,13 @@ def main():
                  "ManyRx89.19/88.68，不与公平多种子重训混用。"
                  "新核实官方ASKNet方法，尚未完成同协议重训，因此不宣称全局SOTA。"
                  "确切的Liverpool2026高阶谱差分文献仍未核实，不能虚构引文或宣称二阶差分首创。\n")
+    lines.append("\n两个已登记训练策略分别报告，不能在看到目标分数后择优作为新候选。"
+                 "S08原93.01%与本轮固定策略92.36%使用不同种子且初始化配对方式不同，"
+                 "不是同种子回退比较。普通早停92.90%也属于预登记消融，不是新源域结转赢家。\n")
     lines.extend(["\n## 机制与论文主张\n\n",
         "- 相位是已有Re/Im FFT信息的确定变换，属于显式归纳偏置，不增加原始信息量。\n",
+        "- 容量控制：12个固定策略fit分别在CR/CRD评测，零相位与三通道共24组预测"
+        "的最大logit差为0；448个零输入权重没有带来额外收益。\n",
         "- 新附加通道对理想循环平移更稳定；真实IQ补零截窗、CFO和频选信道并不普遍不变。"
         "保留的Re/Im使整个网络也不具有严格时移不变性。\n",
         "- 源域特征Fisher比、逐TX召回及模型扰动响应为机制诊断，不是独立验证，"
@@ -114,6 +119,40 @@ def main():
     save(HERE / "execution.json", dict(rows=counts, note="Summed fit elapsed times are not dedicated GPU-hours; "
         "MPS concurrent fits. Evaluation, CPU diagnostics and benchmarks excluded.",
         formal_fits=acceptance["formal_fits"], torch=json.loads((HERE / "costs.json").read_text())["torch"]))
+    execution_lines = [
+        "# S09 Execution Record\n\n",
+        "Completed locally on2026-10-26, Asia/Shanghai. "
+        "Four NVIDIA A100-SXM4-40GB GPUs with CUDA MPS; "
+        "source queue used eight fits/GPU across GPUs0-2, "
+        "attribution six fits on GPU3. Every trainer used two CPU threads.\n\n",
+        "Python3.12.8, PyTorch2.5.0+cu124, CUDA12.4. Existing cached first100 "
+        "non-equalized packets/TX/RX/day; normalized float32 IQ,256 samples. "
+        "Official four-fold receiver lists and source dates1-2 unchanged.\n\n",
+        "| Phase | Fits | Sum fit elapsed hours | Min seconds | Max seconds |\n",
+        "|---|---:|---:|---:|---:|\n"]
+    for r in counts:
+        execution_lines.append(f"| {r['phase']} | {r['fits']} | {r['summed_elapsed_hours']:.6f} | "
+                               f"{r['min_seconds']:.3f} | {r['max_seconds']:.3f} |\n")
+    execution_lines.extend([
+        "\nSummed durations are not dedicated GPU-hours or total wall time: "
+        "fits share GPUs concurrently. They exclude loading/setup, target-only evaluation, "
+        "CPU diagnostics and inference benchmarking. No architectural training-speed claim.\n\n",
+        "All156 formal fits and five smoke fits completed with zero failed/interrupted "
+        "training attempts. All96 source fits ran exactly40 epochs. Formal attribution "
+        "had36 fixed-budget and24 raw-packet early-stop fits. "
+        "No new centered/curvature mechanism passed the source gate, so zero conditional "
+        "final fits were run. Sixty registered attribution models each evaluated CR and CRD.\n\n",
+        f"Source decision committed at{acceptance['decision_committed_at']}. "
+        "No target reads preceded that decision. Shared initialization, train/validation "
+        "partitions, source/target roles, weights and predictions passed acceptance. "
+        "Raw/EMA checkpoints from one fit are correlated outputs, not extra seeds.\n\n",
+        "Only model parameters are EMA averaged; clean fit-training inputs recalibrate "
+        "BatchNorm each epoch. No held, packet-validation or target BN calibration. "
+        "Final inference is a single checkpoint, not an ensemble.\n\n",
+        "Historical S00-S08 and shared library remain unchanged. Weights stay ignored/local; "
+        "configs, histories, predictions and weight hashes are versioned. "
+        "No target-selected retries, new losses, automatic merge or push.\n"])
+    (HERE / "S09_EXECUTION.md").write_text("".join(execution_lines))
     save(HERE / "conclusion_evidence.json", dict(acceptance_sha256=sha(HERE / "acceptance.json"),
                                                results_sha256=sha(HERE / "RESULTS.md"),
                                                report_sha256=sha(HERE / "S09_FINAL_RESULTS.md")))

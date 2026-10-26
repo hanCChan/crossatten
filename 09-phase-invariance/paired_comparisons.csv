@@ -1,0 +1,13 @@
+dataset,phase,task,contrast,delta_pp,ci95_low_pp,ci95_high_pp,improved_rx,receivers
+ManySig,attribution,CR,first:fixed-null:fixed,4.53472222222222,1.9814236111111099,7.344907407407404,11,12
+ManySig,attribution,CRD,first:fixed-null:fixed,5.675925925925923,2.414351851851847,9.120428240740736,10,12
+ManySig,attribution,CR,first:fixed-frequency:fixed,4.53472222222222,1.9814236111111099,7.344907407407404,11,12
+ManySig,attribution,CRD,first:fixed-frequency:fixed,5.675925925925923,2.414351851851847,9.120428240740736,10,12
+ManySig,attribution,CR,null:fixed-frequency:fixed,0.0,0.0,0.0,0,12
+ManySig,attribution,CRD,null:fixed-frequency:fixed,0.0,0.0,0.0,0,12
+ManySig,attribution,CR,first:packet-null:packet,3.689814814814813,1.3726851851851851,6.530208333333322,9,12
+ManySig,attribution,CRD,first:packet-null:packet,4.3865740740740735,1.7129050925925893,7.527777777777779,9,12
+ManySig,attribution,CR,first:fixed-first:packet,-0.9166666666666665,-2.7407986111111113,0.6528356481481443,5,12
+ManySig,attribution,CRD,first:fixed-first:packet,-0.5347222222222227,-2.303298611111113,1.1597222222222225,7,12
+ManySig,attribution,CR,null:fixed-null:packet,-1.7615740740740728,-3.5348379629629636,-0.04398148148148029,3,12
+ManySig,attribution,CRD,null:fixed-null:packet,-1.8240740740740726,-3.574074074074072,-0.06012731481481772,4,12

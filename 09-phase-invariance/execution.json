@@ -1,0 +1,35 @@
+{
+ "rows": [
+  {
+   "phase": "smoke",
+   "fits": 5,
+   "summed_elapsed_hours": 0.0013866666666666667,
+   "min_seconds": 0.801,
+   "max_seconds": 1.141
+  },
+  {
+   "phase": "attribution",
+   "fits": 60,
+   "summed_elapsed_hours": 0.3544133333333333,
+   "min_seconds": 6.687,
+   "max_seconds": 98.212
+  },
+  {
+   "phase": "source",
+   "fits": 96,
+   "summed_elapsed_hours": 4.084546666666667,
+   "min_seconds": 53.168,
+   "max_seconds": 270.629
+  },
+  {
+   "phase": "final",
+   "fits": 0,
+   "summed_elapsed_hours": 0.0,
+   "min_seconds": 0,
+   "max_seconds": 0
+  }
+ ],
+ "note": "Summed fit elapsed times are not dedicated GPU-hours; MPS concurrent fits. Evaluation, CPU diagnostics and benchmarks excluded.",
+ "formal_fits": 156,
+ "torch": "2.5.0+cu124"
+}

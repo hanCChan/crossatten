@@ -62,3 +62,33 @@ Reuse the existing S08 source/target role guard, manifests, exact packet partiti
 - No target read until B finishes and its decision is committed. A is attribution, not candidate selection; its target scores cannot change B, the final recipe or the number of trials.
 - Centering weak-resultant fallback is retained exactly as in the CPU probe and reported explicitly. Only extra channels have the ideal invariance; the retained Re/Im channels and full classifier do not.
 - All weights stay local and ignored. No automatic merge or push.
+
+## Completed Outcome
+
+All156 formal fits and five GPU smoke fits completed without failed/interrupted
+training attempts. Source decision was committed as `96d52db` at
+`2026-10-26T09:24:10+08:00`, before any new target read.
+
+ManySig fixed-policy CRD: first92.36%, null86.69%, frequency86.69%.
+The strict phase-content contrast is +5.68pp with conditional receiver95%
+interval [+2.41,+9.12],10/12 receivers improved. Null and frequency produce
+exactly identical target logits across all24 CR/CRD prediction comparisons.
+The registered raw-packet early-stop contrast is also positive: first92.90%
+versus null88.51%, +4.39pp [+1.71,+7.53].
+
+Fixed S08 stopping/EMA policy did not improve over packet early-stop for
+these fresh seeds. No centered/curvature feature passed the3/4 source-fold
+gate in either dataset, so no conditional final mechanism fit was run.
+Ideal circular-shift robustness improved, but did not deliver consistent
+held-source RX gains; crop/CFO diagnostics retain important failure modes.
+
+See `RESULTS.md` for the Chinese conclusion, `S09_FINAL_RESULTS.md` for full
+paired/fold/seed comparisons, `SOURCE_RESULTS.md` and `MECHANISM_PROBES.md`
+for negative mechanisms, `S09_COSTS.md` for measured costs and
+`S09_EXECUTION.md` for runtime scope. The visual summary is
+`S09_MECHANISM_SUMMARY.png`/`.pdf`.
+
+S08 historical93.01% remains separate. S09 did not establish global SOTA,
+universal timing-invariant TX identity, or a standalone EMA contribution.
+Registered experiments are complete and stopped; no automatic search,
+merge, GitHub push or weight publication.
