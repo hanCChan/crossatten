@@ -1,0 +1,46 @@
+[
+ {
+  "phase": "smoke",
+  "dataset": "ManyRx",
+  "fold": 0,
+  "group": "first",
+  "seed": 0,
+  "feature": "F1",
+  "epochs": 2,
+  "policy": "source",
+  "id": "ManyRx__f0__first__s0__F1__smoke"
+ },
+ {
+  "phase": "smoke",
+  "dataset": "ManyRx",
+  "fold": 0,
+  "group": "first",
+  "seed": 0,
+  "feature": "F2",
+  "epochs": 2,
+  "policy": "source",
+  "id": "ManyRx__f0__first__s0__F2__smoke"
+ },
+ {
+  "phase": "smoke",
+  "dataset": "ManySig",
+  "fold": 0,
+  "group": "first",
+  "seed": 0,
+  "feature": "F1",
+  "epochs": 2,
+  "policy": "source",
+  "id": "ManySig__f0__first__s0__F1__smoke"
+ },
+ {
+  "phase": "smoke",
+  "dataset": "ManySig",
+  "fold": 0,
+  "group": "first",
+  "seed": 0,
+  "feature": "F2",
+  "epochs": 2,
+  "policy": "source",
+  "id": "ManySig__f0__first__s0__F2__smoke"
+ }
+]
