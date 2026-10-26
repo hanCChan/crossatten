@@ -1,0 +1,233 @@
+/data/miniforge/envs/env-3.12/lib/python3.12/site-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+[k@init] argmax_k=8  soft_k=32.000  top_prob=0.1667
+Train Epoch 1	Loss: 1.594138, Acc: 14855/32527 (45.67%)
+Validation	Loss: 0.6663, Acc: 11726/13941 (84.11%)
+[k@epoch 1] argmax_k=24  soft_k=31.700  top_prob=0.1785
+Validation loss improved inf -> 0.666287, saving model.
+------------------------------------------------
+Train Epoch 2	Loss: 0.632515, Acc: 27299/32527 (83.93%)
+Validation	Loss: 0.4901, Acc: 12242/13941 (87.81%)
+[k@epoch 2] argmax_k=24  soft_k=31.997  top_prob=0.1886
+Validation loss improved 0.666287 -> 0.490144, saving model.
+------------------------------------------------
+Train Epoch 3	Loss: 0.509480, Acc: 28209/32527 (86.72%)
+Validation	Loss: 0.4057, Acc: 12498/13941 (89.65%)
+[k@epoch 3] argmax_k=32  soft_k=32.234  top_prob=0.1971
+Validation loss improved 0.490144 -> 0.405745, saving model.
+------------------------------------------------
+Train Epoch 4	Loss: 0.438269, Acc: 28752/32527 (88.39%)
+Validation	Loss: 0.3838, Acc: 12482/13941 (89.53%)
+[k@epoch 4] argmax_k=32  soft_k=32.651  top_prob=0.2079
+Validation loss improved 0.405745 -> 0.383762, saving model.
+------------------------------------------------
+Train Epoch 5	Loss: 0.395975, Acc: 29010/32527 (89.19%)
+Validation	Loss: 0.3640, Acc: 12509/13941 (89.73%)
+[k@epoch 5] argmax_k=32  soft_k=33.083  top_prob=0.2137
+Validation loss improved 0.383762 -> 0.363957, saving model.
+------------------------------------------------
+Train Epoch 6	Loss: 0.355465, Acc: 29330/32527 (90.17%)
+Validation	Loss: 0.3336, Acc: 12673/13941 (90.90%)
+[k@epoch 6] argmax_k=32  soft_k=33.280  top_prob=0.2207
+Validation loss improved 0.363957 -> 0.333648, saving model.
+------------------------------------------------
+Train Epoch 7	Loss: 0.346879, Acc: 29353/32527 (90.24%)
+Validation	Loss: 0.3271, Acc: 12672/13941 (90.90%)
+[k@epoch 7] argmax_k=32  soft_k=33.522  top_prob=0.2256
+Validation loss improved 0.333648 -> 0.327088, saving model.
+------------------------------------------------
+Train Epoch 8	Loss: 0.327970, Acc: 29535/32527 (90.80%)
+Validation	Loss: 0.3164, Acc: 12681/13941 (90.96%)
+[k@epoch 8] argmax_k=32  soft_k=33.777  top_prob=0.2335
+Validation loss improved 0.327088 -> 0.316439, saving model.
+------------------------------------------------
+Train Epoch 9	Loss: 0.319593, Acc: 29608/32527 (91.03%)
+Validation	Loss: 0.3211, Acc: 12705/13941 (91.13%)
+[k@epoch 9] argmax_k=32  soft_k=34.041  top_prob=0.2405
+No improvement for 1 epoch(s).
+------------------------------------------------
+Train Epoch 10	Loss: 0.305287, Acc: 29673/32527 (91.23%)
+Validation	Loss: 0.3117, Acc: 12699/13941 (91.09%)
+[k@epoch 10] argmax_k=32  soft_k=34.316  top_prob=0.2488
+Validation loss improved 0.316439 -> 0.311674, saving model.
+------------------------------------------------
+Train Epoch 11	Loss: 0.299733, Acc: 29801/32527 (91.62%)
+Validation	Loss: 0.2955, Acc: 12724/13941 (91.27%)
+[k@epoch 11] argmax_k=32  soft_k=34.460  top_prob=0.2510
+Validation loss improved 0.311674 -> 0.295488, saving model.
+------------------------------------------------
+Train Epoch 12	Loss: 0.287488, Acc: 29836/32527 (91.73%)
+Validation	Loss: 0.3059, Acc: 12730/13941 (91.31%)
+[k@epoch 12] argmax_k=32  soft_k=34.706  top_prob=0.2578
+No improvement for 1 epoch(s).
+------------------------------------------------
+Train Epoch 13	Loss: 0.282931, Acc: 29848/32527 (91.76%)
+Validation	Loss: 0.3285, Acc: 12628/13941 (90.58%)
+[k@epoch 13] argmax_k=32  soft_k=34.832  top_prob=0.2587
+No improvement for 2 epoch(s).
+------------------------------------------------
+Train Epoch 14	Loss: 0.263971, Acc: 30061/32527 (92.42%)
+Validation	Loss: 0.3475, Acc: 12446/13941 (89.28%)
+[k@epoch 14] argmax_k=32  soft_k=35.037  top_prob=0.2609
+No improvement for 3 epoch(s).
+------------------------------------------------
+Train Epoch 15	Loss: 0.252489, Acc: 30090/32527 (92.51%)
+Validation	Loss: 0.3051, Acc: 12747/13941 (91.44%)
+[k@epoch 15] argmax_k=32  soft_k=35.458  top_prob=0.2666
+No improvement for 4 epoch(s).
+------------------------------------------------
+Train Epoch 16	Loss: 0.252899, Acc: 30155/32527 (92.71%)
+Validation	Loss: 0.2975, Acc: 12776/13941 (91.64%)
+[k@epoch 16] argmax_k=32  soft_k=35.615  top_prob=0.2714
+No improvement for 5 epoch(s).
+------------------------------------------------
+Train Epoch 17	Loss: 0.242737, Acc: 30221/32527 (92.91%)
+Validation	Loss: 0.2783, Acc: 12872/13941 (92.33%)
+[k@epoch 17] argmax_k=32  soft_k=35.836  top_prob=0.2740
+Validation loss improved 0.295488 -> 0.278263, saving model.
+------------------------------------------------
+Train Epoch 18	Loss: 0.235324, Acc: 30262/32527 (93.04%)
+Validation	Loss: 0.3147, Acc: 12776/13941 (91.64%)
+[k@epoch 18] argmax_k=32  soft_k=36.058  top_prob=0.2765
+No improvement for 1 epoch(s).
+------------------------------------------------
+Train Epoch 19	Loss: 0.222906, Acc: 30406/32527 (93.48%)
+Validation	Loss: 0.2854, Acc: 12844/13941 (92.13%)
+[k@epoch 19] argmax_k=32  soft_k=36.523  top_prob=0.2770
+No improvement for 2 epoch(s).
+------------------------------------------------
+Train Epoch 20	Loss: 0.232790, Acc: 30304/32527 (93.17%)
+Validation	Loss: 0.3139, Acc: 12743/13941 (91.41%)
+[k@epoch 20] argmax_k=32  soft_k=36.687  top_prob=0.2827
+No improvement for 3 epoch(s).
+------------------------------------------------
+Train Epoch 21	Loss: 0.227262, Acc: 30380/32527 (93.40%)
+Validation	Loss: 0.2852, Acc: 12835/13941 (92.07%)
+[k@epoch 21] argmax_k=32  soft_k=36.938  top_prob=0.2878
+No improvement for 4 epoch(s).
+------------------------------------------------
+Train Epoch 22	Loss: 0.221776, Acc: 30425/32527 (93.54%)
+Validation	Loss: 0.2854, Acc: 12838/13941 (92.09%)
+[k@epoch 22] argmax_k=32  soft_k=37.198  top_prob=0.2899
+No improvement for 5 epoch(s).
+------------------------------------------------
+Train Epoch 23	Loss: 0.208177, Acc: 30530/32527 (93.86%)
+Validation	Loss: 0.2899, Acc: 12843/13941 (92.12%)
+[k@epoch 23] argmax_k=32  soft_k=37.427  top_prob=0.2975
+No improvement for 6 epoch(s).
+------------------------------------------------
+Train Epoch 24	Loss: 0.165473, Acc: 30956/32527 (95.17%)
+Validation	Loss: 0.2605, Acc: 12904/13941 (92.56%)
+[k@epoch 24] argmax_k=32  soft_k=37.457  top_prob=0.2978
+Validation loss improved 0.278263 -> 0.260487, saving model.
+------------------------------------------------
+Train Epoch 25	Loss: 0.149695, Acc: 31104/32527 (95.63%)
+Validation	Loss: 0.2578, Acc: 12920/13941 (92.68%)
+[k@epoch 25] argmax_k=32  soft_k=37.501  top_prob=0.2976
+Validation loss improved 0.260487 -> 0.257822, saving model.
+------------------------------------------------
+Train Epoch 26	Loss: 0.144567, Acc: 31126/32527 (95.69%)
+Validation	Loss: 0.2564, Acc: 12924/13941 (92.70%)
+[k@epoch 26] argmax_k=32  soft_k=37.559  top_prob=0.2974
+Validation loss improved 0.257822 -> 0.256427, saving model.
+------------------------------------------------
+Train Epoch 27	Loss: 0.147861, Acc: 31128/32527 (95.70%)
+Validation	Loss: 0.2578, Acc: 12922/13941 (92.69%)
+[k@epoch 27] argmax_k=32  soft_k=37.601  top_prob=0.2979
+No improvement for 1 epoch(s).
+------------------------------------------------
+Train Epoch 28	Loss: 0.142491, Acc: 31153/32527 (95.78%)
+Validation	Loss: 0.2578, Acc: 12938/13941 (92.81%)
+[k@epoch 28] argmax_k=32  soft_k=37.661  top_prob=0.2975
+No improvement for 2 epoch(s).
+------------------------------------------------
+Train Epoch 29	Loss: 0.145393, Acc: 31128/32527 (95.70%)
+Validation	Loss: 0.2609, Acc: 12917/13941 (92.65%)
+[k@epoch 29] argmax_k=32  soft_k=37.723  top_prob=0.2975
+No improvement for 3 epoch(s).
+------------------------------------------------
+Train Epoch 30	Loss: 0.141378, Acc: 31204/32527 (95.93%)
+Validation	Loss: 0.2582, Acc: 12930/13941 (92.75%)
+[k@epoch 30] argmax_k=32  soft_k=37.780  top_prob=0.2977
+No improvement for 4 epoch(s).
+------------------------------------------------
+Train Epoch 31	Loss: 0.137865, Acc: 31227/32527 (96.00%)
+Validation	Loss: 0.2600, Acc: 12932/13941 (92.76%)
+[k@epoch 31] argmax_k=32  soft_k=37.831  top_prob=0.2979
+No improvement for 5 epoch(s).
+------------------------------------------------
+Train Epoch 32	Loss: 0.134782, Acc: 31229/32527 (96.01%)
+Validation	Loss: 0.2620, Acc: 12934/13941 (92.78%)
+[k@epoch 32] argmax_k=32  soft_k=37.892  top_prob=0.2979
+No improvement for 6 epoch(s).
+------------------------------------------------
+Train Epoch 33	Loss: 0.132556, Acc: 31328/32527 (96.31%)
+Validation	Loss: 0.2602, Acc: 12946/13941 (92.86%)
+[k@epoch 33] argmax_k=32  soft_k=37.899  top_prob=0.2979
+No improvement for 7 epoch(s).
+------------------------------------------------
+Train Epoch 34	Loss: 0.134009, Acc: 31278/32527 (96.16%)
+Validation	Loss: 0.2600, Acc: 12949/13941 (92.88%)
+[k@epoch 34] argmax_k=32  soft_k=37.906  top_prob=0.2979
+No improvement for 8 epoch(s).
+------------------------------------------------
+Train Epoch 35	Loss: 0.129036, Acc: 31298/32527 (96.22%)
+Validation	Loss: 0.2601, Acc: 12950/13941 (92.89%)
+[k@epoch 35] argmax_k=32  soft_k=37.912  top_prob=0.2979
+No improvement for 9 epoch(s).
+------------------------------------------------
+Train Epoch 36	Loss: 0.124861, Acc: 31352/32527 (96.39%)
+Validation	Loss: 0.2601, Acc: 12946/13941 (92.86%)
+[k@epoch 36] argmax_k=32  soft_k=37.920  top_prob=0.2979
+No improvement for 10 epoch(s).
+Early stopping at epoch 36.
+
+========================================================================
+Per-epoch k selection summary
+Candidates: [8, 16, 24, 32, 48, 64]
+------------------------------------------------------------------------
+epoch | argmax_k |     soft_k |   top_prob
+------------------------------------------------------------------------
+    0 |        8 |     32.000 |     0.1667
+    1 |       24 |     31.700 |     0.1785
+    2 |       24 |     31.997 |     0.1886
+    3 |       32 |     32.234 |     0.1971
+    4 |       32 |     32.651 |     0.2079
+    5 |       32 |     33.083 |     0.2137
+    6 |       32 |     33.280 |     0.2207
+    7 |       32 |     33.522 |     0.2256
+    8 |       32 |     33.777 |     0.2335
+    9 |       32 |     34.041 |     0.2405
+   10 |       32 |     34.316 |     0.2488
+   11 |       32 |     34.460 |     0.2510
+   12 |       32 |     34.706 |     0.2578
+   13 |       32 |     34.832 |     0.2587
+   14 |       32 |     35.037 |     0.2609
+   15 |       32 |     35.458 |     0.2666
+   16 |       32 |     35.615 |     0.2714
+   17 |       32 |     35.836 |     0.2740
+   18 |       32 |     36.058 |     0.2765
+   19 |       32 |     36.523 |     0.2770
+   20 |       32 |     36.687 |     0.2827
+   21 |       32 |     36.938 |     0.2878
+   22 |       32 |     37.198 |     0.2899
+   23 |       32 |     37.427 |     0.2975
+   24 |       32 |     37.457 |     0.2978
+   25 |       32 |     37.501 |     0.2976
+   26 |       32 |     37.559 |     0.2974
+   27 |       32 |     37.601 |     0.2979
+   28 |       32 |     37.661 |     0.2975
+   29 |       32 |     37.723 |     0.2975
+   30 |       32 |     37.780 |     0.2977
+   31 |       32 |     37.831 |     0.2979
+   32 |       32 |     37.892 |     0.2979
+   33 |       32 |     37.899 |     0.2979
+   34 |       32 |     37.906 |     0.2979
+   35 |       32 |     37.912 |     0.2979
+   36 |       32 |     37.920 |     0.2979
+------------------------------------------------------------------------
+Final selected k (last epoch): 32
+Most frequent k across epochs: 32 (34/37 epochs)
+========================================================================
+
+[k-trace] wrote /dockerdata/741295a3-c730-4a4c-89a6-62abee1cbfb4/worktrees/crossatten-latest/10-tifs-validation/runs/ask/ManyRx__f0__all__s2024__ask__packet/k_trace.txt

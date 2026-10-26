@@ -1,0 +1,15 @@
+{
+ "job": {
+  "phase": "ask",
+  "dataset": "ManyRx",
+  "fold": 1,
+  "seed": 2023,
+  "feature": "ask",
+  "group": "all",
+  "epochs": 200,
+  "policy": "packet",
+  "id": "ManyRx__f1__all__s2023__ask__packet"
+ },
+ "gpu": "3",
+ "action": "fit"
+}
