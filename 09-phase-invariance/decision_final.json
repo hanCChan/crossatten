@@ -1,0 +1,1445 @@
+{
+ "registration_sha256": "ee13da9f582fa3ae1f097755cb7df930c56ab1173b501779e9942352a3a3d589",
+ "evidence": {
+  "runs/source/ManyRx__f0__first__s8101__first__source/metrics.json": "e584a639a35e0e4b6127fb3ff737ebd52005f5ffb326f1300ad6af0306a69116",
+  "runs/source/ManyRx__f0__first__s8101__centered__source/metrics.json": "0a1304e1ea77f7a766c4cf98308c7ad770a7b8c4d7930244d47d160e35dfbb27",
+  "runs/source/ManyRx__f0__first__s8101__curvature__source/metrics.json": "29a371012d948bbc6a6cf9622088825464ebeddc014144c8f1d7c9465a5c2819",
+  "runs/source/ManyRx__f0__first__s8102__first__source/metrics.json": "64e6cda5217d3157355b603629118c54327a54a80e2e540f1d716c087abffcc6",
+  "runs/source/ManyRx__f0__first__s8102__centered__source/metrics.json": "8929efddd3b85ae069dfaaeeb75941304c7e6bc976847b326d6eb10020172196",
+  "runs/source/ManyRx__f0__first__s8102__curvature__source/metrics.json": "b4c43aa670e3935b049b76eaa807146792b558ff4444398d9ede89eae35d960e",
+  "runs/source/ManyRx__f0__last__s8101__first__source/metrics.json": "115963e8bc21980f5712aa9c654d0e713df93cddb5e7f6951d7c4580d47206c7",
+  "runs/source/ManyRx__f0__last__s8101__centered__source/metrics.json": "f5e5f290d8aa3ce87ec03f2c09198c961fbb940ecf1c91de14f1b608015d8a86",
+  "runs/source/ManyRx__f0__last__s8101__curvature__source/metrics.json": "58a2125fafc1f1902d53eb72a582711f68384569b5a08804afdf16201d2bebf6",
+  "runs/source/ManyRx__f0__last__s8102__first__source/metrics.json": "3a45702f91d805be6ba1a956e9287fd3fa28d4b656f4df250bf9ef237d426c56",
+  "runs/source/ManyRx__f0__last__s8102__centered__source/metrics.json": "157d09a8655dd1732c692640bdb8fd3abd484f770ca3471c985312bdc0bfa6e3",
+  "runs/source/ManyRx__f0__last__s8102__curvature__source/metrics.json": "4d32d297930edc09469f7cf5c38f0bcf13be90241ffa03b9855291d0c80ba239",
+  "runs/source/ManySig__f0__first__s8101__first__source/metrics.json": "0989b4d37eb73498b0d9b7030f5bd5baae673fd7bc09e4e102b817cecdc3ce78",
+  "runs/source/ManySig__f0__first__s8101__centered__source/metrics.json": "bdd77036ba91d09c8ca2236987f96f2b6a36b233919fe50509fc513cff22f89e",
+  "runs/source/ManySig__f0__first__s8101__curvature__source/metrics.json": "6eef9244752bc14b6f075d30dfbb4b0028940552c1f57245a5b28b28754d216e",
+  "runs/source/ManySig__f0__first__s8102__first__source/metrics.json": "cbd30867b2675fa0b639e2cde2053972459b1d267a5f3e2dec9f66d6e5b847f3",
+  "runs/source/ManySig__f0__first__s8102__centered__source/metrics.json": "8517277a51d3831d285080436eed659753243005c8b1ce31ff762d6a8712a441",
+  "runs/source/ManySig__f0__first__s8102__curvature__source/metrics.json": "44118c2f9af4cd77f3973b9f1aa337c15fa945085512d4776d0747d772b41710",
+  "runs/source/ManySig__f0__last__s8101__first__source/metrics.json": "3d09070e7d0da2a8fe8b4756fd2ee72b4eef8f0bafdca97f44a4de121adad952",
+  "runs/source/ManySig__f0__last__s8101__centered__source/metrics.json": "3256fbfdf7f0886bd1d9dba92867b4bbb8328d17031261acb7aeee05d9a64f4e",
+  "runs/source/ManySig__f0__last__s8101__curvature__source/metrics.json": "a686ce4bf75ceb31d0f15e8ea5027be94493a2a1388fd4a0211ca2604be1741e",
+  "runs/source/ManySig__f0__last__s8102__first__source/metrics.json": "a081869a9e2fd5f7345efea1556b142a68ce0815739ae35b2ea18877bbec3cc6",
+  "runs/source/ManySig__f0__last__s8102__centered__source/metrics.json": "14c834e74ff6e224be31cc4edecee72782a12c7506169edb542d6321a7319c4d",
+  "runs/source/ManySig__f0__last__s8102__curvature__source/metrics.json": "fff0b4a9eaf638d9b4ef594e5303c9318d4473c74a8810fb9fce1e9aa30cce60",
+  "runs/source/ManyRx__f1__first__s8101__first__source/metrics.json": "08c536d6ef1540431f5a567c7e5f2a5cbe29e6238e8bc31dd1a57b779fa992e5",
+  "runs/source/ManyRx__f1__first__s8101__centered__source/metrics.json": "43afd5a4abf9cca8731cd1cbbc110d9c7f67ad54483edeaf5bff5f3a2a99cae3",
+  "runs/source/ManyRx__f1__first__s8101__curvature__source/metrics.json": "3bee1a7933d386bdc64f3535a2405fefd9937f748ffce1706b635ca5d70cf08a",
+  "runs/source/ManyRx__f1__first__s8102__first__source/metrics.json": "61b5083c5e59a95b299544d7356cb4e7fca7d05b7a0878d5af8f8f2d8d5d2a57",
+  "runs/source/ManyRx__f1__first__s8102__centered__source/metrics.json": "942c438ccad1259b3389072d4795ce5e9de5726484990e936a2eabf3b363df26",
+  "runs/source/ManyRx__f1__first__s8102__curvature__source/metrics.json": "d5cd6cf63f489af182a916130c2141156557ea7ac126f7b92b0ff4287f6fb501",
+  "runs/source/ManyRx__f1__last__s8101__first__source/metrics.json": "363c3e1fc2c01c05e30af00ba6450d3d3ea7531506962929f4b6cfbdb073e65e",
+  "runs/source/ManyRx__f1__last__s8101__centered__source/metrics.json": "5c4728ff0761747c75bd5c1821175080bebba855d003c94b95ea5a4cfc9ab539",
+  "runs/source/ManyRx__f1__last__s8101__curvature__source/metrics.json": "32cdefbab255902b0bd6223045ff0268aac03c162c49b5f2633064f151feafe1",
+  "runs/source/ManyRx__f1__last__s8102__first__source/metrics.json": "e04d5faa9b2b8e4d5a4f370e9bac2b81b4250ab73329a8f6b9d9f229e9d83df2",
+  "runs/source/ManyRx__f1__last__s8102__centered__source/metrics.json": "290947cfd704db4181cb112f643dba4aeaf6fa2865f4526f8a227e6395fbf77a",
+  "runs/source/ManyRx__f1__last__s8102__curvature__source/metrics.json": "3ee23586a507bec8483823ee90a06f79a97324da6ab698e525c10e47f6d8d0f8",
+  "runs/source/ManySig__f1__first__s8101__first__source/metrics.json": "2b5e83d14b42d5f5eeb400a550a6c6a1dc3c9c806e766370501f7c4f05ae9a5e",
+  "runs/source/ManySig__f1__first__s8101__centered__source/metrics.json": "8908f8a42e841ef74b2ff9c840dbec7835dda056a878fb76622ea233d9c13e68",
+  "runs/source/ManySig__f1__first__s8101__curvature__source/metrics.json": "5908f34d7d2ff50ec0978a3ce697478cfe446074744dea32c4fb407f7274fd2f",
+  "runs/source/ManySig__f1__first__s8102__first__source/metrics.json": "bd786474f8d2f4bc71eccf3b6b691f7d65225e1e9906a7ff311c7b9466e75fe8",
+  "runs/source/ManySig__f1__first__s8102__centered__source/metrics.json": "ee698ea2ac2600a711dc735df07115d151de96bd6ddcfb2ecd4e17cc95f7374f",
+  "runs/source/ManySig__f1__first__s8102__curvature__source/metrics.json": "8a85ee4c8ccbbe1094661842a4107822b8f53f24c3008ebbebbcbff46ab3a14f",
+  "runs/source/ManySig__f1__last__s8101__first__source/metrics.json": "ccc5ea524db450197bec7f7ff061d4224971137dfb7ba34a885fad32d3bceef0",
+  "runs/source/ManySig__f1__last__s8101__centered__source/metrics.json": "02fa23ca02004bb9221c05a1bb63e0017745641d4017edd5011781f53db50c45",
+  "runs/source/ManySig__f1__last__s8101__curvature__source/metrics.json": "d1ab5543496d5f95a96c6f907138d926a6756648ff18bee272fe05cf1ae7e520",
+  "runs/source/ManySig__f1__last__s8102__first__source/metrics.json": "c1a7e38be31f9a94a9839dde3dc689759555e3427506d0a46b358d11d41db7d4",
+  "runs/source/ManySig__f1__last__s8102__centered__source/metrics.json": "9d04ddb64557ed3e7ecd52785502ea01d82d69d155241cc6b66f4649c038359b",
+  "runs/source/ManySig__f1__last__s8102__curvature__source/metrics.json": "1c214a9ab961c785721bee18fdacb1eac73e1938bc75347f9ee4d2a572783144",
+  "runs/source/ManyRx__f2__first__s8101__first__source/metrics.json": "c0b3301aceea2a70db2b33bab2866f57d92f12a763dda771bbfab67621f79e37",
+  "runs/source/ManyRx__f2__first__s8101__centered__source/metrics.json": "f6b06d323210f0ca7979ea3cf53786b099aa0129f6d595ed649265577f3d711e",
+  "runs/source/ManyRx__f2__first__s8101__curvature__source/metrics.json": "e1b03dc663028bf84fa3c80d7fc881a73809d3fa955444b7b735e02aec57302b",
+  "runs/source/ManyRx__f2__first__s8102__first__source/metrics.json": "f4c6c21e50948b2843dacf9db772a0dbf916290dceb9540f0f163851f6d0bb14",
+  "runs/source/ManyRx__f2__first__s8102__centered__source/metrics.json": "54cc65b151b3d199dbd766159d4ebd551d4c7f17f53e439cb4e3a0396866c2c1",
+  "runs/source/ManyRx__f2__first__s8102__curvature__source/metrics.json": "1bc2d19fd39597a5473c1eb07cccd081043d1e75907b37d55b8a8882f214f6b6",
+  "runs/source/ManyRx__f2__last__s8101__first__source/metrics.json": "3066560bfd171a2bb8a8489869b3b45d8f3d0279401f3f9e30e953bf24cc1d95",
+  "runs/source/ManyRx__f2__last__s8101__centered__source/metrics.json": "1ddc45a83d45de3863ca2c9615a9604489302124341e2dae80ceb8bb6073a5ac",
+  "runs/source/ManyRx__f2__last__s8101__curvature__source/metrics.json": "5e2877f0075d83866600d0c0e178e88447e78dec91535ad569531b7c313874e7",
+  "runs/source/ManyRx__f2__last__s8102__first__source/metrics.json": "a7f578ba18562717292e6ec0719f8c386275a4e5d6ca32a4eb3654a58c11dc5d",
+  "runs/source/ManyRx__f2__last__s8102__centered__source/metrics.json": "8bb43bce008fca4cb196e0f33a6a910014ff2d9a8a70b27c8006953ecdb533cc",
+  "runs/source/ManyRx__f2__last__s8102__curvature__source/metrics.json": "d494130818a1e660a534ff7fc435b2a8d38cbbf2be80cf0e2d3623f7c5b794dd",
+  "runs/source/ManySig__f2__first__s8101__first__source/metrics.json": "760eddc3be711c7b75b446d7e7159bf6255e9d14bfd7fb0862d8be6f1902d72e",
+  "runs/source/ManySig__f2__first__s8101__centered__source/metrics.json": "dbda53f8308797f18cffd1944c074e101795adf346089ae03b9c6d141a48bd48",
+  "runs/source/ManySig__f2__first__s8101__curvature__source/metrics.json": "5fa77c42bede00cdc5f1fe956d983d8e2a9d9d89850c82214397e1d2cdf1a1bd",
+  "runs/source/ManySig__f2__first__s8102__first__source/metrics.json": "1bee8b49954c6c65550038f9c358d83ae11fe012557f10e1a8d7a8195904f88d",
+  "runs/source/ManySig__f2__first__s8102__centered__source/metrics.json": "89d5830eef83729c09dac341a77920347f116c20ddf9e3f9e39c5e880643e98a",
+  "runs/source/ManySig__f2__first__s8102__curvature__source/metrics.json": "75f2c0c3937de1859c8c2768931698668f72f6007f67b2b9e1b0c92fa8416ddf",
+  "runs/source/ManySig__f2__last__s8101__first__source/metrics.json": "339ec64e9d00db50ae08301428f845065d7a999fbdea504b802cdf1ac08c57ce",
+  "runs/source/ManySig__f2__last__s8101__centered__source/metrics.json": "e46ba807fa4a5ca8f32b7cb8198ff62893d47a7e89885994509ead1420845d6f",
+  "runs/source/ManySig__f2__last__s8101__curvature__source/metrics.json": "266ad7b5a57f7a83ff242f06a752ed9fc584afe6fc2bfa308dfc00b7eb0ef20e",
+  "runs/source/ManySig__f2__last__s8102__first__source/metrics.json": "61b30fee30e96f7fc1de63ed8f085eeb508d269dab77e9ac7a8ab2d60e3599a6",
+  "runs/source/ManySig__f2__last__s8102__centered__source/metrics.json": "05a2915306c6d8ffa2cd7a1adce07a8856856cedbdddc3fa5e82c5a2a7725930",
+  "runs/source/ManySig__f2__last__s8102__curvature__source/metrics.json": "7da764e9d7cfdab985c2e48d452605d2e6e9b284bfb9b4d186d0e1faf9eddbac",
+  "runs/source/ManyRx__f3__first__s8101__first__source/metrics.json": "566c873630efb6a5e0e6d3bd890e1534054363441b68046c735d79724459508b",
+  "runs/source/ManyRx__f3__first__s8101__centered__source/metrics.json": "03e27e1ed2322e9054d4073a13070abda2521b7d710617d80bd7874a46d2b6fc",
+  "runs/source/ManyRx__f3__first__s8101__curvature__source/metrics.json": "1b7cc53132ede56762c8e1774506d6734ad681c1f9a8efc348ac52ca60d7b26d",
+  "runs/source/ManyRx__f3__first__s8102__first__source/metrics.json": "e9f9f669000838e166acc2255e65eb72f3711bef145e3f4be6b1dec2eb5d5016",
+  "runs/source/ManyRx__f3__first__s8102__centered__source/metrics.json": "3f041ed299270648d8fc01d902a5098929d4e2036fed512ef844a6b06964a441",
+  "runs/source/ManyRx__f3__first__s8102__curvature__source/metrics.json": "e6cff44c3cf8ea10613c60a815ce2d01a97b8fc964d1bfea150d42fdb80be300",
+  "runs/source/ManyRx__f3__last__s8101__first__source/metrics.json": "8d1039f3c53650a718369615690d1c3d007d9e157e6f9b585e5888359fa015df",
+  "runs/source/ManyRx__f3__last__s8101__centered__source/metrics.json": "4dc420a4135c27cd2e681edf4a8e50bd9b688e9677973ef73bb4c9d90c922d7f",
+  "runs/source/ManyRx__f3__last__s8101__curvature__source/metrics.json": "a0166f4d799cc02544e34f4016b83ae4e8ca5ea7bc9e875e73bf4b7ab11aebfb",
+  "runs/source/ManyRx__f3__last__s8102__first__source/metrics.json": "c3a34fa23673585cd7c6a54285b4d1a5ff8fbf63949884ea8b83251af4035a57",
+  "runs/source/ManyRx__f3__last__s8102__centered__source/metrics.json": "8f0722fdf9d1ebfc8d1faa4581152c6609d0abf2f23d53defb43b88e63e8b6ed",
+  "runs/source/ManyRx__f3__last__s8102__curvature__source/metrics.json": "3fc350d746963a3120dd9b72f0875fa20d23718f4d927c2ca12fdbd46ef78629",
+  "runs/source/ManySig__f3__first__s8101__first__source/metrics.json": "e3b9b5ef98b3859c181d7dba789ac82186efebbe36589929b2f082b1b5f14217",
+  "runs/source/ManySig__f3__first__s8101__centered__source/metrics.json": "d3ee3825a3ef2bb565692c87ca2e9166d8d8949132a00e9811d93b2c3f6c5aab",
+  "runs/source/ManySig__f3__first__s8101__curvature__source/metrics.json": "555f5460e3068fd1a32e8551993dcff3ab4003f0359e9b031c8a248174404d11",
+  "runs/source/ManySig__f3__first__s8102__first__source/metrics.json": "0a98f96d5db9ae1c265d771140cb7c106f11256b2894b20122a1218ba4264273",
+  "runs/source/ManySig__f3__first__s8102__centered__source/metrics.json": "2a025a96024941768448d97900c94be7b7e8d6261e659f66969411a06f7c6bc1",
+  "runs/source/ManySig__f3__first__s8102__curvature__source/metrics.json": "f51255e7953f964d5888796de9ce29c2881c4357f051e4b0a7804a4c23f30233",
+  "runs/source/ManySig__f3__last__s8101__first__source/metrics.json": "8c559358d1f82b1b6662ac827273ec7c67e0d591fea6aa046dfa635faea96a09",
+  "runs/source/ManySig__f3__last__s8101__centered__source/metrics.json": "0f13eb001cfb4c25c8519c8f353563845ef5ac243f47f3d99d74c89c1adcae95",
+  "runs/source/ManySig__f3__last__s8101__curvature__source/metrics.json": "2a256aea7ac1d1b2ea40d80ddffa53018382e66f9242150b83faed2a49468042",
+  "runs/source/ManySig__f3__last__s8102__first__source/metrics.json": "0cd1e559f3fc3e63903767a5334a336f6da2fffd617f528318e09891ed2a4dc2",
+  "runs/source/ManySig__f3__last__s8102__centered__source/metrics.json": "d78b8cdc01603ae83355b11f1927143cc5e75b38fc1cf729dfc69053dfeb81be",
+  "runs/source/ManySig__f3__last__s8102__curvature__source/metrics.json": "5eaceaa329ce6fa9bc9c24a57dd87c607d980390faddf56258dd794633f67534"
+ },
+ "choices": {
+  "ManyRx": {
+   "centered:raw_held": {
+    "admitted": false,
+    "folds": {
+     "0": {
+      "supported": false,
+      "mean_delta_pp": 0.19836752465865748,
+      "worst_rx_delta_pp": -1.8000000000000016,
+      "epochs": [
+       4,
+       7,
+       4,
+       2
+      ],
+      "mean_acc_pct": 88.92474665652354,
+      "seed_deltas": {
+       "8101": 0.7033444156429647,
+       "8102": -0.3066093663256497
+      },
+      "group_deltas": {
+       "first": 0.11388888888888005,
+       "last": 0.2828461604284349
+      }
+     },
+     "1": {
+      "supported": true,
+      "mean_delta_pp": 0.8864230489082553,
+      "worst_rx_delta_pp": -1.275000000000004,
+      "epochs": [
+       12,
+       3,
+       9,
+       2
+      ],
+      "mean_acc_pct": 92.00284406814681,
+      "seed_deltas": {
+       "8101": 0.6575862166121882,
+       "8102": 1.1152598812043224
+      },
+      "group_deltas": {
+       "first": 0.8500000000000008,
+       "last": 0.9228460978165098
+      }
+     },
+     "2": {
+      "supported": false,
+      "mean_delta_pp": 0.22081739338233597,
+      "worst_rx_delta_pp": -2.374999999999999,
+      "epochs": [
+       3,
+       2,
+       8,
+       4
+      ],
+      "mean_acc_pct": 91.42042758201117,
+      "seed_deltas": {
+       "8101": 0.10057284688045898,
+       "8102": 0.34106193988421296
+      },
+      "group_deltas": {
+       "first": 0.11666666666667602,
+       "last": 0.3249681200979959
+      }
+     },
+     "3": {
+      "supported": false,
+      "mean_delta_pp": -0.3912037037036964,
+      "worst_rx_delta_pp": -2.6000000000000023,
+      "epochs": [
+       6,
+       3,
+       3,
+       5
+      ],
+      "mean_acc_pct": 92.96736111111112,
+      "seed_deltas": {
+       "8101": -0.7240740740740603,
+       "8102": -0.05833333333333246
+      },
+      "group_deltas": {
+       "first": -0.9166666666666545,
+       "last": 0.13425925925926174
+      }
+     }
+    },
+    "mean_gain": 0.22860106581138812,
+    "worst": -2.6000000000000023
+   },
+   "centered:ema_held": {
+    "admitted": false,
+    "folds": {
+     "0": {
+      "supported": false,
+      "mean_delta_pp": 0.29649837626423703,
+      "worst_rx_delta_pp": -1.1842105263157876,
+      "epochs": [
+       6,
+       5,
+       4,
+       4
+      ],
+      "mean_acc_pct": 89.31766115264368,
+      "seed_deltas": {
+       "8101": 0.24802229819134713,
+       "8102": 0.3449744543371269
+      },
+      "group_deltas": {
+       "first": 0.3560185185185194,
+       "last": 0.23697823400995466
+      }
+     },
+     "1": {
+      "supported": true,
+      "mean_delta_pp": 0.7937430605123308,
+      "worst_rx_delta_pp": -1.924999999999999,
+      "epochs": [
+       7,
+       4,
+       3,
+       3
+      ],
+      "mean_acc_pct": 91.55233435495113,
+      "seed_deltas": {
+       "8101": 0.7456871345029203,
+       "8102": 0.8417989865217412
+      },
+      "group_deltas": {
+       "first": 1.1833333333333362,
+       "last": 0.40415278769132534
+      }
+     },
+     "2": {
+      "supported": false,
+      "mean_delta_pp": 0.6155935505549409,
+      "worst_rx_delta_pp": -1.6250000000000042,
+      "epochs": [
+       4,
+       4,
+       5,
+       6
+      ],
+      "mean_acc_pct": 91.90928078210634,
+      "seed_deltas": {
+       "8101": -0.04367478743254605,
+       "8102": 1.2748618885424279
+      },
+      "group_deltas": {
+       "first": 0.787499999999991,
+       "last": 0.44368710110989085
+      }
+     },
+     "3": {
+      "supported": false,
+      "mean_delta_pp": -0.2645833333333264,
+      "worst_rx_delta_pp": -1.9000000000000072,
+      "epochs": [
+       4,
+       3,
+       4,
+       7
+      ],
+      "mean_acc_pct": 94.16018518518518,
+      "seed_deltas": {
+       "8101": -0.6254629629629527,
+       "8102": 0.09629629629629988
+      },
+      "group_deltas": {
+       "first": -0.4624999999999879,
+       "last": -0.06666666666666488
+      }
+     }
+    },
+    "mean_gain": 0.36031291349954564,
+    "worst": -1.924999999999999
+   },
+   "curvature:raw_held": {
+    "admitted": false,
+    "folds": {
+     "0": {
+      "supported": false,
+      "mean_delta_pp": -0.27579791064027137,
+      "worst_rx_delta_pp": -2.3500000000000023,
+      "epochs": [
+       3,
+       6,
+       4,
+       9
+      ],
+      "mean_acc_pct": 88.45058122122461,
+      "seed_deltas": {
+       "8101": 0.028247001932618643,
+       "8102": -0.5798428232131614
+      },
+      "group_deltas": {
+       "first": -0.962500000000005,
+       "last": 0.4109041787194623
+      }
+     },
+     "1": {
+      "supported": false,
+      "mean_delta_pp": -0.7423120651080529,
+      "worst_rx_delta_pp": -4.850000000000004,
+      "epochs": [
+       10,
+       2,
+       1,
+       6
+      ],
+      "mean_acc_pct": 90.37410895413049,
+      "seed_deltas": {
+       "8101": -1.8129669283844962,
+       "8102": 0.3283427981683906
+      },
+      "group_deltas": {
+       "first": -1.316666666666666,
+       "last": -0.16795746354943963
+      }
+     },
+     "2": {
+      "supported": false,
+      "mean_delta_pp": -0.7221133296601068,
+      "worst_rx_delta_pp": -3.600000000000003,
+      "epochs": [
+       4,
+       3,
+       7,
+       5
+      ],
+      "mean_acc_pct": 90.47749685896873,
+      "seed_deltas": {
+       "8101": -1.082157481498175,
+       "8102": -0.3620691778220386
+      },
+      "group_deltas": {
+       "first": -1.6125000000000056,
+       "last": 0.16827334067979205
+      }
+     },
+     "3": {
+      "supported": false,
+      "mean_delta_pp": -1.0662037037037027,
+      "worst_rx_delta_pp": -6.55,
+      "epochs": [
+       6,
+       3,
+       3,
+       5
+      ],
+      "mean_acc_pct": 92.2923611111111,
+      "seed_deltas": {
+       "8101": -1.1236111111111113,
+       "8102": -1.0087962962962937
+      },
+      "group_deltas": {
+       "first": -2.0041666666666567,
+       "last": -0.1282407407407482
+      }
+     }
+    },
+    "mean_gain": -0.7016067522780334,
+    "worst": -6.55
+   },
+   "curvature:ema_held": {
+    "admitted": false,
+    "folds": {
+     "0": {
+      "supported": false,
+      "mean_delta_pp": 0.24258654010710645,
+      "worst_rx_delta_pp": -1.3500000000000012,
+      "epochs": [
+       6,
+       5,
+       4,
+       6
+      ],
+      "mean_acc_pct": 89.26374931648655,
+      "seed_deltas": {
+       "8101": 0.3263767839179199,
+       "8102": 0.158796296296293
+      },
+      "group_deltas": {
+       "first": 0.11388888888889115,
+       "last": 0.37128419132532176
+      }
+     },
+     "1": {
+      "supported": false,
+      "mean_delta_pp": -0.09496399292902857,
+      "worst_rx_delta_pp": -1.7249999999999932,
+      "epochs": [
+       3,
+       4,
+       5,
+       4
+      ],
+      "mean_acc_pct": 90.66362730150979,
+      "seed_deltas": {
+       "8101": -0.5213366809839304,
+       "8102": 0.33140869512587323
+      },
+      "group_deltas": {
+       "first": -0.8083333333333387,
+       "last": 0.6184053474752815
+      }
+     },
+     "2": {
+      "supported": false,
+      "mean_delta_pp": -0.4762517166101071,
+      "worst_rx_delta_pp": -3.0000000000000027,
+      "epochs": [
+       3,
+       3,
+       7,
+       6
+      ],
+      "mean_acc_pct": 90.8174355149413,
+      "seed_deltas": {
+       "8101": -0.933497533090405,
+       "8102": -0.019005900129809294
+      },
+      "group_deltas": {
+       "first": -1.7583333333333395,
+       "last": 0.8058299001131253
+      }
+     },
+     "3": {
+      "supported": false,
+      "mean_delta_pp": -1.4754629629629534,
+      "worst_rx_delta_pp": -4.425000000000001,
+      "epochs": [
+       3,
+       3,
+       5,
+       6
+      ],
+      "mean_acc_pct": 92.94930555555557,
+      "seed_deltas": {
+       "8101": -1.89583333333333,
+       "8102": -1.055092592592577
+      },
+      "group_deltas": {
+       "first": -2.3333333333333153,
+       "last": -0.6175925925925918
+      }
+     }
+    },
+    "mean_gain": -0.4510230330987457,
+    "worst": -4.425000000000001
+   }
+  },
+  "ManySig": {
+   "centered:raw_held": {
+    "admitted": false,
+    "folds": {
+     "0": {
+      "supported": true,
+      "mean_delta_pp": 1.0416666666666685,
+      "worst_rx_delta_pp": -0.2083333333333326,
+      "epochs": [
+       36,
+       21,
+       3,
+       10
+      ],
+      "mean_acc_pct": 94.30208333333333,
+      "seed_deltas": {
+       "8101": 1.208333333333339,
+       "8102": 0.874999999999998
+      },
+      "group_deltas": {
+       "first": 1.5208333333333324,
+       "last": 0.5625000000000047
+      }
+     },
+     "1": {
+      "supported": false,
+      "mean_delta_pp": -1.7604166666666643,
+      "worst_rx_delta_pp": -6.833333333333336,
+      "epochs": [
+       3,
+       3,
+       12,
+       2
+      ],
+      "mean_acc_pct": 91.55208333333334,
+      "seed_deltas": {
+       "8101": -1.8125,
+       "8102": -1.7083333333333284
+      },
+      "group_deltas": {
+       "first": -3.083333333333332,
+       "last": -0.4374999999999962
+      }
+     },
+     "2": {
+      "supported": false,
+      "mean_delta_pp": -0.7708333333333346,
+      "worst_rx_delta_pp": -5.125000000000002,
+      "epochs": [
+       4,
+       3,
+       5,
+       18
+      ],
+      "mean_acc_pct": 92.02083333333333,
+      "seed_deltas": {
+       "8101": -1.6458333333333353,
+       "8102": 0.1041666666666663
+      },
+      "group_deltas": {
+       "first": -2.875,
+       "last": 1.3333333333333308
+      }
+     },
+     "3": {
+      "supported": false,
+      "mean_delta_pp": -1.2291666666666647,
+      "worst_rx_delta_pp": -6.083333333333335,
+      "epochs": [
+       8,
+       15,
+       22,
+       23
+      ],
+      "mean_acc_pct": 94.79166666666667,
+      "seed_deltas": {
+       "8101": 0.1250000000000029,
+       "8102": -2.583333333333332
+      },
+      "group_deltas": {
+       "first": 0.520833333333337,
+       "last": -2.979166666666666
+      }
+     }
+    },
+    "mean_gain": -0.6796874999999988,
+    "worst": -6.833333333333336
+   },
+   "centered:ema_held": {
+    "admitted": false,
+    "folds": {
+     "0": {
+      "supported": false,
+      "mean_delta_pp": -0.03124999999999656,
+      "worst_rx_delta_pp": -0.7499999999999951,
+      "epochs": [
+       6,
+       4,
+       4,
+       10
+      ],
+      "mean_acc_pct": 94.03125,
+      "seed_deltas": {
+       "8101": -0.12499999999999178,
+       "8102": 0.06249999999999867
+      },
+      "group_deltas": {
+       "first": 0.3958333333333397,
+       "last": -0.4583333333333328
+      }
+     },
+     "1": {
+      "supported": false,
+      "mean_delta_pp": -3.499999999999998,
+      "worst_rx_delta_pp": -7.333333333333325,
+      "epochs": [
+       3,
+       3,
+       9,
+       5
+      ],
+      "mean_acc_pct": 89.88541666666666,
+      "seed_deltas": {
+       "8101": -0.7083333333333386,
+       "8102": -6.291666666666657
+      },
+      "group_deltas": {
+       "first": -6.249999999999995,
+       "last": -0.7500000000000007
+      }
+     },
+     "2": {
+      "supported": false,
+      "mean_delta_pp": 0.16666666666666774,
+      "worst_rx_delta_pp": -1.3333333333333361,
+      "epochs": [
+       9,
+       4,
+       13,
+       10
+      ],
+      "mean_acc_pct": 93.38541666666666,
+      "seed_deltas": {
+       "8101": -0.6041666666666667,
+       "8102": 0.9375000000000022
+      },
+      "group_deltas": {
+       "first": -0.39583333333333415,
+       "last": 0.7291666666666696
+      }
+     },
+     "3": {
+      "supported": false,
+      "mean_delta_pp": -1.7500000000000044,
+      "worst_rx_delta_pp": -5.416666666666664,
+      "epochs": [
+       7,
+       10,
+       38,
+       6
+      ],
+      "mean_acc_pct": 94.55208333333333,
+      "seed_deltas": {
+       "8101": 0.9374999999999967,
+       "8102": -4.437500000000005
+      },
+      "group_deltas": {
+       "first": -0.5208333333333426,
+       "last": -2.979166666666666
+      }
+     }
+    },
+    "mean_gain": -1.2786458333333326,
+    "worst": -7.333333333333325
+   },
+   "curvature:raw_held": {
+    "admitted": false,
+    "folds": {
+     "0": {
+      "supported": true,
+      "mean_delta_pp": 0.9270833333333311,
+      "worst_rx_delta_pp": -0.20833333333333814,
+      "epochs": [
+       4,
+       7,
+       9,
+       40
+      ],
+      "mean_acc_pct": 94.1875,
+      "seed_deltas": {
+       "8101": 1.0833333333333306,
+       "8102": 0.7708333333333317
+      },
+      "group_deltas": {
+       "first": 1.395833333333335,
+       "last": 0.45833333333332726
+      }
+     },
+     "1": {
+      "supported": false,
+      "mean_delta_pp": -0.13541666666667118,
+      "worst_rx_delta_pp": -1.1666666666666714,
+      "epochs": [
+       2,
+       6,
+       10,
+       8
+      ],
+      "mean_acc_pct": 93.17708333333331,
+      "seed_deltas": {
+       "8101": -0.7708333333333373,
+       "8102": 0.4999999999999949
+      },
+      "group_deltas": {
+       "first": 0.14583333333332837,
+       "last": -0.41666666666667074
+      }
+     },
+     "2": {
+      "supported": false,
+      "mean_delta_pp": -0.7500000000000007,
+      "worst_rx_delta_pp": -1.5000000000000013,
+      "epochs": [
+       3,
+       11,
+       9,
+       3
+      ],
+      "mean_acc_pct": 92.04166666666667,
+      "seed_deltas": {
+       "8101": -0.9583333333333333,
+       "8102": -0.5416666666666681
+      },
+      "group_deltas": {
+       "first": -0.8958333333333346,
+       "last": -0.6041666666666667
+      }
+     },
+     "3": {
+      "supported": false,
+      "mean_delta_pp": -1.0104166666666663,
+      "worst_rx_delta_pp": -3.0000000000000027,
+      "epochs": [
+       27,
+       7,
+       6,
+       5
+      ],
+      "mean_acc_pct": 95.01041666666667,
+      "seed_deltas": {
+       "8101": 0.7916666666666683,
+       "8102": -2.812500000000001
+      },
+      "group_deltas": {
+       "first": 0.4791666666666694,
+       "last": -2.5000000000000018
+      }
+     }
+    },
+    "mean_gain": -0.24218750000000175,
+    "worst": -3.0000000000000027
+   },
+   "curvature:ema_held": {
+    "admitted": false,
+    "folds": {
+     "0": {
+      "supported": false,
+      "mean_delta_pp": 0.3749999999999948,
+      "worst_rx_delta_pp": -1.3333333333333308,
+      "epochs": [
+       6,
+       4,
+       5,
+       9
+      ],
+      "mean_acc_pct": 94.4375,
+      "seed_deltas": {
+       "8101": -1.1458333333333404,
+       "8102": 1.89583333333333
+      },
+      "group_deltas": {
+       "first": 1.4374999999999916,
+       "last": -0.687500000000002
+      }
+     },
+     "1": {
+      "supported": false,
+      "mean_delta_pp": -2.7755575615628914e-15,
+      "worst_rx_delta_pp": -2.124999999999999,
+      "epochs": [
+       5,
+       4,
+       4,
+       6
+      ],
+      "mean_acc_pct": 93.38541666666666,
+      "seed_deltas": {
+       "8101": 1.8124999999999947,
+       "8102": -1.8125000000000002
+      },
+      "group_deltas": {
+       "first": 0.7083333333333275,
+       "last": -0.708333333333333
+      }
+     },
+     "2": {
+      "supported": false,
+      "mean_delta_pp": -0.2812499999999968,
+      "worst_rx_delta_pp": -1.250000000000001,
+      "epochs": [
+       4,
+       11,
+       5,
+       10
+      ],
+      "mean_acc_pct": 92.9375,
+      "seed_deltas": {
+       "8101": -0.6041666666666612,
+       "8102": 0.04166666666666763
+      },
+      "group_deltas": {
+       "first": -0.0833333333333297,
+       "last": -0.47916666666666385
+      }
+     },
+     "3": {
+      "supported": false,
+      "mean_delta_pp": -0.4166666666666652,
+      "worst_rx_delta_pp": -1.5000000000000013,
+      "epochs": [
+       6,
+       6,
+       15,
+       6
+      ],
+      "mean_acc_pct": 95.88541666666667,
+      "seed_deltas": {
+       "8101": 1.6875000000000029,
+       "8102": -2.520833333333333
+      },
+      "group_deltas": {
+       "first": -0.1041666666666663,
+       "last": -0.7291666666666641
+      }
+     }
+    },
+    "mean_gain": -0.08072916666666749,
+    "worst": -2.124999999999999
+   }
+  }
+ },
+ "universal": false,
+ "selected": {},
+ "jobs": [],
+ "target_jobs": [
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 0,
+   "seed": 9101,
+   "feature": "first",
+   "policy": "fixed",
+   "epochs": 10,
+   "rule": "ema",
+   "id": "ManySig__f0__all__s9101__first__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 0,
+   "seed": 9101,
+   "feature": "null",
+   "policy": "fixed",
+   "epochs": 10,
+   "rule": "ema",
+   "id": "ManySig__f0__all__s9101__null__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 0,
+   "seed": 9101,
+   "feature": "frequency",
+   "policy": "fixed",
+   "epochs": 10,
+   "rule": "ema",
+   "id": "ManySig__f0__all__s9101__frequency__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 0,
+   "seed": 9101,
+   "feature": "first",
+   "policy": "packet",
+   "epochs": 200,
+   "id": "ManySig__f0__all__s9101__first__packet"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 0,
+   "seed": 9101,
+   "feature": "null",
+   "policy": "packet",
+   "epochs": 200,
+   "id": "ManySig__f0__all__s9101__null__packet"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 0,
+   "seed": 9102,
+   "feature": "first",
+   "policy": "fixed",
+   "epochs": 10,
+   "rule": "ema",
+   "id": "ManySig__f0__all__s9102__first__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 0,
+   "seed": 9102,
+   "feature": "null",
+   "policy": "fixed",
+   "epochs": 10,
+   "rule": "ema",
+   "id": "ManySig__f0__all__s9102__null__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 0,
+   "seed": 9102,
+   "feature": "frequency",
+   "policy": "fixed",
+   "epochs": 10,
+   "rule": "ema",
+   "id": "ManySig__f0__all__s9102__frequency__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 0,
+   "seed": 9102,
+   "feature": "first",
+   "policy": "packet",
+   "epochs": 200,
+   "id": "ManySig__f0__all__s9102__first__packet"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 0,
+   "seed": 9102,
+   "feature": "null",
+   "policy": "packet",
+   "epochs": 200,
+   "id": "ManySig__f0__all__s9102__null__packet"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 0,
+   "seed": 9103,
+   "feature": "first",
+   "policy": "fixed",
+   "epochs": 10,
+   "rule": "ema",
+   "id": "ManySig__f0__all__s9103__first__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 0,
+   "seed": 9103,
+   "feature": "null",
+   "policy": "fixed",
+   "epochs": 10,
+   "rule": "ema",
+   "id": "ManySig__f0__all__s9103__null__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 0,
+   "seed": 9103,
+   "feature": "frequency",
+   "policy": "fixed",
+   "epochs": 10,
+   "rule": "ema",
+   "id": "ManySig__f0__all__s9103__frequency__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 0,
+   "seed": 9103,
+   "feature": "first",
+   "policy": "packet",
+   "epochs": 200,
+   "id": "ManySig__f0__all__s9103__first__packet"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 0,
+   "seed": 9103,
+   "feature": "null",
+   "policy": "packet",
+   "epochs": 200,
+   "id": "ManySig__f0__all__s9103__null__packet"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 1,
+   "seed": 9101,
+   "feature": "first",
+   "policy": "fixed",
+   "epochs": 6,
+   "rule": "raw",
+   "id": "ManySig__f1__all__s9101__first__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 1,
+   "seed": 9101,
+   "feature": "null",
+   "policy": "fixed",
+   "epochs": 6,
+   "rule": "raw",
+   "id": "ManySig__f1__all__s9101__null__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 1,
+   "seed": 9101,
+   "feature": "frequency",
+   "policy": "fixed",
+   "epochs": 6,
+   "rule": "raw",
+   "id": "ManySig__f1__all__s9101__frequency__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 1,
+   "seed": 9101,
+   "feature": "first",
+   "policy": "packet",
+   "epochs": 200,
+   "id": "ManySig__f1__all__s9101__first__packet"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 1,
+   "seed": 9101,
+   "feature": "null",
+   "policy": "packet",
+   "epochs": 200,
+   "id": "ManySig__f1__all__s9101__null__packet"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 1,
+   "seed": 9102,
+   "feature": "first",
+   "policy": "fixed",
+   "epochs": 6,
+   "rule": "raw",
+   "id": "ManySig__f1__all__s9102__first__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 1,
+   "seed": 9102,
+   "feature": "null",
+   "policy": "fixed",
+   "epochs": 6,
+   "rule": "raw",
+   "id": "ManySig__f1__all__s9102__null__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 1,
+   "seed": 9102,
+   "feature": "frequency",
+   "policy": "fixed",
+   "epochs": 6,
+   "rule": "raw",
+   "id": "ManySig__f1__all__s9102__frequency__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 1,
+   "seed": 9102,
+   "feature": "first",
+   "policy": "packet",
+   "epochs": 200,
+   "id": "ManySig__f1__all__s9102__first__packet"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 1,
+   "seed": 9102,
+   "feature": "null",
+   "policy": "packet",
+   "epochs": 200,
+   "id": "ManySig__f1__all__s9102__null__packet"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 1,
+   "seed": 9103,
+   "feature": "first",
+   "policy": "fixed",
+   "epochs": 6,
+   "rule": "raw",
+   "id": "ManySig__f1__all__s9103__first__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 1,
+   "seed": 9103,
+   "feature": "null",
+   "policy": "fixed",
+   "epochs": 6,
+   "rule": "raw",
+   "id": "ManySig__f1__all__s9103__null__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 1,
+   "seed": 9103,
+   "feature": "frequency",
+   "policy": "fixed",
+   "epochs": 6,
+   "rule": "raw",
+   "id": "ManySig__f1__all__s9103__frequency__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 1,
+   "seed": 9103,
+   "feature": "first",
+   "policy": "packet",
+   "epochs": 200,
+   "id": "ManySig__f1__all__s9103__first__packet"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 1,
+   "seed": 9103,
+   "feature": "null",
+   "policy": "packet",
+   "epochs": 200,
+   "id": "ManySig__f1__all__s9103__null__packet"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 2,
+   "seed": 9101,
+   "feature": "first",
+   "policy": "fixed",
+   "epochs": 4,
+   "rule": "ema",
+   "id": "ManySig__f2__all__s9101__first__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 2,
+   "seed": 9101,
+   "feature": "null",
+   "policy": "fixed",
+   "epochs": 4,
+   "rule": "ema",
+   "id": "ManySig__f2__all__s9101__null__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 2,
+   "seed": 9101,
+   "feature": "frequency",
+   "policy": "fixed",
+   "epochs": 4,
+   "rule": "ema",
+   "id": "ManySig__f2__all__s9101__frequency__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 2,
+   "seed": 9101,
+   "feature": "first",
+   "policy": "packet",
+   "epochs": 200,
+   "id": "ManySig__f2__all__s9101__first__packet"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 2,
+   "seed": 9101,
+   "feature": "null",
+   "policy": "packet",
+   "epochs": 200,
+   "id": "ManySig__f2__all__s9101__null__packet"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 2,
+   "seed": 9102,
+   "feature": "first",
+   "policy": "fixed",
+   "epochs": 4,
+   "rule": "ema",
+   "id": "ManySig__f2__all__s9102__first__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 2,
+   "seed": 9102,
+   "feature": "null",
+   "policy": "fixed",
+   "epochs": 4,
+   "rule": "ema",
+   "id": "ManySig__f2__all__s9102__null__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 2,
+   "seed": 9102,
+   "feature": "frequency",
+   "policy": "fixed",
+   "epochs": 4,
+   "rule": "ema",
+   "id": "ManySig__f2__all__s9102__frequency__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 2,
+   "seed": 9102,
+   "feature": "first",
+   "policy": "packet",
+   "epochs": 200,
+   "id": "ManySig__f2__all__s9102__first__packet"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 2,
+   "seed": 9102,
+   "feature": "null",
+   "policy": "packet",
+   "epochs": 200,
+   "id": "ManySig__f2__all__s9102__null__packet"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 2,
+   "seed": 9103,
+   "feature": "first",
+   "policy": "fixed",
+   "epochs": 4,
+   "rule": "ema",
+   "id": "ManySig__f2__all__s9103__first__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 2,
+   "seed": 9103,
+   "feature": "null",
+   "policy": "fixed",
+   "epochs": 4,
+   "rule": "ema",
+   "id": "ManySig__f2__all__s9103__null__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 2,
+   "seed": 9103,
+   "feature": "frequency",
+   "policy": "fixed",
+   "epochs": 4,
+   "rule": "ema",
+   "id": "ManySig__f2__all__s9103__frequency__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 2,
+   "seed": 9103,
+   "feature": "first",
+   "policy": "packet",
+   "epochs": 200,
+   "id": "ManySig__f2__all__s9103__first__packet"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 2,
+   "seed": 9103,
+   "feature": "null",
+   "policy": "packet",
+   "epochs": 200,
+   "id": "ManySig__f2__all__s9103__null__packet"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 3,
+   "seed": 9101,
+   "feature": "first",
+   "policy": "fixed",
+   "epochs": 13,
+   "rule": "raw",
+   "id": "ManySig__f3__all__s9101__first__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 3,
+   "seed": 9101,
+   "feature": "null",
+   "policy": "fixed",
+   "epochs": 13,
+   "rule": "raw",
+   "id": "ManySig__f3__all__s9101__null__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 3,
+   "seed": 9101,
+   "feature": "frequency",
+   "policy": "fixed",
+   "epochs": 13,
+   "rule": "raw",
+   "id": "ManySig__f3__all__s9101__frequency__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 3,
+   "seed": 9101,
+   "feature": "first",
+   "policy": "packet",
+   "epochs": 200,
+   "id": "ManySig__f3__all__s9101__first__packet"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 3,
+   "seed": 9101,
+   "feature": "null",
+   "policy": "packet",
+   "epochs": 200,
+   "id": "ManySig__f3__all__s9101__null__packet"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 3,
+   "seed": 9102,
+   "feature": "first",
+   "policy": "fixed",
+   "epochs": 13,
+   "rule": "raw",
+   "id": "ManySig__f3__all__s9102__first__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 3,
+   "seed": 9102,
+   "feature": "null",
+   "policy": "fixed",
+   "epochs": 13,
+   "rule": "raw",
+   "id": "ManySig__f3__all__s9102__null__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 3,
+   "seed": 9102,
+   "feature": "frequency",
+   "policy": "fixed",
+   "epochs": 13,
+   "rule": "raw",
+   "id": "ManySig__f3__all__s9102__frequency__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 3,
+   "seed": 9102,
+   "feature": "first",
+   "policy": "packet",
+   "epochs": 200,
+   "id": "ManySig__f3__all__s9102__first__packet"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 3,
+   "seed": 9102,
+   "feature": "null",
+   "policy": "packet",
+   "epochs": 200,
+   "id": "ManySig__f3__all__s9102__null__packet"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 3,
+   "seed": 9103,
+   "feature": "first",
+   "policy": "fixed",
+   "epochs": 13,
+   "rule": "raw",
+   "id": "ManySig__f3__all__s9103__first__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 3,
+   "seed": 9103,
+   "feature": "null",
+   "policy": "fixed",
+   "epochs": 13,
+   "rule": "raw",
+   "id": "ManySig__f3__all__s9103__null__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 3,
+   "seed": 9103,
+   "feature": "frequency",
+   "policy": "fixed",
+   "epochs": 13,
+   "rule": "raw",
+   "id": "ManySig__f3__all__s9103__frequency__fixed"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 3,
+   "seed": 9103,
+   "feature": "first",
+   "policy": "packet",
+   "epochs": 200,
+   "id": "ManySig__f3__all__s9103__first__packet"
+  },
+  {
+   "phase": "attribution",
+   "dataset": "ManySig",
+   "fold": 3,
+   "seed": 9103,
+   "feature": "null",
+   "policy": "packet",
+   "epochs": 200,
+   "id": "ManySig__f3__all__s9103__null__packet"
+  }
+ ],
+ "no_target_selection": true
+}
