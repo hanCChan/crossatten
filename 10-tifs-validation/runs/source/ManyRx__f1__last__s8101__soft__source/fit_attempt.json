@@ -1,0 +1,15 @@
+{
+ "job": {
+  "phase": "source",
+  "dataset": "ManyRx",
+  "fold": 1,
+  "seed": 8101,
+  "feature": "soft",
+  "group": "last",
+  "epochs": 40,
+  "policy": "source",
+  "id": "ManyRx__f1__last__s8101__soft__source"
+ },
+ "gpu": "0",
+ "action": "fit"
+}

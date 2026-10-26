@@ -1,0 +1,120 @@
+{
+ "job": {
+  "phase": "source",
+  "dataset": "ManyRx",
+  "fold": 2,
+  "seed": 8102,
+  "feature": "soft",
+  "group": "first",
+  "epochs": 40,
+  "policy": "source",
+  "id": "ManyRx__f2__first__s8102__soft__source"
+ },
+ "params": 91128,
+ "recipe": {
+  "opt": "adam",
+  "lr": 0.001,
+  "wd": 0.0,
+  "batch": 128,
+  "epochs": 200,
+  "sched": "plateau",
+  "patience": 5,
+  "early_stop": 10,
+  "min_lr": 1e-06
+ },
+ "data_seed": 479263469,
+ "roles": {
+  "source": [
+   "1-1",
+   "1-19",
+   "1-20",
+   "2-1",
+   "2-19",
+   "3-19",
+   "7-7",
+   "7-14",
+   "8-7",
+   "8-8",
+   "8-14",
+   "13-7",
+   "13-14",
+   "14-7",
+   "18-2",
+   "18-19",
+   "23-3",
+   "23-5",
+   "23-6",
+   "23-7",
+   "24-5",
+   "24-6",
+   "24-13",
+   "24-16"
+  ],
+  "target": [
+   "19-1",
+   "19-2",
+   "19-19",
+   "19-20",
+   "20-1",
+   "20-19",
+   "20-20",
+   "23-1"
+  ],
+  "fit_rx": [
+   "7-7",
+   "7-14",
+   "8-7",
+   "8-8",
+   "8-14",
+   "13-7",
+   "13-14",
+   "14-7",
+   "18-2",
+   "18-19",
+   "23-3",
+   "23-5",
+   "23-6",
+   "23-7",
+   "24-5",
+   "24-6",
+   "24-13",
+   "24-16"
+  ],
+  "held_rx": [
+   "1-1",
+   "1-19",
+   "1-20",
+   "2-1",
+   "2-19",
+   "3-19"
+  ],
+  "days": [
+   1,
+   2
+  ]
+ },
+ "split_sha256": {
+  "train": "dcbaa8265559b773ea1a7f86624d370773c9cc3d96f9f01bfc850d6ce83cdaf5",
+  "val": "53532f5a2e6bcbbf6806d61318bfb2157ffc714358430f0847272aa7c36808ca",
+  "pool_y": "d1a657567c2eecdd3556b5c73225dc1e587c2e1b8f40eaf6b611e27d5b88425d"
+ },
+ "shared_initialization_sha256": "e83d89c7fbf799e59b8673c49b185fb15f5e35b36351b57a5237ed47f476cd7b",
+ "train_packets": 24267,
+ "val_packets": 10401,
+ "held_packets": {
+  "1-1": 2000,
+  "1-19": 2000,
+  "1-20": 2000,
+  "2-1": 2000,
+  "2-19": 2000,
+  "3-19": 2000
+ },
+ "ema": {
+  "half_life_epochs": 1,
+  "decay": 0.9963585033335157,
+  "buffers": "clean fit-only BN recalibration"
+ },
+ "registration_sha256": "59e3358d10f44fe10b0b06e5e5f4cc161dbbb4469387cf8265505038d0e707b9",
+ "torch": "2.5.0+cu124",
+ "gpu": "NVIDIA A100-SXM4-40GB"
+}

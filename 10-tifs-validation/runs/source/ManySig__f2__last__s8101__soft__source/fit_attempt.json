@@ -1,0 +1,15 @@
+{
+ "job": {
+  "phase": "source",
+  "dataset": "ManySig",
+  "fold": 2,
+  "seed": 8101,
+  "feature": "soft",
+  "group": "last",
+  "epochs": 40,
+  "policy": "source",
+  "id": "ManySig__f2__last__s8101__soft__source"
+ },
+ "gpu": "1",
+ "action": "fit"
+}
