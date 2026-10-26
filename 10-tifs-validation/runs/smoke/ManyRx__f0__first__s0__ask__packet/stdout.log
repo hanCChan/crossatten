@@ -1,0 +1,29 @@
+/data/miniforge/envs/env-3.12/lib/python3.12/site-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+[k@init] argmax_k=8  soft_k=32.000  top_prob=0.1667
+Train Epoch 1	Loss: 2.311111, Acc: 23/256 (8.98%)
+Validation	Loss: 2.3117, Acc: 11/128 (8.59%)
+[k@epoch 1] argmax_k=32  soft_k=31.999  top_prob=0.1670
+Validation loss improved inf -> 2.311658, saving model.
+------------------------------------------------
+Train Epoch 2	Loss: 2.288106, Acc: 35/256 (13.67%)
+Validation	Loss: 2.3196, Acc: 19/128 (14.84%)
+[k@epoch 2] argmax_k=8  soft_k=32.007  top_prob=0.1671
+No improvement for 1 epoch(s).
+------------------------------------------------
+
+========================================================================
+Per-epoch k selection summary
+Candidates: [8, 16, 24, 32, 48, 64]
+------------------------------------------------------------------------
+epoch | argmax_k |     soft_k |   top_prob
+------------------------------------------------------------------------
+    0 |        8 |     32.000 |     0.1667
+    1 |       32 |     31.999 |     0.1670
+    2 |        8 |     32.007 |     0.1671
+------------------------------------------------------------------------
+Final selected k (last epoch): 8
+Most frequent k across epochs: 8 (2/3 epochs)
+========================================================================
+
+[k-trace] wrote /dockerdata/741295a3-c730-4a4c-89a6-62abee1cbfb4/worktrees/crossatten-latest/10-tifs-validation/runs/smoke/ManyRx__f0__first__s0__ask__packet/k_trace.txt

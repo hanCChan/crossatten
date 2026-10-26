@@ -1,0 +1,59 @@
+{
+ "accepted": true,
+ "upstream_commit": "f00846d68425315b68ae69b8c6b712e08559c2fe",
+ "loader_parity": true,
+ "folds_match": true,
+ "smoke_evidence": {
+  "10-tifs-validation/runs/smoke/ManyRx__f0__first__s0__ask__packet/metrics.json": "e6f40fc2a17dfae247ad32a57829bd2d3f3333d61e47331b254156c2d166c4e8",
+  "10-tifs-validation/runs/smoke/ManySig__f0__first__s0__ask__packet/metrics.json": "79399e375275958fab2f192c4c04213a9bb30a8a31c6ab63db6100a03170f8ae"
+ },
+ "upstream_logs": {
+  "ManyRx:f0": {
+   "packet_acc_pct": 89.47,
+   "file": "WiSig/logs/ASKNet/logs/ManyRx/ManyRx_CRD_date1_2_round0.txt",
+   "sha256": "84ae2847d37fd84c06c78b3fba55bd5233d4cbcc18517f0a781f3d5e7e497394"
+  },
+  "ManyRx:f1": {
+   "packet_acc_pct": 88.89,
+   "file": "WiSig/logs/ASKNet/logs/ManyRx/ManyRx_CRD_date1_2_round1.txt",
+   "sha256": "0b5a1b13857f3b38f94762f843328e871306e1b4c652a9e07c394b5624aa3eda"
+  },
+  "ManyRx:f2": {
+   "packet_acc_pct": 92.17999999999999,
+   "file": "WiSig/logs/ASKNet/logs/ManyRx/ManyRx_CRD_date1_2_round2.txt",
+   "sha256": "ba8f41ff1b9b025f4f4f857d05333bed845f3ad94f62a00b8f387caa454e6808"
+  },
+  "ManyRx:f3": {
+   "packet_acc_pct": 83.58,
+   "file": "WiSig/logs/ASKNet/logs/ManyRx/ManyRx_CRD_date1_2_round3.txt",
+   "sha256": "2782cf68c24a307434951ece43d090da333130833c6ec3d56c39e5d053f2cbad"
+  },
+  "ManySig:f0": {
+   "packet_acc_pct": 93.47,
+   "file": "WiSig/logs/ASKNet/logs/ManySig/ManySig_CRD_date1_2_round0_seed2023.txt",
+   "sha256": "92e4725e2ad8b773e9705d9d78b7ef610c38ea6649be762594a6c23679456cc7"
+  },
+  "ManySig:f1": {
+   "packet_acc_pct": 89.53,
+   "file": "WiSig/logs/ASKNet/logs/ManySig/ManySig_CRD_date1_2_round1.txt",
+   "sha256": "379e260ec123bef14c7d2c25ea53db78977a9f87ad56f96008a3e85da772b4ae"
+  },
+  "ManySig:f2": {
+   "packet_acc_pct": 95.33,
+   "file": "WiSig/logs/ASKNet/logs/ManySig/ManySig_CRD_date1_2_round2.txt",
+   "sha256": "21fed1d74538258b35172af1eaab06fb26b1922c62c815a2a35fb7b16e784f32"
+  },
+  "ManySig:f3": {
+   "packet_acc_pct": 95.06,
+   "file": "WiSig/logs/ASKNet/logs/ManySig/ManySig_CRD_date1_2_round3.txt",
+   "sha256": "a34bcb1543e96f8f7e98276625c09d119bc5c7fb19abf40b33cbb8f6faba5a3d"
+  }
+ },
+ "no_target_threshold_for_acceptance": true,
+ "pretrained_weights": "not supplied locally; Baidu share requires manual external access",
+ "acceptance_scope": "official code path, data parity and finite source-only smoke; not verification of published checkpoints or paper numerical reproduction",
+ "deviations": [
+  "PyTorch2.5/CUDA12.4/A100 vs published1.11/CUDA11.3/3080Ti",
+  "cached float32 input matches official float64 normalize then cast exactly"
+ ]
+}

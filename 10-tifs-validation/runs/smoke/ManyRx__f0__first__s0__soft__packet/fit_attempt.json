@@ -1,0 +1,15 @@
+{
+ "job": {
+  "phase": "smoke",
+  "dataset": "ManyRx",
+  "fold": 0,
+  "seed": 0,
+  "feature": "soft",
+  "group": "first",
+  "epochs": 2,
+  "policy": "packet",
+  "id": "ManyRx__f0__first__s0__soft__packet"
+ },
+ "gpu": "0",
+ "action": "fit"
+}

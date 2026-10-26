@@ -1,0 +1,53 @@
+{
+ "job": {
+  "phase": "smoke",
+  "dataset": "ManySig",
+  "fold": 0,
+  "seed": 0,
+  "feature": "ask",
+  "group": "first",
+  "epochs": 2,
+  "policy": "packet",
+  "id": "ManySig__f0__first__s0__ask__packet"
+ },
+ "params": 99724,
+ "stop_epoch": 2,
+ "selected": {
+  "source_packet": {
+   "ce": 1.8067307472229004,
+   "epoch": 2
+  }
+ },
+ "seconds": 3.4619290828704834,
+ "weights_sha256": {
+  "model.pt": "8d9da1358ba79b03f44d48a37bcd96051302d6fd7340b6b9214f55a3c3ddb094"
+ },
+ "config_sha256": "858af200bb7d65cd958b49838c5ee34134ee291b2855e865fe84e5698838677f",
+ "registration_sha256": "59e3358d10f44fe10b0b06e5e5f4cc161dbbb4469387cf8265505038d0e707b9",
+ "k_history": [
+  {
+   "epoch": 0,
+   "argmax_k": 8,
+   "soft_k": 32.0,
+   "top_prob": 0.1666666716337204,
+   "train_loss": null,
+   "val_loss": null
+  },
+  {
+   "epoch": 1,
+   "argmax_k": 48,
+   "soft_k": 31.997268676757812,
+   "top_prob": 0.1669347733259201,
+   "train_loss": 1.807374656200409,
+   "val_loss": 1.8075222969055176
+  },
+  {
+   "epoch": 2,
+   "argmax_k": 48,
+   "soft_k": 32.01356506347656,
+   "top_prob": 0.16721974313259125,
+   "train_loss": 1.794714868068695,
+   "val_loss": 1.8067307472229004
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "job": {
+  "phase": "smoke",
+  "dataset": "ManyRx",
+  "fold": 0,
+  "seed": 0,
+  "feature": "ask",
+  "group": "first",
+  "epochs": 2,
+  "policy": "packet",
+  "id": "ManyRx__f0__first__s0__ask__packet"
+ },
+ "params": 100240,
+ "stop_epoch": 2,
+ "selected": {
+  "source_packet": {
+   "ce": 2.3116579055786133,
+   "epoch": 1
+  }
+ },
+ "seconds": 2.878185987472534,
+ "weights_sha256": {
+  "model.pt": "4d47c7b7167633e8e22b516c4aff19b098cd888ef0f4d157055a4c614d3e5f60"
+ },
+ "config_sha256": "ef91eaf56aa49444d9d43e968f3c8a13771c1423350391be59309ea7802956dd",
+ "registration_sha256": "59e3358d10f44fe10b0b06e5e5f4cc161dbbb4469387cf8265505038d0e707b9",
+ "k_history": [
+  {
+   "epoch": 0,
+   "argmax_k": 8,
+   "soft_k": 32.0,
+   "top_prob": 0.1666666716337204,
+   "train_loss": null,
+   "val_loss": null
+  },
+  {
+   "epoch": 1,
+   "argmax_k": 32,
+   "soft_k": 31.999412536621094,
+   "top_prob": 0.16695886850357056,
+   "train_loss": 2.311111330986023,
+   "val_loss": 2.3116579055786133
+  },
+  {
+   "epoch": 2,
+   "argmax_k": 8,
+   "soft_k": 32.00702667236328,
+   "top_prob": 0.16714146733283997,
+   "train_loss": 2.2881059646606445,
+   "val_loss": 2.3195953369140625
+  }
+ ]
+}

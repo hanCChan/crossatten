@@ -1,0 +1,15 @@
+{
+ "job": {
+  "phase": "smoke",
+  "dataset": "ManySig",
+  "fold": 0,
+  "seed": 0,
+  "feature": "ask",
+  "group": "first",
+  "epochs": 2,
+  "policy": "packet",
+  "id": "ManySig__f0__first__s0__ask__packet"
+ },
+ "gpu": "3",
+ "action": "fit"
+}

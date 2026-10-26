@@ -1,0 +1,58 @@
+{
+ "job": {
+  "phase": "smoke",
+  "dataset": "ManySig",
+  "fold": 0,
+  "seed": 0,
+  "feature": "ask",
+  "group": "first",
+  "epochs": 2,
+  "policy": "packet",
+  "id": "ManySig__f0__first__s0__ask__packet"
+ },
+ "params": 99724,
+ "official_defaults": {
+  "candidates": [
+   8,
+   16,
+   24,
+   32,
+   48,
+   64
+  ],
+  "patch_size": 64,
+  "embed_dim": 128,
+  "mlp_ratio": 2.0
+ },
+ "data_seed": 0,
+ "split_sha256": {
+  "train": "76e57e019d46b4ae401996e0f1539094d205d3508e7a782aa2a69b2ced650493",
+  "val": "3f70fdffc733b5b967d1f3c38ace20f4b2e1268129d86be71c0b1201d2024ab9",
+  "pool_y": "c1d9cd6101af08c6ae5bfa18c3afae539a2fcd71565a87e160e1a18b142c7a1e"
+ },
+ "train_packets": 256,
+ "val_packets": 128,
+ "roles": {
+  "source": [
+   "2-19",
+   "3-19",
+   "7-7",
+   "7-14",
+   "8-8",
+   "14-7",
+   "18-2",
+   "19-2",
+   "20-1"
+  ],
+  "target": [
+   "1-1",
+   "1-19",
+   "2-1"
+  ]
+ },
+ "registration_sha256": "59e3358d10f44fe10b0b06e5e5f4cc161dbbb4469387cf8265505038d0e707b9",
+ "torch": "2.5.0+cu124",
+ "gpu": "NVIDIA A100-SXM4-40GB",
+ "shuffle": "official CPU DataLoader/global Torch RNG",
+ "precision": "cached float32; parity audited against official float64-normalize-then-cast"
+}

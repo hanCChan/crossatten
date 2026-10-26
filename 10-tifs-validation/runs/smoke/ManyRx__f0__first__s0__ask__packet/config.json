@@ -1,0 +1,78 @@
+{
+ "job": {
+  "phase": "smoke",
+  "dataset": "ManyRx",
+  "fold": 0,
+  "seed": 0,
+  "feature": "ask",
+  "group": "first",
+  "epochs": 2,
+  "policy": "packet",
+  "id": "ManyRx__f0__first__s0__ask__packet"
+ },
+ "params": 100240,
+ "official_defaults": {
+  "candidates": [
+   8,
+   16,
+   24,
+   32,
+   48,
+   64
+  ],
+  "patch_size": 64,
+  "embed_dim": 128,
+  "mlp_ratio": 2.0
+ },
+ "data_seed": 0,
+ "split_sha256": {
+  "train": "6bf6371397a742bf0eb832884db51f84d0c41242a71908a3ea1f20c429b0e78e",
+  "val": "0f6b41d8f17787ea8408ec9021fe2b0866c28729939d2b5a208d8b4de62ff447",
+  "pool_y": "ede2d606f6700705bedcb472f7c947342c4555d824e99f18644f0445e2bb6794"
+ },
+ "train_packets": 256,
+ "val_packets": 128,
+ "roles": {
+  "source": [
+   "8-7",
+   "8-8",
+   "8-14",
+   "13-7",
+   "13-14",
+   "14-7",
+   "18-2",
+   "18-19",
+   "19-1",
+   "19-2",
+   "19-19",
+   "19-20",
+   "20-1",
+   "20-19",
+   "20-20",
+   "23-1",
+   "23-3",
+   "23-5",
+   "23-6",
+   "23-7",
+   "24-5",
+   "24-6",
+   "24-13",
+   "24-16"
+  ],
+  "target": [
+   "1-1",
+   "1-19",
+   "1-20",
+   "2-1",
+   "2-19",
+   "3-19",
+   "7-7",
+   "7-14"
+  ]
+ },
+ "registration_sha256": "59e3358d10f44fe10b0b06e5e5f4cc161dbbb4469387cf8265505038d0e707b9",
+ "torch": "2.5.0+cu124",
+ "gpu": "NVIDIA A100-SXM4-40GB",
+ "shuffle": "official CPU DataLoader/global Torch RNG",
+ "precision": "cached float32; parity audited against official float64-normalize-then-cast"
+}
