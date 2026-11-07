@@ -1,0 +1,32 @@
+{
+  "time": "2026-11-08T01:24:22+08:00",
+  "diagnostic_decision_sha256": "6a8e79ca202bd1da02b1665c5b29c6b4612dbce7ef6ec4d53386b5552c076961",
+  "bounds_hz": {
+    "ManyRx": {
+      "0": 7919.933935546872,
+      "1": 5756.699023437499,
+      "2": 7801.964794921873,
+      "3": 8319.193066406246
+    },
+    "ManySig": {
+      "0": 3585.9978515625,
+      "1": 3300.308984374999,
+      "2": 4869.992382812499,
+      "3": 3649.040185546875
+    }
+  },
+  "bound_rule": "q95 absolute source RX/day median CFO minus pooled median, clipped500..10000Hz; not pure RX CFO",
+  "variants": [
+    "B0",
+    "B1_cfo",
+    "B2_corrected",
+    "B2_dual",
+    "B2_dual_raw"
+  ],
+  "pilot_cap": 40,
+  "confirmation_cap": 64,
+  "paired_controls": "B1 vs B0; B2_dual must pass vs both B0 and parameter-identical B2_dual_raw",
+  "target_access": false,
+  "epochs_cap": 40,
+  "batch": 128
+}
