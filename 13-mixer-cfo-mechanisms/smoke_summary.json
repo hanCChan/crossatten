@@ -1,0 +1,162 @@
+{
+  "time": "2026-11-08T01:16:19+08:00",
+  "completed": 10,
+  "registered": 10,
+  "scientific_accuracy_evidence": false,
+  "failures": 0,
+  "automatic_retries": 0,
+  "rows": [
+    {
+      "job": {
+        "phase": "smoke",
+        "dataset": "Shen",
+        "arm": "A0_cnn",
+        "fold": 0,
+        "seed": 13001
+      },
+      "status": "COMPLETE",
+      "epochs": 2,
+      "params": 100154,
+      "peak_gpu_gib": 0.5249834060668945,
+      "checkpoint_sha256": "132f703151c04950935d76d5c3c77fdfe432738bc5d893fc7cc358e14383f563",
+      "config_sha256": "231aab16463f8048816f8e3d5e7da5f712699dcda1b0bd1b87a2090274131c13"
+    },
+    {
+      "job": {
+        "phase": "smoke",
+        "dataset": "Shen",
+        "arm": "A1_mha",
+        "fold": 0,
+        "seed": 13001
+      },
+      "status": "COMPLETE",
+      "epochs": 2,
+      "params": 133690,
+      "peak_gpu_gib": 0.5254907608032227,
+      "checkpoint_sha256": "55a8b5cf8fd7f10afc969cadf8ac0fa8dceaf19cf7d8e780ba37de726587c178",
+      "config_sha256": "351b5c96b63cdb1aa9823e1b81f142ada963682a47eace66274d2f65346c786a"
+    },
+    {
+      "job": {
+        "phase": "smoke",
+        "dataset": "Shen",
+        "arm": "A1_mha_matched",
+        "fold": 0,
+        "seed": 13001
+      },
+      "status": "COMPLETE",
+      "epochs": 2,
+      "params": 141978,
+      "peak_gpu_gib": 0.5256128311157227,
+      "checkpoint_sha256": "7b3aecca1615f4191587149779cbd25e560a0fe2d7a301e87b977e41bf953999",
+      "config_sha256": "875b652ef6d3c7093e78d001bedb74102acc886db914d41138f533267b3981be"
+    },
+    {
+      "job": {
+        "phase": "smoke",
+        "dataset": "Shen",
+        "arm": "A2_transformer",
+        "fold": 0,
+        "seed": 13001
+      },
+      "status": "COMPLETE",
+      "epochs": 2,
+      "params": 200122,
+      "peak_gpu_gib": 0.5264863967895508,
+      "checkpoint_sha256": "8f2d86fac5cb7449db69e333320ec429d9c44352bb84e5b0b29198f2b6452089",
+      "config_sha256": "7cb7cf83b8b3d2c866e1417aa79dd91a1fa78a24e09c189585e3c07430bd1d9e"
+    },
+    {
+      "job": {
+        "phase": "smoke",
+        "dataset": "Shen",
+        "arm": "A2_transformer_matched",
+        "fold": 0,
+        "seed": 13001
+      },
+      "status": "COMPLETE",
+      "epochs": 2,
+      "params": 142330,
+      "peak_gpu_gib": 0.5256280899047852,
+      "checkpoint_sha256": "4fd785f7d55f355d024149123b75d4f47e559e54f9b11cbe87e13da40e03cc83",
+      "config_sha256": "c71b60522a56adf63c7a1e40c01305c330202687ef02fe8c73383930800b47fd"
+    },
+    {
+      "job": {
+        "phase": "smoke",
+        "dataset": "Shen",
+        "arm": "A3_rfhstu",
+        "fold": 0,
+        "seed": 13001
+      },
+      "status": "COMPLETE",
+      "epochs": 2,
+      "params": 142392,
+      "peak_gpu_gib": 0.525639533996582,
+      "checkpoint_sha256": "06fda715e53284b48a116c0cf9d595ec8a7703f24b471c9ebb33a731e884dcf1",
+      "config_sha256": "3c81f2f2e1821d1a0ef01c57a711725fa3b870492e2c4a9e6b75ee2a2306a04c"
+    },
+    {
+      "job": {
+        "phase": "smoke",
+        "dataset": "Shen",
+        "arm": "A4_softmax_gate",
+        "fold": 0,
+        "seed": 13001
+      },
+      "status": "COMPLETE",
+      "epochs": 2,
+      "params": 142392,
+      "peak_gpu_gib": 0.525639533996582,
+      "checkpoint_sha256": "4d766eeae950a84c0974788933fc9aed3beca68b6102c3f82b6655371158a754",
+      "config_sha256": "e710473fde83a5e9351e9eea3707d03e9d96e53d9e9a25d4071b4c75a246d32a"
+    },
+    {
+      "job": {
+        "phase": "smoke",
+        "dataset": "Shen",
+        "arm": "A5_silu_gate",
+        "fold": 0,
+        "seed": 13001
+      },
+      "status": "COMPLETE",
+      "epochs": 2,
+      "params": 142392,
+      "peak_gpu_gib": 0.525639533996582,
+      "checkpoint_sha256": "bc35151954a53cb4a1cb245527454da0ba728ff9eaa361b5255baf7518eeadb8",
+      "config_sha256": "0229e3f4deff9ec9c76f3d1847609e98f5fb2b0465d94ea30590ed611fb36071"
+    },
+    {
+      "job": {
+        "phase": "smoke",
+        "dataset": "ManyRx",
+        "arm": "B0",
+        "fold": 0,
+        "group": "first",
+        "seed": 13001
+      },
+      "status": "COMPLETE",
+      "epochs": 2,
+      "params": 91128,
+      "peak_gpu_gib": 0.1254119873046875,
+      "checkpoint_sha256": "8431b6401658907d2f66ebb94ab0a246a1c03ffc79235bb3ff98c718f87699e0",
+      "config_sha256": "a8c2a71d06f272c765b044db4b85f5e34647cafaa95a602100e5a0a6accfad67"
+    },
+    {
+      "job": {
+        "phase": "smoke",
+        "dataset": "ManySig",
+        "arm": "B0",
+        "fold": 0,
+        "group": "first",
+        "seed": 13001
+      },
+      "status": "COMPLETE",
+      "epochs": 2,
+      "params": 90868,
+      "peak_gpu_gib": 0.12540435791015625,
+      "checkpoint_sha256": "96d2e1bfdc13f97ce6bc277dcca004f1f579e716dba9c7b00f9803a03eebfd6d",
+      "config_sha256": "94041de8e44db337275112dc22a6a095fb08971bbf80ce22edbd16a8f5ecf0c2"
+    }
+  ]
+}

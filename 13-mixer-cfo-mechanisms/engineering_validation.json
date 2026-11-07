@@ -1,0 +1,18 @@
+{
+  "time": "2026-11-08T01:14:37+08:00",
+  "unit_tests": 11,
+  "unit_tests_status": "PASS",
+  "synthetic_complete_p1_aggregation": "PASS",
+  "synthetic_complete_p2_aggregation": "PASS",
+  "all8_shen_smoke_shared_initial_weight_sha256": "516b6447e4f05636c4dddee11dd7a7548e6c3048e2a630a1c3e5e1e0788eb453",
+  "data_access_audit": {
+    "counts": {
+      "Shen": 45,
+      "ManyRx": 240,
+      "ManySig": 90
+    },
+    "violations": []
+  },
+  "scope": "Snapshot of access log so far; not a final execution audit",
+  "effective_code_commit": "10e752c99f33bb17bf1c4ffbc1b8a3ee415cb97a"
+}

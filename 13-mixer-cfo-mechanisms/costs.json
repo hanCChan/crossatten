@@ -1,0 +1,74 @@
+{
+  "time": "2026-11-08T01:07:09+08:00",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "torch": "2.5.0+cu124",
+  "precision": "FP32",
+  "scope": "resident raw IQ to logits; no host transfer; no concurrent S13 training; desktop GPU use not isolated",
+  "flops": "torch counted convolution/matrix operations; FFT/elementwise incomplete",
+  "rows": [
+    {
+      "arm": "A0_cnn",
+      "params": 100154,
+      "counted_mflops": 187.43424,
+      "gpu_batch1_p50_ms": 1.6325920224189758,
+      "gpu_batch1_p95_ms": 1.993716812133789,
+      "gpu_batch64_packets_s": 7743.32803438656
+    },
+    {
+      "arm": "A1_mha",
+      "params": 133690,
+      "counted_mflops": 190.05568,
+      "gpu_batch1_p50_ms": 2.1454880237579346,
+      "gpu_batch1_p95_ms": 3.0866208553314207,
+      "gpu_batch64_packets_s": 7912.448755508651
+    },
+    {
+      "arm": "A1_mha_matched",
+      "params": 141978,
+      "counted_mflops": 190.71104,
+      "gpu_batch1_p50_ms": 2.1468799114227295,
+      "gpu_batch1_p95_ms": 3.970088005065918,
+      "gpu_batch64_packets_s": 7897.344394179457
+    },
+    {
+      "arm": "A2_transformer",
+      "params": 200122,
+      "counted_mflops": 193.725696,
+      "gpu_batch1_p50_ms": 2.7913119792938232,
+      "gpu_batch1_p95_ms": 4.095374417304993,
+      "gpu_batch64_packets_s": 7796.283122089205
+    },
+    {
+      "arm": "A2_transformer_matched",
+      "params": 142330,
+      "counted_mflops": 190.05568,
+      "gpu_batch1_p50_ms": 2.6063519716262817,
+      "gpu_batch1_p95_ms": 3.941390371322632,
+      "gpu_batch64_packets_s": 7447.49804713443
+    },
+    {
+      "arm": "A3_rfhstu",
+      "params": 142392,
+      "counted_mflops": 190.579968,
+      "gpu_batch1_p50_ms": 2.3471839427948,
+      "gpu_batch1_p95_ms": 2.865214502811432,
+      "gpu_batch64_packets_s": 7442.899008628961
+    },
+    {
+      "arm": "A4_softmax_gate",
+      "params": 142392,
+      "counted_mflops": 190.579968,
+      "gpu_batch1_p50_ms": 2.9419519901275635,
+      "gpu_batch1_p95_ms": 4.595403337478637,
+      "gpu_batch64_packets_s": 7889.254589071173
+    },
+    {
+      "arm": "A5_silu_gate",
+      "params": 142392,
+      "counted_mflops": 190.579968,
+      "gpu_batch1_p50_ms": 2.241039991378784,
+      "gpu_batch1_p95_ms": 2.4831968665122983,
+      "gpu_batch64_packets_s": 7988.46665191503
+    }
+  ]
+}
