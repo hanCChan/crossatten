@@ -12,7 +12,8 @@ from core import HERE, read, write, now, sha, array_sha, validate_registration
 from data import wisig_cells, flatten, source_groups
 from wifi import cfo, rotate, FS, LAG, build_wifi
 from train import predict, job_id, setup
-from xa.evaluate import rx_metrics, summarize
+from xa.evaluate import summarize
+from metrics import rx_metrics
 
 
 def csv_write(path, rows):
@@ -134,6 +135,7 @@ def layer_statistics(value,d,fit_names):
             day_var.append(np.var(cells,axis=1).mean(0).sum())
     b=float(np.var(tx_means,axis=0).sum());r=float(np.mean(rx_var));day=float(np.mean(day_var))
     return dict(tx_probe_held_rx_acc=tx_acc,tx_conditioned_rx_probe_acc=rx_acc,rx_chance=1/len(d['rx_names']),
+                tx_probe_iterations=int(tx.n_iter_.max()),rx_probe_iterations=int(rx.n_iter_.max()),
                 D_TX=b,D_RX=r,D_day=day,rho=r/(b+1e-12),feature_dim=value.shape[1],
                 normalization='per-packet unit L2 for scatter; fit-calibration standardization for probes',
                 calibration_samples=int(cal.sum()),probe_test_samples=int(test.sum()))
@@ -215,7 +217,10 @@ def p0_report():
            '| 数据 | fold | STF可靠比例 | +CFO/20dB中位误差Hz | P95 Hz |','|---|---:|---:|---:|---:|']
     for dataset,folds in c['folds'].items():
         for f,v in folds.items():
-            e=v['synthetic_added_cfo_error']['20'];lines.append(f"|{dataset}|{f}|{v['reliable_fraction']:.3f}|{e['median_abs_error_hz']:.2f}|{e['p95_abs_error_hz']:.2f}|")
+            e=v['synthetic_added_cfo_error']['20']
+            med='NA' if e['median_abs_error_hz'] is None else f"{e['median_abs_error_hz']:.2f}"
+            p95='NA' if e['p95_abs_error_hz'] is None else f"{e['p95_abs_error_hz']:.2f}"
+            lines.append(f"|{dataset}|{f}|{v['reliable_fraction']:.3f}|{med}|{p95}|")
     lines+=['','以下为4折描述性均值；TX probe只在fit-RX拟合、在留出源RX测试。RX probe使用各源RX互不重叠的包分区，控制TX均值后分类RX。',
             '','| 数据 | 层 | TX跨RX probe % | TX条件RX probe % | rho |','|---|---|---:|---:|---:|']
     layers=list(dict.fromkeys(r['layer'] for r in rows))

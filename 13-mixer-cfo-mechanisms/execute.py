@@ -53,7 +53,8 @@ def register_confirmation(selected):
     jobs=[dict(phase='p2_confirmation',dataset=d,fold=f,seed=s,group='last',arm=a)
           for d in ['ManyRx','ManySig'] for f in range(4) for s in [16011,16012] for a in arms]
     if len(jobs)>64:raise ValueError('Confirmation cap exceeded')
-    once(p,jobs);commit([p,HERE/'decision_p2.json',HERE/'P2_CFO_RESULTS.md'],'S13 freeze independent paired source confirmation after CFO pilot gate')
+    once(p,jobs);commit([p,HERE/'decision_p2.json',HERE/'P2_CFO_RESULTS.md',HERE/'p2_fit_metrics.csv',HERE/'p2_receiver_metrics.csv',HERE/'p2_paired_comparisons.csv'],
+        'S13 freeze independent paired source confirmation after CFO pilot gate')
 
 
 def workflow():

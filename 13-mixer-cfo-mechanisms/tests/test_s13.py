@@ -13,6 +13,7 @@ from wifi import cfo, rotate, corrected, build_wifi, FS
 import data
 from reports import source_gate, paired_stats
 from train import smoke_subset
+from metrics import rx_metrics
 
 
 class Tests(unittest.TestCase):
@@ -86,6 +87,14 @@ class Tests(unittest.TestCase):
         y=np.tile(np.repeat(np.arange(10),20),5);rx=np.repeat(np.arange(5),200)
         d=smoke_subset(dict(x=np.arange(1000)[:,None],y=y,rx=rx),128)
         self.assertEqual(len(d['y']),128);self.assertEqual(len(set(zip(d['y'],d['rx']))),50)
+
+    def test_macro_f1_uses_declared_classes(self):
+        for k in [6,10]:
+            value=rx_metrics(np.eye(k),np.arange(k))
+            self.assertEqual(value['macro_f1'],1.);self.assertEqual(np.asarray(value['confusion']).shape,(k,k))
+        from sklearn.metrics import f1_score
+        y=np.array([0,0,1,1,2,3,4,5]);p=np.array([0,1,1,1,2,3,4,4])
+        self.assertAlmostEqual(rx_metrics(np.eye(6)[p],y)['macro_f1'],f1_score(y,p,average='macro',labels=range(6),zero_division=0))
 
 
 if __name__=='__main__':unittest.main()

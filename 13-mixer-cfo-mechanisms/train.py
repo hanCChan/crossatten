@@ -10,13 +10,14 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 from sklearn.model_selection import train_test_split
-from core import HERE, ROOT, read, write, once, now, sha, array_sha, validate_registration, require_committed
+from core import HERE, ROOT, read, write, once, now, sha, array_sha, validate_registration, require_committed, git
 from data import shen_train, shen_cell, shen_roles, PROTOCOL, wisig_cells, source_groups, flatten
 from models import build, nparams
 from wifi import build_wifi, rotate
 from xa.frontends import awgn
 from xa.train import stable_seed
-from xa.evaluate import rx_metrics, summarize
+from xa.evaluate import summarize
+from metrics import rx_metrics
 
 
 def job_id(job):
@@ -98,6 +99,7 @@ def fit(job):
                     checkpoint="minimum_source_receiver_equal_ce",train_packets=len(tr["y"]),val_packets=len(va["y"]),
                     initial_shared_sha256=array_sha(np.concatenate([v.detach().cpu().numpy().reshape(-1) for k,v in model.state_dict().items() if "blocks." not in k])),
                     registration_sha256=sha(HERE/"registration.json"),torch=torch.__version__,gpu=torch.cuda.get_device_name(0),
+                    git_sha=git('rev-parse','HEAD'),amendments_sha256={p.name:sha(p) for p in sorted(HERE.glob('registration_amendment_*.json'))},
                     input_roles="source RX only; WiSig dates1-2 only",evaluation_batch=128)
         write(out/"config.json",config)
         tr={k:torch.from_numpy(np.ascontiguousarray(v)).cuda() for k,v in tr.items()}

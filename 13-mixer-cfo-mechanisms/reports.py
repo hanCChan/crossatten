@@ -128,9 +128,25 @@ def source_gate(rows):
 
 
 def p2_report(phase='p2'):
-    jobs=read(HERE/f'jobs_{phase}.json');available={}
-    for j in jobs:available[j['dataset'],j['fold'],j['seed'],j['arm']]=read(HERE/'runs'/job_id(j)/'metrics.json')['held_source']['per_rx']
-    decisions={}
+    jobs=read(HERE/f'jobs_{phase}.json');available={};fit_rows=[];rx_rows=[]
+    for j in jobs:
+        m=read(HERE/'runs'/job_id(j)/'metrics.json');e=m['held_source']
+        available[j['dataset'],j['fold'],j['seed'],j['arm']]=e['per_rx']
+        fit_rows.append(dict(dataset=j['dataset'],fold=j['fold'],seed=j['seed'],group=j['group'],arm=j['arm'],
+            acc=100*e['summary']['acc_mean'],macro_f1=100*e['summary']['f1_mean'],worst_acc=100*e['summary']['worst_acc'],
+            params=m['params'],seconds=m['wall_seconds'],epochs=m['epochs']))
+        for rx,v in e['per_rx'].items():rx_rows.append(dict(dataset=j['dataset'],fold=j['fold'],seed=j['seed'],arm=j['arm'],rx=rx,
+            acc=100*v['acc'],macro_f1=100*v['macro_f1']))
+    csv_write(HERE/f'{phase}_fit_metrics.csv',fit_rows);csv_write(HERE/f'{phase}_receiver_metrics.csv',rx_rows)
+    aggregates=[]
+    for dataset in ['ManyRx','ManySig']:
+        for arm in dict.fromkeys(j['arm'] for j in jobs):
+            local=[r for r in fit_rows if r['dataset']==dataset and r['arm']==arm]
+            per=[r for r in rx_rows if r['dataset']==dataset and r['arm']==arm]
+            worst=min(np.mean([r['acc'] for r in per if r['rx']==rx]) for rx in set(r['rx'] for r in per))
+            aggregates.append(dict(dataset=dataset,arm=arm,acc=float(np.mean([r['acc'] for r in local])),
+                macro_f1=float(np.mean([r['macro_f1'] for r in local])),worst_rx_mean_acc=float(worst),params=local[0]['params']))
+    decisions={};contrast_rows=[]
     for candidate in ['B1_cfo','B2_dual']:
         comparisons=[]
         if not any(j['arm']==candidate for j in jobs):continue
@@ -139,14 +155,23 @@ def p2_report(phase='p2'):
             for j in jobs:
                 if j['arm']!=candidate:continue
                 a=available[j['dataset'],j['fold'],j['seed'],candidate];b=available[j['dataset'],j['fold'],j['seed'],baseline]
-                for rx in a:pairs.append(dict(dataset=j['dataset'],fold=j['fold'],seed=j['seed'],rx=rx,delta_pp=100*(a[rx]['acc']-b[rx]['acc'])))
-            comparisons.append(dict(control=baseline,**source_gate(pairs)))
+                for rx in a:
+                    row=dict(dataset=j['dataset'],fold=j['fold'],seed=j['seed'],rx=rx,delta_pp=100*(a[rx]['acc']-b[rx]['acc']),
+                        delta_macro_f1_pp=100*(a[rx]['macro_f1']-b[rx]['macro_f1']))
+                    pairs.append(row);contrast_rows.append(dict(candidate=candidate,control=baseline,**row))
+            comparisons.append(dict(control=baseline,**source_gate(pairs),
+                conditional_receiver_uncertainty={d:paired_stats([p for p in pairs if p['dataset']==d]) for d in ['ManyRx','ManySig']}))
         decisions[candidate]=dict(admitted=all(c['admitted'] for c in comparisons),comparisons=comparisons)
     selected=[k for k,v in decisions.items() if v['admitted']]
+    csv_write(HERE/f'{phase}_paired_comparisons.csv',contrast_rows)
     result=dict(time=now(),phase=phase,selected=selected,status='GO_SOURCE_CONFIRMATION' if selected and phase=='p2' else 'SOURCE_CONFIRMATION_PASSED' if selected else 'STOP_SOURCE_GATE',
-                decisions=decisions,target_access=False)
+                decisions=decisions,all_arm_source_summary=aggregates,target_access=False)
     write(HERE/f'decision_{phase}.json',result)
-    (HERE/f'{phase.upper()}_CFO_RESULTS.md').write_text('# WiSig CFO 源域结果\n\n'+json_block(result)+'\n\n这些是源域held-RX结果，不是目标CR/CRD。\n',encoding='utf-8',newline='\n')
+    lines=['# WiSig CFO 源域结果','',f"状态：{result['status']}",'',
+           '| 数据 | 实验臂 | RX准确率 % | Macro-F1 % | 最差RX均值 % | 参数 |','|---|---|---:|---:|---:|---:|']
+    for r in aggregates:lines.append(f"|{r['dataset']}|{r['arm']}|{r['acc']:.3f}|{r['macro_f1']:.3f}|{r['worst_rx_mean_acc']:.3f}|{r['params']}|")
+    lines+=['',json_block(result),'','逐fit和逐RX结果见同前缀CSV；这些是源域held-RX结果，不是目标CR/CRD。']
+    (HERE/f'{phase.upper()}_CFO_RESULTS.md').write_text('\n'.join(lines)+'\n',encoding='utf-8',newline='\n')
     return result
 
 

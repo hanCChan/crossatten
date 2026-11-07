@@ -1,0 +1,5 @@
+{
+  "time": "2026-11-08T01:09:28+08:00",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\execute.py\", line 94, in <module>\n    try:workflow()\n        ^^^^^^^^^^\n  File \"D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\execute.py\", line 62, in workflow\n    matrix('smoke')\n  File \"D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\execute.py\", line 26, in matrix\n    if (HERE/'STOP_REQUESTED').exists():raise RuntimeError('STOP_REQUESTED: no further jobs dispatched')\n                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: STOP_REQUESTED: no further jobs dispatched\n",
+  "automatic_retry": false
+}

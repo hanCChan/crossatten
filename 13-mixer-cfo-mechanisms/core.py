@@ -119,7 +119,14 @@ def validate_registration():
     p = HERE / "registration.json"
     require_committed(p)
     r = read(p)
-    for relative, digest in r["code_sha256"].items():
+    effective=dict(r['code_sha256']);parent=sha(p)
+    for amendment in sorted(HERE.glob('registration_amendment_*.json')):
+        require_committed(amendment)
+        value=read(amendment)
+        if value['parent_registration_sha256']!=parent:raise ValueError('Broken registration amendment chain')
+        if value['protocol_changes']:raise ValueError('Technical amendment may not change scientific configuration')
+        effective.update(value['code_sha256']);parent=sha(amendment)
+    for relative, digest in effective.items():
         if sha(ROOT / relative) != digest:
             raise ValueError(f"Registered source changed: {relative}")
     return r
