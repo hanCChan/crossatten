@@ -89,6 +89,7 @@ Get-Content '13-mixer-cfo-mechanisms\execution.log' -Tail 20
 
 - `RESULTS.md` / `progress.json`：已完成数量；`status.py`：当前 fit/epoch。
 - `P0_MECHANISM_REPORT.md`、`P0_LAYER_PROBES.png`、`layer_probes.csv`：机制证据；未完成前不存在。
+- `P0_INTERPRETATION.zh-CN.md`：P0结论边界与探针收敛限制；`P0_CFO_SUPPLEMENT.md`为事后描述性分析，不参与训练或门槛决策。
 - `P1_MIXER_RESULTS.md` 与逐 fit/逐 RX CSV：48个模型完成并冻结后统一产生。
 - `costs.csv`：本机 FP32 成本，FLOPs 计数不完整覆盖 FFT/逐元素计算，不能声称全算子精确成本。
 - `decision_*.json`：每阶段 STOP/GO；`registration*.json` / `jobs*.json`：事前配置。

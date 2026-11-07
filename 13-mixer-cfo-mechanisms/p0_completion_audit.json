@@ -1,0 +1,28 @@
+{
+  "time": "2026-11-08T01:23:33+08:00",
+  "completed_diagnostic_fits": 8,
+  "source_checkpoints_sha256": {
+    "p0__ManyRx__B0__f0__first__s15001": "6f134018f8da43bcc95869a78d113ca5fb2f3f51f13fd8f36d5821c762736f45",
+    "p0__ManyRx__B0__f1__first__s15001": "a955e69f8b6cb54294a69a8390402f79e3c33ac9e150a152ce47ee590ea01e68",
+    "p0__ManyRx__B0__f2__first__s15001": "c61218ed5f83c8af69ea8dcc976a47529fb716fc3cc73dd33f751df0413aab35",
+    "p0__ManyRx__B0__f3__first__s15001": "caa0ecfc052eb5efe3a0cbf662e81a6aa0055819834293b63b0aa287e8bd848c",
+    "p0__ManySig__B0__f0__first__s15001": "cd24a51ada63c65fc3f8d5c3dbf9d101d6ec64feb38b8349793e477342a8a13c",
+    "p0__ManySig__B0__f1__first__s15001": "c9c6ef5b52491417f9cce1a313c2c5f2c2850dab333d735f6d47650723963611",
+    "p0__ManySig__B0__f2__first__s15001": "1a962ec7f35a5f098b37f0bde1719882524c8a9fe130d1d8af4abc429fc93827",
+    "p0__ManySig__B0__f3__first__s15001": "a06471ae9788eccd4ea62d1f600608eff7063ba1461285e43e486ebd5cbfdbcf"
+  },
+  "access_snapshot": {
+    "entries": 908,
+    "counts": {
+      "Shen": 50,
+      "ManyRx": 624,
+      "ManySig": 234
+    },
+    "violations": [],
+    "sha256": "c01e3bba1dd80a76fedbc037b90868c1ddd5006e790ea90c2460aa6e0caae475"
+  },
+  "historical_tracked_files_changed": [],
+  "registered_code_integrity": "PASS",
+  "interpretation": "P0 complete; P1 running; no WiSig target access",
+  "note": "Convergence warnings retained:4 ManyRx RX probes reached300 iterations; not silently retried. CFO descriptive supplement is post-hoc and does not change gates."
+}
