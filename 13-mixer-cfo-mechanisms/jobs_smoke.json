@@ -1,0 +1,74 @@
+[
+  {
+    "phase": "smoke",
+    "dataset": "Shen",
+    "arm": "A0_cnn",
+    "fold": 0,
+    "seed": 13001
+  },
+  {
+    "phase": "smoke",
+    "dataset": "Shen",
+    "arm": "A1_mha",
+    "fold": 0,
+    "seed": 13001
+  },
+  {
+    "phase": "smoke",
+    "dataset": "Shen",
+    "arm": "A1_mha_matched",
+    "fold": 0,
+    "seed": 13001
+  },
+  {
+    "phase": "smoke",
+    "dataset": "Shen",
+    "arm": "A2_transformer",
+    "fold": 0,
+    "seed": 13001
+  },
+  {
+    "phase": "smoke",
+    "dataset": "Shen",
+    "arm": "A2_transformer_matched",
+    "fold": 0,
+    "seed": 13001
+  },
+  {
+    "phase": "smoke",
+    "dataset": "Shen",
+    "arm": "A3_rfhstu",
+    "fold": 0,
+    "seed": 13001
+  },
+  {
+    "phase": "smoke",
+    "dataset": "Shen",
+    "arm": "A4_softmax_gate",
+    "fold": 0,
+    "seed": 13001
+  },
+  {
+    "phase": "smoke",
+    "dataset": "Shen",
+    "arm": "A5_silu_gate",
+    "fold": 0,
+    "seed": 13001
+  },
+  {
+    "phase": "smoke",
+    "dataset": "ManyRx",
+    "arm": "B0",
+    "fold": 0,
+    "group": "first",
+    "seed": 13001
+  },
+  {
+    "phase": "smoke",
+    "dataset": "ManySig",
+    "arm": "B0",
+    "fold": 0,
+    "group": "first",
+    "seed": 13001
+  }
+]

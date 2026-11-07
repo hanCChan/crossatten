@@ -1,0 +1,256 @@
+{
+  "stage": "S13",
+  "created_at": "2026-11-08T01:05:31+08:00",
+  "base_commit": "f3c9729a0d2b4bcbafafcaf28683b3f5f5770a1f",
+  "branch": "exp/s13-mixer-cfo",
+  "authorization": "User requested attached plan execution; S13 schedules P0/P1 and conditional P2. P3 needs a separate source-only UDA protocol after mechanism evidence.",
+  "proposal_sha256": "252d3c9873e9861da29557232503f02f77e4627d6284ea2462d6c967d85f1c7b",
+  "arms": {
+    "A0_cnn": {
+      "kind": "none",
+      "params": 100154
+    },
+    "A1_mha": {
+      "kind": "mha",
+      "inner": 64,
+      "heads": 4,
+      "params": 133690
+    },
+    "A1_mha_matched": {
+      "kind": "mha",
+      "inner": 80,
+      "heads": 4,
+      "params": 141978
+    },
+    "A2_transformer": {
+      "kind": "transformer",
+      "ff": 256,
+      "heads": 4,
+      "params": 200122
+    },
+    "A2_transformer_matched": {
+      "kind": "transformer",
+      "ff": 32,
+      "heads": 4,
+      "params": 142330
+    },
+    "A3_rfhstu": {
+      "kind": "gated",
+      "score": "sigmoid",
+      "params": 142392
+    },
+    "A4_softmax_gate": {
+      "kind": "gated",
+      "score": "softmax",
+      "params": 142392
+    },
+    "A5_silu_gate": {
+      "kind": "gated",
+      "score": "silu",
+      "params": 142392
+    }
+  },
+  "code_sha256": {
+    "09-phase-invariance/phase_features.py": "d467175e131cfa719f0fa1f5500a8935bcb864d12dad53160a77247874d1721e",
+    "13-mixer-cfo-mechanisms/core.py": "0bf31c4838ed0da907ff7707704e01235c02aa9b37e053d3e295acf94d7a8ee4",
+    "13-mixer-cfo-mechanisms/data.py": "578fd207105e5375094bd22a12ec710fd259379c4b1c627d962251256bd71e9e",
+    "13-mixer-cfo-mechanisms/diagnostics.py": "7180e51b1a42093232a4b96412576f844cc5420282cd90bc83c99364705a01a6",
+    "13-mixer-cfo-mechanisms/execute.py": "361006afcd6e84a108a9e16517ea50ee5a1f53ed207f47fad4d91732e414338b",
+    "13-mixer-cfo-mechanisms/models.py": "606243ff9462358f53a86d2908130c47f69c5dd9d1cfee669cbaf10c7b76e5a1",
+    "13-mixer-cfo-mechanisms/pickle_index.py": "52925d018fbad46396dbf809379e2b8961b368179ba1ef64c4fc9c5031ed319a",
+    "13-mixer-cfo-mechanisms/register.py": "1d2241b226e4addbe74401c5acf7cd6acd148fcece15e20cf0c611f11a6b5b3b",
+    "13-mixer-cfo-mechanisms/reports.py": "b6bdade818b118a2ab541e481807587bd74b520e8fc6c221e31a32491281f88a",
+    "13-mixer-cfo-mechanisms/status.py": "533e7ef2154f0134c8cc887e5a1bd0d42cafcdfa3863c712f462bee048b49b1a",
+    "13-mixer-cfo-mechanisms/tests/test_s13.py": "862fb5e90370fc6d49a9caad2b874b071f7cda866ef23150f03cef8aa9414b4a",
+    "13-mixer-cfo-mechanisms/train.py": "f48546ef54473deb2fe477a484801f2a4ca4bc14b10a7c9a84a08acd9c3ae183",
+    "13-mixer-cfo-mechanisms/wifi.py": "3402847c350172b670aba40616f5b56ec5ecb2e7176cc199c26d0315d920db37",
+    "configs/protocol.json": "913d38626d9bcaa285b0ba7816bd8e863a91778f1fc62e4dd7d27c70415a119a",
+    "lib/legacy_rfhstu/__init__.py": "f78366d19d77282713f4944bc4e8fbdcbb138aac9849a0acf79459f4491dd9f5",
+    "lib/legacy_rfhstu/cnn_stem.py": "b3a8944c96b354d295a96d84876693e95433f67616e23d2804219d0fa1c2762a",
+    "lib/legacy_rfhstu/features.py": "1e9e5aa828adbb382c604ebf7b1bd429c79893ea1169afddaa14596a6c0d5378",
+    "lib/legacy_rfhstu/losses.py": "a0ba7f42040203289593ba6a9363f27ea19d5152d8813979a7018cc152e78e28",
+    "lib/legacy_rfhstu/mixstyle.py": "687174caeff6f256b2661399ab70aede396d5ea51af4e312dcbacc01235b94a5",
+    "lib/legacy_rfhstu/models.py": "ebb638fac3392fec36bace7e2445ab6d27ef4e3b5adb2c06b35c8bc82f506666",
+    "lib/legacy_rfhstu/multiscale.py": "de51929e7917e793e814319a88b91ef0b17354e4c7614065172e082f16833e35",
+    "lib/legacy_rfhstu/oob_fusion.py": "030f2886c9a84282eb7e20ce5d318f528e8bfc20902c4b4a17315686ea290259",
+    "lib/xa/__init__.py": "ca199705017e2d6d6b037d4d732f7caec7d7dff190c77a3d94c0cfaf515ab492",
+    "lib/xa/aggregate.py": "8995baeff876f427338836ad0b2d53de01f95e95148b851067f498d35f592e38",
+    "lib/xa/bench.py": "3a94fe229e5b43f45b15ca2f1a06e179b0212f282ea58671e71c718161d20ba7",
+    "lib/xa/data.py": "ff861d46e508d807996a924d4439134416b16ba6507856a7335c65d9e4cfc3cb",
+    "lib/xa/evaluate.py": "365998cf59196e5ebbdad3b34132fe1dfb2a4a2b988c82d660715471167734aa",
+    "lib/xa/explore_models.py": "bcc1616b5fc6ea533183b4c3a9538748a663a1b321bd748a33870b4ef8116467",
+    "lib/xa/explore_train.py": "8e4361d2b21546f5f5b5ba26adccd57618680c720db734561802b8246a33babe",
+    "lib/xa/frontends.py": "967e28c05f168341b4710e4b2253d77b93d92bc9a3dd515fdddaa35e81c2013f",
+    "lib/xa/guard.py": "80562f5a0893be3a3e91cb80ef4636a6b24eb0c76bfa59d3566574633e5fff54",
+    "lib/xa/jobs.py": "ef8ac595d7a567c18d5e726b2fe70e9942628e709bf1453dfe0df5e9d07233f0",
+    "lib/xa/launch.py": "71ca1656dcccf4d26455de6b999de42b2482f73b738a37fca52f354ccec6d4a2",
+    "lib/xa/models.py": "322049d67d19d196dca8a722fda9de433d846fe1aa3d6d8439c49adeba6554bf",
+    "lib/xa/models2.py": "e9c3364868955e6996645a823187dadb553a2a95139e809d43055a93c53eaa23",
+    "lib/xa/models3.py": "bade67f8ad50b64c132197d21a86c1897a8c27976a7b8490d2e7131ff025cbba",
+    "lib/xa/paper_models.py": "7c09adc3b481e5b13eeccb93731a00573f16a98f5d35c490a1d5082707c550bd",
+    "lib/xa/paper_run.py": "4c1bcdf2e98c974c6e03677b69881ea378dc3406c0d9f8a7bbe471290389fec6",
+    "lib/xa/paper_train.py": "e59cab54045ef6cd27a168e937e7571456ad3d2405183efc605e8308e3ed80c8",
+    "lib/xa/run_job.py": "534b8f7aa2c8c54c12eb5881850897fa2a69280cde004c84ede19532b0cb576b",
+    "lib/xa/train.py": "906a7fd0a7bbb61fea86e03bcf9b52228a5b26851e53fa904d497be330daa96e",
+    "lib/xa/wisig.py": "b4127fba87f5603704c92d2221743c8dedf6898e45c8216b9ddb84b32f42ad67"
+  },
+  "p1": {
+    "folds": [
+      0,
+      1
+    ],
+    "seeds": [
+      201,
+      202,
+      203
+    ],
+    "formal_fits": 48,
+    "epochs": 200,
+    "batch": 64,
+    "optimizer": "AdamW lr1e-3 wd5e-4 warmup5/cosine",
+    "awgn_db": [
+      0,
+      50
+    ],
+    "checkpoint": "minimum RX-equal source packet validation CE",
+    "evaluation_batch": 128,
+    "target_rule": "all source checkpoints sealed and committed before dev_val/used-confirm access",
+    "paired_seed": "sha256(P-H5x160|fold|seed)",
+    "primary": "RX-equal accuracy; every arm reported",
+    "primary_pairs": [
+      [
+        "A3_rfhstu",
+        "A0_cnn"
+      ],
+      [
+        "A3_rfhstu",
+        "A1_mha"
+      ],
+      [
+        "A3_rfhstu",
+        "A1_mha_matched"
+      ],
+      [
+        "A3_rfhstu",
+        "A2_transformer"
+      ],
+      [
+        "A3_rfhstu",
+        "A2_transformer_matched"
+      ],
+      [
+        "A3_rfhstu",
+        "A4_softmax_gate"
+      ],
+      [
+        "A3_rfhstu",
+        "A5_silu_gate"
+      ]
+    ],
+    "descriptive_gate": {
+      "mean_delta_pp": 1,
+      "positive_pairs": 5,
+      "pairs": 6,
+      "worst_receiver_delta_pp": -2
+    },
+    "limitations": [
+      "receiver bootstrap conditional on fitted seeds; no multiple-comparison correction",
+      "matched transformer FFN32 is a bottleneck; natural FFN256 also reported",
+      "MHA matched width80 changes attention head width; outputs remain32x64",
+      "SiLU-score control only changes RF mixer score, not a full original HSTU reproduction"
+    ]
+  },
+  "p0": {
+    "datasets": [
+      "ManyRx",
+      "ManySig"
+    ],
+    "folds": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "group": "first",
+    "seed": 15001,
+    "fresh_source_fits": 8,
+    "epochs_cap": 40,
+    "batch": 128,
+    "optimizer": "Adam lr1e-3 Plateau(.1,5), earlystop10",
+    "data": "legal source RX days1-2; internal 70/30 fit/packet validation; held-source for diagnostics only",
+    "historical_weights": "No download/replay. New source diagnostic fits explicitly labeled fresh.",
+    "diagnostic_samples_per_tx_rx_day": 16,
+    "feature_pool_bins": 8,
+    "probes": "balanced within-cell 50/50 packet split; TX-held-RX transfer; TX-conditioned RX logistic probe",
+    "rho": "unit-length pooled features; equal TX/RX/day cell centroid scatters",
+    "interventions": [
+      "clean-fit-only BN recalibration",
+      "1% relative stem perturbation",
+      "1% relative mixer perturbation"
+    ],
+    "no_adaptation_claim": "P3 and held-RX fitting not executed; sensitivity is not proof of shallow adaptation"
+  },
+  "cfo": {
+    "fs_hz": 25000000.0,
+    "lag": 20,
+    "prefix": [
+      0,
+      160
+    ],
+    "confidence_threshold": 0.7,
+    "shifts_hz": [
+      -10000,
+      -5000,
+      0,
+      5000,
+      10000
+    ],
+    "added_noise_snr_db": [
+      30,
+      20,
+      10
+    ],
+    "estimator_gate": {
+      "min_reliable_fraction": 0.7,
+      "max_added20db_median_error_hz": 500,
+      "max_added20db_p95_error_hz": 2000
+    },
+    "interpretation": "observed CFO mixes TX/RX/channel effects; synthetic additivity is not natural CFO ground truth"
+  },
+  "p2": {
+    "status": "CONDITIONAL_NOT_REGISTERED_FOR_EXECUTION",
+    "variants": [
+      "B0",
+      "B1_cfo",
+      "B2_corrected",
+      "B2_dual",
+      "B2_dual_raw"
+    ],
+    "prospective_pilot_cap": 40,
+    "pilot_seed": 16001,
+    "pilot_group": "first",
+    "epochs_cap": 40,
+    "admission": {
+      "manyrx_mean_pp": 1,
+      "manyrx_positive_folds": 3,
+      "worst_rx_pp": -2,
+      "manysig_mean_pp": 0,
+      "manysig_folds_ge_minus1pp": 3
+    },
+    "confirmation": "separate source-only registration; fresh seeds16011/16012, last held-source group, paired new controls",
+    "target": "no WiSig target access implemented in S13; any final CRD requires source confirmation and committed separate final matrix"
+  },
+  "p3": {
+    "status": "NOT_RUN",
+    "reason": "independent UDA/TTA protocol deferred until source mechanism evidence and separate registration"
+  },
+  "historical_preservation": "No writes outside S13 except Git branch/commits; no changes to prior STOPs",
+  "execution": {
+    "gpu": 0,
+    "concurrent_fits": 1,
+    "device": "RTX4060 Laptop 8GB",
+    "precision": "FP32",
+    "automatic_retry": false
+  },
+  "environment_sha256": "99d978d99c1f0e01a354bf779abde63f998c70c64f4dd9109722603aeb01320b"
+}
