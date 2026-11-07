@@ -1,0 +1,246 @@
+{
+  "created_at": "2026-11-08T01:14:33+08:00",
+  "source_dates": [
+    1,
+    2
+  ],
+  "target_read": false,
+  "folds": {
+    "ManyRx": {
+      "0": {
+        "packets": 7440,
+        "reliable_fraction": 0.9329301075268818,
+        "median_coherence": 0.9918326139450073,
+        "observed_cfo_quantiles_hz": [
+          -418694.1884375,
+          -21983.84228515625,
+          -15683.6337890625,
+          -4837.5240478515625,
+          547166.7975
+        ],
+        "synthetic_added_cfo_error": {
+          "30": {
+            "median_abs_error_hz": 150.75,
+            "p95_abs_error_hz": 462.1124999999997
+          },
+          "20": {
+            "median_abs_error_hz": 485.1875,
+            "p95_abs_error_hz": 1479.1624999999967
+          },
+          "10": {
+            "median_abs_error_hz": 1719.75,
+            "p95_abs_error_hz": 5228.737499999994
+          }
+        },
+        "prospective_randomization_bound_hz": 7919.933935546872,
+        "sample_sha256": "d67e2111bab0b671522338a4384e0147992940f506601919810e830fe3e67b00",
+        "interpretation": "incremental synthetic CFO error; true native CFO is unknown"
+      },
+      "1": {
+        "packets": 7440,
+        "reliable_fraction": 0.9370967741935484,
+        "median_coherence": 0.9933822154998779,
+        "observed_cfo_quantiles_hz": [
+          -386275.044375,
+          -22564.14404296875,
+          -17091.9716796875,
+          -5951.0340576171875,
+          387975.45062499936
+        ],
+        "synthetic_added_cfo_error": {
+          "30": {
+            "median_abs_error_hz": 150.0625,
+            "p95_abs_error_hz": 457.3781249999997
+          },
+          "20": {
+            "median_abs_error_hz": 473.8125,
+            "p95_abs_error_hz": 1446.8843749999992
+          },
+          "10": {
+            "median_abs_error_hz": 1695.46875,
+            "p95_abs_error_hz": 5137.3968749999985
+          }
+        },
+        "prospective_randomization_bound_hz": 5756.699023437499,
+        "sample_sha256": "a159f64d8ad842e331e1999842152034c867c63b3b11540ae15e615764ddbbc0",
+        "interpretation": "incremental synthetic CFO error; true native CFO is unknown"
+      },
+      "2": {
+        "packets": 7472,
+        "reliable_fraction": 0.9385706638115632,
+        "median_coherence": 0.9915924072265625,
+        "observed_cfo_quantiles_hz": [
+          -383975.9375,
+          -22105.53662109375,
+          -15783.466796875,
+          -5152.004638671875,
+          547233.013125
+        ],
+        "synthetic_added_cfo_error": {
+          "30": {
+            "median_abs_error_hz": 149.0,
+            "p95_abs_error_hz": 461.25
+          },
+          "20": {
+            "median_abs_error_hz": 479.875,
+            "p95_abs_error_hz": 1473.4624999999978
+          },
+          "10": {
+            "median_abs_error_hz": 1712.0625,
+            "p95_abs_error_hz": 5188.212499999994
+          }
+        },
+        "prospective_randomization_bound_hz": 7801.964794921873,
+        "sample_sha256": "b980e9793eda0d5ffdb286cf7dc441b54c057cf431d90536cd8412ef75734a61",
+        "interpretation": "incremental synthetic CFO error; true native CFO is unknown"
+      },
+      "3": {
+        "packets": 7552,
+        "reliable_fraction": 0.9544491525423728,
+        "median_coherence": 0.9920207262039185,
+        "observed_cfo_quantiles_hz": [
+          -340026.3809375,
+          -22141.86669921875,
+          -16280.42724609375,
+          -5537.150146484375,
+          546778.9206249999
+        ],
+        "synthetic_added_cfo_error": {
+          "30": {
+            "median_abs_error_hz": 149.375,
+            "p95_abs_error_hz": 463.125
+          },
+          "20": {
+            "median_abs_error_hz": 484.71875,
+            "p95_abs_error_hz": 1466.1906249999997
+          },
+          "10": {
+            "median_abs_error_hz": 1739.96875,
+            "p95_abs_error_hz": 5184.262499999999
+          }
+        },
+        "prospective_randomization_bound_hz": 8319.193066406246,
+        "sample_sha256": "8c48e3f4f8562679fbdd3ced1df7bb59ada9fc14ff164bdef9b116c245f191fa",
+        "interpretation": "incremental synthetic CFO error; true native CFO is unknown"
+      }
+    },
+    "ManySig": {
+      "0": {
+        "packets": 1728,
+        "reliable_fraction": 0.9895833333333334,
+        "median_coherence": 0.9923601150512695,
+        "observed_cfo_quantiles_hz": [
+          -29924.23466796875,
+          -22052.11865234375,
+          -17364.767578125,
+          -10977.628173828125,
+          9425.2494921875
+        ],
+        "synthetic_added_cfo_error": {
+          "30": {
+            "median_abs_error_hz": 152.875,
+            "p95_abs_error_hz": 482.6312499999999
+          },
+          "20": {
+            "median_abs_error_hz": 491.78125,
+            "p95_abs_error_hz": 1495.5499999999993
+          },
+          "10": {
+            "median_abs_error_hz": 1743.6875,
+            "p95_abs_error_hz": 5300.471874999995
+          }
+        },
+        "prospective_randomization_bound_hz": 3585.9978515625,
+        "sample_sha256": "d8cd5a5bd62f70b5a6301a48a9183350cd5d913777b9012df9aff5718e0ab292",
+        "interpretation": "incremental synthetic CFO error; true native CFO is unknown"
+      },
+      "1": {
+        "packets": 1728,
+        "reliable_fraction": 0.9901620370370371,
+        "median_coherence": 0.9929680824279785,
+        "observed_cfo_quantiles_hz": [
+          -28903.8160546875,
+          -21967.8232421875,
+          -18409.384765625,
+          -11370.727783203125,
+          9446.865742187501
+        ],
+        "synthetic_added_cfo_error": {
+          "30": {
+            "median_abs_error_hz": 151.6875,
+            "p95_abs_error_hz": 477.83124999999995
+          },
+          "20": {
+            "median_abs_error_hz": 493.625,
+            "p95_abs_error_hz": 1499.95625
+          },
+          "10": {
+            "median_abs_error_hz": 1742.125,
+            "p95_abs_error_hz": 5361.174999999996
+          }
+        },
+        "prospective_randomization_bound_hz": 3300.308984374999,
+        "sample_sha256": "d85772ea49caf4c17a4322293b78061ff1ecb8abf15f3f8004c3170b6605a3e5",
+        "interpretation": "incremental synthetic CFO error; true native CFO is unknown"
+      },
+      "2": {
+        "packets": 1728,
+        "reliable_fraction": 0.9884259259259259,
+        "median_coherence": 0.9923601150512695,
+        "observed_cfo_quantiles_hz": [
+          -30033.23572265625,
+          -22592.96875,
+          -17997.8544921875,
+          -11704.5283203125,
+          6461.440644531252
+        ],
+        "synthetic_added_cfo_error": {
+          "30": {
+            "median_abs_error_hz": 154.375,
+            "p95_abs_error_hz": 463.5625
+          },
+          "20": {
+            "median_abs_error_hz": 487.09375,
+            "p95_abs_error_hz": 1476.8999999999996
+          },
+          "10": {
+            "median_abs_error_hz": 1736.40625,
+            "p95_abs_error_hz": 5282.712499999997
+          }
+        },
+        "prospective_randomization_bound_hz": 4869.992382812499,
+        "sample_sha256": "848f4d6664bc95c87ff7e909e9a45c9fa2f43c2db0360268525488fb50d5683b",
+        "interpretation": "incremental synthetic CFO error; true native CFO is unknown"
+      },
+      "3": {
+        "packets": 1728,
+        "reliable_fraction": 0.9936342592592593,
+        "median_coherence": 0.9932352900505066,
+        "observed_cfo_quantiles_hz": [
+          -29088.05296875,
+          -22090.35888671875,
+          -18042.7646484375,
+          -11410.466796875,
+          6194.304716796876
+        ],
+        "synthetic_added_cfo_error": {
+          "30": {
+            "median_abs_error_hz": 149.25,
+            "p95_abs_error_hz": 462.3125
+          },
+          "20": {
+            "median_abs_error_hz": 483.0,
+            "p95_abs_error_hz": 1478.774999999999
+          },
+          "10": {
+            "median_abs_error_hz": 1722.5625,
+            "p95_abs_error_hz": 5246.9874999999965
+          }
+        },
+        "prospective_randomization_bound_hz": 3649.040185546875,
+        "sample_sha256": "0632ee4ad819da31637e3c8ab608e97a826d7978650ef4ecd8c28dadad84fe6f",
+        "interpretation": "incremental synthetic CFO error; true native CFO is unknown"
+      }
+    }
+  }
+}

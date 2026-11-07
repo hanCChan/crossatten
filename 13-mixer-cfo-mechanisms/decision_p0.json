@@ -1,0 +1,55 @@
+{
+  "time": "2026-11-08T01:20:15+08:00",
+  "status": "GO_CFO_SOURCE_PILOT",
+  "cfo_pilot_allowed": true,
+  "checks": {
+    "ManyRx/fold0": {
+      "reliable": true,
+      "median": true,
+      "p95": true
+    },
+    "ManyRx/fold1": {
+      "reliable": true,
+      "median": true,
+      "p95": true
+    },
+    "ManyRx/fold2": {
+      "reliable": true,
+      "median": true,
+      "p95": true
+    },
+    "ManyRx/fold3": {
+      "reliable": true,
+      "median": true,
+      "p95": true
+    },
+    "ManySig/fold0": {
+      "reliable": true,
+      "median": true,
+      "p95": true
+    },
+    "ManySig/fold1": {
+      "reliable": true,
+      "median": true,
+      "p95": true
+    },
+    "ManySig/fold2": {
+      "reliable": true,
+      "median": true,
+      "p95": true
+    },
+    "ManySig/fold3": {
+      "reliable": true,
+      "median": true,
+      "p95": true
+    }
+  },
+  "source_fits_complete": 8,
+  "shallow_adaptation_claim": "NOT_ESTABLISHED: P3 not executed",
+  "target_access": false,
+  "evidence_sha256": {
+    "cfo_audit.json": "e59b1d646fe4807a228c85af65661b3b98c14dbe5e5b371bb76bbc10e72d5039",
+    "layer_probes.csv": "feba578e7ed5ae82b776b28397fc03113aaaaceffb17464d2e49295efe38693c",
+    "source_cfo_packets.csv": "e9333ae74d502ee75557e796c9c4563a4a7370c5962c73043e98213e7827a335"
+  }
+}
