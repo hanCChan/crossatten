@@ -1,0 +1,24 @@
+{
+  "job": {
+    "phase": "p1",
+    "dataset": "Shen",
+    "arm": "E2_patch_hstu",
+    "fold": 1,
+    "seed": 203
+  },
+  "data_seed": 1501995291,
+  "batch": 64,
+  "epochs_budget": 200,
+  "params": 580136,
+  "checkpoint": "minimum_source_receiver_equal_ce",
+  "train_packets": 8000,
+  "val_packets": 2000,
+  "initial_shared_sha256": "77650e0d85427db4c35e5ac343ae4836f69682cf25c62299bff37b8bfe9935a1",
+  "registration_sha256": "f7781d78cb9b0f1f5ce1acbb5d3d0428ab9eda9c4960782fd893b52a18e38917",
+  "torch": "2.5.0+cu124",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "git_sha": "c5b1ab96d53b352cfb60dc0e18a3ec09654bc234",
+  "amendments_sha256": {},
+  "input_roles": "source RX only; WiSig dates1-2 only",
+  "evaluation_batch": 128
+}
