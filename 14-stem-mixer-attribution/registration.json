@@ -1,0 +1,851 @@
+{
+  "stage": "S14",
+  "time": "2026-11-08T20:08:48+08:00",
+  "status": "REGISTERED_AFTER_COMPLETE_S13",
+  "s13_final_git_sha": "9874cd5b512f92862308e88986d282d6099d9286",
+  "design_sha256": "403eb5a247674ab60447f389f85b6041f13c3866f795d2ba2fa076d6adf0f86b",
+  "code_sha256": {
+    "09-phase-invariance/phase_features.py": "d467175e131cfa719f0fa1f5500a8935bcb864d12dad53160a77247874d1721e",
+    "13-mixer-cfo-mechanisms/cfo_descriptive.py": "e60de808c7de10decda0844f2e74ae55169df196c9ec9fbb3807c312f4a131da",
+    "13-mixer-cfo-mechanisms/core.py": "a9db92f80e8e1bf1579cab900fabf085f5c33e018dffe6e27f1af64ee94dc527",
+    "13-mixer-cfo-mechanisms/data.py": "578fd207105e5375094bd22a12ec710fd259379c4b1c627d962251256bd71e9e",
+    "13-mixer-cfo-mechanisms/diagnostics.py": "883b0a5fcf73ba7c19e94f51ae05f7d003b82a8870b44c6c6d23e4ca02ee7149",
+    "13-mixer-cfo-mechanisms/execute.py": "21a7bf48a381842e5fbc044411350ba2faa1fd86cc31796ccab199726e8b1ae8",
+    "13-mixer-cfo-mechanisms/metrics.py": "a9773e0532552f012dc039c42206460d1a5b02001a2bbb44a388258825f85ed7",
+    "13-mixer-cfo-mechanisms/models.py": "606243ff9462358f53a86d2908130c47f69c5dd9d1cfee669cbaf10c7b76e5a1",
+    "13-mixer-cfo-mechanisms/pickle_index.py": "52925d018fbad46396dbf809379e2b8961b368179ba1ef64c4fc9c5031ed319a",
+    "13-mixer-cfo-mechanisms/register.py": "1d2241b226e4addbe74401c5acf7cd6acd148fcece15e20cf0c611f11a6b5b3b",
+    "13-mixer-cfo-mechanisms/reports.py": "8bcf6ec4ad18d183368b3d0e6bd5c4e58c476442aee16ddba74b099de27aef15",
+    "13-mixer-cfo-mechanisms/status.py": "533e7ef2154f0134c8cc887e5a1bd0d42cafcdfa3863c712f462bee048b49b1a",
+    "13-mixer-cfo-mechanisms/train.py": "164b0eb9794c4494b34cf1d25f8dfb0c9a4ae8c54af3e03ef9f08b150a670a2a",
+    "13-mixer-cfo-mechanisms/wifi.py": "3402847c350172b670aba40616f5b56ec5ecb2e7176cc199c26d0315d920db37",
+    "14-stem-mixer-attribution/s14_cfo.py": "ce820d3243cc5d3e94cc9992233e5632ffbb5d682cf23c5d9158273bfc1d7800",
+    "14-stem-mixer-attribution/s14_core.py": "7d4edd0929f4ff74a77b3f0115e5ecd45b851d8af929eb1d08202af9ef6befd8",
+    "14-stem-mixer-attribution/s14_data.py": "eada86abfd738744557ce4f2b7771cb3a09ddce2b168697c7f414031c88f3dd5",
+    "14-stem-mixer-attribution/s14_execute.py": "f4f753a83d8e250a9021251ba8aad76c89580b561f628cd534f8f0afe67c10d3",
+    "14-stem-mixer-attribution/s14_models.py": "dcc5402d26e5398f329d303df8f8ad9dfdc1ed3c50c5123a041613f9521bf9e8",
+    "14-stem-mixer-attribution/s14_register.py": "e4ac7a642f132a575f250e6498cee71946a7ac41b2915a04cb71c28ba79fec5c",
+    "14-stem-mixer-attribution/s14_reports.py": "57157af45b765407aa6248e5a43963b0e7e156dcb019de268b65f079aefe74de",
+    "14-stem-mixer-attribution/s14_stats.py": "03e0c2e9c39afa0d0e0e5e50a857fbf3de3c0b80f9bca951222ff471e8e05c57",
+    "14-stem-mixer-attribution/s14_train.py": "678e02a23a739842832d1f6c42d3916e9effa5b937ff5a05dcaad427f9e81dd2",
+    "14-stem-mixer-attribution/status.py": "18c04179af6c12ba73b41d7322cc0714c3c783530598cb2a972d6143ca6dc49c",
+    "14-stem-mixer-attribution/tests/test_s14.py": "481a36d2cccf4364d954e6170cfe4bcc930bf9713d6d73b84ae3ac3d2ec5cf34",
+    "configs/protocol.json": "913d38626d9bcaa285b0ba7816bd8e863a91778f1fc62e4dd7d27c70415a119a",
+    "lib/legacy_rfhstu/__init__.py": "f78366d19d77282713f4944bc4e8fbdcbb138aac9849a0acf79459f4491dd9f5",
+    "lib/legacy_rfhstu/cnn_stem.py": "b3a8944c96b354d295a96d84876693e95433f67616e23d2804219d0fa1c2762a",
+    "lib/legacy_rfhstu/features.py": "1e9e5aa828adbb382c604ebf7b1bd429c79893ea1169afddaa14596a6c0d5378",
+    "lib/legacy_rfhstu/losses.py": "a0ba7f42040203289593ba6a9363f27ea19d5152d8813979a7018cc152e78e28",
+    "lib/legacy_rfhstu/mixstyle.py": "687174caeff6f256b2661399ab70aede396d5ea51af4e312dcbacc01235b94a5",
+    "lib/legacy_rfhstu/models.py": "ebb638fac3392fec36bace7e2445ab6d27ef4e3b5adb2c06b35c8bc82f506666",
+    "lib/legacy_rfhstu/multiscale.py": "de51929e7917e793e814319a88b91ef0b17354e4c7614065172e082f16833e35",
+    "lib/legacy_rfhstu/oob_fusion.py": "030f2886c9a84282eb7e20ce5d318f528e8bfc20902c4b4a17315686ea290259",
+    "lib/xa/__init__.py": "ca199705017e2d6d6b037d4d732f7caec7d7dff190c77a3d94c0cfaf515ab492",
+    "lib/xa/aggregate.py": "8995baeff876f427338836ad0b2d53de01f95e95148b851067f498d35f592e38",
+    "lib/xa/bench.py": "3a94fe229e5b43f45b15ca2f1a06e179b0212f282ea58671e71c718161d20ba7",
+    "lib/xa/data.py": "ff861d46e508d807996a924d4439134416b16ba6507856a7335c65d9e4cfc3cb",
+    "lib/xa/evaluate.py": "365998cf59196e5ebbdad3b34132fe1dfb2a4a2b988c82d660715471167734aa",
+    "lib/xa/explore_models.py": "bcc1616b5fc6ea533183b4c3a9538748a663a1b321bd748a33870b4ef8116467",
+    "lib/xa/explore_train.py": "8e4361d2b21546f5f5b5ba26adccd57618680c720db734561802b8246a33babe",
+    "lib/xa/frontends.py": "967e28c05f168341b4710e4b2253d77b93d92bc9a3dd515fdddaa35e81c2013f",
+    "lib/xa/guard.py": "80562f5a0893be3a3e91cb80ef4636a6b24eb0c76bfa59d3566574633e5fff54",
+    "lib/xa/jobs.py": "ef8ac595d7a567c18d5e726b2fe70e9942628e709bf1453dfe0df5e9d07233f0",
+    "lib/xa/launch.py": "71ca1656dcccf4d26455de6b999de42b2482f73b738a37fca52f354ccec6d4a2",
+    "lib/xa/models.py": "322049d67d19d196dca8a722fda9de433d846fe1aa3d6d8439c49adeba6554bf",
+    "lib/xa/models2.py": "e9c3364868955e6996645a823187dadb553a2a95139e809d43055a93c53eaa23",
+    "lib/xa/models3.py": "bade67f8ad50b64c132197d21a86c1897a8c27976a7b8490d2e7131ff025cbba",
+    "lib/xa/paper_models.py": "7c09adc3b481e5b13eeccb93731a00573f16a98f5d35c490a1d5082707c550bd",
+    "lib/xa/paper_run.py": "4c1bcdf2e98c974c6e03677b69881ea378dc3406c0d9f8a7bbe471290389fec6",
+    "lib/xa/paper_train.py": "e59cab54045ef6cd27a168e937e7571456ad3d2405183efc605e8308e3ed80c8",
+    "lib/xa/run_job.py": "534b8f7aa2c8c54c12eb5881850897fa2a69280cde004c84ede19532b0cb576b",
+    "lib/xa/train.py": "906a7fd0a7bbb61fea86e03bcf9b52228a5b26851e53fa904d497be330daa96e",
+    "lib/xa/wisig.py": "b4127fba87f5603704c92d2221743c8dedf6898e45c8216b9ddb84b32f42ad67"
+  },
+  "jobs": [
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "E1_patch_mha",
+      "fold": 0,
+      "seed": 201
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "E2_patch_hstu",
+      "fold": 0,
+      "seed": 201
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "E1_patch_mha",
+      "fold": 0,
+      "seed": 202
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "E2_patch_hstu",
+      "fold": 0,
+      "seed": 202
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "E1_patch_mha",
+      "fold": 0,
+      "seed": 203
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "E2_patch_hstu",
+      "fold": 0,
+      "seed": 203
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "E1_patch_mha",
+      "fold": 1,
+      "seed": 201
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "E2_patch_hstu",
+      "fold": 1,
+      "seed": 201
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "E1_patch_mha",
+      "fold": 1,
+      "seed": 202
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "E2_patch_hstu",
+      "fold": 1,
+      "seed": 202
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "E1_patch_mha",
+      "fold": 1,
+      "seed": 203
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "E2_patch_hstu",
+      "fold": 1,
+      "seed": 203
+    }
+  ],
+  "reused": {
+    "p1__Shen__A1_mha__f0__all__s201": {
+      "model_sha256": "be14533e73c5b83c3534e09a5837dc013f5e5b001b95396984c8f6d4e8ec6833",
+      "config_sha256": "6a1c50c769db70664cc71215841a206d675b28dc1df49f4a3690be26285b0955",
+      "target_metrics_sha256": "3de31ad050848db6c2868f6279b3c3e6899534573aa588b2ff64f9101c08007a"
+    },
+    "p1__Shen__A1_mha__f0__all__s202": {
+      "model_sha256": "abf47db65b28d02f51bde927ba9a0a5473f445df4cbb53a5f0f26938af7334ca",
+      "config_sha256": "9f3e573b8ab50e238d6c4fac55d23138720ebcf7db733a74873c280faa8b3dc5",
+      "target_metrics_sha256": "daee401ed2918824194ca5ab20512f9c5207f9b4b2561d869cdfb16cd997aa89"
+    },
+    "p1__Shen__A1_mha__f0__all__s203": {
+      "model_sha256": "8abe846f047a4b215aeb1f5c57baad2e25b21614cb329b27e12f1a4e9e11e7cb",
+      "config_sha256": "c1745e1fe10ee5603e0e4ca054700e0369e6c6d1862c8023f1b4327cd442524a",
+      "target_metrics_sha256": "1b3960103702512105df7d5da98f4cc94a793867f5e9798c6ab93120a522c22c"
+    },
+    "p1__Shen__A1_mha__f1__all__s201": {
+      "model_sha256": "0996333761c13f30703acb0e3051ff676ea1f5dfa6fb1f0b04b4ccc3a7a48119",
+      "config_sha256": "b591db1b8c418c7f66a9da39a7064b57c33bc7cd9dd3f0f0d263a4f8cc35071a",
+      "target_metrics_sha256": "dd1cde57d561acfc40b9ba4ff8f47b48f5a5994bff8c0902627821ce21864a4f"
+    },
+    "p1__Shen__A1_mha__f1__all__s202": {
+      "model_sha256": "75b252c7984d013eba842b0691b44a7f3af96bbb830aba3617823d4f0c4048c9",
+      "config_sha256": "551d33ff33cd94d7191a736d6ed2247b21436d3adba7536952bdc5a46791356b",
+      "target_metrics_sha256": "d1d570bd3bc67c4acc272c0706284ee14ee4ccbd47749fb213308db32d374426"
+    },
+    "p1__Shen__A1_mha__f1__all__s203": {
+      "model_sha256": "fec5bfade4d1d90faf89dc6f5b42dec243e3a7e3f2cb06b15cd255bd79f17314",
+      "config_sha256": "3ec97b0e80816abbe7963fcb0494ba5a18cd54c01a8db7899c8c3a3fd7fe4895",
+      "target_metrics_sha256": "a28fe0e4caf273fa2949c4e0a2bd15b2aaae67f8c5186ec6cdf638744d32c726"
+    },
+    "p1__Shen__A3_rfhstu__f0__all__s201": {
+      "model_sha256": "d89d842c76b8d9a689d71e810c16d75b8003a2ab1adb39e646128c8bd3634516",
+      "config_sha256": "391de504edf4f7a7c9be172cee42429856d543784949d6c3c6ca3d7e28ecfea8",
+      "target_metrics_sha256": "651bd1db95fd35ca53b166cb64b592426419a9d0443b68bf218cc2bcacf8526f"
+    },
+    "p1__Shen__A3_rfhstu__f0__all__s202": {
+      "model_sha256": "43ad62d24494dcdb5dab6ea4d81c2189e75b1a7526721192741e7faefb076ab4",
+      "config_sha256": "3701ed6ef28c73826b3dea400a7f8ac79cd8563a5bb53292c7bd85df4a3db50c",
+      "target_metrics_sha256": "d56690fc27860b6b54b118590718f04674e1e166af9d2ecfa96f9ff879d39aac"
+    },
+    "p1__Shen__A3_rfhstu__f0__all__s203": {
+      "model_sha256": "99140a5df3eb1c59ebfedcc87d2ba125904cea4dadff847c1506569e7f3abc41",
+      "config_sha256": "3443fcea56fc4a04d9b25aedf6dd4721ab079748794a913f69523b3c37d51040",
+      "target_metrics_sha256": "930cf466bd6d772efa6a996a966d0245f800ee837ca0d3895b763ee79dd2fcc1"
+    },
+    "p1__Shen__A3_rfhstu__f1__all__s201": {
+      "model_sha256": "947876232a96db146abb7fd9106cf9ad81eb741033d5b1ec92ef1371881d6085",
+      "config_sha256": "7077990693a9ddb8e4fd98287fd449aae30a68a2205b42fd5208fb7a1d230084",
+      "target_metrics_sha256": "a12f9423ceae3ab54c9cc3e77a5e7156e20c880958924ddeac17623dd6d4b802"
+    },
+    "p1__Shen__A3_rfhstu__f1__all__s202": {
+      "model_sha256": "275c9143e47d94b5e85dabe9b257d26fc6721932cb3904ea6599b682d331f00d",
+      "config_sha256": "cb1e2459ff8d1f38a6bf23b3cc2f0fed6152d0d009881f05f5ba7861bbfe7ee3",
+      "target_metrics_sha256": "50729a0822d08d7bfacfb1ff382fcdf4fa84e95bf66b30c5e3493a73aef71c84"
+    },
+    "p1__Shen__A3_rfhstu__f1__all__s203": {
+      "model_sha256": "4199caff9ac70e54d9147a108f91b576da2d427fe22face21dacc39d88912cd3",
+      "config_sha256": "bd21b014507a4d666789f568cd547969e1c240f6c32d608331c1cfc7672af253",
+      "target_metrics_sha256": "62dc894ed7226fb7b05e466ec669f341ef4a5301b350bf2bdbd8674c525e60fc"
+    }
+  },
+  "mechanism_gate": {
+    "admitted": false,
+    "checks": {
+      "A1_mha": {
+        "mean": false,
+        "pairs": false,
+        "worst": true,
+        "ci": false
+      },
+      "A1_mha_matched": {
+        "mean": false,
+        "pairs": false,
+        "worst": true,
+        "ci": false
+      },
+      "A2_transformer": {
+        "mean": false,
+        "pairs": false,
+        "worst": true,
+        "ci": true
+      },
+      "A2_transformer_matched": {
+        "mean": false,
+        "pairs": false,
+        "worst": true,
+        "ci": false
+      }
+    },
+    "rule": "dev_val only; >=1pp, >=5/6 positive, worstRX>=-2pp, RX CI lower>0 against all4 attention controls; descriptive budget gate"
+  },
+  "cfo_diagnostics": {
+    "training_fits": 0,
+    "source_only": true,
+    "phases": [
+      "p2",
+      "p2_confirmation"
+    ],
+    "shifts_hz": [
+      -10000,
+      -5000,
+      -2000,
+      0,
+      2000,
+      5000,
+      10000
+    ],
+    "confidence_threshold": 0.7,
+    "abs_cfo_edges_hz": [
+      0,
+      2000,
+      5000,
+      10000,
+      50000
+    ],
+    "windows_start": [
+      0,
+      10,
+      20,
+      40,
+      60,
+      80
+    ],
+    "lag_checks": [
+      20,
+      40,
+      60,
+      80
+    ],
+    "sample_policy": "All held-source packets; groups fixed from unperturbed estimates. All named source extreme cells audited, none removed.",
+    "truth": "No true natural CFO; observed CFO and coherence strata, never called ground-truth estimator-error bins"
+  },
+  "cfo_models": [
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManyRx",
+        "fold": 0,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B0"
+      },
+      "run": "p2__ManyRx__B0__f0__first__s16001",
+      "model_sha256": "be36982a58f93c3367ea5de30126d7ad4cf13eab2ce5c74d8f7d5f2ff3fe2d48",
+      "config_sha256": "dcf99ebd8435cd2697effd7d4f5c5b71cebde20eccabf3b0826e9cc70316e438",
+      "metrics_sha256": "03250cd9feb1f1e45324412d41768a519da70617cc0a6369facbc6a78f492620"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManyRx",
+        "fold": 0,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B1_cfo"
+      },
+      "run": "p2__ManyRx__B1_cfo__f0__first__s16001",
+      "model_sha256": "7a26302c7747320b17ba86a40d547fd327373722450523c27c9de2d8da14a933",
+      "config_sha256": "6e66a0c654fcc18ea45cb761f68d8db735803e015dfc55ea5055c736584dfc2d",
+      "metrics_sha256": "87b68fa54c3b5a8b8e323a84a943e0912cbc0c66b8911fefbe232fd07b3edde3"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManyRx",
+        "fold": 0,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B2_corrected"
+      },
+      "run": "p2__ManyRx__B2_corrected__f0__first__s16001",
+      "model_sha256": "7d1057388ac6c936cb497de92f856f2614b7a2dce9cf77e8e8597c2ee5a6e400",
+      "config_sha256": "6805552bdc8a1678693467f4fab40a720cf615a36d0d52a7a8d7b02250dd6a30",
+      "metrics_sha256": "dfffd53b6f5000490c16c5df65c39006176e16fd81f7db4e3766e8a699503ee6"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManyRx",
+        "fold": 0,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B2_dual"
+      },
+      "run": "p2__ManyRx__B2_dual__f0__first__s16001",
+      "model_sha256": "e9d23ad4905283fa3ca78999349ea1e946e571ee9160048e76bd7770e54276f0",
+      "config_sha256": "cca7fbafa833f37ab9544eb50b499bd6589747e84cf8a1b0b8c0edcc6d20c50c",
+      "metrics_sha256": "a3a3e44c88adbf7b1fefb5e9cada56ca30ef50f3aaa46a7238ff29b10c8a62ea"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManyRx",
+        "fold": 0,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B2_dual_raw"
+      },
+      "run": "p2__ManyRx__B2_dual_raw__f0__first__s16001",
+      "model_sha256": "5c30d04bdcb948c4f392bae33564619629daf685e7ed9519ddf34f15c74bae07",
+      "config_sha256": "6bb99c71ea5e2d14a92a83851899675ffabea636d60af4c885a95efc126a34d1",
+      "metrics_sha256": "1728cbbe29087d8efea470b247d0450bca2b981e471516d8501f815a3c37ff13"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManyRx",
+        "fold": 1,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B0"
+      },
+      "run": "p2__ManyRx__B0__f1__first__s16001",
+      "model_sha256": "95a037159b7d5a04ec08805abaf5b6bdf6e8d92b4691131074c0040b071c9003",
+      "config_sha256": "eed6fb2998e4249e87d2146f7931257fb58094e46afcb04d7d345f983f36cfa8",
+      "metrics_sha256": "40414e33a61c7f8e1dc9eb441ff297700bd2296de8671a00d034f5d7852e2752"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManyRx",
+        "fold": 1,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B1_cfo"
+      },
+      "run": "p2__ManyRx__B1_cfo__f1__first__s16001",
+      "model_sha256": "067b6c5960f2b8b9f9591bb48e94ac8ac0c8c698be2666359c7ba466a5d24ffb",
+      "config_sha256": "132c24bef4da22d9983699349ce163f9420852bb1261830da5a1cebabc07a834",
+      "metrics_sha256": "0fe26e86157283f0877a402f373ff32562cefb68cb28696fb3f35f7bafc6fb54"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManyRx",
+        "fold": 1,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B2_corrected"
+      },
+      "run": "p2__ManyRx__B2_corrected__f1__first__s16001",
+      "model_sha256": "5db152f6b4ef90ee115f1a921d864d737c834032eebe6ca68786a00fe673e742",
+      "config_sha256": "3385ab14f48e632e490756293b8b3ef914dbeb7189579b0183145e25995c45d1",
+      "metrics_sha256": "308d138435606dc72da164af592a6a8406f25acbacfe3aa9d6e208a6a2429ce2"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManyRx",
+        "fold": 1,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B2_dual"
+      },
+      "run": "p2__ManyRx__B2_dual__f1__first__s16001",
+      "model_sha256": "f8312e3fc5e12a7e4834fe70c7bbd3412d564d074363a1d35b93cd6ed9dab2d2",
+      "config_sha256": "d83267b53c49747fda06e276ca7e29969a60e082a9f5bbf126f80d88b12b65e5",
+      "metrics_sha256": "91c2169b8c45786be643ff5e1fb3b874fdbb68043625e0c6bceff487bc756a94"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManyRx",
+        "fold": 1,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B2_dual_raw"
+      },
+      "run": "p2__ManyRx__B2_dual_raw__f1__first__s16001",
+      "model_sha256": "696a0bff983c724f6ffee49676e977101f3c369fb88276764fa25b98202ec6de",
+      "config_sha256": "7fb341e43f4cb70c08e5727166310d814c229b627f3f222df801a37c40f84880",
+      "metrics_sha256": "18104e7586fc82919eee100bfcc00c12991eef6bbf22fcb904c80a69f42af96d"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManyRx",
+        "fold": 2,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B0"
+      },
+      "run": "p2__ManyRx__B0__f2__first__s16001",
+      "model_sha256": "fb4a03fbf29727d56c1bfd07bfd51f148c46f96f2baa516f30c25cb129e61764",
+      "config_sha256": "4de2942f74c8ed0ff882e2c15b30f0913a8fe2ad02a80e62cc76b508471666c2",
+      "metrics_sha256": "ca4ff7b8a5424f35bd4eaa1556436a2e77d1d53f4b88281ca8d39dcdb45a8256"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManyRx",
+        "fold": 2,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B1_cfo"
+      },
+      "run": "p2__ManyRx__B1_cfo__f2__first__s16001",
+      "model_sha256": "a52ae14104cb8e08935f40de8c87c9c9d7f11c96d582875aa897489b65497b94",
+      "config_sha256": "5ed11c0da75fc191577ef31f46a4425d8fa078d0127db7e1b60c4aa5673ef1ad",
+      "metrics_sha256": "2556b8893ad520d356357b89f81ddcc626a90ad54cc3eb40661f3fe97cbb4537"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManyRx",
+        "fold": 2,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B2_corrected"
+      },
+      "run": "p2__ManyRx__B2_corrected__f2__first__s16001",
+      "model_sha256": "6f7dd54525a171c4b82a3f74eb6d9a43cb9d2607b4d61f2b2b01df6815606bfc",
+      "config_sha256": "0903945926b4885461fc747305ee73d28f02cd8208eb6f3ed654982fc46ddb27",
+      "metrics_sha256": "715ae7588b5a498b1e81aa99fb6d1fca505403f543ee7994bba72d8ae9321cd7"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManyRx",
+        "fold": 2,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B2_dual"
+      },
+      "run": "p2__ManyRx__B2_dual__f2__first__s16001",
+      "model_sha256": "f9e05a6101efaa737f76a10dee096bc5a50791cfaf4d24454c49e0126c2633ca",
+      "config_sha256": "c0d13e44bc911d1c23aa886bf782a337430f8446b23d11107b8fe9b10d00fc4d",
+      "metrics_sha256": "d77150c5dc5325c9b65fd6dbde97648c701388015b5c0dbb6b86601b79156e24"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManyRx",
+        "fold": 2,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B2_dual_raw"
+      },
+      "run": "p2__ManyRx__B2_dual_raw__f2__first__s16001",
+      "model_sha256": "25603c799062bf31c466dea265e604b6a72db33fb980bd62455b70f8af9d0fd7",
+      "config_sha256": "053a7b00235a8afff73f93ae739849bd2c6081a49ab16bd3f74ab6256ab63f96",
+      "metrics_sha256": "f9386774bac74bac4bee5eab68c0f50b05194bbfe0c67fded921aabbc6304895"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManyRx",
+        "fold": 3,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B0"
+      },
+      "run": "p2__ManyRx__B0__f3__first__s16001",
+      "model_sha256": "08b9cf11c261d8e996bde8bc80dceb7006c9182674101ed623b100616178fee3",
+      "config_sha256": "1a08a7af3e83b726daa67b1b01fcb3dc8dcdad4f0c6b9d6b6b7f8e557965b8d6",
+      "metrics_sha256": "3689f236eb0f780582e101d58d87d6c3d0e84cb78bcc33950afade1f38fb116c"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManyRx",
+        "fold": 3,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B1_cfo"
+      },
+      "run": "p2__ManyRx__B1_cfo__f3__first__s16001",
+      "model_sha256": "0513e96e6d631026e25bb6bfba2a65da0e2c8d8ba35a08c087fa4b1bb5892966",
+      "config_sha256": "c04c4cddc47223c004fa420be1e129d06007510966db921e8d021dc7d1ac54c9",
+      "metrics_sha256": "65a365d605842c6c837bedda5687487cea330877237ecbd4624687d8a6d75140"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManyRx",
+        "fold": 3,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B2_corrected"
+      },
+      "run": "p2__ManyRx__B2_corrected__f3__first__s16001",
+      "model_sha256": "327d5021c95b96e193a51e6a7410af3e814a311c350bbacdd4a6a1ec2ef4f94e",
+      "config_sha256": "7cef48bfea4ce693676cabc38db0a360091dd24b475ac7242b8dc78d58de7198",
+      "metrics_sha256": "0a3dba897e41c5dabe30683acc272c755b9f0418f66fe5541f146c9a1aec63fd"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManyRx",
+        "fold": 3,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B2_dual"
+      },
+      "run": "p2__ManyRx__B2_dual__f3__first__s16001",
+      "model_sha256": "8050ff1185c7cff87d27756e2ae8a036770d40321ad6b667abcbeadba2edf2d7",
+      "config_sha256": "fd2eeea582113b51c72582b90f29bc95eea30d1726411620e7d950ee6a3aa43e",
+      "metrics_sha256": "390c5d46539b6c12960a92a729fd9283025a2e34b68eab0ef993b7e5d0960fce"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManyRx",
+        "fold": 3,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B2_dual_raw"
+      },
+      "run": "p2__ManyRx__B2_dual_raw__f3__first__s16001",
+      "model_sha256": "1ee56ed915f44ac62274bf8a2d06f3bb6a70c347310779dd9efd37ce915456fd",
+      "config_sha256": "4eb6c06795bd51a3d2e6e090329acde0b17b13ee20ce58e2b40ccee60f193824",
+      "metrics_sha256": "e78b4e488e12a23d0431b5c6f2ce5523917ad1a1280a3621b0da1f7937618103"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManySig",
+        "fold": 0,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B0"
+      },
+      "run": "p2__ManySig__B0__f0__first__s16001",
+      "model_sha256": "ea0c5208716f4ea5707934592f5179e8e901aac20de57eb823c620c1f995a90a",
+      "config_sha256": "a65b68b200a08d34808968471cb64f50b92f134879c66c386f3f68a84bac186b",
+      "metrics_sha256": "8bae726db088071d934d2ea46144c44b8ec969dd54dfaa151d42c6b0fb246b25"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManySig",
+        "fold": 0,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B1_cfo"
+      },
+      "run": "p2__ManySig__B1_cfo__f0__first__s16001",
+      "model_sha256": "78f1c8a784f7112537e696cba309f9e101244d18e6ca198536651bede8ff8657",
+      "config_sha256": "314ab78372ebb48f740518845defdc3c7caa1a01d51eafd783fd4fa239c1d8b3",
+      "metrics_sha256": "1dbdb7b13fb74e1f1d4ed3a6574da556bbc4be445c8403eb2e02e2e0195b8d47"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManySig",
+        "fold": 0,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B2_corrected"
+      },
+      "run": "p2__ManySig__B2_corrected__f0__first__s16001",
+      "model_sha256": "3fc5d0e1592a4f51ba021c7b4270c927d9271944c0bcb4d5d1b6125f2c354a0d",
+      "config_sha256": "d247777a3eaf12ad3eed6d6ee741eaf32888572191c79244585e0822fccef61f",
+      "metrics_sha256": "37897018ce8aadb7886131a1c34a08c3d2cf8bcab0389108088d58385fa2b999"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManySig",
+        "fold": 0,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B2_dual"
+      },
+      "run": "p2__ManySig__B2_dual__f0__first__s16001",
+      "model_sha256": "e92193dcab93a852a20c4d6c600ae90baf9e5cd17edd0309974f6f481810cc95",
+      "config_sha256": "75af5ea7e435aa64bc766d00224d8cf87464e59ffb0fbe287dabfa5968226518",
+      "metrics_sha256": "720eeade5871ff2356bff44e74e66ae60570db8f44c004495360fdce2298130a"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManySig",
+        "fold": 0,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B2_dual_raw"
+      },
+      "run": "p2__ManySig__B2_dual_raw__f0__first__s16001",
+      "model_sha256": "f4c229325b1e119f29a491e4f73bb3000dcbbbce4bf381a152add26abdbb14c5",
+      "config_sha256": "04a03dfee04eb3ae0dce8f39605b1bcd7fbc789825c10c1bb2858d835a697f7c",
+      "metrics_sha256": "0b45b1926d94bccb225359e192ac05152b92a38224cf96021fe540be26f27ae6"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManySig",
+        "fold": 1,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B0"
+      },
+      "run": "p2__ManySig__B0__f1__first__s16001",
+      "model_sha256": "3313866200faebe1e6247b0b36b11bad20918bc0a9ae2692242eed29cc7c605c",
+      "config_sha256": "a87b453642abba839e25a78271662bdcc052c8b3bd4c51cb7948d544d285ffea",
+      "metrics_sha256": "580ac26092e2ff8622a6ae29521ce16fc6038929a5fe69facd54b5a3492f2109"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManySig",
+        "fold": 1,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B1_cfo"
+      },
+      "run": "p2__ManySig__B1_cfo__f1__first__s16001",
+      "model_sha256": "41dbc6a03ca00e7e8f0b24373264e031f9b58e69843bc5bc6eb5723a4c8923e4",
+      "config_sha256": "38e345e32ccc5e1a0ecd681d59c59a0b0fbd15bc20c342e992f12ff7ce6c70b7",
+      "metrics_sha256": "2bda80478852ef2d8f2fd5ccc2014593263721083e4bb43716d7a0c77fe5a4a3"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManySig",
+        "fold": 1,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B2_corrected"
+      },
+      "run": "p2__ManySig__B2_corrected__f1__first__s16001",
+      "model_sha256": "09950020d7fb0bd897d463c42fca667fd8071216d538d56671e1045ec9fa8ed8",
+      "config_sha256": "542261a9add649b05daf04b981bb5ac298f2db8ffbe09a8d6abeeec91426f174",
+      "metrics_sha256": "d49970349c31abc8380e924b7581b16ea7899e23537217df1186b33bd1585a45"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManySig",
+        "fold": 1,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B2_dual"
+      },
+      "run": "p2__ManySig__B2_dual__f1__first__s16001",
+      "model_sha256": "56a61dadb0efef917f0e5d400f88f71a0b17b44eb31816c2c533587c1c5f469d",
+      "config_sha256": "57e635bb664df7e836b9d3cb9134398387b318936680e515c2faeaab2a3858b8",
+      "metrics_sha256": "3302aa517b24c1ba694f738052a3691bd5e3fe1160ea5d11bb2b80df85c4c094"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManySig",
+        "fold": 1,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B2_dual_raw"
+      },
+      "run": "p2__ManySig__B2_dual_raw__f1__first__s16001",
+      "model_sha256": "4a186ca5e2090f6e78e2521507a709985758586d17423c10f918c0a595280f2b",
+      "config_sha256": "b43eb7a372e62a7c55921bd876b09be7ed8df685de22394edb548818ae954f94",
+      "metrics_sha256": "f05b2cdd7cc89dd86e72f7139a9e0ef8e7a5671c6863e93cafcb4dc7e9809ca0"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManySig",
+        "fold": 2,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B0"
+      },
+      "run": "p2__ManySig__B0__f2__first__s16001",
+      "model_sha256": "67a53f1250eb5d54bc86d0775937fbfbd7f41bc6deb06ced623c71b2d73a98ff",
+      "config_sha256": "bf9fc8aabc9094867ab11ce9fcaf0214e600aaa17044595eb7f6394d63c22cdb",
+      "metrics_sha256": "7af0523700d5f7cfe9793bd4102c0ac7957765461af41ce2b81f9153c642795e"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManySig",
+        "fold": 2,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B1_cfo"
+      },
+      "run": "p2__ManySig__B1_cfo__f2__first__s16001",
+      "model_sha256": "976f4d14abc902e2a8bf35d344e1b9358e36742e7cdd8afefdeb18256d92a1a1",
+      "config_sha256": "75de8c546830c3d4ca95601bfe32355237f8966f130efb4f02b67f0654f32f87",
+      "metrics_sha256": "d8cffd000a1791ddfa2dd2f05eec95ab03c88b85380f5ee2041a7612042c524e"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManySig",
+        "fold": 2,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B2_corrected"
+      },
+      "run": "p2__ManySig__B2_corrected__f2__first__s16001",
+      "model_sha256": "aaee56de428971f80b899a4937464a2e422071c7ef642991cbce4f5fec3c29ac",
+      "config_sha256": "d77d5ceec5f4278642882c66036e858c2c57721550762db9a73fc5c065fcd50b",
+      "metrics_sha256": "e99f2086e5b3ecdc04f4a84076cf07cfa52f0d16e8fd8f4a76aa64ba3fe3a9cf"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManySig",
+        "fold": 2,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B2_dual"
+      },
+      "run": "p2__ManySig__B2_dual__f2__first__s16001",
+      "model_sha256": "2ddcdcba014fbcab5ebc6a7ab44de8559fd4ec7ebd676fe5ba4a65d76139379b",
+      "config_sha256": "258af92eacb1a07c90d3b7d41216948ef3e9cc52615fc7da65eac624607871bf",
+      "metrics_sha256": "a73fc94c886effe96d35c8196ffeb2bc8c43930213d2d14363931515feb56bbf"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManySig",
+        "fold": 2,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B2_dual_raw"
+      },
+      "run": "p2__ManySig__B2_dual_raw__f2__first__s16001",
+      "model_sha256": "65bbde69eb388142a661c0d504f559619678b7ad38968daa5f36baf775e2592c",
+      "config_sha256": "4fc47a994190f6ab3cf14d49f9fee63d4c52a8bb69ef227ab9d72dad8fc02521",
+      "metrics_sha256": "806e09f8fc0d94006e9445751fc1152119d30d46cb96ef33c6eb999e624d4511"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManySig",
+        "fold": 3,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B0"
+      },
+      "run": "p2__ManySig__B0__f3__first__s16001",
+      "model_sha256": "15328d60e01f3961c43c49ac6e1736be7920b5d3d113f27d12b0a776c46ed782",
+      "config_sha256": "bfc23882713d9388220ef58ff8ad383b95a4bc9c1db16658e66f2382406d75bb",
+      "metrics_sha256": "a2c10c482ada0ee53f393e8133295981c0c88d99826d72c6142eba1c9d308efa"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManySig",
+        "fold": 3,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B1_cfo"
+      },
+      "run": "p2__ManySig__B1_cfo__f3__first__s16001",
+      "model_sha256": "53caa6f31f883ce976f625b0cd0cdb039215e4178198558f13ece68664b7c545",
+      "config_sha256": "09e479a11ca25af830d9064a8d2e1319b05731e98c24c97ff18a6713a30d2f08",
+      "metrics_sha256": "6273e57bc52301bd1efc82631b64a684f83eb57f8fe098d794c7a275ebd7c299"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManySig",
+        "fold": 3,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B2_corrected"
+      },
+      "run": "p2__ManySig__B2_corrected__f3__first__s16001",
+      "model_sha256": "d16356a3d2064dc3a474123c4b87e1d0fb1bab4c87c8cb69922e8b51706c16cc",
+      "config_sha256": "acbfe49cfcc6dd6e5e7fb45555db4e74c64d94edf8e061d4279676b6cf0c8502",
+      "metrics_sha256": "5f056828b5ad31b8f9a8965c07bbc72072c1f43b22af4179f0f0c14e02e95765"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManySig",
+        "fold": 3,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B2_dual"
+      },
+      "run": "p2__ManySig__B2_dual__f3__first__s16001",
+      "model_sha256": "f5708901992f4d60eb0a87acc37c0b27cf91445a702b98d4d062d5d33dfb26a3",
+      "config_sha256": "4a3f980819100c72e8b7696e8d5d433c05daa9453fe52c3c0d4139fc60e25782",
+      "metrics_sha256": "efd29a0261aef9e388c91d40b68ecbab31c8f93f16607264bcd0dea90d46dbb8"
+    },
+    {
+      "job": {
+        "phase": "p2",
+        "dataset": "ManySig",
+        "fold": 3,
+        "seed": 16001,
+        "group": "first",
+        "arm": "B2_dual_raw"
+      },
+      "run": "p2__ManySig__B2_dual_raw__f3__first__s16001",
+      "model_sha256": "0ed7136500fafc9df56670fe552b109d996bc5c527454a26f192a7bdf92769d6",
+      "config_sha256": "06018ed5d355dab403f2fcab43dc8ead6e1f7104a82796902f9444829ba0fe50",
+      "metrics_sha256": "2ae3405d776cea21417301949274b2f145e524f255159848434a3b20e47a6c24"
+    }
+  ],
+  "tta": {
+    "status": "LITERATURE_AND_CODE_FEASIBILITY_ONLY",
+    "training_fits": 0,
+    "reason": "Independent UDA/TTA direction; separate protocol before any adaptation"
+  },
+  "source_inputs_read_only": true,
+  "comparison": "Full factorial contrasts and paired RX-bootstrap interaction; confirm reporting only, not new blind"
+}
