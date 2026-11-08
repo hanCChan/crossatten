@@ -1,0 +1,27 @@
+{
+  "job": {
+    "phase": "p2",
+    "dataset": "ManySig",
+    "fold": 0,
+    "seed": 16001,
+    "group": "first",
+    "arm": "B2_dual_raw"
+  },
+  "data_seed": 1490809268,
+  "batch": 128,
+  "epochs_budget": 40,
+  "params": 149156,
+  "checkpoint": "minimum_source_receiver_equal_ce",
+  "train_packets": 5880,
+  "val_packets": 2520,
+  "initial_shared_sha256": "b44d0e5e7644d762d28618dab01064ba10a50b947cf2f562e9f29e57cec00473",
+  "registration_sha256": "42eeb266e49e359a573d2ef840e9bf6719fb678d64850684e0313e243d7bf0fa",
+  "torch": "2.5.0+cu124",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "git_sha": "7007931177b138c0297cb1c1f3b41d499a03e506",
+  "amendments_sha256": {
+    "registration_amendment_001.json": "76f87452782b5d5c8399b659064ff6dc751329f4b05e49f4cd547ecbc1f23b28"
+  },
+  "input_roles": "source RX only; WiSig dates1-2 only",
+  "evaluation_batch": 128
+}
