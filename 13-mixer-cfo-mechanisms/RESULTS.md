@@ -1,13 +1,14 @@
 # S13 执行状态
 
-更新时间：2026-11-08T10:05:03+08:00；状态：RUNNING。
+更新时间：2026-11-08T20:08:24+08:00；状态：COMPLETE_BOUNDED_SOURCE_WORKFLOW。
 
 | 阶段 | 完成 | 注册 |
 |---|---:|---:|
 |smoke|10|10|
 |p0|8|8|
-|p1|12|48|
-|p2|0|40|
+|p1|48|48|
+|p2|40|40|
+|p2_confirmation|0|0|
 
 P0和P2只读WiSig各折源RX日期1–2；P1只按源验证CE选checkpoint。
 P1最终模型清单提交后才允许读取Shen dev_val/已使用confirm；blind始终禁止。
