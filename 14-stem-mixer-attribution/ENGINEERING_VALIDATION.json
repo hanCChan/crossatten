@@ -1,0 +1,53 @@
+{
+  "time": "2026-11-08T11:13:43+08:00",
+  "unit_tests": 17,
+  "status": "PASS",
+  "test_runtime_seconds": 2.609,
+  "includes": [
+    "common weight and mixer identity",
+    "patch token shape and finite CPU backward",
+    "unfused Transformer FLOPs reference",
+    "equivalent SDPA backend weights and function",
+    "paired interaction and receiver bootstrap",
+    "complete synthetic48+12 report",
+    "per-RX prediction batch boundaries",
+    "forbidden data roles",
+    "handoff waits for S13 completion and process exit"
+  ],
+  "gpu_training_started": false,
+  "s13_train_byte_identical": true,
+  "s13_models_byte_identical": true,
+  "model_parameters": {
+    "E1_patch_mha": {
+      "params": 571434,
+      "effectively_unused_params": 0,
+      "active_params": 571434
+    },
+    "E2_patch_hstu": {
+      "params": 580136,
+      "effectively_unused_params": 0,
+      "active_params": 580136
+    },
+    "A1_mha": {
+      "params": 133690,
+      "effectively_unused_params": 0,
+      "active_params": 133690
+    },
+    "A3_rfhstu": {
+      "params": 142392,
+      "effectively_unused_params": 0,
+      "active_params": 142392
+    },
+    "G1_no_u": {
+      "params": 142392,
+      "effectively_unused_params": 8320,
+      "active_params": 134072
+    },
+    "G2_no_rel": {
+      "params": 142392,
+      "effectively_unused_params": 126,
+      "active_params": 142266
+    }
+  },
+  "warnings": "Matplotlib dependency emitted pyparsing deprecations during synthetic report; tests passed; environment unchanged."
+}
