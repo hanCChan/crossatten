@@ -1,0 +1,299 @@
+# WiSig CFO 源域结果
+
+状态：STOP_SOURCE_GATE
+
+| 数据 | 实验臂 | RX准确率 % | Macro-F1 % | 最差RX均值 % | 参数 |
+|---|---|---:|---:|---:|---:|
+|ManyRx|B0|90.133|89.310|67.600|91128|
+|ManyRx|B1_cfo|88.827|87.760|68.850|91128|
+|ManyRx|B2_corrected|87.248|86.052|69.700|91128|
+|ManyRx|B2_dual|90.461|89.619|74.000|149416|
+|ManyRx|B2_dual_raw|90.134|89.253|69.850|149416|
+|ManySig|B0|90.740|90.415|79.000|90868|
+|ManySig|B1_cfo|88.187|87.625|81.083|90868|
+|ManySig|B2_corrected|87.469|86.783|75.167|90868|
+|ManySig|B2_dual|93.479|93.249|88.917|149156|
+|ManySig|B2_dual_raw|89.854|88.901|84.944|149156|
+
+```json
+{
+  "time": "2026-11-08T20:08:23+08:00",
+  "phase": "p2",
+  "selected": [],
+  "status": "STOP_SOURCE_GATE",
+  "decisions": {
+    "B1_cfo": {
+      "admitted": false,
+      "comparisons": [
+        {
+          "control": "B0",
+          "admitted": false,
+          "checks": {
+            "manyrx_mean": false,
+            "manyrx_positive_folds": false,
+            "worst_rx": false,
+            "manysig_mean": false,
+            "manysig_folds": false
+          },
+          "details": {
+            "ManyRx": {
+              "mean_pp": -1.306018518518519,
+              "positive_folds": 1,
+              "folds": {
+                "0": 0.9092592592592578,
+                "1": -4.708333333333335,
+                "2": -0.4833333333333338,
+                "3": -0.9416666666666647
+              },
+              "worst_rx_pp": -4.583333333333336
+            },
+            "ManySig": {
+              "mean_pp": -2.5520833333333353,
+              "positive_folds": 2,
+              "folds": {
+                "0": 0.7499999999999951,
+                "1": 1.0416666666666685,
+                "2": -8.458333333333334,
+                "3": -3.5416666666666705
+              },
+              "worst_rx_pp": -4.750000000000003
+            }
+          },
+          "conditional_receiver_uncertainty": {
+            "ManyRx": {
+              "mean_delta_pp": -1.306018518518519,
+              "positive_pairs": 1,
+              "pairs": 4,
+              "worst_receiver_delta_pp": -4.583333333333336,
+              "rx_cluster_ci95_pp": [
+                -1.7750578703703708,
+                0.4801851851851841
+              ],
+              "uncertainty": "conditional on trained seeds; no multiplicity correction"
+            },
+            "ManySig": {
+              "mean_delta_pp": -2.5520833333333353,
+              "positive_pairs": 2,
+              "pairs": 4,
+              "worst_receiver_delta_pp": -4.750000000000003,
+              "rx_cluster_ci95_pp": [
+                -3.7083333333333357,
+                0.9236111111111056
+              ],
+              "uncertainty": "conditional on trained seeds; no multiplicity correction"
+            }
+          }
+        }
+      ]
+    },
+    "B2_dual": {
+      "admitted": false,
+      "comparisons": [
+        {
+          "control": "B0",
+          "admitted": false,
+          "checks": {
+            "manyrx_mean": false,
+            "manyrx_positive_folds": true,
+            "worst_rx": false,
+            "manysig_mean": true,
+            "manysig_folds": true
+          },
+          "details": {
+            "ManyRx": {
+              "mean_pp": 0.32800925925925845,
+              "positive_folds": 3,
+              "folds": {
+                "0": 0.7370370370370362,
+                "1": -0.6166666666666673,
+                "2": 0.0833333333333317,
+                "3": 1.1083333333333332
+              },
+              "worst_rx_pp": -4.783333333333336
+            },
+            "ManySig": {
+              "mean_pp": 2.7395833333333326,
+              "positive_folds": 3,
+              "folds": {
+                "0": 4.791666666666661,
+                "1": 4.458333333333337,
+                "2": 1.708333333333334,
+                "3": 0.0
+              },
+              "worst_rx_pp": -0.33333333333334103
+            }
+          },
+          "conditional_receiver_uncertainty": {
+            "ManyRx": {
+              "mean_delta_pp": 0.32800925925925845,
+              "positive_pairs": 3,
+              "pairs": 4,
+              "worst_receiver_delta_pp": -4.783333333333336,
+              "rx_cluster_ci95_pp": [
+                -1.2880092592592591,
+                2.357534722222213
+              ],
+              "uncertainty": "conditional on trained seeds; no multiplicity correction"
+            },
+            "ManySig": {
+              "mean_delta_pp": 2.7395833333333326,
+              "positive_pairs": 3,
+              "pairs": 4,
+              "worst_receiver_delta_pp": -0.33333333333334103,
+              "rx_cluster_ci95_pp": [
+                0.4305555555555508,
+                7.78472222222222
+              ],
+              "uncertainty": "conditional on trained seeds; no multiplicity correction"
+            }
+          }
+        },
+        {
+          "control": "B2_dual_raw",
+          "admitted": false,
+          "checks": {
+            "manyrx_mean": false,
+            "manyrx_positive_folds": false,
+            "worst_rx": false,
+            "manysig_mean": true,
+            "manysig_folds": true
+          },
+          "details": {
+            "ManyRx": {
+              "mean_pp": 0.3270833333333324,
+              "positive_folds": 2,
+              "folds": {
+                "0": -0.13333333333333522,
+                "1": 1.4500000000000013,
+                "2": -1.7250000000000025,
+                "3": 1.7166666666666661
+              },
+              "worst_rx_pp": -4.033333333333333
+            },
+            "ManySig": {
+              "mean_pp": 3.625,
+              "positive_folds": 4,
+              "folds": {
+                "0": 1.2916666666666632,
+                "1": 4.291666666666671,
+                "2": 8.124999999999998,
+                "3": 0.7916666666666683
+              },
+              "worst_rx_pp": -0.666666666666671
+            }
+          },
+          "conditional_receiver_uncertainty": {
+            "ManyRx": {
+              "mean_delta_pp": 0.3270833333333324,
+              "positive_pairs": 2,
+              "pairs": 4,
+              "worst_receiver_delta_pp": -4.033333333333333,
+              "rx_cluster_ci95_pp": [
+                -1.1917013888888914,
+                1.501423611111109
+              ],
+              "uncertainty": "conditional on trained seeds; no multiplicity correction"
+            },
+            "ManySig": {
+              "mean_delta_pp": 3.625,
+              "positive_pairs": 4,
+              "pairs": 4,
+              "worst_receiver_delta_pp": -0.666666666666671,
+              "rx_cluster_ci95_pp": [
+                0.3124999999999961,
+                5.243055555555558
+              ],
+              "uncertainty": "conditional on trained seeds; no multiplicity correction"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "all_arm_source_summary": [
+    {
+      "dataset": "ManyRx",
+      "arm": "B0",
+      "acc": 90.13263888888889,
+      "macro_f1": 89.31046099680165,
+      "worst_rx_mean_acc": 67.60000000000001,
+      "params": 91128
+    },
+    {
+      "dataset": "ManyRx",
+      "arm": "B1_cfo",
+      "acc": 88.82662037037038,
+      "macro_f1": 87.76037550535776,
+      "worst_rx_mean_acc": 68.85,
+      "params": 91128
+    },
+    {
+      "dataset": "ManyRx",
+      "arm": "B2_corrected",
+      "acc": 87.24791666666667,
+      "macro_f1": 86.0518489780301,
+      "worst_rx_mean_acc": 69.69999999999999,
+      "params": 91128
+    },
+    {
+      "dataset": "ManyRx",
+      "arm": "B2_dual",
+      "acc": 90.46064814814815,
+      "macro_f1": 89.61938179907324,
+      "worst_rx_mean_acc": 74.0,
+      "params": 149416
+    },
+    {
+      "dataset": "ManyRx",
+      "arm": "B2_dual_raw",
+      "acc": 90.1335648148148,
+      "macro_f1": 89.25317374346514,
+      "worst_rx_mean_acc": 69.85,
+      "params": 149416
+    },
+    {
+      "dataset": "ManySig",
+      "arm": "B0",
+      "acc": 90.73958333333334,
+      "macro_f1": 90.41454307043801,
+      "worst_rx_mean_acc": 79.0,
+      "params": 90868
+    },
+    {
+      "dataset": "ManySig",
+      "arm": "B1_cfo",
+      "acc": 88.18749999999999,
+      "macro_f1": 87.62527175273006,
+      "worst_rx_mean_acc": 81.08333333333333,
+      "params": 90868
+    },
+    {
+      "dataset": "ManySig",
+      "arm": "B2_corrected",
+      "acc": 87.46875,
+      "macro_f1": 86.78333544901517,
+      "worst_rx_mean_acc": 75.16666666666667,
+      "params": 90868
+    },
+    {
+      "dataset": "ManySig",
+      "arm": "B2_dual",
+      "acc": 93.47916666666666,
+      "macro_f1": 93.24894665039683,
+      "worst_rx_mean_acc": 88.91666666666667,
+      "params": 149156
+    },
+    {
+      "dataset": "ManySig",
+      "arm": "B2_dual_raw",
+      "acc": 89.85416666666666,
+      "macro_f1": 88.90092161405971,
+      "worst_rx_mean_acc": 84.94444444444444,
+      "params": 149156
+    }
+  ],
+  "target_access": false
+}
+```
+
+逐fit和逐RX结果见同前缀CSV；这些是源域held-RX结果，不是目标CR/CRD。

@@ -1,6 +1,6 @@
 {
-  "time": "2026-11-08T10:05:03+08:00",
-  "status": "RUNNING",
+  "time": "2026-11-08T20:08:24+08:00",
+  "status": "COMPLETE_BOUNDED_SOURCE_WORKFLOW",
   "phases": {
     "smoke": {
       "done": 10,
@@ -11,34 +11,17 @@
       "total": 8
     },
     "p1": {
-      "done": 12,
+      "done": 48,
       "total": 48
     },
     "p2": {
-      "done": 0,
+      "done": 40,
       "total": 40
+    },
+    "p2_confirmation": {
+      "done": 0,
+      "total": 0
     }
   },
-  "active_or_interrupted": [
-    {
-      "run": "p1__Shen__A2_transformer_matched__f0__all__s202",
-      "updated_at": "2026-11-08T10:05:00+08:00",
-      "status": "RUNNING",
-      "job": {
-        "phase": "p1",
-        "dataset": "Shen",
-        "arm": "A2_transformer_matched",
-        "fold": 0,
-        "seed": 202
-      },
-      "epoch": 138,
-      "train_ce": 0.4340495470762253,
-      "train_acc": 0.8155,
-      "source_val_ce": 0.09088635444641113,
-      "source_val_acc": 0.9690000414848328,
-      "lr": 0.00022942582584459598,
-      "seconds": 21461.76987171173,
-      "epochs_budget": 200
-    }
-  ]
+  "active_or_interrupted": []
 }
