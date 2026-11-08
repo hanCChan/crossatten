@@ -1,0 +1,235 @@
+{
+  "time": "2026-11-08T10:05:04+08:00",
+  "kind": "INCOMPLETE_SOURCE_TRAINING_PROGRESS",
+  "p1_completed": 12,
+  "p1_registered": 48,
+  "target_evaluation_performed": false,
+  "p1_source_checkpoint_seal_exists": false,
+  "published_files": "Completed P1 config/metrics/history only; text line endings normalized to LF; checkpoints stay in local runs.",
+  "progress": {
+    "time": "2026-11-08T10:05:03+08:00",
+    "status": "RUNNING",
+    "phases": {
+      "smoke": {
+        "done": 10,
+        "total": 10
+      },
+      "p0": {
+        "done": 8,
+        "total": 8
+      },
+      "p1": {
+        "done": 12,
+        "total": 48
+      },
+      "p2": {
+        "done": 0,
+        "total": 40
+      }
+    },
+    "active_or_interrupted": [
+      {
+        "run": "p1__Shen__A2_transformer_matched__f0__all__s202",
+        "updated_at": "2026-11-08T10:05:00+08:00",
+        "status": "RUNNING",
+        "job": {
+          "phase": "p1",
+          "dataset": "Shen",
+          "arm": "A2_transformer_matched",
+          "fold": 0,
+          "seed": 202
+        },
+        "epoch": 138,
+        "train_ce": 0.4340495470762253,
+        "train_acc": 0.8155,
+        "source_val_ce": 0.09088635444641113,
+        "source_val_acc": 0.9690000414848328,
+        "lr": 0.00022942582584459598,
+        "seconds": 21461.76987171173,
+        "epochs_budget": 200
+      }
+    ]
+  },
+  "records": [
+    {
+      "job": {
+        "phase": "p1",
+        "dataset": "Shen",
+        "arm": "A0_cnn",
+        "fold": 0,
+        "seed": 201
+      },
+      "checkpoint_sha256": "d8e7b10324977e822afb4c217bfb80497e5c8c54011e4054e2c694d7aa7aea78",
+      "published_text_sha256": {
+        "config.json": "259f32c9329e3fa3c6798c1ce101d880f2bdc2bbf07f04255ae6e81cddd0f731",
+        "metrics.json": "65d2819d4707cbeb5e7b1434c75968eaf05d0142c1f04bfabfb2430c013dd084",
+        "history.csv": "1a73cac0c5db0bf532b68e72be2d9aff756cb6312c17f39384f2fc49198dd4e0"
+      }
+    },
+    {
+      "job": {
+        "phase": "p1",
+        "dataset": "Shen",
+        "arm": "A1_mha",
+        "fold": 0,
+        "seed": 201
+      },
+      "checkpoint_sha256": "be14533e73c5b83c3534e09a5837dc013f5e5b001b95396984c8f6d4e8ec6833",
+      "published_text_sha256": {
+        "config.json": "6a1c50c769db70664cc71215841a206d675b28dc1df49f4a3690be26285b0955",
+        "metrics.json": "ec24bfc09e8eb22eace0e3fbcc6a7965586bdfcaf6a5281a24a6e631d53649cc",
+        "history.csv": "7b7a2207e061b329547106ac6369aeb55df3223f3a73bd9a03fb5d732c258bc2"
+      }
+    },
+    {
+      "job": {
+        "phase": "p1",
+        "dataset": "Shen",
+        "arm": "A1_mha_matched",
+        "fold": 0,
+        "seed": 201
+      },
+      "checkpoint_sha256": "20cff6355ee73ce4bcfd131d424e119b1b91040e40dba79343c5e5135b69f1f6",
+      "published_text_sha256": {
+        "config.json": "b22c8c44cd0818fe8af716fe635ca968ce64c4806a69630afcbab5c55fab16ae",
+        "metrics.json": "24e7e50fb42064d969993f29588e067f140e71f7725f41b9dc625a798a5e8182",
+        "history.csv": "ac8729313e94ec63455cd4b8c74477a9ba8f7a1e4db744df0e7cf93a14d27315"
+      }
+    },
+    {
+      "job": {
+        "phase": "p1",
+        "dataset": "Shen",
+        "arm": "A2_transformer",
+        "fold": 0,
+        "seed": 201
+      },
+      "checkpoint_sha256": "d7b454865d1efdaef63fb7a93df60f16ac3d89f0b5eb3d0d76733b318a94a0e4",
+      "published_text_sha256": {
+        "config.json": "68226dff1595f1be7aabdd79d41aeeeb8b647c145b87b6dc3870db4ce0965201",
+        "metrics.json": "726c22360b43d435036ab15cf23114cc523a114e3b6f749cec51caea8369cde5",
+        "history.csv": "6a9bec155641a34400ad49b6768b4aac924ea1085f3cc67acc37406db96aa5df"
+      }
+    },
+    {
+      "job": {
+        "phase": "p1",
+        "dataset": "Shen",
+        "arm": "A2_transformer_matched",
+        "fold": 0,
+        "seed": 201
+      },
+      "checkpoint_sha256": "99378751adbc8c7585d05bb022f15959824309cc9a67f08d1da41c7c2d99adbe",
+      "published_text_sha256": {
+        "config.json": "e90d37c5d3b2fdbaacd99f5e59803d5e0ecc5e67e32ab1be4cab84c1a6ead553",
+        "metrics.json": "e583550d03652978dc078c2dcd05a281165298f39f0fc9615d5c946a1565658f",
+        "history.csv": "3354eeffe3f45e628f92494a557c25502f2ae4478fbdc9eb7d4fce876399edff"
+      }
+    },
+    {
+      "job": {
+        "phase": "p1",
+        "dataset": "Shen",
+        "arm": "A3_rfhstu",
+        "fold": 0,
+        "seed": 201
+      },
+      "checkpoint_sha256": "d89d842c76b8d9a689d71e810c16d75b8003a2ab1adb39e646128c8bd3634516",
+      "published_text_sha256": {
+        "config.json": "391de504edf4f7a7c9be172cee42429856d543784949d6c3c6ca3d7e28ecfea8",
+        "metrics.json": "5b579592c2ba8db48ebaf0e646c155281c1e40b4f48767ac3980e574138d5ff3",
+        "history.csv": "3d1a0333d69b4bd06f88b9e290fd90ecfe8dda17b0429f38798517ec97dc798b"
+      }
+    },
+    {
+      "job": {
+        "phase": "p1",
+        "dataset": "Shen",
+        "arm": "A4_softmax_gate",
+        "fold": 0,
+        "seed": 201
+      },
+      "checkpoint_sha256": "94762d03bf264872774557151ab977945b1f2f2fbeb12f6910515fad18a27bf1",
+      "published_text_sha256": {
+        "config.json": "b850b74f175165ba7a2843755258d33887d7529b7c87a43c406c3da0b1a902ab",
+        "metrics.json": "658a9bcb41e14a8aab4b69a1540d34fb90eefd4d8c616306215dc23355e55ce0",
+        "history.csv": "4d7e3c32f9c31c63adbad13bdb6c2dc9274d87e497ac595acf0f10572d7778e6"
+      }
+    },
+    {
+      "job": {
+        "phase": "p1",
+        "dataset": "Shen",
+        "arm": "A5_silu_gate",
+        "fold": 0,
+        "seed": 201
+      },
+      "checkpoint_sha256": "c6d5640e30d7197cb9140fe709b54e0f550ef20ff4f9dfa5ca2a5661108b0e72",
+      "published_text_sha256": {
+        "config.json": "d61bd49f15531e16bfada0bc3973bc2581be892fdc8c53fb51bfaccb6425fed1",
+        "metrics.json": "d5d4eee23ddc176dfb236b8fdc2dc40623264d2d80e24323a08370b37ea82142",
+        "history.csv": "f9dbb4c4018142c6eb87ed3b7faa4536a588088ad6fb97bbb5dab935cc69450c"
+      }
+    },
+    {
+      "job": {
+        "phase": "p1",
+        "dataset": "Shen",
+        "arm": "A0_cnn",
+        "fold": 0,
+        "seed": 202
+      },
+      "checkpoint_sha256": "a0bc6150ccf5a92b0ed781fccaa4de06ceb1ca40dfb4fad46f8584ce5d615161",
+      "published_text_sha256": {
+        "config.json": "c49d9ca3d9468038b7199a839328d55ebb4241740921fe49ba2867bf9fdec1ee",
+        "metrics.json": "bb50019747f708d470207ad756a2282a44e62f8649e612fa36f9fbcd318e1b5a",
+        "history.csv": "e9de1f359d66347539620ba20c503fe8b10ab9441b0d153bfc36aa6eebbe6583"
+      }
+    },
+    {
+      "job": {
+        "phase": "p1",
+        "dataset": "Shen",
+        "arm": "A1_mha",
+        "fold": 0,
+        "seed": 202
+      },
+      "checkpoint_sha256": "abf47db65b28d02f51bde927ba9a0a5473f445df4cbb53a5f0f26938af7334ca",
+      "published_text_sha256": {
+        "config.json": "9f3e573b8ab50e238d6c4fac55d23138720ebcf7db733a74873c280faa8b3dc5",
+        "metrics.json": "4226548e1f6e42df614c2c01ebb4efec33066fe39b078916adb9131b647ef5d2",
+        "history.csv": "2cd2a86d45d40015c3b468e588a52aef04301d3497bcc70d0a1aa96b7a25f55c"
+      }
+    },
+    {
+      "job": {
+        "phase": "p1",
+        "dataset": "Shen",
+        "arm": "A1_mha_matched",
+        "fold": 0,
+        "seed": 202
+      },
+      "checkpoint_sha256": "24f276419aca1d200484cb1a8cefdbfa0cff168078fa7b4d21e7815d1da8258d",
+      "published_text_sha256": {
+        "config.json": "54679393087eb7000776033ffcaec36b349f21642fe12acba39fbd914d6c57b8",
+        "metrics.json": "b584a1cb256603c441feb76aae0ddae4cd956c55c39d6db3dac75a903ae3c73c",
+        "history.csv": "3d9da29022b65b4fd51a174d4dbffa14a8c86bdde5e9c20f7915bdd2c5071ef5"
+      }
+    },
+    {
+      "job": {
+        "phase": "p1",
+        "dataset": "Shen",
+        "arm": "A2_transformer",
+        "fold": 0,
+        "seed": 202
+      },
+      "checkpoint_sha256": "c429a7e92d881d249f30f52fd7cc1a27554a0c50dcd68735b45d2321770d300e",
+      "published_text_sha256": {
+        "config.json": "f1b9956930999cf3262de2d979b3af899a4a2a51078f0f5c2e52d21f05fe91b0",
+        "metrics.json": "e294e43d0f78a962e35cf05ecafde79840aaee1146378cc05f945a2ad0539f0d",
+        "history.csv": "2744d4d6d9deb79d53df86b766f1410d9d83eb25b6afc5d39409a889593cd6bb"
+      }
+    }
+  ]
+}
