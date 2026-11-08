@@ -1,0 +1,493 @@
+{
+  "time": "2026-11-08T22:45:20+08:00",
+  "new_fits": 12,
+  "reused_fits": 12,
+  "arm_summary": [
+    {
+      "role": "dev_val",
+      "arm": "E1_patch_mha",
+      "acc": 95.22166666666666,
+      "macro_f1": 95.1861766390149,
+      "worst_rx_mean_acc": 89.31666666666668,
+      "seed_sd_pp": 0.4148895435333728
+    },
+    {
+      "role": "dev_val",
+      "arm": "E2_patch_hstu",
+      "acc": 95.88833333333332,
+      "macro_f1": 95.84338616699212,
+      "worst_rx_mean_acc": 91.2,
+      "seed_sd_pp": 0.5493253437930319
+    },
+    {
+      "role": "dev_val",
+      "arm": "A1_mha",
+      "acc": 97.33500000000001,
+      "macro_f1": 97.32614172784186,
+      "worst_rx_mean_acc": 93.66666666666667,
+      "seed_sd_pp": 0.3076930288453038
+    },
+    {
+      "role": "dev_val",
+      "arm": "A3_rfhstu",
+      "acc": 97.46000000000001,
+      "macro_f1": 97.45722125970131,
+      "worst_rx_mean_acc": 95.5,
+      "seed_sd_pp": 0.2688865931949733
+    },
+    {
+      "role": "confirm",
+      "arm": "E1_patch_mha",
+      "acc": 93.68541666666668,
+      "macro_f1": 93.58697471444695,
+      "worst_rx_mean_acc": 84.925,
+      "seed_sd_pp": 0.7562586087664366
+    },
+    {
+      "role": "confirm",
+      "arm": "E2_patch_hstu",
+      "acc": 94.31666666666666,
+      "macro_f1": 94.2009122745862,
+      "worst_rx_mean_acc": 85.5,
+      "seed_sd_pp": 0.21472487241429208
+    },
+    {
+      "role": "confirm",
+      "arm": "A1_mha",
+      "acc": 96.50833333333333,
+      "macro_f1": 96.46370687513034,
+      "worst_rx_mean_acc": 90.86666666666667,
+      "seed_sd_pp": 0.13438711185724977
+    },
+    {
+      "role": "confirm",
+      "arm": "A3_rfhstu",
+      "acc": 96.44791666666667,
+      "macro_f1": 96.38173100054969,
+      "worst_rx_mean_acc": 90.77500000000002,
+      "seed_sd_pp": 0.6406275406453674
+    }
+  ],
+  "contrasts": [
+    {
+      "role": "dev_val",
+      "metric": "acc",
+      "contrast": "hstem_effect_mha",
+      "mean_delta_pp": 2.113333333333335,
+      "positive_pairs": 6,
+      "pairs": 6,
+      "receivers": 10,
+      "worst_receiver_delta_pp": 1.266666666666661,
+      "ci95_pp": [
+        1.5882916666666682,
+        2.748375
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+    },
+    {
+      "role": "dev_val",
+      "metric": "acc",
+      "contrast": "hstem_effect_hstu",
+      "mean_delta_pp": 1.571666666666667,
+      "positive_pairs": 6,
+      "pairs": 6,
+      "receivers": 10,
+      "worst_receiver_delta_pp": 0.2500000000000095,
+      "ci95_pp": [
+        0.951666666666668,
+        2.346666666666667
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+    },
+    {
+      "role": "dev_val",
+      "metric": "acc",
+      "contrast": "interaction",
+      "mean_delta_pp": -0.5416666666666681,
+      "positive_pairs": 1,
+      "pairs": 6,
+      "receivers": 10,
+      "worst_receiver_delta_pp": -1.0333333333333314,
+      "ci95_pp": [
+        -0.7433333333333333,
+        -0.32333333333333575
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+    },
+    {
+      "role": "dev_val",
+      "metric": "acc",
+      "contrast": "stem_main",
+      "mean_delta_pp": 1.842500000000001,
+      "positive_pairs": 6,
+      "pairs": 6,
+      "receivers": 10,
+      "worst_receiver_delta_pp": 0.7583333333333352,
+      "ci95_pp": [
+        1.2783125000000009,
+        2.544999999999999
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+    },
+    {
+      "role": "dev_val",
+      "metric": "acc",
+      "contrast": "mixer_effect_patch",
+      "mean_delta_pp": 0.6666666666666671,
+      "positive_pairs": 5,
+      "pairs": 6,
+      "receivers": 10,
+      "worst_receiver_delta_pp": -0.03333333333333618,
+      "ci95_pp": [
+        0.3566666666666653,
+        0.9983749999999981
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+    },
+    {
+      "role": "dev_val",
+      "metric": "acc",
+      "contrast": "mixer_effect_hstem",
+      "mean_delta_pp": 0.12499999999999901,
+      "positive_pairs": 3,
+      "pairs": 6,
+      "receivers": 10,
+      "worst_receiver_delta_pp": -0.29999999999999716,
+      "ci95_pp": [
+        -0.1600000000000013,
+        0.549999999999999
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+    },
+    {
+      "role": "dev_val",
+      "metric": "acc",
+      "contrast": "mixer_main",
+      "mean_delta_pp": 0.3958333333333331,
+      "positive_pairs": 6,
+      "pairs": 6,
+      "receivers": 10,
+      "worst_receiver_delta_pp": -0.16666666666666666,
+      "ci95_pp": [
+        0.11999999999999886,
+        0.7758750000000001
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+    },
+    {
+      "role": "dev_val",
+      "metric": "macro_f1",
+      "contrast": "hstem_effect_mha",
+      "mean_delta_pp": 2.1399650888269757,
+      "positive_pairs": 6,
+      "pairs": 6,
+      "receivers": 10,
+      "worst_receiver_delta_pp": 1.2648808186985292,
+      "ci95_pp": [
+        1.5882684282788393,
+        2.815464360053636
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+    },
+    {
+      "role": "dev_val",
+      "metric": "macro_f1",
+      "contrast": "hstem_effect_hstu",
+      "mean_delta_pp": 1.6138350927091836,
+      "positive_pairs": 6,
+      "pairs": 6,
+      "receivers": 10,
+      "worst_receiver_delta_pp": 0.2523255487924037,
+      "ci95_pp": [
+        0.9539987702406607,
+        2.4591789362520675
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+    },
+    {
+      "role": "dev_val",
+      "metric": "macro_f1",
+      "contrast": "interaction",
+      "mean_delta_pp": -0.5261299961177922,
+      "positive_pairs": 1,
+      "pairs": 6,
+      "receivers": 10,
+      "worst_receiver_delta_pp": -1.0325646365745627,
+      "ci95_pp": [
+        -0.7377903172854674,
+        -0.2955690464529789
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+    },
+    {
+      "role": "dev_val",
+      "metric": "macro_f1",
+      "contrast": "stem_main",
+      "mean_delta_pp": 1.8769000907680795,
+      "positive_pairs": 6,
+      "pairs": 6,
+      "receivers": 10,
+      "worst_receiver_delta_pp": 0.7586031837454664,
+      "ci95_pp": [
+        1.2784931632913639,
+        2.6382564053809516
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+    },
+    {
+      "role": "dev_val",
+      "metric": "macro_f1",
+      "contrast": "mixer_effect_patch",
+      "mean_delta_pp": 0.6572095279772487,
+      "positive_pairs": 5,
+      "pairs": 6,
+      "receivers": 10,
+      "worst_receiver_delta_pp": -0.03882558359675178,
+      "ci95_pp": [
+        0.3534827493697645,
+        0.977919455461492
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+    },
+    {
+      "role": "dev_val",
+      "metric": "macro_f1",
+      "contrast": "mixer_effect_hstem",
+      "mean_delta_pp": 0.13107953185945673,
+      "positive_pairs": 4,
+      "pairs": 6,
+      "receivers": 10,
+      "worst_receiver_delta_pp": -0.2996896290662174,
+      "ci95_pp": [
+        -0.15971407510682437,
+        0.565918655340959
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+    },
+    {
+      "role": "dev_val",
+      "metric": "macro_f1",
+      "contrast": "mixer_main",
+      "mean_delta_pp": 0.39414452991835275,
+      "positive_pairs": 6,
+      "pairs": 6,
+      "receivers": 10,
+      "worst_receiver_delta_pp": -0.16925760633148457,
+      "ci95_pp": [
+        0.11870180852976865,
+        0.7716434430494419
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+    },
+    {
+      "role": "confirm",
+      "metric": "acc",
+      "contrast": "hstem_effect_mha",
+      "mean_delta_pp": 2.822916666666666,
+      "positive_pairs": 6,
+      "pairs": 6,
+      "receivers": 4,
+      "worst_receiver_delta_pp": 1.5416666666666667,
+      "ci95_pp": [
+        1.6541666666666675,
+        4.8979166666666645
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+    },
+    {
+      "role": "confirm",
+      "metric": "acc",
+      "contrast": "hstem_effect_hstu",
+      "mean_delta_pp": 2.131250000000003,
+      "positive_pairs": 6,
+      "pairs": 6,
+      "receivers": 4,
+      "worst_receiver_delta_pp": 0.8083333333333371,
+      "ci95_pp": [
+        0.9000000000000021,
+        4.204166666666669
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+    },
+    {
+      "role": "confirm",
+      "metric": "acc",
+      "contrast": "interaction",
+      "mean_delta_pp": -0.6916666666666629,
+      "positive_pairs": 0,
+      "pairs": 6,
+      "receivers": 4,
+      "worst_receiver_delta_pp": -0.9583333333333309,
+      "ci95_pp": [
+        -0.8666666666666635,
+        -0.5708333333333304
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+    },
+    {
+      "role": "confirm",
+      "metric": "acc",
+      "contrast": "stem_main",
+      "mean_delta_pp": 2.4770833333333346,
+      "positive_pairs": 6,
+      "pairs": 6,
+      "receivers": 4,
+      "worst_receiver_delta_pp": 1.2666666666666668,
+      "ci95_pp": [
+        1.2770833333333347,
+        4.528125000000001
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+    },
+    {
+      "role": "confirm",
+      "metric": "acc",
+      "contrast": "mixer_effect_patch",
+      "mean_delta_pp": 0.6312499999999991,
+      "positive_pairs": 5,
+      "pairs": 6,
+      "receivers": 4,
+      "worst_receiver_delta_pp": 0.5749999999999981,
+      "ci95_pp": [
+        0.5791666666666668,
+        0.6833333333333311
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+    },
+    {
+      "role": "confirm",
+      "metric": "acc",
+      "contrast": "mixer_effect_hstem",
+      "mean_delta_pp": -0.06041666666666382,
+      "positive_pairs": 2,
+      "pairs": 6,
+      "receivers": 4,
+      "worst_receiver_delta_pp": -0.25,
+      "ci95_pp": [
+        -0.17916666666666595,
+        0.050000000000003084
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+    },
+    {
+      "role": "confirm",
+      "metric": "acc",
+      "contrast": "mixer_main",
+      "mean_delta_pp": 0.2854166666666676,
+      "positive_pairs": 4,
+      "pairs": 6,
+      "receivers": 4,
+      "worst_receiver_delta_pp": 0.2291666666666655,
+      "ci95_pp": [
+        0.2354166666666669,
+        0.33541666666666836
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+    },
+    {
+      "role": "confirm",
+      "metric": "macro_f1",
+      "contrast": "hstem_effect_mha",
+      "mean_delta_pp": 2.8767321606833938,
+      "positive_pairs": 6,
+      "pairs": 6,
+      "receivers": 4,
+      "worst_receiver_delta_pp": 1.5411866175717392,
+      "ci95_pp": [
+        1.6568058377207202,
+        5.053581367250481
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+    },
+    {
+      "role": "confirm",
+      "metric": "macro_f1",
+      "contrast": "hstem_effect_hstu",
+      "mean_delta_pp": 2.180818725963496,
+      "positive_pairs": 6,
+      "pairs": 6,
+      "receivers": 4,
+      "worst_receiver_delta_pp": 0.8164113450481665,
+      "ci95_pp": [
+        0.9029690636615808,
+        4.345510787325424
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+    },
+    {
+      "role": "confirm",
+      "metric": "macro_f1",
+      "contrast": "interaction",
+      "mean_delta_pp": -0.6959134347198977,
+      "positive_pairs": 0,
+      "pairs": 6,
+      "receivers": 4,
+      "worst_receiver_delta_pp": -0.956013712821535,
+      "ci95_pp": [
+        -0.865223328631019,
+        -0.5722560056781075
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+    },
+    {
+      "role": "confirm",
+      "metric": "macro_f1",
+      "contrast": "stem_main",
+      "mean_delta_pp": 2.5287754433234446,
+      "positive_pairs": 6,
+      "pairs": 6,
+      "receivers": 4,
+      "worst_receiver_delta_pp": 1.2653566999233672,
+      "ci95_pp": [
+        1.2798874506911506,
+        4.677906647634599
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+    },
+    {
+      "role": "confirm",
+      "metric": "macro_f1",
+      "contrast": "mixer_effect_patch",
+      "mean_delta_pp": 0.6139375601392505,
+      "positive_pairs": 5,
+      "pairs": 6,
+      "receivers": 4,
+      "worst_receiver_delta_pp": 0.5100515210086769,
+      "ci95_pp": [
+        0.5473424512196742,
+        0.6802939685735746
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+    },
+    {
+      "role": "confirm",
+      "metric": "macro_f1",
+      "contrast": "mixer_effect_hstem",
+      "mean_delta_pp": -0.08197587458064721,
+      "positive_pairs": 2,
+      "pairs": 6,
+      "receivers": 4,
+      "worst_receiver_delta_pp": -0.25464101752705187,
+      "ci95_pp": [
+        -0.21385875561010795,
+        0.04990700644881348
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+    },
+    {
+      "role": "confirm",
+      "metric": "macro_f1",
+      "contrast": "mixer_main",
+      "mean_delta_pp": 0.2659808427793016,
+      "positive_pairs": 4,
+      "pairs": 6,
+      "receivers": 4,
+      "worst_receiver_delta_pp": 0.16848751365775647,
+      "ci95_pp": [
+        0.19592667627073607,
+        0.3360350092878672
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+    }
+  ]
+}

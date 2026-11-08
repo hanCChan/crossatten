@@ -1,0 +1,16 @@
+{
+  "time": "2026-11-08T22:46:38+08:00",
+  "models": 40,
+  "stratum_rows": 6720,
+  "paired_rows": 5376,
+  "anomalies": 21,
+  "samples_removed": 0,
+  "target_access": false,
+  "fit_performed": false,
+  "s13_prediction_confusion_reproduced": true,
+  "limitations": [
+    "CFO magnitude is observed total CFO, not true estimator error or pure RX error.",
+    "Fixed lag/window changes are diagnostic only; no best window chosen and no model recalibrated.",
+    "Strata may have different TX mixtures; TX rows report recall/accuracy, not misleading K-class macroF1."
+  ]
+}
