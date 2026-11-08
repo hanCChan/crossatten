@@ -1,0 +1,18 @@
+{
+  "time": "2026-11-08T22:41:05+08:00",
+  "checkpoints": {
+    "p1__Shen__E1_patch_mha__f0__all__s201": "fda284ba1cf43d40b870ae51de5c2778a1d7331650b048ba857b946b94fe6a26",
+    "p1__Shen__E2_patch_hstu__f0__all__s201": "2807fa3684b1640af7e15d4c8f833e829c7e3e17c7c4f23b1f69673cb958ed1f",
+    "p1__Shen__E1_patch_mha__f0__all__s202": "389df7354cfa9db3fbad93229a37dc007fbdbb29ff13dde4fd8276f97a7fce10",
+    "p1__Shen__E2_patch_hstu__f0__all__s202": "7b56d4adeb51cbf73e237c7918d1380772818d69806914ce11560f8011b35ede",
+    "p1__Shen__E1_patch_mha__f0__all__s203": "fe1ad90a0bce41569ecbf1deca67a2034ed9d022bf3fcc070c49cfa2ad22da1e",
+    "p1__Shen__E2_patch_hstu__f0__all__s203": "1e86aed4e71bf2c8e39865fba3382f18efe3fb18b1a23f5efd3b30357998d31f",
+    "p1__Shen__E1_patch_mha__f1__all__s201": "16abe8d995ce56ce59f239e0ae1f99d0aeb2b348a5241ec0614de29144001408",
+    "p1__Shen__E2_patch_hstu__f1__all__s201": "5b8171bdd3e7afe59da7d809431448ad67ed100240268120a0771f124f9a9043",
+    "p1__Shen__E1_patch_mha__f1__all__s202": "080b89d7ffe96ef47f8c225ba51c25a12a38152ec08617b50eab4a6c7aafa952",
+    "p1__Shen__E2_patch_hstu__f1__all__s202": "abf977b3a82b77dadc74b2b444b15b7cb81d3886c5b5c873f80bf7a045889518",
+    "p1__Shen__E1_patch_mha__f1__all__s203": "440c8af1cfcb24d513f0659e69c7d623135e4b91be3d6bcbc5d17d4ed86c6258",
+    "p1__Shen__E2_patch_hstu__f1__all__s203": "d22c5da7a7fae075a789f7d408e7c7b7486a670c6a503eea4cd4096ad9b38205"
+  },
+  "rule": "All new source-only selected weights fixed before target evaluation; every registered arm reported"
+}
