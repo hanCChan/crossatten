@@ -1,0 +1,18 @@
+{
+  "time": "2026-11-09T12:38:25+08:00",
+  "checkpoints": {
+    "p1__Shen__C2_lite_mha__f0__all__s201": "855613f64f3f8b7de8ab1a6521c209f6cc406386362c297168dfadcc120da6bb",
+    "p1__Shen__C2_lite_hstu__f0__all__s201": "cd52dace2dbdcf87a633c208d6090bb5ead9287830ac20aac7f1be50634eeff9",
+    "p1__Shen__C2_lite_mha__f0__all__s202": "65b0840e3020bdd7c8c005603e580e4fdbfbcedb510612a4201cb3b1b807d944",
+    "p1__Shen__C2_lite_hstu__f0__all__s202": "bf116dbe1fb6e801c4afceeeb9d041f16e9f75e6aaacfc30aff0012ab24650d1",
+    "p1__Shen__C2_lite_mha__f0__all__s203": "2e84d128b9b6381296249ce20194da743bdd848aced13ba5216621f2f72c2467",
+    "p1__Shen__C2_lite_hstu__f0__all__s203": "fd9740fd2a87ae81042768d9153773daf16ef04e6fadff359833f6e7c274636a",
+    "p1__Shen__C2_lite_mha__f1__all__s201": "3454f0e2e0e21a4099abbe17b2af37311b9178f2611c6cf8609abf82d617f57f",
+    "p1__Shen__C2_lite_hstu__f1__all__s201": "8b10e0cbfad3a9375e5f08331ac080d8eb2a86e134c4ed3744db61f3221916f4",
+    "p1__Shen__C2_lite_mha__f1__all__s202": "eeaa364efe07b3a1621b8813d0f42709cbac7d28a84858c4bafc51b87221a617",
+    "p1__Shen__C2_lite_hstu__f1__all__s202": "3094104e3cdf1d2dc2edc85693460aa8958a6c7f1259cb0ac4d6de9778b26e00",
+    "p1__Shen__C2_lite_mha__f1__all__s203": "452159cedef2ae6383ab99295b880130b049c0a423ae30c7d539f0ca9ff8ccda",
+    "p1__Shen__C2_lite_hstu__f1__all__s203": "5c9e1449074d9b719070dc5d309be8e6bc461631219ad0cf72865d18deb0cc8a"
+  },
+  "rule": "All12 source-CE checkpoints sealed before target reads"
+}
