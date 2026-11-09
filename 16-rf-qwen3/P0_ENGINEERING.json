@@ -1,0 +1,671 @@
+{
+  "time": "2026-11-09T12:44:24+08:00",
+  "status": "GO_FULL_PILOT",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "large_models_allowed": true,
+  "large_microbatch": 32,
+  "projected_large_fit_seconds": 4427.4319596611895,
+  "full_fit_limit_seconds": 7200,
+  "rows": [
+    {
+      "arm": "R0_mha",
+      "batch": 2,
+      "status": "PASS",
+      "seconds": 0.00487599999178201,
+      "samples_s": 410.1722730456915,
+      "peak_allocated_gib": 0.3696260452270508,
+      "peak_reserved_gib": 0.373046875,
+      "synthetic": true,
+      "total_active_tail_params": 40650,
+      "trainable_tail_params": 40650,
+      "unused_word_embedding_params": 0,
+      "lm_head_params": 0
+    },
+    {
+      "arm": "R0_mha",
+      "batch": 128,
+      "status": "PASS",
+      "seconds": 0.00430850000702776,
+      "samples_s": 29708.71528170228,
+      "peak_allocated_gib": 0.38798093795776367,
+      "peak_reserved_gib": 0.404296875,
+      "synthetic": true,
+      "total_active_tail_params": 40650,
+      "trainable_tail_params": 40650,
+      "unused_word_embedding_params": 0,
+      "lm_head_params": 0
+    },
+    {
+      "arm": "R0_hstu",
+      "batch": 2,
+      "status": "PASS",
+      "seconds": 0.004736300004879013,
+      "samples_s": 422.2705483055838,
+      "peak_allocated_gib": 0.36978912353515625,
+      "peak_reserved_gib": 0.373046875,
+      "synthetic": true,
+      "total_active_tail_params": 49352,
+      "trainable_tail_params": 49352,
+      "unused_word_embedding_params": 0,
+      "lm_head_params": 0
+    },
+    {
+      "arm": "R0_hstu",
+      "batch": 128,
+      "status": "PASS",
+      "seconds": 0.005892899993341416,
+      "samples_s": 21721.054174452554,
+      "peak_allocated_gib": 0.38988399505615234,
+      "peak_reserved_gib": 0.408203125,
+      "synthetic": true,
+      "total_active_tail_params": 49352,
+      "trainable_tail_params": 49352,
+      "unused_word_embedding_params": 0,
+      "lm_head_params": 0
+    },
+    {
+      "arm": "R1_qwen_small",
+      "batch": 2,
+      "status": "PASS",
+      "seconds": 0.024057400005403906,
+      "samples_s": 83.13450329423583,
+      "peak_allocated_gib": 0.3827328681945801,
+      "peak_reserved_gib": 0.384765625,
+      "synthetic": true,
+      "total_active_tail_params": 797578,
+      "trainable_tail_params": 797578,
+      "unused_word_embedding_params": 0,
+      "lm_head_params": 0
+    },
+    {
+      "arm": "R1_qwen_small",
+      "batch": 128,
+      "status": "PASS",
+      "seconds": 0.019366699998499826,
+      "samples_s": 6609.282944947517,
+      "peak_allocated_gib": 0.5272789001464844,
+      "peak_reserved_gib": 0.54296875,
+      "synthetic": true,
+      "total_active_tail_params": 797578,
+      "trainable_tail_params": 797578,
+      "unused_word_embedding_params": 0,
+      "lm_head_params": 0
+    },
+    {
+      "arm": "R2_transformer",
+      "batch": 2,
+      "status": "PASS",
+      "seconds": 0.009537999983876944,
+      "samples_s": 209.68756588182055,
+      "peak_allocated_gib": 0.38274669647216797,
+      "peak_reserved_gib": 0.38671875,
+      "synthetic": true,
+      "total_active_tail_params": 799082,
+      "trainable_tail_params": 799082,
+      "unused_word_embedding_params": 0,
+      "lm_head_params": 0
+    },
+    {
+      "arm": "R2_transformer",
+      "batch": 128,
+      "status": "PASS",
+      "seconds": 0.009998900000937283,
+      "samples_s": 12801.408153697052,
+      "peak_allocated_gib": 0.47342777252197266,
+      "peak_reserved_gib": 0.501953125,
+      "synthetic": true,
+      "total_active_tail_params": 799082,
+      "trainable_tail_params": 799082,
+      "unused_word_embedding_params": 0,
+      "lm_head_params": 0
+    },
+    {
+      "arm": "R3_pretrained_frozen",
+      "batch": 2,
+      "status": "PASS",
+      "seconds": 0.12263030000030994,
+      "samples_s": 16.309182966974273,
+      "peak_allocated_gib": 1.2862825393676758,
+      "peak_reserved_gib": 1.314453125,
+      "synthetic": true,
+      "total_active_tail_params": 440545290,
+      "trainable_tail_params": 77834,
+      "unused_word_embedding_params": 0,
+      "lm_head_params": 0
+    },
+    {
+      "arm": "R4_random_frozen",
+      "batch": 2,
+      "status": "PASS",
+      "seconds": 0.12002529998426326,
+      "samples_s": 16.66315352065126,
+      "peak_allocated_gib": 1.2862825393676758,
+      "peak_reserved_gib": 1.314453125,
+      "synthetic": true,
+      "total_active_tail_params": 440545290,
+      "trainable_tail_params": 77834,
+      "unused_word_embedding_params": 0,
+      "lm_head_params": 0
+    },
+    {
+      "arm": "R5_pretrained_lora",
+      "batch": 16,
+      "status": "PASS",
+      "seconds": 0.1362690000096336,
+      "samples_s": 117.41481920956984,
+      "peak_allocated_gib": 2.0556845664978027,
+      "peak_reserved_gib": 2.07421875,
+      "synthetic": true,
+      "total_active_tail_params": 441692170,
+      "trainable_tail_params": 1224714,
+      "unused_word_embedding_params": 0,
+      "lm_head_params": 0
+    },
+    {
+      "arm": "R5_pretrained_lora",
+      "batch": 32,
+      "status": "PASS",
+      "seconds": 0.16821549998712726,
+      "samples_s": 190.23217243624285,
+      "peak_allocated_gib": 2.869762420654297,
+      "peak_reserved_gib": 3.05078125,
+      "synthetic": true,
+      "total_active_tail_params": 441692170,
+      "trainable_tail_params": 1224714,
+      "unused_word_embedding_params": 0,
+      "lm_head_params": 0
+    },
+    {
+      "arm": "R5_pretrained_lora",
+      "batch": 64,
+      "status": "PASS",
+      "seconds": 0.34797130001243204,
+      "samples_s": 183.92321435047506,
+      "peak_allocated_gib": 4.5361528396606445,
+      "peak_reserved_gib": 5.466796875,
+      "synthetic": true,
+      "total_active_tail_params": 441692170,
+      "trainable_tail_params": 1224714,
+      "unused_word_embedding_params": 0,
+      "lm_head_params": 0
+    },
+    {
+      "arm": "R5_pretrained_lora",
+      "batch": 128,
+      "status": "MEMORY_CAP",
+      "seconds": 5.51544560000184,
+      "samples_s": 23.20755371061176,
+      "peak_allocated_gib": 7.907386779785156,
+      "peak_reserved_gib": 8.5234375,
+      "synthetic": true,
+      "total_active_tail_params": 441692170,
+      "trainable_tail_params": 1224714,
+      "unused_word_embedding_params": 0,
+      "lm_head_params": 0
+    },
+    {
+      "arm": "R6_random_lora",
+      "batch": 2,
+      "status": "PASS",
+      "seconds": 0.1595744999940507,
+      "samples_s": 12.533330827134439,
+      "peak_allocated_gib": 1.308365821838379,
+      "peak_reserved_gib": 1.333984375,
+      "synthetic": true,
+      "total_active_tail_params": 441692170,
+      "trainable_tail_params": 1224714,
+      "unused_word_embedding_params": 0,
+      "lm_head_params": 0
+    }
+  ],
+  "checks": [
+    {
+      "arm": "R0_mha",
+      "audit": {
+        "total_active_tail_params": 40650,
+        "trainable_tail_params": 40650,
+        "unused_word_embedding_params": 0,
+        "lm_head_params": 0,
+        "details": {
+          "backbone": "historical-style fresh tail",
+          "vocabulary_params": 0
+        }
+      },
+      "inference": [
+        {
+          "batch": 1,
+          "mode": "tail",
+          "median_ms": 0.9953999833669513,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        },
+        {
+          "batch": 1,
+          "mode": "end_to_end",
+          "median_ms": 2.660199999809265,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        },
+        {
+          "batch": 16,
+          "mode": "tail",
+          "median_ms": 1.038899994455278,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        },
+        {
+          "batch": 16,
+          "mode": "end_to_end",
+          "median_ms": 2.73510001716204,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        }
+      ]
+    },
+    {
+      "arm": "R0_hstu",
+      "audit": {
+        "total_active_tail_params": 49352,
+        "trainable_tail_params": 49352,
+        "unused_word_embedding_params": 0,
+        "lm_head_params": 0,
+        "details": {
+          "backbone": "historical-style fresh tail",
+          "vocabulary_params": 0
+        }
+      },
+      "inference": [
+        {
+          "batch": 1,
+          "mode": "tail",
+          "median_ms": 1.0271999926771969,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        },
+        {
+          "batch": 1,
+          "mode": "end_to_end",
+          "median_ms": 2.6359000185038894,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        },
+        {
+          "batch": 16,
+          "mode": "tail",
+          "median_ms": 1.2912999955005944,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        },
+        {
+          "batch": 16,
+          "mode": "end_to_end",
+          "median_ms": 3.1652000034227967,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        }
+      ]
+    },
+    {
+      "arm": "R1_qwen_small",
+      "audit": {
+        "total_active_tail_params": 797578,
+        "trainable_tail_params": 797578,
+        "unused_word_embedding_params": 0,
+        "lm_head_params": 0,
+        "details": {
+          "instantiated_params_before_pruning": 787968,
+          "discarded_embedding_params": 128,
+          "lm_head_instantiated": false,
+          "backbone_params_after_pruning": 787840
+        }
+      },
+      "inference": [
+        {
+          "batch": 1,
+          "mode": "tail",
+          "median_ms": 5.934799992246553,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        },
+        {
+          "batch": 1,
+          "mode": "end_to_end",
+          "median_ms": 7.496200007153675,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        },
+        {
+          "batch": 16,
+          "mode": "tail",
+          "median_ms": 5.6477000180166215,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        },
+        {
+          "batch": 16,
+          "mode": "end_to_end",
+          "median_ms": 7.912800007034093,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        }
+      ]
+    },
+    {
+      "arm": "R2_transformer",
+      "audit": {
+        "total_active_tail_params": 799082,
+        "trainable_tail_params": 799082,
+        "unused_word_embedding_params": 0,
+        "lm_head_params": 0,
+        "details": {
+          "parameter_match": 0.0019090170593014655,
+          "vocabulary_params": 0
+        }
+      },
+      "inference": [
+        {
+          "batch": 1,
+          "mode": "tail",
+          "median_ms": 2.664599975105375,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        },
+        {
+          "batch": 1,
+          "mode": "end_to_end",
+          "median_ms": 4.497499990975484,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        },
+        {
+          "batch": 16,
+          "mode": "tail",
+          "median_ms": 2.4853000068105757,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        },
+        {
+          "batch": 16,
+          "mode": "end_to_end",
+          "median_ms": 4.065599991008639,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        }
+      ]
+    },
+    {
+      "arm": "R3_pretrained_frozen",
+      "audit": {
+        "total_active_tail_params": 440545290,
+        "trainable_tail_params": 77834,
+        "unused_word_embedding_params": 0,
+        "lm_head_params": 0,
+        "details": {
+          "instantiated_params_before_pruning": 596049920,
+          "discarded_embedding_params": 155582464,
+          "lm_head_instantiated": false,
+          "backbone_params_after_pruning": 440467456,
+          "pretrained": true,
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "loading": {
+            "missing_keys": [],
+            "unexpected_keys": [
+              "lm_head.weight"
+            ],
+            "mismatched_keys": [],
+            "error_msgs": []
+          }
+        }
+      },
+      "inference": [
+        {
+          "batch": 1,
+          "mode": "tail",
+          "median_ms": 36.80040000472218,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        },
+        {
+          "batch": 1,
+          "mode": "end_to_end",
+          "median_ms": 36.2695999792777,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        },
+        {
+          "batch": 16,
+          "mode": "tail",
+          "median_ms": 40.04059999715537,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        },
+        {
+          "batch": 16,
+          "mode": "end_to_end",
+          "median_ms": 41.0103999893181,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        }
+      ]
+    },
+    {
+      "arm": "R4_random_frozen",
+      "audit": {
+        "total_active_tail_params": 440545290,
+        "trainable_tail_params": 77834,
+        "unused_word_embedding_params": 0,
+        "lm_head_params": 0,
+        "details": {
+          "instantiated_params_before_pruning": 596049920,
+          "discarded_embedding_params": 155582464,
+          "lm_head_instantiated": false,
+          "backbone_params_after_pruning": 440467456,
+          "pretrained": false,
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "loading": {}
+        }
+      },
+      "inference": [
+        {
+          "batch": 1,
+          "mode": "tail",
+          "median_ms": 36.62950001307763,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        },
+        {
+          "batch": 1,
+          "mode": "end_to_end",
+          "median_ms": 34.6694000181742,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        },
+        {
+          "batch": 16,
+          "mode": "tail",
+          "median_ms": 36.16879999754019,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        },
+        {
+          "batch": 16,
+          "mode": "end_to_end",
+          "median_ms": 37.25319998920895,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        }
+      ]
+    },
+    {
+      "arm": "R5_pretrained_lora",
+      "audit": {
+        "total_active_tail_params": 441692170,
+        "trainable_tail_params": 1224714,
+        "unused_word_embedding_params": 0,
+        "lm_head_params": 0,
+        "details": {
+          "instantiated_params_before_pruning": 596049920,
+          "discarded_embedding_params": 155582464,
+          "lm_head_instantiated": false,
+          "backbone_params_after_pruning": 440467456,
+          "pretrained": true,
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "loading": {
+            "missing_keys": [],
+            "unexpected_keys": [
+              "lm_head.weight"
+            ],
+            "mismatched_keys": [],
+            "error_msgs": []
+          }
+        }
+      },
+      "inference": [
+        {
+          "batch": 1,
+          "mode": "tail",
+          "median_ms": 47.526400012429804,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        },
+        {
+          "batch": 1,
+          "mode": "end_to_end",
+          "median_ms": 52.01009998563677,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        },
+        {
+          "batch": 16,
+          "mode": "tail",
+          "median_ms": 50.384000001940876,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        },
+        {
+          "batch": 16,
+          "mode": "end_to_end",
+          "median_ms": 46.81980001623742,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        }
+      ]
+    },
+    {
+      "arm": "R6_random_lora",
+      "audit": {
+        "total_active_tail_params": 441692170,
+        "trainable_tail_params": 1224714,
+        "unused_word_embedding_params": 0,
+        "lm_head_params": 0,
+        "details": {
+          "instantiated_params_before_pruning": 596049920,
+          "discarded_embedding_params": 155582464,
+          "lm_head_instantiated": false,
+          "backbone_params_after_pruning": 440467456,
+          "pretrained": false,
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "loading": {}
+        }
+      },
+      "inference": [
+        {
+          "batch": 1,
+          "mode": "tail",
+          "median_ms": 91.18640000815503,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        },
+        {
+          "batch": 1,
+          "mode": "end_to_end",
+          "median_ms": 56.18230000254698,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        },
+        {
+          "batch": 16,
+          "mode": "tail",
+          "median_ms": 58.07759999879636,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        },
+        {
+          "batch": 16,
+          "mode": "end_to_end",
+          "median_ms": 61.94740001228638,
+          "repeats": 10,
+          "synthetic": true,
+          "frontend_precision": "FP32 FFT/CNN, same as cached tokens",
+          "tail_precision": "BF16 autocast"
+        }
+      ]
+    }
+  ],
+  "fixed_RF_frontend": true,
+  "scientific_accuracy_evidence": false,
+  "random_labels": true,
+  "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca"
+}
