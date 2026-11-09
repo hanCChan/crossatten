@@ -1,0 +1,349 @@
+{
+  "time": "2026-11-09T23:41:09+08:00",
+  "phase": "pilot",
+  "selected": [],
+  "status": "STOP_SOURCE_GATE",
+  "decisions": {
+    "R1_qwen_small": {
+      "admitted": false,
+      "comparisons": [
+        {
+          "control": "R2_transformer",
+          "admitted": false,
+          "checks": {
+            "manyrx_mean": false,
+            "manyrx_positive": true,
+            "worst_rx": true,
+            "manyrx_ci": false
+          },
+          "stats": {
+            "ManyRx": {
+              "mean_pp": 0.34629629629629505,
+              "positive_folds": 3,
+              "folds": {
+                "0": 0.7518518518518499,
+                "1": 0.7249999999999979,
+                "2": 1.2750000000000004,
+                "3": -1.3666666666666678
+              },
+              "worst_rx_pp": -1.5499999999999996,
+              "ci95_pp": [
+                -0.3781994047619053,
+                1.0886489898989882
+              ],
+              "receiver_count": 12,
+              "uncertainty": "conditional RX bootstrap, no multiplicity correction"
+            }
+          }
+        },
+        {
+          "control": "R0_mha",
+          "admitted": false,
+          "checks": {
+            "manyrx_mean": false,
+            "manyrx_positive": true,
+            "worst_rx": false,
+            "manyrx_ci": false
+          },
+          "stats": {
+            "ManyRx": {
+              "mean_pp": 0.08564814814814763,
+              "positive_folds": 3,
+              "folds": {
+                "0": 0.07592592592592373,
+                "1": -1.2583333333333335,
+                "2": 1.2499999999999991,
+                "3": 0.2750000000000012
+              },
+              "worst_rx_pp": -3.0000000000000027,
+              "ci95_pp": [
+                -0.5179382365319873,
+                0.7271969696969673
+              ],
+              "receiver_count": 12,
+              "uncertainty": "conditional RX bootstrap, no multiplicity correction"
+            }
+          }
+        },
+        {
+          "control": "R0_hstu",
+          "admitted": false,
+          "checks": {
+            "manyrx_mean": false,
+            "manyrx_positive": false,
+            "worst_rx": false,
+            "manyrx_ci": false
+          },
+          "stats": {
+            "ManyRx": {
+              "mean_pp": -0.3942129629629633,
+              "positive_folds": 2,
+              "folds": {
+                "0": 0.3898148148148132,
+                "1": -1.8666666666666665,
+                "2": -0.2749999999999993,
+                "3": 0.17499999999999916
+              },
+              "worst_rx_pp": -2.100000000000002,
+              "ci95_pp": [
+                -0.8950479497354502,
+                0.21202083333333238
+              ],
+              "receiver_count": 12,
+              "uncertainty": "conditional RX bootstrap, no multiplicity correction"
+            }
+          }
+        }
+      ]
+    },
+    "R2_transformer": {
+      "admitted": false,
+      "comparisons": [
+        {
+          "control": "R0_mha",
+          "admitted": false,
+          "checks": {
+            "manyrx_mean": false,
+            "manyrx_positive": false,
+            "worst_rx": true,
+            "manyrx_ci": false
+          },
+          "stats": {
+            "ManyRx": {
+              "mean_pp": -0.26064814814814735,
+              "positive_folds": 1,
+              "folds": {
+                "0": -0.6759259259259262,
+                "1": -1.9833333333333314,
+                "2": -0.02500000000000095,
+                "3": 1.641666666666669
+              },
+              "worst_rx_pp": -1.9000000000000017,
+              "ci95_pp": [
+                -0.7877807539682546,
+                0.2714930555555559
+              ],
+              "receiver_count": 12,
+              "uncertainty": "conditional RX bootstrap, no multiplicity correction"
+            }
+          }
+        },
+        {
+          "control": "R0_hstu",
+          "admitted": false,
+          "checks": {
+            "manyrx_mean": false,
+            "manyrx_positive": false,
+            "worst_rx": true,
+            "manyrx_ci": false
+          },
+          "stats": {
+            "ManyRx": {
+              "mean_pp": -0.7405092592592584,
+              "positive_folds": 1,
+              "folds": {
+                "0": -0.36203703703703666,
+                "1": -2.5916666666666646,
+                "2": -1.5499999999999996,
+                "3": 1.541666666666667
+              },
+              "worst_rx_pp": -1.9333333333333347,
+              "ci95_pp": [
+                -1.286116452991452,
+                -0.1422608024691345
+              ],
+              "receiver_count": 12,
+              "uncertainty": "conditional RX bootstrap, no multiplicity correction"
+            }
+          }
+        }
+      ]
+    },
+    "R3_pretrained_frozen": {
+      "admitted": false,
+      "comparisons": [
+        {
+          "control": "R4_random_frozen",
+          "admitted": false,
+          "checks": {
+            "manyrx_mean": false,
+            "manyrx_positive": false,
+            "worst_rx": false,
+            "manyrx_ci": false
+          },
+          "stats": {
+            "ManyRx": {
+              "mean_pp": -1.2965277777777766,
+              "positive_folds": 1,
+              "folds": {
+                "0": -1.8111111111111093,
+                "1": -3.908333333333331,
+                "2": 1.3083333333333356,
+                "3": -0.7750000000000016
+              },
+              "worst_rx_pp": -5.75,
+              "ci95_pp": [
+                -2.71759259259259,
+                0.13397727272727372
+              ],
+              "receiver_count": 12,
+              "uncertainty": "conditional RX bootstrap, no multiplicity correction"
+            }
+          }
+        },
+        {
+          "control": "R0_mha",
+          "admitted": false,
+          "checks": {
+            "manyrx_mean": false,
+            "manyrx_positive": false,
+            "worst_rx": false,
+            "manyrx_ci": false
+          },
+          "stats": {
+            "ManyRx": {
+              "mean_pp": -0.6909722222222214,
+              "positive_folds": 1,
+              "folds": {
+                "0": -1.2805555555555534,
+                "1": -2.6916666666666664,
+                "2": 1.7666666666666666,
+                "3": -0.5583333333333329
+              },
+              "worst_rx_pp": -5.899999999999994,
+              "ci95_pp": [
+                -2.051291666666668,
+                0.6203914141414153
+              ],
+              "receiver_count": 12,
+              "uncertainty": "conditional RX bootstrap, no multiplicity correction"
+            }
+          }
+        },
+        {
+          "control": "R0_hstu",
+          "admitted": false,
+          "checks": {
+            "manyrx_mean": false,
+            "manyrx_positive": false,
+            "worst_rx": false,
+            "manyrx_ci": false
+          },
+          "stats": {
+            "ManyRx": {
+              "mean_pp": -1.1708333333333325,
+              "positive_folds": 1,
+              "folds": {
+                "0": -0.9666666666666638,
+                "1": -3.2999999999999994,
+                "2": 0.2416666666666678,
+                "3": -0.6583333333333349
+              },
+              "worst_rx_pp": -4.999999999999993,
+              "ci95_pp": [
+                -2.3500520833333334,
+                -0.05226799242424128
+              ],
+              "receiver_count": 12,
+              "uncertainty": "conditional RX bootstrap, no multiplicity correction"
+            }
+          }
+        }
+      ]
+    },
+    "R5_pretrained_lora": {
+      "admitted": false,
+      "comparisons": [
+        {
+          "control": "R3_pretrained_frozen",
+          "admitted": false,
+          "checks": {
+            "manyrx_mean": false,
+            "manyrx_positive": true,
+            "worst_rx": true,
+            "manyrx_ci": false
+          },
+          "stats": {
+            "ManyRx": {
+              "mean_pp": 0.567129629629629,
+              "positive_folds": 3,
+              "folds": {
+                "0": 1.2851851851851839,
+                "1": 3.0333333333333337,
+                "2": -2.266666666666669,
+                "3": 0.21666666666666687
+              },
+              "worst_rx_pp": -1.5500000000000032,
+              "ci95_pp": [
+                -0.520726495726497,
+                1.8461763468013426
+              ],
+              "receiver_count": 12,
+              "uncertainty": "conditional RX bootstrap, no multiplicity correction"
+            }
+          }
+        },
+        {
+          "control": "R0_mha",
+          "admitted": false,
+          "checks": {
+            "manyrx_mean": false,
+            "manyrx_positive": false,
+            "worst_rx": false,
+            "manyrx_ci": false
+          },
+          "stats": {
+            "ManyRx": {
+              "mean_pp": -0.12384259259259253,
+              "positive_folds": 2,
+              "folds": {
+                "0": 0.004629629629630354,
+                "1": 0.3416666666666679,
+                "2": -0.5000000000000023,
+                "3": -0.34166666666666606
+              },
+              "worst_rx_pp": -2.3833333333333333,
+              "ci95_pp": [
+                -0.8740264249639249,
+                0.4850170940170937
+              ],
+              "receiver_count": 12,
+              "uncertainty": "conditional RX bootstrap, no multiplicity correction"
+            }
+          }
+        },
+        {
+          "control": "R0_hstu",
+          "admitted": false,
+          "checks": {
+            "manyrx_mean": false,
+            "manyrx_positive": false,
+            "worst_rx": false,
+            "manyrx_ci": false
+          },
+          "stats": {
+            "ManyRx": {
+              "mean_pp": -0.6037037037037034,
+              "positive_folds": 1,
+              "folds": {
+                "0": 0.3185185185185198,
+                "1": -0.266666666666665,
+                "2": -2.025000000000001,
+                "3": -0.441666666666668
+              },
+              "worst_rx_pp": -2.7166666666666632,
+              "ci95_pp": [
+                -1.3150101010101,
+                0.12223090277777895
+              ],
+              "receiver_count": 12,
+              "uncertainty": "conditional RX bootstrap, no multiplicity correction"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "real_target_access": false,
+  "scope": "Frozen source-pretrained RF tokenizer; same20-epoch tail adaptation, not independent end-to-end optimum"
+}
