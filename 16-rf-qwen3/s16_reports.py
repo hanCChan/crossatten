@@ -23,8 +23,13 @@ def delta_stats(rows):
     folds={f:np.mean([r['delta_pp'] for r in rows if r['fold']==f]) for f in range(4)}
     rx={}
     for r in rows:rx.setdefault(r['rx'],[]).append(r['delta_pp'])
+    # Resample whole RX clusters including their fold occurrences. RXs occur in
+    # unequal numbers of folds; averaging cluster means would change the estimand.
+    if len({sum(r['fold']==f for r in rows) for f in range(4)})!=1:raise ValueError('Fold receiver counts must match')
     values=np.asarray([np.mean(v) for v in rx.values()]);rng=np.random.default_rng(16016)
-    draws=rng.choice(values,(5000,len(values)),replace=True).mean(1)
+    sums=np.asarray([sum(v) for v in rx.values()]);counts=np.asarray([len(v) for v in rx.values()])
+    index=rng.integers(len(rx),size=(5000,len(rx)))
+    draws=sums[index].sum(1)/counts[index].sum(1)
     return dict(mean_pp=float(np.mean(list(folds.values()))),positive_folds=int(sum(v>0 for v in folds.values())),folds={str(k):float(v) for k,v in folds.items()},
         worst_rx_pp=float(values.min()),ci95_pp=np.quantile(draws,[.025,.975]).tolist(),receiver_count=len(values),uncertainty='conditional RX bootstrap, no multiplicity correction')
 

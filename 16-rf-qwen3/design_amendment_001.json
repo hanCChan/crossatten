@@ -1,0 +1,20 @@
+{
+  "time": "2026-11-09T09:50:08+08:00",
+  "phase": "Before S16 P0 and before any source fit/data cache",
+  "original_design_sha256": "e5e125602628a744af895512831fed616c2983fcf63edcd7c2b20603e6d199b4",
+  "reason": "RX-cluster intervals preserve each receiver cluster fold-occurrence count; equal weighting of RX means changes the fold-equal estimand when RXs recur unequally.",
+  "code": {
+    "16-rf-qwen3/s16_reports.py": {
+      "before": "a2761493dade59490bea596f8ffd34b91da8c3a160fdc037b1a4fc7f21712d94",
+      "after": "b67d1dbaa0c342f532a652ba63e470441a6e3e0b518653c837ea13bdd8b0bd3e"
+    }
+  },
+  "evidence": {
+    "16-rf-qwen3/ENGINEERING_TESTS.json": {
+      "before": "4dc0de765dc7195790578e06e0e14189638b2ab08bcf93c75cc284fbfb3af976",
+      "after": "23ca9416b89c7fd23a35c5402019807ae288e3394a39ac3edb72d61577262273"
+    }
+  },
+  "protocol_or_gate_threshold_changes": false,
+  "scientific_outcomes_read": false
+}
