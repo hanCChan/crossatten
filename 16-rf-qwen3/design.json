@@ -1,0 +1,174 @@
+{
+  "time": "2026-11-09T09:46:51+08:00",
+  "stage": "S16",
+  "base_s14": "fc4a3cbeafcfc9bb18aa69125809b779fa974df4",
+  "code_sha256": {
+    "13-mixer-cfo-mechanisms/cfo_descriptive.py": "e60de808c7de10decda0844f2e74ae55169df196c9ec9fbb3807c312f4a131da",
+    "13-mixer-cfo-mechanisms/core.py": "a9db92f80e8e1bf1579cab900fabf085f5c33e018dffe6e27f1af64ee94dc527",
+    "13-mixer-cfo-mechanisms/data.py": "578fd207105e5375094bd22a12ec710fd259379c4b1c627d962251256bd71e9e",
+    "13-mixer-cfo-mechanisms/diagnostics.py": "883b0a5fcf73ba7c19e94f51ae05f7d003b82a8870b44c6c6d23e4ca02ee7149",
+    "13-mixer-cfo-mechanisms/execute.py": "21a7bf48a381842e5fbc044411350ba2faa1fd86cc31796ccab199726e8b1ae8",
+    "13-mixer-cfo-mechanisms/metrics.py": "a9773e0532552f012dc039c42206460d1a5b02001a2bbb44a388258825f85ed7",
+    "13-mixer-cfo-mechanisms/models.py": "606243ff9462358f53a86d2908130c47f69c5dd9d1cfee669cbaf10c7b76e5a1",
+    "13-mixer-cfo-mechanisms/pickle_index.py": "52925d018fbad46396dbf809379e2b8961b368179ba1ef64c4fc9c5031ed319a",
+    "13-mixer-cfo-mechanisms/register.py": "1d2241b226e4addbe74401c5acf7cd6acd148fcece15e20cf0c611f11a6b5b3b",
+    "13-mixer-cfo-mechanisms/reports.py": "8bcf6ec4ad18d183368b3d0e6bd5c4e58c476442aee16ddba74b099de27aef15",
+    "13-mixer-cfo-mechanisms/status.py": "533e7ef2154f0134c8cc887e5a1bd0d42cafcdfa3863c712f462bee048b49b1a",
+    "13-mixer-cfo-mechanisms/train.py": "164b0eb9794c4494b34cf1d25f8dfb0c9a4ae8c54af3e03ef9f08b150a670a2a",
+    "13-mixer-cfo-mechanisms/wifi.py": "3402847c350172b670aba40616f5b56ec5ecb2e7176cc199c26d0315d920db37",
+    "16-rf-qwen3/download_model.py": "4150ab1dfd3a8cd8e3b96ca305277947c847cfe55d60c1ed5e10b981bb02172b",
+    "16-rf-qwen3/engineering.py": "5cc916690f161275a37177da74de21d70e1fb4643b5b32f28952e799ed215d55",
+    "16-rf-qwen3/official_cpu_smoke.py": "4d1e17134e2b27e9dd3fb3feaf41b6f95b802f8b321cc30d03f77718a3d45feb",
+    "16-rf-qwen3/s16_core.py": "d39ccf8e18d84d7a5d69c1f0c8ec830e69c141fd67540b44c190cb1a023c289a",
+    "16-rf-qwen3/s16_data.py": "05827a23cb2d767f681c8f4dfab07c56bef58b7109c3f00f84f597a412a86532",
+    "16-rf-qwen3/s16_execute.py": "970a3174d96314390a7d5dd8b6b280ec36628c1f29d090a486a5c27ae281b8ae",
+    "16-rf-qwen3/s16_models.py": "6a9b993234768586ca7490969c48716b8587f0b092484514468cff64ee43ab8b",
+    "16-rf-qwen3/s16_register.py": "d308aecd814e02d26069a74ba389cb772f5f6d85521bfc9449a0c5b55cca7078",
+    "16-rf-qwen3/s16_reports.py": "a2761493dade59490bea596f8ffd34b91da8c3a160fdc037b1a4fc7f21712d94",
+    "16-rf-qwen3/s16_train.py": "2177e0245a7d086890c75ef260788d1b4034f7de05de8fe1bf6ef450da4a3645",
+    "16-rf-qwen3/test_engineering.py": "13a4366e9a99e310911507a60414a293039416ac9e9e579b8059143d549b079f",
+    "lib/legacy_rfhstu/__init__.py": "f78366d19d77282713f4944bc4e8fbdcbb138aac9849a0acf79459f4491dd9f5",
+    "lib/legacy_rfhstu/cnn_stem.py": "b3a8944c96b354d295a96d84876693e95433f67616e23d2804219d0fa1c2762a",
+    "lib/legacy_rfhstu/features.py": "1e9e5aa828adbb382c604ebf7b1bd429c79893ea1169afddaa14596a6c0d5378",
+    "lib/legacy_rfhstu/losses.py": "a0ba7f42040203289593ba6a9363f27ea19d5152d8813979a7018cc152e78e28",
+    "lib/legacy_rfhstu/mixstyle.py": "687174caeff6f256b2661399ab70aede396d5ea51af4e312dcbacc01235b94a5",
+    "lib/legacy_rfhstu/models.py": "ebb638fac3392fec36bace7e2445ab6d27ef4e3b5adb2c06b35c8bc82f506666",
+    "lib/legacy_rfhstu/multiscale.py": "de51929e7917e793e814319a88b91ef0b17354e4c7614065172e082f16833e35",
+    "lib/legacy_rfhstu/oob_fusion.py": "030f2886c9a84282eb7e20ce5d318f528e8bfc20902c4b4a17315686ea290259",
+    "lib/xa/__init__.py": "ca199705017e2d6d6b037d4d732f7caec7d7dff190c77a3d94c0cfaf515ab492",
+    "lib/xa/aggregate.py": "8995baeff876f427338836ad0b2d53de01f95e95148b851067f498d35f592e38",
+    "lib/xa/bench.py": "3a94fe229e5b43f45b15ca2f1a06e179b0212f282ea58671e71c718161d20ba7",
+    "lib/xa/data.py": "ff861d46e508d807996a924d4439134416b16ba6507856a7335c65d9e4cfc3cb",
+    "lib/xa/evaluate.py": "365998cf59196e5ebbdad3b34132fe1dfb2a4a2b988c82d660715471167734aa",
+    "lib/xa/explore_models.py": "bcc1616b5fc6ea533183b4c3a9538748a663a1b321bd748a33870b4ef8116467",
+    "lib/xa/explore_train.py": "8e4361d2b21546f5f5b5ba26adccd57618680c720db734561802b8246a33babe",
+    "lib/xa/frontends.py": "967e28c05f168341b4710e4b2253d77b93d92bc9a3dd515fdddaa35e81c2013f",
+    "lib/xa/guard.py": "80562f5a0893be3a3e91cb80ef4636a6b24eb0c76bfa59d3566574633e5fff54",
+    "lib/xa/jobs.py": "ef8ac595d7a567c18d5e726b2fe70e9942628e709bf1453dfe0df5e9d07233f0",
+    "lib/xa/launch.py": "71ca1656dcccf4d26455de6b999de42b2482f73b738a37fca52f354ccec6d4a2",
+    "lib/xa/models.py": "322049d67d19d196dca8a722fda9de433d846fe1aa3d6d8439c49adeba6554bf",
+    "lib/xa/models2.py": "e9c3364868955e6996645a823187dadb553a2a95139e809d43055a93c53eaa23",
+    "lib/xa/models3.py": "bade67f8ad50b64c132197d21a86c1897a8c27976a7b8490d2e7131ff025cbba",
+    "lib/xa/paper_models.py": "7c09adc3b481e5b13eeccb93731a00573f16a98f5d35c490a1d5082707c550bd",
+    "lib/xa/paper_run.py": "4c1bcdf2e98c974c6e03677b69881ea378dc3406c0d9f8a7bbe471290389fec6",
+    "lib/xa/paper_train.py": "e59cab54045ef6cd27a168e937e7571456ad3d2405183efc605e8308e3ed80c8",
+    "lib/xa/run_job.py": "534b8f7aa2c8c54c12eb5881850897fa2a69280cde004c84ede19532b0cb576b",
+    "lib/xa/train.py": "906a7fd0a7bbb61fea86e03bcf9b52228a5b26851e53fa904d497be330daa96e",
+    "lib/xa/wisig.py": "b4127fba87f5603704c92d2221743c8dedf6898e45c8216b9ddb84b32f42ad67"
+  },
+  "evidence_sha256": {
+    "16-rf-qwen3/ENGINEERING_TESTS.json": "4dc0de765dc7195790578e06e0e14189638b2ab08bcf93c75cc284fbfb3af976",
+    "16-rf-qwen3/ENVIRONMENT.json": "2e3568c139ec30ee61c15ded09cfd8b3393a68014fc7709e02da62e014d83110",
+    "16-rf-qwen3/MODEL_ARCHITECTURE_AUDIT.json": "7e65ff72af09aabd5cb21d6661ffa5bcec845208c9213924bb6278ae35cc7ed2",
+    "16-rf-qwen3/MODEL_MANIFEST.json": "f3dedd093e82cc7f748649496b59a3537108d8ddf160fa695d55298fbce96b9b",
+    "16-rf-qwen3/OFFICIAL_CPU_SMOKE.json": "6d76b54bb662e18553bae8e59f77d10a54cdcaeb170a0daa2144aea8da6c4641",
+    "16-rf-qwen3/proposal_1.txt": "186f8fac7e29ceb4fbecd023ec45fe93eb724f67f2ee523255d8d18da8f66367",
+    "16-rf-qwen3/proposal_2.txt": "83ab3cd2da220cbd9289ed3d937d32b023a1458691a892cabf1174d48ddacd41",
+    "16-rf-qwen3/README.zh-CN.md": "a944773521cd080747867622c6752adf9c63c9b6d72512f568f121a9fb70ad1f",
+    "16-rf-qwen3/requirements-qwen3.txt": "3b2fc9cd13c91dd85b32a54a70cd7e879c4823b91bf8091e51c2cb6105ca299e",
+    "16-rf-qwen3/small_architecture_match.json": "d0844b070c8c7961ce4fab9ef1d0eabd9f7033b44839eef7f922be8677f4f11a"
+  },
+  "front_references": [
+    {
+      "fold": 0,
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p2__ManyRx__B0__f0__first__s16001",
+      "checkpoint_sha256": "be36982a58f93c3367ea5de30126d7ad4cf13eab2ce5c74d8f7d5f2ff3fe2d48",
+      "config_sha256": "dcf99ebd8435cd2697effd7d4f5c5b71cebde20eccabf3b0826e9cc70316e438"
+    },
+    {
+      "fold": 1,
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p2__ManyRx__B0__f1__first__s16001",
+      "checkpoint_sha256": "95a037159b7d5a04ec08805abaf5b6bdf6e8d92b4691131074c0040b071c9003",
+      "config_sha256": "eed6fb2998e4249e87d2146f7931257fb58094e46afcb04d7d345f983f36cfa8"
+    },
+    {
+      "fold": 2,
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p2__ManyRx__B0__f2__first__s16001",
+      "checkpoint_sha256": "fb4a03fbf29727d56c1bfd07bfd51f148c46f96f2baa516f30c25cb129e61764",
+      "config_sha256": "4de2942f74c8ed0ff882e2c15b30f0913a8fe2ad02a80e62cc76b508471666c2"
+    },
+    {
+      "fold": 3,
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p2__ManyRx__B0__f3__first__s16001",
+      "checkpoint_sha256": "08b9cf11c261d8e996bde8bc80dceb7006c9182674101ed623b100616178fee3",
+      "config_sha256": "1a08a7af3e83b726daa67b1b01fcb3dc8dcdad4f0c6b9d6b6b7f8e557965b8d6"
+    }
+  ],
+  "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "pilot_seed": 17001,
+  "source_split_seed": 16001,
+  "protocol": {
+    "frozen_source_pretrained_rf": true,
+    "raw_input": [
+      2,
+      256
+    ],
+    "rf_tokens": [
+      32,
+      64
+    ],
+    "qwen_tokens": 33,
+    "cls": "last",
+    "causal": true,
+    "effective_batch": 128,
+    "epochs": 20,
+    "checkpoint": "minimum source RX-equal CE",
+    "precision": "BF16 autocast; FP32 trainable weights",
+    "optimizer": "AdamW 1e-3 wd5e-4 warmup2 cosine20 clip1",
+    "lora": {
+      "rank": 8,
+      "alpha": 16,
+      "dropout": 0,
+      "targets": [
+        "q_proj",
+        "v_proj"
+      ]
+    },
+    "real_target": false,
+    "days": [
+      1,
+      2
+    ],
+    "training_and_validation_partition": "same70/30 split as source RF tokenizer"
+  },
+  "source_gate": {
+    "manyrx_mean_pp": 1,
+    "positive_folds": 3,
+    "ci95_lower_gt": 0,
+    "worst_rx_delta_pp": -2,
+    "confirmation_manysig_mean_pp": 0,
+    "confirmation_manysig_folds_ge_minus1": 3,
+    "bootstrap": 5000,
+    "rx_cluster": true
+  },
+  "confirmation_rounds": [
+    {
+      "phase": "confirm1",
+      "seed": 17011,
+      "front_phase": "front_r1"
+    },
+    {
+      "phase": "confirm2",
+      "seed": 17012,
+      "front_phase": "front_r2"
+    }
+  ],
+  "maximum_new_fits": {
+    "pilot_heads": 28,
+    "confirmation_heads": 128,
+    "confirmation_rf_fronts": 16
+  },
+  "resource_gate": {
+    "microbatches": [
+      16,
+      32,
+      64,
+      128
+    ],
+    "max_allocated_gib": 5.75,
+    "max_reserved_gib": 6.5,
+    "max_projected_fit_seconds": 7200
+  },
+  "selection": "at most one small-architecture candidate and one pretrained candidate; no promotion of confirmation controls",
+  "no_automatic_fit_retry": true
+}

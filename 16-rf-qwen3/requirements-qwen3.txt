@@ -1,0 +1,8 @@
+# Reuse torch2.5.0+cu124 from the existing environment via system-site-packages.
+# Install only inside D:/crossatten/.venv-qwen3; never modify crossatten4060.
+transformers==4.51.3
+peft==0.15.2
+accelerate==1.6.0
+tokenizers==0.21.1
+huggingface_hub==0.30.2
+safetensors==0.5.3

@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "device": "CPU only; no experimental data read",
+  "output": "test_causal_suffix_and_cls_readout (__main__.EngineeringTests.test_causal_suffix_and_cls_readout) ... ok\ntest_confirmation_controls_cannot_be_promoted (__main__.EngineeringTests.test_confirmation_controls_cannot_be_promoted) ... ok\ntest_forbidden_role_rejected_before_io (__main__.EngineeringTests.test_forbidden_role_rejected_before_io) ... ok\ntest_frozen_backbone_still_trains_rf_bridge (__main__.EngineeringTests.test_frozen_backbone_still_trains_rf_bridge) ... ok\ntest_native_rf_tokenizer_equivalence (__main__.EngineeringTests.test_native_rf_tokenizer_equivalence) ... ok\ntest_paired_heads_and_lora_initialization (__main__.EngineeringTests.test_paired_heads_and_lora_initialization) ... ok\ntest_parameter_matching_and_checkpoint (__main__.EngineeringTests.test_parameter_matching_and_checkpoint) ... ok\ntest_receiver_cluster_gate_and_complete_folds (__main__.EngineeringTests.test_receiver_cluster_gate_and_complete_folds) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.877s\n\nOK\n"
+}

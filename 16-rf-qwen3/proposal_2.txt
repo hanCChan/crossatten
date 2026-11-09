@@ -1,0 +1,266 @@
+可以。我建议把下一阶段分成两个独立课题：
+
+S15：HStem 精确归因实验，把已经发现的性能优势解释清楚。
+
+S16：Qwen3 骨干用于跨接收机 RFFI 分类的探索，检验更深的 Transformer 和语言预训练权重是否真的有利于跨 RX 泛化。
+
+你提出的第二个想法值得验证，但要先说明一个关键区别：使用 Qwen3 的网络结构，和使用经过海量文本预训练的 Qwen3 权重，是两种不同的实验。 如果不分开，最后准确率提高了，也无法判断是网络更大、结构更强，还是语言预训练真正带来了收益。
+
+## 一、Qwen3 + 分类头，在技术上完全可行
+
+官方 Qwen3-0.6B 的主要配置是 28 层 Transformer、隐藏维度 1024、16 个 Query Head、8 个 KV Head，并使用 RoPE、RMSNorm、GQA 等结构。
+
+[image](https://www.google.com/s2/favicons?domain=https://huggingface.co\&sz=32)
+
+huggingface.co
+
+
+
+Hugging Face 已提供 `Qwen3ForSequenceClassification`，可以通过 `inputs_embeds` 输入自己构造的连续向量，而不必把 IQ 信号转换成中文、英文或词表 Token。
+
+[image](https://www.google.com/s2/favicons?domain=https://huggingface.co\&sz=32)
+
+Hugging Face+1
+
+
+
+建议的 RF-Qwen3 分类架构
+
+原始 IQ 信号
+
+Shen: [B, 2, 8192] 或 WiSig 对应输入
+
+RF 前端 / HStem
+
+提取局部射频特征，生成 Tokens
+
+Linear Projection + 分类 Token
+
+[B, 32, 64] → [B, 33, 1024]
+
+Qwen3 Transformer Backbone
+
+GQA · RoPE · RMSNorm · SwiGLU · Q/K Norm
+
+可测试随机初始化或官方预训练权重
+
+最后一个分类 Token 的隐藏状态
+
+h_cls ∈ R¹⁰²⁴
+
+Linear Classification Head
+
+1024 → 10/设备类别数 → Softmax
+
+核心就是：
+
+\\[ H=\operatorname{Qwen3}\left( [W_pZ,\ e\_{\rm cls}] \right) \\]
+
+\\[ p(y\mid X)=\operatorname{Softmax}(W_cH\_{\rm cls}+b_c) \\]
+
+其中 \\(Z\\) 是 RF Stem 输出，\\(W_p\\) 将 64 维特征投影到 Qwen3 的 1024 维空间。
+
+由于原版 Qwen3 是因果 Decoder，分类 Token 应该放在序列末尾，这样它能关注前面的全部 RF Tokens。不需要让 Qwen3 生成设备编号文本，也不需要大模型的对话或思考功能。
+
+不过，深层 Qwen3 的参数量比现在十几万参数的小模型高几个数量级。在你现有的数据规模下，过拟合、训练成本和推理时延都可能成为问题。
+
+所以我不会直接建议把 0.6B 模型全参训练 200 轮，而是用分阶段实验验证。
+
+## 二、先完成 S15：HStem 的参数匹配实验
+
+这一部分不必再扩大成很大的结构搜索。直接沿用 S14 的配对体系，新增参数匹配的 Patch-Lite。
+
+| 实验 | Stem            | Mixer      | 作用          |
+| -- | --------------- | ---------- | ----------- |
+| A0 | 原 Patch         | MHA / HSTU | 复用 S14      |
+| A1 | 原 HStem         | MHA / HSTU | 复用 S13      |
+| A2 | 参数匹配 Patch-Lite | MHA / HSTU | 排除大部分模型容量混杂 |
+| A3 | HStem 去中间 BN    | MHA / HSTU | 可选，分析归一化贡献  |
+
+建议先执行 A2，共 2 Mixer × 2 folds × 3 seeds = 12 次新增训练。
+
+这里有一个技术细节：原 Patch 使用 256 点的大卷积，HStem 则是逐层降采样。Patch-Lite 可以考虑低秩卷积或分组卷积，但它们也引入自己的归纳偏置，不能仅通过参数匹配就宣称已经完全证明层级结构的因果作用。
+
+因此 S15 应同时输出实际感受野、参数量、FLOPs、延迟和配对准确率。若 HStem 在参数匹配后仍稳定领先，就能加强现有结论；如果差距消失，也属于有价值的实验发现。
+
+## 三、S16：把 Qwen3 实验拆成两个科学问题
+
+### 问题 A：Qwen3 的 Transformer 结构是否比现有 RF-HSTU/MHA 更适合跨 RX？
+
+这里不用语言预训练权重，只测试架构。
+
+我建议先构建一个小型 Qwen3-style 模型，例如隐藏维度 128、4 层，保留 GQA、RoPE、RMSNorm、Q/K Norm、SwiGLU 等关键结构，输入仍是 HStem 的 32 个 RF Tokens。
+
+然后设置普通 Transformer 对照，尽量匹配网络深度和参数量。
+
+| 实验 | Backbone                 | 初始化     |
+| -- | ------------------------ | ------- |
+| R0 | 现有 HStem+MHA             | 现有已验证基线 |
+| R1 | 小型 Qwen3-style           | 随机初始化   |
+| R2 | 同深度、近似参数量的普通 Transformer | 随机初始化   |
+
+这一组可以回答：Qwen3 的注意力、归一化、FFN 组合是否值得使用。
+
+需要强调，R1 是 Qwen3-style 架构实验，不是正式的 Qwen3-0.6B 预训练模型。
+
+### 问题 B：Qwen3 的语言预训练知识是否有助于 RF 跨接收机泛化？
+
+这才需要真正加载 `Qwen/Qwen3-0.6B` 官方权重。
+
+| 实验 | Qwen3 权重 | 更新内容             | 目的                |
+| -- | -------- | ---------------- | ----------------- |
+| R3 | 预训练      | RF 投影层+分类头；骨干冻结  | 测试现成表征能否迁移        |
+| R4 | 随机初始化    | RF 投影层+分类头；骨干冻结  | 排除仅由随机深层特征带来的效果   |
+| R5 | 预训练      | RF 投影层+分类头+LoRA  | 测试少量 RF 适配是否有效    |
+| R6 | 随机初始化    | 同配置 LoRA+投影层+分类头 | 在相同受限更新策略下检验预训练价值 |
+
+R6 是必要的解释性对照，但可以在 R5 的小规模试验完成后再决定是否投入完整预算。还要注意：随机骨干只训练 LoRA 不等价于从零全参训练，因此 R5 优于 R6，也只能证明预训练在这个 LoRA 配方下 有价值。
+
+冻结实验中的 RF 投影层、分类 Token 和分类头都必须训练，否则随机映射很可能根本无法把 IQ 特征接入语言模型的表示空间。
+
+### 当前文献如何看待“大模型用于信号分类”？
+
+目前没有充分证据表明，单纯将文本大模型换到 IQ 信号上就一定能提高跨接收机泛化。
+
+相关研究甚至给出了两种不同的观察：
+
+- NeurIPS 2024 的 Are Language Models Actually Useful for Time Series Forecasting? 发现，某些时间序列预测方法去掉 LLM 后性能并未降低，预训练权重也不一定优于从头训练。这是预测任务的结果，不能直接套用到 RFFI。
+
+  [image](https://www.google.com/s2/favicons?domain=https://proceedings.nips.cc\&sz=32)
+
+  proceedings.nips.cc
+
+- AACL-IJCNLP 2026 的 Prompting Underestimates LLM Capability for Time Series Classification 则发现，相比直接让 LLM 生成类别，从模型内部表征训练分类器可能得到明显更好的分类结果。它支持你“采用分类头而不是文本生成”的设计动机，但同样不是跨 RX IQ 的实验证据。
+
+  [image](https://www.google.com/s2/favicons?domain=https://aclanthology.org\&sz=32)
+
+  ACL Anthology
+
+
+
+所以这个实验是有研究价值的，尤其适合检验：大模型学到的通用序列表示究竟有多大程度能迁移到射频硬件指纹。
+
+## 四、如何避免实验最后没有说服力？
+
+我建议 S16 重点评价以下四项，而不只看准确率：
+
+| 评价维度    | 具体指标                      | 判断问题               |
+| ------- | ------------------------- | ------------------ |
+| 跨 RX 泛化 | RX 等权 Accuracy / Macro-F1 | 未见 RX 是否真的改善？      |
+| 稳健性     | 最差 RX、各 folds 增益          | 是普遍改善还是少数 RX 拉高均值？ |
+| 预训练贡献   | R3−R4、R5−R6               | 语言权重是否比随机权重更有价值？   |
+| 成本      | 可训练参数、总参数、显存、时延           | 大模型带来的收益是否值得？      |
+
+还应记录训练 RX 到留出 RX 的性能差距。如果一个模型在源训练接收机上达到 99%，但留出 RX 仍然只有 88%，它只说明模型容量或拟合能力增强了，不能说明跨接收机泛化更好。
+
+此外，原版 Qwen3 使用因果注意力，RF 分类未必需要这一限制。因此小型架构实验可以进一步安排“因果注意力 vs 双向注意力”的配对消融，但不要一开始同时引入太多变量。
+
+## 五、我建议的实际执行顺序
+
+S15：HStem 参数匹配
+
+完成 12 fit，冻结结果。S14 不修改，Shen blind 继续封存。
+
+S16-P0：Qwen3 工程验证
+
+验证连续 RF Embedding、分类 Token、训练梯度、模型输出和显存；先只做小批量 smoke test。
+
+S16-P1：ManyRx 源域 Pilot
+
+对 R1–R5 各运行 4 folds × 1 seed，共 20 fit；R0 使用严格同协议基线。大型 Qwen3 采用冻结或 LoRA，不直接全参训练。
+
+S16-P2：独立验证
+
+若 Pilot 显示有价值的跨 RX 增益，再加入 ManySig、独立种子及 R6 对照。通过预注册门槛后才考虑冻结目标评估。
+
+考虑到你此前的运行环境有 RTX 4060 Laptop GPU，完整 Qwen3-0.6B 的训练与 LoRA 显存消耗必须先实测；不能根据模型标称 0.6B 就断言该显卡能高效完成训练。尤其应去除或统计未使用的词嵌入和语言模型输出头，否则大量参数实际上与 RF 分类无关。
+
+## 六、可以直接交给 Codex 的任务书
+
+```
+
+科研任务：S15 HStem归因 + S16 RF-Qwen3分类探索
+
+基线：
+S13 exp/s13-mixer-cfo @ ee4332e
+S14 exp/s14-stem-mixer @ fc4a3cb
+
+第一阶段 S15
+1. 独立worktree及实验注册。
+2. 复用S13/S14全部已冻结的匹配模型。
+3. 审计Patch/HStem的参数、感受野、计算量。
+4. 新增参数匹配Patch-Lite。
+5. 保持相同RF输入、Mixer、fold、seed和训练协议。
+6. 完成Patch-Lite×MHA/HSTU：
+   2 folds×3 seeds，共12 fit。
+7. 报告dev_val与历史confirm配对差异、
+   最差RX、区间、参数/FLOPs/真实延迟。
+8. 不访问Shen blind，不按confirm选择模型。
+
+第二阶段 S16：RF-Qwen3
+
+目标：
+独立回答“Qwen3结构”和“语言预训练权重”
+是否有助于RF跨接收机泛化。
+
+输入：
+- 沿用相同IQ预处理、RF前端与数据分区。
+- 先使用HStem生成连续RF Tokens。
+- 通过Linear投影到Qwen3 hidden_size。
+- 添加末尾可学习分类Token。
+- 读取最后分类Token隐藏状态进行CE分类。
+- 不使用文本Token化或文本生成。
+- 关闭use_cache，训练和推理均使用分类模式。
+
+必须构造：
+R0：现有合法HStem+MHA/RF-HSTU基线
+R1：小型随机Qwen3-style
+R2：同规模普通Transformer
+R3：预训练Qwen3-0.6B，冻结骨干
+R4：随机Qwen3-0.6B，冻结骨干
+R5：预训练Qwen3-0.6B + LoRA
+R6：随机Qwen3-0.6B + 同配置LoRA
+    （作为后续预训练贡献确认臂）
+
+注意：
+- R3/R4均训练相同结构的RF投影层和分类头。
+- R5/R6均训练相同LoRA目标模块和分类头。
+- 不把冻结随机权重对照当作全参从头训练。
+- 固定模型版本、HF revision、训练配置和SHA。
+- 报告总参数、活跃参数、可训练参数。
+- 对语言词嵌入和LM head的去留做明确审计。
+- 比较causal分类Token与必要的架构对照。
+- 不预先假设文本预训练对IQ信号有用。
+
+P0：
+前反向、分类Token、因果mask、
+数值稳定、batch、GPU显存测试。
+
+P1：
+ManyRx源域4 folds×1 seed进行有限Pilot。
+不读取真实目标RX或日期3-4。
+只用合法源验证集选择checkpoint。
+统一接收机等权汇总。
+不得为了某一模型额外增加搜索预算而不披露。
+
+P2：
+仅对有探索价值的结构扩展到ManySig，
+添加独立seeds及R6。
+严格报告源/留出RX差距、最差RX、
+Macro-F1、更新成本与推理成本。
+
+研究结论必须明确回答：
+1. 更深的Transformer是否真的提高跨RX泛化？
+2. Qwen3结构是否优于同规模普通Transformer？
+3. 文本预训练权重是否产生独立收益？
+4. 收益是否值得数亿参数的计算成本？
+5. 若不提升，应明确STOP，不进入目标调参。
+
+严禁更改S00-S14历史结果与STOP决策。
+严禁将源域Pilot称为真实目标CRD结果。
+
+```
+
+我的建议是：这两个实验可以做，但不要把 Qwen3 当作天然更强的分类器。 真正有科研价值的是把“架构收益”“参数规模收益”“语言预训练收益”三者拆开验证。
+
+如果小型 Qwen3 架构已经能改善跨 RX，但 0.6B 预训练模型没有额外收益，反而可能说明：RF 任务真正需要的是合适的序列建模结构，而不是语言知识。 这个结论本身也能帮助你决定后续是否值得投入更大的模型。
