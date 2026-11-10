@@ -1,0 +1,27 @@
+{
+  "commit": "f00846d68425315b68ae69b8c6b712e08559c2fe",
+  "files": {
+    "WiSig/main.py": {
+      "git_blob_sha": "fbe69290b233bf5e0e1a7eab2ca998e021092f2d",
+      "sha256": "3c6cdbd7988fe2767bfb3f5b7494ae0ba7100faf35a6601df2078176566e1911",
+      "url": "https://github.com/BeechburgPieStar/ASKNet-RFF/blob/f00846d68425315b68ae69b8c6b712e08559c2fe/WiSig/main.py",
+      "bytes": 14212
+    },
+    "WiSig/backbones/PatchNet.py": {
+      "git_blob_sha": "e2c96119a4ea333897d4d276bc05b71047b8297f",
+      "sha256": "9c14a78982ba27b5b7d13ff155f41943c03a5a00c04ae080270f762634247939",
+      "url": "https://github.com/BeechburgPieStar/ASKNet-RFF/blob/f00846d68425315b68ae69b8c6b712e08559c2fe/WiSig/backbones/PatchNet.py",
+      "bytes": 5258
+    },
+    "WiSig/utils/load_data.py": {
+      "git_blob_sha": "a92815088e52bf94b6f9935f59aec6b8837c5f9d",
+      "sha256": "b444573451d5f57eb024a3bd858faa487c5ec3197e55d5029d20cd06ec6fcf49",
+      "url": "https://github.com/BeechburgPieStar/ASKNet-RFF/blob/f00846d68425315b68ae69b8c6b712e08559c2fe/WiSig/utils/load_data.py",
+      "bytes": 1793
+    }
+  },
+  "source_directory": "D:\\crossatten\\.reference-s20\\ASKNet-RFF-f00846d",
+  "source_redistributed": false,
+  "invoked": "build_model/setup_seed/train_epoch/evaluate_epoch/train_and_evaluate; no official.main or dataset loading",
+  "model_path": "PatchNet(L256,6cutoff candidates,complexQR127,patch64stride32,dim128,MLP ratio2,10classes)"
+}

@@ -1,0 +1,341 @@
+{
+  "time": "2026-11-10T20:33:07+08:00",
+  "s19_commit": "9641b7b",
+  "s19_archived_files_verified": 167,
+  "s19_baselines": [
+    {
+      "fold": 0,
+      "checkpoint": {
+        "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\runs\\pilot__ManyRx__M0__f0__first__s18101\\model.pt",
+        "sha256": "f0f9fe1cd967e033ce97bf8e6f149ce29d4e70cf0611e88457ec141da56cf06f",
+        "fold": 0,
+        "arm": "B0"
+      },
+      "config_sha256": "ed88c4faed314c9b6c67b34e9edfd583ca64925355c0db37b4b627642c82c81e",
+      "metrics_sha256": "a773f08d7f5d45939c8af8c042360f5d7c9c8d5ef00df3deee75bbba9e463ed4",
+      "held_metrics_sha256": "0b36d03be20b261979ec4b07661e198df9b013e3e7f0631d305928a1eb3f7e74",
+      "source_predictions_sha256": "96c898850e79fb562c7236bc60d243fd8244cf564dfac9004f626be8e065d5cb",
+      "held_predictions_sha256": "f50f7e4683485cc1891a841fac3b36e63aa461d9e3c27596a75d8d243298b8c6",
+      "data_seed": 492422696
+    },
+    {
+      "fold": 1,
+      "checkpoint": {
+        "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\runs\\pilot__ManyRx__M0__f1__first__s18101\\model.pt",
+        "sha256": "fa790ec31286003cce0f9e8f9087b5d8a047c4d2f8f33280bc20ff3eaf9dc98d",
+        "fold": 1,
+        "arm": "B0"
+      },
+      "config_sha256": "119609856eda9316d16693a5f07e35e37d489b384360099979cbde75c44c21db",
+      "metrics_sha256": "e382d8dbda24cec85ad1d0325988ab43c59836be7da5ac483c97fd11feb609d0",
+      "held_metrics_sha256": "ebb21cce17e21c12a0164fcf126461a82328d1ea6a2273dc73b7df1e97d4daca",
+      "source_predictions_sha256": "c64450d07305b351ce7ce6150d9cf02f1464636f46a2ed08ebd5d9e5a363f55a",
+      "held_predictions_sha256": "35e86fd786c4c8219caeaea7a84615fe1b018e68a06c4e8074dfaad161b4c674",
+      "data_seed": 1063841514
+    },
+    {
+      "fold": 2,
+      "checkpoint": {
+        "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\runs\\pilot__ManyRx__M0__f2__first__s18101\\model.pt",
+        "sha256": "b7a2eb2e077b81f93bef1ae29296a8e201c5622149c7331f4b743997ed899091",
+        "fold": 2,
+        "arm": "B0"
+      },
+      "config_sha256": "200465cb486049e696276eb60501ed4ebe6ef014c3aba054ac9bcef362a9dbe4",
+      "metrics_sha256": "1b5446e4c054b24cb3a4815ddb8301df321ec2697424c1998acdd57bb7c54b88",
+      "held_metrics_sha256": "2b6fd075a8897783997d662a093ee7e2dd48c055ab1a59b5eb5877b27fa7e83b",
+      "source_predictions_sha256": "d10533d826440bc4bb27a99041bc1e796e1cb1ee1d4c9e2c81e8d14185f1f503",
+      "held_predictions_sha256": "0d8b2b030de2d398fb4be430ffb2d04d6b2ec14d1181c1a3cae87d351ec44150",
+      "data_seed": 2894941995
+    },
+    {
+      "fold": 3,
+      "checkpoint": {
+        "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\runs\\pilot__ManyRx__M0__f3__first__s18101\\model.pt",
+        "sha256": "6a1ae01a5ca1a156aec4e54d0054d36b1ac7503cd179c62f1a825a49fce7dff4",
+        "fold": 3,
+        "arm": "B0"
+      },
+      "config_sha256": "0661cd8f265c0ad749d69289111c0f927441892e37cdd2c255757b38fea8a233",
+      "metrics_sha256": "0116a8473bb4c545bafd138a8a89ae1f0fddf367ac624739dcc9eab9346c00af",
+      "held_metrics_sha256": "737006341a5ddc6261a312d89fd0382cd01549393351dabe518452a473e31ab3",
+      "source_predictions_sha256": "412af05ffb401152d3359dcf9ff08cb5c51533b36726685919ccf3d678399b55",
+      "held_predictions_sha256": "69f47bcf725753e5246746b5e5d8d6a574060d58db9a0745f88c77551a3c9e51",
+      "data_seed": 2539957040
+    }
+  ],
+  "s10_asknet_candidates": [
+    {
+      "path": "10-tifs-validation/runs/ask/ManyRx__f0__all__s2023__ask__packet/config.json",
+      "sha256": "9f14dbce04c4498eb7e2b646c11b36ada8cde7621599793f4798a2b0960340e3",
+      "job": {
+        "phase": "ask",
+        "dataset": "ManyRx",
+        "fold": 0,
+        "seed": 2023,
+        "feature": "ask",
+        "group": "all",
+        "epochs": 200,
+        "policy": "packet",
+        "id": "ManyRx__f0__all__s2023__ask__packet"
+      },
+      "source_rx": 24,
+      "reusable": false,
+      "reasons": [
+        "S10 trained all24 source RX, including the6 required held-source RX",
+        "S20 held-source contamination in S10 training",
+        "Different train/validation indices and seed"
+      ]
+    },
+    {
+      "path": "10-tifs-validation/runs/ask/ManyRx__f0__all__s2024__ask__packet/config.json",
+      "sha256": "090abdfa2bc5886be721e4a6b1c21845107504ae9251479a7686a6b039c9f5b2",
+      "job": {
+        "phase": "ask",
+        "dataset": "ManyRx",
+        "fold": 0,
+        "seed": 2024,
+        "feature": "ask",
+        "group": "all",
+        "epochs": 200,
+        "policy": "packet",
+        "id": "ManyRx__f0__all__s2024__ask__packet"
+      },
+      "source_rx": 24,
+      "reusable": false,
+      "reasons": [
+        "S10 trained all24 source RX, including the6 required held-source RX",
+        "S20 held-source contamination in S10 training",
+        "Different train/validation indices and seed"
+      ]
+    },
+    {
+      "path": "10-tifs-validation/runs/ask/ManyRx__f0__all__s2025__ask__packet/config.json",
+      "sha256": "bcd6c76e07eeedc91f40da224da493252983e5c260f1ee95d002f85f5ebbd11e",
+      "job": {
+        "phase": "ask",
+        "dataset": "ManyRx",
+        "fold": 0,
+        "seed": 2025,
+        "feature": "ask",
+        "group": "all",
+        "epochs": 200,
+        "policy": "packet",
+        "id": "ManyRx__f0__all__s2025__ask__packet"
+      },
+      "source_rx": 24,
+      "reusable": false,
+      "reasons": [
+        "S10 trained all24 source RX, including the6 required held-source RX",
+        "S20 held-source contamination in S10 training",
+        "Different train/validation indices and seed"
+      ]
+    },
+    {
+      "path": "10-tifs-validation/runs/ask/ManyRx__f1__all__s2023__ask__packet/config.json",
+      "sha256": "5fb9c50df47fbd6aeb3ccc65434ff387d682c0d7e3411d777266772f16b43c5b",
+      "job": {
+        "phase": "ask",
+        "dataset": "ManyRx",
+        "fold": 1,
+        "seed": 2023,
+        "feature": "ask",
+        "group": "all",
+        "epochs": 200,
+        "policy": "packet",
+        "id": "ManyRx__f1__all__s2023__ask__packet"
+      },
+      "source_rx": 24,
+      "reusable": false,
+      "reasons": [
+        "S10 trained all24 source RX, including the6 required held-source RX",
+        "S20 held-source contamination in S10 training",
+        "Different train/validation indices and seed"
+      ]
+    },
+    {
+      "path": "10-tifs-validation/runs/ask/ManyRx__f1__all__s2024__ask__packet/config.json",
+      "sha256": "518803a6dcc9cad60bda7f33053e538d1ac866bcbee696af14f22d473c687c6e",
+      "job": {
+        "phase": "ask",
+        "dataset": "ManyRx",
+        "fold": 1,
+        "seed": 2024,
+        "feature": "ask",
+        "group": "all",
+        "epochs": 200,
+        "policy": "packet",
+        "id": "ManyRx__f1__all__s2024__ask__packet"
+      },
+      "source_rx": 24,
+      "reusable": false,
+      "reasons": [
+        "S10 trained all24 source RX, including the6 required held-source RX",
+        "S20 held-source contamination in S10 training",
+        "Different train/validation indices and seed"
+      ]
+    },
+    {
+      "path": "10-tifs-validation/runs/ask/ManyRx__f1__all__s2025__ask__packet/config.json",
+      "sha256": "0718362cf7330ed8866824fb0a489bbd7c09691d3a2b25fc7280e19143f3ceeb",
+      "job": {
+        "phase": "ask",
+        "dataset": "ManyRx",
+        "fold": 1,
+        "seed": 2025,
+        "feature": "ask",
+        "group": "all",
+        "epochs": 200,
+        "policy": "packet",
+        "id": "ManyRx__f1__all__s2025__ask__packet"
+      },
+      "source_rx": 24,
+      "reusable": false,
+      "reasons": [
+        "S10 trained all24 source RX, including the6 required held-source RX",
+        "S20 held-source contamination in S10 training",
+        "Different train/validation indices and seed"
+      ]
+    },
+    {
+      "path": "10-tifs-validation/runs/ask/ManyRx__f2__all__s2023__ask__packet/config.json",
+      "sha256": "95eced1de74381af97c70ea905713c8f3b3992058f48b9b1180424697279508a",
+      "job": {
+        "phase": "ask",
+        "dataset": "ManyRx",
+        "fold": 2,
+        "seed": 2023,
+        "feature": "ask",
+        "group": "all",
+        "epochs": 200,
+        "policy": "packet",
+        "id": "ManyRx__f2__all__s2023__ask__packet"
+      },
+      "source_rx": 24,
+      "reusable": false,
+      "reasons": [
+        "S10 trained all24 source RX, including the6 required held-source RX",
+        "S20 held-source contamination in S10 training",
+        "Different train/validation indices and seed"
+      ]
+    },
+    {
+      "path": "10-tifs-validation/runs/ask/ManyRx__f2__all__s2024__ask__packet/config.json",
+      "sha256": "63507a00e6ade83ff8e524766fa1113deb83ca26f3c36033b81f47e0ca2e0f37",
+      "job": {
+        "phase": "ask",
+        "dataset": "ManyRx",
+        "fold": 2,
+        "seed": 2024,
+        "feature": "ask",
+        "group": "all",
+        "epochs": 200,
+        "policy": "packet",
+        "id": "ManyRx__f2__all__s2024__ask__packet"
+      },
+      "source_rx": 24,
+      "reusable": false,
+      "reasons": [
+        "S10 trained all24 source RX, including the6 required held-source RX",
+        "S20 held-source contamination in S10 training",
+        "Different train/validation indices and seed"
+      ]
+    },
+    {
+      "path": "10-tifs-validation/runs/ask/ManyRx__f2__all__s2025__ask__packet/config.json",
+      "sha256": "30d97fc47f10695e6064cc9605b9f737271e9dcb23085f6c0e87587f5784f966",
+      "job": {
+        "phase": "ask",
+        "dataset": "ManyRx",
+        "fold": 2,
+        "seed": 2025,
+        "feature": "ask",
+        "group": "all",
+        "epochs": 200,
+        "policy": "packet",
+        "id": "ManyRx__f2__all__s2025__ask__packet"
+      },
+      "source_rx": 24,
+      "reusable": false,
+      "reasons": [
+        "S10 trained all24 source RX, including the6 required held-source RX",
+        "S20 held-source contamination in S10 training",
+        "Different train/validation indices and seed"
+      ]
+    },
+    {
+      "path": "10-tifs-validation/runs/ask/ManyRx__f3__all__s2023__ask__packet/config.json",
+      "sha256": "c045efd8a692f6a9460ff4ba782985b924979c997904722a1617a217f5da6bbb",
+      "job": {
+        "phase": "ask",
+        "dataset": "ManyRx",
+        "fold": 3,
+        "seed": 2023,
+        "feature": "ask",
+        "group": "all",
+        "epochs": 200,
+        "policy": "packet",
+        "id": "ManyRx__f3__all__s2023__ask__packet"
+      },
+      "source_rx": 24,
+      "reusable": false,
+      "reasons": [
+        "S10 trained all24 source RX, including the6 required held-source RX",
+        "S20 held-source contamination in S10 training",
+        "Different train/validation indices and seed"
+      ]
+    },
+    {
+      "path": "10-tifs-validation/runs/ask/ManyRx__f3__all__s2024__ask__packet/config.json",
+      "sha256": "b95659293010eb0e738a90ea4bbc326dfff78ef8819cfd201a27d2cf67dfba64",
+      "job": {
+        "phase": "ask",
+        "dataset": "ManyRx",
+        "fold": 3,
+        "seed": 2024,
+        "feature": "ask",
+        "group": "all",
+        "epochs": 200,
+        "policy": "packet",
+        "id": "ManyRx__f3__all__s2024__ask__packet"
+      },
+      "source_rx": 24,
+      "reusable": false,
+      "reasons": [
+        "S10 trained all24 source RX, including the6 required held-source RX",
+        "S20 held-source contamination in S10 training",
+        "Different train/validation indices and seed"
+      ]
+    },
+    {
+      "path": "10-tifs-validation/runs/ask/ManyRx__f3__all__s2025__ask__packet/config.json",
+      "sha256": "9614b986fbe2aec7804af0218188649adacc9226524e93f31a8a633157b480da",
+      "job": {
+        "phase": "ask",
+        "dataset": "ManyRx",
+        "fold": 3,
+        "seed": 2025,
+        "feature": "ask",
+        "group": "all",
+        "epochs": 200,
+        "policy": "packet",
+        "id": "ManyRx__f3__all__s2025__ask__packet"
+      },
+      "source_rx": 24,
+      "reusable": false,
+      "reasons": [
+        "S10 trained all24 source RX, including the6 required held-source RX",
+        "S20 held-source contamination in S10 training",
+        "Different train/validation indices and seed"
+      ]
+    }
+  ],
+  "s10_reusable": 0,
+  "new_asknet_fits_required": 4,
+  "weights_or_iq_read": false,
+  "central_evidence_check": {
+    "rows": 40,
+    "max_in_central_two": 35,
+    "mean_central_mass": 0.5057829945628093
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "time": "2026-11-10T20:34:41+08:00",
+  "status": "PASS",
+  "synthetic_unit_tests": 6,
+  "gpu_forward_backward": true,
+  "parameter_elements": 100240,
+  "real_scalar_dof": 116369,
+  "source_data_or_weights_read": false,
+  "python": "3.12.8 | packaged by Anaconda, Inc. | (main, Dec 11 2024, 16:48:34) [MSC v.1929 64 bit (AMD64)]",
+  "executable": "D:\\miniconda\\envs\\crossatten4060\\python.exe",
+  "torch": "2.5.0+cu124",
+  "numpy": "1.26.4",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+}
