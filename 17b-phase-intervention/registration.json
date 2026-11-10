@@ -1,0 +1,166 @@
+{
+  "time": "2026-11-10T12:13:10+08:00",
+  "stage": "S17B",
+  "rationale": "Post-D0 phase-only follow-up authorized by ongoing receiver-mechanism work; original amplitude/IQ stop is preserved",
+  "code_sha256": {
+    "09-phase-invariance/phase_features.py": "d467175e131cfa719f0fa1f5500a8935bcb864d12dad53160a77247874d1721e",
+    "13-mixer-cfo-mechanisms/cfo_descriptive.py": "e60de808c7de10decda0844f2e74ae55169df196c9ec9fbb3807c312f4a131da",
+    "13-mixer-cfo-mechanisms/core.py": "a9db92f80e8e1bf1579cab900fabf085f5c33e018dffe6e27f1af64ee94dc527",
+    "13-mixer-cfo-mechanisms/data.py": "578fd207105e5375094bd22a12ec710fd259379c4b1c627d962251256bd71e9e",
+    "13-mixer-cfo-mechanisms/diagnostics.py": "883b0a5fcf73ba7c19e94f51ae05f7d003b82a8870b44c6c6d23e4ca02ee7149",
+    "13-mixer-cfo-mechanisms/execute.py": "21a7bf48a381842e5fbc044411350ba2faa1fd86cc31796ccab199726e8b1ae8",
+    "13-mixer-cfo-mechanisms/metrics.py": "a9773e0532552f012dc039c42206460d1a5b02001a2bbb44a388258825f85ed7",
+    "13-mixer-cfo-mechanisms/models.py": "606243ff9462358f53a86d2908130c47f69c5dd9d1cfee669cbaf10c7b76e5a1",
+    "13-mixer-cfo-mechanisms/pickle_index.py": "52925d018fbad46396dbf809379e2b8961b368179ba1ef64c4fc9c5031ed319a",
+    "13-mixer-cfo-mechanisms/register.py": "1d2241b226e4addbe74401c5acf7cd6acd148fcece15e20cf0c611f11a6b5b3b",
+    "13-mixer-cfo-mechanisms/reports.py": "8bcf6ec4ad18d183368b3d0e6bd5c4e58c476442aee16ddba74b099de27aef15",
+    "13-mixer-cfo-mechanisms/status.py": "533e7ef2154f0134c8cc887e5a1bd0d42cafcdfa3863c712f462bee048b49b1a",
+    "13-mixer-cfo-mechanisms/train.py": "164b0eb9794c4494b34cf1d25f8dfb0c9a4ae8c54af3e03ef9f08b150a670a2a",
+    "13-mixer-cfo-mechanisms/wifi.py": "3402847c350172b670aba40616f5b56ec5ecb2e7176cc199c26d0315d920db37",
+    "17-rx-distortion/s17_augment.py": "d0ab78c0dfa41773bbef90e93b1a6ee330971871fc59c1c1125952f798113221",
+    "17-rx-distortion/s17_core.py": "e026e94981b09eb3f9bcc4d92699507105654376b4e6ac14efa8f1af954efe6c",
+    "17-rx-distortion/s17_data.py": "68758ba670e687e3097396504288a7b6cae01173b58ac8b52e47cb3096ffa1d9",
+    "17-rx-distortion/s17_diagnostics.py": "82f7af3b16a32a0886e267c4ef074cbd3e4b686a66d8456098dbeca32ed504a2",
+    "17-rx-distortion/s17_execute.py": "3c843aa355c4f1bb22a8f5f4443b9cad431077303c3bc6101dfaff79504a394b",
+    "17-rx-distortion/s17_features.py": "a7df647926635fffa73eb3449e4adc9a90473a2da2d11067bb72675091828a5a",
+    "17-rx-distortion/s17_intervene.py": "645db1303e609d71f3fe24d8f4a19686ad10a4171badc27839a32110a2e02928",
+    "17-rx-distortion/s17_jobs.py": "3a1616151e306d85caf6ebe95867bc1bb613aeba8e0f1b273e730f46152298f4",
+    "17-rx-distortion/s17_models.py": "3f15c97c9583a080be1c73dde4024e4b2e21e86b196e3df9a706d0b3ff1b2e5a",
+    "17-rx-distortion/s17_register.py": "50a82ffe6c2d9feb20e99a2f79ca88549f9bcfa54bc55e8a0b42c25a61038be2",
+    "17-rx-distortion/s17_reports.py": "8d303e15feb635928859c027a3264652eb83e7c50235a7ffd3a582ee103c1544",
+    "17-rx-distortion/s17_stats.py": "a80641c0d9f034bd1e2478ee3e4446126c61af7be97cf4896a1be1dc176924a4",
+    "17-rx-distortion/s17_train.py": "bb6ea369fb408df297788965e8792b666c1685b0b93b1cf46b8a729af20ef366",
+    "17-rx-distortion/test_cpu_stats.py": "b7dcad1ef172b6cf63f7b31cf2af433e22b9311bfb727969a089c5e325fc81a7",
+    "17-rx-distortion/test_engineering.py": "863c7dbd62133af3a71f80f602a386ee61c3d83d1f21b7d9eed5277738559e8e",
+    "17b-phase-intervention/s17b_augment.py": "734ce20dcfc5ca337c746d9c73f122d361f261b28d418fd92fdd31355c329ddc",
+    "17b-phase-intervention/s17b_core.py": "3b33397b1954e1f8fb5e8ba5fbfc45e1cdc76ef38b98ad7fd9870b45b662516d",
+    "17b-phase-intervention/s17b_execute.py": "2026447ec6f334e4627014302e449723092c5c82ee1c513a985f7bb3a948edf4",
+    "17b-phase-intervention/s17b_features.py": "3cd81ca8bdda242c5ec5d6a20bc642cef3849ec2e261856560c1972cf9f3c453",
+    "17b-phase-intervention/s17b_intervene.py": "f76ad1708b70237995463486606bb4d8205f1ff9acafee63e809e405921571e5",
+    "17b-phase-intervention/s17b_register.py": "62da0e85288fa15f39a07334defef7f7de59ab4426f4d8f92fed9735f5b51749",
+    "17b-phase-intervention/s17b_reports.py": "96cf23530836192c16497b1674a5648e22d4424fcc9f9463a562901fc59d3abf",
+    "17b-phase-intervention/s17b_train.py": "dc209c6e21c0312c7c822c9f78667f183a2512755d7cb7dfd5b1152835866e12",
+    "17b-phase-intervention/test_engineering.py": "84fe26b40aa7310ca497cba890c7a27e5871dde0b02d0b77838299dc6c8f52c4",
+    "lib/legacy_rfhstu/__init__.py": "f78366d19d77282713f4944bc4e8fbdcbb138aac9849a0acf79459f4491dd9f5",
+    "lib/legacy_rfhstu/cnn_stem.py": "b3a8944c96b354d295a96d84876693e95433f67616e23d2804219d0fa1c2762a",
+    "lib/legacy_rfhstu/features.py": "1e9e5aa828adbb382c604ebf7b1bd429c79893ea1169afddaa14596a6c0d5378",
+    "lib/legacy_rfhstu/losses.py": "a0ba7f42040203289593ba6a9363f27ea19d5152d8813979a7018cc152e78e28",
+    "lib/legacy_rfhstu/mixstyle.py": "687174caeff6f256b2661399ab70aede396d5ea51af4e312dcbacc01235b94a5",
+    "lib/legacy_rfhstu/models.py": "ebb638fac3392fec36bace7e2445ab6d27ef4e3b5adb2c06b35c8bc82f506666",
+    "lib/legacy_rfhstu/multiscale.py": "de51929e7917e793e814319a88b91ef0b17354e4c7614065172e082f16833e35",
+    "lib/legacy_rfhstu/oob_fusion.py": "030f2886c9a84282eb7e20ce5d318f528e8bfc20902c4b4a17315686ea290259",
+    "lib/xa/__init__.py": "ca199705017e2d6d6b037d4d732f7caec7d7dff190c77a3d94c0cfaf515ab492",
+    "lib/xa/aggregate.py": "8995baeff876f427338836ad0b2d53de01f95e95148b851067f498d35f592e38",
+    "lib/xa/bench.py": "3a94fe229e5b43f45b15ca2f1a06e179b0212f282ea58671e71c718161d20ba7",
+    "lib/xa/data.py": "ff861d46e508d807996a924d4439134416b16ba6507856a7335c65d9e4cfc3cb",
+    "lib/xa/evaluate.py": "365998cf59196e5ebbdad3b34132fe1dfb2a4a2b988c82d660715471167734aa",
+    "lib/xa/explore_models.py": "bcc1616b5fc6ea533183b4c3a9538748a663a1b321bd748a33870b4ef8116467",
+    "lib/xa/explore_train.py": "8e4361d2b21546f5f5b5ba26adccd57618680c720db734561802b8246a33babe",
+    "lib/xa/frontends.py": "967e28c05f168341b4710e4b2253d77b93d92bc9a3dd515fdddaa35e81c2013f",
+    "lib/xa/guard.py": "80562f5a0893be3a3e91cb80ef4636a6b24eb0c76bfa59d3566574633e5fff54",
+    "lib/xa/jobs.py": "ef8ac595d7a567c18d5e726b2fe70e9942628e709bf1453dfe0df5e9d07233f0",
+    "lib/xa/launch.py": "71ca1656dcccf4d26455de6b999de42b2482f73b738a37fca52f354ccec6d4a2",
+    "lib/xa/models.py": "322049d67d19d196dca8a722fda9de433d846fe1aa3d6d8439c49adeba6554bf",
+    "lib/xa/models2.py": "e9c3364868955e6996645a823187dadb553a2a95139e809d43055a93c53eaa23",
+    "lib/xa/models3.py": "bade67f8ad50b64c132197d21a86c1897a8c27976a7b8490d2e7131ff025cbba",
+    "lib/xa/paper_models.py": "7c09adc3b481e5b13eeccb93731a00573f16a98f5d35c490a1d5082707c550bd",
+    "lib/xa/paper_run.py": "4c1bcdf2e98c974c6e03677b69881ea378dc3406c0d9f8a7bbe471290389fec6",
+    "lib/xa/paper_train.py": "e59cab54045ef6cd27a168e937e7571456ad3d2405183efc605e8308e3ed80c8",
+    "lib/xa/run_job.py": "534b8f7aa2c8c54c12eb5881850897fa2a69280cde004c84ede19532b0cb576b",
+    "lib/xa/train.py": "906a7fd0a7bbb61fea86e03bcf9b52228a5b26851e53fa904d497be330daa96e",
+    "lib/xa/wisig.py": "b4127fba87f5603704c92d2221743c8dedf6898e45c8216b9ddb84b32f42ad67"
+  },
+  "evidence_sha256": {
+    "17b-phase-intervention/README.zh-CN.md": "72764bfe0ab70b956e91b38b36da862801373a04306be5b133c604a80b5278a9",
+    "17b-phase-intervention/ENGINEERING_TESTS.json": "729ca138375c5d1b754ad7a229eb243c36d9d1066962ff5911c00915409da7c9",
+    "17-rx-distortion/decision_d0.json": "e1e515eb19e1a2d82e9ea4d6042f475227567993dffe2cf9f6bcfc15e1d0314c",
+    "17-rx-distortion/environment/WINDOWS_GPU_RECOVERY.json": "bfcc48dc3e8247304facdfec2ec90bf2d832b38c567ccd4c20e2a05191b7f33c",
+    "17-rx-distortion/D0_fold0.json": "92733bac09dad88424a65ace4feb42a1a58710b29b016bc916e852ec23f9b53b",
+    "17-rx-distortion/D0_fold1.json": "c9db0701792d400f04f1f2c5988385b70331eea0a9c58fae124acbd95d95bf02",
+    "17-rx-distortion/D0_fold2.json": "5d2bed49eff3bd383426f582e9866c5fbdfb913d5abc525fcc331e470827972b",
+    "17-rx-distortion/D0_fold3.json": "a80bf71345c47b4e084b84711e28d764ae80da8c489a7f4a8ff5f79ba1d45604"
+  },
+  "d1": {
+    "levels": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "draws": 2,
+    "controls": [
+      "same EVM AWGN",
+      "same EVM global phase"
+    ],
+    "physical": {
+      "fir_taps": 17,
+      "pad_length": 512,
+      "known_delay": 8,
+      "residual_l1": 0.25,
+      "coefficient_bound_radians": 0.15
+    },
+    "preservation": {
+      "all_folds": true,
+      "max_accuracy_drop_pp": 1,
+      "max_f1_drop_pp": 1,
+      "max_worst_tx_drop_pp": 5
+    },
+    "bounds": {
+      "min_mean_evm": 0.002,
+      "max_evm_q95": 0.1,
+      "max_frequency_ripple_q95_db": 0.25
+    },
+    "source_phase_subspace": {
+      "source": "Frozen S17 training-only RX profiles",
+      "rank": 3,
+      "feature_std_floor": 0.0001,
+      "coverage_min": 0.1,
+      "alignment_min": 0.15,
+      "alignment_advantage_over_noise_min": 0.02,
+      "required_folds": 3,
+      "clean_magnitude_support_fixed": true
+    },
+    "select": "largest preregistered dose meeting all gates; no extra levels"
+  },
+  "training": {
+    "model": "HStem+ordinary MHA 82426 ManyRx parameters, no new trainable modules",
+    "epochs_max": 40,
+    "batch": 128,
+    "optimizer": "Adam1e-3;sourceCE plateau .1/patience5/min1e-6;earlywait10",
+    "precision": "FP32",
+    "augmentation_probability": 0.5,
+    "seed": 18101,
+    "pilot_split": 16001,
+    "checkpoints": "source receiver-equal CE; all source checkpoints sealed before held-source reads"
+  },
+  "pilot_gate": {
+    "controls": [
+      "M0",
+      "N_phase",
+      "G_phase"
+    ],
+    "manyrx_mean_gain_pp": 1,
+    "positive_folds": 3,
+    "worst_paired_rx_pp": -2,
+    "rx_ci_lower_gt": 0
+  },
+  "confirmation": {
+    "rounds": [
+      18111,
+      18112
+    ],
+    "group": "last",
+    "datasets": [
+      "ManyRx",
+      "ManySig"
+    ],
+    "manysig_mean_pp": 0,
+    "manysig_folds_ge_minus1": 3
+  },
+  "maximum_formal_fits": {
+    "pilot": 16,
+    "confirmation": 64,
+    "total": 80
+  },
+  "real_target_access": false,
+  "no_automatic_fit_retry": true
+}

@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "scope": "Synthetic CPU+CUDA; no experimental IQ read; correct feature-invariance scope",
+  "stdout": "",
+  "stderr": "test_correct_feature_invariance_scope (__main__.PhaseEngineering.test_correct_feature_invariance_scope) ... ok\ntest_exact_per_packet_evm_controls_and_zero_dose (__main__.PhaseEngineering.test_exact_per_packet_evm_controls_and_zero_dose) ... ok\ntest_fir_linear_boundary_and_invertible_response (__main__.PhaseEngineering.test_fir_linear_boundary_and_invertible_response) ... ok\ntest_fixed_support_matches_original_clean_descriptor (__main__.PhaseEngineering.test_fixed_support_matches_original_clean_descriptor) ... ok\ntest_gpu_transform_and_model_backward (__main__.PhaseEngineering.test_gpu_transform_and_model_backward) ... ok\ntest_same_initial_state_across_arms (__main__.PhaseEngineering.test_same_initial_state_across_arms) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 1.161s\n\nOK\n"
+}
