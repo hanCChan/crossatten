@@ -1,0 +1,26 @@
+{
+  "time": "2026-11-10T13:18:07+08:00",
+  "stage": "S18-D0S",
+  "parent_registration_sha256": "38d6cb1b53e4cd9a913dd27b7c1fcf254ecb442a23db8bd7c032942091aa8652",
+  "parent_commit": "a91e0028330fca6df11569eb9ef42b22a14588b3",
+  "reason": "Missing source cells; correction before any learned feature outcome",
+  "code_sha256": {
+    "s18_sparse_stats.py": "04bf20d60ac6944128573858ef5f391964f9c3317243a8693336e2488ec41ff1",
+    "test_sparse_stats.py": "6ed9a404159b34cbe5e304271410f161227f803f5553bc94bc7cbe39e32a08ad",
+    "s18_support_run.py": "08af2cec3a8337bfe423b4e4b82e75bcc80c132a28b0482c57a11e7b4928781a",
+    "s18_support_audit.py": "15de89d1739a276db1c1bb82e4d569bf02e37f5fc2c753e854a73479be525680",
+    "s18_register_support.py": "9f1ac10a2b64ce252767b65140dba60f61d6c15014cac477e9b5652bedaffb92"
+  },
+  "design_sha256": {
+    "SUPPORT_AMENDMENT.zh-CN.md": "d3904d987025d46abc1f278e24be4ec7f99ffd40265dcaa757959b5843edfb0f",
+    "SUPPORT_AUDIT.json": "3e24ae2437e3e713a591cd6e4cbae2ad017a94b559f083610af567ae577b01b9",
+    "SUPPORT_ENGINEERING_TESTS.json": "238dcb5003993726c489be926d983053fa24acf3ce6db161be264e127ccabfe4",
+    "registration.json": "38d6cb1b53e4cd9a913dd27b7c1fcf254ecb442a23db8bd7c032942091aa8652"
+  },
+  "rank_alpha_controls_gates_changed": false,
+  "original_attempt_retained": true,
+  "feature_outcomes_before_amendment": 0,
+  "real_target_access": false,
+  "held_source_read": false,
+  "new_fits": 0
+}
