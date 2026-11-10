@@ -1,0 +1,20 @@
+{
+  "fold": 2,
+  "arm": "B4",
+  "seed": 18101,
+  "data_seed": 2894941995,
+  "split_seed": 16001,
+  "epochs_budget": 40,
+  "batch": 128,
+  "precision": "FP32",
+  "optimizer": "Adam lr1e-3 wd0; ReduceLROnPlateau factor.1 patience5 min1e-6; earlywait10",
+  "active_params": 82698,
+  "initial_backbone_sha256": "84c5310bf97313d5fb81f77c4a9d45c1abed0f0e0ea004772fe0721bb2ea840f",
+  "initial_full_state_sha256": "1df77697bb761a93751ea385dc395e592a2280c28a666602acaf7a5bd5b9670e",
+  "evidence_lambda": 0.1,
+  "evidence_sha256": "fe9cbc9026b90ea761389408f0533288f71bf9434286fa9955d44a63e8c4243d",
+  "code_git_sha": "cfcaa09926ac2c320140c55da35e01af6e9bd7eb",
+  "checkpoint_rule": "fit-RX-equal source validation CE only",
+  "train_indices_sha256": "6ae074b99bbeee9abcb863f7da217408ac0479e92daa13f34b4b91e4f48a2d20",
+  "val_indices_sha256": "8882fedd48ab7dcaf11f5ba87aff239a5731f12801470ea222c8c3bb7d3e8f82"
+}

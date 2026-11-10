@@ -1,0 +1,218 @@
+{
+  "time": "2026-11-10T14:25:43+08:00",
+  "all_checkpoints_complete": true,
+  "formal_new_fits": 16,
+  "reused_B0": 4,
+  "checkpoints": {
+    "ManyRx__B0__f0__first__s18101": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\runs\\pilot__ManyRx__M0__f0__first__s18101\\model.pt",
+      "sha256": "f0f9fe1cd967e033ce97bf8e6f149ce29d4e70cf0611e88457ec141da56cf06f",
+      "fold": 0,
+      "arm": "B0"
+    },
+    "ManyRx__B1__f0__first__s18101": {
+      "path": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B1__f0__first__s18101\\model.pt",
+      "sha256": "992df64f7ffa63c093a89a6f589af1a911a84cc701e51a70a21b75b324c0a805",
+      "fold": 0,
+      "arm": "B1"
+    },
+    "ManyRx__B2__f0__first__s18101": {
+      "path": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B2__f0__first__s18101\\model.pt",
+      "sha256": "5fdb741c842c0ee8920dcf14b1773a765deb365cab3a3f8bf4b99fe88105ab85",
+      "fold": 0,
+      "arm": "B2"
+    },
+    "ManyRx__B3__f0__first__s18101": {
+      "path": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B3__f0__first__s18101\\model.pt",
+      "sha256": "f1bbf08ee34f2a90e36d100cc762fa622d08c74f3827324da2a3e07a203b2b39",
+      "fold": 0,
+      "arm": "B3"
+    },
+    "ManyRx__B4__f0__first__s18101": {
+      "path": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B4__f0__first__s18101\\model.pt",
+      "sha256": "dceb7b0e2b528992d7d0365564b0be748f105a765b7c84890225b2a78ef31cf0",
+      "fold": 0,
+      "arm": "B4"
+    },
+    "ManyRx__B0__f1__first__s18101": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\runs\\pilot__ManyRx__M0__f1__first__s18101\\model.pt",
+      "sha256": "fa790ec31286003cce0f9e8f9087b5d8a047c4d2f8f33280bc20ff3eaf9dc98d",
+      "fold": 1,
+      "arm": "B0"
+    },
+    "ManyRx__B1__f1__first__s18101": {
+      "path": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B1__f1__first__s18101\\model.pt",
+      "sha256": "4d3c7ebd6465b184a3a74c8a5930f8d8ef4892bea83e4da5da8128c7d8db8e82",
+      "fold": 1,
+      "arm": "B1"
+    },
+    "ManyRx__B2__f1__first__s18101": {
+      "path": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B2__f1__first__s18101\\model.pt",
+      "sha256": "33f73340b0cb5dc339ef76e25a39bdf180b77d5f6209c1da7c82f02e8d1c2391",
+      "fold": 1,
+      "arm": "B2"
+    },
+    "ManyRx__B3__f1__first__s18101": {
+      "path": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B3__f1__first__s18101\\model.pt",
+      "sha256": "1e17aafa06f433747e144dabf136e7daf60254dd0cb47e530ae04454734e683c",
+      "fold": 1,
+      "arm": "B3"
+    },
+    "ManyRx__B4__f1__first__s18101": {
+      "path": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B4__f1__first__s18101\\model.pt",
+      "sha256": "3f4eb1e19e9f7cd7538d52b754897513fa3261408cd68f7705afaefcc6b1a714",
+      "fold": 1,
+      "arm": "B4"
+    },
+    "ManyRx__B0__f2__first__s18101": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\runs\\pilot__ManyRx__M0__f2__first__s18101\\model.pt",
+      "sha256": "b7a2eb2e077b81f93bef1ae29296a8e201c5622149c7331f4b743997ed899091",
+      "fold": 2,
+      "arm": "B0"
+    },
+    "ManyRx__B1__f2__first__s18101": {
+      "path": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B1__f2__first__s18101\\model.pt",
+      "sha256": "0e7c487e980a80eb7e259b50335e2684a13c832ff1ab77a71490144fbc64ef2d",
+      "fold": 2,
+      "arm": "B1"
+    },
+    "ManyRx__B2__f2__first__s18101": {
+      "path": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B2__f2__first__s18101\\model.pt",
+      "sha256": "06fb790398a8113cbbfdc4daf893684b7d17ad66ace2c2f733f54469aaaf58d3",
+      "fold": 2,
+      "arm": "B2"
+    },
+    "ManyRx__B3__f2__first__s18101": {
+      "path": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B3__f2__first__s18101\\model.pt",
+      "sha256": "1c8a40fd3df278ef556531f938ee1b4fa9669947a3b67f1c8e9a845fe31e21cd",
+      "fold": 2,
+      "arm": "B3"
+    },
+    "ManyRx__B4__f2__first__s18101": {
+      "path": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B4__f2__first__s18101\\model.pt",
+      "sha256": "90bc3e8cdac950be85b8309f7ab4afe0a529289dfe88dae700879a82df07806e",
+      "fold": 2,
+      "arm": "B4"
+    },
+    "ManyRx__B0__f3__first__s18101": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\runs\\pilot__ManyRx__M0__f3__first__s18101\\model.pt",
+      "sha256": "6a1ae01a5ca1a156aec4e54d0054d36b1ac7503cd179c62f1a825a49fce7dff4",
+      "fold": 3,
+      "arm": "B0"
+    },
+    "ManyRx__B1__f3__first__s18101": {
+      "path": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B1__f3__first__s18101\\model.pt",
+      "sha256": "3613e785f682e03cdd6d081266d723c45a2b9fb5a9dcb933a7402e312f8ec629",
+      "fold": 3,
+      "arm": "B1"
+    },
+    "ManyRx__B2__f3__first__s18101": {
+      "path": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B2__f3__first__s18101\\model.pt",
+      "sha256": "573d32006483161e4eda22109368730c24f5f488bb1562f329d278eb66a0e05e",
+      "fold": 3,
+      "arm": "B2"
+    },
+    "ManyRx__B3__f3__first__s18101": {
+      "path": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B3__f3__first__s18101\\model.pt",
+      "sha256": "0eda82938892aa7ad0ee489a5235c0da412bcfa92ce57575561fad38a71dc94c",
+      "fold": 3,
+      "arm": "B3"
+    },
+    "ManyRx__B4__f3__first__s18101": {
+      "path": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B4__f3__first__s18101\\model.pt",
+      "sha256": "7f2c3560d38d046bae10fde670c430402429d4636ae8b0b093007a650bdd5fa0",
+      "fold": 3,
+      "arm": "B4"
+    }
+  },
+  "metadata_sha256": {
+    "ManyRx__B0__f0__first__s18101": {
+      "config.json": "ed88c4faed314c9b6c67b34e9edfd583ca64925355c0db37b4b627642c82c81e",
+      "metrics.json": "a773f08d7f5d45939c8af8c042360f5d7c9c8d5ef00df3deee75bbba9e463ed4"
+    },
+    "ManyRx__B1__f0__first__s18101": {
+      "config.json": "21efc5f066427ec8d345f215f3da6757d4cd5d5cb7385ef409c263843ef588a6",
+      "metrics.json": "66f3c4eb0737e1902d2b0fed448d69f86d24dd95518237a21d321d6e242ff173"
+    },
+    "ManyRx__B2__f0__first__s18101": {
+      "config.json": "f441db0699cd7d87bdd1f2299fab031ce30c6564fdc2d4722014f057070eb3b3",
+      "metrics.json": "f10c343df3a546e9ca7d2503f42528a5fba8fa873ce1e800f8e27e6b34596804"
+    },
+    "ManyRx__B3__f0__first__s18101": {
+      "config.json": "860f0fb56450bb79616c60b3303440dec56c6db56d89debf63b0034fe348b3f1",
+      "metrics.json": "b892aee074601eaf968ba3c0776aa16b83d2c10606b3fb93c6f59da7bbacfc38"
+    },
+    "ManyRx__B4__f0__first__s18101": {
+      "config.json": "e717acaaac1b87423170f45768613f9d8c86bb80c3c28565ac5b7a18d239369d",
+      "metrics.json": "6b0edc3781b7575becdf2850f001d639bfa38f752eec51463bca98ead5ddeeaa"
+    },
+    "ManyRx__B0__f1__first__s18101": {
+      "config.json": "119609856eda9316d16693a5f07e35e37d489b384360099979cbde75c44c21db",
+      "metrics.json": "e382d8dbda24cec85ad1d0325988ab43c59836be7da5ac483c97fd11feb609d0"
+    },
+    "ManyRx__B1__f1__first__s18101": {
+      "config.json": "c00c6a79f2bb5731234f1633b7fd54590851c6bb4f92fb2031df84cd692c984d",
+      "metrics.json": "9a2da5b6c2a83ccb96d67148774b923c04e523a99e1fe84e6994a207787a0b3f"
+    },
+    "ManyRx__B2__f1__first__s18101": {
+      "config.json": "2fc988c8fd7e881f05b75eb73ac4c1df17a3501f18c9595e6a54df1c9063562e",
+      "metrics.json": "46a7c447f79fa349a95eb35edcf82a8bc992a8a967e50ec348ef8250215132e8"
+    },
+    "ManyRx__B3__f1__first__s18101": {
+      "config.json": "f4175b27b9c14eb4893fe3eaf3b2558779df7cdd9a1375746bb053652ea967fb",
+      "metrics.json": "ee21824506e7b61df3006f9b4831c1e66d63ee0f0062275b4941d5c854a40678"
+    },
+    "ManyRx__B4__f1__first__s18101": {
+      "config.json": "96b1c42e170e60b935a3521819fe2f6f013ae112ab9ec9cdc00c8ffdcd07ba00",
+      "metrics.json": "e4cde9ee4ab7f643f1bdc7f5b9f28910443f1bcf6d9c33cc8d61989f7101901f"
+    },
+    "ManyRx__B0__f2__first__s18101": {
+      "config.json": "200465cb486049e696276eb60501ed4ebe6ef014c3aba054ac9bcef362a9dbe4",
+      "metrics.json": "1b5446e4c054b24cb3a4815ddb8301df321ec2697424c1998acdd57bb7c54b88"
+    },
+    "ManyRx__B1__f2__first__s18101": {
+      "config.json": "6647bc524341a3bbaf0c068ff36d52f1331e6de2ea869acefb4682925c8c4412",
+      "metrics.json": "a0bdf5c1303fb32268854dfa3374b07e30a7b77cc959924505a820dabda370fd"
+    },
+    "ManyRx__B2__f2__first__s18101": {
+      "config.json": "307e7afb05cc56790a3b3d8895f78dc90581c0c0b5bc6112d3f94862a3fcfef7",
+      "metrics.json": "838f600021ce589c6752894ee5737016d032ab73628d9429a72d9b99e840250a"
+    },
+    "ManyRx__B3__f2__first__s18101": {
+      "config.json": "d8577efe7efacc0bf940b68e14d4bbf797783cef04b12ee1112b89378b30110d",
+      "metrics.json": "966d893a176bef09f8d0972b3ebe934dd072bfbb6c196c27520d20b12d6316c2"
+    },
+    "ManyRx__B4__f2__first__s18101": {
+      "config.json": "e4cfacf088a0500c619a2cf7dd577a52eba41cb56b5a9c58b425e58e2c186e88",
+      "metrics.json": "a097cf0784cbac9abd954591902e00bdb4418833e66c3cb3a41b63b1c1dbe26c"
+    },
+    "ManyRx__B0__f3__first__s18101": {
+      "config.json": "0661cd8f265c0ad749d69289111c0f927441892e37cdd2c255757b38fea8a233",
+      "metrics.json": "0116a8473bb4c545bafd138a8a89ae1f0fddf367ac624739dcc9eab9346c00af"
+    },
+    "ManyRx__B1__f3__first__s18101": {
+      "config.json": "41390fded50de2499cb7c8ad994aad385fda99d29dd0c8ac37ede7bdcb44669b",
+      "metrics.json": "22921323685916bafff7ae768c2cf5bbeff8cdc2970c384aab00a5b8cfd62e90"
+    },
+    "ManyRx__B2__f3__first__s18101": {
+      "config.json": "46e5846db68042235ebb40abad94ae40de6ab045838753aa1cca4d4ce7e3ecfb",
+      "metrics.json": "31ad9c46cec20238e433f532af6ea0f0bc6dfb17aedac1b558df03c269182d31"
+    },
+    "ManyRx__B3__f3__first__s18101": {
+      "config.json": "daf1818ed2859f8396c5c88ad843b810fa7e84357e4346a8509224c56961943a",
+      "metrics.json": "bef51171b4c3782c644e3a9048f4392f4ed704996c1fffd3ea1cc865bb2c8fe0"
+    },
+    "ManyRx__B4__f3__first__s18101": {
+      "config.json": "23d949bd800e0133dc55d7f3d3e77440d3e3623c0113d696f81ffde95b23501e",
+      "metrics.json": "9d9a99d83a3ecfb5b78ec2fa9e409bfdea3041984a4fe236259308b9fce7e941"
+    }
+  },
+  "evidence_sha256": {
+    "0": "85e20ffa8bb4a4214202276920ef5f10db1d96c299dbf4142c7f37da3db26b36",
+    "1": "273d1c0608bac9da35eb070b7590dcdb3dd3816a2723d75b2d8f03a334dbbe4d",
+    "2": "9160eb7b605450d59650f1a7edd7749b3ea006fed5beaf051a967dde9d766155",
+    "3": "500826d6814dce0224edea3f0c9ac3de18cbcaa98ef9abe6e4d860199002f55b"
+  },
+  "real_target_access": false,
+  "held_source_read_before_seal": false
+}
