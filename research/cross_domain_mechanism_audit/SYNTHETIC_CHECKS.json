@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "scope": "SYNTHETIC_MATHEMATICAL_CHECKS_ONLY",
+  "seed": 20261110,
+  "checks_passed": 6,
+  "checks": [
+    {
+      "name": "shared_gauge_preserves_observations_and_relative_tx",
+      "status": "PASS",
+      "observation_max_error": 4.577566798522237e-16,
+      "relative_tx_max_error": 4.577566798522237e-16
+    },
+    {
+      "name": "smooth_multiplier_tx_orbit_collision",
+      "status": "PASS",
+      "mapping_max_error": 0.0,
+      "distinct_tx_distance": 2.7693268560603723,
+      "gain_min": 0.7866314150059055,
+      "gain_max": 1.2712434069169392,
+      "implication": "Exact invariance to this group identifies these distinct spectra."
+    },
+    {
+      "name": "frequency_projection_can_remove_tx_and_rx",
+      "status": "PASS",
+      "tx_distance_before": 4.0729350596345135,
+      "tx_distance_after": 2.3094616714595607e-15,
+      "rx_distance_after": 4.7612006911342605e-15,
+      "discarded_dct_modes": 8
+    },
+    {
+      "name": "temporal_centering_can_remove_static_identity",
+      "status": "PASS",
+      "tx_distance_after": 4.9536744357004965e-15,
+      "rx_distance_after": 4.206026983062289e-15,
+      "nonzero_dynamic_norm": 55.42562584220408
+    },
+    {
+      "name": "complex_linear_vs_split_relu_equivariance",
+      "status": "PASS",
+      "linear_residual": 4.047368248007596e-15,
+      "split_relu_residual": 6.548591802990476,
+      "phase_radians": 0.61
+    },
+    {
+      "name": "source_mixture_bound_does_not_cover_arbitrary_target",
+      "status": "PASS",
+      "source_risks": [
+        0.1,
+        0.2,
+        0.3
+      ],
+      "weights": [
+        0.2,
+        0.3,
+        0.5
+      ],
+      "mixture_risk": 0.22999999999999998,
+      "target_risk": 0.9,
+      "target_outside_source_convex_hull": true
+    }
+  ],
+  "numpy_version": "1.26.4",
+  "matplotlib_version": "3.10.0",
+  "experimental_iq_reads": 0,
+  "checkpoint_loads": 0,
+  "model_fits": 0
+}

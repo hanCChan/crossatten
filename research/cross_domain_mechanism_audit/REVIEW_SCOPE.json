@@ -1,0 +1,89 @@
+{
+  "status": "REVIEW_COMPLETE_NOT_EMPIRICAL_GO",
+  "review_date": "2026-11-10",
+  "base_commit": "9815503880291f4b66c3566b07769f6a5fc8c9a6",
+  "formal_preregistration": false,
+  "hypotheses_empirically_passed": false,
+  "new_model_fits": 0,
+  "new_experimental_iq_reads": 0,
+  "new_checkpoint_loads": 0,
+  "new_prediction_array_reads": 0,
+  "target_reads": 0,
+  "dates_3_4_reads": 0,
+  "manysig_blind_data_reads": 0,
+  "shen_blind_data_reads": 0,
+  "historical_decisions_modified": false,
+  "paper_novelty_established": false,
+  "literature_scope": "Targeted primary-source screening; not exhaustive novelty clearance",
+  "access_accounting": "Declared actions in this review and its scripts; not OS-wide instrumentation",
+  "synthetic_only_checks": 6,
+  "python": "3.11.8",
+  "author_mixstyle_blob": "7eb151bf06a181ed4bc6f54f562bffc49f35deaf",
+  "cited_local_evidence": [
+    {
+      "path": "11-spectral-generalization/RESULTS.md",
+      "git_blob_sha256": "18ca13ff656858068e1ff2524793299c25e894910e8a2e677ee61ea007c19bff",
+      "worktree_sha256_at_review": "cf6d6dad5346859f9db8b22fb90850bd2446b0a08d187df620c3d6ed4f64e019"
+    },
+    {
+      "path": "12-spectral-validation/RESULTS.md",
+      "git_blob_sha256": "4160fd8f41f80d0a7a8f9c5a241783fab9b8af3e5373b4cb1a8705f3b69e3181",
+      "worktree_sha256_at_review": "de86366138152a8c4b9b6f7daad79b7b7ffefd303d3f7bbb61fdb4098a4db0d1"
+    },
+    {
+      "path": "17-rx-distortion/D0_INTERPRETATION.zh-CN.md",
+      "git_blob_sha256": "0719626fb6957f3928e79435421baa9a755c629a213632141ed07432c4ed77c4",
+      "worktree_sha256_at_review": "0719626fb6957f3928e79435421baa9a755c629a213632141ed07432c4ed77c4"
+    },
+    {
+      "path": "17b-phase-intervention/INTERPRETATION.zh-CN.md",
+      "git_blob_sha256": "b7f78dc73816e2ed079c105cfc47103f74f4caad4bb88cb9d301c109be022ed8",
+      "worktree_sha256_at_review": "b7f78dc73816e2ed079c105cfc47103f74f4caad4bb88cb9d301c109be022ed8"
+    },
+    {
+      "path": "18-selective-rx/RESULTS.zh-CN.md",
+      "git_blob_sha256": "b4ab564c343e68e66bed90d45515df03ce0b2281f4a0652361bcdf240f46d817",
+      "worktree_sha256_at_review": "b4ab564c343e68e66bed90d45515df03ce0b2281f4a0652361bcdf240f46d817"
+    },
+    {
+      "path": "19-tx-spectral-evidence/RESULTS.zh-CN.md",
+      "git_blob_sha256": "0e8be3f20bdedcfd459af136b042151e6c593e6cc97ddeddd1b4748b55e68016",
+      "worktree_sha256_at_review": "0e8be3f20bdedcfd459af136b042151e6c593e6cc97ddeddd1b4748b55e68016"
+    },
+    {
+      "path": "19-tx-spectral-evidence/historical_matrix.md",
+      "git_blob_sha256": "ef49089845a1f2f02f2acf5b47af35ce1fe45d0fdd49df52431b3f622b817d8f",
+      "worktree_sha256_at_review": "ef49089845a1f2f02f2acf5b47af35ce1fe45d0fdd49df52431b3f622b817d8f"
+    },
+    {
+      "path": "20-asknet-source-comparison/RESULTS.zh-CN.md",
+      "git_blob_sha256": "99e9f77eaae0f847acafd8c4c3f46d8297c90d7ac0c5ca5ca9c23a43562ac8fb",
+      "worktree_sha256_at_review": "99e9f77eaae0f847acafd8c4c3f46d8297c90d7ac0c5ca5ca9c23a43562ac8fb"
+    },
+    {
+      "path": "20-asknet-source-comparison/UPSTREAM.json",
+      "git_blob_sha256": "504fd3a78021bdd642919bc4034c882860c5fdc17476baa39380eeeb98a2c35e",
+      "worktree_sha256_at_review": "504fd3a78021bdd642919bc4034c882860c5fdc17476baa39380eeeb98a2c35e"
+    },
+    {
+      "path": "lib/xa/explore_models.py",
+      "git_blob_sha256": "927cc04a4ea4287eba8428f9ec27bad0033c1c121166dab7a81e7c1d305c4262",
+      "worktree_sha256_at_review": "bcc1616b5fc6ea533183b4c3a9538748a663a1b321bd748a33870b4ef8116467"
+    },
+    {
+      "path": "lib/legacy_rfhstu/mixstyle.py",
+      "git_blob_sha256": "c23de1df2ff3b0cfad250323781f7d97fe04781e0f00c0ed9bb0772f9bf66bf7",
+      "worktree_sha256_at_review": "687174caeff6f256b2661399ab70aede396d5ea51af4e312dcbacc01235b94a5"
+    },
+    {
+      "path": "lib/legacy_rfhstu/models.py",
+      "git_blob_sha256": "28d865b46f8072d43778f440e51641b7b9b39c17d44820e418ab3d5f7fee3b0b",
+      "worktree_sha256_at_review": "ebb638fac3392fec36bace7e2445ab6d27ef4e3b5adb2c06b35c8bc82f506666"
+    }
+  ],
+  "historical_comparison": "Git canonical blobs and clean diff; Windows checkout CRLF may differ",
+  "reproduction": [
+    "python synthetic_checks.py",
+    "python archive_review.py --verify"
+  ]
+}
