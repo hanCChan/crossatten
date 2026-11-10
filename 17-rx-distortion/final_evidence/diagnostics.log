@@ -1,0 +1,23 @@
+D0 0 amp True
+D0 0 phase True
+D0 0 iq False
+D0 1 amp False
+D0 1 phase False
+D0 1 iq False
+D0 2 amp True
+D0 2 phase True
+D0 2 iq False
+D0 3 amp False
+D0 3 phase True
+D0 3 iq False
+[exp/s17-rx-distortion 9f85935] S17 freeze D0 source mechanism evidence and nuisance bounds before interventions
+ 9 files changed, 6330 insertions(+)
+ create mode 100644 17-rx-distortion/D0_fold0.json
+ create mode 100644 17-rx-distortion/D0_fold1.json
+ create mode 100644 17-rx-distortion/D0_fold2.json
+ create mode 100644 17-rx-distortion/D0_fold3.json
+ create mode 100644 17-rx-distortion/decision_d0.json
+ create mode 100644 17-rx-distortion/profiles/ManyRx_f0_first_s16001.json
+ create mode 100644 17-rx-distortion/profiles/ManyRx_f1_first_s16001.json
+ create mode 100644 17-rx-distortion/profiles/ManyRx_f2_first_s16001.json
+ create mode 100644 17-rx-distortion/profiles/ManyRx_f3_first_s16001.json

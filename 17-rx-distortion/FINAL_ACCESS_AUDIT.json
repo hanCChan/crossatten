@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "scope": "D0 only; no claim of PyTorch/FIR/gradient validation",
+  "code_hashes_verified": 57,
+  "frozen_source_metric_references_verified": 4,
+  "access_entries": 144,
+  "violations": [],
+  "held_source_read": false,
+  "real_target_access": false,
+  "new_formal_fits": 0,
+  "historical_tracked_content_changed": [],
+  "diagnostic_outlet": "STOP_NO_STABLE_ERROR_LINK",
+  "phase_signal_requires_separate_intervention_validation": true,
+  "environment": "PyTorch WinError4551 policy block recorded independently",
+  "files_sha256": {
+    "access.jsonl": "8bb617221fe2c81eeb99f525bb268995623b4d2ab76afe4949d1ef7bbf93d78e",
+    "diagnostics.log": "75815cba53b637297ca93059b9a9f19a5116b6411d5d2d0f334f7042b5ea357c",
+    "execution.log": "11a96153f2c688ebcc01b4cc3cabdd9aeb582bd8d0a905814a4e3291e3ab8ae4",
+    "execution.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}
