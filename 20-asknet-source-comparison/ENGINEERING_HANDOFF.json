@@ -1,0 +1,34 @@
+{
+  "time": "2026-11-10T20:44:01+08:00",
+  "status": "PRE_HELD_SERIALIZATION_HANDOFF",
+  "error": "TypeError: dict() got multiple values for keyword argument 'fold'",
+  "original_location": "s20_run.py seal baseline reference assembly",
+  "original_registration_sha256": "5008ce261afbd4386ac6c61d85010d620f8c6268ade06509199099b3eff27e84",
+  "handoff_code_sha256": "ca5e8f42314e021a74f6a0a257b2616a034c4d365ed1cebfc9583abee5326685",
+  "original_registered_code_and_protocol_unchanged": true,
+  "source_fits_completed": {
+    "0": {
+      "model_sha256": "646d06695d2387898e53d9b7f0c12f029bdd73495eea50a56e593900135e2ec7",
+      "metrics_sha256": "bc6f3f3c3bace9d37b0ba0d1ff594c7948f5c0e10d2cb65ab3c67d5128d1ba9d",
+      "epochs": 38
+    },
+    "1": {
+      "model_sha256": "c27789d4e209ba9c1f5990b7e200104db61b0b16481aff0af3118281757be222",
+      "metrics_sha256": "02adcfdb1263f724e52ea8c109e29f255e69e2778c5fffff56991e74777fa421",
+      "epochs": 39
+    },
+    "2": {
+      "model_sha256": "1cc7b26c62384f4ae439a9bf6846242a1849812e2e49184728eb4e1d388c62b0",
+      "metrics_sha256": "763dbf432574167ae0e5c6e5be94512933a25aac3bca7937ed3050c13dad940b",
+      "epochs": 40
+    },
+    "3": {
+      "model_sha256": "8aa537900371c513c1c1d7a6115d5fa18e4137b4cbd6d30216dac17513a71926",
+      "metrics_sha256": "739729f201f54476066b19a1ca8239e03c8b726e9363de9c7d3b8e9ed866dced",
+      "epochs": 44
+    }
+  },
+  "formal_fits_repeated": 0,
+  "held_data_access_before_handoff": 0,
+  "models_predictions_or_thresholds_changed": false
+}

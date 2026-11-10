@@ -1,0 +1,295 @@
+[k@init] argmax_k=8  soft_k=32.000  top_prob=0.1667
+Train Epoch 1	Loss: 1.879737, Acc: 8033/24267 (33.10%)
+Validation	Loss: 0.9288, Acc: 7818/10401 (75.17%)
+S20 ASK fold 2 epoch 1 source_packet_CE 0.92882
+[k@epoch 1] argmax_k=24  soft_k=31.403  top_prob=0.1784
+Validation loss improved inf -> 0.928822, saving model.
+------------------------------------------------
+Train Epoch 2	Loss: 0.774205, Acc: 19393/24267 (79.92%)
+Validation	Loss: 0.5714, Acc: 8891/10401 (85.48%)
+S20 ASK fold 2 epoch 2 source_packet_CE 0.57143
+[k@epoch 2] argmax_k=24  soft_k=31.608  top_prob=0.1838
+Validation loss improved 0.928822 -> 0.571428, saving model.
+------------------------------------------------
+Train Epoch 3	Loss: 0.575629, Acc: 20563/24267 (84.74%)
+Validation	Loss: 0.4706, Acc: 9046/10401 (86.97%)
+S20 ASK fold 2 epoch 3 source_packet_CE 0.4706
+[k@epoch 3] argmax_k=24  soft_k=31.890  top_prob=0.1889
+Validation loss improved 0.571428 -> 0.470598, saving model.
+------------------------------------------------
+Train Epoch 4	Loss: 0.488414, Acc: 21166/24267 (87.22%)
+Validation	Loss: 0.4292, Acc: 9194/10401 (88.40%)
+S20 ASK fold 2 epoch 4 source_packet_CE 0.42921
+[k@epoch 4] argmax_k=24  soft_k=32.240  top_prob=0.1925
+Validation loss improved 0.470598 -> 0.429205, saving model.
+------------------------------------------------
+Train Epoch 5	Loss: 0.440882, Acc: 21345/24267 (87.96%)
+Validation	Loss: 0.4156, Acc: 9203/10401 (88.48%)
+S20 ASK fold 2 epoch 5 source_packet_CE 0.4156
+[k@epoch 5] argmax_k=24  soft_k=32.676  top_prob=0.1938
+Validation loss improved 0.429205 -> 0.415595, saving model.
+------------------------------------------------
+Train Epoch 6	Loss: 0.434456, Acc: 21391/24267 (88.15%)
+Validation	Loss: 0.4255, Acc: 9171/10401 (88.17%)
+S20 ASK fold 2 epoch 6 source_packet_CE 0.42554
+[k@epoch 6] argmax_k=24  soft_k=32.968  top_prob=0.1983
+No improvement for 1 epoch(s).
+------------------------------------------------
+Train Epoch 7	Loss: 0.396153, Acc: 21628/24267 (89.13%)
+Validation	Loss: 0.3714, Acc: 9346/10401 (89.86%)
+S20 ASK fold 2 epoch 7 source_packet_CE 0.37143
+[k@epoch 7] argmax_k=32  soft_k=33.143  top_prob=0.2021
+Validation loss improved 0.415595 -> 0.371435, saving model.
+------------------------------------------------
+Train Epoch 8	Loss: 0.390057, Acc: 21621/24267 (89.10%)
+Validation	Loss: 0.4061, Acc: 9243/10401 (88.87%)
+S20 ASK fold 2 epoch 8 source_packet_CE 0.4061
+[k@epoch 8] argmax_k=32  soft_k=33.430  top_prob=0.2092
+No improvement for 1 epoch(s).
+------------------------------------------------
+Train Epoch 9	Loss: 0.372681, Acc: 21724/24267 (89.52%)
+Validation	Loss: 0.3500, Acc: 9385/10401 (90.23%)
+S20 ASK fold 2 epoch 9 source_packet_CE 0.35001
+[k@epoch 9] argmax_k=32  soft_k=33.646  top_prob=0.2133
+Validation loss improved 0.371435 -> 0.350010, saving model.
+------------------------------------------------
+Train Epoch 10	Loss: 0.352063, Acc: 21815/24267 (89.90%)
+Validation	Loss: 0.3640, Acc: 9342/10401 (89.82%)
+S20 ASK fold 2 epoch 10 source_packet_CE 0.36396
+[k@epoch 10] argmax_k=32  soft_k=33.970  top_prob=0.2206
+No improvement for 1 epoch(s).
+------------------------------------------------
+Train Epoch 11	Loss: 0.349779, Acc: 21904/24267 (90.26%)
+Validation	Loss: 0.3575, Acc: 9349/10401 (89.89%)
+S20 ASK fold 2 epoch 11 source_packet_CE 0.35755
+[k@epoch 11] argmax_k=32  soft_k=34.329  top_prob=0.2253
+No improvement for 2 epoch(s).
+------------------------------------------------
+Train Epoch 12	Loss: 0.331543, Acc: 21970/24267 (90.53%)
+Validation	Loss: 0.3376, Acc: 9411/10401 (90.48%)
+S20 ASK fold 2 epoch 12 source_packet_CE 0.33763
+[k@epoch 12] argmax_k=32  soft_k=34.574  top_prob=0.2325
+Validation loss improved 0.350010 -> 0.337626, saving model.
+------------------------------------------------
+Train Epoch 13	Loss: 0.320204, Acc: 22061/24267 (90.91%)
+Validation	Loss: 0.3593, Acc: 9391/10401 (90.29%)
+S20 ASK fold 2 epoch 13 source_packet_CE 0.35931
+[k@epoch 13] argmax_k=32  soft_k=34.841  top_prob=0.2369
+No improvement for 1 epoch(s).
+------------------------------------------------
+Train Epoch 14	Loss: 0.312856, Acc: 22066/24267 (90.93%)
+Validation	Loss: 0.3453, Acc: 9441/10401 (90.77%)
+S20 ASK fold 2 epoch 14 source_packet_CE 0.34533
+[k@epoch 14] argmax_k=32  soft_k=35.287  top_prob=0.2433
+No improvement for 2 epoch(s).
+------------------------------------------------
+Train Epoch 15	Loss: 0.305588, Acc: 22113/24267 (91.12%)
+Validation	Loss: 0.3492, Acc: 9434/10401 (90.70%)
+S20 ASK fold 2 epoch 15 source_packet_CE 0.34916
+[k@epoch 15] argmax_k=32  soft_k=35.579  top_prob=0.2477
+No improvement for 3 epoch(s).
+------------------------------------------------
+Train Epoch 16	Loss: 0.290045, Acc: 22257/24267 (91.72%)
+Validation	Loss: 0.3382, Acc: 9437/10401 (90.73%)
+S20 ASK fold 2 epoch 16 source_packet_CE 0.33816
+[k@epoch 16] argmax_k=32  soft_k=35.907  top_prob=0.2498
+No improvement for 4 epoch(s).
+------------------------------------------------
+Train Epoch 17	Loss: 0.279903, Acc: 22312/24267 (91.94%)
+Validation	Loss: 0.3248, Acc: 9471/10401 (91.06%)
+S20 ASK fold 2 epoch 17 source_packet_CE 0.32479
+[k@epoch 17] argmax_k=32  soft_k=36.111  top_prob=0.2525
+Validation loss improved 0.337626 -> 0.324788, saving model.
+------------------------------------------------
+Train Epoch 18	Loss: 0.277738, Acc: 22280/24267 (91.81%)
+Validation	Loss: 0.3240, Acc: 9472/10401 (91.07%)
+S20 ASK fold 2 epoch 18 source_packet_CE 0.32396
+[k@epoch 18] argmax_k=32  soft_k=36.434  top_prob=0.2553
+Validation loss improved 0.324788 -> 0.323964, saving model.
+------------------------------------------------
+Train Epoch 19	Loss: 0.263689, Acc: 22368/24267 (92.17%)
+Validation	Loss: 0.3424, Acc: 9418/10401 (90.55%)
+S20 ASK fold 2 epoch 19 source_packet_CE 0.34244
+[k@epoch 19] argmax_k=32  soft_k=36.685  top_prob=0.2615
+No improvement for 1 epoch(s).
+------------------------------------------------
+Train Epoch 20	Loss: 0.278117, Acc: 22281/24267 (91.82%)
+Validation	Loss: 0.3292, Acc: 9458/10401 (90.93%)
+S20 ASK fold 2 epoch 20 source_packet_CE 0.32923
+[k@epoch 20] argmax_k=32  soft_k=37.065  top_prob=0.2619
+No improvement for 2 epoch(s).
+------------------------------------------------
+Train Epoch 21	Loss: 0.247471, Acc: 22496/24267 (92.70%)
+Validation	Loss: 0.3259, Acc: 9478/10401 (91.13%)
+S20 ASK fold 2 epoch 21 source_packet_CE 0.32588
+[k@epoch 21] argmax_k=32  soft_k=37.279  top_prob=0.2663
+No improvement for 3 epoch(s).
+------------------------------------------------
+Train Epoch 22	Loss: 0.250147, Acc: 22481/24267 (92.64%)
+Validation	Loss: 0.3330, Acc: 9492/10401 (91.26%)
+S20 ASK fold 2 epoch 22 source_packet_CE 0.33296
+[k@epoch 22] argmax_k=32  soft_k=37.709  top_prob=0.2671
+No improvement for 4 epoch(s).
+------------------------------------------------
+Train Epoch 23	Loss: 0.246456, Acc: 22480/24267 (92.64%)
+Validation	Loss: 0.3346, Acc: 9450/10401 (90.86%)
+S20 ASK fold 2 epoch 23 source_packet_CE 0.33463
+[k@epoch 23] argmax_k=32  soft_k=38.000  top_prob=0.2723
+No improvement for 5 epoch(s).
+------------------------------------------------
+Train Epoch 24	Loss: 0.246772, Acc: 22475/24267 (92.62%)
+Validation	Loss: 0.3339, Acc: 9506/10401 (91.40%)
+S20 ASK fold 2 epoch 24 source_packet_CE 0.33388
+[k@epoch 24] argmax_k=32  soft_k=38.183  top_prob=0.2780
+No improvement for 6 epoch(s).
+------------------------------------------------
+Train Epoch 25	Loss: 0.179019, Acc: 22956/24267 (94.60%)
+Validation	Loss: 0.3015, Acc: 9541/10401 (91.73%)
+S20 ASK fold 2 epoch 25 source_packet_CE 0.30147
+[k@epoch 25] argmax_k=32  soft_k=38.214  top_prob=0.2778
+Validation loss improved 0.323964 -> 0.301470, saving model.
+------------------------------------------------
+Train Epoch 26	Loss: 0.175538, Acc: 23024/24267 (94.88%)
+Validation	Loss: 0.2980, Acc: 9554/10401 (91.86%)
+S20 ASK fold 2 epoch 26 source_packet_CE 0.29802
+[k@epoch 26] argmax_k=32  soft_k=38.262  top_prob=0.2778
+Validation loss improved 0.301470 -> 0.298023, saving model.
+------------------------------------------------
+Train Epoch 27	Loss: 0.166807, Acc: 23048/24267 (94.98%)
+Validation	Loss: 0.2996, Acc: 9563/10401 (91.94%)
+S20 ASK fold 2 epoch 27 source_packet_CE 0.29957
+[k@epoch 27] argmax_k=32  soft_k=38.314  top_prob=0.2776
+No improvement for 1 epoch(s).
+------------------------------------------------
+Train Epoch 28	Loss: 0.158655, Acc: 23109/24267 (95.23%)
+Validation	Loss: 0.2978, Acc: 9549/10401 (91.81%)
+S20 ASK fold 2 epoch 28 source_packet_CE 0.29785
+[k@epoch 28] argmax_k=32  soft_k=38.359  top_prob=0.2774
+Validation loss improved 0.298023 -> 0.297845, saving model.
+------------------------------------------------
+Train Epoch 29	Loss: 0.164957, Acc: 23076/24267 (95.09%)
+Validation	Loss: 0.2967, Acc: 9566/10401 (91.97%)
+S20 ASK fold 2 epoch 29 source_packet_CE 0.29669
+[k@epoch 29] argmax_k=32  soft_k=38.430  top_prob=0.2771
+Validation loss improved 0.297845 -> 0.296694, saving model.
+------------------------------------------------
+Train Epoch 30	Loss: 0.161754, Acc: 23103/24267 (95.20%)
+Validation	Loss: 0.2965, Acc: 9557/10401 (91.89%)
+S20 ASK fold 2 epoch 30 source_packet_CE 0.2965
+[k@epoch 30] argmax_k=32  soft_k=38.481  top_prob=0.2772
+Validation loss improved 0.296694 -> 0.296499, saving model.
+------------------------------------------------
+Train Epoch 31	Loss: 0.157518, Acc: 23139/24267 (95.35%)
+Validation	Loss: 0.2976, Acc: 9569/10401 (92.00%)
+S20 ASK fold 2 epoch 31 source_packet_CE 0.29761
+[k@epoch 31] argmax_k=32  soft_k=38.535  top_prob=0.2766
+No improvement for 1 epoch(s).
+------------------------------------------------
+Train Epoch 32	Loss: 0.154635, Acc: 23154/24267 (95.41%)
+Validation	Loss: 0.2991, Acc: 9567/10401 (91.98%)
+S20 ASK fold 2 epoch 32 source_packet_CE 0.29907
+[k@epoch 32] argmax_k=32  soft_k=38.597  top_prob=0.2762
+No improvement for 2 epoch(s).
+------------------------------------------------
+Train Epoch 33	Loss: 0.153043, Acc: 23159/24267 (95.43%)
+Validation	Loss: 0.3001, Acc: 9566/10401 (91.97%)
+S20 ASK fold 2 epoch 33 source_packet_CE 0.30007
+[k@epoch 33] argmax_k=32  soft_k=38.652  top_prob=0.2760
+No improvement for 3 epoch(s).
+------------------------------------------------
+Train Epoch 34	Loss: 0.153532, Acc: 23165/24267 (95.46%)
+Validation	Loss: 0.3010, Acc: 9572/10401 (92.03%)
+S20 ASK fold 2 epoch 34 source_packet_CE 0.30102
+[k@epoch 34] argmax_k=32  soft_k=38.718  top_prob=0.2757
+No improvement for 4 epoch(s).
+------------------------------------------------
+Train Epoch 35	Loss: 0.152900, Acc: 23171/24267 (95.48%)
+Validation	Loss: 0.3009, Acc: 9576/10401 (92.07%)
+S20 ASK fold 2 epoch 35 source_packet_CE 0.30091
+[k@epoch 35] argmax_k=32  soft_k=38.782  top_prob=0.2755
+No improvement for 5 epoch(s).
+------------------------------------------------
+Train Epoch 36	Loss: 0.146809, Acc: 23212/24267 (95.65%)
+Validation	Loss: 0.3006, Acc: 9561/10401 (91.92%)
+S20 ASK fold 2 epoch 36 source_packet_CE 0.30058
+[k@epoch 36] argmax_k=32  soft_k=38.842  top_prob=0.2752
+No improvement for 6 epoch(s).
+------------------------------------------------
+Train Epoch 37	Loss: 0.136379, Acc: 23277/24267 (95.92%)
+Validation	Loss: 0.2999, Acc: 9571/10401 (92.02%)
+S20 ASK fold 2 epoch 37 source_packet_CE 0.29985
+[k@epoch 37] argmax_k=32  soft_k=38.849  top_prob=0.2752
+No improvement for 7 epoch(s).
+------------------------------------------------
+Train Epoch 38	Loss: 0.138659, Acc: 23262/24267 (95.86%)
+Validation	Loss: 0.2997, Acc: 9573/10401 (92.04%)
+S20 ASK fold 2 epoch 38 source_packet_CE 0.29969
+[k@epoch 38] argmax_k=32  soft_k=38.855  top_prob=0.2751
+No improvement for 8 epoch(s).
+------------------------------------------------
+Train Epoch 39	Loss: 0.155703, Acc: 23159/24267 (95.43%)
+Validation	Loss: 0.3001, Acc: 9574/10401 (92.05%)
+S20 ASK fold 2 epoch 39 source_packet_CE 0.30013
+[k@epoch 39] argmax_k=32  soft_k=38.862  top_prob=0.2751
+No improvement for 9 epoch(s).
+------------------------------------------------
+Train Epoch 40	Loss: 0.158770, Acc: 23179/24267 (95.52%)
+Validation	Loss: 0.3007, Acc: 9569/10401 (92.00%)
+S20 ASK fold 2 epoch 40 source_packet_CE 0.30066
+[k@epoch 40] argmax_k=32  soft_k=38.870  top_prob=0.2751
+No improvement for 10 epoch(s).
+Early stopping at epoch 40.
+
+========================================================================
+Per-epoch k selection summary
+Candidates: [8, 16, 24, 32, 48, 64]
+------------------------------------------------------------------------
+epoch | argmax_k |     soft_k |   top_prob
+------------------------------------------------------------------------
+    0 |        8 |     32.000 |     0.1667
+    1 |       24 |     31.403 |     0.1784
+    2 |       24 |     31.608 |     0.1838
+    3 |       24 |     31.890 |     0.1889
+    4 |       24 |     32.240 |     0.1925
+    5 |       24 |     32.676 |     0.1938
+    6 |       24 |     32.968 |     0.1983
+    7 |       32 |     33.143 |     0.2021
+    8 |       32 |     33.430 |     0.2092
+    9 |       32 |     33.646 |     0.2133
+   10 |       32 |     33.970 |     0.2206
+   11 |       32 |     34.329 |     0.2253
+   12 |       32 |     34.574 |     0.2325
+   13 |       32 |     34.841 |     0.2369
+   14 |       32 |     35.287 |     0.2433
+   15 |       32 |     35.579 |     0.2477
+   16 |       32 |     35.907 |     0.2498
+   17 |       32 |     36.111 |     0.2525
+   18 |       32 |     36.434 |     0.2553
+   19 |       32 |     36.685 |     0.2615
+   20 |       32 |     37.065 |     0.2619
+   21 |       32 |     37.279 |     0.2663
+   22 |       32 |     37.709 |     0.2671
+   23 |       32 |     38.000 |     0.2723
+   24 |       32 |     38.183 |     0.2780
+   25 |       32 |     38.214 |     0.2778
+   26 |       32 |     38.262 |     0.2778
+   27 |       32 |     38.314 |     0.2776
+   28 |       32 |     38.359 |     0.2774
+   29 |       32 |     38.430 |     0.2771
+   30 |       32 |     38.481 |     0.2772
+   31 |       32 |     38.535 |     0.2766
+   32 |       32 |     38.597 |     0.2762
+   33 |       32 |     38.652 |     0.2760
+   34 |       32 |     38.718 |     0.2757
+   35 |       32 |     38.782 |     0.2755
+   36 |       32 |     38.842 |     0.2752
+   37 |       32 |     38.849 |     0.2752
+   38 |       32 |     38.855 |     0.2751
+   39 |       32 |     38.862 |     0.2751
+   40 |       32 |     38.870 |     0.2751
+------------------------------------------------------------------------
+Final selected k (last epoch): 32
+Most frequent k across epochs: 32 (34/41 epochs)
+========================================================================
+
+[k-trace] wrote D:\crossatten\worktrees\s20-asknet-source-comparison\20-asknet-source-comparison\runs\ASK__f2__first__s18101\k_trace.txt

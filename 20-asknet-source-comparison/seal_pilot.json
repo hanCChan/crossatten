@@ -1,0 +1,83 @@
+{
+  "time": "2026-11-10T20:44:01+08:00",
+  "all_checkpoints_complete": true,
+  "new_fits": 4,
+  "reused_B0": 4,
+  "checkpoints": {
+    "B0_f0": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\runs\\pilot__ManyRx__M0__f0__first__s18101\\model.pt",
+      "sha256": "f0f9fe1cd967e033ce97bf8e6f149ce29d4e70cf0611e88457ec141da56cf06f",
+      "fold": 0,
+      "arm": "B0"
+    },
+    "ASK_f0": {
+      "fold": 0,
+      "arm": "ASK",
+      "path": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f0__first__s18101\\model.pt",
+      "sha256": "646d06695d2387898e53d9b7f0c12f029bdd73495eea50a56e593900135e2ec7"
+    },
+    "B0_f1": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\runs\\pilot__ManyRx__M0__f1__first__s18101\\model.pt",
+      "sha256": "fa790ec31286003cce0f9e8f9087b5d8a047c4d2f8f33280bc20ff3eaf9dc98d",
+      "fold": 1,
+      "arm": "B0"
+    },
+    "ASK_f1": {
+      "fold": 1,
+      "arm": "ASK",
+      "path": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f1__first__s18101\\model.pt",
+      "sha256": "c27789d4e209ba9c1f5990b7e200104db61b0b16481aff0af3118281757be222"
+    },
+    "B0_f2": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\runs\\pilot__ManyRx__M0__f2__first__s18101\\model.pt",
+      "sha256": "b7a2eb2e077b81f93bef1ae29296a8e201c5622149c7331f4b743997ed899091",
+      "fold": 2,
+      "arm": "B0"
+    },
+    "ASK_f2": {
+      "fold": 2,
+      "arm": "ASK",
+      "path": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f2__first__s18101\\model.pt",
+      "sha256": "1cc7b26c62384f4ae439a9bf6846242a1849812e2e49184728eb4e1d388c62b0"
+    },
+    "B0_f3": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\runs\\pilot__ManyRx__M0__f3__first__s18101\\model.pt",
+      "sha256": "6a1ae01a5ca1a156aec4e54d0054d36b1ac7503cd179c62f1a825a49fce7dff4",
+      "fold": 3,
+      "arm": "B0"
+    },
+    "ASK_f3": {
+      "fold": 3,
+      "arm": "ASK",
+      "path": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f3__first__s18101\\model.pt",
+      "sha256": "8aa537900371c513c1c1d7a6115d5fa18e4137b4cbd6d30216dac17513a71926"
+    }
+  },
+  "metadata_sha256": {
+    "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f0__first__s18101\\config.json": "ed88c4faed314c9b6c67b34e9edfd583ca64925355c0db37b4b627642c82c81e",
+    "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f0__first__s18101\\metrics.json": "a773f08d7f5d45939c8af8c042360f5d7c9c8d5ef00df3deee75bbba9e463ed4",
+    "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\B0__f0__first__s18101\\reference.json": "9c136a29486b4a34a5bc62a801912e50ad6bd96fe9be82cf06a2607403d9ba89",
+    "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f0__first__s18101\\config.json": "25804c73e75e867a97896ab0c89df67326d5bc812ae376061d51dda3a7a46fcf",
+    "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f0__first__s18101\\metrics.json": "bc6f3f3c3bace9d37b0ba0d1ff594c7948f5c0e10d2cb65ab3c67d5128d1ba9d",
+    "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f1__first__s18101\\config.json": "119609856eda9316d16693a5f07e35e37d489b384360099979cbde75c44c21db",
+    "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f1__first__s18101\\metrics.json": "e382d8dbda24cec85ad1d0325988ab43c59836be7da5ac483c97fd11feb609d0",
+    "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\B0__f1__first__s18101\\reference.json": "ad0071d75a7cf9136c9d99892fc5df9c82931c5e2e5b5f8705dfa6e95d65851a",
+    "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f1__first__s18101\\config.json": "855df8238f194079c6c3e3bf5d6f12d3d28471c0f0e6294963ebc116aaf20f69",
+    "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f1__first__s18101\\metrics.json": "02adcfdb1263f724e52ea8c109e29f255e69e2778c5fffff56991e74777fa421",
+    "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f2__first__s18101\\config.json": "200465cb486049e696276eb60501ed4ebe6ef014c3aba054ac9bcef362a9dbe4",
+    "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f2__first__s18101\\metrics.json": "1b5446e4c054b24cb3a4815ddb8301df321ec2697424c1998acdd57bb7c54b88",
+    "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\B0__f2__first__s18101\\reference.json": "2cdcde89f72b47270031d222c53420f9566407a7c329867a29aab905d0321f33",
+    "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f2__first__s18101\\config.json": "cf9160e9e3e65f393a676fb3dbd0863ca9b1b8a5ef2bd85a3959f776c674d087",
+    "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f2__first__s18101\\metrics.json": "763dbf432574167ae0e5c6e5be94512933a25aac3bca7937ed3050c13dad940b",
+    "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f3__first__s18101\\config.json": "0661cd8f265c0ad749d69289111c0f927441892e37cdd2c255757b38fea8a233",
+    "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f3__first__s18101\\metrics.json": "0116a8473bb4c545bafd138a8a89ae1f0fddf367ac624739dcc9eab9346c00af",
+    "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\B0__f3__first__s18101\\reference.json": "3c5d7add21e05c3e591e4fbfbb26020b4c14c8934c02645fa148b4b143394bf3",
+    "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f3__first__s18101\\config.json": "39783351762809922363f81e28a0d59eea5a42f03043a409ef15cdc425477e33",
+    "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f3__first__s18101\\metrics.json": "739729f201f54476066b19a1ca8239e03c8b726e9363de9c7d3b8e9ed866dced"
+  },
+  "baseline_held_predictions_preexisting": true,
+  "new_ask_held_source_read": false,
+  "real_target_access": false,
+  "engineering_handoff_sha256": "8ccb3720c4d96a715bde86158babb9cbeb8fb7df954c90be06082d6dbe9634bc",
+  "engineering_handoff_code_sha256": "ca5e8f42314e021a74f6a0a257b2616a034c4d365ed1cebfc9583abee5326685"
+}
