@@ -1,0 +1,5 @@
+{
+  "status": "FAIL",
+  "device": "CPU; synthetic only; no experimental source data read",
+  "output": "Traceback (most recent call last):\n  File \"D:\\crossatten\\worktrees\\s17-rx-distortion\\17-rx-distortion\\test_engineering.py\", line 4, in <module>\n    import torch\n  File \"D:\\miniconda\\envs\\crossatten4060\\Lib\\site-packages\\torch\\__init__.py\", line 262, in <module>\n    _load_dll_libraries()\n  File \"D:\\miniconda\\envs\\crossatten4060\\Lib\\site-packages\\torch\\__init__.py\", line 245, in _load_dll_libraries\n    raise err\nOSError: [WinError 4551] 应用程序控制策略已阻止此文件。 Error loading \"D:\\miniconda\\envs\\crossatten4060\\Lib\\site-packages\\torch\\lib\\asmjit.dll\" or one of its dependencies.\n"
+}
