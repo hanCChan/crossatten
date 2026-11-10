@@ -1,0 +1,318 @@
+{
+  "stage": "S15",
+  "time": "2026-11-09T09:14:02+08:00",
+  "base_git": "fc4a3cbeafcfc9bb18aa69125809b779fa974df4",
+  "code_sha256": {
+    "09-phase-invariance/phase_features.py": "d467175e131cfa719f0fa1f5500a8935bcb864d12dad53160a77247874d1721e",
+    "13-mixer-cfo-mechanisms/cfo_descriptive.py": "e60de808c7de10decda0844f2e74ae55169df196c9ec9fbb3807c312f4a131da",
+    "13-mixer-cfo-mechanisms/core.py": "a9db92f80e8e1bf1579cab900fabf085f5c33e018dffe6e27f1af64ee94dc527",
+    "13-mixer-cfo-mechanisms/data.py": "578fd207105e5375094bd22a12ec710fd259379c4b1c627d962251256bd71e9e",
+    "13-mixer-cfo-mechanisms/diagnostics.py": "883b0a5fcf73ba7c19e94f51ae05f7d003b82a8870b44c6c6d23e4ca02ee7149",
+    "13-mixer-cfo-mechanisms/execute.py": "21a7bf48a381842e5fbc044411350ba2faa1fd86cc31796ccab199726e8b1ae8",
+    "13-mixer-cfo-mechanisms/metrics.py": "a9773e0532552f012dc039c42206460d1a5b02001a2bbb44a388258825f85ed7",
+    "13-mixer-cfo-mechanisms/models.py": "606243ff9462358f53a86d2908130c47f69c5dd9d1cfee669cbaf10c7b76e5a1",
+    "13-mixer-cfo-mechanisms/pickle_index.py": "52925d018fbad46396dbf809379e2b8961b368179ba1ef64c4fc9c5031ed319a",
+    "13-mixer-cfo-mechanisms/register.py": "1d2241b226e4addbe74401c5acf7cd6acd148fcece15e20cf0c611f11a6b5b3b",
+    "13-mixer-cfo-mechanisms/reports.py": "8bcf6ec4ad18d183368b3d0e6bd5c4e58c476442aee16ddba74b099de27aef15",
+    "13-mixer-cfo-mechanisms/status.py": "533e7ef2154f0134c8cc887e5a1bd0d42cafcdfa3863c712f462bee048b49b1a",
+    "13-mixer-cfo-mechanisms/train.py": "164b0eb9794c4494b34cf1d25f8dfb0c9a4ae8c54af3e03ef9f08b150a670a2a",
+    "13-mixer-cfo-mechanisms/wifi.py": "3402847c350172b670aba40616f5b56ec5ecb2e7176cc199c26d0315d920db37",
+    "15-hstem-attribution/s15_core.py": "e37958e21f579314680a6ac1d0b35302f6a5b1e2307fedf336af5c335002a195",
+    "15-hstem-attribution/s15_data.py": "df1917a39b0f933ea735c4946cba40cdd691ad049b17fa0adde8396cb205f295",
+    "15-hstem-attribution/s15_execute.py": "d9c7b8fcf8bdf28abf9a409e3702df3317cbc43fbf9f1bd3ea703f299a5cfe4e",
+    "15-hstem-attribution/s15_models.py": "0d361cf9ac5ce2794975827e2b89a31615d4a1eaa171f5c073d1c7afffe810d4",
+    "15-hstem-attribution/s15_register.py": "1b754a5ef2204461b705249aa3d4d784f23765a38f0469b4d40200c28691fd36",
+    "15-hstem-attribution/s15_reports.py": "afdbce3425aaa3295b44aa6d122c6a0783b56e53ced192c881528b1de8087bd1",
+    "15-hstem-attribution/s15_stats.py": "03e0c2e9c39afa0d0e0e5e50a857fbf3de3c0b80f9bca951222ff471e8e05c57",
+    "15-hstem-attribution/s15_train.py": "c247c37cf5089f6ecdf675c9f4b5bd2f4078c06c819941d57d9e2eb39a26e849",
+    "15-hstem-attribution/tests/test_s15.py": "3519aac7dbb98c227bf329abd0eaa3428df8779d02495f7501c8dc92b70a6393",
+    "configs/protocol.json": "913d38626d9bcaa285b0ba7816bd8e863a91778f1fc62e4dd7d27c70415a119a",
+    "lib/legacy_rfhstu/__init__.py": "f78366d19d77282713f4944bc4e8fbdcbb138aac9849a0acf79459f4491dd9f5",
+    "lib/legacy_rfhstu/cnn_stem.py": "b3a8944c96b354d295a96d84876693e95433f67616e23d2804219d0fa1c2762a",
+    "lib/legacy_rfhstu/features.py": "1e9e5aa828adbb382c604ebf7b1bd429c79893ea1169afddaa14596a6c0d5378",
+    "lib/legacy_rfhstu/losses.py": "a0ba7f42040203289593ba6a9363f27ea19d5152d8813979a7018cc152e78e28",
+    "lib/legacy_rfhstu/mixstyle.py": "687174caeff6f256b2661399ab70aede396d5ea51af4e312dcbacc01235b94a5",
+    "lib/legacy_rfhstu/models.py": "ebb638fac3392fec36bace7e2445ab6d27ef4e3b5adb2c06b35c8bc82f506666",
+    "lib/legacy_rfhstu/multiscale.py": "de51929e7917e793e814319a88b91ef0b17354e4c7614065172e082f16833e35",
+    "lib/legacy_rfhstu/oob_fusion.py": "030f2886c9a84282eb7e20ce5d318f528e8bfc20902c4b4a17315686ea290259",
+    "lib/xa/__init__.py": "ca199705017e2d6d6b037d4d732f7caec7d7dff190c77a3d94c0cfaf515ab492",
+    "lib/xa/aggregate.py": "8995baeff876f427338836ad0b2d53de01f95e95148b851067f498d35f592e38",
+    "lib/xa/bench.py": "3a94fe229e5b43f45b15ca2f1a06e179b0212f282ea58671e71c718161d20ba7",
+    "lib/xa/data.py": "ff861d46e508d807996a924d4439134416b16ba6507856a7335c65d9e4cfc3cb",
+    "lib/xa/evaluate.py": "365998cf59196e5ebbdad3b34132fe1dfb2a4a2b988c82d660715471167734aa",
+    "lib/xa/explore_models.py": "bcc1616b5fc6ea533183b4c3a9538748a663a1b321bd748a33870b4ef8116467",
+    "lib/xa/explore_train.py": "8e4361d2b21546f5f5b5ba26adccd57618680c720db734561802b8246a33babe",
+    "lib/xa/frontends.py": "967e28c05f168341b4710e4b2253d77b93d92bc9a3dd515fdddaa35e81c2013f",
+    "lib/xa/guard.py": "80562f5a0893be3a3e91cb80ef4636a6b24eb0c76bfa59d3566574633e5fff54",
+    "lib/xa/jobs.py": "ef8ac595d7a567c18d5e726b2fe70e9942628e709bf1453dfe0df5e9d07233f0",
+    "lib/xa/launch.py": "71ca1656dcccf4d26455de6b999de42b2482f73b738a37fca52f354ccec6d4a2",
+    "lib/xa/models.py": "322049d67d19d196dca8a722fda9de433d846fe1aa3d6d8439c49adeba6554bf",
+    "lib/xa/models2.py": "e9c3364868955e6996645a823187dadb553a2a95139e809d43055a93c53eaa23",
+    "lib/xa/models3.py": "bade67f8ad50b64c132197d21a86c1897a8c27976a7b8490d2e7131ff025cbba",
+    "lib/xa/paper_models.py": "7c09adc3b481e5b13eeccb93731a00573f16a98f5d35c490a1d5082707c550bd",
+    "lib/xa/paper_run.py": "4c1bcdf2e98c974c6e03677b69881ea378dc3406c0d9f8a7bbe471290389fec6",
+    "lib/xa/paper_train.py": "e59cab54045ef6cd27a168e937e7571456ad3d2405183efc605e8308e3ed80c8",
+    "lib/xa/run_job.py": "534b8f7aa2c8c54c12eb5881850897fa2a69280cde004c84ede19532b0cb576b",
+    "lib/xa/train.py": "906a7fd0a7bbb61fea86e03bcf9b52228a5b26851e53fa904d497be330daa96e",
+    "lib/xa/wisig.py": "b4127fba87f5603704c92d2221743c8dedf6898e45c8216b9ddb84b32f42ad67"
+  },
+  "architecture_search_sha256": "56a749bdf8fd346a55f9d900913acd76915055a6829e46f358031a04f55ef2ad",
+  "architecture_audit_sha256": "ade8c2a0f15379bb1152b02b5d74d41b9dcf8b284c0bbf038969297a763ca95a",
+  "reused": {
+    "p1__Shen__E1_patch_mha__f0__all__s201": {
+      "root": "D:\\crossatten\\worktrees\\s14-stem-mixer\\14-stem-mixer-attribution",
+      "model_sha256": "fda284ba1cf43d40b870ae51de5c2778a1d7331650b048ba857b946b94fe6a26",
+      "config_sha256": "90d268274eabca78ea8bf585dab061869912bf18e7ce11e0106c7f97b1c8a77c",
+      "target_metrics_sha256": "12837a4e92521656f56d1b3aff4872f9209f9f40fb274dcdafdd0b279e78b2be"
+    },
+    "p1__Shen__E1_patch_mha__f0__all__s202": {
+      "root": "D:\\crossatten\\worktrees\\s14-stem-mixer\\14-stem-mixer-attribution",
+      "model_sha256": "389df7354cfa9db3fbad93229a37dc007fbdbb29ff13dde4fd8276f97a7fce10",
+      "config_sha256": "21b5ab81864a6161086836e2b519d222e34607466fe81e7ee6a7df8d9231ef5b",
+      "target_metrics_sha256": "df75e6425fd1e7ffc428a8ebfcbd8a0496ce6f3520a564bfc22b1cd227f03ead"
+    },
+    "p1__Shen__E1_patch_mha__f0__all__s203": {
+      "root": "D:\\crossatten\\worktrees\\s14-stem-mixer\\14-stem-mixer-attribution",
+      "model_sha256": "fe1ad90a0bce41569ecbf1deca67a2034ed9d022bf3fcc070c49cfa2ad22da1e",
+      "config_sha256": "5411ccab041b7037f1e76498b776fa23025255365ade4569977f77abfe638dc7",
+      "target_metrics_sha256": "17e3f651045e00d7304b3c5834b4e198b3df538f36a5ba5e0980910b38b35c94"
+    },
+    "p1__Shen__E1_patch_mha__f1__all__s201": {
+      "root": "D:\\crossatten\\worktrees\\s14-stem-mixer\\14-stem-mixer-attribution",
+      "model_sha256": "16abe8d995ce56ce59f239e0ae1f99d0aeb2b348a5241ec0614de29144001408",
+      "config_sha256": "4597586a021256b7a2e2d354053137d526ec598ac6f3ca683d05d12ec0c4cf5e",
+      "target_metrics_sha256": "cf61c782e2c28738660b5c8ad21c1ba868d8764de9a3127ee5557c10f43928c5"
+    },
+    "p1__Shen__E1_patch_mha__f1__all__s202": {
+      "root": "D:\\crossatten\\worktrees\\s14-stem-mixer\\14-stem-mixer-attribution",
+      "model_sha256": "080b89d7ffe96ef47f8c225ba51c25a12a38152ec08617b50eab4a6c7aafa952",
+      "config_sha256": "3821a41cdaeb94adabfc7c73310ef734545dc0399c665d194dbc43d56e09a6ba",
+      "target_metrics_sha256": "944b6247e5eb8dea8e2add55b14dc97fd54d89a7493685e726b1adc55a7823ec"
+    },
+    "p1__Shen__E1_patch_mha__f1__all__s203": {
+      "root": "D:\\crossatten\\worktrees\\s14-stem-mixer\\14-stem-mixer-attribution",
+      "model_sha256": "440c8af1cfcb24d513f0659e69c7d623135e4b91be3d6bcbc5d17d4ed86c6258",
+      "config_sha256": "ce78531d78a7f0dd04231dc8d325b85f5785cfaab34d1bf2bb986565c2d24087",
+      "target_metrics_sha256": "3dc956539783c7148fa85bbf9aec3d8ea811b75c1c46b509dd528946a01ec89a"
+    },
+    "p1__Shen__E2_patch_hstu__f0__all__s201": {
+      "root": "D:\\crossatten\\worktrees\\s14-stem-mixer\\14-stem-mixer-attribution",
+      "model_sha256": "2807fa3684b1640af7e15d4c8f833e829c7e3e17c7c4f23b1f69673cb958ed1f",
+      "config_sha256": "0f30d5b115786efd18b1654ff26f9ba6cc6f21b4610a1756ddbb59b8595f86bf",
+      "target_metrics_sha256": "80841f0ec5160074131bbf569360bdd5d11cd741d178b68a454a9af1286965e4"
+    },
+    "p1__Shen__E2_patch_hstu__f0__all__s202": {
+      "root": "D:\\crossatten\\worktrees\\s14-stem-mixer\\14-stem-mixer-attribution",
+      "model_sha256": "7b56d4adeb51cbf73e237c7918d1380772818d69806914ce11560f8011b35ede",
+      "config_sha256": "ae78c2b16a9304636909938c800a58fa9ab43ef529f188a491420f4dfea912fb",
+      "target_metrics_sha256": "39485ae9851c54e2239e5ad3af8748148bf3476dd06c9475e064f6722af28088"
+    },
+    "p1__Shen__E2_patch_hstu__f0__all__s203": {
+      "root": "D:\\crossatten\\worktrees\\s14-stem-mixer\\14-stem-mixer-attribution",
+      "model_sha256": "1e86aed4e71bf2c8e39865fba3382f18efe3fb18b1a23f5efd3b30357998d31f",
+      "config_sha256": "70cbefd3206c2c13e8e80f1a45983191c57ffb979316a566534139a9b5c1221f",
+      "target_metrics_sha256": "1ecee5ff1b99b40e30d0d7a73622b61dbd154167318c9ae94c04d0c0e5ac3573"
+    },
+    "p1__Shen__E2_patch_hstu__f1__all__s201": {
+      "root": "D:\\crossatten\\worktrees\\s14-stem-mixer\\14-stem-mixer-attribution",
+      "model_sha256": "5b8171bdd3e7afe59da7d809431448ad67ed100240268120a0771f124f9a9043",
+      "config_sha256": "1839d26833976f6bc602f2f43c46096310d4c40a49824247c53b66b7ed0dabe6",
+      "target_metrics_sha256": "3fca55075a033c9f303c0843b760f02600cfc94d4bef7f20c4a5251225ce383c"
+    },
+    "p1__Shen__E2_patch_hstu__f1__all__s202": {
+      "root": "D:\\crossatten\\worktrees\\s14-stem-mixer\\14-stem-mixer-attribution",
+      "model_sha256": "abf977b3a82b77dadc74b2b444b15b7cb81d3886c5b5c873f80bf7a045889518",
+      "config_sha256": "21526ee5bb8d4ec10e85ca0577257e6b55b9122db54101a2f3aa8d2921a1a3e1",
+      "target_metrics_sha256": "e001e542ff2f2e6df52e8caa352b54c11ffded15bb2393a2d86cd6d0833d4e04"
+    },
+    "p1__Shen__E2_patch_hstu__f1__all__s203": {
+      "root": "D:\\crossatten\\worktrees\\s14-stem-mixer\\14-stem-mixer-attribution",
+      "model_sha256": "d22c5da7a7fae075a789f7d408e7c7b7486a670c6a503eea4cd4096ad9b38205",
+      "config_sha256": "01bbdd2afe4e718f8dc5cdd73a5b6576fb2607d1be8b9f0e9c8a31de020e8b3b",
+      "target_metrics_sha256": "b695171a6f26e7be92bd3a4862db3e88f5c3421c2188636e56b2c38cdd16e6f5"
+    },
+    "p1__Shen__A1_mha__f0__all__s201": {
+      "root": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms",
+      "model_sha256": "be14533e73c5b83c3534e09a5837dc013f5e5b001b95396984c8f6d4e8ec6833",
+      "config_sha256": "6a1c50c769db70664cc71215841a206d675b28dc1df49f4a3690be26285b0955",
+      "target_metrics_sha256": "3de31ad050848db6c2868f6279b3c3e6899534573aa588b2ff64f9101c08007a"
+    },
+    "p1__Shen__A1_mha__f0__all__s202": {
+      "root": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms",
+      "model_sha256": "abf47db65b28d02f51bde927ba9a0a5473f445df4cbb53a5f0f26938af7334ca",
+      "config_sha256": "9f3e573b8ab50e238d6c4fac55d23138720ebcf7db733a74873c280faa8b3dc5",
+      "target_metrics_sha256": "daee401ed2918824194ca5ab20512f9c5207f9b4b2561d869cdfb16cd997aa89"
+    },
+    "p1__Shen__A1_mha__f0__all__s203": {
+      "root": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms",
+      "model_sha256": "8abe846f047a4b215aeb1f5c57baad2e25b21614cb329b27e12f1a4e9e11e7cb",
+      "config_sha256": "c1745e1fe10ee5603e0e4ca054700e0369e6c6d1862c8023f1b4327cd442524a",
+      "target_metrics_sha256": "1b3960103702512105df7d5da98f4cc94a793867f5e9798c6ab93120a522c22c"
+    },
+    "p1__Shen__A1_mha__f1__all__s201": {
+      "root": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms",
+      "model_sha256": "0996333761c13f30703acb0e3051ff676ea1f5dfa6fb1f0b04b4ccc3a7a48119",
+      "config_sha256": "b591db1b8c418c7f66a9da39a7064b57c33bc7cd9dd3f0f0d263a4f8cc35071a",
+      "target_metrics_sha256": "dd1cde57d561acfc40b9ba4ff8f47b48f5a5994bff8c0902627821ce21864a4f"
+    },
+    "p1__Shen__A1_mha__f1__all__s202": {
+      "root": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms",
+      "model_sha256": "75b252c7984d013eba842b0691b44a7f3af96bbb830aba3617823d4f0c4048c9",
+      "config_sha256": "551d33ff33cd94d7191a736d6ed2247b21436d3adba7536952bdc5a46791356b",
+      "target_metrics_sha256": "d1d570bd3bc67c4acc272c0706284ee14ee4ccbd47749fb213308db32d374426"
+    },
+    "p1__Shen__A1_mha__f1__all__s203": {
+      "root": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms",
+      "model_sha256": "fec5bfade4d1d90faf89dc6f5b42dec243e3a7e3f2cb06b15cd255bd79f17314",
+      "config_sha256": "3ec97b0e80816abbe7963fcb0494ba5a18cd54c01a8db7899c8c3a3fd7fe4895",
+      "target_metrics_sha256": "a28fe0e4caf273fa2949c4e0a2bd15b2aaae67f8c5186ec6cdf638744d32c726"
+    },
+    "p1__Shen__A3_rfhstu__f0__all__s201": {
+      "root": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms",
+      "model_sha256": "d89d842c76b8d9a689d71e810c16d75b8003a2ab1adb39e646128c8bd3634516",
+      "config_sha256": "391de504edf4f7a7c9be172cee42429856d543784949d6c3c6ca3d7e28ecfea8",
+      "target_metrics_sha256": "651bd1db95fd35ca53b166cb64b592426419a9d0443b68bf218cc2bcacf8526f"
+    },
+    "p1__Shen__A3_rfhstu__f0__all__s202": {
+      "root": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms",
+      "model_sha256": "43ad62d24494dcdb5dab6ea4d81c2189e75b1a7526721192741e7faefb076ab4",
+      "config_sha256": "3701ed6ef28c73826b3dea400a7f8ac79cd8563a5bb53292c7bd85df4a3db50c",
+      "target_metrics_sha256": "d56690fc27860b6b54b118590718f04674e1e166af9d2ecfa96f9ff879d39aac"
+    },
+    "p1__Shen__A3_rfhstu__f0__all__s203": {
+      "root": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms",
+      "model_sha256": "99140a5df3eb1c59ebfedcc87d2ba125904cea4dadff847c1506569e7f3abc41",
+      "config_sha256": "3443fcea56fc4a04d9b25aedf6dd4721ab079748794a913f69523b3c37d51040",
+      "target_metrics_sha256": "930cf466bd6d772efa6a996a966d0245f800ee837ca0d3895b763ee79dd2fcc1"
+    },
+    "p1__Shen__A3_rfhstu__f1__all__s201": {
+      "root": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms",
+      "model_sha256": "947876232a96db146abb7fd9106cf9ad81eb741033d5b1ec92ef1371881d6085",
+      "config_sha256": "7077990693a9ddb8e4fd98287fd449aae30a68a2205b42fd5208fb7a1d230084",
+      "target_metrics_sha256": "a12f9423ceae3ab54c9cc3e77a5e7156e20c880958924ddeac17623dd6d4b802"
+    },
+    "p1__Shen__A3_rfhstu__f1__all__s202": {
+      "root": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms",
+      "model_sha256": "275c9143e47d94b5e85dabe9b257d26fc6721932cb3904ea6599b682d331f00d",
+      "config_sha256": "cb1e2459ff8d1f38a6bf23b3cc2f0fed6152d0d009881f05f5ba7861bbfe7ee3",
+      "target_metrics_sha256": "50729a0822d08d7bfacfb1ff382fcdf4fa84e95bf66b30c5e3493a73aef71c84"
+    },
+    "p1__Shen__A3_rfhstu__f1__all__s203": {
+      "root": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms",
+      "model_sha256": "4199caff9ac70e54d9147a108f91b576da2d427fe22face21dacc39d88912cd3",
+      "config_sha256": "bd21b014507a4d666789f568cd547969e1c240f6c32d608331c1cfc7672af253",
+      "target_metrics_sha256": "62dc894ed7226fb7b05e466ec669f341ef4a5301b350bf2bdbd8674c525e60fc"
+    }
+  },
+  "jobs": [
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "C2_lite_mha",
+      "fold": 0,
+      "seed": 201
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "C2_lite_hstu",
+      "fold": 0,
+      "seed": 201
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "C2_lite_mha",
+      "fold": 0,
+      "seed": 202
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "C2_lite_hstu",
+      "fold": 0,
+      "seed": 202
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "C2_lite_mha",
+      "fold": 0,
+      "seed": 203
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "C2_lite_hstu",
+      "fold": 0,
+      "seed": 203
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "C2_lite_mha",
+      "fold": 1,
+      "seed": 201
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "C2_lite_hstu",
+      "fold": 1,
+      "seed": 201
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "C2_lite_mha",
+      "fold": 1,
+      "seed": 202
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "C2_lite_hstu",
+      "fold": 1,
+      "seed": 202
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "C2_lite_mha",
+      "fold": 1,
+      "seed": 203
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "C2_lite_hstu",
+      "fold": 1,
+      "seed": 203
+    }
+  ],
+  "data": "Unchanged P-H5x160; source160/TX, sourceval40/TX; target only after all12 checkpoint seals; no blind",
+  "training": "Frozen S13 fit function; AdamW lr1e-3 wd5e-4 batch64 AWGN[0,50] warm5/cos200; source RX-equal CE checkpoint; paired seed/data/noise; eval batch128",
+  "purpose": "HStem versus automatically parameter-matched Patch-Lite under both mixers; not proof of unique hierarchical causation",
+  "primary_contrasts": [
+    "HStem-Lite for MHA",
+    "HStem-Lite for HSTU",
+    "Lite-Patch for MHA",
+    "Lite-Patch for HSTU"
+  ],
+  "uncertainty": "RX cluster5000 bootstrap conditional on fitted seeds; report6 pair directions, worstRX and macroF1; confirm reporting only",
+  "no_bn": {
+    "status": "NOT_SCHEDULED",
+    "new_fits": 0
+  },
+  "limits": [
+    "Grouped low-rank Patch-Lite changes inductive bias, not capacity alone",
+    "CNN RF differs from physical/global receptive field",
+    "No tuning by dev/confirm results"
+  ],
+  "execution": {
+    "gpu": 0,
+    "concurrency": 1,
+    "automatic_retry": false,
+    "new_formal_fits": 12
+  }
+}

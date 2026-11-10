@@ -1,0 +1,380 @@
+{
+  "E1_patch_mha": {
+    "params": 571434,
+    "bn_layers": 2,
+    "cnn_receptive_field": 266,
+    "token_stride": 256,
+    "first_token_center": 127.5,
+    "tokens": 32,
+    "path": [
+      {
+        "layer": "0",
+        "kernel": 7,
+        "stride": 1,
+        "padding": 3,
+        "groups": 1,
+        "channels": [
+          5,
+          32
+        ],
+        "output_length": 8192
+      },
+      {
+        "layer": "3",
+        "kernel": 5,
+        "stride": 1,
+        "padding": 2,
+        "groups": 1,
+        "channels": [
+          32,
+          32
+        ],
+        "output_length": 8192
+      },
+      {
+        "layer": "tokenize.",
+        "kernel": 256,
+        "stride": 256,
+        "padding": 0,
+        "groups": 1,
+        "channels": [
+          32,
+          64
+        ],
+        "output_length": 32
+      }
+    ],
+    "scope": "CNN coordinate only: global band-limit and FFT views mean this is not the end-to-end physical RF receptive field"
+  },
+  "E2_patch_hstu": {
+    "params": 580136,
+    "bn_layers": 2,
+    "cnn_receptive_field": 266,
+    "token_stride": 256,
+    "first_token_center": 127.5,
+    "tokens": 32,
+    "path": [
+      {
+        "layer": "0",
+        "kernel": 7,
+        "stride": 1,
+        "padding": 3,
+        "groups": 1,
+        "channels": [
+          5,
+          32
+        ],
+        "output_length": 8192
+      },
+      {
+        "layer": "3",
+        "kernel": 5,
+        "stride": 1,
+        "padding": 2,
+        "groups": 1,
+        "channels": [
+          32,
+          32
+        ],
+        "output_length": 8192
+      },
+      {
+        "layer": "tokenize.",
+        "kernel": 256,
+        "stride": 256,
+        "padding": 0,
+        "groups": 1,
+        "channels": [
+          32,
+          64
+        ],
+        "output_length": 32
+      }
+    ],
+    "scope": "CNN coordinate only: global band-limit and FFT views mean this is not the end-to-end physical RF receptive field"
+  },
+  "A1_mha": {
+    "params": 133690,
+    "bn_layers": 5,
+    "cnn_receptive_field": 350,
+    "token_stride": 256,
+    "first_token_center": 127.5,
+    "tokens": 32,
+    "path": [
+      {
+        "layer": "0",
+        "kernel": 7,
+        "stride": 1,
+        "padding": 3,
+        "groups": 1,
+        "channels": [
+          5,
+          32
+        ],
+        "output_length": 8192
+      },
+      {
+        "layer": "3",
+        "kernel": 5,
+        "stride": 1,
+        "padding": 2,
+        "groups": 1,
+        "channels": [
+          32,
+          32
+        ],
+        "output_length": 8192
+      },
+      {
+        "layer": "tokenize.0",
+        "kernel": 8,
+        "stride": 4,
+        "padding": 2,
+        "groups": 1,
+        "channels": [
+          32,
+          48
+        ],
+        "output_length": 2048
+      },
+      {
+        "layer": "tokenize.3",
+        "kernel": 8,
+        "stride": 4,
+        "padding": 2,
+        "groups": 1,
+        "channels": [
+          48,
+          64
+        ],
+        "output_length": 512
+      },
+      {
+        "layer": "tokenize.6",
+        "kernel": 8,
+        "stride": 4,
+        "padding": 2,
+        "groups": 1,
+        "channels": [
+          64,
+          64
+        ],
+        "output_length": 128
+      },
+      {
+        "layer": "tokenize.9",
+        "kernel": 4,
+        "stride": 4,
+        "padding": 0,
+        "groups": 1,
+        "channels": [
+          64,
+          64
+        ],
+        "output_length": 32
+      }
+    ],
+    "scope": "CNN coordinate only: global band-limit and FFT views mean this is not the end-to-end physical RF receptive field"
+  },
+  "A3_rfhstu": {
+    "params": 142392,
+    "bn_layers": 5,
+    "cnn_receptive_field": 350,
+    "token_stride": 256,
+    "first_token_center": 127.5,
+    "tokens": 32,
+    "path": [
+      {
+        "layer": "0",
+        "kernel": 7,
+        "stride": 1,
+        "padding": 3,
+        "groups": 1,
+        "channels": [
+          5,
+          32
+        ],
+        "output_length": 8192
+      },
+      {
+        "layer": "3",
+        "kernel": 5,
+        "stride": 1,
+        "padding": 2,
+        "groups": 1,
+        "channels": [
+          32,
+          32
+        ],
+        "output_length": 8192
+      },
+      {
+        "layer": "tokenize.0",
+        "kernel": 8,
+        "stride": 4,
+        "padding": 2,
+        "groups": 1,
+        "channels": [
+          32,
+          48
+        ],
+        "output_length": 2048
+      },
+      {
+        "layer": "tokenize.3",
+        "kernel": 8,
+        "stride": 4,
+        "padding": 2,
+        "groups": 1,
+        "channels": [
+          48,
+          64
+        ],
+        "output_length": 512
+      },
+      {
+        "layer": "tokenize.6",
+        "kernel": 8,
+        "stride": 4,
+        "padding": 2,
+        "groups": 1,
+        "channels": [
+          64,
+          64
+        ],
+        "output_length": 128
+      },
+      {
+        "layer": "tokenize.9",
+        "kernel": 4,
+        "stride": 4,
+        "padding": 0,
+        "groups": 1,
+        "channels": [
+          64,
+          64
+        ],
+        "output_length": 32
+      }
+    ],
+    "scope": "CNN coordinate only: global band-limit and FFT views mean this is not the end-to-end physical RF receptive field"
+  },
+  "C2_lite_mha": {
+    "params": 134266,
+    "bn_layers": 2,
+    "cnn_receptive_field": 266,
+    "token_stride": 256,
+    "first_token_center": 127.5,
+    "tokens": 32,
+    "path": [
+      {
+        "layer": "0",
+        "kernel": 7,
+        "stride": 1,
+        "padding": 3,
+        "groups": 1,
+        "channels": [
+          5,
+          32
+        ],
+        "output_length": 8192
+      },
+      {
+        "layer": "3",
+        "kernel": 5,
+        "stride": 1,
+        "padding": 2,
+        "groups": 1,
+        "channels": [
+          32,
+          32
+        ],
+        "output_length": 8192
+      },
+      {
+        "layer": "tokenize.0",
+        "kernel": 256,
+        "stride": 256,
+        "padding": 0,
+        "groups": 8,
+        "channels": [
+          32,
+          80
+        ],
+        "output_length": 32
+      },
+      {
+        "layer": "tokenize.1",
+        "kernel": 1,
+        "stride": 1,
+        "padding": 0,
+        "groups": 1,
+        "channels": [
+          80,
+          64
+        ],
+        "output_length": 32
+      }
+    ],
+    "scope": "CNN coordinate only: global band-limit and FFT views mean this is not the end-to-end physical RF receptive field"
+  },
+  "C2_lite_hstu": {
+    "params": 142968,
+    "bn_layers": 2,
+    "cnn_receptive_field": 266,
+    "token_stride": 256,
+    "first_token_center": 127.5,
+    "tokens": 32,
+    "path": [
+      {
+        "layer": "0",
+        "kernel": 7,
+        "stride": 1,
+        "padding": 3,
+        "groups": 1,
+        "channels": [
+          5,
+          32
+        ],
+        "output_length": 8192
+      },
+      {
+        "layer": "3",
+        "kernel": 5,
+        "stride": 1,
+        "padding": 2,
+        "groups": 1,
+        "channels": [
+          32,
+          32
+        ],
+        "output_length": 8192
+      },
+      {
+        "layer": "tokenize.0",
+        "kernel": 256,
+        "stride": 256,
+        "padding": 0,
+        "groups": 8,
+        "channels": [
+          32,
+          80
+        ],
+        "output_length": 32
+      },
+      {
+        "layer": "tokenize.1",
+        "kernel": 1,
+        "stride": 1,
+        "padding": 0,
+        "groups": 1,
+        "channels": [
+          80,
+          64
+        ],
+        "output_length": 32
+      }
+    ],
+    "scope": "CNN coordinate only: global band-limit and FFT views mean this is not the end-to-end physical RF receptive field"
+  }
+}

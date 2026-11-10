@@ -1,0 +1,38 @@
+2026-11-09T09:15:23+08:00 FIT p1__Shen__C2_lite_mha__f0__all__s201
+2026-11-09T09:31:49+08:00 FIT p1__Shen__C2_lite_hstu__f0__all__s201
+2026-11-09T09:48:29+08:00 FIT p1__Shen__C2_lite_mha__f0__all__s202
+2026-11-09T10:04:44+08:00 FIT p1__Shen__C2_lite_hstu__f0__all__s202
+2026-11-09T10:21:29+08:00 FIT p1__Shen__C2_lite_mha__f0__all__s203
+2026-11-09T10:38:31+08:00 FIT p1__Shen__C2_lite_hstu__f0__all__s203
+2026-11-09T10:55:55+08:00 FIT p1__Shen__C2_lite_mha__f1__all__s201
+2026-11-09T11:12:51+08:00 FIT p1__Shen__C2_lite_hstu__f1__all__s201
+2026-11-09T11:30:05+08:00 FIT p1__Shen__C2_lite_mha__f1__all__s202
+2026-11-09T11:47:07+08:00 FIT p1__Shen__C2_lite_hstu__f1__all__s202
+2026-11-09T12:04:13+08:00 FIT p1__Shen__C2_lite_mha__f1__all__s203
+2026-11-09T12:21:10+08:00 FIT p1__Shen__C2_lite_hstu__f1__all__s203
+[exp/s15-hstem-attribution f1b9f26] S15 seal all12 matched-parameter source checkpoints before receiver evaluation
+ 1 file changed, 18 insertions(+)
+ create mode 100644 15-hstem-attribution/decision_p1_source.json
+2026-11-09T12:38:26+08:00 EVAL p1__Shen__C2_lite_mha__f0__all__s201
+2026-11-09T12:38:50+08:00 EVAL p1__Shen__C2_lite_hstu__f0__all__s201
+2026-11-09T12:39:14+08:00 EVAL p1__Shen__C2_lite_mha__f0__all__s202
+2026-11-09T12:39:37+08:00 EVAL p1__Shen__C2_lite_hstu__f0__all__s202
+2026-11-09T12:40:01+08:00 EVAL p1__Shen__C2_lite_mha__f0__all__s203
+2026-11-09T12:40:25+08:00 EVAL p1__Shen__C2_lite_hstu__f0__all__s203
+2026-11-09T12:40:38+08:00 EVAL p1__Shen__C2_lite_mha__f1__all__s201
+2026-11-09T12:40:58+08:00 EVAL p1__Shen__C2_lite_hstu__f1__all__s201
+2026-11-09T12:41:22+08:00 EVAL p1__Shen__C2_lite_mha__f1__all__s202
+2026-11-09T12:41:45+08:00 EVAL p1__Shen__C2_lite_hstu__f1__all__s202
+2026-11-09T12:41:53+08:00 EVAL p1__Shen__C2_lite_mha__f1__all__s203
+2026-11-09T12:42:17+08:00 EVAL p1__Shen__C2_lite_hstu__f1__all__s203
+[exp/s15-hstem-attribution 2032405] S15 finalize matched-parameter attribution and all paired outcomes
+ 9 files changed, 1089 insertions(+)
+ create mode 100644 15-hstem-attribution/RESULTS.zh-CN.md
+ create mode 100644 15-hstem-attribution/STATUS.json
+ create mode 100644 15-hstem-attribution/costs.csv
+ create mode 100644 15-hstem-attribution/costs.json
+ create mode 100644 15-hstem-attribution/decision.json
+ create mode 100644 15-hstem-attribution/paired_contrasts.csv
+ create mode 100644 15-hstem-attribution/paired_deltas.csv
+ create mode 100644 15-hstem-attribution/receiver_metrics.csv
+ create mode 100644 15-hstem-attribution/summary.json
