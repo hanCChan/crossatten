@@ -1,0 +1,37 @@
+{
+  "job": {
+    "phase": "pilot",
+    "dataset": "ManyRx",
+    "arm": "R0_hstu",
+    "fold": 1,
+    "seed": 17001,
+    "split_seed": 16001,
+    "group": "first"
+  },
+  "model_seed": 317586457,
+  "source_split_seed": 16001,
+  "epochs_budget": 20,
+  "effective_batch": 128,
+  "microbatch": 128,
+  "optimizer": "AdamW lr1e-3 wd5e-4;warmup2/cos20;clip1;no dropout",
+  "precision": "autocast BF16;trainable parameters/optimizer FP32",
+  "initialization_sha256": "348c31453d8b95c71d75d8a6c5e840b8a8f0c953efae14afd1075a2ed3743fdb",
+  "rf_tokenizer_frozen": true,
+  "rf_front_sha256": "95a037159b7d5a04ec08805abaf5b6bdf6e8d92b4691131074c0040b071c9003",
+  "rf_active_params": 41776,
+  "total_active_params": 91128,
+  "trainable_params": 49352,
+  "audit": {
+    "total_active_tail_params": 49352,
+    "trainable_tail_params": 49352,
+    "unused_word_embedding_params": 0,
+    "lm_head_params": 0,
+    "details": {
+      "backbone": "historical-style fresh tail",
+      "vocabulary_params": 0
+    }
+  },
+  "git_sha": "6f2f0133d9c4f57f9d37e28440ccd8a90fbee0dc",
+  "registration_sha256": "68a7a73437a1ad90ea6409e04906dd7a1705d3cdeef1d2568bdffb5794dfda03",
+  "model_manifest_sha256": "f3dedd093e82cc7f748649496b59a3537108d8ddf160fa695d55298fbce96b9b"
+}

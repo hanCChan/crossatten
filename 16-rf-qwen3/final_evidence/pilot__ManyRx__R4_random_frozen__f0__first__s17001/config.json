@@ -1,0 +1,42 @@
+{
+  "job": {
+    "phase": "pilot",
+    "dataset": "ManyRx",
+    "arm": "R4_random_frozen",
+    "fold": 0,
+    "seed": 17001,
+    "split_seed": 16001,
+    "group": "first"
+  },
+  "model_seed": 745125013,
+  "source_split_seed": 16001,
+  "epochs_budget": 20,
+  "effective_batch": 128,
+  "microbatch": 32,
+  "optimizer": "AdamW lr1e-3 wd5e-4;warmup2/cos20;clip1;no dropout",
+  "precision": "autocast BF16;trainable parameters/optimizer FP32",
+  "initialization_sha256": "7966b1c8674df4a1e6d958bb2244412350a2eab415a9bb416eab1fcc1faed4f2",
+  "rf_tokenizer_frozen": true,
+  "rf_front_sha256": "be36982a58f93c3367ea5de30126d7ad4cf13eab2ce5c74d8f7d5f2ff3fe2d48",
+  "rf_active_params": 41776,
+  "total_active_params": 440587066,
+  "trainable_params": 77834,
+  "audit": {
+    "total_active_tail_params": 440545290,
+    "trainable_tail_params": 77834,
+    "unused_word_embedding_params": 0,
+    "lm_head_params": 0,
+    "details": {
+      "instantiated_params_before_pruning": 596049920,
+      "discarded_embedding_params": 155582464,
+      "lm_head_instantiated": false,
+      "backbone_params_after_pruning": 440467456,
+      "pretrained": false,
+      "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "loading": {}
+    }
+  },
+  "git_sha": "6f2f0133d9c4f57f9d37e28440ccd8a90fbee0dc",
+  "registration_sha256": "68a7a73437a1ad90ea6409e04906dd7a1705d3cdeef1d2568bdffb5794dfda03",
+  "model_manifest_sha256": "f3dedd093e82cc7f748649496b59a3537108d8ddf160fa695d55298fbce96b9b"
+}

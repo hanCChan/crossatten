@@ -1,0 +1,37 @@
+{
+  "job": {
+    "phase": "pilot",
+    "dataset": "ManyRx",
+    "arm": "R2_transformer",
+    "fold": 3,
+    "seed": 17001,
+    "split_seed": 16001,
+    "group": "first"
+  },
+  "model_seed": 2486338169,
+  "source_split_seed": 16001,
+  "epochs_budget": 20,
+  "effective_batch": 128,
+  "microbatch": 128,
+  "optimizer": "AdamW lr1e-3 wd5e-4;warmup2/cos20;clip1;no dropout",
+  "precision": "autocast BF16;trainable parameters/optimizer FP32",
+  "initialization_sha256": "7829d17a2c4b514cd8cb5756612ed4d1a9f4fe1ec96b2789c444c9ee7666e027",
+  "rf_tokenizer_frozen": true,
+  "rf_front_sha256": "08b9cf11c261d8e996bde8bc80dceb7006c9182674101ed623b100616178fee3",
+  "rf_active_params": 41776,
+  "total_active_params": 840858,
+  "trainable_params": 799082,
+  "audit": {
+    "total_active_tail_params": 799082,
+    "trainable_tail_params": 799082,
+    "unused_word_embedding_params": 0,
+    "lm_head_params": 0,
+    "details": {
+      "parameter_match": 0.0019090170593014655,
+      "vocabulary_params": 0
+    }
+  },
+  "git_sha": "6f2f0133d9c4f57f9d37e28440ccd8a90fbee0dc",
+  "registration_sha256": "68a7a73437a1ad90ea6409e04906dd7a1705d3cdeef1d2568bdffb5794dfda03",
+  "model_manifest_sha256": "f3dedd093e82cc7f748649496b59a3537108d8ddf160fa695d55298fbce96b9b"
+}

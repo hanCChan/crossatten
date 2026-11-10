@@ -1,0 +1,24 @@
+D:\miniconda\envs\crossatten4060\Lib\site-packages\torch\autograd\graph.py:825: UserWarning: cuDNN Attention defaults to a non-deterministic algorithm. To explicitly enable determinism call torch.use_deterministic_algorithms(True, warn_only=False). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\transformers\cuda\attention_backward.cu:190.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+D:\miniconda\envs\crossatten4060\Lib\site-packages\torch\autograd\graph.py:825: UserWarning: cuDNN SDPA backward got grad_output.strides() != output.strides(), attempting to materialize a grad_output with matching strides... (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\cudnn\MHA.cpp:676.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+pilot__ManyRx__R2_transformer__f1__first__s17001 epoch 1 sourceCE 0.13289 seconds 5.4
+pilot__ManyRx__R2_transformer__f1__first__s17001 epoch 2 sourceCE 0.13896 seconds 8.7
+pilot__ManyRx__R2_transformer__f1__first__s17001 epoch 3 sourceCE 0.14585 seconds 12.1
+pilot__ManyRx__R2_transformer__f1__first__s17001 epoch 4 sourceCE 0.13844 seconds 15.1
+pilot__ManyRx__R2_transformer__f1__first__s17001 epoch 5 sourceCE 0.14435 seconds 18.3
+pilot__ManyRx__R2_transformer__f1__first__s17001 epoch 6 sourceCE 0.14558 seconds 21.5
+pilot__ManyRx__R2_transformer__f1__first__s17001 epoch 7 sourceCE 0.14775 seconds 24.8
+pilot__ManyRx__R2_transformer__f1__first__s17001 epoch 8 sourceCE 0.14298 seconds 28.0
+pilot__ManyRx__R2_transformer__f1__first__s17001 epoch 9 sourceCE 0.15379 seconds 31.2
+pilot__ManyRx__R2_transformer__f1__first__s17001 epoch 10 sourceCE 0.1524 seconds 34.4
+pilot__ManyRx__R2_transformer__f1__first__s17001 epoch 11 sourceCE 0.14416 seconds 37.6
+pilot__ManyRx__R2_transformer__f1__first__s17001 epoch 12 sourceCE 0.15908 seconds 40.9
+pilot__ManyRx__R2_transformer__f1__first__s17001 epoch 13 sourceCE 0.16127 seconds 44.0
+pilot__ManyRx__R2_transformer__f1__first__s17001 epoch 14 sourceCE 0.16399 seconds 47.1
+pilot__ManyRx__R2_transformer__f1__first__s17001 epoch 15 sourceCE 0.17067 seconds 50.3
+pilot__ManyRx__R2_transformer__f1__first__s17001 epoch 16 sourceCE 0.17148 seconds 53.5
+pilot__ManyRx__R2_transformer__f1__first__s17001 epoch 17 sourceCE 0.17312 seconds 56.6
+pilot__ManyRx__R2_transformer__f1__first__s17001 epoch 18 sourceCE 0.17361 seconds 59.9
+pilot__ManyRx__R2_transformer__f1__first__s17001 epoch 19 sourceCE 0.17388 seconds 63.2
+pilot__ManyRx__R2_transformer__f1__first__s17001 epoch 20 sourceCE 0.17387 seconds 66.4

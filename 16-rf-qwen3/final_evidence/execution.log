@@ -1,0 +1,43 @@
+[exp/s16-rf-qwen3 2758c13] S16 freeze synthetic resource and gradient checks before RF pilot
+ 1 file changed, 671 insertions(+)
+ create mode 100644 16-rf-qwen3/P0_ENGINEERING.json
+2026-11-09T12:44:48+08:00 FIT pilot__ManyRx__R0_mha__f0__first__s17001
+2026-11-09T12:45:44+08:00 FIT pilot__ManyRx__R0_hstu__f0__first__s17001
+2026-11-09T12:46:42+08:00 FIT pilot__ManyRx__R1_qwen_small__f0__first__s17001
+2026-11-09T12:49:15+08:00 FIT pilot__ManyRx__R2_transformer__f0__first__s17001
+2026-11-09T12:50:49+08:00 FIT pilot__ManyRx__R3_pretrained_frozen__f0__first__s17001
+2026-11-09T13:41:58+08:00 FIT pilot__ManyRx__R4_random_frozen__f0__first__s17001
+2026-11-09T14:33:43+08:00 FIT pilot__ManyRx__R5_pretrained_lora__f0__first__s17001
+2026-11-09T15:31:58+08:00 FIT pilot__ManyRx__R0_mha__f1__first__s17001
+2026-11-09T15:32:50+08:00 FIT pilot__ManyRx__R0_hstu__f1__first__s17001
+2026-11-09T15:33:35+08:00 FIT pilot__ManyRx__R1_qwen_small__f1__first__s17001
+2026-11-09T15:35:36+08:00 FIT pilot__ManyRx__R2_transformer__f1__first__s17001
+2026-11-09T15:37:07+08:00 FIT pilot__ManyRx__R3_pretrained_frozen__f1__first__s17001
+2026-11-09T16:27:51+08:00 FIT pilot__ManyRx__R4_random_frozen__f1__first__s17001
+2026-11-09T17:19:46+08:00 FIT pilot__ManyRx__R5_pretrained_lora__f1__first__s17001
+2026-11-09T18:16:53+08:00 FIT pilot__ManyRx__R0_mha__f2__first__s17001
+2026-11-09T18:17:48+08:00 FIT pilot__ManyRx__R0_hstu__f2__first__s17001
+2026-11-09T18:18:42+08:00 FIT pilot__ManyRx__R1_qwen_small__f2__first__s17001
+2026-11-09T18:21:21+08:00 FIT pilot__ManyRx__R2_transformer__f2__first__s17001
+2026-11-09T18:22:54+08:00 FIT pilot__ManyRx__R3_pretrained_frozen__f2__first__s17001
+2026-11-09T19:15:02+08:00 FIT pilot__ManyRx__R4_random_frozen__f2__first__s17001
+2026-11-09T20:07:11+08:00 FIT pilot__ManyRx__R5_pretrained_lora__f2__first__s17001
+2026-11-09T21:01:11+08:00 FIT pilot__ManyRx__R0_mha__f3__first__s17001
+2026-11-09T21:01:57+08:00 FIT pilot__ManyRx__R0_hstu__f3__first__s17001
+2026-11-09T21:02:45+08:00 FIT pilot__ManyRx__R1_qwen_small__f3__first__s17001
+2026-11-09T21:04:52+08:00 FIT pilot__ManyRx__R2_transformer__f3__first__s17001
+2026-11-09T21:06:10+08:00 FIT pilot__ManyRx__R3_pretrained_frozen__f3__first__s17001
+2026-11-09T21:56:15+08:00 FIT pilot__ManyRx__R4_random_frozen__f3__first__s17001
+2026-11-09T22:46:14+08:00 FIT pilot__ManyRx__R5_pretrained_lora__f3__first__s17001
+[exp/s16-rf-qwen3 0fd51b4] S16 freeze pilot complete paired source-only outcomes and gate
+ 5 files changed, 834 insertions(+)
+ create mode 100644 16-rf-qwen3/PILOT_RESULTS.zh-CN.md
+ create mode 100644 16-rf-qwen3/decision_pilot.json
+ create mode 100644 16-rf-qwen3/pilot_fit_metrics.csv
+ create mode 100644 16-rf-qwen3/pilot_paired_deltas.csv
+ create mode 100644 16-rf-qwen3/pilot_receiver_metrics.csv
+[exp/s16-rf-qwen3 4de5f8c] S16 finalize bounded RF-Qwen3 source exploration
+ 3 files changed, 376 insertions(+)
+ create mode 100644 16-rf-qwen3/RESULTS.zh-CN.md
+ create mode 100644 16-rf-qwen3/STATUS.json
+ create mode 100644 16-rf-qwen3/summary.json
