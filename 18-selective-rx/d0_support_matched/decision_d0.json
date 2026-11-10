@@ -1,0 +1,189 @@
+{
+  "time": "2026-11-10T13:19:24+08:00",
+  "status": "STOP_D0_MECHANISM_GATE",
+  "admitted": false,
+  "primary_layer": "tokens",
+  "rank": 3,
+  "alpha": 0.5,
+  "gates": {
+    "stability": {
+      "packet_halves": 0.5,
+      "days": 0.35,
+      "tx_halves": 0.35,
+      "source_validation": 0.5
+    },
+    "min_val_rx_fraction": 0.15,
+    "min_rx_reduction_advantage_over_random": 0.05,
+    "min_tx_reduction_advantage_of_tx_control": 0.05,
+    "min_ce_advantage_over_random": 0.005,
+    "min_ce_advantage_over_tx_control": 0.01,
+    "max_accuracy_drop_pp": 1.0,
+    "max_f1_drop_pp": 1.0,
+    "max_ce_increase": 0.05,
+    "max_margin_drop_sd": 0.1,
+    "max_worst_paired_rx_drop_pp": 2.0,
+    "max_worst_paired_tx_drop_pp": 5.0,
+    "stable_and_specific_folds": 3,
+    "require_preservation_all_folds": true,
+    "require_rx_cluster_accuracy_advantage_ci_lower_gt_zero": true
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "stability_checks": {
+        "stable_packet_halves": true,
+        "stable_days": true,
+        "stable_tx_halves": false,
+        "stable_source_validation": true,
+        "rx_support": false
+      },
+      "specificity_checks": {
+        "rx_scatter": false,
+        "tx_protection": true,
+        "random_ce": false,
+        "tx_control_ce": true
+      },
+      "preservation_checks": {
+        "accuracy": true,
+        "f1": true,
+        "ce": true,
+        "margin": true,
+        "worst_rx": true,
+        "worst_tx": true
+      },
+      "stable": false,
+      "specific": false,
+      "preserved": true
+    },
+    {
+      "fold": 1,
+      "stability_checks": {
+        "stable_packet_halves": true,
+        "stable_days": true,
+        "stable_tx_halves": false,
+        "stable_source_validation": true,
+        "rx_support": false
+      },
+      "specificity_checks": {
+        "rx_scatter": false,
+        "tx_protection": true,
+        "random_ce": false,
+        "tx_control_ce": true
+      },
+      "preservation_checks": {
+        "accuracy": true,
+        "f1": true,
+        "ce": true,
+        "margin": true,
+        "worst_rx": true,
+        "worst_tx": true
+      },
+      "stable": false,
+      "specific": false,
+      "preserved": true
+    },
+    {
+      "fold": 2,
+      "stability_checks": {
+        "stable_packet_halves": true,
+        "stable_days": true,
+        "stable_tx_halves": true,
+        "stable_source_validation": true,
+        "rx_support": false
+      },
+      "specificity_checks": {
+        "rx_scatter": true,
+        "tx_protection": true,
+        "random_ce": false,
+        "tx_control_ce": true
+      },
+      "preservation_checks": {
+        "accuracy": true,
+        "f1": true,
+        "ce": true,
+        "margin": true,
+        "worst_rx": true,
+        "worst_tx": true
+      },
+      "stable": false,
+      "specific": false,
+      "preserved": true
+    },
+    {
+      "fold": 3,
+      "stability_checks": {
+        "stable_packet_halves": false,
+        "stable_days": true,
+        "stable_tx_halves": false,
+        "stable_source_validation": true,
+        "rx_support": false
+      },
+      "specificity_checks": {
+        "rx_scatter": true,
+        "tx_protection": true,
+        "random_ce": false,
+        "tx_control_ce": true
+      },
+      "preservation_checks": {
+        "accuracy": true,
+        "f1": true,
+        "ce": true,
+        "margin": true,
+        "worst_rx": true,
+        "worst_tx": true
+      },
+      "stable": false,
+      "specific": false,
+      "preserved": true
+    }
+  ],
+  "receiver_cluster_selective_vs_random": {
+    "mean_pp": 0.029703803369611297,
+    "ci95_pp": [
+      -0.06574016903513576,
+      0.12261605347355038
+    ],
+    "independent_rx": 26,
+    "per_rx_pp": {
+      "18-19": -0.08987093217713109,
+      "18-2": -0.12412420148660101,
+      "19-1": 0.07095931022989,
+      "19-19": -0.16631940198544118,
+      "19-2": 0.021939396911807574,
+      "19-20": -0.058106381718658895,
+      "20-1": 0.1518744399782094,
+      "20-19": 0.07628081077750704,
+      "20-20": -0.08760209991851935,
+      "23-1": 0.5273651668847931,
+      "23-3": 0.5072418202016427,
+      "23-5": 0.029095497548325966,
+      "23-6": 0.1837196312334403,
+      "23-7": -0.13533833059711972,
+      "24-13": -0.16201014012359183,
+      "24-16": 0.20760727855646532,
+      "24-5": -0.7187308863286482,
+      "24-6": 0.21640688307355363,
+      "7-14": -0.04169272461955383,
+      "7-7": 0.018705467693665618,
+      "13-14": 0.1780939678767135,
+      "13-7": 0.43691305064164077,
+      "14-7": -0.054377379010328575,
+      "8-14": 0.08695652173913437,
+      "8-7": -0.1877453490356673,
+      "8-8": -0.11494252873563426
+    },
+    "bootstrap_draws": 5000,
+    "scope": "conditional descriptive RX-cluster interval; overlapping fold fits and one seed; no training-randomness coverage"
+  },
+  "new_fits": 0,
+  "real_target_access": false,
+  "held_source_read": false,
+  "many_sig_read": false,
+  "historical_stops_preserved": true,
+  "pilot_authorized_by_d0": false,
+  "interpretation": "D0 tests this fixed channel-subspace proposal; no causal hardware separation or target generalization conclusion",
+  "stage": "S18-D0S",
+  "support_amendment": true,
+  "original_d0_status": "STOP_PRE_FEATURE_SUPPORT",
+  "sparse_estimator": "TX-conditional RX scatter and paired-TX common-RX PSD scatter; no imputation"
+}

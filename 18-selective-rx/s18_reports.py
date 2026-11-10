@@ -53,7 +53,7 @@ def run():
                                   ce=arm['score']['summary']['ce'], margin=arm['score']['summary']['margin'],
                                   **{k:arm[k] for k in ['delta_acc_pp', 'delta_f1_pp', 'delta_ce', 'delta_margin', 'worst_rx_paired_pp', 'worst_tx_paired_pp', 'rx_scatter_reduction', 'tx_scatter_reduction']}))
     with (HERE/'D0_interventions.csv').open('w', encoding='utf-8', newline='') as f:
-        w = csv.DictWriter(f, fieldnames=list(flattened[0])); w.writeheader(); w.writerows(flattened)
+        w = csv.DictWriter(f, fieldnames=list(flattened[0]), lineterminator='\n'); w.writeheader(); w.writerows(flattened)
     make_figure(rows)
     interval = decision['receiver_cluster_selective_vs_random']
     passed_stable = sum(f['stable'] for f in decision['folds'])
@@ -61,12 +61,14 @@ def run():
     passed_joint = sum(f['stable'] and f['specific'] for f in decision['folds'])
     lines = ['# S18 HStem选择性接收机表征：机制报告', '',
              f"源域决定：**{decision['status']}**。四fold共20组冻结方向干预，新增模型训练0；真实目标CRD、held-source、ManySig和独立seed均未读取或启动。", '',
-             f"主要Tokens方向稳定性通过{passed_stable}/4 folds，分类特异性通过{passed_specific}/4，二者同时通过{passed_joint}/4。准入需要至少3/4且全部fold保持TX指标。", '',
+             f"主要Tokens方向的稳定性与RX覆盖联合条件通过{passed_stable}/4 folds，分类特异性通过{passed_specific}/4，二者同时通过{passed_joint}/4。准入需要至少3/4且全部fold保持TX指标；这里的0/4不能解释成所有稳定RX差异均不存在。", '',
              '![固定机制审计总览](S18_D0S_OVERVIEW.png)', '',
              '图中仅是冻结模型对源验证数据的响应，各fold点不是独立随机种子，也不代表目标泛化收益。', '',
              '## 结论与边界', '',
              ('当前固定rank3、alpha=.5、Tokens通道子空间方案未通过预先固定的联合门槛。保留负结果，停止B1–B4训练，不因本次结果继续搜索层、rank或强度。' if not decision['admitted'] else
               '当前固定方案通过D0S操作性筛选，仅准入进一步受控源域Pilot；仍需在任何新fit前封存训练配方。'), '',
+             '这次观察支持的范围较窄：方向可以跨日和训练/验证重复，但跨TX稳定性只通过1/4；方向内TX类均值散度很低，却没有覆盖足够多的RX散度。高RX/TX比值本身不等于找到了分类器依赖的主要RX子空间。所有fold的源TX保持条件通过，仍未形成相对随机方向的稳定功能优势。', '',
+             f"预选方向的验证RX散度占比为{100*min(r['layers']['tokens']['val_metrics']['rx_fraction'] for r in rows):.2f}%–{100*max(r['layers']['tokens']['val_metrics']['rx_fraction'] for r in rows):.2f}%，均低于15%门槛；TX散度占比仅{100*min(r['layers']['tokens']['val_metrics']['tx_fraction'] for r in rows):.4f}%–{100*max(r['layers']['tokens']['val_metrics']['tx_fraction'] for r in rows):.4f}%。随机平均与选择性CE差没有任何fold达到0.005门槛。", '',
              '本结果不证明全部选择性表征或物理建模无效，也不证明TX/RX硬件已分离。Shen True In-Band与IB-RFF Information Bottleneck的区别、S10公平数字及已有S11/S12重叠见[协议审计](PROTOCOL_AUDIT.zh-CN.md)。', '',
              '## 数据支持修正与可追溯性', '',
              '原D0因完整cell假设在特征提取前触发支持检查，状态为`STOP_PRE_FEATURE_SUPPORT`，原注册和attempt保留。随后只核查源标签支持，在任何方向或干预结果产生前单独注册D0S；未改变模型、数据split、设备集合、rank、alpha、对照或门槛。', '',
@@ -120,6 +122,7 @@ def run():
               '- [逐fold原始JSON](d0_support_matched/D0_fold0.json)、[全部干预CSV](D0_interventions.csv)、[最终审计](FINAL_ACCESS_AUDIT.json)',
               '- 本地`d0_support_matched/cache/features_f*.npz`保存源训练/验证池化特征及索引，SHA在原始JSON；原始IQ、checkpoint和逐包特征不进Git。',
               '- 工程测试包含16项原测试及支持修正测试；实际结果复核检查注册代码/历史证据SHA、混淆矩阵指标、散度/方向、门槛和源访问范围。', '',
+              '证据限制：本地特征缓存没有逐包logits；独立QA从混淆矩阵重新计算Accuracy/F1/TX指标，并重新估计散度和方向。CE/margin核验覆盖RX聚合、差值与门槛一致性，未独立从逐包logits再算。原始源IQ与冻结权重的SHA及代码仍提供完整计算复现入口。', '',
               '现有模型已在方向估计训练样本上训练；源验证已参与历史checkpoint选择，因此本轮不是独立确认。mean pooling未覆盖完整Token位置交互，RX散度混有信道/同步，TX类均值散度不穷尽非线性判别信息。完整限制见[方法定义](README.zh-CN.md)。', '',
               '没有新增真实CRD比较结果，不能宣称超越IB-RFF或ASKNet。']
     (HERE/'RESULTS.zh-CN.md').write_text('\n'.join(lines)+'\n', encoding='utf-8', newline='\n')
