@@ -1,0 +1,22 @@
+{
+  "time": "2026-11-10T14:30:11+08:00",
+  "stage": "S19",
+  "status": "STOP_S19_SOURCE_GATE",
+  "admitted": false,
+  "primary": "B4",
+  "evidence_supervision_supported": false,
+  "completed_source_comparisons": 20,
+  "formal_new_fits": 16,
+  "reused_B0": 4,
+  "maximum_new_fits": 20,
+  "dataset": "ManyRx",
+  "folds": 4,
+  "seeds": 1,
+  "real_target_access": false,
+  "held_source_after_seal": true,
+  "independent_source_confirmation_started": false,
+  "ManySig_read": false,
+  "Shen_read": false,
+  "audit": "PASS",
+  "report_is_derived": true
+}

@@ -1,0 +1,4424 @@
+{
+  "time": "2026-11-10T14:26:34+08:00",
+  "status": "COMPLETE",
+  "benchmark_kind": "derived random-input source-model benchmark",
+  "benchmark_code_sha256": "75059c20f16b203b08155d43b15dc54341821d03ef6b20475a2eaa861dadd9ca",
+  "registration_sha256": "33fc7d8fc44ab3f7fb5565bacd63aace74ba35fbf25362ba318218516b9c410a",
+  "checkpoint_seal_sha256": "f95b457d220784a4387445e84e1ac34eed0b961151eeba8617a652aaf7af4083",
+  "scientific_model_selection": false,
+  "new_training_runs": 0,
+  "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "torch": "2.5.0+cu124",
+  "precision": "FP32",
+  "cudnn_benchmark": false,
+  "cudnn_deterministic": true,
+  "host_threads": 2,
+  "seed": 19101,
+  "input_length": 256,
+  "batches": [
+    1,
+    128
+  ],
+  "warmup": 10,
+  "repetitions": 30,
+  "synchronization": "host perf_counter around each model call and torch.cuda.synchronize()",
+  "timing_scope": "End-to-end Python model call on GPU; includes Python dispatch and synchronization. Synthetic batch inputs are generated before timed loops.",
+  "complete_total_flops": false,
+  "gain_bound_scope": "Pre-packet-normalization complex-spectrum amplitude gain only; normalized RF channels are not bounded to +/-20%",
+  "source_checkpoint_access": [
+    {
+      "kind": "cost_checkpoint",
+      "fold": 0,
+      "arm": "B0",
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\runs\\pilot__ManyRx__M0__f0__first__s18101\\model.pt",
+      "sha256": "f0f9fe1cd967e033ce97bf8e6f149ce29d4e70cf0611e88457ec141da56cf06f",
+      "seal_sha256": "f95b457d220784a4387445e84e1ac34eed0b961151eeba8617a652aaf7af4083",
+      "input_role": "synthetic IQ only; no scientific data read"
+    },
+    {
+      "kind": "cost_checkpoint",
+      "fold": 0,
+      "arm": "B1",
+      "path": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B1__f0__first__s18101\\model.pt",
+      "sha256": "992df64f7ffa63c093a89a6f589af1a911a84cc701e51a70a21b75b324c0a805",
+      "seal_sha256": "f95b457d220784a4387445e84e1ac34eed0b961151eeba8617a652aaf7af4083",
+      "input_role": "synthetic IQ only; no scientific data read"
+    },
+    {
+      "kind": "cost_checkpoint",
+      "fold": 0,
+      "arm": "B2",
+      "path": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B2__f0__first__s18101\\model.pt",
+      "sha256": "5fdb741c842c0ee8920dcf14b1773a765deb365cab3a3f8bf4b99fe88105ab85",
+      "seal_sha256": "f95b457d220784a4387445e84e1ac34eed0b961151eeba8617a652aaf7af4083",
+      "input_role": "synthetic IQ only; no scientific data read"
+    },
+    {
+      "kind": "cost_checkpoint",
+      "fold": 0,
+      "arm": "B3",
+      "path": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B3__f0__first__s18101\\model.pt",
+      "sha256": "f1bbf08ee34f2a90e36d100cc762fa622d08c74f3827324da2a3e07a203b2b39",
+      "seal_sha256": "f95b457d220784a4387445e84e1ac34eed0b961151eeba8617a652aaf7af4083",
+      "input_role": "synthetic IQ only; no scientific data read"
+    },
+    {
+      "kind": "cost_checkpoint",
+      "fold": 0,
+      "arm": "B4",
+      "path": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B4__f0__first__s18101\\model.pt",
+      "sha256": "dceb7b0e2b528992d7d0365564b0be748f105a765b7c84890225b2a78ef31cf0",
+      "seal_sha256": "f95b457d220784a4387445e84e1ac34eed0b961151eeba8617a652aaf7af4083",
+      "input_role": "synthetic IQ only; no scientific data read"
+    }
+  ],
+  "scientific_access_log_modified": false,
+  "held_source_data_read": false,
+  "real_target_data_read": false,
+  "training_costs": {
+    "new_fit_count": 16,
+    "new_fit_seconds": 711.7667658000719,
+    "new_fits": [
+      {
+        "fold": 0,
+        "arm": "B1",
+        "seconds": 36.77381330000935,
+        "epochs": 13,
+        "peak_allocated_gib": 0.19205331802368164
+      },
+      {
+        "fold": 0,
+        "arm": "B2",
+        "seconds": 38.45833719999064,
+        "epochs": 13,
+        "peak_allocated_gib": 0.19275665283203125
+      },
+      {
+        "fold": 0,
+        "arm": "B3",
+        "seconds": 46.76059110002825,
+        "epochs": 15,
+        "peak_allocated_gib": 0.19237184524536133
+      },
+      {
+        "fold": 0,
+        "arm": "B4",
+        "seconds": 42.5717963000061,
+        "epochs": 13,
+        "peak_allocated_gib": 0.19276857376098633
+      },
+      {
+        "fold": 1,
+        "arm": "B1",
+        "seconds": 38.953575999999885,
+        "epochs": 15,
+        "peak_allocated_gib": 0.1932978630065918
+      },
+      {
+        "fold": 1,
+        "arm": "B2",
+        "seconds": 40.730354900006205,
+        "epochs": 15,
+        "peak_allocated_gib": 0.1926407814025879
+      },
+      {
+        "fold": 1,
+        "arm": "B3",
+        "seconds": 44.18598639999982,
+        "epochs": 15,
+        "peak_allocated_gib": 0.1933913230895996
+      },
+      {
+        "fold": 1,
+        "arm": "B4",
+        "seconds": 46.00875310000265,
+        "epochs": 15,
+        "peak_allocated_gib": 0.19375944137573242
+      },
+      {
+        "fold": 2,
+        "arm": "B1",
+        "seconds": 43.967837600037456,
+        "epochs": 16,
+        "peak_allocated_gib": 0.19423341751098633
+      },
+      {
+        "fold": 2,
+        "arm": "B2",
+        "seconds": 43.53911599999992,
+        "epochs": 15,
+        "peak_allocated_gib": 0.19493675231933594
+      },
+      {
+        "fold": 2,
+        "arm": "B3",
+        "seconds": 54.639122499967925,
+        "epochs": 17,
+        "peak_allocated_gib": 0.19426202774047852
+      },
+      {
+        "fold": 2,
+        "arm": "B4",
+        "seconds": 55.812544199987315,
+        "epochs": 17,
+        "peak_allocated_gib": 0.19494867324829102
+      },
+      {
+        "fold": 3,
+        "arm": "B1",
+        "seconds": 44.256547300028615,
+        "epochs": 16,
+        "peak_allocated_gib": 0.19535493850708008
+      },
+      {
+        "fold": 3,
+        "arm": "B2",
+        "seconds": 41.132448499964084,
+        "epochs": 14,
+        "peak_allocated_gib": 0.19608783721923828
+      },
+      {
+        "fold": 3,
+        "arm": "B3",
+        "seconds": 47.500286900030915,
+        "epochs": 15,
+        "peak_allocated_gib": 0.19680166244506836
+      },
+      {
+        "fold": 3,
+        "arm": "B4",
+        "seconds": 46.47565450001275,
+        "epochs": 15,
+        "peak_allocated_gib": 0.19609451293945312
+      }
+    ],
+    "reused_historical_fit_count": 4,
+    "historical_reused_fit_seconds": 94.43530390004162,
+    "historical_fits_counted_once": [
+      {
+        "fold": 0,
+        "seconds": 18.189541700005066,
+        "checkpoint_sha256": "f0f9fe1cd967e033ce97bf8e6f149ce29d4e70cf0611e88457ec141da56cf06f",
+        "role": "same reused checkpoint serves as B0 comparator and teacher; counted once"
+      },
+      {
+        "fold": 1,
+        "seconds": 31.02061700000195,
+        "checkpoint_sha256": "fa790ec31286003cce0f9e8f9087b5d8a047c4d2f8f33280bc20ff3eaf9dc98d",
+        "role": "same reused checkpoint serves as B0 comparator and teacher; counted once"
+      },
+      {
+        "fold": 2,
+        "seconds": 22.745535900001414,
+        "checkpoint_sha256": "b7a2eb2e077b81f93bef1ae29296a8e201c5622149c7331f4b743997ed899091",
+        "role": "same reused checkpoint serves as B0 comparator and teacher; counted once"
+      },
+      {
+        "fold": 3,
+        "seconds": 22.47960930003319,
+        "checkpoint_sha256": "6a1ae01a5ca1a156aec4e54d0054d36b1ac7503cd179c62f1a825a49fce7dff4",
+        "role": "same reused checkpoint serves as B0 comparator and teacher; counted once"
+      }
+    ],
+    "teacher_evidence_inference_seconds": 19.854548900038935,
+    "teacher_evidence": [
+      {
+        "fold": 0,
+        "seconds": 5.758868300006725,
+        "packets": 5552,
+        "teacher_sha256": "f0f9fe1cd967e033ce97bf8e6f149ce29d4e70cf0611e88457ec141da56cf06f"
+      },
+      {
+        "fold": 1,
+        "seconds": 4.852807599992957,
+        "packets": 5520,
+        "teacher_sha256": "fa790ec31286003cce0f9e8f9087b5d8a047c4d2f8f33280bc20ff3eaf9dc98d"
+      },
+      {
+        "fold": 2,
+        "seconds": 4.7012612000107765,
+        "packets": 5552,
+        "teacher_sha256": "b7a2eb2e077b81f93bef1ae29296a8e201c5622149c7331f4b743997ed899091"
+      },
+      {
+        "fold": 3,
+        "seconds": 4.541611800028477,
+        "packets": 5632,
+        "teacher_sha256": "6a1ae01a5ca1a156aec4e54d0054d36b1ac7503cd179c62f1a825a49fce7dff4"
+      }
+    ],
+    "current_stage_measured_component_seconds": 731.6213147001108,
+    "training_seconds_if_four_teachers_had_to_be_trained_here": 806.2020697001135,
+    "complete_stage_wall_time": false,
+    "timing_scope": "Fit timers include source-loop bookkeeping and source validation; evidence timers cover extraction and cache serialization before the evidence record. B0 reuse validation, seal, held-source scoring, reports and QA are not fully timed here."
+  },
+  "arms": [
+    {
+      "arm": "B0",
+      "fold": 0,
+      "checkpoint_sha256": "f0f9fe1cd967e033ce97bf8e6f149ce29d4e70cf0611e88457ec141da56cf06f",
+      "parameters": 82426,
+      "added_parameters_vs_B0": 0,
+      "arithmetic_proxy": {
+        "conv1d_macs": 3694592,
+        "linear_macs": 1180288,
+        "conv_linear_flops": 9749760,
+        "attention_product_flops": 524288,
+        "spectral_band_matrix_product_flops": 0,
+        "spectral_product_inventory": [],
+        "complex_fft_count": 1,
+        "complex_ifft_count": 0,
+        "complex_fft_flops_proxy": 10240,
+        "complex_fft_convention": "5*N*log2(N), N256 complex FFT; algorithmic estimate, not exact cuFFT FLOPs",
+        "partial_arithmetic_subtotal": 10284288,
+        "extra_rf_descriptor_reconstructions": 0,
+        "excluded_from_arithmetic_subtotal": [
+          "RMS/Parseval reductions, square roots, epsilon and divisions",
+          "complex absolute values and pointwise complex/real multiplications",
+          "LogMag log1p, centering, standard deviation, normalization",
+          "phase validity comparisons, conjugation, products, padding",
+          "GELU, tanh, softmax, LayerNorm, BatchNorm, bias additions",
+          "pooling reductions, concatenations, indexing and memory movement",
+          "the extra B3/B4 RF descriptor rebuild except its listed matrix products"
+        ],
+        "complete_total_flops": false
+      },
+      "inference_path": [
+        "legacy packet RMS in tokens()",
+        "legacy packet RMS in features()",
+        "one complex FFT256 and fftshift",
+        "rebuild Re/Im/standardized LogMag and masked adjacent phase-product Re/Im",
+        "HStem: two local convolutions plus 3 strided tokenization convolutions",
+        "32 tokens x64; token preparation and pre-LayerNorm",
+        "two ordinary MHA blocks including QK and AV products and softmax",
+        "final LayerNorm; token mean pool; TX classifier"
+      ],
+      "latency": [
+        {
+          "batch": 1,
+          "warmup": 10,
+          "repetitions": 30,
+          "median_batch_ms": 2.941500017186627,
+          "p10_batch_ms": 2.533999993465841,
+          "p90_batch_ms": 4.14767002221197,
+          "median_packet_ms": 2.941500017186627,
+          "samples_batch_ms": [
+            2.6266000350005925,
+            3.0678000184707344,
+            3.2318999874405563,
+            2.9226000187918544,
+            3.1424000044353306,
+            3.466400026809424,
+            3.1199000077322125,
+            3.0470999772660434,
+            2.5523999938741326,
+            2.4367999867536128,
+            2.8362000011838973,
+            2.8771000215783715,
+            3.2166000455617905,
+            2.812799997627735,
+            2.2953999578021467,
+            2.11719999788329,
+            2.854800026398152,
+            2.544799994211644,
+            3.4267999581061304,
+            4.781900031957775,
+            5.451399949379265,
+            5.076900008134544,
+            2.973700000438839,
+            4.0772000211291015,
+            2.960400015581399,
+            2.8037999873049557,
+            3.0937999836169183,
+            2.8464000206440687,
+            2.8099999763071537,
+            2.7910000062547624
+          ],
+          "input": "fixed-seed synthetic standard-normal IQ; no scientific samples"
+        },
+        {
+          "batch": 128,
+          "warmup": 10,
+          "repetitions": 30,
+          "median_batch_ms": 2.823550021275878,
+          "p10_batch_ms": 2.366030012490228,
+          "p90_batch_ms": 4.8982099804561585,
+          "median_packet_ms": 0.022058984541217797,
+          "samples_batch_ms": [
+            2.6588999899104238,
+            2.6279999874532223,
+            2.9645999893546104,
+            2.6715000276453793,
+            2.6902000536210835,
+            2.3717000149190426,
+            2.622600004542619,
+            2.394000010099262,
+            3.576899995096028,
+            5.0882999785244465,
+            2.9536999645642936,
+            2.5254000211134553,
+            4.868099989835173,
+            3.7767000030726194,
+            2.2844999912194908,
+            2.667599997948855,
+            2.539800014346838,
+            2.8948000399395823,
+            3.150800010189414,
+            2.928700007032603,
+            3.076000022701919,
+            2.314999990630895,
+            2.389899978879839,
+            2.258800028357655,
+            3.777700010687113,
+            2.7523000026121736,
+            4.881599976215512,
+            5.360900016967207,
+            5.047700018621981,
+            3.2497000065632164
+          ],
+          "input": "fixed-seed synthetic standard-normal IQ; no scientific samples"
+        }
+      ],
+      "peak_benchmark_allocated_gib": 0.047365665435791016,
+      "operator_profile": {
+        "status": "PASS",
+        "batch": 128,
+        "events": [
+          {
+            "key": "aten::slice",
+            "count": 21,
+            "self_cpu_time_us": 400.305999999999,
+            "total_cpu_time_us": 416.50699999999836,
+            "self_device_time_us": 284.0,
+            "total_device_time_us": 382.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::as_strided",
+            "count": 87,
+            "self_cpu_time_us": 75.00199999999961,
+            "total_cpu_time_us": 75.00199999999961,
+            "self_device_time_us": 682.0,
+            "total_device_time_us": 682.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::select",
+            "count": 20,
+            "self_cpu_time_us": 392.80399999999975,
+            "total_cpu_time_us": 409.2040000000003,
+            "self_device_time_us": 542.0,
+            "total_device_time_us": 705.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::pow",
+            "count": 5,
+            "self_cpu_time_us": 256.00399999999934,
+            "total_cpu_time_us": 261.00399999999956,
+            "self_device_time_us": 170.0,
+            "total_device_time_us": 329.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::result_type",
+            "count": 5,
+            "self_cpu_time_us": 1.6000000000001364,
+            "total_cpu_time_us": 1.6000000000001364,
+            "self_device_time_us": 49.0,
+            "total_device_time_us": 49.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::to",
+            "count": 5,
+            "self_cpu_time_us": 3.400000000000091,
+            "total_cpu_time_us": 3.400000000000091,
+            "self_device_time_us": 110.0,
+            "total_device_time_us": 110.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::add",
+            "count": 7,
+            "self_cpu_time_us": 168.50099999999964,
+            "total_cpu_time_us": 168.50099999999964,
+            "self_device_time_us": 169.0,
+            "total_device_time_us": 169.0,
+            "profiler_reported_flops": 852224
+          },
+          {
+            "key": "aten::mean",
+            "count": 5,
+            "self_cpu_time_us": 107.40100000000166,
+            "total_cpu_time_us": 109.90100000000314,
+            "self_device_time_us": 163.0,
+            "total_device_time_us": 170.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::sqrt",
+            "count": 3,
+            "self_cpu_time_us": 24.90000000000009,
+            "total_cpu_time_us": 24.90000000000009,
+            "self_device_time_us": 65.0,
+            "total_device_time_us": 65.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::view",
+            "count": 35,
+            "self_cpu_time_us": 101.90200000000277,
+            "total_cpu_time_us": 101.90200000000277,
+            "self_device_time_us": 154.0,
+            "total_device_time_us": 154.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::div",
+            "count": 8,
+            "self_cpu_time_us": 163.5010000000011,
+            "total_cpu_time_us": 163.5010000000011,
+            "self_device_time_us": 141.0,
+            "total_device_time_us": 141.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::complex",
+            "count": 4,
+            "self_cpu_time_us": 117.7999999999995,
+            "total_cpu_time_us": 652.0099999999998,
+            "self_device_time_us": 100.0,
+            "total_device_time_us": 725.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::empty",
+            "count": 54,
+            "self_cpu_time_us": 1606.827999999989,
+            "total_cpu_time_us": 2164.5399999999963,
+            "self_device_time_us": 1159.0,
+            "total_device_time_us": 2291.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::fill_",
+            "count": 63,
+            "self_cpu_time_us": 674.3170000000068,
+            "total_cpu_time_us": 674.3170000000068,
+            "self_device_time_us": 1374.0,
+            "total_device_time_us": 1374.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::resize_",
+            "count": 6,
+            "self_cpu_time_us": 195.20400000000245,
+            "total_cpu_time_us": 363.10800000000063,
+            "self_device_time_us": 189.0,
+            "total_device_time_us": 552.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::set_",
+            "count": 5,
+            "self_cpu_time_us": 8.699999999999136,
+            "total_cpu_time_us": 8.699999999999136,
+            "self_device_time_us": 19.0,
+            "total_device_time_us": 19.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::fft_fft",
+            "count": 1,
+            "self_cpu_time_us": 71.50099999999975,
+            "total_cpu_time_us": 368.90599999999995,
+            "self_device_time_us": 8.0,
+            "total_device_time_us": 311.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_fft_c2c",
+            "count": 1,
+            "self_cpu_time_us": 197.00300000000016,
+            "total_cpu_time_us": 297.4050000000002,
+            "self_device_time_us": 169.0,
+            "total_device_time_us": 303.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::permute",
+            "count": 1,
+            "self_cpu_time_us": 11.401000000000067,
+            "total_cpu_time_us": 12.101000000000113,
+            "self_device_time_us": 8.0,
+            "total_device_time_us": 13.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::reshape",
+            "count": 24,
+            "self_cpu_time_us": 572.1089999999967,
+            "total_cpu_time_us": 1908.9329999999936,
+            "self_device_time_us": 1008.0,
+            "total_device_time_us": 2302.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::as_strided_",
+            "count": 1,
+            "self_cpu_time_us": 4.099999999999909,
+            "total_cpu_time_us": 4.099999999999909,
+            "self_device_time_us": 31.0,
+            "total_device_time_us": 31.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::fft_fftshift",
+            "count": 1,
+            "self_cpu_time_us": 44.19999999999982,
+            "total_cpu_time_us": 85.30099999999993,
+            "self_device_time_us": 47.0,
+            "total_device_time_us": 86.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::roll",
+            "count": 1,
+            "self_cpu_time_us": 16.300000000000182,
+            "total_cpu_time_us": 41.10100000000011,
+            "self_device_time_us": 13.0,
+            "total_device_time_us": 39.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::empty_like",
+            "count": 17,
+            "self_cpu_time_us": 249.60500000000366,
+            "total_cpu_time_us": 856.1180000000013,
+            "self_device_time_us": 291.0,
+            "total_device_time_us": 1084.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::abs",
+            "count": 4,
+            "self_cpu_time_us": 240.9049999999993,
+            "total_cpu_time_us": 1072.1179999999995,
+            "self_device_time_us": 234.0,
+            "total_device_time_us": 1135.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::empty_strided",
+            "count": 3,
+            "self_cpu_time_us": 34.60099999999966,
+            "total_cpu_time_us": 54.70299999999952,
+            "self_device_time_us": 83.0,
+            "total_device_time_us": 102.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::real",
+            "count": 4,
+            "self_cpu_time_us": 107.20199999999932,
+            "total_cpu_time_us": 200.60300000000007,
+            "self_device_time_us": 102.0,
+            "total_device_time_us": 214.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::view_as_real",
+            "count": 6,
+            "self_cpu_time_us": 16.299999999998818,
+            "total_cpu_time_us": 16.299999999998818,
+            "self_device_time_us": 31.0,
+            "total_device_time_us": 31.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::copy_",
+            "count": 12,
+            "self_cpu_time_us": 226.30299999999852,
+            "total_cpu_time_us": 226.30299999999852,
+            "self_device_time_us": 257.0,
+            "total_device_time_us": 257.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::square",
+            "count": 1,
+            "self_cpu_time_us": 36.30099999999993,
+            "total_cpu_time_us": 119.20199999999977,
+            "self_device_time_us": 8.0,
+            "total_device_time_us": 76.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::clamp_min",
+            "count": 3,
+            "self_cpu_time_us": 61.09999999999991,
+            "total_cpu_time_us": 61.09999999999991,
+            "self_device_time_us": 68.0,
+            "total_device_time_us": 68.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::log1p",
+            "count": 1,
+            "self_cpu_time_us": 10.300000000000182,
+            "total_cpu_time_us": 10.300000000000182,
+            "self_device_time_us": 13.0,
+            "total_device_time_us": 13.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::sub",
+            "count": 1,
+            "self_cpu_time_us": 35.80099999999993,
+            "total_cpu_time_us": 35.80099999999993,
+            "self_device_time_us": 35.0,
+            "total_device_time_us": 35.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::std",
+            "count": 1,
+            "self_cpu_time_us": 42.20100000000002,
+            "total_cpu_time_us": 136.40200000000004,
+            "self_device_time_us": 23.0,
+            "total_device_time_us": 176.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::imag",
+            "count": 2,
+            "self_cpu_time_us": 83.10200000000123,
+            "total_cpu_time_us": 110.60200000000032,
+            "self_device_time_us": 65.0,
+            "total_device_time_us": 160.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::stack",
+            "count": 2,
+            "self_cpu_time_us": 86.40199999999959,
+            "total_cpu_time_us": 126.30199999999923,
+            "self_device_time_us": 39.0,
+            "total_device_time_us": 90.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::cat",
+            "count": 3,
+            "self_cpu_time_us": 80.19999999999936,
+            "total_cpu_time_us": 80.19999999999936,
+            "self_device_time_us": 89.0,
+            "total_device_time_us": 89.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::ge",
+            "count": 2,
+            "self_cpu_time_us": 49.29999999999927,
+            "total_cpu_time_us": 49.29999999999927,
+            "self_device_time_us": 106.0,
+            "total_device_time_us": 106.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::__and__",
+            "count": 1,
+            "self_cpu_time_us": 38.301000000001295,
+            "total_cpu_time_us": 83.40100000000075,
+            "self_device_time_us": 4.0,
+            "total_device_time_us": 40.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::bitwise_and",
+            "count": 1,
+            "self_cpu_time_us": 45.099999999999454,
+            "total_cpu_time_us": 45.099999999999454,
+            "self_device_time_us": 36.0,
+            "total_device_time_us": 36.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_conj",
+            "count": 1,
+            "self_cpu_time_us": 13.300999999999476,
+            "total_cpu_time_us": 14.40099999999984,
+            "self_device_time_us": 15.0,
+            "total_device_time_us": 21.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::alias",
+            "count": 1,
+            "self_cpu_time_us": 1.1000000000003638,
+            "total_cpu_time_us": 1.1000000000003638,
+            "self_device_time_us": 6.0,
+            "total_device_time_us": 6.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::mul",
+            "count": 3,
+            "self_cpu_time_us": 110.00200000000041,
+            "total_cpu_time_us": 197.90399999999954,
+            "self_device_time_us": 96.0,
+            "total_device_time_us": 210.0,
+            "profiler_reported_flops": 97920
+          },
+          {
+            "key": "aten::clone",
+            "count": 9,
+            "self_cpu_time_us": 558.9079999999994,
+            "total_cpu_time_us": 1318.8229999999994,
+            "self_device_time_us": 471.0,
+            "total_device_time_us": 1177.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::pad",
+            "count": 1,
+            "self_cpu_time_us": 18.199999999999818,
+            "total_cpu_time_us": 307.90499999999975,
+            "self_device_time_us": 20.0,
+            "total_device_time_us": 309.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::constant_pad_nd",
+            "count": 1,
+            "self_cpu_time_us": 96.39999999999873,
+            "total_cpu_time_us": 289.7049999999999,
+            "self_device_time_us": 54.0,
+            "total_device_time_us": 289.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::narrow",
+            "count": 1,
+            "self_cpu_time_us": 12.5,
+            "total_cpu_time_us": 26.701000000000022,
+            "self_device_time_us": 12.0,
+            "total_device_time_us": 29.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::conv1d",
+            "count": 5,
+            "self_cpu_time_us": 58.39999999999782,
+            "total_cpu_time_us": 1847.529999999998,
+            "self_device_time_us": 30.0,
+            "total_device_time_us": 2414.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::convolution",
+            "count": 5,
+            "self_cpu_time_us": 151.90199999999913,
+            "total_cpu_time_us": 1789.13,
+            "self_device_time_us": 37.0,
+            "total_device_time_us": 2384.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_convolution",
+            "count": 5,
+            "self_cpu_time_us": 633.110000000007,
+            "total_cpu_time_us": 1637.228000000001,
+            "self_device_time_us": 225.0,
+            "total_device_time_us": 2347.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::unsqueeze",
+            "count": 10,
+            "self_cpu_time_us": 379.7069999999967,
+            "total_cpu_time_us": 388.30699999999797,
+            "self_device_time_us": 101.0,
+            "total_device_time_us": 324.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::cudnn_convolution",
+            "count": 5,
+            "self_cpu_time_us": 446.10599999999977,
+            "total_cpu_time_us": 446.10599999999977,
+            "self_device_time_us": 473.0,
+            "total_device_time_us": 473.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::add_",
+            "count": 6,
+            "self_cpu_time_us": 72.30000000000018,
+            "total_cpu_time_us": 72.30000000000018,
+            "self_device_time_us": 90.0,
+            "total_device_time_us": 90.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::squeeze",
+            "count": 5,
+            "self_cpu_time_us": 51.40299999999752,
+            "total_cpu_time_us": 55.20299999999861,
+            "self_device_time_us": 1198.0,
+            "total_device_time_us": 1212.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::batch_norm",
+            "count": 5,
+            "self_cpu_time_us": 81.00299999999606,
+            "total_cpu_time_us": 2037.734999999997,
+            "self_device_time_us": 70.0,
+            "total_device_time_us": 1734.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_batch_norm_impl_index",
+            "count": 5,
+            "self_cpu_time_us": 144.60099999999875,
+            "total_cpu_time_us": 1956.7320000000009,
+            "self_device_time_us": 24.0,
+            "total_device_time_us": 1664.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::cudnn_batch_norm",
+            "count": 5,
+            "self_cpu_time_us": 971.5159999999996,
+            "total_cpu_time_us": 1812.1310000000021,
+            "self_device_time_us": 572.0,
+            "total_device_time_us": 1640.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::leaky_relu_",
+            "count": 2,
+            "self_cpu_time_us": 24.401999999999134,
+            "total_cpu_time_us": 24.401999999999134,
+            "self_device_time_us": 71.0,
+            "total_device_time_us": 71.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::gelu",
+            "count": 3,
+            "self_cpu_time_us": 61.50200000000041,
+            "total_cpu_time_us": 61.50200000000041,
+            "self_device_time_us": 102.0,
+            "total_device_time_us": 102.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::transpose",
+            "count": 17,
+            "self_cpu_time_us": 340.00399999999354,
+            "total_cpu_time_us": 356.1049999999941,
+            "self_device_time_us": 315.0,
+            "total_device_time_us": 449.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::linear",
+            "count": 6,
+            "self_cpu_time_us": 476.20600000000377,
+            "total_cpu_time_us": 1484.0239999999976,
+            "self_device_time_us": 267.0,
+            "total_device_time_us": 1390.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::t",
+            "count": 6,
+            "self_cpu_time_us": 159.3030000000108,
+            "total_cpu_time_us": 273.20400000000336,
+            "self_device_time_us": 117.0,
+            "total_device_time_us": 232.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::matmul",
+            "count": 5,
+            "self_cpu_time_us": 651.9119999999966,
+            "total_cpu_time_us": 2607.542999999998,
+            "self_device_time_us": 452.0,
+            "total_device_time_us": 3214.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::expand",
+            "count": 10,
+            "self_cpu_time_us": 212.80300000000534,
+            "total_cpu_time_us": 223.5030000000006,
+            "self_device_time_us": 210.0,
+            "total_device_time_us": 248.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_reshape_alias",
+            "count": 2,
+            "self_cpu_time_us": 3.5,
+            "total_cpu_time_us": 3.5,
+            "self_device_time_us": 2.0,
+            "total_device_time_us": 2.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::bmm",
+            "count": 5,
+            "self_cpu_time_us": 306.8060000000005,
+            "total_cpu_time_us": 306.8060000000005,
+            "self_device_time_us": 651.0,
+            "total_device_time_us": 651.0,
+            "profiler_reported_flops": 100663296
+          },
+          {
+            "key": "aten::_unsafe_view",
+            "count": 13,
+            "self_cpu_time_us": 37.200999999995474,
+            "total_cpu_time_us": 37.200999999995474,
+            "self_device_time_us": 123.0,
+            "total_device_time_us": 123.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::layer_norm",
+            "count": 4,
+            "self_cpu_time_us": 79.80300000000534,
+            "total_cpu_time_us": 1023.518,
+            "self_device_time_us": 113.0,
+            "total_device_time_us": 1160.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::native_layer_norm",
+            "count": 4,
+            "self_cpu_time_us": 427.5049999999974,
+            "total_cpu_time_us": 943.7149999999947,
+            "self_device_time_us": 551.0,
+            "total_device_time_us": 1047.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::addmm",
+            "count": 5,
+            "self_cpu_time_us": 293.7059999999947,
+            "total_cpu_time_us": 293.7059999999947,
+            "self_device_time_us": 396.0,
+            "total_device_time_us": 396.0,
+            "profiler_reported_flops": 268599296
+          },
+          {
+            "key": "aten::unbind",
+            "count": 2,
+            "self_cpu_time_us": 160.20400000000154,
+            "total_cpu_time_us": 353.8060000000005,
+            "self_device_time_us": 91.0,
+            "total_device_time_us": 359.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::softmax",
+            "count": 2,
+            "self_cpu_time_us": 19.69999999999891,
+            "total_cpu_time_us": 46.40099999999984,
+            "self_device_time_us": 9.0,
+            "total_device_time_us": 38.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_softmax",
+            "count": 2,
+            "self_cpu_time_us": 26.70100000000093,
+            "total_cpu_time_us": 26.70100000000093,
+            "self_device_time_us": 29.0,
+            "total_device_time_us": 29.0,
+            "profiler_reported_flops": 0
+          }
+        ],
+        "scope": "One warmed synthetic inference; CPU/CUDA profiler overhead excluded from latency measurements",
+        "profiler_flops_are_complete": false,
+        "note": "ATen time keys are an operator inventory; profiler FLOPs support only some operators and are not a total"
+      }
+    },
+    {
+      "arm": "B1",
+      "fold": 0,
+      "checkpoint_sha256": "992df64f7ffa63c093a89a6f589af1a911a84cc701e51a70a21b75b324c0a805",
+      "parameters": 82434,
+      "added_parameters_vs_B0": 8,
+      "arithmetic_proxy": {
+        "conv1d_macs": 3694592,
+        "linear_macs": 1180288,
+        "conv_linear_flops": 9749760,
+        "attention_product_flops": 524288,
+        "spectral_band_matrix_product_flops": 4096,
+        "spectral_product_inventory": [
+          "8band gains @ masks: 2*8*256"
+        ],
+        "complex_fft_count": 1,
+        "complex_ifft_count": 0,
+        "complex_fft_flops_proxy": 10240,
+        "complex_fft_convention": "5*N*log2(N), N256 complex FFT; algorithmic estimate, not exact cuFFT FLOPs",
+        "partial_arithmetic_subtotal": 10288384,
+        "extra_rf_descriptor_reconstructions": 0,
+        "excluded_from_arithmetic_subtotal": [
+          "RMS/Parseval reductions, square roots, epsilon and divisions",
+          "complex absolute values and pointwise complex/real multiplications",
+          "LogMag log1p, centering, standard deviation, normalization",
+          "phase validity comparisons, conjugation, products, padding",
+          "GELU, tanh, softmax, LayerNorm, BatchNorm, bias additions",
+          "pooling reductions, concatenations, indexing and memory movement",
+          "the extra B3/B4 RF descriptor rebuild except its listed matrix products"
+        ],
+        "complete_total_flops": false
+      },
+      "inference_path": [
+        "legacy packet RMS in tokens()",
+        "legacy packet RMS in features()",
+        "one complex FFT256 and fftshift",
+        "8 static learned logits; mean-center; tanh; smooth partition-of-unity gain",
+        "complex spectrum multiplied by gain",
+        "Parseval relative RMS correction against original spectrum",
+        "rebuild Re/Im/standardized LogMag and masked adjacent phase-product Re/Im",
+        "HStem: two local convolutions plus 3 strided tokenization convolutions",
+        "32 tokens x64; token preparation and pre-LayerNorm",
+        "two ordinary MHA blocks including QK and AV products and softmax",
+        "final LayerNorm; token mean pool; TX classifier"
+      ],
+      "latency": [
+        {
+          "batch": 1,
+          "warmup": 10,
+          "repetitions": 30,
+          "median_batch_ms": 3.1738500110805035,
+          "p10_batch_ms": 2.409880020422861,
+          "p90_batch_ms": 5.535209993831813,
+          "median_packet_ms": 3.1738500110805035,
+          "samples_batch_ms": [
+            6.169000000227243,
+            5.5451999651268125,
+            3.350400016643107,
+            4.7002999926917255,
+            5.653599975630641,
+            3.5690999939106405,
+            2.404300030320883,
+            2.5332000222988427,
+            2.419999975245446,
+            2.410500019323081,
+            2.6262999745085835,
+            3.8027000264264643,
+            4.567599971778691,
+            3.4196000196971,
+            2.990499953739345,
+            3.0805999995209277,
+            2.910299983341247,
+            2.794100029859692,
+            2.359099977184087,
+            2.4006000021472573,
+            2.4148999946191907,
+            2.623500011395663,
+            4.606899979989976,
+            4.928699985612184,
+            4.799199989065528,
+            5.147800024133176,
+            5.534099997021258,
+            3.2671000226400793,
+            2.5836999993771315,
+            2.7617000159807503
+          ],
+          "input": "fixed-seed synthetic standard-normal IQ; no scientific samples"
+        },
+        {
+          "batch": 128,
+          "warmup": 10,
+          "repetitions": 30,
+          "median_batch_ms": 3.2920499506872147,
+          "p10_batch_ms": 2.729669993277639,
+          "p90_batch_ms": 4.961010010447353,
+          "median_packet_ms": 0.025719140239743865,
+          "samples_batch_ms": [
+            4.147999978158623,
+            2.6097000227309763,
+            3.01499996567145,
+            2.7497000410221517,
+            3.3441000268794596,
+            3.215899982023984,
+            3.333300002850592,
+            3.0387999722734094,
+            3.3668000251054764,
+            2.7808999875560403,
+            3.3097999985329807,
+            2.9814000008627772,
+            3.8567999727092683,
+            5.1500999834388494,
+            4.940000013448298,
+            2.784700016491115,
+            2.589199983049184,
+            2.87569995271042,
+            3.0391000327654183,
+            3.303999954368919,
+            4.231700033415109,
+            3.2800999470055103,
+            2.6115000364370644,
+            3.1059999600984156,
+            3.849900036584586,
+            3.4197000204585493,
+            2.7427999884821475,
+            5.155700026080012,
+            6.122699996922165,
+            3.3156000426970422
+          ],
+          "input": "fixed-seed synthetic standard-normal IQ; no scientific samples"
+        }
+      ],
+      "peak_benchmark_allocated_gib": 0.04749584197998047,
+      "operator_profile": {
+        "status": "PASS",
+        "batch": 128,
+        "events": [
+          {
+            "key": "aten::slice",
+            "count": 21,
+            "self_cpu_time_us": 308.40199999999936,
+            "total_cpu_time_us": 324.5020000000014,
+            "self_device_time_us": 264.0,
+            "total_device_time_us": 404.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::as_strided",
+            "count": 92,
+            "self_cpu_time_us": 70.30000000000337,
+            "total_cpu_time_us": 70.30000000000337,
+            "self_device_time_us": 554.0,
+            "total_device_time_us": 554.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::select",
+            "count": 23,
+            "self_cpu_time_us": 318.4019999999984,
+            "total_cpu_time_us": 336.10199999999804,
+            "self_device_time_us": 303.0,
+            "total_device_time_us": 464.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::pow",
+            "count": 7,
+            "self_cpu_time_us": 241.90400000000017,
+            "total_cpu_time_us": 246.30400000000031,
+            "self_device_time_us": 178.0,
+            "total_device_time_us": 305.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::result_type",
+            "count": 7,
+            "self_cpu_time_us": 2.0999999999997385,
+            "total_cpu_time_us": 2.0999999999997385,
+            "self_device_time_us": 47.0,
+            "total_device_time_us": 47.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::to",
+            "count": 8,
+            "self_cpu_time_us": 2.600000000000364,
+            "total_cpu_time_us": 2.600000000000364,
+            "self_device_time_us": 81.0,
+            "total_device_time_us": 81.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::add",
+            "count": 9,
+            "self_cpu_time_us": 132.2999999999995,
+            "total_cpu_time_us": 132.2999999999995,
+            "self_device_time_us": 555.0,
+            "total_device_time_us": 555.0,
+            "profiler_reported_flops": 885120
+          },
+          {
+            "key": "aten::mean",
+            "count": 7,
+            "self_cpu_time_us": 119.5999999999998,
+            "total_cpu_time_us": 121.99999999999977,
+            "self_device_time_us": 125.0,
+            "total_device_time_us": 138.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::sqrt",
+            "count": 3,
+            "self_cpu_time_us": 27.59999999999991,
+            "total_cpu_time_us": 27.59999999999991,
+            "self_device_time_us": 26.0,
+            "total_device_time_us": 26.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::view",
+            "count": 35,
+            "self_cpu_time_us": 49.80000000000132,
+            "total_cpu_time_us": 49.80000000000132,
+            "self_device_time_us": 85.0,
+            "total_device_time_us": 85.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::div",
+            "count": 9,
+            "self_cpu_time_us": 106.49999999999818,
+            "total_cpu_time_us": 106.49999999999818,
+            "self_device_time_us": 102.0,
+            "total_device_time_us": 102.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::complex",
+            "count": 4,
+            "self_cpu_time_us": 118.10099999999989,
+            "total_cpu_time_us": 504.50399999999945,
+            "self_device_time_us": 95.0,
+            "total_device_time_us": 513.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::empty",
+            "count": 58,
+            "self_cpu_time_us": 895.4080000000022,
+            "total_cpu_time_us": 1178.2110000000039,
+            "self_device_time_us": 939.0,
+            "total_device_time_us": 1480.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::fill_",
+            "count": 71,
+            "self_cpu_time_us": 386.2030000000025,
+            "total_cpu_time_us": 386.2030000000025,
+            "self_device_time_us": 664.0,
+            "total_device_time_us": 664.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::resize_",
+            "count": 8,
+            "self_cpu_time_us": 252.7009999999982,
+            "total_cpu_time_us": 465.90399999999886,
+            "self_device_time_us": 188.0,
+            "total_device_time_us": 484.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::set_",
+            "count": 7,
+            "self_cpu_time_us": 12.5,
+            "total_cpu_time_us": 12.5,
+            "self_device_time_us": 46.0,
+            "total_device_time_us": 46.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::fft_fft",
+            "count": 1,
+            "self_cpu_time_us": 10.500000000000227,
+            "total_cpu_time_us": 181.90200000000004,
+            "self_device_time_us": 12.0,
+            "total_device_time_us": 183.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_fft_c2c",
+            "count": 1,
+            "self_cpu_time_us": 98.90099999999939,
+            "total_cpu_time_us": 171.40199999999982,
+            "self_device_time_us": 51.0,
+            "total_device_time_us": 171.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::permute",
+            "count": 1,
+            "self_cpu_time_us": 8.70100000000025,
+            "total_cpu_time_us": 9.601000000000113,
+            "self_device_time_us": 37.0,
+            "total_device_time_us": 39.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::reshape",
+            "count": 24,
+            "self_cpu_time_us": 440.6029999999928,
+            "total_cpu_time_us": 1136.4069999999974,
+            "self_device_time_us": 362.0,
+            "total_device_time_us": 1158.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::as_strided_",
+            "count": 1,
+            "self_cpu_time_us": 2.1000000000001364,
+            "total_cpu_time_us": 2.1000000000001364,
+            "self_device_time_us": 6.0,
+            "total_device_time_us": 6.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::fft_fftshift",
+            "count": 1,
+            "self_cpu_time_us": 10.300000000000182,
+            "total_cpu_time_us": 78.5,
+            "self_device_time_us": 6.0,
+            "total_device_time_us": 78.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::roll",
+            "count": 1,
+            "self_cpu_time_us": 28.199999999999818,
+            "total_cpu_time_us": 68.19999999999982,
+            "self_device_time_us": 32.0,
+            "total_device_time_us": 72.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::empty_like",
+            "count": 19,
+            "self_cpu_time_us": 261.20299999999884,
+            "total_cpu_time_us": 844.2069999999985,
+            "self_device_time_us": 225.0,
+            "total_device_time_us": 914.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::unsqueeze",
+            "count": 11,
+            "self_cpu_time_us": 105.60099999999989,
+            "total_cpu_time_us": 114.70100000000116,
+            "self_device_time_us": 113.0,
+            "total_device_time_us": 167.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::expand",
+            "count": 11,
+            "self_cpu_time_us": 316.80199999999854,
+            "total_cpu_time_us": 324.10199999999986,
+            "self_device_time_us": 87.0,
+            "total_device_time_us": 107.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::sub",
+            "count": 3,
+            "self_cpu_time_us": 51.60100000000011,
+            "total_cpu_time_us": 51.60100000000011,
+            "self_device_time_us": 57.0,
+            "total_device_time_us": 57.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::tanh",
+            "count": 1,
+            "self_cpu_time_us": 10.30099999999993,
+            "total_cpu_time_us": 10.30099999999993,
+            "self_device_time_us": 13.0,
+            "total_device_time_us": 13.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::real",
+            "count": 7,
+            "self_cpu_time_us": 147.30099999999925,
+            "total_cpu_time_us": 274.0029999999997,
+            "self_device_time_us": 124.0,
+            "total_device_time_us": 343.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::view_as_real",
+            "count": 9,
+            "self_cpu_time_us": 22.500000000000455,
+            "total_cpu_time_us": 22.500000000000455,
+            "self_device_time_us": 81.0,
+            "total_device_time_us": 81.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::matmul",
+            "count": 6,
+            "self_cpu_time_us": 703.8050000000021,
+            "total_cpu_time_us": 2041.316000000001,
+            "self_device_time_us": 242.0,
+            "total_device_time_us": 1817.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::mm",
+            "count": 1,
+            "self_cpu_time_us": 51.40100000000007,
+            "total_cpu_time_us": 51.40100000000007,
+            "self_device_time_us": 54.0,
+            "total_device_time_us": 54.0,
+            "profiler_reported_flops": 524288
+          },
+          {
+            "key": "aten::mul",
+            "count": 6,
+            "self_cpu_time_us": 106.20100000000002,
+            "total_cpu_time_us": 192.40100000000075,
+            "self_device_time_us": 104.0,
+            "total_device_time_us": 190.0,
+            "profiler_reported_flops": 196224
+          },
+          {
+            "key": "aten::abs",
+            "count": 8,
+            "self_cpu_time_us": 257.8020000000006,
+            "total_cpu_time_us": 1689.4159999999993,
+            "self_device_time_us": 175.0,
+            "total_device_time_us": 1708.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::empty_strided",
+            "count": 5,
+            "self_cpu_time_us": 60.099999999999,
+            "total_cpu_time_us": 109.09999999999945,
+            "self_device_time_us": 89.0,
+            "total_device_time_us": 155.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::copy_",
+            "count": 14,
+            "self_cpu_time_us": 224.70199999999886,
+            "total_cpu_time_us": 224.70199999999886,
+            "self_device_time_us": 221.0,
+            "total_device_time_us": 221.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::square",
+            "count": 3,
+            "self_cpu_time_us": 37.999999999999545,
+            "total_cpu_time_us": 128.5,
+            "self_device_time_us": 24.0,
+            "total_device_time_us": 139.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::clamp_min",
+            "count": 4,
+            "self_cpu_time_us": 43.09999999999991,
+            "total_cpu_time_us": 43.09999999999991,
+            "self_device_time_us": 47.0,
+            "total_device_time_us": 47.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::rsqrt",
+            "count": 1,
+            "self_cpu_time_us": 10.0,
+            "total_cpu_time_us": 10.0,
+            "self_device_time_us": 13.0,
+            "total_device_time_us": 13.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::log1p",
+            "count": 1,
+            "self_cpu_time_us": 9.300000000000182,
+            "total_cpu_time_us": 9.300000000000182,
+            "self_device_time_us": 8.0,
+            "total_device_time_us": 8.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::std",
+            "count": 1,
+            "self_cpu_time_us": 40.30000000000018,
+            "total_cpu_time_us": 140.0010000000002,
+            "self_device_time_us": 33.0,
+            "total_device_time_us": 135.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::imag",
+            "count": 2,
+            "self_cpu_time_us": 59.399999999999636,
+            "total_cpu_time_us": 87.5,
+            "self_device_time_us": 13.0,
+            "total_device_time_us": 87.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::stack",
+            "count": 2,
+            "self_cpu_time_us": 42.19999999999982,
+            "total_cpu_time_us": 73.30099999999993,
+            "self_device_time_us": 29.0,
+            "total_device_time_us": 72.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::cat",
+            "count": 3,
+            "self_cpu_time_us": 41.00099999999975,
+            "total_cpu_time_us": 41.00099999999975,
+            "self_device_time_us": 52.0,
+            "total_device_time_us": 52.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::ge",
+            "count": 2,
+            "self_cpu_time_us": 38.800999999999476,
+            "total_cpu_time_us": 38.800999999999476,
+            "self_device_time_us": 42.0,
+            "total_device_time_us": 42.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::__and__",
+            "count": 1,
+            "self_cpu_time_us": 9.0,
+            "total_cpu_time_us": 29.001000000000204,
+            "self_device_time_us": 12.0,
+            "total_device_time_us": 35.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::bitwise_and",
+            "count": 1,
+            "self_cpu_time_us": 20.001000000000204,
+            "total_cpu_time_us": 20.001000000000204,
+            "self_device_time_us": 23.0,
+            "total_device_time_us": 23.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_conj",
+            "count": 1,
+            "self_cpu_time_us": 10.600000000000364,
+            "total_cpu_time_us": 11.5,
+            "self_device_time_us": 2.0,
+            "total_device_time_us": 4.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::alias",
+            "count": 1,
+            "self_cpu_time_us": 0.8999999999996362,
+            "total_cpu_time_us": 0.8999999999996362,
+            "self_device_time_us": 2.0,
+            "total_device_time_us": 2.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::clone",
+            "count": 9,
+            "self_cpu_time_us": 192.80100000000402,
+            "total_cpu_time_us": 745.7040000000015,
+            "self_device_time_us": 139.0,
+            "total_device_time_us": 824.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::pad",
+            "count": 1,
+            "self_cpu_time_us": 12.100000000001273,
+            "total_cpu_time_us": 116.40100000000075,
+            "self_device_time_us": 15.0,
+            "total_device_time_us": 121.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::constant_pad_nd",
+            "count": 1,
+            "self_cpu_time_us": 37.89999999999873,
+            "total_cpu_time_us": 104.30099999999948,
+            "self_device_time_us": 19.0,
+            "total_device_time_us": 106.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::narrow",
+            "count": 1,
+            "self_cpu_time_us": 9.399999999999636,
+            "total_cpu_time_us": 18.90099999999984,
+            "self_device_time_us": 7.0,
+            "total_device_time_us": 53.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::conv1d",
+            "count": 5,
+            "self_cpu_time_us": 65.60099999999966,
+            "total_cpu_time_us": 935.6080000000002,
+            "self_device_time_us": 47.0,
+            "total_device_time_us": 1450.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::convolution",
+            "count": 5,
+            "self_cpu_time_us": 54.301000000001295,
+            "total_cpu_time_us": 870.0070000000005,
+            "self_device_time_us": 38.0,
+            "total_device_time_us": 1403.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_convolution",
+            "count": 5,
+            "self_cpu_time_us": 310.50199999999677,
+            "total_cpu_time_us": 815.7059999999992,
+            "self_device_time_us": 157.0,
+            "total_device_time_us": 1365.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::cudnn_convolution",
+            "count": 5,
+            "self_cpu_time_us": 247.20199999999932,
+            "total_cpu_time_us": 247.20199999999932,
+            "self_device_time_us": 488.0,
+            "total_device_time_us": 488.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::add_",
+            "count": 6,
+            "self_cpu_time_us": 68.40200000000186,
+            "total_cpu_time_us": 68.40200000000186,
+            "self_device_time_us": 436.0,
+            "total_device_time_us": 436.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::squeeze",
+            "count": 5,
+            "self_cpu_time_us": 48.10000000000127,
+            "total_cpu_time_us": 52.0,
+            "self_device_time_us": 44.0,
+            "total_device_time_us": 117.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::batch_norm",
+            "count": 5,
+            "self_cpu_time_us": 66.0,
+            "total_cpu_time_us": 913.3070000000007,
+            "self_device_time_us": 24.0,
+            "total_device_time_us": 914.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_batch_norm_impl_index",
+            "count": 5,
+            "self_cpu_time_us": 88.8010000000013,
+            "total_cpu_time_us": 847.3070000000007,
+            "self_device_time_us": 26.0,
+            "total_device_time_us": 890.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::cudnn_batch_norm",
+            "count": 5,
+            "self_cpu_time_us": 370.7029999999977,
+            "total_cpu_time_us": 758.5059999999994,
+            "self_device_time_us": 455.0,
+            "total_device_time_us": 864.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::leaky_relu_",
+            "count": 2,
+            "self_cpu_time_us": 18.799999999999272,
+            "total_cpu_time_us": 18.799999999999272,
+            "self_device_time_us": 24.0,
+            "total_device_time_us": 24.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::gelu",
+            "count": 3,
+            "self_cpu_time_us": 32.5,
+            "total_cpu_time_us": 32.5,
+            "self_device_time_us": 67.0,
+            "total_device_time_us": 67.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::transpose",
+            "count": 17,
+            "self_cpu_time_us": 183.4009999999962,
+            "total_cpu_time_us": 196.30099999999675,
+            "self_device_time_us": 416.0,
+            "total_device_time_us": 507.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::linear",
+            "count": 6,
+            "self_cpu_time_us": 444.00199999999677,
+            "total_cpu_time_us": 1252.9089999999987,
+            "self_device_time_us": 239.0,
+            "total_device_time_us": 745.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::t",
+            "count": 6,
+            "self_cpu_time_us": 60.10000000000127,
+            "total_cpu_time_us": 123.30000000000109,
+            "self_device_time_us": 53.0,
+            "total_device_time_us": 97.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_reshape_alias",
+            "count": 2,
+            "self_cpu_time_us": 3.800000000000182,
+            "total_cpu_time_us": 3.800000000000182,
+            "self_device_time_us": 2.0,
+            "total_device_time_us": 2.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::bmm",
+            "count": 5,
+            "self_cpu_time_us": 197.5019999999986,
+            "total_cpu_time_us": 197.5019999999986,
+            "self_device_time_us": 546.0,
+            "total_device_time_us": 546.0,
+            "profiler_reported_flops": 100663296
+          },
+          {
+            "key": "aten::_unsafe_view",
+            "count": 13,
+            "self_cpu_time_us": 16.200000000000728,
+            "total_cpu_time_us": 16.200000000000728,
+            "self_device_time_us": 21.0,
+            "total_device_time_us": 21.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::layer_norm",
+            "count": 4,
+            "self_cpu_time_us": 58.501000000000204,
+            "total_cpu_time_us": 522.7039999999997,
+            "self_device_time_us": 19.0,
+            "total_device_time_us": 590.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::native_layer_norm",
+            "count": 4,
+            "self_cpu_time_us": 270.8000000000011,
+            "total_cpu_time_us": 464.2029999999995,
+            "self_device_time_us": 297.0,
+            "total_device_time_us": 571.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::addmm",
+            "count": 5,
+            "self_cpu_time_us": 182.60300000000097,
+            "total_cpu_time_us": 182.60300000000097,
+            "self_device_time_us": 184.0,
+            "total_device_time_us": 184.0,
+            "profiler_reported_flops": 268599296
+          },
+          {
+            "key": "aten::unbind",
+            "count": 2,
+            "self_cpu_time_us": 111.60000000000218,
+            "total_cpu_time_us": 201.89999999999964,
+            "self_device_time_us": 45.0,
+            "total_device_time_us": 166.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::softmax",
+            "count": 2,
+            "self_cpu_time_us": 18.400000000001455,
+            "total_cpu_time_us": 38.80000000000109,
+            "self_device_time_us": 43.0,
+            "total_device_time_us": 71.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_softmax",
+            "count": 2,
+            "self_cpu_time_us": 20.399999999999636,
+            "total_cpu_time_us": 20.399999999999636,
+            "self_device_time_us": 28.0,
+            "total_device_time_us": 28.0,
+            "profiler_reported_flops": 0
+          }
+        ],
+        "scope": "One warmed synthetic inference; CPU/CUDA profiler overhead excluded from latency measurements",
+        "profiler_flops_are_complete": false,
+        "note": "ATen time keys are an operator inventory; profiler FLOPs support only some operators and are not a total"
+      }
+    },
+    {
+      "arm": "B2",
+      "fold": 0,
+      "checkpoint_sha256": "5fdb741c842c0ee8920dcf14b1773a765deb365cab3a3f8bf4b99fe88105ab85",
+      "parameters": 82698,
+      "added_parameters_vs_B0": 272,
+      "arithmetic_proxy": {
+        "conv1d_macs": 3694592,
+        "linear_macs": 1180544,
+        "conv_linear_flops": 9750272,
+        "attention_product_flops": 524288,
+        "spectral_band_matrix_product_flops": 8192,
+        "spectral_product_inventory": [
+          "8band gains @ masks: 2*8*256",
+          "band power pooling: 2*256*8"
+        ],
+        "complex_fft_count": 1,
+        "complex_ifft_count": 0,
+        "complex_fft_flops_proxy": 10240,
+        "complex_fft_convention": "5*N*log2(N), N256 complex FFT; algorithmic estimate, not exact cuFFT FLOPs",
+        "partial_arithmetic_subtotal": 10292992,
+        "extra_rf_descriptor_reconstructions": 0,
+        "excluded_from_arithmetic_subtotal": [
+          "RMS/Parseval reductions, square roots, epsilon and divisions",
+          "complex absolute values and pointwise complex/real multiplications",
+          "LogMag log1p, centering, standard deviation, normalization",
+          "phase validity comparisons, conjugation, products, padding",
+          "GELU, tanh, softmax, LayerNorm, BatchNorm, bias additions",
+          "pooling reductions, concatenations, indexing and memory movement",
+          "the extra B3/B4 RF descriptor rebuild except its listed matrix products"
+        ],
+        "complete_total_flops": false
+      },
+      "inference_path": [
+        "legacy packet RMS in tokens()",
+        "legacy packet RMS in features()",
+        "one complex FFT256 and fftshift",
+        "8 relative log1p band powers",
+        "Linear8x16 + GELU + Linear16x8(no bias)",
+        "mean-center logits; tanh; smooth partition-of-unity gain",
+        "complex spectrum multiplied by gain",
+        "Parseval relative RMS correction against original spectrum",
+        "rebuild Re/Im/standardized LogMag and masked adjacent phase-product Re/Im",
+        "HStem: two local convolutions plus 3 strided tokenization convolutions",
+        "32 tokens x64; token preparation and pre-LayerNorm",
+        "two ordinary MHA blocks including QK and AV products and softmax",
+        "final LayerNorm; token mean pool; TX classifier"
+      ],
+      "latency": [
+        {
+          "batch": 1,
+          "warmup": 10,
+          "repetitions": 30,
+          "median_batch_ms": 3.2271000382024795,
+          "p10_batch_ms": 2.762889984296635,
+          "p90_batch_ms": 4.180700005963446,
+          "median_packet_ms": 3.2271000382024795,
+          "samples_batch_ms": [
+            3.915300010703504,
+            3.1993999728001654,
+            2.878399973269552,
+            3.4846000489778817,
+            3.1330000492744148,
+            2.6606000028550625,
+            3.328500024508685,
+            3.4525999799370766,
+            3.3996999845840037,
+            3.379700006917119,
+            3.275599970947951,
+            3.1782000442035496,
+            2.6457999483682215,
+            3.2010000431910157,
+            6.6466000280343,
+            3.024799982085824,
+            2.765199984423816,
+            3.2009000424295664,
+            3.2532000332139432,
+            3.375299973413348,
+            3.543300030287355,
+            2.781999995931983,
+            2.826700045261532,
+            3.0825999565422535,
+            4.13670000853017,
+            3.729499992914498,
+            2.742099983152002,
+            2.9984000138938427,
+            7.734199985861778,
+            4.57669998286292
+          ],
+          "input": "fixed-seed synthetic standard-normal IQ; no scientific samples"
+        },
+        {
+          "batch": 128,
+          "warmup": 10,
+          "repetitions": 30,
+          "median_batch_ms": 6.620700005441904,
+          "p10_batch_ms": 4.160679993219674,
+          "p90_batch_ms": 7.414779986720532,
+          "median_packet_ms": 0.051724218792514876,
+          "samples_batch_ms": [
+            4.435000009834766,
+            7.43170001078397,
+            6.890299962833524,
+            4.899999999906868,
+            5.477000027894974,
+            3.638499998487532,
+            6.4721000380814075,
+            7.172099954914302,
+            7.3219999903813004,
+            7.600400014780462,
+            5.748800002038479,
+            3.0515999533236027,
+            6.709400040563196,
+            7.585700019262731,
+            6.531999970320612,
+            5.059099989011884,
+            4.697500029578805,
+            6.897000013850629,
+            6.95920002181083,
+            6.766400008928031,
+            7.412899984046817,
+            7.333100016694516,
+            6.962199986446649,
+            7.129299978259951,
+            5.331000022124499,
+            5.499600025359541,
+            6.852099962998182,
+            5.39460004074499,
+            3.3037999528460205,
+            4.218699992634356
+          ],
+          "input": "fixed-seed synthetic standard-normal IQ; no scientific samples"
+        }
+      ],
+      "peak_benchmark_allocated_gib": 0.0475006103515625,
+      "operator_profile": {
+        "status": "PASS",
+        "batch": 128,
+        "events": [
+          {
+            "key": "aten::slice",
+            "count": 21,
+            "self_cpu_time_us": 245.30500000000575,
+            "total_cpu_time_us": 258.80500000000245,
+            "self_device_time_us": 203.0,
+            "total_device_time_us": 272.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::as_strided",
+            "count": 96,
+            "self_cpu_time_us": 69.59999999999422,
+            "total_cpu_time_us": 69.59999999999422,
+            "self_device_time_us": 458.0,
+            "total_device_time_us": 458.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::select",
+            "count": 25,
+            "self_cpu_time_us": 238.9049999999989,
+            "total_cpu_time_us": 258.40500000000196,
+            "self_device_time_us": 254.0,
+            "total_device_time_us": 364.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::pow",
+            "count": 8,
+            "self_cpu_time_us": 231.20500000000112,
+            "total_cpu_time_us": 236.30500000000052,
+            "self_device_time_us": 208.0,
+            "total_device_time_us": 326.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::result_type",
+            "count": 8,
+            "self_cpu_time_us": 2.6999999999997044,
+            "total_cpu_time_us": 2.6999999999997044,
+            "self_device_time_us": 33.0,
+            "total_device_time_us": 33.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::to",
+            "count": 10,
+            "self_cpu_time_us": 3.0999999999997385,
+            "total_cpu_time_us": 3.0999999999997385,
+            "self_device_time_us": 91.0,
+            "total_device_time_us": 91.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::add",
+            "count": 9,
+            "self_cpu_time_us": 96.40099999999882,
+            "total_cpu_time_us": 96.40099999999882,
+            "self_device_time_us": 110.0,
+            "total_device_time_us": 110.0,
+            "profiler_reported_flops": 885120
+          },
+          {
+            "key": "aten::mean",
+            "count": 8,
+            "self_cpu_time_us": 130.90200000000027,
+            "total_cpu_time_us": 133.5020000000011,
+            "self_device_time_us": 121.0,
+            "total_device_time_us": 124.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::sqrt",
+            "count": 3,
+            "self_cpu_time_us": 23.101,
+            "total_cpu_time_us": 23.101,
+            "self_device_time_us": 27.0,
+            "total_device_time_us": 27.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::view",
+            "count": 35,
+            "self_cpu_time_us": 49.100000000001046,
+            "total_cpu_time_us": 49.100000000001046,
+            "self_device_time_us": 139.0,
+            "total_device_time_us": 139.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::div",
+            "count": 11,
+            "self_cpu_time_us": 170.50199999999813,
+            "total_cpu_time_us": 170.50199999999813,
+            "self_device_time_us": 125.0,
+            "total_device_time_us": 125.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::complex",
+            "count": 4,
+            "self_cpu_time_us": 93.6019999999994,
+            "total_cpu_time_us": 362.5060000000003,
+            "self_device_time_us": 119.0,
+            "total_device_time_us": 407.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::empty",
+            "count": 60,
+            "self_cpu_time_us": 762.8110000000036,
+            "total_cpu_time_us": 1061.318000000001,
+            "self_device_time_us": 867.0,
+            "total_device_time_us": 1353.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::fill_",
+            "count": 75,
+            "self_cpu_time_us": 394.0089999999959,
+            "total_cpu_time_us": 394.0089999999959,
+            "self_device_time_us": 627.0,
+            "total_device_time_us": 627.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::resize_",
+            "count": 9,
+            "self_cpu_time_us": 255.60300000000052,
+            "total_cpu_time_us": 445.70799999999986,
+            "self_device_time_us": 185.0,
+            "total_device_time_us": 485.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::set_",
+            "count": 8,
+            "self_cpu_time_us": 11.700000000000728,
+            "total_cpu_time_us": 11.700000000000728,
+            "self_device_time_us": 24.0,
+            "total_device_time_us": 24.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::fft_fft",
+            "count": 1,
+            "self_cpu_time_us": 18.200000000000045,
+            "total_cpu_time_us": 149.6020000000001,
+            "self_device_time_us": 6.0,
+            "total_device_time_us": 136.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_fft_c2c",
+            "count": 1,
+            "self_cpu_time_us": 77.00200000000041,
+            "total_cpu_time_us": 131.40200000000004,
+            "self_device_time_us": 72.0,
+            "total_device_time_us": 130.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::permute",
+            "count": 2,
+            "self_cpu_time_us": 30.09999999999968,
+            "total_cpu_time_us": 31.499999999999773,
+            "self_device_time_us": 35.0,
+            "total_device_time_us": 38.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::reshape",
+            "count": 24,
+            "self_cpu_time_us": 493.20900000000165,
+            "total_cpu_time_us": 1039.4159999999963,
+            "self_device_time_us": 375.0,
+            "total_device_time_us": 1503.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::as_strided_",
+            "count": 1,
+            "self_cpu_time_us": 2.199999999999818,
+            "total_cpu_time_us": 2.199999999999818,
+            "self_device_time_us": 5.0,
+            "total_device_time_us": 5.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::fft_fftshift",
+            "count": 1,
+            "self_cpu_time_us": 8.599999999999909,
+            "total_cpu_time_us": 45.70100000000002,
+            "self_device_time_us": 8.0,
+            "total_device_time_us": 45.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::roll",
+            "count": 1,
+            "self_cpu_time_us": 15.200000000000045,
+            "total_cpu_time_us": 37.10100000000011,
+            "self_device_time_us": 13.0,
+            "total_device_time_us": 37.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::empty_like",
+            "count": 20,
+            "self_cpu_time_us": 202.40400000000045,
+            "total_cpu_time_us": 582.7110000000002,
+            "self_device_time_us": 225.0,
+            "total_device_time_us": 697.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::real",
+            "count": 9,
+            "self_cpu_time_us": 163.30300000000102,
+            "total_cpu_time_us": 281.3080000000016,
+            "self_device_time_us": 188.0,
+            "total_device_time_us": 393.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::view_as_real",
+            "count": 11,
+            "self_cpu_time_us": 25.10099999999943,
+            "total_cpu_time_us": 25.10099999999943,
+            "self_device_time_us": 43.0,
+            "total_device_time_us": 43.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::sum",
+            "count": 1,
+            "self_cpu_time_us": 20.200000000000045,
+            "total_cpu_time_us": 20.799999999999955,
+            "self_device_time_us": 14.0,
+            "total_device_time_us": 46.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::clamp_min",
+            "count": 6,
+            "self_cpu_time_us": 67.39999999999964,
+            "total_cpu_time_us": 67.39999999999964,
+            "self_device_time_us": 87.0,
+            "total_device_time_us": 87.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::abs",
+            "count": 10,
+            "self_cpu_time_us": 300.60099999999875,
+            "total_cpu_time_us": 1730.9260000000004,
+            "self_device_time_us": 193.0,
+            "total_device_time_us": 1936.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::empty_strided",
+            "count": 6,
+            "self_cpu_time_us": 72.90099999999984,
+            "total_cpu_time_us": 114.50299999999993,
+            "self_device_time_us": 104.0,
+            "total_device_time_us": 154.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::copy_",
+            "count": 15,
+            "self_cpu_time_us": 194.40199999999595,
+            "total_cpu_time_us": 194.40199999999595,
+            "self_device_time_us": 277.0,
+            "total_device_time_us": 277.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::square",
+            "count": 4,
+            "self_cpu_time_us": 38.40099999999961,
+            "total_cpu_time_us": 140.10400000000027,
+            "self_device_time_us": 16.0,
+            "total_device_time_us": 172.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::numpy_T",
+            "count": 1,
+            "self_cpu_time_us": 7.7000000000000455,
+            "total_cpu_time_us": 28.799999999999955,
+            "self_device_time_us": 7.0,
+            "total_device_time_us": 30.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::matmul",
+            "count": 8,
+            "self_cpu_time_us": 478.3090000000061,
+            "total_cpu_time_us": 1844.0289999999993,
+            "self_device_time_us": 209.0,
+            "total_device_time_us": 2198.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::mm",
+            "count": 3,
+            "self_cpu_time_us": 193.70299999999975,
+            "total_cpu_time_us": 193.70299999999975,
+            "self_device_time_us": 213.0,
+            "total_device_time_us": 213.0,
+            "profiler_reported_flops": 1081344
+          },
+          {
+            "key": "aten::log1p",
+            "count": 2,
+            "self_cpu_time_us": 15.899999999999636,
+            "total_cpu_time_us": 15.899999999999636,
+            "self_device_time_us": 34.0,
+            "total_device_time_us": 34.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::linear",
+            "count": 8,
+            "self_cpu_time_us": 438.6069999999986,
+            "total_cpu_time_us": 1371.4220000000005,
+            "self_device_time_us": 156.0,
+            "total_device_time_us": 1160.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::t",
+            "count": 8,
+            "self_cpu_time_us": 117.00300000000288,
+            "total_cpu_time_us": 199.40400000000182,
+            "self_device_time_us": 81.0,
+            "total_device_time_us": 218.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::transpose",
+            "count": 19,
+            "self_cpu_time_us": 184.9050000000052,
+            "total_cpu_time_us": 199.40500000000156,
+            "self_device_time_us": 538.0,
+            "total_device_time_us": 591.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::addmm",
+            "count": 6,
+            "self_cpu_time_us": 240.20300000000043,
+            "total_cpu_time_us": 240.20300000000043,
+            "self_device_time_us": 299.0,
+            "total_device_time_us": 299.0,
+            "profiler_reported_flops": 268632064
+          },
+          {
+            "key": "aten::gelu",
+            "count": 4,
+            "self_cpu_time_us": 47.80000000000018,
+            "total_cpu_time_us": 47.80000000000018,
+            "self_device_time_us": 41.0,
+            "total_device_time_us": 41.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::sub",
+            "count": 3,
+            "self_cpu_time_us": 79.50300000000016,
+            "total_cpu_time_us": 79.50300000000016,
+            "self_device_time_us": 29.0,
+            "total_device_time_us": 29.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::tanh",
+            "count": 1,
+            "self_cpu_time_us": 10.600000000000364,
+            "total_cpu_time_us": 10.600000000000364,
+            "self_device_time_us": 11.0,
+            "total_device_time_us": 11.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::mul",
+            "count": 6,
+            "self_cpu_time_us": 71.50300000000198,
+            "total_cpu_time_us": 141.50400000000127,
+            "self_device_time_us": 78.0,
+            "total_device_time_us": 149.0,
+            "profiler_reported_flops": 196224
+          },
+          {
+            "key": "aten::rsqrt",
+            "count": 1,
+            "self_cpu_time_us": 9.599999999999909,
+            "total_cpu_time_us": 9.599999999999909,
+            "self_device_time_us": 8.0,
+            "total_device_time_us": 8.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::std",
+            "count": 1,
+            "self_cpu_time_us": 31.800000000000637,
+            "total_cpu_time_us": 109.0010000000002,
+            "self_device_time_us": 19.0,
+            "total_device_time_us": 106.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::imag",
+            "count": 2,
+            "self_cpu_time_us": 37.10099999999875,
+            "total_cpu_time_us": 60.500999999999294,
+            "self_device_time_us": 49.0,
+            "total_device_time_us": 63.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::stack",
+            "count": 2,
+            "self_cpu_time_us": 50.0,
+            "total_cpu_time_us": 80.40099999999984,
+            "self_device_time_us": 26.0,
+            "total_device_time_us": 86.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::cat",
+            "count": 3,
+            "self_cpu_time_us": 38.801000000000386,
+            "total_cpu_time_us": 38.801000000000386,
+            "self_device_time_us": 67.0,
+            "total_device_time_us": 67.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::ge",
+            "count": 2,
+            "self_cpu_time_us": 25.001000000000204,
+            "total_cpu_time_us": 25.001000000000204,
+            "self_device_time_us": 26.0,
+            "total_device_time_us": 26.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::__and__",
+            "count": 1,
+            "self_cpu_time_us": 9.699999999999818,
+            "total_cpu_time_us": 22.5,
+            "self_device_time_us": 10.0,
+            "total_device_time_us": 23.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::bitwise_and",
+            "count": 1,
+            "self_cpu_time_us": 12.800000000000182,
+            "total_cpu_time_us": 12.800000000000182,
+            "self_device_time_us": 13.0,
+            "total_device_time_us": 13.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_conj",
+            "count": 1,
+            "self_cpu_time_us": 11.300000000000182,
+            "total_cpu_time_us": 12.199999999999818,
+            "self_device_time_us": 14.0,
+            "total_device_time_us": 15.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::alias",
+            "count": 1,
+            "self_cpu_time_us": 0.8999999999996362,
+            "total_cpu_time_us": 0.8999999999996362,
+            "self_device_time_us": 1.0,
+            "total_device_time_us": 1.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::clone",
+            "count": 9,
+            "self_cpu_time_us": 180.1030000000028,
+            "total_cpu_time_us": 577.9079999999985,
+            "self_device_time_us": 109.0,
+            "total_device_time_us": 694.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::pad",
+            "count": 1,
+            "self_cpu_time_us": 12.700000000000728,
+            "total_cpu_time_us": 107.30100000000039,
+            "self_device_time_us": 22.0,
+            "total_device_time_us": 122.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::constant_pad_nd",
+            "count": 1,
+            "self_cpu_time_us": 32.400000000000546,
+            "total_cpu_time_us": 94.60099999999966,
+            "self_device_time_us": 24.0,
+            "total_device_time_us": 100.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::narrow",
+            "count": 1,
+            "self_cpu_time_us": 24.000999999999294,
+            "total_cpu_time_us": 33.60099999999966,
+            "self_device_time_us": 26.0,
+            "total_device_time_us": 36.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::conv1d",
+            "count": 5,
+            "self_cpu_time_us": 46.800999999999476,
+            "total_cpu_time_us": 830.5119999999997,
+            "self_device_time_us": 33.0,
+            "total_device_time_us": 994.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::convolution",
+            "count": 5,
+            "self_cpu_time_us": 55.599999999999454,
+            "total_cpu_time_us": 783.7110000000002,
+            "self_device_time_us": 76.0,
+            "total_device_time_us": 961.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_convolution",
+            "count": 5,
+            "self_cpu_time_us": 273.503999999999,
+            "total_cpu_time_us": 728.1110000000008,
+            "self_device_time_us": 144.0,
+            "total_device_time_us": 885.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::unsqueeze",
+            "count": 10,
+            "self_cpu_time_us": 115.3030000000008,
+            "total_cpu_time_us": 122.40300000000025,
+            "self_device_time_us": 91.0,
+            "total_device_time_us": 155.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::cudnn_convolution",
+            "count": 5,
+            "self_cpu_time_us": 190.60200000000077,
+            "total_cpu_time_us": 190.60200000000077,
+            "self_device_time_us": 407.0,
+            "total_device_time_us": 407.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::add_",
+            "count": 6,
+            "self_cpu_time_us": 55.19999999999982,
+            "total_cpu_time_us": 55.19999999999982,
+            "self_device_time_us": 66.0,
+            "total_device_time_us": 66.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::squeeze",
+            "count": 5,
+            "self_cpu_time_us": 52.501000000000204,
+            "total_cpu_time_us": 55.60100000000057,
+            "self_device_time_us": 62.0,
+            "total_device_time_us": 96.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::batch_norm",
+            "count": 5,
+            "self_cpu_time_us": 94.20099999999911,
+            "total_cpu_time_us": 820.4119999999994,
+            "self_device_time_us": 47.0,
+            "total_device_time_us": 817.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_batch_norm_impl_index",
+            "count": 5,
+            "self_cpu_time_us": 75.0,
+            "total_cpu_time_us": 726.2110000000002,
+            "self_device_time_us": 47.0,
+            "total_device_time_us": 770.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::cudnn_batch_norm",
+            "count": 5,
+            "self_cpu_time_us": 318.20500000000175,
+            "total_cpu_time_us": 651.2110000000002,
+            "self_device_time_us": 338.0,
+            "total_device_time_us": 723.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::leaky_relu_",
+            "count": 2,
+            "self_cpu_time_us": 18.300000000000182,
+            "total_cpu_time_us": 18.300000000000182,
+            "self_device_time_us": 30.0,
+            "total_device_time_us": 30.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::expand",
+            "count": 10,
+            "self_cpu_time_us": 246.0050000000001,
+            "total_cpu_time_us": 253.30499999999756,
+            "self_device_time_us": 70.0,
+            "total_device_time_us": 160.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_reshape_alias",
+            "count": 2,
+            "self_cpu_time_us": 4.099999999999454,
+            "total_cpu_time_us": 4.099999999999454,
+            "self_device_time_us": 10.0,
+            "total_device_time_us": 10.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::bmm",
+            "count": 5,
+            "self_cpu_time_us": 185.60200000000077,
+            "total_cpu_time_us": 185.60200000000077,
+            "self_device_time_us": 493.0,
+            "total_device_time_us": 493.0,
+            "profiler_reported_flops": 100663296
+          },
+          {
+            "key": "aten::_unsafe_view",
+            "count": 13,
+            "self_cpu_time_us": 17.39999999999418,
+            "total_cpu_time_us": 17.39999999999418,
+            "self_device_time_us": 428.0,
+            "total_device_time_us": 428.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::layer_norm",
+            "count": 4,
+            "self_cpu_time_us": 45.00299999999879,
+            "total_cpu_time_us": 927.8149999999996,
+            "self_device_time_us": 20.0,
+            "total_device_time_us": 747.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::native_layer_norm",
+            "count": 4,
+            "self_cpu_time_us": 531.8059999999978,
+            "total_cpu_time_us": 882.8120000000008,
+            "self_device_time_us": 313.0,
+            "total_device_time_us": 727.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::unbind",
+            "count": 2,
+            "self_cpu_time_us": 279.40500000000065,
+            "total_cpu_time_us": 341.8050000000003,
+            "self_device_time_us": 376.0,
+            "total_device_time_us": 473.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::softmax",
+            "count": 2,
+            "self_cpu_time_us": 22.501000000000204,
+            "total_cpu_time_us": 46.800999999999476,
+            "self_device_time_us": 62.0,
+            "total_device_time_us": 88.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_softmax",
+            "count": 2,
+            "self_cpu_time_us": 24.299999999999272,
+            "total_cpu_time_us": 24.299999999999272,
+            "self_device_time_us": 26.0,
+            "total_device_time_us": 26.0,
+            "profiler_reported_flops": 0
+          }
+        ],
+        "scope": "One warmed synthetic inference; CPU/CUDA profiler overhead excluded from latency measurements",
+        "profiler_flops_are_complete": false,
+        "note": "ATen time keys are an operator inventory; profiler FLOPs support only some operators and are not a total"
+      }
+    },
+    {
+      "arm": "B3",
+      "fold": 0,
+      "checkpoint_sha256": "f1bbf08ee34f2a90e36d100cc762fa622d08c74f3827324da2a3e07a203b2b39",
+      "parameters": 82698,
+      "added_parameters_vs_B0": 272,
+      "arithmetic_proxy": {
+        "conv1d_macs": 3694592,
+        "linear_macs": 1180544,
+        "conv_linear_flops": 9750272,
+        "attention_product_flops": 524288,
+        "spectral_band_matrix_product_flops": 16384,
+        "spectral_product_inventory": [
+          "8band gains @ masks: 2*8*256",
+          "band power pooling: 2*256*8",
+          "phase Re and Im band pooling: 2 products * 2*256*8"
+        ],
+        "complex_fft_count": 1,
+        "complex_ifft_count": 0,
+        "complex_fft_flops_proxy": 10240,
+        "complex_fft_convention": "5*N*log2(N), N256 complex FFT; algorithmic estimate, not exact cuFFT FLOPs",
+        "partial_arithmetic_subtotal": 10301184,
+        "extra_rf_descriptor_reconstructions": 1,
+        "excluded_from_arithmetic_subtotal": [
+          "RMS/Parseval reductions, square roots, epsilon and divisions",
+          "complex absolute values and pointwise complex/real multiplications",
+          "LogMag log1p, centering, standard deviation, normalization",
+          "phase validity comparisons, conjugation, products, padding",
+          "GELU, tanh, softmax, LayerNorm, BatchNorm, bias additions",
+          "pooling reductions, concatenations, indexing and memory movement",
+          "the extra B3/B4 RF descriptor rebuild except its listed matrix products"
+        ],
+        "complete_total_flops": false
+      },
+      "inference_path": [
+        "legacy packet RMS in tokens()",
+        "legacy packet RMS in features()",
+        "one complex FFT256 and fftshift",
+        "8 relative log1p band powers",
+        "EXTRA full original 5channel RF reconstruction for phase descriptors",
+        "8 averaged phase-product Re and 8 Im descriptors",
+        "Linear24x8 + GELU + Linear8x8",
+        "mean-center logits; tanh; smooth partition-of-unity gain",
+        "complex spectrum multiplied by gain",
+        "Parseval relative RMS correction against original spectrum",
+        "rebuild Re/Im/standardized LogMag and masked adjacent phase-product Re/Im",
+        "HStem: two local convolutions plus 3 strided tokenization convolutions",
+        "32 tokens x64; token preparation and pre-LayerNorm",
+        "two ordinary MHA blocks including QK and AV products and softmax",
+        "final LayerNorm; token mean pool; TX classifier"
+      ],
+      "latency": [
+        {
+          "batch": 1,
+          "warmup": 10,
+          "repetitions": 30,
+          "median_batch_ms": 6.290449993684888,
+          "p10_batch_ms": 3.6056999932043254,
+          "p90_batch_ms": 8.72224997729063,
+          "median_packet_ms": 6.290449993684888,
+          "samples_batch_ms": [
+            7.304799975827336,
+            4.335800011176616,
+            3.4049999667331576,
+            3.5301000461913645,
+            4.2165000340901315,
+            4.602400003932416,
+            3.6140999873168766,
+            4.331299976911396,
+            5.268800014164299,
+            3.7133999867364764,
+            8.30429996130988,
+            7.492200005799532,
+            3.3937999978661537,
+            6.051100033801049,
+            6.874000013340265,
+            7.848099980037659,
+            5.157000035978854,
+            4.779199953190982,
+            3.9953000377863646,
+            6.561799964401871,
+            8.752399997320026,
+            6.185000005643815,
+            7.932899985462427,
+            8.718899975065142,
+            8.41979996766895,
+            8.594100014306605,
+            8.529199985787272,
+            8.8304000091739,
+            8.987999986857176,
+            6.395899981725961
+          ],
+          "input": "fixed-seed synthetic standard-normal IQ; no scientific samples"
+        },
+        {
+          "batch": 128,
+          "warmup": 10,
+          "repetitions": 30,
+          "median_batch_ms": 4.196400026557967,
+          "p10_batch_ms": 3.8374700059648603,
+          "p90_batch_ms": 7.132319966331124,
+          "median_packet_ms": 0.03278437520748412,
+          "samples_batch_ms": [
+            3.9480000268667936,
+            4.28920000558719,
+            3.8538999506272376,
+            5.701200047042221,
+            7.72199995117262,
+            7.250400027260184,
+            7.119199959561229,
+            4.000100016128272,
+            4.858299973420799,
+            3.8462000084109604,
+            3.635199973359704,
+            4.122600017581135,
+            4.135600000154227,
+            4.1161999688483775,
+            4.046200017910451,
+            4.259100009221584,
+            5.105099990032613,
+            5.816899996716529,
+            7.453400001395494,
+            4.279700049664825,
+            4.2100000428035855,
+            3.7588999839499593,
+            4.247899982146919,
+            5.440699984319508,
+            3.5044000251218677,
+            4.147999978158623,
+            4.182800010312349,
+            4.057399986777455,
+            4.011199984233826,
+            5.041199969127774
+          ],
+          "input": "fixed-seed synthetic standard-normal IQ; no scientific samples"
+        }
+      ],
+      "peak_benchmark_allocated_gib": 0.047501564025878906,
+      "operator_profile": {
+        "status": "PASS",
+        "batch": 128,
+        "events": [
+          {
+            "key": "aten::slice",
+            "count": 38,
+            "self_cpu_time_us": 681.9159999999979,
+            "total_cpu_time_us": 710.2160000000002,
+            "self_device_time_us": 567.0,
+            "total_device_time_us": 784.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::as_strided",
+            "count": 125,
+            "self_cpu_time_us": 91.20099999999775,
+            "total_cpu_time_us": 91.20099999999775,
+            "self_device_time_us": 654.0,
+            "total_device_time_us": 654.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::select",
+            "count": 35,
+            "self_cpu_time_us": 465.2059999999958,
+            "total_cpu_time_us": 490.80599999999794,
+            "self_device_time_us": 819.0,
+            "total_device_time_us": 1032.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::pow",
+            "count": 9,
+            "self_cpu_time_us": 265.00700000000074,
+            "total_cpu_time_us": 269.70700000000113,
+            "self_device_time_us": 178.0,
+            "total_device_time_us": 286.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::result_type",
+            "count": 9,
+            "self_cpu_time_us": 2.2000000000004434,
+            "total_cpu_time_us": 2.2000000000004434,
+            "self_device_time_us": 37.0,
+            "total_device_time_us": 37.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::to",
+            "count": 11,
+            "self_cpu_time_us": 3.2000000000006708,
+            "total_cpu_time_us": 3.2000000000006708,
+            "self_device_time_us": 73.0,
+            "total_device_time_us": 73.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::add",
+            "count": 9,
+            "self_cpu_time_us": 104.10300000000132,
+            "total_cpu_time_us": 104.10300000000132,
+            "self_device_time_us": 106.0,
+            "total_device_time_us": 106.0,
+            "profiler_reported_flops": 885120
+          },
+          {
+            "key": "aten::mean",
+            "count": 10,
+            "self_cpu_time_us": 167.30300000000085,
+            "total_cpu_time_us": 169.40300000000087,
+            "self_device_time_us": 197.0,
+            "total_device_time_us": 200.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::sqrt",
+            "count": 4,
+            "self_cpu_time_us": 36.80200000000036,
+            "total_cpu_time_us": 36.80200000000036,
+            "self_device_time_us": 26.0,
+            "total_device_time_us": 26.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::view",
+            "count": 37,
+            "self_cpu_time_us": 54.10100000000227,
+            "total_cpu_time_us": 54.10100000000227,
+            "self_device_time_us": 141.0,
+            "total_device_time_us": 141.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::div",
+            "count": 17,
+            "self_cpu_time_us": 197.00299999999902,
+            "total_cpu_time_us": 197.00299999999902,
+            "self_device_time_us": 258.0,
+            "total_device_time_us": 258.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::complex",
+            "count": 6,
+            "self_cpu_time_us": 124.80299999999988,
+            "total_cpu_time_us": 521.1109999999996,
+            "self_device_time_us": 86.0,
+            "total_device_time_us": 537.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::empty",
+            "count": 69,
+            "self_cpu_time_us": 870.4200000000033,
+            "total_cpu_time_us": 1191.4249999999954,
+            "self_device_time_us": 904.0,
+            "total_device_time_us": 1596.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::fill_",
+            "count": 92,
+            "self_cpu_time_us": 489.7069999999908,
+            "total_cpu_time_us": 489.7069999999908,
+            "self_device_time_us": 909.0,
+            "total_device_time_us": 909.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::resize_",
+            "count": 13,
+            "self_cpu_time_us": 361.1039999999982,
+            "total_cpu_time_us": 677.5109999999997,
+            "self_device_time_us": 298.0,
+            "total_device_time_us": 762.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::set_",
+            "count": 12,
+            "self_cpu_time_us": 17.70100000000093,
+            "total_cpu_time_us": 17.70100000000093,
+            "self_device_time_us": 62.0,
+            "total_device_time_us": 62.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::fft_fft",
+            "count": 1,
+            "self_cpu_time_us": 9.200000000000045,
+            "total_cpu_time_us": 143.3019999999999,
+            "self_device_time_us": 7.0,
+            "total_device_time_us": 142.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_fft_c2c",
+            "count": 1,
+            "self_cpu_time_us": 73.10099999999943,
+            "total_cpu_time_us": 134.10199999999986,
+            "self_device_time_us": 38.0,
+            "total_device_time_us": 135.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::permute",
+            "count": 4,
+            "self_cpu_time_us": 50.102000000000544,
+            "total_cpu_time_us": 52.501999999999725,
+            "self_device_time_us": 55.0,
+            "total_device_time_us": 65.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::reshape",
+            "count": 24,
+            "self_cpu_time_us": 344.60599999999886,
+            "total_cpu_time_us": 874.2179999999983,
+            "self_device_time_us": 336.0,
+            "total_device_time_us": 925.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::as_strided_",
+            "count": 1,
+            "self_cpu_time_us": 1.800000000000182,
+            "total_cpu_time_us": 1.800000000000182,
+            "self_device_time_us": 5.0,
+            "total_device_time_us": 5.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::fft_fftshift",
+            "count": 1,
+            "self_cpu_time_us": 8.800000000000182,
+            "total_cpu_time_us": 59.10100000000011,
+            "self_device_time_us": 10.0,
+            "total_device_time_us": 60.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::roll",
+            "count": 1,
+            "self_cpu_time_us": 14.0,
+            "total_cpu_time_us": 50.30099999999993,
+            "self_device_time_us": 12.0,
+            "total_device_time_us": 50.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::empty_like",
+            "count": 23,
+            "self_cpu_time_us": 246.20200000000182,
+            "total_cpu_time_us": 702.608,
+            "self_device_time_us": 271.0,
+            "total_device_time_us": 869.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::real",
+            "count": 13,
+            "self_cpu_time_us": 247.00800000000163,
+            "total_cpu_time_us": 494.21099999999956,
+            "self_device_time_us": 173.0,
+            "total_device_time_us": 564.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::view_as_real",
+            "count": 17,
+            "self_cpu_time_us": 39.00100000000043,
+            "total_cpu_time_us": 39.00100000000043,
+            "self_device_time_us": 172.0,
+            "total_device_time_us": 172.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::sum",
+            "count": 1,
+            "self_cpu_time_us": 19.601000000000113,
+            "total_cpu_time_us": 20.101000000000113,
+            "self_device_time_us": 13.0,
+            "total_device_time_us": 47.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::clamp_min",
+            "count": 9,
+            "self_cpu_time_us": 81.4030000000007,
+            "total_cpu_time_us": 81.4030000000007,
+            "self_device_time_us": 109.0,
+            "total_device_time_us": 109.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::abs",
+            "count": 14,
+            "self_cpu_time_us": 478.40799999999945,
+            "total_cpu_time_us": 2613.450999999999,
+            "self_device_time_us": 375.0,
+            "total_device_time_us": 2664.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::empty_strided",
+            "count": 9,
+            "self_cpu_time_us": 106.70200000000023,
+            "total_cpu_time_us": 173.00299999999947,
+            "self_device_time_us": 99.0,
+            "total_device_time_us": 181.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::copy_",
+            "count": 19,
+            "self_cpu_time_us": 160.2030000000036,
+            "total_cpu_time_us": 160.2030000000036,
+            "self_device_time_us": 207.0,
+            "total_device_time_us": 207.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::square",
+            "count": 5,
+            "self_cpu_time_us": 53.89999999999941,
+            "total_cpu_time_us": 205.5040000000006,
+            "self_device_time_us": 82.0,
+            "total_device_time_us": 214.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::numpy_T",
+            "count": 3,
+            "self_cpu_time_us": 22.799999999999955,
+            "total_cpu_time_us": 66.30199999999968,
+            "self_device_time_us": 15.0,
+            "total_device_time_us": 69.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::matmul",
+            "count": 9,
+            "self_cpu_time_us": 356.2130000000086,
+            "total_cpu_time_us": 1437.3300000000017,
+            "self_device_time_us": 265.0,
+            "total_device_time_us": 1751.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::mm",
+            "count": 4,
+            "self_cpu_time_us": 147.20299999999975,
+            "total_cpu_time_us": 147.20299999999975,
+            "self_device_time_us": 161.0,
+            "total_device_time_us": 161.0,
+            "profiler_reported_flops": 2097152
+          },
+          {
+            "key": "aten::log1p",
+            "count": 3,
+            "self_cpu_time_us": 23.199999999999363,
+            "total_cpu_time_us": 23.199999999999363,
+            "self_device_time_us": 37.0,
+            "total_device_time_us": 37.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::sub",
+            "count": 4,
+            "self_cpu_time_us": 41.4020000000005,
+            "total_cpu_time_us": 41.4020000000005,
+            "self_device_time_us": 62.0,
+            "total_device_time_us": 62.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::std",
+            "count": 2,
+            "self_cpu_time_us": 89.5029999999997,
+            "total_cpu_time_us": 223.8040000000001,
+            "self_device_time_us": 54.0,
+            "total_device_time_us": 195.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::imag",
+            "count": 4,
+            "self_cpu_time_us": 76.90099999999893,
+            "total_cpu_time_us": 127.90299999999934,
+            "self_device_time_us": 134.0,
+            "total_device_time_us": 238.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::stack",
+            "count": 4,
+            "self_cpu_time_us": 157.7029999999986,
+            "total_cpu_time_us": 215.80399999999918,
+            "self_device_time_us": 31.0,
+            "total_device_time_us": 142.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::cat",
+            "count": 7,
+            "self_cpu_time_us": 100.80200000000013,
+            "total_cpu_time_us": 100.80200000000013,
+            "self_device_time_us": 113.0,
+            "total_device_time_us": 113.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::ge",
+            "count": 4,
+            "self_cpu_time_us": 132.90200000000095,
+            "total_cpu_time_us": 132.90200000000095,
+            "self_device_time_us": 82.0,
+            "total_device_time_us": 82.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::__and__",
+            "count": 2,
+            "self_cpu_time_us": 18.700000000000273,
+            "total_cpu_time_us": 67.4010000000003,
+            "self_device_time_us": 20.0,
+            "total_device_time_us": 71.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::bitwise_and",
+            "count": 2,
+            "self_cpu_time_us": 48.70100000000002,
+            "total_cpu_time_us": 48.70100000000002,
+            "self_device_time_us": 51.0,
+            "total_device_time_us": 51.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_conj",
+            "count": 2,
+            "self_cpu_time_us": 27.401000000000295,
+            "total_cpu_time_us": 30.001000000000204,
+            "self_device_time_us": 24.0,
+            "total_device_time_us": 31.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::alias",
+            "count": 2,
+            "self_cpu_time_us": 2.599999999999909,
+            "total_cpu_time_us": 2.599999999999909,
+            "self_device_time_us": 7.0,
+            "total_device_time_us": 7.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::mul",
+            "count": 9,
+            "self_cpu_time_us": 119.50100000000111,
+            "total_cpu_time_us": 263.50500000000056,
+            "self_device_time_us": 200.0,
+            "total_device_time_us": 318.0,
+            "profiler_reported_flops": 294144
+          },
+          {
+            "key": "aten::clone",
+            "count": 10,
+            "self_cpu_time_us": 256.40799999999945,
+            "total_cpu_time_us": 635.6149999999984,
+            "self_device_time_us": 96.0,
+            "total_device_time_us": 625.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::pad",
+            "count": 2,
+            "self_cpu_time_us": 18.300999999999476,
+            "total_cpu_time_us": 220.90499999999884,
+            "self_device_time_us": 32.0,
+            "total_device_time_us": 237.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::constant_pad_nd",
+            "count": 2,
+            "self_cpu_time_us": 75.19999999999709,
+            "total_cpu_time_us": 202.60399999999936,
+            "self_device_time_us": 45.0,
+            "total_device_time_us": 205.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::narrow",
+            "count": 2,
+            "self_cpu_time_us": 17.800999999998567,
+            "total_cpu_time_us": 50.5019999999995,
+            "self_device_time_us": 16.0,
+            "total_device_time_us": 73.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::linear",
+            "count": 8,
+            "self_cpu_time_us": 272.60599999999795,
+            "total_cpu_time_us": 1092.723,
+            "self_device_time_us": 134.0,
+            "total_device_time_us": 1025.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::t",
+            "count": 8,
+            "self_cpu_time_us": 149.20300000000498,
+            "total_cpu_time_us": 306.90600000000177,
+            "self_device_time_us": 132.0,
+            "total_device_time_us": 264.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::transpose",
+            "count": 19,
+            "self_cpu_time_us": 268.40499999999975,
+            "total_cpu_time_us": 281.9049999999979,
+            "self_device_time_us": 246.0,
+            "total_device_time_us": 304.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::addmm",
+            "count": 7,
+            "self_cpu_time_us": 255.30599999999959,
+            "total_cpu_time_us": 255.30599999999959,
+            "self_device_time_us": 339.0,
+            "total_device_time_us": 339.0,
+            "profiler_reported_flops": 268664832
+          },
+          {
+            "key": "aten::gelu",
+            "count": 4,
+            "self_cpu_time_us": 46.99999999999818,
+            "total_cpu_time_us": 46.99999999999818,
+            "self_device_time_us": 52.0,
+            "total_device_time_us": 52.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::tanh",
+            "count": 1,
+            "self_cpu_time_us": 8.90099999999984,
+            "total_cpu_time_us": 8.90099999999984,
+            "self_device_time_us": 12.0,
+            "total_device_time_us": 12.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::rsqrt",
+            "count": 1,
+            "self_cpu_time_us": 9.100000000000364,
+            "total_cpu_time_us": 9.100000000000364,
+            "self_device_time_us": 8.0,
+            "total_device_time_us": 8.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::conv1d",
+            "count": 5,
+            "self_cpu_time_us": 54.301000000001295,
+            "total_cpu_time_us": 1116.3230000000003,
+            "self_device_time_us": 35.0,
+            "total_device_time_us": 1193.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::convolution",
+            "count": 5,
+            "self_cpu_time_us": 99.60299999999734,
+            "total_cpu_time_us": 1062.021999999999,
+            "self_device_time_us": 83.0,
+            "total_device_time_us": 1158.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_convolution",
+            "count": 5,
+            "self_cpu_time_us": 417.70800000000054,
+            "total_cpu_time_us": 962.4190000000017,
+            "self_device_time_us": 265.0,
+            "total_device_time_us": 1075.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::unsqueeze",
+            "count": 10,
+            "self_cpu_time_us": 106.70300000000316,
+            "total_cpu_time_us": 114.90400000000045,
+            "self_device_time_us": 109.0,
+            "total_device_time_us": 147.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::cudnn_convolution",
+            "count": 5,
+            "self_cpu_time_us": 267.2049999999999,
+            "total_cpu_time_us": 267.2049999999999,
+            "self_device_time_us": 466.0,
+            "total_device_time_us": 466.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::add_",
+            "count": 6,
+            "self_cpu_time_us": 67.90000000000146,
+            "total_cpu_time_us": 67.90000000000146,
+            "self_device_time_us": 73.0,
+            "total_device_time_us": 73.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::squeeze",
+            "count": 5,
+            "self_cpu_time_us": 51.70000000000073,
+            "total_cpu_time_us": 56.100000000000364,
+            "self_device_time_us": 64.0,
+            "total_device_time_us": 107.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::batch_norm",
+            "count": 5,
+            "self_cpu_time_us": 81.20100000000093,
+            "total_cpu_time_us": 883.2179999999971,
+            "self_device_time_us": 32.0,
+            "total_device_time_us": 920.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_batch_norm_impl_index",
+            "count": 5,
+            "self_cpu_time_us": 67.80199999999786,
+            "total_cpu_time_us": 802.0169999999962,
+            "self_device_time_us": 60.0,
+            "total_device_time_us": 888.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::cudnn_batch_norm",
+            "count": 5,
+            "self_cpu_time_us": 374.3110000000015,
+            "total_cpu_time_us": 734.2149999999983,
+            "self_device_time_us": 340.0,
+            "total_device_time_us": 828.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::leaky_relu_",
+            "count": 2,
+            "self_cpu_time_us": 25.700999999999112,
+            "total_cpu_time_us": 25.700999999999112,
+            "self_device_time_us": 39.0,
+            "total_device_time_us": 39.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::expand",
+            "count": 10,
+            "self_cpu_time_us": 121.00000000000182,
+            "total_cpu_time_us": 127.20000000000073,
+            "self_device_time_us": 135.0,
+            "total_device_time_us": 173.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_reshape_alias",
+            "count": 2,
+            "self_cpu_time_us": 5.000000000001819,
+            "total_cpu_time_us": 5.000000000001819,
+            "self_device_time_us": 7.0,
+            "total_device_time_us": 7.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::bmm",
+            "count": 5,
+            "self_cpu_time_us": 171.80299999999806,
+            "total_cpu_time_us": 171.80299999999806,
+            "self_device_time_us": 539.0,
+            "total_device_time_us": 539.0,
+            "profiler_reported_flops": 100663296
+          },
+          {
+            "key": "aten::_unsafe_view",
+            "count": 13,
+            "self_cpu_time_us": 14.099999999996726,
+            "total_cpu_time_us": 14.099999999996726,
+            "self_device_time_us": 32.0,
+            "total_device_time_us": 32.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::layer_norm",
+            "count": 4,
+            "self_cpu_time_us": 47.30000000000109,
+            "total_cpu_time_us": 609.3110000000015,
+            "self_device_time_us": 23.0,
+            "total_device_time_us": 678.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::native_layer_norm",
+            "count": 4,
+            "self_cpu_time_us": 262.5059999999994,
+            "total_cpu_time_us": 562.0110000000004,
+            "self_device_time_us": 280.0,
+            "total_device_time_us": 655.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::unbind",
+            "count": 2,
+            "self_cpu_time_us": 80.10200000000077,
+            "total_cpu_time_us": 144.0020000000004,
+            "self_device_time_us": 32.0,
+            "total_device_time_us": 145.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::softmax",
+            "count": 2,
+            "self_cpu_time_us": 19.100000000000364,
+            "total_cpu_time_us": 40.100000000000364,
+            "self_device_time_us": 12.0,
+            "total_device_time_us": 38.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_softmax",
+            "count": 2,
+            "self_cpu_time_us": 21.0,
+            "total_cpu_time_us": 21.0,
+            "self_device_time_us": 26.0,
+            "total_device_time_us": 26.0,
+            "profiler_reported_flops": 0
+          }
+        ],
+        "scope": "One warmed synthetic inference; CPU/CUDA profiler overhead excluded from latency measurements",
+        "profiler_flops_are_complete": false,
+        "note": "ATen time keys are an operator inventory; profiler FLOPs support only some operators and are not a total"
+      }
+    },
+    {
+      "arm": "B4",
+      "fold": 0,
+      "checkpoint_sha256": "dceb7b0e2b528992d7d0365564b0be748f105a765b7c84890225b2a78ef31cf0",
+      "parameters": 82698,
+      "added_parameters_vs_B0": 272,
+      "arithmetic_proxy": {
+        "conv1d_macs": 3694592,
+        "linear_macs": 1180544,
+        "conv_linear_flops": 9750272,
+        "attention_product_flops": 524288,
+        "spectral_band_matrix_product_flops": 16384,
+        "spectral_product_inventory": [
+          "8band gains @ masks: 2*8*256",
+          "band power pooling: 2*256*8",
+          "phase Re and Im band pooling: 2 products * 2*256*8"
+        ],
+        "complex_fft_count": 1,
+        "complex_ifft_count": 0,
+        "complex_fft_flops_proxy": 10240,
+        "complex_fft_convention": "5*N*log2(N), N256 complex FFT; algorithmic estimate, not exact cuFFT FLOPs",
+        "partial_arithmetic_subtotal": 10301184,
+        "extra_rf_descriptor_reconstructions": 1,
+        "excluded_from_arithmetic_subtotal": [
+          "RMS/Parseval reductions, square roots, epsilon and divisions",
+          "complex absolute values and pointwise complex/real multiplications",
+          "LogMag log1p, centering, standard deviation, normalization",
+          "phase validity comparisons, conjugation, products, padding",
+          "GELU, tanh, softmax, LayerNorm, BatchNorm, bias additions",
+          "pooling reductions, concatenations, indexing and memory movement",
+          "the extra B3/B4 RF descriptor rebuild except its listed matrix products"
+        ],
+        "complete_total_flops": false
+      },
+      "inference_path": [
+        "legacy packet RMS in tokens()",
+        "legacy packet RMS in features()",
+        "one complex FFT256 and fftshift",
+        "8 relative log1p band powers",
+        "EXTRA full original 5channel RF reconstruction for phase descriptors",
+        "8 averaged phase-product Re and 8 Im descriptors",
+        "Linear24x8 + GELU + Linear8x8",
+        "mean-center logits; tanh; smooth partition-of-unity gain",
+        "complex spectrum multiplied by gain",
+        "Parseval relative RMS correction against original spectrum",
+        "rebuild Re/Im/standardized LogMag and masked adjacent phase-product Re/Im",
+        "HStem: two local convolutions plus 3 strided tokenization convolutions",
+        "32 tokens x64; token preparation and pre-LayerNorm",
+        "two ordinary MHA blocks including QK and AV products and softmax",
+        "final LayerNorm; token mean pool; TX classifier"
+      ],
+      "latency": [
+        {
+          "batch": 1,
+          "warmup": 10,
+          "repetitions": 30,
+          "median_batch_ms": 5.750150012318045,
+          "p10_batch_ms": 3.889110026648268,
+          "p90_batch_ms": 8.841380022931844,
+          "median_packet_ms": 5.750150012318045,
+          "samples_batch_ms": [
+            4.093600029591471,
+            4.376799974124879,
+            5.619300005491823,
+            6.397199991624802,
+            6.499899958726019,
+            5.731999990530312,
+            5.483200016897172,
+            3.3318999921903014,
+            3.6965999752283096,
+            4.697500029578805,
+            5.988999968394637,
+            6.611299992073327,
+            5.9089999995194376,
+            5.773000011686236,
+            8.927600050810724,
+            3.910500032361597,
+            4.118199984077364,
+            4.327200003899634,
+            4.686900007072836,
+            5.0888999830931425,
+            8.967700006905943,
+            8.248300000559539,
+            3.2481999951414764,
+            5.768300034105778,
+            7.952599960844964,
+            8.989299996756017,
+            8.7993000051938,
+            8.83180001983419,
+            8.718600030988455,
+            3.9659999893046916
+          ],
+          "input": "fixed-seed synthetic standard-normal IQ; no scientific samples"
+        },
+        {
+          "batch": 128,
+          "warmup": 10,
+          "repetitions": 30,
+          "median_batch_ms": 4.195749992504716,
+          "p10_batch_ms": 3.5844500293023884,
+          "p90_batch_ms": 6.7993800330441445,
+          "median_packet_ms": 0.03277929681644309,
+          "samples_batch_ms": [
+            3.5892000305466354,
+            3.541700018104166,
+            3.3731000148691237,
+            3.8521999958902597,
+            4.345299967098981,
+            3.473800024949014,
+            3.709699958562851,
+            4.017700033728033,
+            4.18549997266382,
+            3.7697000079788268,
+            3.6881999694742262,
+            3.9349999860860407,
+            4.631199990399182,
+            3.6797000211663544,
+            4.096799995750189,
+            4.498499969486147,
+            7.015200040768832,
+            9.493499994277954,
+            6.924299988895655,
+            6.785500037949532,
+            5.739700049161911,
+            6.111200025770813,
+            4.975099989678711,
+            4.635500023141503,
+            5.903300014324486,
+            6.6500999964773655,
+            3.8914000033400953,
+            3.892800014000386,
+            4.550300014670938,
+            4.206000012345612
+          ],
+          "input": "fixed-seed synthetic standard-normal IQ; no scientific samples"
+        }
+      ],
+      "peak_benchmark_allocated_gib": 0.047501564025878906,
+      "operator_profile": {
+        "status": "PASS",
+        "batch": 128,
+        "events": [
+          {
+            "key": "aten::slice",
+            "count": 38,
+            "self_cpu_time_us": 575.308000000002,
+            "total_cpu_time_us": 600.9090000000015,
+            "self_device_time_us": 419.0,
+            "total_device_time_us": 965.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::as_strided",
+            "count": 125,
+            "self_cpu_time_us": 95.40099999998944,
+            "total_cpu_time_us": 95.40099999998944,
+            "self_device_time_us": 986.0,
+            "total_device_time_us": 986.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::select",
+            "count": 35,
+            "self_cpu_time_us": 492.5069999999996,
+            "total_cpu_time_us": 520.3069999999994,
+            "self_device_time_us": 441.0,
+            "total_device_time_us": 594.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::pow",
+            "count": 9,
+            "self_cpu_time_us": 263.00499999999977,
+            "total_cpu_time_us": 269.2049999999992,
+            "self_device_time_us": 197.0,
+            "total_device_time_us": 356.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::result_type",
+            "count": 9,
+            "self_cpu_time_us": 3.300000000000523,
+            "total_cpu_time_us": 3.300000000000523,
+            "self_device_time_us": 34.0,
+            "total_device_time_us": 34.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::to",
+            "count": 11,
+            "self_cpu_time_us": 3.6999999999986244,
+            "total_cpu_time_us": 3.6999999999986244,
+            "self_device_time_us": 128.0,
+            "total_device_time_us": 128.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::add",
+            "count": 9,
+            "self_cpu_time_us": 137.8999999999968,
+            "total_cpu_time_us": 137.8999999999968,
+            "self_device_time_us": 131.0,
+            "total_device_time_us": 131.0,
+            "profiler_reported_flops": 885120
+          },
+          {
+            "key": "aten::mean",
+            "count": 10,
+            "self_cpu_time_us": 228.90499999999912,
+            "total_cpu_time_us": 231.5049999999987,
+            "self_device_time_us": 199.0,
+            "total_device_time_us": 206.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::sqrt",
+            "count": 4,
+            "self_cpu_time_us": 53.00199999999961,
+            "total_cpu_time_us": 53.00199999999961,
+            "self_device_time_us": 53.0,
+            "total_device_time_us": 53.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::view",
+            "count": 37,
+            "self_cpu_time_us": 61.499999999999886,
+            "total_cpu_time_us": 61.499999999999886,
+            "self_device_time_us": 110.0,
+            "total_device_time_us": 110.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::div",
+            "count": 17,
+            "self_cpu_time_us": 199.60099999999977,
+            "total_cpu_time_us": 199.60099999999977,
+            "self_device_time_us": 375.0,
+            "total_device_time_us": 375.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::complex",
+            "count": 6,
+            "self_cpu_time_us": 156.60100000000102,
+            "total_cpu_time_us": 687.6100000000001,
+            "self_device_time_us": 123.0,
+            "total_device_time_us": 610.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::empty",
+            "count": 69,
+            "self_cpu_time_us": 830.2119999999936,
+            "total_cpu_time_us": 1142.9139999999952,
+            "self_device_time_us": 833.0,
+            "total_device_time_us": 1328.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::fill_",
+            "count": 92,
+            "self_cpu_time_us": 470.00500000000216,
+            "total_cpu_time_us": 470.00500000000216,
+            "self_device_time_us": 720.0,
+            "total_device_time_us": 720.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::resize_",
+            "count": 13,
+            "self_cpu_time_us": 441.3070000000009,
+            "total_cpu_time_us": 772.9109999999994,
+            "self_device_time_us": 314.0,
+            "total_device_time_us": 783.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::set_",
+            "count": 12,
+            "self_cpu_time_us": 20.599999999999,
+            "total_cpu_time_us": 20.599999999999,
+            "self_device_time_us": 73.0,
+            "total_device_time_us": 73.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::fft_fft",
+            "count": 1,
+            "self_cpu_time_us": 10.5,
+            "total_cpu_time_us": 170.702,
+            "self_device_time_us": 21.0,
+            "total_device_time_us": 120.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_fft_c2c",
+            "count": 1,
+            "self_cpu_time_us": 76.2009999999998,
+            "total_cpu_time_us": 160.202,
+            "self_device_time_us": 33.0,
+            "total_device_time_us": 99.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::permute",
+            "count": 4,
+            "self_cpu_time_us": 47.00000000000068,
+            "total_cpu_time_us": 49.80000000000018,
+            "self_device_time_us": 34.0,
+            "total_device_time_us": 40.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::reshape",
+            "count": 24,
+            "self_cpu_time_us": 449.00900000000706,
+            "total_cpu_time_us": 949.5130000000042,
+            "self_device_time_us": 278.0,
+            "total_device_time_us": 972.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::as_strided_",
+            "count": 1,
+            "self_cpu_time_us": 2.0,
+            "total_cpu_time_us": 2.0,
+            "self_device_time_us": 2.0,
+            "total_device_time_us": 2.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::fft_fftshift",
+            "count": 1,
+            "self_cpu_time_us": 23.40099999999984,
+            "total_cpu_time_us": 79.70100000000002,
+            "self_device_time_us": 21.0,
+            "total_device_time_us": 50.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::roll",
+            "count": 1,
+            "self_cpu_time_us": 26.90000000000009,
+            "total_cpu_time_us": 56.30000000000018,
+            "self_device_time_us": 7.0,
+            "total_device_time_us": 29.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::empty_like",
+            "count": 23,
+            "self_cpu_time_us": 241.00300000000266,
+            "total_cpu_time_us": 712.3070000000002,
+            "self_device_time_us": 325.0,
+            "total_device_time_us": 857.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::real",
+            "count": 13,
+            "self_cpu_time_us": 334.6049999999998,
+            "total_cpu_time_us": 605.7100000000007,
+            "self_device_time_us": 233.0,
+            "total_device_time_us": 494.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::view_as_real",
+            "count": 17,
+            "self_cpu_time_us": 42.10000000000173,
+            "total_cpu_time_us": 42.10000000000173,
+            "self_device_time_us": 85.0,
+            "total_device_time_us": 85.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::sum",
+            "count": 1,
+            "self_cpu_time_us": 26.90000000000009,
+            "total_cpu_time_us": 27.700000000000045,
+            "self_device_time_us": 33.0,
+            "total_device_time_us": 34.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::clamp_min",
+            "count": 9,
+            "self_cpu_time_us": 144.40199999999822,
+            "total_cpu_time_us": 144.40199999999822,
+            "self_device_time_us": 145.0,
+            "total_device_time_us": 145.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::abs",
+            "count": 14,
+            "self_cpu_time_us": 509.5049999999967,
+            "total_cpu_time_us": 2828.336000000001,
+            "self_device_time_us": 771.0,
+            "total_device_time_us": 3477.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::empty_strided",
+            "count": 9,
+            "self_cpu_time_us": 119.69999999999959,
+            "total_cpu_time_us": 188.6010000000008,
+            "self_device_time_us": 143.0,
+            "total_device_time_us": 206.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::copy_",
+            "count": 19,
+            "self_cpu_time_us": 191.80199999999695,
+            "total_cpu_time_us": 191.80199999999695,
+            "self_device_time_us": 275.0,
+            "total_device_time_us": 275.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::square",
+            "count": 5,
+            "self_cpu_time_us": 49.001000000000204,
+            "total_cpu_time_us": 189.60399999999936,
+            "self_device_time_us": 91.0,
+            "total_device_time_us": 246.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::numpy_T",
+            "count": 3,
+            "self_cpu_time_us": 36.999999999999545,
+            "total_cpu_time_us": 74.69999999999982,
+            "self_device_time_us": 32.0,
+            "total_device_time_us": 67.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::matmul",
+            "count": 9,
+            "self_cpu_time_us": 428.6059999999975,
+            "total_cpu_time_us": 1630.621000000002,
+            "self_device_time_us": 270.0,
+            "total_device_time_us": 1861.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::mm",
+            "count": 4,
+            "self_cpu_time_us": 197.4029999999998,
+            "total_cpu_time_us": 197.4029999999998,
+            "self_device_time_us": 136.0,
+            "total_device_time_us": 136.0,
+            "profiler_reported_flops": 2097152
+          },
+          {
+            "key": "aten::log1p",
+            "count": 3,
+            "self_cpu_time_us": 44.000999999999294,
+            "total_cpu_time_us": 44.000999999999294,
+            "self_device_time_us": 45.0,
+            "total_device_time_us": 45.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::sub",
+            "count": 4,
+            "self_cpu_time_us": 51.00099999999975,
+            "total_cpu_time_us": 51.00099999999975,
+            "self_device_time_us": 64.0,
+            "total_device_time_us": 64.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::std",
+            "count": 2,
+            "self_cpu_time_us": 97.30000000000064,
+            "total_cpu_time_us": 265.0020000000004,
+            "self_device_time_us": 80.0,
+            "total_device_time_us": 256.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::imag",
+            "count": 4,
+            "self_cpu_time_us": 74.30000000000109,
+            "total_cpu_time_us": 138.89999999999964,
+            "self_device_time_us": 19.0,
+            "total_device_time_us": 116.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::stack",
+            "count": 4,
+            "self_cpu_time_us": 83.10200000000395,
+            "total_cpu_time_us": 147.9020000000005,
+            "self_device_time_us": 84.0,
+            "total_device_time_us": 174.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::cat",
+            "count": 7,
+            "self_cpu_time_us": 106.00299999999743,
+            "total_cpu_time_us": 106.00299999999743,
+            "self_device_time_us": 132.0,
+            "total_device_time_us": 132.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::ge",
+            "count": 4,
+            "self_cpu_time_us": 74.599999999999,
+            "total_cpu_time_us": 74.599999999999,
+            "self_device_time_us": 84.0,
+            "total_device_time_us": 84.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::__and__",
+            "count": 2,
+            "self_cpu_time_us": 18.101000000000568,
+            "total_cpu_time_us": 43.20100000000002,
+            "self_device_time_us": 22.0,
+            "total_device_time_us": 80.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::bitwise_and",
+            "count": 2,
+            "self_cpu_time_us": 25.099999999999454,
+            "total_cpu_time_us": 25.099999999999454,
+            "self_device_time_us": 58.0,
+            "total_device_time_us": 58.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_conj",
+            "count": 2,
+            "self_cpu_time_us": 20.899999999999636,
+            "total_cpu_time_us": 22.599999999999454,
+            "self_device_time_us": 43.0,
+            "total_device_time_us": 49.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::alias",
+            "count": 2,
+            "self_cpu_time_us": 1.699999999999818,
+            "total_cpu_time_us": 1.699999999999818,
+            "self_device_time_us": 6.0,
+            "total_device_time_us": 6.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::mul",
+            "count": 9,
+            "self_cpu_time_us": 143.80499999999847,
+            "total_cpu_time_us": 298.5069999999987,
+            "self_device_time_us": 158.0,
+            "total_device_time_us": 281.0,
+            "profiler_reported_flops": 294144
+          },
+          {
+            "key": "aten::clone",
+            "count": 10,
+            "self_cpu_time_us": 200.10400000000482,
+            "total_cpu_time_us": 605.1060000000007,
+            "self_device_time_us": 110.0,
+            "total_device_time_us": 651.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::pad",
+            "count": 2,
+            "self_cpu_time_us": 26.699999999999818,
+            "total_cpu_time_us": 241.10300000000007,
+            "self_device_time_us": 13.0,
+            "total_device_time_us": 244.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::constant_pad_nd",
+            "count": 2,
+            "self_cpu_time_us": 79.50099999999748,
+            "total_cpu_time_us": 214.40300000000025,
+            "self_device_time_us": 67.0,
+            "total_device_time_us": 231.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::narrow",
+            "count": 2,
+            "self_cpu_time_us": 18.80000000000109,
+            "total_cpu_time_us": 47.40100000000166,
+            "self_device_time_us": 18.0,
+            "total_device_time_us": 49.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::linear",
+            "count": 8,
+            "self_cpu_time_us": 314.20600000000104,
+            "total_cpu_time_us": 1093.1130000000003,
+            "self_device_time_us": 164.0,
+            "total_device_time_us": 965.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::t",
+            "count": 8,
+            "self_cpu_time_us": 132.10099999999602,
+            "total_cpu_time_us": 224.0019999999986,
+            "self_device_time_us": 135.0,
+            "total_device_time_us": 229.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::transpose",
+            "count": 19,
+            "self_cpu_time_us": 211.0030000000079,
+            "total_cpu_time_us": 225.3030000000008,
+            "self_device_time_us": 178.0,
+            "total_device_time_us": 245.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::addmm",
+            "count": 7,
+            "self_cpu_time_us": 267.4019999999982,
+            "total_cpu_time_us": 267.4019999999982,
+            "self_device_time_us": 324.0,
+            "total_device_time_us": 324.0,
+            "profiler_reported_flops": 268664832
+          },
+          {
+            "key": "aten::gelu",
+            "count": 4,
+            "self_cpu_time_us": 46.501000000000204,
+            "total_cpu_time_us": 46.501000000000204,
+            "self_device_time_us": 60.0,
+            "total_device_time_us": 60.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::tanh",
+            "count": 1,
+            "self_cpu_time_us": 12.099999999999454,
+            "total_cpu_time_us": 12.099999999999454,
+            "self_device_time_us": 13.0,
+            "total_device_time_us": 13.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::rsqrt",
+            "count": 1,
+            "self_cpu_time_us": 8.899999999999636,
+            "total_cpu_time_us": 8.899999999999636,
+            "self_device_time_us": 3.0,
+            "total_device_time_us": 3.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::conv1d",
+            "count": 5,
+            "self_cpu_time_us": 50.79999999999927,
+            "total_cpu_time_us": 955.7129999999997,
+            "self_device_time_us": 40.0,
+            "total_device_time_us": 1056.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::convolution",
+            "count": 5,
+            "self_cpu_time_us": 60.899999999999636,
+            "total_cpu_time_us": 904.9130000000005,
+            "self_device_time_us": 60.0,
+            "total_device_time_us": 1016.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_convolution",
+            "count": 5,
+            "self_cpu_time_us": 370.50600000000486,
+            "total_cpu_time_us": 844.0130000000008,
+            "self_device_time_us": 222.0,
+            "total_device_time_us": 956.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::unsqueeze",
+            "count": 10,
+            "self_cpu_time_us": 103.80099999999766,
+            "total_cpu_time_us": 111.00099999999657,
+            "self_device_time_us": 132.0,
+            "total_device_time_us": 196.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::cudnn_convolution",
+            "count": 5,
+            "self_cpu_time_us": 216.60299999999916,
+            "total_cpu_time_us": 216.60299999999916,
+            "self_device_time_us": 349.0,
+            "total_device_time_us": 349.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::add_",
+            "count": 6,
+            "self_cpu_time_us": 58.90099999999984,
+            "total_cpu_time_us": 58.90099999999984,
+            "self_device_time_us": 74.0,
+            "total_device_time_us": 74.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::squeeze",
+            "count": 5,
+            "self_cpu_time_us": 46.90100000000166,
+            "total_cpu_time_us": 50.300999999999476,
+            "self_device_time_us": 30.0,
+            "total_device_time_us": 98.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::batch_norm",
+            "count": 5,
+            "self_cpu_time_us": 50.49999999999818,
+            "total_cpu_time_us": 858.4100000000017,
+            "self_device_time_us": 28.0,
+            "total_device_time_us": 871.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_batch_norm_impl_index",
+            "count": 5,
+            "self_cpu_time_us": 58.200000000006185,
+            "total_cpu_time_us": 807.9100000000035,
+            "self_device_time_us": 39.0,
+            "total_device_time_us": 843.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::cudnn_batch_norm",
+            "count": 5,
+            "self_cpu_time_us": 397.8049999999985,
+            "total_cpu_time_us": 749.7099999999973,
+            "self_device_time_us": 403.0,
+            "total_device_time_us": 804.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::leaky_relu_",
+            "count": 2,
+            "self_cpu_time_us": 31.702000000001135,
+            "total_cpu_time_us": 31.702000000001135,
+            "self_device_time_us": 42.0,
+            "total_device_time_us": 42.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::expand",
+            "count": 10,
+            "self_cpu_time_us": 163.0020000000004,
+            "total_cpu_time_us": 173.90200000000186,
+            "self_device_time_us": 79.0,
+            "total_device_time_us": 153.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_reshape_alias",
+            "count": 2,
+            "self_cpu_time_us": 3.499999999998181,
+            "total_cpu_time_us": 3.499999999998181,
+            "self_device_time_us": 39.0,
+            "total_device_time_us": 39.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::bmm",
+            "count": 5,
+            "self_cpu_time_us": 180.80199999999968,
+            "total_cpu_time_us": 180.80199999999968,
+            "self_device_time_us": 569.0,
+            "total_device_time_us": 569.0,
+            "profiler_reported_flops": 100663296
+          },
+          {
+            "key": "aten::_unsafe_view",
+            "count": 13,
+            "self_cpu_time_us": 20.50000000000182,
+            "total_cpu_time_us": 20.50000000000182,
+            "self_device_time_us": 74.0,
+            "total_device_time_us": 74.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::layer_norm",
+            "count": 4,
+            "self_cpu_time_us": 53.801000000001295,
+            "total_cpu_time_us": 461.5060000000012,
+            "self_device_time_us": 22.0,
+            "total_device_time_us": 560.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::native_layer_norm",
+            "count": 4,
+            "self_cpu_time_us": 230.90400000000045,
+            "total_cpu_time_us": 407.7049999999999,
+            "self_device_time_us": 314.0,
+            "total_device_time_us": 538.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::unbind",
+            "count": 2,
+            "self_cpu_time_us": 102.80199999999786,
+            "total_cpu_time_us": 185.90200000000004,
+            "self_device_time_us": 59.0,
+            "total_device_time_us": 185.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::softmax",
+            "count": 2,
+            "self_cpu_time_us": 17.100000000000364,
+            "total_cpu_time_us": 35.20000000000073,
+            "self_device_time_us": 30.0,
+            "total_device_time_us": 54.0,
+            "profiler_reported_flops": 0
+          },
+          {
+            "key": "aten::_softmax",
+            "count": 2,
+            "self_cpu_time_us": 18.100000000000364,
+            "total_cpu_time_us": 18.100000000000364,
+            "self_device_time_us": 24.0,
+            "total_device_time_us": 24.0,
+            "profiler_reported_flops": 0
+          }
+        ],
+        "scope": "One warmed synthetic inference; CPU/CUDA profiler overhead excluded from latency measurements",
+        "profiler_flops_are_complete": false,
+        "note": "ATen time keys are an operator inventory; profiler FLOPs support only some operators and are not a total"
+      }
+    }
+  ]
+}

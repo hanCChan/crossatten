@@ -144,9 +144,10 @@ def plot_evidence(evidence):
         ax = axes[location]
         target = np.asarray(record['summary']['bar_q'])
         im = ax.imshow(target, aspect='auto', vmin=0, vmax=maximum, cmap='viridis')
-        ax.set(xticks=range(8), xticklabels=[f'B{i}' for i in range(8)],
+        ax.set(xticks=range(8), xticklabels=[f'band{i}' for i in range(8)],
                yticks=range(len(target)), yticklabels=record['summary']['tx_labels'],
                xlabel='Fixed spectral band', ylabel='Source TX class', title=f"fold{record['fold']}: conservative target bar_q")
+        ax.tick_params(axis='x', labelrotation=40, labelsize=8)
         heat_axes.append(ax)
     fig.colorbar(im, ax=heat_axes, shrink=.75, label='Evidence target probability')
     x = np.arange(4)
@@ -175,7 +176,7 @@ def report(records, decision, evidence, costs, audit):
     conclusion = ('本轮通过预先固定的源域联合门槛，仅准入另行冻结的独立源RX/seed确认。尚无跨数据集或真实目标CRD收益结论。' if decision['admitted'] else
                   '本轮未通过预先固定的源域联合门槛，停止当前固定TCSE方案；不追加band、门控结构、调制强度或loss系数搜索，不启动条件扩展。')
     independent = ('B4相对同结构B3通过本轮操作性门槛，但该证据仍条件于单seed、固定teacher和已使用过的源域划分，不能写成统一跨RX方法已经成立。' if checks_supervision else
-                   'B4相对同结构B3没有通过独立收益门槛，因此不能将B4的变化归因于新的TX证据监督。即便某个其他对照正向，也不改推其他实验臂。')
+                   'B4相对同结构B3没有通过独立收益门槛，因此不能宣称新的TX证据监督带来正向收益。即便某个其他对照正向，也不改推其他实验臂。')
     lines = [
         '# S19：统一RF表征与TX频谱证据学习结果', '',
         f"源域决定：**{decision['status']}**。完成ManyRx四fold×五臂，16次新增正式训练、4个严格复用B0。", '',
@@ -265,6 +266,7 @@ def report(records, decision, evidence, costs, audit):
         '每包证据估计有1次clean加8×3次teacher forward，即25次；这些只在训练证据构造时发生，推理不运行teacher。各臂训练epoch、早停点、日志和配置完整保留，并没有把较早停止的臂补训或重复试种子。', '',
         '推理路径包含原RMS、一次FFT256、band描述子/有界gain、复谱调制后全部五通道重建、HStem、普通两层MHA和分类头。B3/B4另需一次用于phase描述子的原五通道构造，不能只用参数数目推断真实成本。', '',
         f"[COSTS.json](COSTS.json)保存完整路径、算子清单、计时样本和SHA来源。实测设备为{costs.get('device', '见COSTS.json')}，FP32、固定合成输入，计时包含Python dispatch和CUDA同步。部分算术subtotal只覆盖声明的Conv/Linear/attention/频带矩阵乘积和FFT代理；未计齐norm、log1p、softmax、elementwise等，**不能称完整总FLOPs**。算子profile只作清单，不能补成完整总FLOPs。", '',
+        'B3/B4架构相同，其延迟数值差异是本机单次benchmark的描述性波动，不能归因于架构差异。', '',
         '## 访问审计、验证范围与后续出口', '',
         f"[FINAL_ACCESS_AUDIT.json](FINAL_ACCESS_AUDIT.json)状态为{audit['status']}。从保存的逐包teacher/source/held logits重新计算q、CE、margin、Accuracy、Macro-F1、最差RX/TX和配对门槛；核对主干初值SHA、B3/B4完整初值、共用epoch顺序、checkpoint/代码/协议SHA及held读取晚于封存。审计本身不再运行模型或打开原始IQ。", '',
         '本轮没有访问真实目标RX/date3–4，没有训练或评估ManySig、Shen TrueIB、Shen blind、额外seed或更换源RX确认分组。S10官方公平重训IB-RFF/ASKNet结果保留在历史矩阵中，不能拿本轮held-source准确率直接声称超过其CRD结果。', '',
