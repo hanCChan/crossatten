@@ -54,6 +54,10 @@ def audit():
     validate();committed(HERE/'seal_pilot.json');sealed=read(HERE/'seal_pilot.json')
     require(len(sealed['checkpoints'])==8 and sealed['new_fits']==4 and sealed['reused_B0']==4,'fit budget8=4+4')
     require(sealed['all_checkpoints_complete'] and not sealed['new_ask_held_source_read'] and not sealed['real_target_access'],'seal role')
+    committed(HERE/'ENGINEERING_HANDOFF.json');handoff=read(HERE/'ENGINEERING_HANDOFF.json')
+    require(sha(HERE/'ENGINEERING_HANDOFF.json')==sealed['engineering_handoff_sha256'],'committed serialization handoff SHA')
+    require(sha(HERE/'s20_seal_finish.py')==sealed['engineering_handoff_code_sha256']==handoff['handoff_code_sha256'],'handoff code SHA')
+    require(handoff['formal_fits_repeated']==0 and handoff['held_data_access_before_handoff']==0 and not handoff['models_predictions_or_thresholds_changed'],'handoff scope')
     for path,h in sealed['metadata_sha256'].items():require(sha(path)==h,'sealed metadata SHA '+path)
     require(read(HERE/'held_attempt.json')['status']=='COMPLETE','single held evaluation completed')
     data_module=configure_data();rows=[];verified=[];label_records={};official_records=read(HERE/'UPSTREAM.json')
@@ -142,6 +146,7 @@ def audit():
           new_held_evaluation_after_seal=True,exact_decision_recomputation=True,raw_iq_opened_by_audit=False,model_forward_calls_by_audit=0,
           logits_scope='All frozen-B0 and ASK source/held logits rescored; CE/margin independently checked in float64',
           S19_archived_files_verified=len(read(S19/'MANIFEST.json')['files_sha256']),official_git_blobs_verified=3,
+          engineering_serialization_handoff_verified=True,scientific_fits_repeated=0,
           real_target_access=False,ManySig_read=False,Shen_read=False,checkpoint_bytes_hashed_only=True,decision_status=actual['status']))
     print('PASS S20 audit:4 official fits, exact frozen B0, source-only inputs and all paired metrics',flush=True)
 
@@ -208,6 +213,20 @@ def report():
             left=next(v for v in rows if v['fold']==row['fold'] and v['arm']=='ASK')['held']['per_rx'][rx]
             right=next(v for v in rows if v['fold']==row['fold'] and v['arm']=='B0')['held']['per_rx'][rx]
             comparison.append(dict(fold=row['fold'],rx=rx,delta_acc_pp=gain,delta_f1_pp=100*(left['macro_f1']-right['macro_f1']),delta_ce=left['ce']-right['ce'],ASK_acc=left['acc'],B0_acc=right['acc']))
+    error_rows=[]
+    for paired in comparison:
+        f,rx=paired['fold'],paired['rx']
+        b=next(r for r in rows if r['fold']==f and r['arm']=='B0')['held']['per_rx'][rx]
+        a=next(r for r in rows if r['fold']==f and r['arm']=='ASK')['held']['per_rx'][rx]
+        bcm=np.asarray(b['confusion']);acm=np.asarray(a['confusion']);counts=bcm.sum(1)
+        require(np.array_equal(counts,acm.sum(1)),'paired class supports for descriptive error localization')
+        extra=np.diag(bcm)-np.diag(acm)
+        error_rows.append(dict(**paired,packets=int(counts.sum()),additional_errors_ASK=int(extra.sum()),
+              per_tx=[dict(tx=t,packets=int(counts[t]),additional_errors_ASK=int(extra[t]),
+                           recall_delta_pp=100*float((acm[t,t]-bcm[t,t])/counts[t]) if counts[t]>0 else None) for t in range(10)]))
+    worst=min(error_rows,key=lambda r:r['delta_acc_pp'])
+    write(HERE/'ERROR_LOCALIZATION.json',dict(scope='Post-result descriptive localization from fixed paired confusion matrices; no new inference or selection',
+          worst_paired_rx=worst,all_paired_receivers=error_rows,causal_attribution=False))
     with (HERE/'PAIRED_RECEIVERS.csv').open('w',encoding='utf-8',newline='') as stream:
         writer=csv.DictWriter(stream,fieldnames=list(comparison[0]),lineterminator='\n');writer.writeheader();writer.writerows(comparison)
     fig,axes=plt.subplots(2,2,figsize=(12,8),constrained_layout=True);colors=['#2864a1','#c35b21']
@@ -228,6 +247,7 @@ def report():
            f"ASK−B0的四fold平均Accuracy差 **{c['mean_fold_gain_pp']:+.4f}pp**，正向{c['positive_folds']}/4，最差配对RX **{c['worst_paired_rx_pp']:+.4f}pp**。按{c['unique_rx']}个唯一RX身份等权的均值{c['unique_rx_mean_pp']:+.4f}pp，描述性条件95%区间[{c['ci95_pp'][0]:+.4f},{c['ci95_pp'][1]:+.4f}]pp。",'',
            '![S20源域比较](S20_OVERVIEW.png)','',
            '本轮结论是同数据、同评价条件下**整体模型与官方配方**的比较；不能把差距直接解释为Koopman、复数谱、截止或Patch的因果贡献。官方ASKNet最多200轮、按包等权CE选模；冻结B0最多40轮、按RX等权CE选模，数据shuffle路径也不同。差异均在读取新ASK held结果前固定。','',
+           '本轮ASK的源域平均优势在四fold方向一致，不能写成“没有平均收益”；但幅度未达+1pp，RX异质性很大且条件区间跨零。INCONCLUSIVE不等于无差异、方法等价或验证协议失效。历史S07/S08也不是本轮S19 B0这组同输入/同MHA/同配方模型，因此本结果不是对这对模型真实CRD排序的严格复现。它支持进一步核查配方与接收机风险的必要性，尚不支持指定某个算子为下一项创新来源。','',
            '## 首轮比较与出口','',
            '| fold | B0 Accuracy % | ASK Accuracy % | ASK−B0 pp | ΔMacro-F1 pp | 最差配对RX pp |', '|---|---:|---:|---:|---:|---:|']
     for v in c['folds']:
@@ -242,12 +262,16 @@ def report():
         for role in ['source','held']:
             s=r[role]['summary'];lines.append(f"| {r['fold']} | {r['arm']} | {'fit验证' if role=='source' else 'held源'} | {100*s['acc']:.4f} | {100*s['macro_f1']:.4f} | {s['ce']:.5f} | {s['margin']:.4f} | {100*s['worst_rx']:.3f} | {100*s['worst_tx']:.3f} |")
     lines+=['','逐RX配对表见[PAIRED_RECEIVERS.csv](PAIRED_RECEIVERS.csv)；各模型混淆矩阵在runs下。所有Macro-F1按声明的10TX类计算，不删除原支持缺失类。最差配对变化与绝对最差RX准确率不是同一统计量。','',
+            '一个描述性差异是：ASK在fit RX包留出的验证Accuracy上四fold均低于B0，却在held-source RX上四fold均高于B0。因此，已见RX的包验证准确率和未参加训练RX的准确率不能互相替代；它不自动说明哪一种架构或正则机制负责。','',
+            f"最差配对位于fold{worst['fold']}的RX `{worst['rx']}`：B0 {100*worst['B0_acc']:.2f}%、ASK {100*worst['ASK_acc']:.2f}%，共{worst['packets']}包、ASK多错{worst['additional_errors_ASK']}包。该定位只是同一冻结输出的描述，不能据此归因于频带或Koopman。完整逐TX错误变化见[ERROR_LOCALIZATION.json](ERROR_LOCALIZATION.json)。",'',
+            '该最差配对的增错主要集中于TX索引1和4，分别净增加82和66个错误。没有据此追加频带/算子消融或调整模型，这不是剪裁/Koopman造成错误的因果证明。','',
             '## 复用、配方及选模审计','',
             'S10的12个ManyRx官方重训均使用全部24个source RX，已见本轮held6且split/seed不同，因此0个可严格复用；没有读取这些权重。S19的167个归档文件逐SHA核验，B0权重和既有source/held logits严格复用，未改或续训。详见[REUSE_AUDIT.json](REUSE_AUDIT.json)。','',
             '| fold | ASK训练轮数 | 包CE选中epoch | RX等权CE诊断最优epoch | checkpoint截止k | 训练计时秒 |','|---|---:|---:|---:|---:|---:|']
     for f in range(4):
         v=read(outdir(f,'ASK')/'metrics.json');lines.append(f"| {f} | {v['epochs']} | {v['best_epoch']} | {v['diagnostic_rx_ce_best_epoch']} | {v['selected_checkpoint_cutoff'][0]} | {v['seconds']:.2f} |")
-    lines+=['','RX等权CE仅作日志审计，没有据此另测或替换官方checkpoint。官方函数直接负责优化、LR、earlystop和保存；包装只记录原CPU DataLoader实际顺序及原验证forward输出。全部新模型先封存并commit，再一次性读取本轮held-source。B0的历史held结果不是全新独立证据。','',
+    lines+=['','四fold ASK的包CE最优epoch与RX等权CE最优epoch在本次曲线上恰好一致；没有观测到这两种加权在已发生的ASK轨迹上改变checkpoint选择。它不消除LR/earlystop依据和训练时长的潜在配方差异。RX等权CE仅作日志审计，没有据此另测或替换官方checkpoint。官方函数直接负责优化、LR、earlystop和保存；包装只记录原CPU DataLoader实际顺序及原验证forward输出。全部新模型先封存并commit，再一次性读取本轮held-source。B0的历史held结果不是全新独立证据。','',
+            '工程事件：四次训练均成功，原封存函数拼装B0引用时重复传入fold字段而触发TypeError，尚未读取本轮held数据。原代码和注册保持不变；以单独提交的[s20_seal_finish.py](s20_seal_finish.py)修复字典序列化交接，见[ENGINEERING_HANDOFF.json](ENGINEERING_HANDOFF.json)。四个权重及source结果SHA未改，重复fit为0，未修改预测、选模或门槛。补充代码和全部checkpoint先commit封存，再调用原注册的评价及决策函数。','',
             '## 结构描述：不等于归因','',
             '| fold | 截止k | K酉性相对Fro误差 | K距identity相对Fro | K非对角能量比例 | eigenphase圆均值长度 |','|---|---:|---:|---:|---:|---:|']
     for v in cost['ASK_structure']:

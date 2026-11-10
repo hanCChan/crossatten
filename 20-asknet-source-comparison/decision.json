@@ -1,0 +1,210 @@
+{
+  "time": "2026-11-10T20:44:09+08:00",
+  "status": "INCONCLUSIVE_SOURCE_COMPARISON",
+  "thresholds": {
+    "clear_advantage": {
+      "mean_fold_pp": 1.0,
+      "positive_folds": 3,
+      "min_worst_paired_rx_pp": -2.0,
+      "unique_rx_ci_lower_gt": 0.0
+    },
+    "practical_similarity": {
+      "margin_pp": 1.0,
+      "criterion": "both RX-identity95%CI endpoints inside[-1,+1] and abs(fold mean)<1; descriptive, not formal population equivalence"
+    },
+    "seed_scope": "one fixed macroseed18101; four effective model/data seeds inherited from S19 folds"
+  },
+  "ask_clear_advantage": false,
+  "hstem_clear_advantage": false,
+  "practical_similarity": false,
+  "comparison": {
+    "candidate": "ASK",
+    "control": "B0",
+    "mean_fold_gain_pp": 0.8773148148148141,
+    "positive_folds": 4,
+    "worst_paired_rx_pp": -8.05,
+    "unique_rx": 12,
+    "unique_rx_mean_pp": 0.8324074074074068,
+    "ci95_pp": [
+      -0.7681365740740748,
+      2.6028819444444418
+    ],
+    "per_rx_pp": {
+      "13-14": -1.200000000000001,
+      "13-7": 0.05555555555555314,
+      "14-7": 1.4499999999999957,
+      "8-14": 2.849999999999997,
+      "8-7": 1.650000000000007,
+      "8-8": -0.34999999999999476,
+      "1-1": 0.3499999999999985,
+      "1-19": 6.016666666666667,
+      "1-20": -2.9666666666666655,
+      "2-1": 6.233333333333327,
+      "2-19": -0.6500000000000025,
+      "3-19": -3.450000000000001
+    },
+    "folds": [
+      {
+        "fold": 0,
+        "delta_acc_pp": 0.7425925925926058,
+        "delta_f1_pp": 0.6683537597484634,
+        "delta_ce": 0.12277692990998423,
+        "worst_paired_rx_pp": -1.200000000000001,
+        "per_rx_pp": {
+          "13-14": -1.200000000000001,
+          "13-7": 0.05555555555555314,
+          "14-7": 1.4499999999999957,
+          "8-14": 2.849999999999997,
+          "8-7": 1.650000000000007,
+          "8-8": -0.34999999999999476
+        }
+      },
+      {
+        "fold": 1,
+        "delta_acc_pp": 0.9749999999999925,
+        "delta_f1_pp": 1.1719823781887073,
+        "delta_ce": -0.11143440629045168,
+        "worst_paired_rx_pp": -2.0000000000000018,
+        "per_rx_pp": {
+          "1-1": 2.7000000000000024,
+          "1-19": 3.749999999999998,
+          "1-20": -2.0000000000000018,
+          "2-1": 2.9999999999999916,
+          "2-19": -0.8499999999999952,
+          "3-19": -0.7500000000000062
+        }
+      },
+      {
+        "fold": 2,
+        "delta_acc_pp": 0.8583333333333276,
+        "delta_f1_pp": 1.1069045732652438,
+        "delta_ce": -0.07563557848334315,
+        "worst_paired_rx_pp": -8.05,
+        "per_rx_pp": {
+          "1-1": 0.14999999999999458,
+          "1-19": 11.6,
+          "1-20": -4.849999999999999,
+          "2-1": 10.449999999999992,
+          "2-19": -4.150000000000009,
+          "3-19": -8.05
+        }
+      },
+      {
+        "fold": 3,
+        "delta_acc_pp": 0.9333333333333305,
+        "delta_f1_pp": 1.1037383308991733,
+        "delta_ce": -0.019321691244840622,
+        "worst_paired_rx_pp": -2.0499999999999963,
+        "per_rx_pp": {
+          "1-1": -1.8000000000000016,
+          "1-19": 2.7000000000000024,
+          "1-20": -2.0499999999999963,
+          "2-1": 5.249999999999999,
+          "2-19": 3.049999999999997,
+          "3-19": -1.5499999999999958
+        }
+      }
+    ],
+    "bootstrap_draws": 5000,
+    "interval_scope": "Descriptive conditional RX-identity bootstrap; fold repetitions collapsed; shared fits and seed uncertainty not covered"
+  },
+  "reverse_comparison": {
+    "candidate": "B0",
+    "control": "ASK",
+    "mean_fold_gain_pp": -0.8773148148148141,
+    "positive_folds": 0,
+    "worst_paired_rx_pp": -11.6,
+    "unique_rx": 12,
+    "unique_rx_mean_pp": -0.8324074074074068,
+    "ci95_pp": [
+      -2.602881944444443,
+      0.7681365740740735
+    ],
+    "per_rx_pp": {
+      "13-14": 1.200000000000001,
+      "13-7": -0.05555555555555314,
+      "14-7": -1.4499999999999957,
+      "8-14": -2.849999999999997,
+      "8-7": -1.650000000000007,
+      "8-8": 0.34999999999999476,
+      "1-1": -0.3499999999999985,
+      "1-19": -6.016666666666667,
+      "1-20": 2.9666666666666655,
+      "2-1": -6.233333333333327,
+      "2-19": 0.6500000000000025,
+      "3-19": 3.450000000000001
+    },
+    "folds": [
+      {
+        "fold": 0,
+        "delta_acc_pp": -0.7425925925926058,
+        "delta_f1_pp": -0.6683537597484634,
+        "delta_ce": -0.12277692990998423,
+        "worst_paired_rx_pp": -2.849999999999997,
+        "per_rx_pp": {
+          "13-14": 1.200000000000001,
+          "13-7": -0.05555555555555314,
+          "14-7": -1.4499999999999957,
+          "8-14": -2.849999999999997,
+          "8-7": -1.650000000000007,
+          "8-8": 0.34999999999999476
+        }
+      },
+      {
+        "fold": 1,
+        "delta_acc_pp": -0.9749999999999925,
+        "delta_f1_pp": -1.1719823781887073,
+        "delta_ce": 0.11143440629045168,
+        "worst_paired_rx_pp": -3.749999999999998,
+        "per_rx_pp": {
+          "1-1": -2.7000000000000024,
+          "1-19": -3.749999999999998,
+          "1-20": 2.0000000000000018,
+          "2-1": -2.9999999999999916,
+          "2-19": 0.8499999999999952,
+          "3-19": 0.7500000000000062
+        }
+      },
+      {
+        "fold": 2,
+        "delta_acc_pp": -0.8583333333333276,
+        "delta_f1_pp": -1.1069045732652438,
+        "delta_ce": 0.07563557848334315,
+        "worst_paired_rx_pp": -11.6,
+        "per_rx_pp": {
+          "1-1": -0.14999999999999458,
+          "1-19": -11.6,
+          "1-20": 4.849999999999999,
+          "2-1": -10.449999999999992,
+          "2-19": 4.150000000000009,
+          "3-19": 8.05
+        }
+      },
+      {
+        "fold": 3,
+        "delta_acc_pp": -0.9333333333333305,
+        "delta_f1_pp": -1.1037383308991733,
+        "delta_ce": 0.019321691244840622,
+        "worst_paired_rx_pp": -5.249999999999999,
+        "per_rx_pp": {
+          "1-1": 1.8000000000000016,
+          "1-19": -2.7000000000000024,
+          "1-20": 2.0499999999999963,
+          "2-1": -5.249999999999999,
+          "2-19": -3.049999999999997,
+          "3-19": 1.5499999999999958
+        }
+      }
+    ],
+    "bootstrap_draws": 5000,
+    "interval_scope": "Descriptive conditional RX-identity bootstrap; fold repetitions collapsed; shared fits and seed uncertainty not covered"
+  },
+  "next_step": "Audit source validation discrimination/coverage and seed uncertainty; do not choose a new module from this pilot",
+  "causal_component_identified": false,
+  "universal_equivalence_claim": false,
+  "real_target_access": false,
+  "official_recipe_confounded_with_architecture": true,
+  "additional_algorithm_training_allowed": false,
+  "new_asknet_fits": 4,
+  "reused_hstem_models": 4
+}

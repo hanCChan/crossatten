@@ -1,0 +1,133 @@
+{
+  "time": "2026-11-10T20:58:28+08:00",
+  "files_sha256": {
+    ".gitattributes": "6e186d6e31118cfc6ff696aa9c3f228f17e8568c6ad3dcbb7aa6e3e275043927",
+    ".gitignore": "ce87b52e174d069dd2b8b1f92dd7fd2d834434f9474cf049198b8a53acb80744",
+    "access.jsonl": "f7341d1d374af38462a0b7c8be58578a0901cfc5d9712ab51999b60d55822301",
+    "COSTS_AND_STRUCTURE.json": "f944d8817e6c7c6d2270c893940aaa11f73c705c5e0316e2e556c131709b4e10",
+    "decision.json": "a7035fff710b1aa7f5b059eb70426088f0e64111ea45d04a0a3280f5bb23d41d",
+    "ENGINEERING_HANDOFF.json": "8ccb3720c4d96a715bde86158babb9cbeb8fb7df954c90be06082d6dbe9634bc",
+    "ENGINEERING_TESTS.json": "9fa8f9cce8c4f9a7a9713056f3fa6b33928b7d9270ede3692437752f067b3a3d",
+    "ERROR_LOCALIZATION.json": "c0a3f833b6e0ea5cf4217134865fce038a5f1d05ca4432d8890383352a23121a",
+    "FINAL_ACCESS_AUDIT.json": "364dbc4f6c0588b05ee4afa3ad1a0e99a2d83095b8bf14b5b98bb12ab18ca5bd",
+    "held_attempt.json": "7433fef9ff5211c71a25fdfb2d1ed52250c8f4521710c521c71d92cb2d2a531b",
+    "PAIRED_RECEIVERS.csv": "26ee54ad757d7fe72eafb31a2d62cd2b0e228202bdd5aa14909529f92e510d53",
+    "README.zh-CN.md": "526fbf79dadec4e8b0fcab6c842d3c1ed3f1a65e3f9cab1425d6bb1995d7fb3a",
+    "registration.json": "5008ce261afbd4386ac6c61d85010d620f8c6268ade06509199099b3eff27e84",
+    "REPRODUCE.zh-CN.md": "079ac33d7d26f87421bd2e8999c95b7803a23990bcde03c0c585361647a72ff7",
+    "RESULTS.zh-CN.md": "99e9f77eaae0f847acafd8c4c3f46d8297c90d7ac0c5ca5ca9c23a43562ac8fb",
+    "REUSE_AUDIT.json": "799b1979a966c92c901be8f8ab1226863987db5690952649efbc5bdb95fa0361",
+    "runs/ASK__f0__first__s18101/attempt.json": "a91fc251b5b1277c272d29fccbfc7836d72e7f47a3cc5db964dd78cdeb928a98",
+    "runs/ASK__f0__first__s18101/config.json": "25804c73e75e867a97896ab0c89df67326d5bc812ae376061d51dda3a7a46fcf",
+    "runs/ASK__f0__first__s18101/held_metrics.json": "42e14ae2cecf92bdd96be6715c2cd4fe6d1dbbb5c16b11e16c8d0ec1689d7424",
+    "runs/ASK__f0__first__s18101/history.csv": "70670fcdf37181c35f0648a306e6fdd58743bddedc2935d57e69a55392db1f9f",
+    "runs/ASK__f0__first__s18101/k_trace.txt": "2fa7fb394e0797f43be98d2a1470b22f60df00e923fab0a13cd1ec51a2306c72",
+    "runs/ASK__f0__first__s18101/live.json": "58fbed18fd7d9f99f60272c78ffab1f6e8eea4ebff3ed1b919887ca620a259a4",
+    "runs/ASK__f0__first__s18101/metrics.json": "bc6f3f3c3bace9d37b0ba0d1ff594c7948f5c0e10d2cb65ab3c67d5128d1ba9d",
+    "runs/ASK__f0__first__s18101/stdout.log": "edd9f22ca8c596118db0739acd46091508f2f7116adce581c78743a80df6f691",
+    "runs/ASK__f1__first__s18101/attempt.json": "965c4e6b99309bfa973eb60711d979a6b7799200995db2ea6c6e3bc186b31336",
+    "runs/ASK__f1__first__s18101/config.json": "855df8238f194079c6c3e3bf5d6f12d3d28471c0f0e6294963ebc116aaf20f69",
+    "runs/ASK__f1__first__s18101/held_metrics.json": "118190f215a7701048bca6870be635ef26a1ea45978f21f24f0314787937cb7a",
+    "runs/ASK__f1__first__s18101/history.csv": "61495df2526763ab81873b47c0b063fb9a3fefec0aa21000aaa866e95c4f7206",
+    "runs/ASK__f1__first__s18101/k_trace.txt": "f2f453746673f6bc14f95a42b1e55298dd516c5c7f5920784a612186d98c3409",
+    "runs/ASK__f1__first__s18101/live.json": "69daa2f191c408f17bd112c0f384ce890b1353c225b5414ca52fd70cd3a51a13",
+    "runs/ASK__f1__first__s18101/metrics.json": "02adcfdb1263f724e52ea8c109e29f255e69e2778c5fffff56991e74777fa421",
+    "runs/ASK__f1__first__s18101/stdout.log": "f86bc4311779af11430e840dc1e2e0bd34489d0574b0dfe143fe5f69f1ca2ddd",
+    "runs/ASK__f2__first__s18101/attempt.json": "21ef4a25e00deab6f90c0363c94cc0a86ed7ffed481fefb0272bf03c0d6fc98c",
+    "runs/ASK__f2__first__s18101/config.json": "cf9160e9e3e65f393a676fb3dbd0863ca9b1b8a5ef2bd85a3959f776c674d087",
+    "runs/ASK__f2__first__s18101/held_metrics.json": "3216533b8b232ef354405e7bbab36ca36f92c4d796560ab121a77ef087106dd2",
+    "runs/ASK__f2__first__s18101/history.csv": "468626613a9b5493ed352c7725a5e04265f81652fa3d668556e13f3de5321193",
+    "runs/ASK__f2__first__s18101/k_trace.txt": "7ec21df56116f8dbfac9e391ef28243ad1a8891d26279836c042062131692149",
+    "runs/ASK__f2__first__s18101/live.json": "336e29c81e95f3bd587d9ced06b7eb4c898ec5ce46a6bf825df8065588e77f05",
+    "runs/ASK__f2__first__s18101/metrics.json": "763dbf432574167ae0e5c6e5be94512933a25aac3bca7937ed3050c13dad940b",
+    "runs/ASK__f2__first__s18101/stdout.log": "38bf8117ded3a46218ed2f9a6b65b39cc289116ad1bc52d82ed7e413842e4914",
+    "runs/ASK__f3__first__s18101/attempt.json": "0859252a73459deb4e384e1a8b9678a1b8ebe03a63e366e9563deea094952954",
+    "runs/ASK__f3__first__s18101/config.json": "39783351762809922363f81e28a0d59eea5a42f03043a409ef15cdc425477e33",
+    "runs/ASK__f3__first__s18101/held_metrics.json": "a914846d608f6578a5f2763d63c4a0a016ad51e5303c7210e4ed94c991d690b3",
+    "runs/ASK__f3__first__s18101/history.csv": "ba30a6b68a114d00dbcbf2de22d627064585866f756ae094541ba79fa44b20cb",
+    "runs/ASK__f3__first__s18101/k_trace.txt": "ac03354473d9a26d0a50ecc65ed177ff5bfa30220c05a623af6ac9890bc9e246",
+    "runs/ASK__f3__first__s18101/live.json": "3a490b60e8fe11de5cb4461e67e4a3222c03f57235c15f1f3296ec12a4026a5d",
+    "runs/ASK__f3__first__s18101/metrics.json": "739729f201f54476066b19a1ca8239e03c8b726e9363de9c7d3b8e9ed866dced",
+    "runs/ASK__f3__first__s18101/stdout.log": "61ddbbbd6fef114a35b2e225ef77fa43a3794c623f206dece5288f0ab6d03eec",
+    "runs/B0__f0__first__s18101/held_metrics.json": "1666eafe5714e3cbac82fbaa409b88557a2cb3f84408f7c9a718c4e07cbc1835",
+    "runs/B0__f0__first__s18101/reference.json": "9c136a29486b4a34a5bc62a801912e50ad6bd96fe9be82cf06a2607403d9ba89",
+    "runs/B0__f1__first__s18101/held_metrics.json": "9e5f9f40fa100b9a489f3924b67b4fa73647e69e96dae8416d3c8bc335761654",
+    "runs/B0__f1__first__s18101/reference.json": "ad0071d75a7cf9136c9d99892fc5df9c82931c5e2e5b5f8705dfa6e95d65851a",
+    "runs/B0__f2__first__s18101/held_metrics.json": "7aa50aada7b8fab93916a683ae460c0a010ace6c1f550628dc0a193158221511",
+    "runs/B0__f2__first__s18101/reference.json": "2cdcde89f72b47270031d222c53420f9566407a7c329867a29aab905d0321f33",
+    "runs/B0__f3__first__s18101/held_metrics.json": "9200e03d040dbcd6dfc81108cdf7c0018e1ce61a66f6cc5ea887e8b17d733e04",
+    "runs/B0__f3__first__s18101/reference.json": "3c5d7add21e05c3e591e4fbfbb26020b4c14c8934c02645fa148b4b143394bf3",
+    "s20_core.py": "034de291b125eedc9d055c86a164d351cc28c65563c98cc5cc8b98c682b513df",
+    "s20_finalize.py": "d24da1721915b9ce726b1c2cb85475f92b301c99e639c4a26a58a494e9fee914",
+    "S20_OVERVIEW.png": "f939e5d83128d712b8faa1404e417012a42d9a2a78abd8db26fff451d8a9b1a0",
+    "s20_register.py": "827d95f6fb32114d2230b34a1f918f2949097300f933e2a52342a0f7357fab70",
+    "s20_run.py": "c326b616542e7f0d5d296c064be1a825c09fdc0d342e393232d93afa745c21eb",
+    "s20_seal_finish.py": "ca5e8f42314e021a74f6a0a257b2616a034c4d365ed1cebfc9583abee5326685",
+    "s20_stats.py": "43562f4ed9e91194a763a48e3ae5a465e430e1fb6c1109100656cc6179bd9aae",
+    "seal_pilot.json": "e10aa721fae0cb99e2b0d19a7f8f5dbf40c3ffa44ed3c7467775d96ce5e2e2a2",
+    "STATUS.json": "2a20ebdd0572001ec7dcd204fd34323d0693ec10158c7e1f4107e03e0dc10822",
+    "test_s20.py": "f09b3aa60605f3fa068a9a97d331938f4dedcce8a4676895211459b71b3bf8eb",
+    "UPSTREAM.json": "504fd3a78021bdd642919bc4034c882860c5fdc17476baa39380eeeb98a2c35e"
+  },
+  "checkpoint_references": {
+    "B0_f0": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\runs\\pilot__ManyRx__M0__f0__first__s18101\\model.pt",
+      "sha256": "f0f9fe1cd967e033ce97bf8e6f149ce29d4e70cf0611e88457ec141da56cf06f",
+      "fold": 0,
+      "arm": "B0"
+    },
+    "ASK_f0": {
+      "fold": 0,
+      "arm": "ASK",
+      "path": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f0__first__s18101\\model.pt",
+      "sha256": "646d06695d2387898e53d9b7f0c12f029bdd73495eea50a56e593900135e2ec7"
+    },
+    "B0_f1": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\runs\\pilot__ManyRx__M0__f1__first__s18101\\model.pt",
+      "sha256": "fa790ec31286003cce0f9e8f9087b5d8a047c4d2f8f33280bc20ff3eaf9dc98d",
+      "fold": 1,
+      "arm": "B0"
+    },
+    "ASK_f1": {
+      "fold": 1,
+      "arm": "ASK",
+      "path": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f1__first__s18101\\model.pt",
+      "sha256": "c27789d4e209ba9c1f5990b7e200104db61b0b16481aff0af3118281757be222"
+    },
+    "B0_f2": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\runs\\pilot__ManyRx__M0__f2__first__s18101\\model.pt",
+      "sha256": "b7a2eb2e077b81f93bef1ae29296a8e201c5622149c7331f4b743997ed899091",
+      "fold": 2,
+      "arm": "B0"
+    },
+    "ASK_f2": {
+      "fold": 2,
+      "arm": "ASK",
+      "path": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f2__first__s18101\\model.pt",
+      "sha256": "1cc7b26c62384f4ae439a9bf6846242a1849812e2e49184728eb4e1d388c62b0"
+    },
+    "B0_f3": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\runs\\pilot__ManyRx__M0__f3__first__s18101\\model.pt",
+      "sha256": "6a1ae01a5ca1a156aec4e54d0054d36b1ac7503cd179c62f1a825a49fce7dff4",
+      "fold": 3,
+      "arm": "B0"
+    },
+    "ASK_f3": {
+      "fold": 3,
+      "arm": "ASK",
+      "path": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f3__first__s18101\\model.pt",
+      "sha256": "8aa537900371c513c1c1d7a6115d5fa18e4137b4cbd6d30216dac17513a71926"
+    }
+  },
+  "local_predictions": {
+    "B0_f0": "f50f7e4683485cc1891a841fac3b36e63aa461d9e3c27596a75d8d243298b8c6",
+    "ASK_f0": "98cf6e0c71de9703fcc3e4287d45031f68038e518698df1960b1eb165d45bc17",
+    "B0_f1": "35e86fd786c4c8219caeaea7a84615fe1b018e68a06c4e8074dfaad161b4c674",
+    "ASK_f1": "71fe8ec74c1737ac3fcd087a59f745d534f7f5bdf103e92ad5c5e7a6e97c0bc8",
+    "B0_f2": "0d8b2b030de2d398fb4be430ffb2d04d6b2ec14d1181c1a3cae87d351ec44150",
+    "ASK_f2": "2c96956ac755a3f45c015094912ce91053a877a0117add0e291687109e01f3e4",
+    "B0_f3": "69f47bcf725753e5246746b5e5d8d6a574060d58db9a0745f88c77551a3c9e51",
+    "ASK_f3": "4f0210ab5aff7928fffb3eb3e9964d623d62cea6bfe4b9260d41051e42153ae1"
+  },
+  "official_source_not_redistributed": true
+}

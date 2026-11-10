@@ -1,0 +1,59 @@
+{
+  "time": "2026-11-10T20:56:21+08:00",
+  "status": "PASS",
+  "registration_sha256": "5008ce261afbd4386ac6c61d85010d620f8c6268ade06509199099b3eff27e84",
+  "audit_code_sha256": "d24da1721915b9ce726b1c2cb85475f92b301c99e639c4a26a58a494e9fee914",
+  "folds": [
+    {
+      "fold": 0,
+      "epochs": 38,
+      "selected_epoch": 28,
+      "model_sha256": "646d06695d2387898e53d9b7f0c12f029bdd73495eea50a56e593900135e2ec7",
+      "all_logits_rescored": true
+    },
+    {
+      "fold": 1,
+      "epochs": 39,
+      "selected_epoch": 29,
+      "model_sha256": "c27789d4e209ba9c1f5990b7e200104db61b0b16481aff0af3118281757be222",
+      "all_logits_rescored": true
+    },
+    {
+      "fold": 2,
+      "epochs": 40,
+      "selected_epoch": 30,
+      "model_sha256": "1cc7b26c62384f4ae439a9bf6846242a1849812e2e49184728eb4e1d388c62b0",
+      "all_logits_rescored": true
+    },
+    {
+      "fold": 3,
+      "epochs": 44,
+      "selected_epoch": 34,
+      "model_sha256": "8aa537900371c513c1c1d7a6115d5fa18e4137b4cbd6d30216dac17513a71926",
+      "all_logits_rescored": true
+    }
+  ],
+  "new_formal_fits": 4,
+  "reused_B0": 4,
+  "source_access_records": 72,
+  "access_by_kind": {
+    "baseline_cached_predictions": 4,
+    "held_source_cell": 48,
+    "sealed_checkpoint": 4,
+    "fit_cache": 16
+  },
+  "new_held_evaluation_after_seal": true,
+  "exact_decision_recomputation": true,
+  "raw_iq_opened_by_audit": false,
+  "model_forward_calls_by_audit": 0,
+  "logits_scope": "All frozen-B0 and ASK source/held logits rescored; CE/margin independently checked in float64",
+  "S19_archived_files_verified": 167,
+  "official_git_blobs_verified": 3,
+  "engineering_serialization_handoff_verified": true,
+  "scientific_fits_repeated": 0,
+  "real_target_access": false,
+  "ManySig_read": false,
+  "Shen_read": false,
+  "checkpoint_bytes_hashed_only": true,
+  "decision_status": "INCONCLUSIVE_SOURCE_COMPARISON"
+}

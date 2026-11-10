@@ -1,0 +1,1831 @@
+{
+  "scope": "Post-result descriptive localization from fixed paired confusion matrices; no new inference or selection",
+  "worst_paired_rx": {
+    "fold": 2,
+    "rx": "3-19",
+    "delta_acc_pp": -8.05,
+    "delta_f1_pp": -8.789849552166984,
+    "delta_ce": 0.20307964086532593,
+    "ASK_acc": 0.871,
+    "B0_acc": 0.9515,
+    "packets": 2000,
+    "additional_errors_ASK": 161,
+    "per_tx": [
+      {
+        "tx": 0,
+        "packets": 200,
+        "additional_errors_ASK": 3,
+        "recall_delta_pp": -1.5
+      },
+      {
+        "tx": 1,
+        "packets": 200,
+        "additional_errors_ASK": 82,
+        "recall_delta_pp": -41.0
+      },
+      {
+        "tx": 2,
+        "packets": 200,
+        "additional_errors_ASK": -1,
+        "recall_delta_pp": 0.5
+      },
+      {
+        "tx": 3,
+        "packets": 200,
+        "additional_errors_ASK": -1,
+        "recall_delta_pp": 0.5
+      },
+      {
+        "tx": 4,
+        "packets": 200,
+        "additional_errors_ASK": 66,
+        "recall_delta_pp": -33.0
+      },
+      {
+        "tx": 5,
+        "packets": 200,
+        "additional_errors_ASK": 4,
+        "recall_delta_pp": -2.0
+      },
+      {
+        "tx": 6,
+        "packets": 200,
+        "additional_errors_ASK": 15,
+        "recall_delta_pp": -7.5
+      },
+      {
+        "tx": 7,
+        "packets": 200,
+        "additional_errors_ASK": 0,
+        "recall_delta_pp": 0.0
+      },
+      {
+        "tx": 8,
+        "packets": 200,
+        "additional_errors_ASK": 0,
+        "recall_delta_pp": 0.0
+      },
+      {
+        "tx": 9,
+        "packets": 200,
+        "additional_errors_ASK": -7,
+        "recall_delta_pp": 3.5000000000000004
+      }
+    ]
+  },
+  "all_paired_receivers": [
+    {
+      "fold": 0,
+      "rx": "13-14",
+      "delta_acc_pp": -1.200000000000001,
+      "delta_f1_pp": -1.511133596512504,
+      "delta_ce": 0.07285323739051819,
+      "ASK_acc": 0.908,
+      "B0_acc": 0.92,
+      "packets": 2000,
+      "additional_errors_ASK": 24,
+      "per_tx": [
+        {
+          "tx": 0,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 1,
+          "packets": 200,
+          "additional_errors_ASK": 12,
+          "recall_delta_pp": -6.0
+        },
+        {
+          "tx": 2,
+          "packets": 200,
+          "additional_errors_ASK": -3,
+          "recall_delta_pp": 1.5
+        },
+        {
+          "tx": 3,
+          "packets": 200,
+          "additional_errors_ASK": -7,
+          "recall_delta_pp": 3.5000000000000004
+        },
+        {
+          "tx": 4,
+          "packets": 200,
+          "additional_errors_ASK": -2,
+          "recall_delta_pp": 1.0
+        },
+        {
+          "tx": 5,
+          "packets": 200,
+          "additional_errors_ASK": 28,
+          "recall_delta_pp": -14.000000000000002
+        },
+        {
+          "tx": 6,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 7,
+          "packets": 200,
+          "additional_errors_ASK": -3,
+          "recall_delta_pp": 1.5
+        },
+        {
+          "tx": 8,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 9,
+          "packets": 200,
+          "additional_errors_ASK": -1,
+          "recall_delta_pp": 0.5
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "rx": "13-7",
+      "delta_acc_pp": 0.05555555555555314,
+      "delta_f1_pp": -0.15873787722472388,
+      "delta_ce": 0.20869523286819458,
+      "ASK_acc": 0.8188888888888889,
+      "B0_acc": 0.8183333333333334,
+      "packets": 1800,
+      "additional_errors_ASK": -1,
+      "per_tx": [
+        {
+          "tx": 0,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 1,
+          "packets": 200,
+          "additional_errors_ASK": 16,
+          "recall_delta_pp": -8.0
+        },
+        {
+          "tx": 2,
+          "packets": 200,
+          "additional_errors_ASK": -7,
+          "recall_delta_pp": 3.5000000000000004
+        },
+        {
+          "tx": 3,
+          "packets": 0,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": null
+        },
+        {
+          "tx": 4,
+          "packets": 200,
+          "additional_errors_ASK": -1,
+          "recall_delta_pp": 0.5
+        },
+        {
+          "tx": 5,
+          "packets": 200,
+          "additional_errors_ASK": 4,
+          "recall_delta_pp": -2.0
+        },
+        {
+          "tx": 6,
+          "packets": 200,
+          "additional_errors_ASK": -1,
+          "recall_delta_pp": 0.5
+        },
+        {
+          "tx": 7,
+          "packets": 200,
+          "additional_errors_ASK": -1,
+          "recall_delta_pp": 0.5
+        },
+        {
+          "tx": 8,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 9,
+          "packets": 200,
+          "additional_errors_ASK": -13,
+          "recall_delta_pp": 6.5
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "rx": "14-7",
+      "delta_acc_pp": 1.4499999999999957,
+      "delta_f1_pp": 1.4767090911474434,
+      "delta_ce": -0.012552503496408463,
+      "ASK_acc": 0.989,
+      "B0_acc": 0.9745,
+      "packets": 2000,
+      "additional_errors_ASK": -29,
+      "per_tx": [
+        {
+          "tx": 0,
+          "packets": 200,
+          "additional_errors_ASK": 3,
+          "recall_delta_pp": -1.5
+        },
+        {
+          "tx": 1,
+          "packets": 200,
+          "additional_errors_ASK": 2,
+          "recall_delta_pp": -1.0
+        },
+        {
+          "tx": 2,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 3,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 4,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 5,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 6,
+          "packets": 200,
+          "additional_errors_ASK": -41,
+          "recall_delta_pp": 20.5
+        },
+        {
+          "tx": 7,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 8,
+          "packets": 200,
+          "additional_errors_ASK": 6,
+          "recall_delta_pp": -3.0
+        },
+        {
+          "tx": 9,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "rx": "8-14",
+      "delta_acc_pp": 2.849999999999997,
+      "delta_f1_pp": 3.096117482395866,
+      "delta_ce": 0.1602877378463745,
+      "ASK_acc": 0.718,
+      "B0_acc": 0.6895,
+      "packets": 2000,
+      "additional_errors_ASK": -57,
+      "per_tx": [
+        {
+          "tx": 0,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 1,
+          "packets": 200,
+          "additional_errors_ASK": 30,
+          "recall_delta_pp": -15.0
+        },
+        {
+          "tx": 2,
+          "packets": 200,
+          "additional_errors_ASK": -9,
+          "recall_delta_pp": 4.5
+        },
+        {
+          "tx": 3,
+          "packets": 200,
+          "additional_errors_ASK": -2,
+          "recall_delta_pp": 1.0
+        },
+        {
+          "tx": 4,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 5,
+          "packets": 200,
+          "additional_errors_ASK": 2,
+          "recall_delta_pp": -1.0
+        },
+        {
+          "tx": 6,
+          "packets": 200,
+          "additional_errors_ASK": 42,
+          "recall_delta_pp": -21.0
+        },
+        {
+          "tx": 7,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 8,
+          "packets": 200,
+          "additional_errors_ASK": 9,
+          "recall_delta_pp": -4.5
+        },
+        {
+          "tx": 9,
+          "packets": 200,
+          "additional_errors_ASK": -131,
+          "recall_delta_pp": 65.5
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "rx": "8-7",
+      "delta_acc_pp": 1.650000000000007,
+      "delta_f1_pp": 1.470137513082348,
+      "delta_ce": 0.28942328691482544,
+      "ASK_acc": 0.797,
+      "B0_acc": 0.7805,
+      "packets": 2000,
+      "additional_errors_ASK": -33,
+      "per_tx": [
+        {
+          "tx": 0,
+          "packets": 200,
+          "additional_errors_ASK": -2,
+          "recall_delta_pp": 1.0
+        },
+        {
+          "tx": 1,
+          "packets": 200,
+          "additional_errors_ASK": 29,
+          "recall_delta_pp": -14.499999999999998
+        },
+        {
+          "tx": 2,
+          "packets": 200,
+          "additional_errors_ASK": -2,
+          "recall_delta_pp": 1.0
+        },
+        {
+          "tx": 3,
+          "packets": 200,
+          "additional_errors_ASK": 3,
+          "recall_delta_pp": -1.5
+        },
+        {
+          "tx": 4,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 5,
+          "packets": 200,
+          "additional_errors_ASK": -3,
+          "recall_delta_pp": 1.5
+        },
+        {
+          "tx": 6,
+          "packets": 200,
+          "additional_errors_ASK": 15,
+          "recall_delta_pp": -7.5
+        },
+        {
+          "tx": 7,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 8,
+          "packets": 200,
+          "additional_errors_ASK": -7,
+          "recall_delta_pp": 3.5000000000000004
+        },
+        {
+          "tx": 9,
+          "packets": 200,
+          "additional_errors_ASK": -67,
+          "recall_delta_pp": 33.5
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "rx": "8-8",
+      "delta_acc_pp": -0.34999999999999476,
+      "delta_f1_pp": -0.36297005439772656,
+      "delta_ce": 0.017954587936401367,
+      "ASK_acc": 0.9805,
+      "B0_acc": 0.984,
+      "packets": 2000,
+      "additional_errors_ASK": 7,
+      "per_tx": [
+        {
+          "tx": 0,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 1,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 2,
+          "packets": 200,
+          "additional_errors_ASK": -3,
+          "recall_delta_pp": 1.5
+        },
+        {
+          "tx": 3,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 4,
+          "packets": 200,
+          "additional_errors_ASK": -1,
+          "recall_delta_pp": 0.5
+        },
+        {
+          "tx": 5,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 6,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 7,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 8,
+          "packets": 200,
+          "additional_errors_ASK": 2,
+          "recall_delta_pp": -1.0
+        },
+        {
+          "tx": 9,
+          "packets": 200,
+          "additional_errors_ASK": 4,
+          "recall_delta_pp": -2.0
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "rx": "1-1",
+      "delta_acc_pp": 2.7000000000000024,
+      "delta_f1_pp": 2.7473735094630247,
+      "delta_ce": -0.04080444574356079,
+      "ASK_acc": 0.9845,
+      "B0_acc": 0.9575,
+      "packets": 2000,
+      "additional_errors_ASK": -54,
+      "per_tx": [
+        {
+          "tx": 0,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 1,
+          "packets": 200,
+          "additional_errors_ASK": -1,
+          "recall_delta_pp": 0.5
+        },
+        {
+          "tx": 2,
+          "packets": 200,
+          "additional_errors_ASK": -59,
+          "recall_delta_pp": 29.5
+        },
+        {
+          "tx": 3,
+          "packets": 200,
+          "additional_errors_ASK": 7,
+          "recall_delta_pp": -3.5000000000000004
+        },
+        {
+          "tx": 4,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 5,
+          "packets": 200,
+          "additional_errors_ASK": -2,
+          "recall_delta_pp": 1.0
+        },
+        {
+          "tx": 6,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 7,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 8,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 9,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "rx": "1-19",
+      "delta_acc_pp": 3.749999999999998,
+      "delta_f1_pp": 3.9366474435481136,
+      "delta_ce": -0.2526875436306,
+      "ASK_acc": 0.9005,
+      "B0_acc": 0.863,
+      "packets": 2000,
+      "additional_errors_ASK": -75,
+      "per_tx": [
+        {
+          "tx": 0,
+          "packets": 200,
+          "additional_errors_ASK": 2,
+          "recall_delta_pp": -1.0
+        },
+        {
+          "tx": 1,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 2,
+          "packets": 200,
+          "additional_errors_ASK": -62,
+          "recall_delta_pp": 31.0
+        },
+        {
+          "tx": 3,
+          "packets": 200,
+          "additional_errors_ASK": 2,
+          "recall_delta_pp": -1.0
+        },
+        {
+          "tx": 4,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 5,
+          "packets": 200,
+          "additional_errors_ASK": -61,
+          "recall_delta_pp": 30.5
+        },
+        {
+          "tx": 6,
+          "packets": 200,
+          "additional_errors_ASK": 23,
+          "recall_delta_pp": -11.5
+        },
+        {
+          "tx": 7,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 8,
+          "packets": 200,
+          "additional_errors_ASK": 3,
+          "recall_delta_pp": -1.5
+        },
+        {
+          "tx": 9,
+          "packets": 200,
+          "additional_errors_ASK": 16,
+          "recall_delta_pp": -8.0
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "rx": "1-20",
+      "delta_acc_pp": -2.0000000000000018,
+      "delta_f1_pp": -2.145395985316778,
+      "delta_ce": 0.03967815637588501,
+      "ASK_acc": 0.9405,
+      "B0_acc": 0.9605,
+      "packets": 2000,
+      "additional_errors_ASK": 40,
+      "per_tx": [
+        {
+          "tx": 0,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 1,
+          "packets": 200,
+          "additional_errors_ASK": 17,
+          "recall_delta_pp": -8.5
+        },
+        {
+          "tx": 2,
+          "packets": 200,
+          "additional_errors_ASK": -11,
+          "recall_delta_pp": 5.5
+        },
+        {
+          "tx": 3,
+          "packets": 200,
+          "additional_errors_ASK": 26,
+          "recall_delta_pp": -13.0
+        },
+        {
+          "tx": 4,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 5,
+          "packets": 200,
+          "additional_errors_ASK": -2,
+          "recall_delta_pp": 1.0
+        },
+        {
+          "tx": 6,
+          "packets": 200,
+          "additional_errors_ASK": 2,
+          "recall_delta_pp": -1.0
+        },
+        {
+          "tx": 7,
+          "packets": 200,
+          "additional_errors_ASK": 7,
+          "recall_delta_pp": -3.5000000000000004
+        },
+        {
+          "tx": 8,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 9,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "rx": "2-1",
+      "delta_acc_pp": 2.9999999999999916,
+      "delta_f1_pp": 4.6432352110419846,
+      "delta_ce": -0.4157371520996094,
+      "ASK_acc": 0.8865,
+      "B0_acc": 0.8565,
+      "packets": 2000,
+      "additional_errors_ASK": -60,
+      "per_tx": [
+        {
+          "tx": 0,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 1,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 2,
+          "packets": 200,
+          "additional_errors_ASK": -4,
+          "recall_delta_pp": 2.0
+        },
+        {
+          "tx": 3,
+          "packets": 200,
+          "additional_errors_ASK": 3,
+          "recall_delta_pp": -1.5
+        },
+        {
+          "tx": 4,
+          "packets": 200,
+          "additional_errors_ASK": 2,
+          "recall_delta_pp": -1.0
+        },
+        {
+          "tx": 5,
+          "packets": 200,
+          "additional_errors_ASK": -85,
+          "recall_delta_pp": 42.5
+        },
+        {
+          "tx": 6,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 7,
+          "packets": 200,
+          "additional_errors_ASK": 16,
+          "recall_delta_pp": -8.0
+        },
+        {
+          "tx": 8,
+          "packets": 200,
+          "additional_errors_ASK": 4,
+          "recall_delta_pp": -2.0
+        },
+        {
+          "tx": 9,
+          "packets": 200,
+          "additional_errors_ASK": 2,
+          "recall_delta_pp": -1.0
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "rx": "2-19",
+      "delta_acc_pp": -0.8499999999999952,
+      "delta_f1_pp": -0.8389519768579157,
+      "delta_ce": 0.002185545861721039,
+      "ASK_acc": 0.9665,
+      "B0_acc": 0.975,
+      "packets": 2000,
+      "additional_errors_ASK": 17,
+      "per_tx": [
+        {
+          "tx": 0,
+          "packets": 200,
+          "additional_errors_ASK": 3,
+          "recall_delta_pp": -1.5
+        },
+        {
+          "tx": 1,
+          "packets": 200,
+          "additional_errors_ASK": 2,
+          "recall_delta_pp": -1.0
+        },
+        {
+          "tx": 2,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 3,
+          "packets": 200,
+          "additional_errors_ASK": 3,
+          "recall_delta_pp": -1.5
+        },
+        {
+          "tx": 4,
+          "packets": 200,
+          "additional_errors_ASK": -25,
+          "recall_delta_pp": 12.5
+        },
+        {
+          "tx": 5,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 6,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 7,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 8,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 9,
+          "packets": 200,
+          "additional_errors_ASK": 32,
+          "recall_delta_pp": -16.0
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "rx": "3-19",
+      "delta_acc_pp": -0.7500000000000062,
+      "delta_f1_pp": -1.3110139327461745,
+      "delta_ce": -0.0012409985065460205,
+      "ASK_acc": 0.8925,
+      "B0_acc": 0.9,
+      "packets": 2000,
+      "additional_errors_ASK": 15,
+      "per_tx": [
+        {
+          "tx": 0,
+          "packets": 200,
+          "additional_errors_ASK": 9,
+          "recall_delta_pp": -4.5
+        },
+        {
+          "tx": 1,
+          "packets": 200,
+          "additional_errors_ASK": 47,
+          "recall_delta_pp": -23.5
+        },
+        {
+          "tx": 2,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 3,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 4,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 5,
+          "packets": 200,
+          "additional_errors_ASK": 8,
+          "recall_delta_pp": -4.0
+        },
+        {
+          "tx": 6,
+          "packets": 200,
+          "additional_errors_ASK": 11,
+          "recall_delta_pp": -5.5
+        },
+        {
+          "tx": 7,
+          "packets": 200,
+          "additional_errors_ASK": -1,
+          "recall_delta_pp": 0.5
+        },
+        {
+          "tx": 8,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 9,
+          "packets": 200,
+          "additional_errors_ASK": -60,
+          "recall_delta_pp": 30.0
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "rx": "1-1",
+      "delta_acc_pp": 0.14999999999999458,
+      "delta_f1_pp": 0.18797546966483614,
+      "delta_ce": -0.007495872676372528,
+      "ASK_acc": 0.961,
+      "B0_acc": 0.9595,
+      "packets": 2000,
+      "additional_errors_ASK": -3,
+      "per_tx": [
+        {
+          "tx": 0,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 1,
+          "packets": 200,
+          "additional_errors_ASK": 27,
+          "recall_delta_pp": -13.5
+        },
+        {
+          "tx": 2,
+          "packets": 200,
+          "additional_errors_ASK": -54,
+          "recall_delta_pp": 27.0
+        },
+        {
+          "tx": 3,
+          "packets": 200,
+          "additional_errors_ASK": 19,
+          "recall_delta_pp": -9.5
+        },
+        {
+          "tx": 4,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 5,
+          "packets": 200,
+          "additional_errors_ASK": 2,
+          "recall_delta_pp": -1.0
+        },
+        {
+          "tx": 6,
+          "packets": 200,
+          "additional_errors_ASK": -1,
+          "recall_delta_pp": 0.5
+        },
+        {
+          "tx": 7,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 8,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 9,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "rx": "1-19",
+      "delta_acc_pp": 11.6,
+      "delta_f1_pp": 12.080596110979315,
+      "delta_ce": -0.3914715647697449,
+      "ASK_acc": 0.956,
+      "B0_acc": 0.84,
+      "packets": 2000,
+      "additional_errors_ASK": -232,
+      "per_tx": [
+        {
+          "tx": 0,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 1,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 2,
+          "packets": 200,
+          "additional_errors_ASK": -67,
+          "recall_delta_pp": 33.5
+        },
+        {
+          "tx": 3,
+          "packets": 200,
+          "additional_errors_ASK": -1,
+          "recall_delta_pp": 0.5
+        },
+        {
+          "tx": 4,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 5,
+          "packets": 200,
+          "additional_errors_ASK": -84,
+          "recall_delta_pp": 42.0
+        },
+        {
+          "tx": 6,
+          "packets": 200,
+          "additional_errors_ASK": -16,
+          "recall_delta_pp": 8.0
+        },
+        {
+          "tx": 7,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 8,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 9,
+          "packets": 200,
+          "additional_errors_ASK": -67,
+          "recall_delta_pp": 33.5
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "rx": "1-20",
+      "delta_acc_pp": -4.849999999999999,
+      "delta_f1_pp": -4.996006335205028,
+      "delta_ce": 0.16594085097312927,
+      "ASK_acc": 0.9,
+      "B0_acc": 0.9485,
+      "packets": 2000,
+      "additional_errors_ASK": 97,
+      "per_tx": [
+        {
+          "tx": 0,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 1,
+          "packets": 200,
+          "additional_errors_ASK": 22,
+          "recall_delta_pp": -11.0
+        },
+        {
+          "tx": 2,
+          "packets": 200,
+          "additional_errors_ASK": 13,
+          "recall_delta_pp": -6.5
+        },
+        {
+          "tx": 3,
+          "packets": 200,
+          "additional_errors_ASK": 23,
+          "recall_delta_pp": -11.5
+        },
+        {
+          "tx": 4,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 5,
+          "packets": 200,
+          "additional_errors_ASK": -1,
+          "recall_delta_pp": 0.5
+        },
+        {
+          "tx": 6,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 7,
+          "packets": 200,
+          "additional_errors_ASK": 34,
+          "recall_delta_pp": -17.0
+        },
+        {
+          "tx": 8,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 9,
+          "packets": 200,
+          "additional_errors_ASK": 4,
+          "recall_delta_pp": -2.0
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "rx": "2-1",
+      "delta_acc_pp": 10.449999999999992,
+      "delta_f1_pp": 12.613617775521957,
+      "delta_ce": -0.44729694724082947,
+      "ASK_acc": 0.938,
+      "B0_acc": 0.8335,
+      "packets": 2000,
+      "additional_errors_ASK": -209,
+      "per_tx": [
+        {
+          "tx": 0,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 1,
+          "packets": 200,
+          "additional_errors_ASK": 2,
+          "recall_delta_pp": -1.0
+        },
+        {
+          "tx": 2,
+          "packets": 200,
+          "additional_errors_ASK": -96,
+          "recall_delta_pp": 48.0
+        },
+        {
+          "tx": 3,
+          "packets": 200,
+          "additional_errors_ASK": 2,
+          "recall_delta_pp": -1.0
+        },
+        {
+          "tx": 4,
+          "packets": 200,
+          "additional_errors_ASK": 2,
+          "recall_delta_pp": -1.0
+        },
+        {
+          "tx": 5,
+          "packets": 200,
+          "additional_errors_ASK": -143,
+          "recall_delta_pp": 71.5
+        },
+        {
+          "tx": 6,
+          "packets": 200,
+          "additional_errors_ASK": 2,
+          "recall_delta_pp": -1.0
+        },
+        {
+          "tx": 7,
+          "packets": 200,
+          "additional_errors_ASK": 15,
+          "recall_delta_pp": -7.5
+        },
+        {
+          "tx": 8,
+          "packets": 200,
+          "additional_errors_ASK": 5,
+          "recall_delta_pp": -2.5
+        },
+        {
+          "tx": 9,
+          "packets": 200,
+          "additional_errors_ASK": 2,
+          "recall_delta_pp": -1.0
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "rx": "2-19",
+      "delta_acc_pp": -4.150000000000009,
+      "delta_f1_pp": -4.454906029202565,
+      "delta_ce": 0.023430421948432922,
+      "ASK_acc": 0.8945,
+      "B0_acc": 0.936,
+      "packets": 2000,
+      "additional_errors_ASK": 83,
+      "per_tx": [
+        {
+          "tx": 0,
+          "packets": 200,
+          "additional_errors_ASK": 2,
+          "recall_delta_pp": -1.0
+        },
+        {
+          "tx": 1,
+          "packets": 200,
+          "additional_errors_ASK": 6,
+          "recall_delta_pp": -3.0
+        },
+        {
+          "tx": 2,
+          "packets": 200,
+          "additional_errors_ASK": -1,
+          "recall_delta_pp": 0.5
+        },
+        {
+          "tx": 3,
+          "packets": 200,
+          "additional_errors_ASK": -1,
+          "recall_delta_pp": 0.5
+        },
+        {
+          "tx": 4,
+          "packets": 200,
+          "additional_errors_ASK": 22,
+          "recall_delta_pp": -11.0
+        },
+        {
+          "tx": 5,
+          "packets": 200,
+          "additional_errors_ASK": 3,
+          "recall_delta_pp": -1.5
+        },
+        {
+          "tx": 6,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 7,
+          "packets": 200,
+          "additional_errors_ASK": 42,
+          "recall_delta_pp": -21.0
+        },
+        {
+          "tx": 8,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 9,
+          "packets": 200,
+          "additional_errors_ASK": 9,
+          "recall_delta_pp": -4.5
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "rx": "3-19",
+      "delta_acc_pp": -8.05,
+      "delta_f1_pp": -8.789849552166984,
+      "delta_ce": 0.20307964086532593,
+      "ASK_acc": 0.871,
+      "B0_acc": 0.9515,
+      "packets": 2000,
+      "additional_errors_ASK": 161,
+      "per_tx": [
+        {
+          "tx": 0,
+          "packets": 200,
+          "additional_errors_ASK": 3,
+          "recall_delta_pp": -1.5
+        },
+        {
+          "tx": 1,
+          "packets": 200,
+          "additional_errors_ASK": 82,
+          "recall_delta_pp": -41.0
+        },
+        {
+          "tx": 2,
+          "packets": 200,
+          "additional_errors_ASK": -1,
+          "recall_delta_pp": 0.5
+        },
+        {
+          "tx": 3,
+          "packets": 200,
+          "additional_errors_ASK": -1,
+          "recall_delta_pp": 0.5
+        },
+        {
+          "tx": 4,
+          "packets": 200,
+          "additional_errors_ASK": 66,
+          "recall_delta_pp": -33.0
+        },
+        {
+          "tx": 5,
+          "packets": 200,
+          "additional_errors_ASK": 4,
+          "recall_delta_pp": -2.0
+        },
+        {
+          "tx": 6,
+          "packets": 200,
+          "additional_errors_ASK": 15,
+          "recall_delta_pp": -7.5
+        },
+        {
+          "tx": 7,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 8,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 9,
+          "packets": 200,
+          "additional_errors_ASK": -7,
+          "recall_delta_pp": 3.5000000000000004
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "rx": "1-1",
+      "delta_acc_pp": -1.8000000000000016,
+      "delta_f1_pp": -1.797945240186305,
+      "delta_ce": 0.05523215979337692,
+      "ASK_acc": 0.9765,
+      "B0_acc": 0.9945,
+      "packets": 2000,
+      "additional_errors_ASK": 36,
+      "per_tx": [
+        {
+          "tx": 0,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 1,
+          "packets": 200,
+          "additional_errors_ASK": 5,
+          "recall_delta_pp": -2.5
+        },
+        {
+          "tx": 2,
+          "packets": 200,
+          "additional_errors_ASK": -4,
+          "recall_delta_pp": 2.0
+        },
+        {
+          "tx": 3,
+          "packets": 200,
+          "additional_errors_ASK": 30,
+          "recall_delta_pp": -15.0
+        },
+        {
+          "tx": 4,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 5,
+          "packets": 200,
+          "additional_errors_ASK": 2,
+          "recall_delta_pp": -1.0
+        },
+        {
+          "tx": 6,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 7,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 8,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 9,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "rx": "1-19",
+      "delta_acc_pp": 2.7000000000000024,
+      "delta_f1_pp": 3.068878923092644,
+      "delta_ce": -0.10025371611118317,
+      "ASK_acc": 0.9285,
+      "B0_acc": 0.9015,
+      "packets": 2000,
+      "additional_errors_ASK": -54,
+      "per_tx": [
+        {
+          "tx": 0,
+          "packets": 200,
+          "additional_errors_ASK": 10,
+          "recall_delta_pp": -5.0
+        },
+        {
+          "tx": 1,
+          "packets": 200,
+          "additional_errors_ASK": -2,
+          "recall_delta_pp": 1.0
+        },
+        {
+          "tx": 2,
+          "packets": 200,
+          "additional_errors_ASK": -66,
+          "recall_delta_pp": 33.0
+        },
+        {
+          "tx": 3,
+          "packets": 200,
+          "additional_errors_ASK": 2,
+          "recall_delta_pp": -1.0
+        },
+        {
+          "tx": 4,
+          "packets": 200,
+          "additional_errors_ASK": -1,
+          "recall_delta_pp": 0.5
+        },
+        {
+          "tx": 5,
+          "packets": 200,
+          "additional_errors_ASK": -9,
+          "recall_delta_pp": 4.5
+        },
+        {
+          "tx": 6,
+          "packets": 200,
+          "additional_errors_ASK": -20,
+          "recall_delta_pp": 10.0
+        },
+        {
+          "tx": 7,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 8,
+          "packets": 200,
+          "additional_errors_ASK": 3,
+          "recall_delta_pp": -1.5
+        },
+        {
+          "tx": 9,
+          "packets": 200,
+          "additional_errors_ASK": 29,
+          "recall_delta_pp": -14.499999999999998
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "rx": "1-20",
+      "delta_acc_pp": -2.0499999999999963,
+      "delta_f1_pp": -2.266875843615679,
+      "delta_ce": 0.09832635521888733,
+      "ASK_acc": 0.932,
+      "B0_acc": 0.9525,
+      "packets": 2000,
+      "additional_errors_ASK": 41,
+      "per_tx": [
+        {
+          "tx": 0,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 1,
+          "packets": 200,
+          "additional_errors_ASK": 9,
+          "recall_delta_pp": -4.5
+        },
+        {
+          "tx": 2,
+          "packets": 200,
+          "additional_errors_ASK": -5,
+          "recall_delta_pp": 2.5
+        },
+        {
+          "tx": 3,
+          "packets": 200,
+          "additional_errors_ASK": 30,
+          "recall_delta_pp": -15.0
+        },
+        {
+          "tx": 4,
+          "packets": 200,
+          "additional_errors_ASK": -1,
+          "recall_delta_pp": 0.5
+        },
+        {
+          "tx": 5,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 6,
+          "packets": 200,
+          "additional_errors_ASK": 4,
+          "recall_delta_pp": -2.0
+        },
+        {
+          "tx": 7,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 8,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 9,
+          "packets": 200,
+          "additional_errors_ASK": 2,
+          "recall_delta_pp": -1.0
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "rx": "2-1",
+      "delta_acc_pp": 5.249999999999999,
+      "delta_f1_pp": 5.675388758685607,
+      "delta_ce": -0.16066136956214905,
+      "ASK_acc": 0.9575,
+      "B0_acc": 0.905,
+      "packets": 2000,
+      "additional_errors_ASK": -105,
+      "per_tx": [
+        {
+          "tx": 0,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 1,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 2,
+          "packets": 200,
+          "additional_errors_ASK": -36,
+          "recall_delta_pp": 18.0
+        },
+        {
+          "tx": 3,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 4,
+          "packets": 200,
+          "additional_errors_ASK": 3,
+          "recall_delta_pp": -1.5
+        },
+        {
+          "tx": 5,
+          "packets": 200,
+          "additional_errors_ASK": -81,
+          "recall_delta_pp": 40.5
+        },
+        {
+          "tx": 6,
+          "packets": 200,
+          "additional_errors_ASK": 3,
+          "recall_delta_pp": -1.5
+        },
+        {
+          "tx": 7,
+          "packets": 200,
+          "additional_errors_ASK": -2,
+          "recall_delta_pp": 1.0
+        },
+        {
+          "tx": 8,
+          "packets": 200,
+          "additional_errors_ASK": 3,
+          "recall_delta_pp": -1.5
+        },
+        {
+          "tx": 9,
+          "packets": 200,
+          "additional_errors_ASK": 4,
+          "recall_delta_pp": -2.0
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "rx": "2-19",
+      "delta_acc_pp": 3.049999999999997,
+      "delta_f1_pp": 3.771000459907803,
+      "delta_ce": -0.11949551105499268,
+      "ASK_acc": 0.964,
+      "B0_acc": 0.9335,
+      "packets": 2000,
+      "additional_errors_ASK": -61,
+      "per_tx": [
+        {
+          "tx": 0,
+          "packets": 200,
+          "additional_errors_ASK": 6,
+          "recall_delta_pp": -3.0
+        },
+        {
+          "tx": 1,
+          "packets": 200,
+          "additional_errors_ASK": 1,
+          "recall_delta_pp": -0.5
+        },
+        {
+          "tx": 2,
+          "packets": 200,
+          "additional_errors_ASK": -1,
+          "recall_delta_pp": 0.5
+        },
+        {
+          "tx": 3,
+          "packets": 200,
+          "additional_errors_ASK": -2,
+          "recall_delta_pp": 1.0
+        },
+        {
+          "tx": 4,
+          "packets": 200,
+          "additional_errors_ASK": -111,
+          "recall_delta_pp": 55.50000000000001
+        },
+        {
+          "tx": 5,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 6,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 7,
+          "packets": 200,
+          "additional_errors_ASK": 3,
+          "recall_delta_pp": -1.5
+        },
+        {
+          "tx": 8,
+          "packets": 200,
+          "additional_errors_ASK": 4,
+          "recall_delta_pp": -2.0
+        },
+        {
+          "tx": 9,
+          "packets": 200,
+          "additional_errors_ASK": 39,
+          "recall_delta_pp": -19.5
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "rx": "3-19",
+      "delta_acc_pp": -1.5499999999999958,
+      "delta_f1_pp": -1.8280170724890077,
+      "delta_ce": 0.1109219342470169,
+      "ASK_acc": 0.92,
+      "B0_acc": 0.9355,
+      "packets": 2000,
+      "additional_errors_ASK": 31,
+      "per_tx": [
+        {
+          "tx": 0,
+          "packets": 200,
+          "additional_errors_ASK": 7,
+          "recall_delta_pp": -3.5000000000000004
+        },
+        {
+          "tx": 1,
+          "packets": 200,
+          "additional_errors_ASK": 23,
+          "recall_delta_pp": -11.5
+        },
+        {
+          "tx": 2,
+          "packets": 200,
+          "additional_errors_ASK": 2,
+          "recall_delta_pp": -1.0
+        },
+        {
+          "tx": 3,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 4,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 5,
+          "packets": 200,
+          "additional_errors_ASK": -6,
+          "recall_delta_pp": 3.0
+        },
+        {
+          "tx": 6,
+          "packets": 200,
+          "additional_errors_ASK": 7,
+          "recall_delta_pp": -3.5000000000000004
+        },
+        {
+          "tx": 7,
+          "packets": 200,
+          "additional_errors_ASK": -1,
+          "recall_delta_pp": 0.5
+        },
+        {
+          "tx": 8,
+          "packets": 200,
+          "additional_errors_ASK": 0,
+          "recall_delta_pp": 0.0
+        },
+        {
+          "tx": 9,
+          "packets": 200,
+          "additional_errors_ASK": -1,
+          "recall_delta_pp": 0.5
+        }
+      ]
+    }
+  ],
+  "causal_attribution": false
+}
