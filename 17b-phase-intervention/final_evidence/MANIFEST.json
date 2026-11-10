@@ -1,0 +1,98 @@
+{
+  "audit": {
+    "status": "PASS",
+    "registered_code_hashes_verified": 66,
+    "baseline_checkpoint_hashes_verified": 4,
+    "baseline_receiver_confusions_recomputed": 72,
+    "intervention_rows_verified": 72,
+    "intervention_gates_recomputed": true,
+    "matched_evm_scalar_records_consistent": true,
+    "access_entries": 144,
+    "violations": [],
+    "held_source_read": false,
+    "real_target_access": false,
+    "original_s17_stop_changed": false,
+    "historical_tracked_content_changed": [],
+    "new_formal_fits": 4,
+    "research_decision": "STOP_D1_GATE",
+    "scope": "Baseline confusion matrices and D1 scalar gates checked; no independent D1 replay or method training claimed"
+  },
+  "records": [
+    {
+      "job": {
+        "phase": "pilot",
+        "dataset": "ManyRx",
+        "arm": "M0",
+        "fold": 0,
+        "group": "first",
+        "seed": 18101,
+        "split_seed": 16001
+      },
+      "checkpoint_sha256": "f0f9fe1cd967e033ce97bf8e6f149ce29d4e70cf0611e88457ec141da56cf06f",
+      "files_sha256": {
+        "attempt.json": "b60207a4267fbb1b96af815e6b9fe10aee1ec48c11eb923a60948c1ff770640b",
+        "config.json": "93d197ddf0dc0bdfe44f40c9918bd4c1dc6d9666eee1779e1465924565b16544",
+        "metrics.json": "70800e8d9bd4e677277c49014399804aeae1c4376ca476e4ed3434d2e7b1119d",
+        "history.csv": "81f3b39edb2f182e2d6da976ecf3b80991bfd8ed707e1c276617f1385493e23e",
+        "stdout.log": "f9755596b37b6d1a0a034575f21af8385bf5fe7aa4d5c62b4444b939f82c6816"
+      }
+    },
+    {
+      "job": {
+        "phase": "pilot",
+        "dataset": "ManyRx",
+        "arm": "M0",
+        "fold": 1,
+        "group": "first",
+        "seed": 18101,
+        "split_seed": 16001
+      },
+      "checkpoint_sha256": "fa790ec31286003cce0f9e8f9087b5d8a047c4d2f8f33280bc20ff3eaf9dc98d",
+      "files_sha256": {
+        "attempt.json": "859aa2e7fa5bc5c15be4273070eda9e4693bd81909771411479790b18b807ee8",
+        "config.json": "df557325bc9ac58b93c9dcd60640a0fc5cb26a38304430ee3259fba155464579",
+        "metrics.json": "cd32db991d23f3f53351da0e00da9ace26c1b3c9e789aad0468116793bdf27df",
+        "history.csv": "3f2b9a9d5b586306ca73639bf0646dca097576c213654c06b52fa8ca789aff43",
+        "stdout.log": "300cf1e92949e904125601a4f38aa58d16bfc491225ff32bbfb0b5af41a5fa11"
+      }
+    },
+    {
+      "job": {
+        "phase": "pilot",
+        "dataset": "ManyRx",
+        "arm": "M0",
+        "fold": 2,
+        "group": "first",
+        "seed": 18101,
+        "split_seed": 16001
+      },
+      "checkpoint_sha256": "b7a2eb2e077b81f93bef1ae29296a8e201c5622149c7331f4b743997ed899091",
+      "files_sha256": {
+        "attempt.json": "00561da4030451378061470dd3c3b558a7ba28d5d1da960ad4b149562dbd8369",
+        "config.json": "053d5a00c6350cbfbebdc2bccc0ec29703f04dedf0323bd7e28b541cc328d12a",
+        "metrics.json": "30ce109df9b03ed9721e3667b7e282184d85902c67f50e5eb03de28d78b82290",
+        "history.csv": "39cab858ad5c3147b48d1d5975e9fd147640a8bc6526d64b6ed7a14eb7776fe1",
+        "stdout.log": "ff62df23f6f06f5b74fefc4cd552b5ddf4195814aad573f90d6a21fb34584511"
+      }
+    },
+    {
+      "job": {
+        "phase": "pilot",
+        "dataset": "ManyRx",
+        "arm": "M0",
+        "fold": 3,
+        "group": "first",
+        "seed": 18101,
+        "split_seed": 16001
+      },
+      "checkpoint_sha256": "6a1ae01a5ca1a156aec4e54d0054d36b1ac7503cd179c62f1a825a49fce7dff4",
+      "files_sha256": {
+        "attempt.json": "0ecb2d4e5f362ad0378d7ce73821b3d901bc1497ed3320b5c42d8bc5d26f3954",
+        "config.json": "986cbc45c6d19ac519606c46a3bd5f5a6cd82b3a40b73e8578540dd4271ca661",
+        "metrics.json": "1af6f1b7ed54f687f5a2983dd89e855e2c71d7518130feda097454723a0e76e0",
+        "history.csv": "52faf9ceb9aae8b649346f15cd7e9dd25bdccd526444eb4ca8cf7b3cd3462593",
+        "stdout.log": "33a8d03b9981d9394b707c33406e532c8eed74ad7ff71887bb85943fe62be9ad"
+      }
+    }
+  ]
+}

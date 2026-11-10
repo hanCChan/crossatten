@@ -1,0 +1,23 @@
+{
+  "job": {
+    "phase": "pilot",
+    "dataset": "ManyRx",
+    "arm": "M0",
+    "fold": 3,
+    "group": "first",
+    "seed": 18101,
+    "split_seed": 16001
+  },
+  "data_seed": 2539957040,
+  "source_split_seed": 16001,
+  "epochs_budget": 40,
+  "batch": 128,
+  "optimizer": "Adam1e-3;ReduceLROnPlateau factor.1 patience5 min1e-6;earlywait10",
+  "precision": "FP32",
+  "augmentation_probability": 0.5,
+  "active_params": 82426,
+  "profile_sha256": null,
+  "git_sha": "9f10d625edcfab7e6715536cbef054810d719698",
+  "input_roles": "fit RX dates1-2 only; source held evaluated only after phase checkpoint seal",
+  "initial_state_sha256": "52b63c5e485fddb18a208e557503abde44823464af2a3502041f4c70ce5e9e48"
+}
