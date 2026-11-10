@@ -1,0 +1,165 @@
+{
+  "time": "2026-11-10T14:12:23+08:00",
+  "stage": "S19",
+  "base_commit": "933d4a6e05bedb2ad0426c9b99679c07106ccf10",
+  "code_sha256": {
+    "09-phase-invariance/phase_features.py": "d467175e131cfa719f0fa1f5500a8935bcb864d12dad53160a77247874d1721e",
+    "13-mixer-cfo-mechanisms/core.py": "a9db92f80e8e1bf1579cab900fabf085f5c33e018dffe6e27f1af64ee94dc527",
+    "13-mixer-cfo-mechanisms/metrics.py": "a9773e0532552f012dc039c42206460d1a5b02001a2bbb44a388258825f85ed7",
+    "13-mixer-cfo-mechanisms/models.py": "606243ff9462358f53a86d2908130c47f69c5dd9d1cfee669cbaf10c7b76e5a1",
+    "13-mixer-cfo-mechanisms/wifi.py": "3402847c350172b670aba40616f5b56ec5ecb2e7176cc199c26d0315d920db37",
+    "17-rx-distortion/s17_core.py": "e026e94981b09eb3f9bcc4d92699507105654376b4e6ac14efa8f1af954efe6c",
+    "17-rx-distortion/s17_models.py": "3f15c97c9583a080be1c73dde4024e4b2e21e86b196e3df9a706d0b3ff1b2e5a",
+    "19-tx-spectral-evidence/s19_core.py": "ada5a3c5478bc2e05076dbb4bbb45d204a181e25ae71dc6183410af045b14880",
+    "19-tx-spectral-evidence/s19_data.py": "2487334a4a9cd63a6ef1a4e436f227e845325a4837865fc211553115f692ae75",
+    "19-tx-spectral-evidence/s19_evidence.py": "cacbcf197b41eaa300b0c15ac1748197fc8e60e4d1d6dac4337313553346526a",
+    "19-tx-spectral-evidence/s19_execute.py": "5d7402cda455b3c068d5336cdf059dea67a11e74186f20751cf0cac6df52e28f",
+    "19-tx-spectral-evidence/s19_metrics.py": "c5e8689646aa7651a29599360f655b32a1a94d39cbbe9f392b2ec718426265ad",
+    "19-tx-spectral-evidence/s19_models.py": "43a5088c9435bb794c74f211b09c0a74e0236201ef5526d90aefc05ed2f4ecfa",
+    "19-tx-spectral-evidence/s19_preflight.py": "3c2a33949968ecef0df37ac8b34aa4b7f1b81503ffa8b86d0d57a9d2bc45ee98",
+    "19-tx-spectral-evidence/s19_register.py": "fa3a3a50b1ce2e7cf3d33e0cbb395ac1ae795475b26e023ab54f483cdc8f98dc",
+    "19-tx-spectral-evidence/s19_train.py": "4555dc7bc57772f648e9fed8e5b91d061111fcc435bc325a6c9897a7ad071a34",
+    "19-tx-spectral-evidence/test_evidence.py": "d1dd71efcbd4137e7967ac59c43208bd64d74f69e4e09128abfdc764e0ac6e63",
+    "19-tx-spectral-evidence/test_models.py": "b4b7b460d00d44afc9e5c2a255b1767774a918a2891ac5e5d721fa4c0aee654e",
+    "19-tx-spectral-evidence/test_pipeline.py": "1abdd6078f1a4a1355327f33f3bc84fce6cc49f411d2b7e7093ce7617c2a20f3",
+    "lib/legacy_rfhstu/__init__.py": "f78366d19d77282713f4944bc4e8fbdcbb138aac9849a0acf79459f4491dd9f5",
+    "lib/legacy_rfhstu/cnn_stem.py": "b3a8944c96b354d295a96d84876693e95433f67616e23d2804219d0fa1c2762a",
+    "lib/legacy_rfhstu/features.py": "1e9e5aa828adbb382c604ebf7b1bd429c79893ea1169afddaa14596a6c0d5378",
+    "lib/legacy_rfhstu/losses.py": "a0ba7f42040203289593ba6a9363f27ea19d5152d8813979a7018cc152e78e28",
+    "lib/legacy_rfhstu/mixstyle.py": "687174caeff6f256b2661399ab70aede396d5ea51af4e312dcbacc01235b94a5",
+    "lib/legacy_rfhstu/models.py": "ebb638fac3392fec36bace7e2445ab6d27ef4e3b5adb2c06b35c8bc82f506666",
+    "lib/legacy_rfhstu/multiscale.py": "de51929e7917e793e814319a88b91ef0b17354e4c7614065172e082f16833e35",
+    "lib/legacy_rfhstu/oob_fusion.py": "030f2886c9a84282eb7e20ce5d318f528e8bfc20902c4b4a17315686ea290259",
+    "lib/xa/__init__.py": "ca199705017e2d6d6b037d4d732f7caec7d7dff190c77a3d94c0cfaf515ab492",
+    "lib/xa/aggregate.py": "8995baeff876f427338836ad0b2d53de01f95e95148b851067f498d35f592e38",
+    "lib/xa/bench.py": "3a94fe229e5b43f45b15ca2f1a06e179b0212f282ea58671e71c718161d20ba7",
+    "lib/xa/data.py": "ff861d46e508d807996a924d4439134416b16ba6507856a7335c65d9e4cfc3cb",
+    "lib/xa/evaluate.py": "365998cf59196e5ebbdad3b34132fe1dfb2a4a2b988c82d660715471167734aa",
+    "lib/xa/explore_models.py": "bcc1616b5fc6ea533183b4c3a9538748a663a1b321bd748a33870b4ef8116467",
+    "lib/xa/explore_train.py": "8e4361d2b21546f5f5b5ba26adccd57618680c720db734561802b8246a33babe",
+    "lib/xa/frontends.py": "967e28c05f168341b4710e4b2253d77b93d92bc9a3dd515fdddaa35e81c2013f",
+    "lib/xa/guard.py": "80562f5a0893be3a3e91cb80ef4636a6b24eb0c76bfa59d3566574633e5fff54",
+    "lib/xa/jobs.py": "ef8ac595d7a567c18d5e726b2fe70e9942628e709bf1453dfe0df5e9d07233f0",
+    "lib/xa/launch.py": "71ca1656dcccf4d26455de6b999de42b2482f73b738a37fca52f354ccec6d4a2",
+    "lib/xa/models.py": "322049d67d19d196dca8a722fda9de433d846fe1aa3d6d8439c49adeba6554bf",
+    "lib/xa/models2.py": "e9c3364868955e6996645a823187dadb553a2a95139e809d43055a93c53eaa23",
+    "lib/xa/models3.py": "bade67f8ad50b64c132197d21a86c1897a8c27976a7b8490d2e7131ff025cbba",
+    "lib/xa/paper_models.py": "7c09adc3b481e5b13eeccb93731a00573f16a98f5d35c490a1d5082707c550bd",
+    "lib/xa/paper_run.py": "4c1bcdf2e98c974c6e03677b69881ea378dc3406c0d9f8a7bbe471290389fec6",
+    "lib/xa/paper_train.py": "e59cab54045ef6cd27a168e937e7571456ad3d2405183efc605e8308e3ed80c8",
+    "lib/xa/run_job.py": "534b8f7aa2c8c54c12eb5881850897fa2a69280cde004c84ede19532b0cb576b",
+    "lib/xa/train.py": "906a7fd0a7bbb61fea86e03bcf9b52228a5b26851e53fa904d497be330daa96e",
+    "lib/xa/wisig.py": "b4127fba87f5603704c92d2221743c8dedf6898e45c8216b9ddb84b32f42ad67"
+  },
+  "design_sha256": {
+    "README.zh-CN.md": "feebabe0a52ecc3f45a75f0c62d1fe8083c819fa7bf95b68fc1eef50528918b5",
+    "historical_matrix.md": "ef49089845a1f2f02f2acf5b47af35ce1fe45d0fdd49df52431b3f622b817d8f",
+    "S18_VERIFIED.json": "13ced3f77ebb67cc2dbf84c1a9467330e262d3685234be79335f58d5729f2307",
+    "ENGINEERING_TESTS.json": "98f04fe1059cd9197d76d91760bff43eea2b6bd719cf36e92422075beb99da13",
+    "jobs_pilot.json": "f3e5d29a8a11c5ec166bf819c257743d6de9917997dad903a6f388133a8bd554"
+  },
+  "historical_sha256": {
+    "17b-phase-intervention/final_evidence/MANIFEST.json": "34364b2f8a619125a11a537f9a21d0b263e43807463ba328ea5b8f59f0709c8e",
+    "17-rx-distortion/decision_d0.json": "e1e515eb19e1a2d82e9ea4d6042f475227567993dffe2cf9f6bcfc15e1d0314c",
+    "17b-phase-intervention/decision_d1.json": "68e7181ee3ffdcbf4ed3f15bf94b812c44a4a14525a8c197c457c2c58e5a54b4",
+    "15-hstem-attribution/decision.json": "a4900adabfd5271d53f0b061247f0609d42a92ee6c885089c01e7421f78432bc",
+    "16-rf-qwen3/STATUS.json": "0f38744aabc054b78235d204bef69312c544e66769851b283f5842bc3cd6dfb4",
+    "10-tifs-validation/final_comparisons.csv": "d3cd142134f2183b18bf522106eb6e107f805b1f6538c35727bd41f126edb3aa",
+    "17b-phase-intervention/cache/ManyRx_f0_first_s16001/fit_manifest.json": "ec8b536d58e36ed15c7cdb8ecdad52b5e692a7965e9069cfd7ea63daa21f62f0",
+    "17b-phase-intervention/runs/pilot__ManyRx__M0__f0__first__s18101/config.json": "93d197ddf0dc0bdfe44f40c9918bd4c1dc6d9666eee1779e1465924565b16544",
+    "17b-phase-intervention/runs/pilot__ManyRx__M0__f0__first__s18101/metrics.json": "70800e8d9bd4e677277c49014399804aeae1c4376ca476e4ed3434d2e7b1119d",
+    "17b-phase-intervention/cache/ManyRx_f1_first_s16001/fit_manifest.json": "554b89544db9df34ddf0509b4de1d776ff32c93ddb19a49c51187636bd702949",
+    "17b-phase-intervention/runs/pilot__ManyRx__M0__f1__first__s18101/config.json": "df557325bc9ac58b93c9dcd60640a0fc5cb26a38304430ee3259fba155464579",
+    "17b-phase-intervention/runs/pilot__ManyRx__M0__f1__first__s18101/metrics.json": "cd32db991d23f3f53351da0e00da9ace26c1b3c9e789aad0468116793bdf27df",
+    "17b-phase-intervention/cache/ManyRx_f2_first_s16001/fit_manifest.json": "0fb3a069d62804751a1327ee44ea34f422808083f5db2af0ef52e331db70b88f",
+    "17b-phase-intervention/runs/pilot__ManyRx__M0__f2__first__s18101/config.json": "053d5a00c6350cbfbebdc2bccc0ec29703f04dedf0323bd7e28b541cc328d12a",
+    "17b-phase-intervention/runs/pilot__ManyRx__M0__f2__first__s18101/metrics.json": "30ce109df9b03ed9721e3667b7e282184d85902c67f50e5eb03de28d78b82290",
+    "17b-phase-intervention/cache/ManyRx_f3_first_s16001/fit_manifest.json": "f4c254085789a1b048805f6d0ef93b9d2b6890964642c309ce0f6763666c38f3",
+    "17b-phase-intervention/runs/pilot__ManyRx__M0__f3__first__s18101/config.json": "986cbc45c6d19ac519606c46a3bd5f5a6cd82b3a40b73e8578540dd4271ca661",
+    "17b-phase-intervention/runs/pilot__ManyRx__M0__f3__first__s18101/metrics.json": "1af6f1b7ed54f687f5a2983dd89e855e2c71d7518130feda097454723a0e76e0"
+  },
+  "data": {
+    "dataset": "ManyRx",
+    "folds": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "fit_rx": 18,
+    "held_source_rx": 6,
+    "source_days": [
+      1,
+      2
+    ],
+    "source_split_seed": 16001,
+    "baseline_seed": 18101
+  },
+  "spectral": {
+    "bands": 8,
+    "bins": 256,
+    "transition_bins_per_side": 2,
+    "modulation_alpha": 0.2,
+    "teacher_attenuation": 0.5,
+    "retained_spectrum": "full legal WiSig FFT"
+  },
+  "evidence": {
+    "train_cap_per_cell": 16,
+    "sampling_seed": "19001+fold",
+    "lambda_value": 0.1,
+    "quantile": 0.25,
+    "controls": [
+      "per-packet EVM-matched global amplitude",
+      "per-packet EVM-matched global phase"
+    ],
+    "selection_from_controls": false
+  },
+  "arms": {
+    "B0": "reused HStem+ordinary MHA",
+    "B1": "static8band filter",
+    "B2": "272parameter power gate",
+    "B3": "272parameter TCSE CE only",
+    "B4": "same TCSE with evidence CE"
+  },
+  "training": {
+    "epochs_max": 40,
+    "batch": 128,
+    "optimizer": "Adam1e-3 wd0",
+    "scheduler": "Plateau(.1,5,min1e-6)",
+    "earlywait": 10,
+    "precision": "FP32",
+    "init": "identical backbone random state to frozen B0; no teacher weight warm-start",
+    "checkpoints": "fit-source RX-equal CE"
+  },
+  "gates": {
+    "B4_vs_B0": {
+      "min_mean_pp": 1.0,
+      "min_positive_folds": 3,
+      "min_worst_paired_rx_pp": -2.0,
+      "ci_lower_gt": 0.0
+    },
+    "B4_vs_B3": {
+      "min_mean_pp": 0.0,
+      "min_positive_folds": 3,
+      "ci_lower_gt": 0.0
+    },
+    "B4_vs_B1_B2": {
+      "min_mean_pp": 0.0,
+      "min_positive_folds": 3,
+      "ci_lower_gt": 0.0
+    },
+    "selection": "Only B4 primary; no switch to another arm after held-source results"
+  },
+  "new_formal_fit_budget": 20,
+  "planned_new_fits": 16,
+  "reused_fits": 4,
+  "derived_only_scripts_excluded_from_primary_analysis": [
+    "s19_costs.py",
+    "s19_reports.py",
+    "s19_verify.py"
+  ],
+  "all_checkpoints_sealed_before_held_source": true,
+  "real_target_access": false,
+  "no_parameter_search": true,
+  "no_automatic_fit_retry": true
+}

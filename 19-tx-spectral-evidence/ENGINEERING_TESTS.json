@@ -1,0 +1,138 @@
+{
+  "time": "2026-11-10T14:10:28+08:00",
+  "status": "PASS",
+  "cpu_synthetic_tests": 19,
+  "gpu_random_model_checks": 20,
+  "historical_initial_state_checks": 20,
+  "source_weights_read": false,
+  "source_iq_read": false,
+  "optimizer_steps": 0,
+  "python": "3.12.8 | packaged by Anaconda, Inc. | (main, Dec 11 2024, 16:48:34) [MSC v.1929 64 bit (AMD64)]",
+  "executable": "D:\\miniconda\\envs\\crossatten4060\\python.exe",
+  "torch": "2.5.0+cu124",
+  "numpy": "1.26.4",
+  "scipy": "1.15.1",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "checks": [
+    {
+      "fold": 0,
+      "arm": "B0",
+      "parameters": 82426,
+      "backbone_initial_sha256": "5b370cf5fe1a167a037199154bf52c1730cea7453a383f6ac7352d564efbd9c0"
+    },
+    {
+      "fold": 0,
+      "arm": "B1",
+      "parameters": 82434,
+      "backbone_initial_sha256": "5b370cf5fe1a167a037199154bf52c1730cea7453a383f6ac7352d564efbd9c0"
+    },
+    {
+      "fold": 0,
+      "arm": "B2",
+      "parameters": 82698,
+      "backbone_initial_sha256": "5b370cf5fe1a167a037199154bf52c1730cea7453a383f6ac7352d564efbd9c0"
+    },
+    {
+      "fold": 0,
+      "arm": "B3",
+      "parameters": 82698,
+      "backbone_initial_sha256": "5b370cf5fe1a167a037199154bf52c1730cea7453a383f6ac7352d564efbd9c0"
+    },
+    {
+      "fold": 0,
+      "arm": "B4",
+      "parameters": 82698,
+      "backbone_initial_sha256": "5b370cf5fe1a167a037199154bf52c1730cea7453a383f6ac7352d564efbd9c0"
+    },
+    {
+      "fold": 1,
+      "arm": "B0",
+      "parameters": 82426,
+      "backbone_initial_sha256": "e2292133c61d57007f335b7eea9e33eeb9add7cbd1dcf2a8ecf3a0fc2b9556f1"
+    },
+    {
+      "fold": 1,
+      "arm": "B1",
+      "parameters": 82434,
+      "backbone_initial_sha256": "e2292133c61d57007f335b7eea9e33eeb9add7cbd1dcf2a8ecf3a0fc2b9556f1"
+    },
+    {
+      "fold": 1,
+      "arm": "B2",
+      "parameters": 82698,
+      "backbone_initial_sha256": "e2292133c61d57007f335b7eea9e33eeb9add7cbd1dcf2a8ecf3a0fc2b9556f1"
+    },
+    {
+      "fold": 1,
+      "arm": "B3",
+      "parameters": 82698,
+      "backbone_initial_sha256": "e2292133c61d57007f335b7eea9e33eeb9add7cbd1dcf2a8ecf3a0fc2b9556f1"
+    },
+    {
+      "fold": 1,
+      "arm": "B4",
+      "parameters": 82698,
+      "backbone_initial_sha256": "e2292133c61d57007f335b7eea9e33eeb9add7cbd1dcf2a8ecf3a0fc2b9556f1"
+    },
+    {
+      "fold": 2,
+      "arm": "B0",
+      "parameters": 82426,
+      "backbone_initial_sha256": "84c5310bf97313d5fb81f77c4a9d45c1abed0f0e0ea004772fe0721bb2ea840f"
+    },
+    {
+      "fold": 2,
+      "arm": "B1",
+      "parameters": 82434,
+      "backbone_initial_sha256": "84c5310bf97313d5fb81f77c4a9d45c1abed0f0e0ea004772fe0721bb2ea840f"
+    },
+    {
+      "fold": 2,
+      "arm": "B2",
+      "parameters": 82698,
+      "backbone_initial_sha256": "84c5310bf97313d5fb81f77c4a9d45c1abed0f0e0ea004772fe0721bb2ea840f"
+    },
+    {
+      "fold": 2,
+      "arm": "B3",
+      "parameters": 82698,
+      "backbone_initial_sha256": "84c5310bf97313d5fb81f77c4a9d45c1abed0f0e0ea004772fe0721bb2ea840f"
+    },
+    {
+      "fold": 2,
+      "arm": "B4",
+      "parameters": 82698,
+      "backbone_initial_sha256": "84c5310bf97313d5fb81f77c4a9d45c1abed0f0e0ea004772fe0721bb2ea840f"
+    },
+    {
+      "fold": 3,
+      "arm": "B0",
+      "parameters": 82426,
+      "backbone_initial_sha256": "52b63c5e485fddb18a208e557503abde44823464af2a3502041f4c70ce5e9e48"
+    },
+    {
+      "fold": 3,
+      "arm": "B1",
+      "parameters": 82434,
+      "backbone_initial_sha256": "52b63c5e485fddb18a208e557503abde44823464af2a3502041f4c70ce5e9e48"
+    },
+    {
+      "fold": 3,
+      "arm": "B2",
+      "parameters": 82698,
+      "backbone_initial_sha256": "52b63c5e485fddb18a208e557503abde44823464af2a3502041f4c70ce5e9e48"
+    },
+    {
+      "fold": 3,
+      "arm": "B3",
+      "parameters": 82698,
+      "backbone_initial_sha256": "52b63c5e485fddb18a208e557503abde44823464af2a3502041f4c70ce5e9e48"
+    },
+    {
+      "fold": 3,
+      "arm": "B4",
+      "parameters": 82698,
+      "backbone_initial_sha256": "52b63c5e485fddb18a208e557503abde44823464af2a3502041f4c70ce5e9e48"
+    }
+  ]
+}
