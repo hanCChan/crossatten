@@ -1,0 +1,19 @@
+{
+  "wsl.exe --status": {
+    "code": 0,
+    "stdout": "默认版本: 2\r\n当前计算机配置不支持 WSL1。\r\n若要使用 WSL1，请启用“Windows Subsystem for Linux”可选组件。\r\nWSL2 无法启动，因为此计算机上未启用虚拟化。\r\n请确保计算机固件设置中“虚拟机平台”可选组件已启用，且虚拟化已开启。\r\n\r\n通过运行以下命令启用“虚拟机平台”: wsl.exe --install --no-distribution\r\n\r\n有关信息，请访问 https://aka.ms/enablevirtualization\r\n",
+    "stderr": ""
+  },
+  "wsl.exe --list --quiet": {
+    "code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "windows_runtime_probe": {
+    "status": "FAIL",
+    "executable": "D:\\crossatten\\.venv\\Scripts\\python.exe",
+    "seconds": 5.8816129000042565,
+    "traceback": "Traceback (most recent call last):\n  File \"D:\\crossatten\\.publication-s17\\environment_probe.py\", line 8, in <module>\n    import torch\n  File \"D:\\crossatten\\.venv\\Lib\\site-packages\\torch\\__init__.py\", line 262, in <module>\n    _load_dll_libraries()\n  File \"D:\\crossatten\\.venv\\Lib\\site-packages\\torch\\__init__.py\", line 245, in _load_dll_libraries\n    raise err\nOSError: [WinError 4551] 应用程序控制策略已阻止此文件。 Error loading \"D:\\crossatten\\.venv\\Lib\\site-packages\\torch\\lib\\c10.dll\" or one of its dependencies.\n",
+    "security_policy_changed": false
+  }
+}
