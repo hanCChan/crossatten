@@ -1,0 +1,41 @@
+{
+  "status": "REGISTERED_FOR_FROZEN_24_JOB_EXECUTION",
+  "registration_sha256": "a7353fb2c5c10fb902e05fedbf35d59c00e1f6eefd1afe5e9233166aa354d8b7",
+  "scientific_protocol_commit": "bebf6bb",
+  "authorization": "Current user task explicitly requests execution after synthetic acceptance and committed addendum.",
+  "prior_registration_only_scope_superseded_for_execution": true,
+  "maximum_scientific_gradient_attempts": 24,
+  "methods_grid_seeds_views_selection_budget_unchanged": true,
+  "code_sha256": {
+    "research/standard_method_competition_c/engine.py": "3e8406ae39ea576b9efdb454303df257960e9ae425f772fd4a173a3efbd20bb7",
+    "research/standard_method_competition_c/analyze.py": "a8b069d9df5739b8cb8e05036f87c1e5957032fd6fa1cb87be3ca8febb395b12",
+    "research/standard_method_competition_c/prepare_execution.py": "fe8c9f804b93b184586bb5a3c41dc61b38aa1f6d903ac9870886edcdb909a0ab",
+    "research/standard_method_competition_c/EXECUTION_ADDENDUM.zh-CN.md": "02f37e6396ce9b53b595f15d5fa4ed8209abddf5e0a5593cb987798aa6c2efde",
+    "tests/test_standard_method_competition_c_engine.py": "807f9fb2c741d1754c048d93848c2e864fd9f4878de25311ef17562de757a50b",
+    "tests/test_standard_method_competition_c_analysis.py": "5cee7635b033af0194fe84393df0af52e63562b10987822c61cc32e5cee38e6c",
+    "research/standard_method_competition_c/engineering_gpu.py": "438e6c5036e256737c7c3334c6974656e3fca17483f8c54e010c910bb46a6ef8"
+  },
+  "environment": {
+    "torch_version": "2.5.0+cu124",
+    "numpy_version": "1.26.4",
+    "python_version": "3.11.8 (tags/v3.11.8:db85d51, Feb  6 2024, 22:03:32) [MSC v.1937 64 bit (AMD64)]",
+    "cuda_version": "12.4",
+    "cudnn_version": 90100,
+    "device_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "device_capability": [
+      8,
+      9
+    ]
+  },
+  "synthetic_CPU_tests_passed": 34,
+  "synthetic_GPU_QA_sha256": "f0d33075c772b38ef886a98b625a716676013a1b76ba29108fccec2770f8a2ad",
+  "synthetic_GPU_trajectories": 3,
+  "synthetic_GPU_updates": 240,
+  "scientific_IQ_or_target_reads_before_acceptance": 0,
+  "source_preflight_required_before_training": true,
+  "all24_readouts_commit_seal_required_before_source_selection": true,
+  "historical_held6_access": false,
+  "target8_or_dates3_4_access": false,
+  "new_receiver_confirmation_access": false,
+  "no_retry_or_additional_seeds": true
+}

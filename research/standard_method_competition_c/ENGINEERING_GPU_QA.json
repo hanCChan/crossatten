@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "checks": {
+    "full_student_and_EMA_cuda_replay": true,
+    "same_initialization_across_families": true,
+    "same_relative_orders": true,
+    "fixed_updates": true,
+    "all_readout_inference_replays": true,
+    "EMA_calibration_preserves_rng_and_student": true
+  },
+  "synthetic_only": true,
+  "scientific_IQ_or_targets_read": 0,
+  "scientific_fits": 0,
+  "synthetic_backbone_trajectories": 3,
+  "synthetic_updates_total": 240,
+  "parameters": 82426,
+  "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "torch_version": "2.5.0+cu124",
+  "cuda_version": "12.4",
+  "cudnn_version": 90100
+}
