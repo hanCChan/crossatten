@@ -1,0 +1,285 @@
+{
+  "status": "DESIGN_ONLY_NOT_EXECUTED",
+  "anchor_fold": 2,
+  "legal_fit_universe": [
+    "7-7",
+    "7-14",
+    "8-7",
+    "8-8",
+    "8-14",
+    "13-7",
+    "13-14",
+    "14-7",
+    "18-2",
+    "18-19",
+    "23-3",
+    "23-5",
+    "23-6",
+    "23-7",
+    "24-5",
+    "24-6",
+    "24-13",
+    "24-16"
+  ],
+  "selection_rule": "lexicographic first6 shared core; remaining12 split6/6; extension class/day caps=min(counts); SHA256 rank source keys; fixed core first",
+  "arms": [
+    {
+      "arm": "composition_0",
+      "shared_core_rx": [
+        "13-14",
+        "13-7",
+        "14-7",
+        "18-19",
+        "18-2",
+        "23-3"
+      ],
+      "extension_rx": [
+        "23-5",
+        "23-6",
+        "23-7",
+        "24-13",
+        "24-16",
+        "24-5"
+      ],
+      "train_packets": 15849,
+      "fixed_core_train_packets": 8149,
+      "extension_packets": 7700,
+      "validation_packets": 3551,
+      "train_indices_sha256": "40ef868a7a56b2381e1d9017d2fce2921d5ab5a238b0aee31c81d0bcd04f82c8",
+      "validation_indices_sha256": "7d16de05a599ad5c3d5adce7a08e220cf1fdda4c6be0e598a68c1bfcd9136792",
+      "train_indices_dtype": "int64",
+      "validation_indices_dtype": "int32"
+    },
+    {
+      "arm": "composition_1",
+      "shared_core_rx": [
+        "13-14",
+        "13-7",
+        "14-7",
+        "18-19",
+        "18-2",
+        "23-3"
+      ],
+      "extension_rx": [
+        "24-6",
+        "7-14",
+        "7-7",
+        "8-14",
+        "8-7",
+        "8-8"
+      ],
+      "train_packets": 15849,
+      "fixed_core_train_packets": 8149,
+      "extension_packets": 7700,
+      "validation_packets": 3551,
+      "train_indices_sha256": "cf11f73aba01102bfc66e94b9e3ba9be3ddcc5c8742eff50b3b2bcc3075a6797",
+      "validation_indices_sha256": "7d16de05a599ad5c3d5adce7a08e220cf1fdda4c6be0e598a68c1bfcd9136792",
+      "train_indices_dtype": "int64",
+      "validation_indices_dtype": "int32"
+    }
+  ],
+  "extension_caps": [
+    {
+      "tx": 0,
+      "day": 1,
+      "extension_counts": [
+        358,
+        369
+      ],
+      "retained_per_extension": 358
+    },
+    {
+      "tx": 0,
+      "day": 2,
+      "extension_counts": [
+        426,
+        401
+      ],
+      "retained_per_extension": 401
+    },
+    {
+      "tx": 1,
+      "day": 1,
+      "extension_counts": [
+        407,
+        406
+      ],
+      "retained_per_extension": 406
+    },
+    {
+      "tx": 1,
+      "day": 2,
+      "extension_counts": [
+        421,
+        418
+      ],
+      "retained_per_extension": 418
+    },
+    {
+      "tx": 2,
+      "day": 1,
+      "extension_counts": [
+        279,
+        439
+      ],
+      "retained_per_extension": 279
+    },
+    {
+      "tx": 2,
+      "day": 2,
+      "extension_counts": [
+        289,
+        431
+      ],
+      "retained_per_extension": 289
+    },
+    {
+      "tx": 3,
+      "day": 1,
+      "extension_counts": [
+        411,
+        415
+      ],
+      "retained_per_extension": 411
+    },
+    {
+      "tx": 3,
+      "day": 2,
+      "extension_counts": [
+        423,
+        426
+      ],
+      "retained_per_extension": 423
+    },
+    {
+      "tx": 4,
+      "day": 1,
+      "extension_counts": [
+        401,
+        430
+      ],
+      "retained_per_extension": 401
+    },
+    {
+      "tx": 4,
+      "day": 2,
+      "extension_counts": [
+        425,
+        415
+      ],
+      "retained_per_extension": 415
+    },
+    {
+      "tx": 5,
+      "day": 1,
+      "extension_counts": [
+        411,
+        415
+      ],
+      "retained_per_extension": 411
+    },
+    {
+      "tx": 5,
+      "day": 2,
+      "extension_counts": [
+        427,
+        410
+      ],
+      "retained_per_extension": 410
+    },
+    {
+      "tx": 6,
+      "day": 1,
+      "extension_counts": [
+        428,
+        433
+      ],
+      "retained_per_extension": 428
+    },
+    {
+      "tx": 6,
+      "day": 2,
+      "extension_counts": [
+        426,
+        419
+      ],
+      "retained_per_extension": 419
+    },
+    {
+      "tx": 7,
+      "day": 1,
+      "extension_counts": [
+        356,
+        403
+      ],
+      "retained_per_extension": 356
+    },
+    {
+      "tx": 7,
+      "day": 2,
+      "extension_counts": [
+        352,
+        435
+      ],
+      "retained_per_extension": 352
+    },
+    {
+      "tx": 8,
+      "day": 1,
+      "extension_counts": [
+        406,
+        338
+      ],
+      "retained_per_extension": 338
+    },
+    {
+      "tx": 8,
+      "day": 2,
+      "extension_counts": [
+        424,
+        353
+      ],
+      "retained_per_extension": 353
+    },
+    {
+      "tx": 9,
+      "day": 1,
+      "extension_counts": [
+        415,
+        435
+      ],
+      "retained_per_extension": 415
+    },
+    {
+      "tx": 9,
+      "day": 2,
+      "extension_counts": [
+        425,
+        417
+      ],
+      "retained_per_extension": 417
+    }
+  ],
+  "train_class_and_day_sequences_equal": true,
+  "common_core_row_positions_identical": true,
+  "validation_core_identical": true,
+  "held_source_rx": [
+    "1-1",
+    "1-19",
+    "1-20",
+    "2-1",
+    "2-19",
+    "3-19"
+  ],
+  "forbidden_target_rx": [
+    "19-1",
+    "19-2",
+    "19-19",
+    "19-20",
+    "20-1",
+    "20-19",
+    "20-20",
+    "23-1"
+  ],
+  "new_iq_access_or_model_training": false
+}

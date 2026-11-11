@@ -1,0 +1,70 @@
+{
+  "scope": "Static source inspection only; no imports/forward or initial-state loading",
+  "historical_files": [
+    {
+      "path": "17-rx-distortion/s17_train.py",
+      "base_git_blob_sha256": "bb6ea369fb408df297788965e8792b666c1685b0b93b1cf46b8a729af20ef366"
+    },
+    {
+      "path": "17-rx-distortion/s17_models.py",
+      "base_git_blob_sha256": "3f15c97c9583a080be1c73dde4024e4b2e21e86b196e3df9a706d0b3ff1b2e5a"
+    },
+    {
+      "path": "17-rx-distortion/s17_data.py",
+      "base_git_blob_sha256": "68758ba670e687e3097396504288a7b6cae01173b58ac8b52e47cb3096ffa1d9"
+    },
+    {
+      "path": "17b-phase-intervention/s17b_train.py",
+      "base_git_blob_sha256": "dc209c6e21c0312c7c822c9f78667f183a2512755d7cb7dfd5b1152835866e12"
+    },
+    {
+      "path": "19-tx-spectral-evidence/s19_data.py",
+      "base_git_blob_sha256": "2487334a4a9cd63a6ef1a4e436f227e845325a4837865fc211553115f692ae75"
+    },
+    {
+      "path": "20-asknet-source-comparison/s20_run.py",
+      "base_git_blob_sha256": "c326b616542e7f0d5d296c064be1a825c09fdc0d342e393232d93afa745c21eb"
+    },
+    {
+      "path": "13-mixer-cfo-mechanisms/models.py",
+      "base_git_blob_sha256": "606243ff9462358f53a86d2908130c47f69c5dd9d1cfee669cbaf10c7b76e5a1"
+    },
+    {
+      "path": "13-mixer-cfo-mechanisms/wifi.py",
+      "base_git_blob_sha256": "3402847c350172b670aba40616f5b56ec5ecb2e7176cc199c26d0315d920db37"
+    },
+    {
+      "path": "lib/xa/train.py",
+      "base_git_blob_sha256": "f62bded00879a18c06da99aa44f27c27a35cf7efb1c503f7f1f98c534d57457e"
+    },
+    {
+      "path": "lib/xa/explore_models.py",
+      "base_git_blob_sha256": "927cc04a4ea4287eba8428f9ec27bad0033c1c121166dab7a81e7c1d305c4262"
+    },
+    {
+      "path": "lib/legacy_rfhstu/models.py",
+      "base_git_blob_sha256": "28d865b46f8072d43778f440e51641b7b9b39c17d44820e418ab3d5f7fee3b0b"
+    },
+    {
+      "path": "lib/legacy_rfhstu/cnn_stem.py",
+      "base_git_blob_sha256": "137f5ad37f90599f6378d8614fab9911dad07d9def0cbda3071446f7828f24bb"
+    },
+    {
+      "path": "D:\\crossatten\\.reference-s20\\ASKNet-RFF-f00846d\\WiSig\\main.py",
+      "sha256": "3c6cdbd7988fe2767bfb3f5b7494ae0ba7100faf35a6601df2078176566e1911",
+      "official_git_blob_sha": "fbe69290b233bf5e0e1a7eab2ca998e021092f2d"
+    },
+    {
+      "path": "D:\\crossatten\\.reference-s20\\ASKNet-RFF-f00846d\\WiSig\\backbones\\PatchNet.py",
+      "sha256": "9c14a78982ba27b5b7d13ff155f41943c03a5a00c04ae080270f762634247939",
+      "official_git_blob_sha": "e2c96119a4ea333897d4d276bc05b71047b8297f"
+    }
+  ],
+  "HStem_active_dropout": false,
+  "HStem_baseline_input_augmentation": false,
+  "HStem_BN_depends_on_batch_order": true,
+  "ASK_training_cutoff_stochastic": true,
+  "ASK_default_dropout": 0,
+  "HStem_epoch_order_hash_recorded": false,
+  "initial_state_hashes_are_metadata_not_loaded_initial_weights": true
+}

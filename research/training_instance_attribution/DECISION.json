@@ -1,0 +1,17 @@
+{
+  "status": "CONFOUNDS_VERIFIED_CAUSAL_ATTRIBUTION_UNRESOLVED",
+  "new_training_admitted": false,
+  "new_model_fits": 0,
+  "causal_ranking_identified": false,
+  "next_step": "Register fixed-data initialization/order control before separate source-composition control",
+  "group_risk_training": "Decide only after attribution controls",
+  "margin_loss": "deferred",
+  "multimodal_head": "deferred",
+  "change_HStem": false,
+  "add_attention": false,
+  "historical_STOP_changed": false,
+  "proposed_fit_counts_not_executed": {
+    "fixed_data_factorial_plus_replay": 5,
+    "composition_pairs": 4
+  }
+}

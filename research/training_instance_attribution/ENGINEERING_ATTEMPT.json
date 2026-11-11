@@ -1,0 +1,19 @@
+{
+  "first_attempt": "FAILED_BEFORE_RUN_FACTOR_ANALYSIS",
+  "cause": "Audit helper initially cast historical Windows index arrays to int64 before computing the raw-byte digest; original stored dtype must be preserved",
+  "correction": "Hash each original array in its stored dtype; control-panel train indices use int64 and validation indices use int32",
+  "second_attempt": "FAILED_BEFORE_RUN_FACTOR_ANALYSIS",
+  "second_cause": "Source RX name list and encoded fit_rx label array collided while assembling one audit dictionary",
+  "second_correction": "Keep encoded labels under fit_rx_codes; keep fit_rx for the declared receiver role list",
+  "unique_label_index_paths": 20,
+  "failed_attempt_label_index_opens_total": 40,
+  "qa_first_attempt": "Failed before QA output because verifier assumed int64 for a stored int32 validation-index digest",
+  "qa_correction": "Declare train/validation index dtypes explicitly in the panel plan and verifier; retained index sets and digest values unchanged",
+  "failed_qa_label_index_opens": 20,
+  "iq_reads": 0,
+  "checkpoint_loads": 0,
+  "prediction_array_reads": 0,
+  "model_fits": 0,
+  "experimental_results_or_thresholds_changed": false,
+  "historical_files_changed": false
+}

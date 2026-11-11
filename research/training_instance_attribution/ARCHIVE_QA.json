@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "base_commit": "b3035c9db8cc2e65488e8b606ff68e102ae006d3",
+  "historical_files_unchanged": true,
+  "source_histories_verified": 8,
+  "pool_comparisons_independently_verified": 6,
+  "synthetic_tests_passed": 5,
+  "local_links_checked": 17,
+  "new_model_fits": 0,
+  "new_iq_reads": 0,
+  "new_prediction_array_reads": 0,
+  "checkpoint_loads": 0,
+  "causal_attribution_identified": false,
+  "accounting": "np.load label-array payload opens are counted in QA_REPORT; byte-hash reads are separate; no OS-wide instrumentation"
+}
