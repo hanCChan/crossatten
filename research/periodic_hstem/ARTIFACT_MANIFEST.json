@@ -1,0 +1,63 @@
+{
+  "status": "SOURCE_FEASIBILITY_CLOSED_WITHOUT_TRAINING",
+  "preregistration_commit": "8edb451",
+  "scientific_fits": 0,
+  "environment": {
+    "python": "3.11.8",
+    "numpy": "1.26.4"
+  },
+  "files": {
+    "ACCESS_LOG.json": {
+      "bytes": 2918,
+      "sha256": "56b0747785279d8f84072ea081ab78470d2e8c06e614d520d008cce74edb7b96"
+    },
+    "audit.py": {
+      "bytes": 12599,
+      "sha256": "458a9650f2141c28a9212fd88e68aceeb8992e123abe23591e7b3df1b2cada53"
+    },
+    "AUDIT_ATTEMPT.json": {
+      "bytes": 181,
+      "sha256": "7e8850aeded5399959ded784fb8cf36aac2f3d8779d0c8e817b698dbcab5dd85"
+    },
+    "AUDIT_REGISTRATION.json": {
+      "bytes": 3522,
+      "sha256": "224fcede8fd94d4dc7f9391b064c4e95ad550a0d8fa38cbab7dc9c88e5776cfe"
+    },
+    "AUDIT_RESULT.json": {
+      "bytes": 20727,
+      "sha256": "ca308c1e516f7880d7c62f62907d5dfaea6e7e339e92c8d78234e97b7aa955f9"
+    },
+    "FEASIBILITY.png": {
+      "bytes": 260190,
+      "sha256": "8a2b2bc74cb865ccc3dc3e81c2d67ec004497592a42f1756721f86d0a11b8b87"
+    },
+    "FEASIBILITY.svg": {
+      "bytes": 130639,
+      "sha256": "1bb609efcaf38623dae76efabe4c24d19119b391f37ae90d530cfd53fa78fd0c"
+    },
+    "PACKET_METRICS.npz": {
+      "bytes": 2594380,
+      "sha256": "466ca9da61de669449031ab7480d17e94606224a6c186c016c2a5cab21906263"
+    },
+    "README.zh-CN.md": {
+      "bytes": 3879,
+      "sha256": "f69f37d3ff62ad743890c40973a7294ec9e55e9f7ac97e4ae82016c6a54b5dbf"
+    },
+    "report.py": {
+      "bytes": 8686,
+      "sha256": "55abf157f04321f0527bc9d7b43739f67b9c066e2ded8573212f6d812bd96051"
+    },
+    "RESULTS.zh-CN.md": {
+      "bytes": 4475,
+      "sha256": "e04c43987ece53e4d2bcf693a71248ad0445a89b98204b9c915584e3a37e9b97"
+    },
+    "VERIFICATION.json": {
+      "bytes": 5317,
+      "sha256": "f15bf03ad8792a4fb0ab598bde5a38a051dee110466ba7b3de346ed9cb551fc9"
+    },
+    "verify.py": {
+      "bytes": 7287,
+      "sha256": "04b2e38779b82d4d7c8c415c1fb2eb094ad4364a0dd2c5cef37436c273fed787"
+    }
+  }
+}
