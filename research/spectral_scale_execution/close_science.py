@@ -32,7 +32,10 @@ def freeze():
             path=HERE/name;relative=path.relative_to(ROOT).as_posix();code[relative]=sha(path);z.write(path,relative)
     write_new(HERE/'SCIENTIFIC_CODE_BYTES.json',dict(archive_sha256=sha(HERE/'SCIENTIFIC_CODE_BYTES.zip'),files=code,
         scope='Postprocessing only; scientific fitting code remains frozen in EXECUTION_CODE_BYTES.zip'))
-    for original,target in (('training.log','TRAINING_CONSOLE.txt'),('preflight.log','PREFLIGHT_CONSOLE.txt')):
+    for original,target in (('training.log','TRAINING_CONSOLE.txt'),('preflight.log','PREFLIGHT_CONSOLE.txt'),
+        ('evaluation.log','EVALUATION_CONSOLE.txt'),('analysis.log','ANALYSIS_CONSOLE.txt'),
+        ('scientific_qa.log','INDEPENDENT_QA_CONSOLE.txt'),('benchmark.log','BENCHMARK_CONSOLE.txt'),
+        ('archive.log','ARCHIVE_CONSOLE.txt'),('report.log','REPORT_CONSOLE.txt')):
         path=HERE/target
         if path.exists():raise FileExistsError('Preserve original console evidence')
         # PowerShell native redirection can use UTF16; decode only its console file.
