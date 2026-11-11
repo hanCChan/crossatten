@@ -11,3 +11,8 @@ tests/test_periodic_span.py text eol=lf
 research/spectral_scale_review/** text eol=lf
 research/spectral_scale_review/*.zip binary
 tests/test_spectral_scale_review.py text eol=lf
+research/spectral_scale_execution/** text eol=lf
+research/spectral_scale_execution/*.zip binary
+research/spectral_scale_execution/*.npz binary
+research/spectral_scale_execution/*.gz binary
+tests/test_spectral_scale_execution.py text eol=lf

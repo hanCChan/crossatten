@@ -1,0 +1,179 @@
+{
+  "status": "TWELVE_SOURCE_REFERENCES_PINNED_FROM_ORIGINAL_SEALS",
+  "references": {
+    "V0/S0": {
+      "F0": {
+        "origin": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V0_S0_P0\\selected.pt",
+        "sha256": "e56608dd435865034ddc2fce9d38126c4fdfdc878df6f77b4bb365a2df135182",
+        "copy_relative": "artifacts/references/F0_V0_S0.pt",
+        "checkpoint_val_prediction": {
+          "path": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V0_S0_P0\\selected_val.npz",
+          "sha256": "70c2df14737990e55128b839d719d243a7e79c8c0c7b42b7fc4cdecf611f047c"
+        },
+        "source_selection_prediction": {
+          "path": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V0_S0_P0\\selected_selection.npz",
+          "sha256": "c757a8d022ea083c487b3368608abfc5be68c07eec47748cc6ded8ff19f1772c"
+        }
+      },
+      "E0": {
+        "origin": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S0_wd1e3_ERM_EMA\\C1_selected.pt",
+        "sha256": "8aa97fb78d5a7992b081c274911644d02b51e66b7385959ab76e9e63e9eafb79",
+        "copy_relative": "artifacts/references/E0_V0_S0.pt",
+        "checkpoint_val_prediction": {
+          "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S0_wd1e3_ERM_EMA\\C1_selected_val.npz",
+          "sha256": "084a06f410bde3d789d511718e85112292252555bc0bf4f27829f9df6586b0eb"
+        },
+        "source_selection_prediction": {
+          "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S0_wd1e3_ERM_EMA\\C1_selected_selection.npz",
+          "sha256": "b9d3e78db0f7b027d657733b226e55caa26fbfff5390857513468887b3dd6981"
+        }
+      }
+    },
+    "V0/S1": {
+      "F0": {
+        "origin": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V0_S1_P0\\selected.pt",
+        "sha256": "a15888f1e6e110368c6574ea34f1781e5e6c25a357fdf6a4cf5da762eef2c571",
+        "copy_relative": "artifacts/references/F0_V0_S1.pt",
+        "checkpoint_val_prediction": {
+          "path": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V0_S1_P0\\selected_val.npz",
+          "sha256": "ad23713cc40fb8e699f6e81d9979b9347c8df7188e2d4d8c0c445e13ba35d311"
+        },
+        "source_selection_prediction": {
+          "path": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V0_S1_P0\\selected_selection.npz",
+          "sha256": "fbd9b543a99f5324e83e46bf590a3d9b0b789bfd8905c5a4268958c49ea27a0c"
+        }
+      },
+      "E0": {
+        "origin": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S1_wd1e3_ERM_EMA\\C1_selected.pt",
+        "sha256": "549d9064775e5544b868850f8871a65c8c53afb52b2b5f9edd9f7d0f221d5272",
+        "copy_relative": "artifacts/references/E0_V0_S1.pt",
+        "checkpoint_val_prediction": {
+          "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S1_wd1e3_ERM_EMA\\C1_selected_val.npz",
+          "sha256": "487f240b2fe13538d898b896d6f29e7ba8ab5c3715029de1bdd450f2314c0e0e"
+        },
+        "source_selection_prediction": {
+          "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S1_wd1e3_ERM_EMA\\C1_selected_selection.npz",
+          "sha256": "1a7f5e562d4e9e804aabdc2b08d36737854f98d18e1391966ad63bc443348900"
+        }
+      }
+    },
+    "V0/S2": {
+      "F0": {
+        "origin": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V0_S2_P0\\selected.pt",
+        "sha256": "ef8a352510c0b6f9565b63539c5b26df2e186ac30aac002f5e742eace710fc0e",
+        "copy_relative": "artifacts/references/F0_V0_S2.pt",
+        "checkpoint_val_prediction": {
+          "path": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V0_S2_P0\\selected_val.npz",
+          "sha256": "ae8ad70062ea4e8d22cc0368be34ef6b02f0fcc216222528f97fd3578bad16e7"
+        },
+        "source_selection_prediction": {
+          "path": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V0_S2_P0\\selected_selection.npz",
+          "sha256": "b3c53195427040ee62dbe2a39bdb2c9179d2ccb52597dc83fbe15ae96adb8a52"
+        }
+      },
+      "E0": {
+        "origin": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S2_wd1e3_ERM_EMA\\C1_selected.pt",
+        "sha256": "a29c82a4ac77fc34ad1504527090c8b59a01f7e6002f11cce80b2ab7546bc82c",
+        "copy_relative": "artifacts/references/E0_V0_S2.pt",
+        "checkpoint_val_prediction": {
+          "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S2_wd1e3_ERM_EMA\\C1_selected_val.npz",
+          "sha256": "33ef61066284e2e539f4d1cbc7ff691d97606e210238b3152696a63d5c8d60a3"
+        },
+        "source_selection_prediction": {
+          "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S2_wd1e3_ERM_EMA\\C1_selected_selection.npz",
+          "sha256": "395b56913f3ed84bd2df1ab10c8c785b810333db45519f82064e3f23ac04f71f"
+        }
+      }
+    },
+    "V1/S0": {
+      "F0": {
+        "origin": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V1_S0_P0\\selected.pt",
+        "sha256": "502ac430467fd8876b23f53af87acccc6b52055e70e3c65fc08ab4bf024ec14a",
+        "copy_relative": "artifacts/references/F0_V1_S0.pt",
+        "checkpoint_val_prediction": {
+          "path": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V1_S0_P0\\selected_val.npz",
+          "sha256": "e8ed54a4306292660f60dbf1a3b79ababbc3a03acebb926cb5ea578d3b21dbe5"
+        },
+        "source_selection_prediction": {
+          "path": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V1_S0_P0\\selected_selection.npz",
+          "sha256": "934a01f0d8f34656d28c8ea7c06c69fea299b33bcfe556fe384db9d49aeb127e"
+        }
+      },
+      "E0": {
+        "origin": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S0_wd1e3_ERM_EMA\\C1_selected.pt",
+        "sha256": "fcf4f9828f4c7f7fc456fa38876818351df04a2201d0f64142d8eb0191b1d657",
+        "copy_relative": "artifacts/references/E0_V1_S0.pt",
+        "checkpoint_val_prediction": {
+          "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S0_wd1e3_ERM_EMA\\C1_selected_val.npz",
+          "sha256": "c6f313c38808c08a52fcec74f94d5519c85a31a6cb2d1433d0aa55d328045d4b"
+        },
+        "source_selection_prediction": {
+          "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S0_wd1e3_ERM_EMA\\C1_selected_selection.npz",
+          "sha256": "90c7edc6ab1dbeefb6b410f9beea61e86e6ccb4f88fc6b671e04316a5e461b9c"
+        }
+      }
+    },
+    "V1/S1": {
+      "F0": {
+        "origin": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V1_S1_P0\\selected.pt",
+        "sha256": "04af85829a6ff271e5fcbed734afab07a3a975a20d235cdfb2077254a21eddf1",
+        "copy_relative": "artifacts/references/F0_V1_S1.pt",
+        "checkpoint_val_prediction": {
+          "path": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V1_S1_P0\\selected_val.npz",
+          "sha256": "0fb76c8a5f0d9b69090227aa033f2651c09aaa03aa010164c11519d0f3c5fdcf"
+        },
+        "source_selection_prediction": {
+          "path": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V1_S1_P0\\selected_selection.npz",
+          "sha256": "7e9b41ca4d1228aebee9962e6df6a8fb18529de30774ffaacfc24ce7539357f2"
+        }
+      },
+      "E0": {
+        "origin": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S1_wd1e3_ERM_EMA\\C1_selected.pt",
+        "sha256": "2f946b7769ada13b01d900e41e33e7933553e8ff97902a858b9b0a5c6cfb3401",
+        "copy_relative": "artifacts/references/E0_V1_S1.pt",
+        "checkpoint_val_prediction": {
+          "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S1_wd1e3_ERM_EMA\\C1_selected_val.npz",
+          "sha256": "b8f707a64e050cb0cb661498e44d2b4ceb4c456c1b1669192a95f9d23dd84fd6"
+        },
+        "source_selection_prediction": {
+          "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S1_wd1e3_ERM_EMA\\C1_selected_selection.npz",
+          "sha256": "0faa781d37f6200fd30fcd8923d4933f2d4c77ee5c5ef84078c281e655096835"
+        }
+      }
+    },
+    "V1/S2": {
+      "F0": {
+        "origin": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V1_S2_P0\\selected.pt",
+        "sha256": "d5383e97769e78db69a3d459cad3d799dcffca3413ac474255ca96e8c5e5c1de",
+        "copy_relative": "artifacts/references/F0_V1_S2.pt",
+        "checkpoint_val_prediction": {
+          "path": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V1_S2_P0\\selected_val.npz",
+          "sha256": "eea71145c88400af686b6909411bbf1a8a94423f1a4a55bd788b21d7b81dc9db"
+        },
+        "source_selection_prediction": {
+          "path": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V1_S2_P0\\selected_selection.npz",
+          "sha256": "b76c9ee709ad7bcb549f63fee8e65d9abc20dada0d148c84475e0459f0756bcc"
+        }
+      },
+      "E0": {
+        "origin": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S2_wd1e3_ERM_EMA\\C1_selected.pt",
+        "sha256": "86bc21004e776b6fdf3a3d5a9286630c1f530c379ec7257b5f7d34d567f04147",
+        "copy_relative": "artifacts/references/E0_V1_S2.pt",
+        "checkpoint_val_prediction": {
+          "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S2_wd1e3_ERM_EMA\\C1_selected_val.npz",
+          "sha256": "feac1a3feb4177140e925f5ee526c485093755420769fdaddac906ab4ea73c86"
+        },
+        "source_selection_prediction": {
+          "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S2_wd1e3_ERM_EMA\\C1_selected_selection.npz",
+          "sha256": "2bc1e91e4e193dde73f00d15006c13dc4b41bdf6954c099794df18a4decfaf5c"
+        }
+      }
+    }
+  },
+  "checkpoints_opened_during_registration": 0,
+  "source_array_reads": 0,
+  "original_seal_sha256": {
+    "P0": "143f1a03160d0f75453a4bb427cd516328886519f4cfac022539180d3aa30a3d",
+    "EMA": "6acd75fa571529adfa8fcd40ac320c8c00210da27cedbd12ad22f4bb1128f02d"
+  }
+}

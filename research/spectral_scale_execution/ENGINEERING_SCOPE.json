@@ -1,0 +1,28 @@
+{
+  "status": "ENGINEERING_ONLY_NO_SCIENTIFIC_EXECUTION_AUTHORIZATION",
+  "design_commit": "21212557782a96382446be0181c648bf7b5678b8",
+  "design_sha256": "feeec49cf65e9c2702a559d31f500252520fd5060b23b563279c19c27e7512e2",
+  "reference_registry_sha256": "6944c0dc4fe2ba54a11e4690da72c4aa078db778f95128ce2d1ae7efae58a4b7",
+  "allowed_now": {
+    "source_checkpoint_files": 12,
+    "restore_checkpoint_copies": true,
+    "synthetic_inputs": true,
+    "synthetic_optimizer_steps": true
+  },
+  "forbidden_now": {
+    "source_IQ": true,
+    "source_metadata_arrays": true,
+    "source_prediction_decoding": true,
+    "scientific_gradient_fits": true,
+    "target_or_new_RX_access": true
+  },
+  "user_scope": "First complete executor engineering and CUDA acceptance; obtain explicit execution authorization before the original12 scientific fits.",
+  "future_scientific_fits": 12,
+  "scientific_fits_authorized": 0,
+  "code_sha256": {
+    "research/spectral_scale_execution/common.py": "494aa1d1113b4122c3e5e82657105e180adbb7c03f6534fda6a56e3c6bba2b0c",
+    "research/spectral_scale_execution/prepare_scope.py": "a3ef4989daabf5936afc865b3eb42045c2bb3e305677c997971c1417130a6905",
+    "research/spectral_scale_execution/recover.py": "ff2878e4a87e664882dd5c64e72e75a6f40655ded981683acb3435a45fa067d5"
+  },
+  "base_commit": "21212557782a96382446be0181c648bf7b5678b8"
+}
