@@ -1,0 +1,294 @@
+{
+  "status": "STAGE_B_COMPLETE_COMPOSITION_CHURN_AND_LOCAL_RISK_VERIFIED_GLOBAL_EFFECT_STREAM_DEPENDENT",
+  "primary_endpoint": "selected",
+  "auxiliary_endpoint": "epoch10",
+  "composition_direction": "composition1 minus composition0",
+  "selected_held_disagreement_by_stream": {
+    "S00": 0.12425000000000001,
+    "S11": 0.12649999999999997
+  },
+  "selected_held_composition_effects": {
+    "accuracy": {
+      "streams": {
+        "S00": {
+          "estimate": 0.006666666666666654,
+          "paired_rx_bootstrap_95_interval": [
+            -0.02266666666666667,
+            0.033999999999999975
+          ],
+          "per_rx": {
+            "1-1": 0.05899999999999994,
+            "1-19": 0.019500000000000073,
+            "1-20": -0.006000000000000005,
+            "2-1": -0.05149999999999999,
+            "2-19": 0.03049999999999997,
+            "3-19": -0.011500000000000066
+          }
+        },
+        "S11": {
+          "estimate": -0.020916666666666656,
+          "paired_rx_bootstrap_95_interval": [
+            -0.041166666666666664,
+            -0.0029166666666666416
+          ],
+          "per_rx": {
+            "1-1": 0.006500000000000061,
+            "1-19": -0.006000000000000005,
+            "1-20": -0.012499999999999956,
+            "2-1": -0.04700000000000004,
+            "2-19": -0.006000000000000005,
+            "3-19": -0.0605
+          }
+        }
+      },
+      "average": {
+        "estimate": -0.007125000000000002,
+        "paired_rx_bootstrap_95_interval": [
+          -0.030125000000000013,
+          0.014583333333333337
+        ],
+        "per_rx": {
+          "1-1": 0.03275,
+          "1-19": 0.006750000000000034,
+          "1-20": -0.00924999999999998,
+          "2-1": -0.049250000000000016,
+          "2-19": 0.012249999999999983,
+          "3-19": -0.03600000000000003
+        },
+        "positive_rx": 3,
+        "negative_rx": 3,
+        "zero_rx": 0
+      },
+      "between_stream_difference": {
+        "estimate": -0.02758333333333331,
+        "paired_rx_bootstrap_95_interval": [
+          -0.043916666666666604,
+          -0.010499999999999973
+        ]
+      },
+      "same_direction": false,
+      "practical_scale": 0.01,
+      "both_streams_and_average_cross_scale": false,
+      "consistent_finite_effect_support": false
+    },
+    "macro_f1": {
+      "streams": {
+        "S00": {
+          "estimate": 0.010433159875699335,
+          "paired_rx_bootstrap_95_interval": [
+            -0.02436195641968475,
+            0.04191254322374183
+          ],
+          "per_rx": {
+            "1-1": 0.059042250714399835,
+            "1-19": 0.032624992090650395,
+            "1-20": -0.00591318890688286,
+            "2-1": -0.058551727483627136,
+            "2-19": 0.04899706253699776,
+            "3-19": -0.013600429697341987
+          }
+        },
+        "S11": {
+          "estimate": -0.02680956052159252,
+          "paired_rx_bootstrap_95_interval": [
+            -0.04970933155137189,
+            -0.0048048996327482345
+          ],
+          "per_rx": {
+            "1-1": 0.007470651919976645,
+            "1-19": -0.01052466020003251,
+            "1-20": -0.012095009716585947,
+            "2-1": -0.07027590149774865,
+            "2-19": -0.010626371519791733,
+            "3-19": -0.06480607211537293
+          }
+        }
+      },
+      "average": {
+        "estimate": -0.008188200322946593,
+        "paired_rx_bootstrap_95_interval": [
+          -0.037043908030258754,
+          0.017821610047526176
+        ],
+        "per_rx": {
+          "1-1": 0.03325645131718824,
+          "1-19": 0.011050165945308943,
+          "1-20": -0.009004099311734404,
+          "2-1": -0.06441381449068789,
+          "2-19": 0.019185345508603013,
+          "3-19": -0.039203250906357456
+        },
+        "positive_rx": 3,
+        "negative_rx": 3,
+        "zero_rx": 0
+      },
+      "between_stream_difference": {
+        "estimate": -0.03724272039729185,
+        "paired_rx_bootstrap_95_interval": [
+          -0.05279089340185653,
+          -0.0203518823715025
+        ]
+      },
+      "same_direction": false,
+      "practical_scale": 0.01,
+      "both_streams_and_average_cross_scale": false,
+      "consistent_finite_effect_support": false
+    },
+    "ce": {
+      "streams": {
+        "S00": {
+          "estimate": -0.05240611023976658,
+          "paired_rx_bootstrap_95_interval": [
+            -0.19816068149772925,
+            0.1019893480228805
+          ],
+          "per_rx": {
+            "1-1": -0.15732909040353737,
+            "1-19": -0.1452377787734912,
+            "1-20": 0.04123825599879605,
+            "2-1": 0.2362353758764087,
+            "2-19": -0.3178378363302124,
+            "3-19": 0.028494412193436763
+          }
+        },
+        "S11": {
+          "estimate": 0.0442295350624142,
+          "paired_rx_bootstrap_95_interval": [
+            -0.044543078470538976,
+            0.13300214859536738
+          ],
+          "per_rx": {
+            "1-1": -0.13123293231627117,
+            "1-19": -0.040198246920547354,
+            "1-20": 0.07534693812380797,
+            "2-1": 0.17576607968609803,
+            "2-19": 0.0002569495265952737,
+            "3-19": 0.18543842227480245
+          }
+        }
+      },
+      "average": {
+        "estimate": -0.004088287588676194,
+        "paired_rx_bootstrap_95_interval": [
+          -0.10917962622517456,
+          0.10697822743655745
+        ],
+        "per_rx": {
+          "1-1": -0.1442810113599043,
+          "1-19": -0.09271801284701928,
+          "1-20": 0.05829259706130201,
+          "2-1": 0.20600072778125336,
+          "2-19": -0.15879044340180856,
+          "3-19": 0.1069664172341196
+        },
+        "positive_rx": 3,
+        "negative_rx": 3,
+        "zero_rx": 0
+      },
+      "between_stream_difference": {
+        "estimate": 0.09663564530218077,
+        "paired_rx_bootstrap_95_interval": [
+          0.007292247626742923,
+          0.19523886797734447
+        ]
+      },
+      "same_direction": false,
+      "practical_scale": 0.05,
+      "both_streams_and_average_cross_scale": false,
+      "consistent_finite_effect_support": false
+    }
+  },
+  "selected_held_local_risk_screen": {
+    "minimum_support": 50,
+    "practical_scale": 0.05,
+    "total_groups": 60,
+    "repeated_local_groups": 8,
+    "composition1_lower_risk": 4,
+    "composition1_higher_risk": 4,
+    "no_groupwise_population_significance_claim": true
+  },
+  "auxiliary_held_accuracy_effect": {
+    "streams": {
+      "S00": {
+        "estimate": 0.024583333333333308,
+        "paired_rx_bootstrap_95_interval": [
+          -0.00491666666666668,
+          0.05549999999999996
+        ],
+        "per_rx": {
+          "1-1": 0.06399999999999995,
+          "1-19": 0.08299999999999996,
+          "1-20": -0.012499999999999956,
+          "2-1": -0.01750000000000007,
+          "2-19": 0.01100000000000001,
+          "3-19": 0.019499999999999962
+        }
+      },
+      "S11": {
+        "estimate": 0.01191666666666665,
+        "paired_rx_bootstrap_95_interval": [
+          -0.025345833333333345,
+          0.05275
+        ],
+        "per_rx": {
+          "1-1": 0.04049999999999998,
+          "1-19": 0.09850000000000003,
+          "1-20": -0.0030000000000000027,
+          "2-1": -0.02300000000000002,
+          "2-19": 0.01849999999999996,
+          "3-19": -0.06000000000000005
+        }
+      }
+    },
+    "average": {
+      "estimate": 0.018249999999999978,
+      "paired_rx_bootstrap_95_interval": [
+        -0.012333333333333363,
+        0.05316666666666665
+      ],
+      "per_rx": {
+        "1-1": 0.05224999999999996,
+        "1-19": 0.09075,
+        "1-20": -0.007749999999999979,
+        "2-1": -0.020250000000000046,
+        "2-19": 0.014749999999999985,
+        "3-19": -0.020250000000000046
+      },
+      "positive_rx": 3,
+      "negative_rx": 3,
+      "zero_rx": 0
+    },
+    "between_stream_difference": {
+      "estimate": -0.01266666666666666,
+      "paired_rx_bootstrap_95_interval": [
+        -0.04083333333333335,
+        0.008666666666666675
+      ]
+    },
+    "same_direction": true,
+    "practical_scale": 0.01,
+    "both_streams_and_average_cross_scale": true,
+    "consistent_finite_effect_support": false
+  },
+  "small_or_zero_composition_effect_proven": false,
+  "population_RX_effect_identified": false,
+  "initialization_vs_composition_importance_ranked": false,
+  "physical_receiver_hardware_effect_identified": false,
+  "credible_environment_transform_family_identified": false,
+  "ASKNet_case_explained": false,
+  "new_generalization_algorithm_validated": false,
+  "new_receiver_confirmation": false,
+  "attribution_training_line_closed": true,
+  "additional_attribution_fits": 0,
+  "next_focus": "Strong standard training/model-selection and source-environment coverage controls before selecting one new mechanism; separate protocol required.",
+  "next_method_training_started": false,
+  "BN_diagnostic_started": false,
+  "Jacobian_loss_training_admitted": false,
+  "critical_limits": [
+    "Only two fixed paired streams and two rule-selected RX collections",
+    "S00/S11 jointly change initialization and order; between-stream contrast cannot isolate either",
+    "Adaptive checkpoint/LR/stopping differences may mediate composition changes",
+    "Six historical exploratory held RX; bootstrap conditional, not a receiver-population guarantee",
+    "A has18fitRX and B12fitRX; do not subtract absolute performance or rank factors by A/B disagreement magnitudes"
+  ]
+}

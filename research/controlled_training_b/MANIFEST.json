@@ -1,0 +1,30 @@
+{
+  "status": "STAGE_B_COMPLETE",
+  "files_sha256": {
+    ".gitignore": "9484d938c42f9450ecd2836d12996cfc8342af6805548aed4459455cd12c3094",
+    "ACCESS_LOG.jsonl": "cbf060c92118ace30907f50261addb5cb4b52a3daa01a3fb27c8bbfa2f2c2e44",
+    "ANALYSIS.json.gz": "c276e7e7a8383d808ea0cb25bc239cda1c563d7ad71eb9bcd0fafea5523662ca",
+    "analyze.py": "0a3792897aec6b6349008bc20443731d02ec76b32a55529674d838660c636020",
+    "ARTIFACT_ARCHIVE.json": "5fcd49b5c1819de00959924ff0e169d364ea056ea51344a619f0801a462a23bd",
+    "DECISION.json": "f0bd9ad5908ef7738c7af484a538fafa65e176a7109f23165f05fdf5c6671eec",
+    "EVALUATION_MANIFEST.json": "47b5e7dec661aede63bc2b1cad5039d7e297a58a4ed28ef221293fef6b237bea",
+    "EXECUTION.json": "8c93e3dba4747eb63d2c0aa0b468bcf3a47d68bc32dcca7226769e49230ec09f",
+    "HELD_EVALUATION.json": "ee48bee92727122f39466d0381c12979e1ca9aaf92c0f09cdb107b31ce45613e",
+    "HELD_EVALUATION_ATTEMPT.json": "a5dc48f1e9108e0218992bd0b9f51e83fe0c368d9866b576246900dd82d2816b",
+    "LOCAL_RISK.zh-CN.md": "1dd88abb9075b04d089f312dbec37dfab72fe9d77ff816ae64ab5bf57dd65665",
+    "PANEL_PREFLIGHT.json": "b9fa94b5c486ddcc6ec6e023755f39a2ca4cf7e5eaecd7c233c628bdb2f3d950",
+    "PRE_REGISTRATION.json": "add8a916719f75eebc2703bd424ef76ffdb06de55efc3ba08fca135a2e065b6b",
+    "prepare_registration.py": "93b60c742dd1929a4268d15fda1fa42b0cf833acf273ebe70bd22ee3883fceca",
+    "PREREGISTRATION.zh-CN.md": "19428f21999a49c1d628e3f922765881b779519dcfa85c7ebd3d0aba3dd3a6ba",
+    "QA_REPORT.json": "ab0f6348fd913495f7bf03db3546ced627ea6ccf0f962c0b9c8a4254ebd2d246",
+    "README.zh-CN.md": "b047251e5260ff9540e329e98f663168e23034410d2517bed5d7e89fb5f26225",
+    "RESULTS.zh-CN.md": "57bfe0e1b1452bba4b2d1b4117f3b54bdd9db798d0794bf8a2de31654cd0409a",
+    "RUN_EVIDENCE.json": "cdd41df264d8a1d9a59f2208a4e02bbde55366a4bdd532ce69d504aa0da08473",
+    "runner.py": "e23662dd9af3d9bc006ac67808047a78bf3298d412ffc3282d56225c8b78daaa",
+    "STAGE_B_SEAL.json": "b1554f2c0ccb98d43e13f31622e8e3f84bf77305c8703339d66f9772605c40ac",
+    "verify.py": "8a1d82a80e2c8c28dcfb9b0a7cee30d29d202a5c25542bc678dcb52ec75558b5"
+  },
+  "registered_code_files_unchanged": 69,
+  "historical_A_and_audit_artifacts_changed": false,
+  "local_artifacts": "COMPLETE records pin every ignored per-epoch checkpoint/order; seal pins run records; EVALUATION_MANIFEST pins16 raw prediction files; full diagnostics hashes included in analysis archive."
+}
