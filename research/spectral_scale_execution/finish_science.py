@@ -210,7 +210,7 @@ def report():
         '| 侧路 | 新增拟合 / 更新 | 训练循环 / s | 验证 / s | 合成回退探针 / s | 各拟合 wall 总和 / s | 峰值已分配显存 / GiB |',
         '|---|---:|---:|---:|---:|---:|---:|']
     for arm,c in costs['arms'].items():lines.append(f"| {arm} | {c['fits']} / {c['updates']:,} | {c['training_loop_seconds']:.2f} | {c['validation_seconds']:.2f} | {c['rollback_probe_seconds']:.2f} | {c['per_fit_wall_seconds_sum']:.2f} | {c['peak_cuda_allocated_gib']:.3f} |")
-    lines+=['',f"整个 train-all 调用 wall 为 {costs['invocation']['elapsed_wall_seconds']:.2f} s，包含逐阶段 SHA/提交验证与日志、封存开销；训练循环计时为 wall，不能称为纯 GPU kernel 时间。两臂复用同六个历史 P0，不把其预训练成本当零，也不在两臂间重复计作新增拟合。历史 P0 与 EMA/BN 完整配方的已用训练成本在 [COSTS.json](COSTS.json) 分列。",'',
+    lines+=['',f"整个 train-all 调用 wall 为 {costs['invocation']['elapsed_wall_seconds']:.2f} s，包含逐阶段 SHA/提交验证与日志、封存开销；训练循环计时为 wall，不能称为纯 GPU kernel 时间。显存读数是同一进程的累计峰值，未逐拟合 reset，不能比较各臂独立显存峰值。两臂复用同六个历史 P0，不把其预训练成本当零，也不在两臂间重复计作新增拟合。历史 P0 与 EMA/BN 完整配方的已用训练成本在 [COSTS.json](COSTS.json) 分列。",'',
         '| 模型 | B=1 batch p50 / ms | B=128 batch p50 / ms | B=128 samples/s |','|---|---:|---:|---:|']
     for arm in ARMS:
         r=latency['records'][arm];lines.append(f"| {arm} | {np.median([x['p50_ms'] for x in r['1']]):.4f} | {np.median([x['p50_ms'] for x in r['128']]):.4f} | {np.median([x['samples_per_second'] for x in r['128']]):,.1f} |")

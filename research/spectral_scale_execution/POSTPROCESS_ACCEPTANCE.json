@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "fixture": "Four synthetic labels [0,0,1,9], predictions [0,1,1,0], ten fixed classes with absent classes",
+  "accuracy": 0.5,
+  "macro_f1": 0.11666666666666667,
+  "checked_against_frozen_metrics": true,
+  "optimizer_updates": 0,
+  "source_IQ_reads": 0,
+  "scope": "Independent reporting metric arithmetic only; no additional fitting"
+}
