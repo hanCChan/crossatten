@@ -1,0 +1,2073 @@
+{
+  "status": "COMPLETE",
+  "scope": "selected deployment readouts; CUDA-resident input; whole model RF frontend included; no host copy/disk I/O",
+  "environment": {
+    "torch_version": "2.5.0+cu124",
+    "numpy_version": "1.26.4",
+    "python_version": "3.11.8 (tags/v3.11.8:db85d51, Feb  6 2024, 22:03:32) [MSC v.1937 64 bit (AMD64)]",
+    "cuda_version": "12.4",
+    "cudnn_version": 90100,
+    "device_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "device_capability": [
+      8,
+      9
+    ]
+  },
+  "warmup_per_batch_round": 100,
+  "rounds": 3,
+  "readouts": {
+    "V0_S0_wd0_ERM_EMA/C0": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.4939359426498413,
+            "p95_ms": 5.079461002349853,
+            "mean_ms": 2.7360853753089907,
+            "throughput_samples_per_second": 365.485671252882,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.50271999835968,
+            "p95_ms": 5.110843229293822,
+            "mean_ms": 2.8970511325597763,
+            "throughput_samples_per_second": 345.17858133778265,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.571328043937683,
+            "p95_ms": 5.168139219284058,
+            "mean_ms": 2.8875689964294433,
+            "throughput_samples_per_second": 346.3120712393459,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.652127981185913,
+            "p95_ms": 5.2874161958694454,
+            "mean_ms": 3.0154604840278627,
+            "throughput_samples_per_second": 42447.91158033205,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.6107200384140015,
+            "p95_ms": 4.604708766937254,
+            "mean_ms": 2.841980482339859,
+            "throughput_samples_per_second": 45039.01444622697,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.452895998954773,
+            "p95_ms": 4.485188817977904,
+            "mean_ms": 2.6921934413909914,
+            "throughput_samples_per_second": 47544.8747597667,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V0_S0_wd0_ERM_EMA/C1": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.473855972290039,
+            "p95_ms": 4.966004896163939,
+            "mean_ms": 2.787566239237785,
+            "throughput_samples_per_second": 358.7358699944055,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.4708800315856934,
+            "p95_ms": 5.224121761322021,
+            "mean_ms": 2.949147999763489,
+            "throughput_samples_per_second": 339.08098205997,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.5024319887161255,
+            "p95_ms": 5.065185594558716,
+            "mean_ms": 2.906558497548103,
+            "throughput_samples_per_second": 344.0495007561602,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.628607988357544,
+            "p95_ms": 4.715975975990294,
+            "mean_ms": 2.89718352496624,
+            "throughput_samples_per_second": 44180.83939003883,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.844032049179077,
+            "p95_ms": 5.80428159236908,
+            "mean_ms": 3.36946288049221,
+            "throughput_samples_per_second": 37988.25051347703,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.8048800230026245,
+            "p95_ms": 5.372118616104125,
+            "mean_ms": 3.169948800802231,
+            "throughput_samples_per_second": 40379.20106709817,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V0_S0_wd0_RX_GDRO/C2": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.5153920650482178,
+            "p95_ms": 4.970457553863524,
+            "mean_ms": 2.8131741112470627,
+            "throughput_samples_per_second": 355.47035499935913,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.596224069595337,
+            "p95_ms": 5.268334460258483,
+            "mean_ms": 3.0849559108018876,
+            "throughput_samples_per_second": 324.1537412248025,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.598431944847107,
+            "p95_ms": 5.257353568077087,
+            "mean_ms": 2.9891355856657027,
+            "throughput_samples_per_second": 334.5448780562065,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.680848002433777,
+            "p95_ms": 5.787609720230102,
+            "mean_ms": 3.177603052854538,
+            "throughput_samples_per_second": 40281.93511616049,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.5193599462509155,
+            "p95_ms": 5.487926340103149,
+            "mean_ms": 2.95583360016346,
+            "throughput_samples_per_second": 43304.196823840655,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.513904094696045,
+            "p95_ms": 5.200332593917846,
+            "mean_ms": 2.90005728662014,
+            "throughput_samples_per_second": 44137.05915070977,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V0_S0_wd1e3_ERM_EMA/C0": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.5917439460754395,
+            "p95_ms": 5.279440188407898,
+            "mean_ms": 3.102350335717201,
+            "throughput_samples_per_second": 322.3362585737178,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.4365921020507812,
+            "p95_ms": 5.059820747375488,
+            "mean_ms": 2.846911493182182,
+            "throughput_samples_per_second": 351.25784640471335,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.4417760372161865,
+            "p95_ms": 5.1734126329422,
+            "mean_ms": 2.938339200139046,
+            "throughput_samples_per_second": 340.3283051707164,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.662832021713257,
+            "p95_ms": 5.365811061859131,
+            "mean_ms": 3.0311193579435347,
+            "throughput_samples_per_second": 42228.62411028304,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.7040159702301025,
+            "p95_ms": 5.448465585708616,
+            "mean_ms": 3.1300012838840483,
+            "throughput_samples_per_second": 40894.551915698765,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.4110080003738403,
+            "p95_ms": 4.861672163009643,
+            "mean_ms": 2.8244443172216416,
+            "throughput_samples_per_second": 45318.64877616403,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V0_S0_wd1e3_ERM_EMA/C1": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.525488018989563,
+            "p95_ms": 5.054076600074768,
+            "mean_ms": 2.9277243522405625,
+            "throughput_samples_per_second": 341.56220999244977,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.517952084541321,
+            "p95_ms": 5.060719919204712,
+            "mean_ms": 2.9212182052135467,
+            "throughput_samples_per_second": 342.3229384971254,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.48470401763916,
+            "p95_ms": 5.1727552652358995,
+            "mean_ms": 2.9113328338861466,
+            "throughput_samples_per_second": 343.4852890609439,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.483712077140808,
+            "p95_ms": 4.465655827522275,
+            "mean_ms": 2.682854559421539,
+            "throughput_samples_per_second": 47710.37608076622,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.6949920654296875,
+            "p95_ms": 5.42284939289093,
+            "mean_ms": 3.174066727757454,
+            "throughput_samples_per_second": 40326.81445560999,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.503167986869812,
+            "p95_ms": 5.457582283020019,
+            "mean_ms": 2.946864000558853,
+            "throughput_samples_per_second": 43436.00518236527,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V0_S0_wd1e3_RX_GDRO/C2": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.477936029434204,
+            "p95_ms": 5.092864131927489,
+            "mean_ms": 2.870556640148163,
+            "throughput_samples_per_second": 348.3644900134718,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.4858239889144897,
+            "p95_ms": 5.136224150657654,
+            "mean_ms": 2.973215902507305,
+            "throughput_samples_per_second": 336.3361534413638,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.440351963043213,
+            "p95_ms": 5.068083381652832,
+            "mean_ms": 2.8340126427412033,
+            "throughput_samples_per_second": 352.85657689683006,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.5185279846191406,
+            "p95_ms": 5.262540578842162,
+            "mean_ms": 2.9583465534448625,
+            "throughput_samples_per_second": 43267.41228168475,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.6937440633773804,
+            "p95_ms": 5.370310425758362,
+            "mean_ms": 3.1861384105682373,
+            "throughput_samples_per_second": 40174.02369446079,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.4898558855056763,
+            "p95_ms": 5.106807780265807,
+            "mean_ms": 2.900994075536728,
+            "throughput_samples_per_second": 44122.80641294245,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V0_S1_wd0_ERM_EMA/C0": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.4795680046081543,
+            "p95_ms": 5.302566313743592,
+            "mean_ms": 3.003421437740326,
+            "throughput_samples_per_second": 332.9536066548045,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.46670401096344,
+            "p95_ms": 4.970094323158263,
+            "mean_ms": 2.809569917201996,
+            "throughput_samples_per_second": 355.9263622084491,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.4370559453964233,
+            "p95_ms": 4.625695919990539,
+            "mean_ms": 2.7054207359552382,
+            "throughput_samples_per_second": 369.62827508118323,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.4627199172973633,
+            "p95_ms": 4.879403400421142,
+            "mean_ms": 2.885368641614914,
+            "throughput_samples_per_second": 44361.749189995906,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.624511957168579,
+            "p95_ms": 5.43739218711853,
+            "mean_ms": 3.0692377692461013,
+            "throughput_samples_per_second": 41704.16553665724,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.5681920051574707,
+            "p95_ms": 5.333088111877438,
+            "mean_ms": 3.023441589474678,
+            "throughput_samples_per_second": 42335.860049553645,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V0_S1_wd0_ERM_EMA/C1": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.4698879718780518,
+            "p95_ms": 5.087393760681152,
+            "mean_ms": 2.8565704921483994,
+            "throughput_samples_per_second": 350.07012876055774,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.4202240705490112,
+            "p95_ms": 5.143110466003417,
+            "mean_ms": 2.830132255315781,
+            "throughput_samples_per_second": 353.3403776879049,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.407423973083496,
+            "p95_ms": 4.7491330146789545,
+            "mean_ms": 2.720067780613899,
+            "throughput_samples_per_second": 367.63789752853415,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.708656072616577,
+            "p95_ms": 5.468416118621825,
+            "mean_ms": 3.1064187228679656,
+            "throughput_samples_per_second": 41205.00531938124,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.5282559394836426,
+            "p95_ms": 5.4171073198318425,
+            "mean_ms": 2.990860154032707,
+            "throughput_samples_per_second": 42797.05282355379,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.502016067504883,
+            "p95_ms": 4.506060767173767,
+            "mean_ms": 2.7426598465442655,
+            "throughput_samples_per_second": 46670.02368568571,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V0_S1_wd0_RX_GDRO/C2": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.5239840745925903,
+            "p95_ms": 5.205318474769592,
+            "mean_ms": 2.970435196876526,
+            "throughput_samples_per_second": 336.65100691357304,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.5297919511795044,
+            "p95_ms": 5.209326243400573,
+            "mean_ms": 2.8624568946361544,
+            "throughput_samples_per_second": 349.3502389062559,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.56659197807312,
+            "p95_ms": 4.768307018280026,
+            "mean_ms": 2.7940842883586883,
+            "throughput_samples_per_second": 357.8990097637405,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.7673600912094116,
+            "p95_ms": 5.492955279350281,
+            "mean_ms": 3.1132889592647555,
+            "throughput_samples_per_second": 41114.0763593717,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.5191999673843384,
+            "p95_ms": 5.449985480308532,
+            "mean_ms": 2.9827177649736405,
+            "throughput_samples_per_second": 42913.882601671896,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.575424075126648,
+            "p95_ms": 4.799803256988525,
+            "mean_ms": 2.878334231376648,
+            "throughput_samples_per_second": 44470.16562728375,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V0_S1_wd1e3_ERM_EMA/C0": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.512943983078003,
+            "p95_ms": 4.966127896308898,
+            "mean_ms": 2.8084851474761963,
+            "throughput_samples_per_second": 356.06383779477534,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.4821760654449463,
+            "p95_ms": 4.980134177207946,
+            "mean_ms": 2.803582627773285,
+            "throughput_samples_per_second": 356.68647326233406,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.4401919841766357,
+            "p95_ms": 5.049700617790222,
+            "mean_ms": 2.7662908824682235,
+            "throughput_samples_per_second": 361.49488339698746,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.4796160459518433,
+            "p95_ms": 4.73153760433197,
+            "mean_ms": 2.681739515066147,
+            "throughput_samples_per_second": 47730.21364710837,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.5605119466781616,
+            "p95_ms": 5.328416109085083,
+            "mean_ms": 2.9899582308530808,
+            "throughput_samples_per_second": 42809.962587162845,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.568560004234314,
+            "p95_ms": 4.892324995994567,
+            "mean_ms": 2.84199743270874,
+            "throughput_samples_per_second": 45038.74582251179,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V0_S1_wd1e3_ERM_EMA/C1": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.451184034347534,
+            "p95_ms": 5.002108812332153,
+            "mean_ms": 2.7657110785245895,
+            "throughput_samples_per_second": 361.57066722004276,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.5041279792785645,
+            "p95_ms": 5.130495953559875,
+            "mean_ms": 2.884132095456123,
+            "throughput_samples_per_second": 346.72475701632203,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.464751958847046,
+            "p95_ms": 4.880903959274291,
+            "mean_ms": 2.7325138276815415,
+            "throughput_samples_per_second": 365.96338136318633,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.402975916862488,
+            "p95_ms": 5.35189938545227,
+            "mean_ms": 2.7645534366369247,
+            "throughput_samples_per_second": 46300.42534309332,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.469375967979431,
+            "p95_ms": 4.9686017513275145,
+            "mean_ms": 2.976505284905434,
+            "throughput_samples_per_second": 43003.45127862478,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.5497599840164185,
+            "p95_ms": 4.931718230247496,
+            "mean_ms": 2.8551219230890275,
+            "throughput_samples_per_second": 44831.71067577864,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V0_S1_wd1e3_RX_GDRO/C2": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.4417920112609863,
+            "p95_ms": 5.088380646705626,
+            "mean_ms": 2.807323166489601,
+            "throughput_samples_per_second": 356.21121641312266,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.6302239894866943,
+            "p95_ms": 5.241899299621582,
+            "mean_ms": 3.068239199757576,
+            "throughput_samples_per_second": 325.9198305265805,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.4391679763793945,
+            "p95_ms": 5.158297538757324,
+            "mean_ms": 2.862677824854851,
+            "throughput_samples_per_second": 349.32327742843506,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.5489760637283325,
+            "p95_ms": 5.284710550308226,
+            "mean_ms": 2.966887366771698,
+            "throughput_samples_per_second": 43142.85787642763,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.5071840286254883,
+            "p95_ms": 4.7492736816406245,
+            "mean_ms": 2.760105921626091,
+            "throughput_samples_per_second": 46375.03184102079,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.5308159589767456,
+            "p95_ms": 5.451870322227478,
+            "mean_ms": 2.8817120039463044,
+            "throughput_samples_per_second": 44418.0403262758,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V0_S2_wd0_ERM_EMA/C0": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.426959991455078,
+            "p95_ms": 4.439665460586547,
+            "mean_ms": 2.629157183051109,
+            "throughput_samples_per_second": 380.35002488497497,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.4381439685821533,
+            "p95_ms": 5.102866983413696,
+            "mean_ms": 2.8379920330047606,
+            "throughput_samples_per_second": 352.36180664722906,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.417680025100708,
+            "p95_ms": 4.899481701850891,
+            "mean_ms": 2.754846882879734,
+            "throughput_samples_per_second": 362.996581122021,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.599695920944214,
+            "p95_ms": 5.313070440292358,
+            "mean_ms": 2.9529028689861296,
+            "throughput_samples_per_second": 43347.175873735534,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.5656319856643677,
+            "p95_ms": 5.476515007019039,
+            "mean_ms": 3.0047747123241426,
+            "throughput_samples_per_second": 42598.86755403175,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.5644479990005493,
+            "p95_ms": 6.246004629135129,
+            "mean_ms": 3.158415673971176,
+            "throughput_samples_per_second": 40526.64791872108,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V0_S2_wd0_ERM_EMA/C1": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.500607967376709,
+            "p95_ms": 5.040150451660156,
+            "mean_ms": 2.802910945057869,
+            "throughput_samples_per_second": 356.7719487353723,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.4778239727020264,
+            "p95_ms": 5.16090087890625,
+            "mean_ms": 2.845745794177055,
+            "throughput_samples_per_second": 351.4017316817942,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.449087977409363,
+            "p95_ms": 5.062911939620972,
+            "mean_ms": 2.8195537251234053,
+            "throughput_samples_per_second": 354.6660562235722,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.6500959396362305,
+            "p95_ms": 5.366772627830503,
+            "mean_ms": 2.994379993677139,
+            "throughput_samples_per_second": 42746.74566029753,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.6076159477233887,
+            "p95_ms": 5.414347052574152,
+            "mean_ms": 3.0746897691488266,
+            "throughput_samples_per_second": 41630.21625282037,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.4570239782333374,
+            "p95_ms": 4.7100416898727415,
+            "mean_ms": 2.7560824012756346,
+            "throughput_samples_per_second": 46442.73333074368,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V0_S2_wd0_RX_GDRO/C2": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.449519991874695,
+            "p95_ms": 4.891955018043516,
+            "mean_ms": 2.8049041554927827,
+            "throughput_samples_per_second": 356.5184207958485,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.4509440660476685,
+            "p95_ms": 5.0002625465393065,
+            "mean_ms": 2.8296266865730284,
+            "throughput_samples_per_second": 353.4035089311035,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.4526560306549072,
+            "p95_ms": 5.0128909826278685,
+            "mean_ms": 2.8223080968856813,
+            "throughput_samples_per_second": 354.3199274039093,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.4949119091033936,
+            "p95_ms": 5.105152201652525,
+            "mean_ms": 2.778862397670746,
+            "throughput_samples_per_second": 46062.01448020245,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.4916160106658936,
+            "p95_ms": 5.122201728820801,
+            "mean_ms": 2.8709966421127318,
+            "throughput_samples_per_second": 44583.820866403505,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.587135910987854,
+            "p95_ms": 4.867481684684752,
+            "mean_ms": 3.015833927989006,
+            "throughput_samples_per_second": 42442.655350505964,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V0_S2_wd1e3_ERM_EMA/C0": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.4417279958724976,
+            "p95_ms": 5.22136480808258,
+            "mean_ms": 2.8632808960676193,
+            "throughput_samples_per_second": 349.2497021069022,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.4867841005325317,
+            "p95_ms": 5.114358258247375,
+            "mean_ms": 2.9423760634660723,
+            "throughput_samples_per_second": 339.8613835996259,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.3976958990097046,
+            "p95_ms": 5.031331038475036,
+            "mean_ms": 2.74596719789505,
+            "throughput_samples_per_second": 364.1704098892953,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.431999921798706,
+            "p95_ms": 4.379123377799988,
+            "mean_ms": 2.656790397763252,
+            "throughput_samples_per_second": 48178.43368741584,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.6771841049194336,
+            "p95_ms": 5.49843029975891,
+            "mean_ms": 3.122999528646469,
+            "throughput_samples_per_second": 40986.23737400183,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.484895944595337,
+            "p95_ms": 5.517158222198486,
+            "mean_ms": 2.918009278178215,
+            "throughput_samples_per_second": 43865.52193552775,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V0_S2_wd1e3_ERM_EMA/C1": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.4285119771957397,
+            "p95_ms": 4.849305558204648,
+            "mean_ms": 2.780811200380325,
+            "throughput_samples_per_second": 359.6072972747061,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.380288004875183,
+            "p95_ms": 5.074014186859131,
+            "mean_ms": 2.8327347835302352,
+            "throughput_samples_per_second": 353.0157520619602,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.314751982688904,
+            "p95_ms": 4.771327853202819,
+            "mean_ms": 2.715705470561981,
+            "throughput_samples_per_second": 368.2284440783126,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.6909759044647217,
+            "p95_ms": 5.2892159700393675,
+            "mean_ms": 3.1239283245801928,
+            "throughput_samples_per_second": 40974.0514828237,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.4959839582443237,
+            "p95_ms": 6.125465726852417,
+            "mean_ms": 3.0682486474514006,
+            "throughput_samples_per_second": 41717.609850923094,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.730496048927307,
+            "p95_ms": 5.551265716552734,
+            "mean_ms": 3.1188071930408476,
+            "throughput_samples_per_second": 41041.33153393159,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V0_S2_wd1e3_RX_GDRO/C2": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.3951361179351807,
+            "p95_ms": 4.670924830436705,
+            "mean_ms": 2.6915178555250168,
+            "throughput_samples_per_second": 371.53756864263363,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.42084801197052,
+            "p95_ms": 4.979137682914733,
+            "mean_ms": 2.78184527862072,
+            "throughput_samples_per_second": 359.4736226652457,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.454016089439392,
+            "p95_ms": 5.134801387786864,
+            "mean_ms": 2.8835017925500868,
+            "throughput_samples_per_second": 346.8005473704348,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.480128049850464,
+            "p95_ms": 5.445273494720455,
+            "mean_ms": 2.937709917426109,
+            "throughput_samples_per_second": 43571.35442159242,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.5394240617752075,
+            "p95_ms": 5.511809754371642,
+            "mean_ms": 3.089645110964775,
+            "throughput_samples_per_second": 41428.70634097863,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.4124799966812134,
+            "p95_ms": 4.725094342231748,
+            "mean_ms": 2.6939425575733185,
+            "throughput_samples_per_second": 47514.00494422619,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V1_S0_wd0_ERM_EMA/C0": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.446336030960083,
+            "p95_ms": 4.752684831619262,
+            "mean_ms": 2.705591427206993,
+            "throughput_samples_per_second": 369.6049558496381,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.4002559185028076,
+            "p95_ms": 4.8508415699005125,
+            "mean_ms": 2.799569378376007,
+            "throughput_samples_per_second": 357.1977918189999,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.3760160207748413,
+            "p95_ms": 4.508353447914123,
+            "mean_ms": 2.647447806119919,
+            "throughput_samples_per_second": 377.7222718757176,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.477728009223938,
+            "p95_ms": 3.7946544528007506,
+            "mean_ms": 2.5677827203273775,
+            "throughput_samples_per_second": 49848.454461007015,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.4489279985427856,
+            "p95_ms": 5.2541136026382445,
+            "mean_ms": 2.7727096009254457,
+            "throughput_samples_per_second": 46164.22865101975,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.462623953819275,
+            "p95_ms": 5.184921693801878,
+            "mean_ms": 2.907169439792633,
+            "throughput_samples_per_second": 44029.08143156946,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V1_S0_wd0_ERM_EMA/C1": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.5231359004974365,
+            "p95_ms": 4.622358369827269,
+            "mean_ms": 2.7112375651597977,
+            "throughput_samples_per_second": 368.83525547532054,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.4677599668502808,
+            "p95_ms": 5.003932785987853,
+            "mean_ms": 2.829125952959061,
+            "throughput_samples_per_second": 353.4660586440389,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.381216049194336,
+            "p95_ms": 5.105663776397705,
+            "mean_ms": 2.791159137368202,
+            "throughput_samples_per_second": 358.2740900050955,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.6086560487747192,
+            "p95_ms": 5.464860916137695,
+            "mean_ms": 3.0633775997161865,
+            "throughput_samples_per_second": 41783.94462760936,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.4825600385665894,
+            "p95_ms": 4.610966253280639,
+            "mean_ms": 2.779018726348877,
+            "throughput_samples_per_second": 46059.42334478927,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.4940799474716187,
+            "p95_ms": 4.516608214378354,
+            "mean_ms": 2.756500958800316,
+            "throughput_samples_per_second": 46435.681290569235,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V1_S0_wd0_RX_GDRO/C2": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.4422240257263184,
+            "p95_ms": 5.148928093910217,
+            "mean_ms": 2.8399882229566575,
+            "throughput_samples_per_second": 352.11413621952244,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.3940160274505615,
+            "p95_ms": 4.5887486934661865,
+            "mean_ms": 2.7353939539194108,
+            "throughput_samples_per_second": 365.57805451282417,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.416256070137024,
+            "p95_ms": 4.8016926527023305,
+            "mean_ms": 2.7395419511795045,
+            "throughput_samples_per_second": 365.02452520190536,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.449056029319763,
+            "p95_ms": 4.917760133743281,
+            "mean_ms": 2.800732792019844,
+            "throughput_samples_per_second": 45702.32489322498,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.605072021484375,
+            "p95_ms": 5.408440113067626,
+            "mean_ms": 3.008207848072052,
+            "throughput_samples_per_second": 42550.25133387464,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.485152006149292,
+            "p95_ms": 4.483123016357422,
+            "mean_ms": 2.6857942456007002,
+            "throughput_samples_per_second": 47658.15557526885,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V1_S0_wd1e3_ERM_EMA/C0": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.4391679763793945,
+            "p95_ms": 4.7487167596817015,
+            "mean_ms": 2.770224643588066,
+            "throughput_samples_per_second": 360.98155516542306,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.4494080543518066,
+            "p95_ms": 4.963123297691345,
+            "mean_ms": 2.8067052807807924,
+            "throughput_samples_per_second": 356.2896349850497,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.446336030960083,
+            "p95_ms": 4.722278356552123,
+            "mean_ms": 2.677843550443649,
+            "throughput_samples_per_second": 373.43481094492097,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.476080060005188,
+            "p95_ms": 4.406374549865721,
+            "mean_ms": 2.690973756313324,
+            "throughput_samples_per_second": 47566.42449585313,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.510319948196411,
+            "p95_ms": 4.1808782339096044,
+            "mean_ms": 2.7252401548624037,
+            "throughput_samples_per_second": 46968.33773406024,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.5675039291381836,
+            "p95_ms": 5.015828633308409,
+            "mean_ms": 2.98235536813736,
+            "throughput_samples_per_second": 42919.09722346161,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V1_S0_wd1e3_ERM_EMA/C1": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.4519519805908203,
+            "p95_ms": 4.966496133804322,
+            "mean_ms": 2.8356377898454665,
+            "throughput_samples_per_second": 352.65434943103116,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.44377601146698,
+            "p95_ms": 5.164441800117491,
+            "mean_ms": 2.9460023015737535,
+            "throughput_samples_per_second": 339.4430477755568,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.395951986312866,
+            "p95_ms": 5.09984495639801,
+            "mean_ms": 2.791361280441284,
+            "throughput_samples_per_second": 358.24814473385214,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.692207932472229,
+            "p95_ms": 5.860966205596923,
+            "mean_ms": 3.225771672129631,
+            "throughput_samples_per_second": 39680.42782008044,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.419632077217102,
+            "p95_ms": 4.359475255012512,
+            "mean_ms": 2.6718812906742095,
+            "throughput_samples_per_second": 47906.319957688356,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.462831974029541,
+            "p95_ms": 5.124019289016722,
+            "mean_ms": 2.8098800092935563,
+            "throughput_samples_per_second": 45553.54662001422,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V1_S0_wd1e3_RX_GDRO/C2": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.501039981842041,
+            "p95_ms": 5.189150500297546,
+            "mean_ms": 2.895303423166275,
+            "throughput_samples_per_second": 345.38694355785685,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.5574880838394165,
+            "p95_ms": 5.211331009864807,
+            "mean_ms": 2.9696170550584795,
+            "throughput_samples_per_second": 336.74375566256555,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.499743938446045,
+            "p95_ms": 5.164126515388488,
+            "mean_ms": 2.8288450878858566,
+            "throughput_samples_per_second": 353.50115292009576,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.6342560052871704,
+            "p95_ms": 4.925590205192564,
+            "mean_ms": 2.9902790331840516,
+            "throughput_samples_per_second": 42805.369859984436,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.6101760864257812,
+            "p95_ms": 4.6418256521224945,
+            "mean_ms": 2.8673292857408526,
+            "throughput_samples_per_second": 44640.844229694994,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.5686079263687134,
+            "p95_ms": 5.618083429336548,
+            "mean_ms": 3.0418577563762663,
+            "throughput_samples_per_second": 42079.54817469344,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V1_S1_wd0_ERM_EMA/C0": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.4114880561828613,
+            "p95_ms": 5.038774466514587,
+            "mean_ms": 2.813712575793266,
+            "throughput_samples_per_second": 355.4023280853665,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.5999680757522583,
+            "p95_ms": 5.138636827468872,
+            "mean_ms": 2.895905478000641,
+            "throughput_samples_per_second": 345.31513807916446,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.4642080068588257,
+            "p95_ms": 5.081643271446228,
+            "mean_ms": 2.847095551967621,
+            "throughput_samples_per_second": 351.23513831803166,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.4146560430526733,
+            "p95_ms": 4.563694334030151,
+            "mean_ms": 2.7689835226535795,
+            "throughput_samples_per_second": 46226.34947185771,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.508384108543396,
+            "p95_ms": 4.85104637145996,
+            "mean_ms": 2.810259517431259,
+            "throughput_samples_per_second": 45547.394895756624,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.5983999967575073,
+            "p95_ms": 4.408307003974914,
+            "mean_ms": 2.8089312011003496,
+            "throughput_samples_per_second": 45568.93381719646,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V1_S1_wd0_ERM_EMA/C1": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.3965439796447754,
+            "p95_ms": 4.724031972885132,
+            "mean_ms": 2.7320989146232604,
+            "throughput_samples_per_second": 366.0189587747389,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.4246400594711304,
+            "p95_ms": 5.156255960464475,
+            "mean_ms": 2.8177049936652185,
+            "throughput_samples_per_second": 354.8987570551942,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.3368159532546997,
+            "p95_ms": 4.936705756187438,
+            "mean_ms": 2.7060005116462706,
+            "throughput_samples_per_second": 369.54908016318967,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.583583950996399,
+            "p95_ms": 5.376875066757201,
+            "mean_ms": 2.9824700874090193,
+            "throughput_samples_per_second": 42917.4463611128,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.606703996658325,
+            "p95_ms": 5.279436683654784,
+            "mean_ms": 2.9111126393079756,
+            "throughput_samples_per_second": 43969.44256695884,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.5661439895629883,
+            "p95_ms": 5.021424150466914,
+            "mean_ms": 2.9045126461982727,
+            "throughput_samples_per_second": 44069.35537620732,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V1_S1_wd0_RX_GDRO/C2": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.433664083480835,
+            "p95_ms": 4.877260732650756,
+            "mean_ms": 2.7608765752315523,
+            "throughput_samples_per_second": 362.2038047521668,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.509503960609436,
+            "p95_ms": 5.086259078979492,
+            "mean_ms": 2.8845510399341583,
+            "throughput_samples_per_second": 346.67439963996117,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.4028159379959106,
+            "p95_ms": 5.054419016838073,
+            "mean_ms": 2.7736585297584533,
+            "throughput_samples_per_second": 360.53464738757367,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.554479956626892,
+            "p95_ms": 5.732094240188592,
+            "mean_ms": 3.0217262345552443,
+            "throughput_samples_per_second": 42359.89300957961,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.60099196434021,
+            "p95_ms": 4.727816057205198,
+            "mean_ms": 2.828860797286034,
+            "throughput_samples_per_second": 45247.896299033615,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.4964799880981445,
+            "p95_ms": 4.954936122894286,
+            "mean_ms": 2.7805454355478285,
+            "throughput_samples_per_second": 46034.1335781054,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V1_S1_wd1e3_ERM_EMA/C0": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.4268798828125,
+            "p95_ms": 4.924672055244446,
+            "mean_ms": 2.8046352927684786,
+            "throughput_samples_per_second": 356.5525979717997,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.4602080583572388,
+            "p95_ms": 4.809118294715881,
+            "mean_ms": 2.7544385572671892,
+            "throughput_samples_per_second": 363.05039274215943,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.5199520587921143,
+            "p95_ms": 5.244300746917724,
+            "mean_ms": 2.9048499202728273,
+            "throughput_samples_per_second": 344.2518641052818,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.643407940864563,
+            "p95_ms": 5.365960073471069,
+            "mean_ms": 3.0124143993854524,
+            "throughput_samples_per_second": 42490.83393908641,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.6128640174865723,
+            "p95_ms": 4.416875290870666,
+            "mean_ms": 2.7559251236915587,
+            "throughput_samples_per_second": 46445.38376592182,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.6047199964523315,
+            "p95_ms": 5.5397874116897565,
+            "mean_ms": 3.066044324040413,
+            "throughput_samples_per_second": 41747.602601948834,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V1_S1_wd1e3_ERM_EMA/C1": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.449392080307007,
+            "p95_ms": 4.655155110359191,
+            "mean_ms": 2.749254208445549,
+            "throughput_samples_per_second": 363.73500745331523,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.5570720434188843,
+            "p95_ms": 5.143868780136108,
+            "mean_ms": 3.049809316277504,
+            "throughput_samples_per_second": 327.8893518564521,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.4647679328918457,
+            "p95_ms": 4.905216145515442,
+            "mean_ms": 2.735454400420189,
+            "throughput_samples_per_second": 365.56997617887237,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.6119359731674194,
+            "p95_ms": 5.515196681022644,
+            "mean_ms": 2.9780574303865435,
+            "throughput_samples_per_second": 42981.03814048541,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.5764319896698,
+            "p95_ms": 5.723699140548706,
+            "mean_ms": 3.0760942363739012,
+            "throughput_samples_per_second": 41611.20894361362,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.6337759494781494,
+            "p95_ms": 5.373099040985108,
+            "mean_ms": 3.098959523439407,
+            "throughput_samples_per_second": 41304.18581845112,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V1_S1_wd1e3_RX_GDRO/C2": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.522271990776062,
+            "p95_ms": 5.051699280738831,
+            "mean_ms": 2.7924712624549866,
+            "throughput_samples_per_second": 358.1057443437592,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.520576000213623,
+            "p95_ms": 5.195192122459412,
+            "mean_ms": 2.8731499848365782,
+            "throughput_samples_per_second": 348.0500514340114,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.467728018760681,
+            "p95_ms": 4.8423009395599355,
+            "mean_ms": 2.7615996799468996,
+            "throughput_samples_per_second": 362.1089643301335,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.5602240562438965,
+            "p95_ms": 5.446115016937255,
+            "mean_ms": 2.946355352401733,
+            "throughput_samples_per_second": 43443.50381757594,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.479472041130066,
+            "p95_ms": 4.176958584785459,
+            "mean_ms": 2.591225610971451,
+            "throughput_samples_per_second": 49397.47409798593,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.5790560245513916,
+            "p95_ms": 5.327339172363281,
+            "mean_ms": 2.9133508789539335,
+            "throughput_samples_per_second": 43935.662169865245,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V1_S2_wd0_ERM_EMA/C0": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.499119997024536,
+            "p95_ms": 4.988121581077576,
+            "mean_ms": 2.797858557343483,
+            "throughput_samples_per_second": 357.41620939890623,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.551807999610901,
+            "p95_ms": 5.245363235473632,
+            "mean_ms": 2.931819616794586,
+            "throughput_samples_per_second": 341.08510437395836,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.455552101135254,
+            "p95_ms": 4.745318508148192,
+            "mean_ms": 2.714024317264557,
+            "throughput_samples_per_second": 368.4565365309224,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.5742560625076294,
+            "p95_ms": 5.442379021644593,
+            "mean_ms": 3.0743863958120348,
+            "throughput_samples_per_second": 41634.32422624661,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.60916805267334,
+            "p95_ms": 5.734041380882263,
+            "mean_ms": 2.970938400030136,
+            "throughput_samples_per_second": 43084.03028440496,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.5512160062789917,
+            "p95_ms": 5.449132823944091,
+            "mean_ms": 3.092346404790878,
+            "throughput_samples_per_second": 41392.51663451853,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V1_S2_wd0_ERM_EMA/C1": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.447424054145813,
+            "p95_ms": 4.659558558464048,
+            "mean_ms": 2.749192960500717,
+            "throughput_samples_per_second": 363.7431109302228,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.5484479665756226,
+            "p95_ms": 5.199217605590819,
+            "mean_ms": 2.9767026823759077,
+            "throughput_samples_per_second": 335.94218392071065,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.531183958053589,
+            "p95_ms": 5.1145984649658205,
+            "mean_ms": 2.851009343624115,
+            "throughput_samples_per_second": 350.752971833067,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.5829919576644897,
+            "p95_ms": 5.383726358413695,
+            "mean_ms": 3.027903195619583,
+            "throughput_samples_per_second": 42273.47828859769,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.640704035758972,
+            "p95_ms": 4.728527998924253,
+            "mean_ms": 2.8377044832706453,
+            "throughput_samples_per_second": 45106.881549720565,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.815551996231079,
+            "p95_ms": 5.559713387489319,
+            "mean_ms": 3.2619012749195098,
+            "throughput_samples_per_second": 39240.917861058966,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V1_S2_wd0_RX_GDRO/C2": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.5481760501861572,
+            "p95_ms": 4.966657400131226,
+            "mean_ms": 2.8409278705120085,
+            "throughput_samples_per_second": 351.99767314746157,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.4933758974075317,
+            "p95_ms": 5.080524635314941,
+            "mean_ms": 2.845764421582222,
+            "throughput_samples_per_second": 351.3994315256806,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.5457440614700317,
+            "p95_ms": 5.190529441833496,
+            "mean_ms": 2.9491628530025484,
+            "throughput_samples_per_second": 339.07927430385814,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.670959949493408,
+            "p95_ms": 5.151959872245787,
+            "mean_ms": 3.060544168353081,
+            "throughput_samples_per_second": 41822.62792465383,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.7528799772262573,
+            "p95_ms": 5.338839888572691,
+            "mean_ms": 3.052500975728035,
+            "throughput_samples_per_second": 41932.82852906261,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.595552086830139,
+            "p95_ms": 5.34067187309265,
+            "mean_ms": 2.9883545488119125,
+            "throughput_samples_per_second": 42832.936289601006,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V1_S2_wd1e3_ERM_EMA/C0": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.5677759647369385,
+            "p95_ms": 5.188292717933654,
+            "mean_ms": 2.9063507504463195,
+            "throughput_samples_per_second": 344.07409355062634,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.541632056236267,
+            "p95_ms": 5.196526622772216,
+            "mean_ms": 2.980028575897217,
+            "throughput_samples_per_second": 335.5672519680196,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.5684800148010254,
+            "p95_ms": 5.229355192184448,
+            "mean_ms": 3.0277344343662262,
+            "throughput_samples_per_second": 330.2799573996729,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.4721920490264893,
+            "p95_ms": 4.393838238716125,
+            "mean_ms": 2.6681423950195313,
+            "throughput_samples_per_second": 47973.45158149365,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.495423913002014,
+            "p95_ms": 5.4358832120895375,
+            "mean_ms": 2.918078554868698,
+            "throughput_samples_per_second": 43864.48054540447,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.4803199768066406,
+            "p95_ms": 5.677515244483947,
+            "mean_ms": 3.016576641201973,
+            "throughput_samples_per_second": 42432.20551790709,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V1_S2_wd1e3_ERM_EMA/C1": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.4772480726242065,
+            "p95_ms": 5.084262251853943,
+            "mean_ms": 2.8997858557701113,
+            "throughput_samples_per_second": 344.8530511348483,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.530351996421814,
+            "p95_ms": 5.142630457878113,
+            "mean_ms": 2.9225659520626066,
+            "throughput_samples_per_second": 342.16507562275814,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.386352062225342,
+            "p95_ms": 5.265510439872742,
+            "mean_ms": 2.8954041942358018,
+            "throughput_samples_per_second": 345.37492277962764,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.507343888282776,
+            "p95_ms": 5.154607868194579,
+            "mean_ms": 3.000409767627716,
+            "throughput_samples_per_second": 42660.83965631256,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.4955040216445923,
+            "p95_ms": 5.166163396835327,
+            "mean_ms": 2.8531256061792374,
+            "throughput_samples_per_second": 44863.07918683299,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.3778239488601685,
+            "p95_ms": 4.878449702262879,
+            "mean_ms": 2.8081832003593443,
+            "throughput_samples_per_second": 45581.07177039614,
+            "measurements": 200
+          }
+        ]
+      }
+    },
+    "V1_S2_wd1e3_RX_GDRO/C2": {
+      "parameters": 82426,
+      "batches": {
+        "1": [
+          {
+            "round": 0,
+            "p50_ms": 2.44268798828125,
+            "p95_ms": 5.075609493255614,
+            "mean_ms": 2.8332956804037095,
+            "throughput_samples_per_second": 352.9458668632539,
+            "measurements": 1000
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.52564799785614,
+            "p95_ms": 5.091156768798828,
+            "mean_ms": 2.9006245086193085,
+            "throughput_samples_per_second": 344.75334433273406,
+            "measurements": 1000
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.5240479707717896,
+            "p95_ms": 5.080289602279662,
+            "mean_ms": 2.9102057267427446,
+            "throughput_samples_per_second": 343.618319079886,
+            "measurements": 1000
+          }
+        ],
+        "128": [
+          {
+            "round": 0,
+            "p50_ms": 2.630128026008606,
+            "p95_ms": 5.199055790901184,
+            "mean_ms": 3.038612326383591,
+            "throughput_samples_per_second": 42124.49179140249,
+            "measurements": 200
+          },
+          {
+            "round": 1,
+            "p50_ms": 2.6675199270248413,
+            "p95_ms": 5.595396780967711,
+            "mean_ms": 3.2227655947208405,
+            "throughput_samples_per_second": 39717.44026611017,
+            "measurements": 200
+          },
+          {
+            "round": 2,
+            "p50_ms": 2.7307679653167725,
+            "p95_ms": 5.14138240814209,
+            "mean_ms": 3.1102785515785216,
+            "throughput_samples_per_second": 41153.870265104626,
+            "measurements": 200
+          }
+        ]
+      }
+    }
+  },
+  "time": "2026-11-11T17:16:33+08:00"
+}

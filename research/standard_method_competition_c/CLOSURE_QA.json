@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "recorded_at": "2026-11-11T17:20:27+08:00",
+  "scope": "Publication consistency only; no new IQ/model decode, scoring or training.",
+  "pinned_original_and_execution_files_unchanged": 83,
+  "sealed_pairing_checks_passed": 122,
+  "independent_training_and_analysis_QA": "PASS",
+  "source_prediction_files": 108,
+  "candidate_endpoint_scalar_rows_checked": 108,
+  "gzip_exact_roundtrip": true,
+  "summary_matches_original_analysis": true,
+  "all_access_paths_on_registered_source_whitelist": true,
+  "access_log_append_only_since_pre_scoring_seal": true,
+  "checked_relative_report_links": 30,
+  "owner_confirmation_gate": "UNKNOWN/CLOSED",
+  "scientific_decision_unchanged": "NO_STANDARD_METHOD_DEVELOPMENT_PROMOTION",
+  "additional_scientific_fits": 0,
+  "latency_readout_schema_checked_by_reporting_helper": 36
+}

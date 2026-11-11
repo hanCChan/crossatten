@@ -1,0 +1,61 @@
+{
+  "status": "COMPLETE",
+  "scientific_training_complete": true,
+  "training": {
+    "gradient_fits": 24,
+    "gradient_epochs": 960,
+    "gradient_updates": 121920,
+    "BN_calibration_passes": 480,
+    "BN_calibration_samples": 7780560,
+    "EMA_updates": 60960
+  },
+  "success": 24,
+  "failed": 0,
+  "all_pre_registered_endpoints_reported": true,
+  "source_selection_predictions": 108,
+  "deployment_readouts_benchmarked": 36,
+  "decision": {
+    "status": "NO_STANDARD_METHOD_DEVELOPMENT_PROMOTION",
+    "promotions": {
+      "C1": {
+        "passes": false,
+        "checks": {
+          "mean_accuracy_at_least_1pp": true,
+          "paired_rx_interval_lower_above_zero": true,
+          "both_views_positive": true,
+          "at_least_two_streams_positive": true,
+          "worst_paired_rx_at_least_minus_2pp": true,
+          "supported_tx_rx_risk_increase_at_most_5pp": false
+        },
+        "supported_tx_rx_groups": 117,
+        "interpretation": "Development promotion means worth separately confirming; failure is not proof of universal ineffectiveness. No extra seed or method search is authorized."
+      },
+      "C2": {
+        "passes": false,
+        "checks": {
+          "mean_accuracy_at_least_1pp": false,
+          "paired_rx_interval_lower_above_zero": false,
+          "both_views_positive": false,
+          "at_least_two_streams_positive": true,
+          "worst_paired_rx_at_least_minus_2pp": false,
+          "supported_tx_rx_risk_increase_at_most_5pp": false
+        },
+        "supported_tx_rx_groups": 117,
+        "interpretation": "Development promotion means worth separately confirming; failure is not proof of universal ineffectiveness. No extra seed or method search is authorized."
+      }
+    },
+    "priority": [],
+    "all_arms_retained": true,
+    "final_confirmation_admitted": false,
+    "new_algorithm_validated": false,
+    "AB_attribution_line_closed": true
+  },
+  "formal_CRD_breakthrough_claim": false,
+  "AB_attribution_closed": true,
+  "ordinary_method_competition_closed": true,
+  "new_trainable_mechanism_candidates": 0,
+  "M0": "STOP_NO_VERIFIABLE_LOCAL_PAIRING",
+  "qualified_new_confirmation_rx": 0,
+  "confirmation_access": "CLOSED",
+  "historical_held6_target8_days3_4_evaluated": false
+}

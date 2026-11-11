@@ -1,0 +1,20 @@
+{
+  "status": "COMPLETE",
+  "reporting_helper_sha256": "3341e6d9a16363ca5e9c514522096693f22a6e36be0018d747b93e0512aa5661",
+  "full_analysis": {
+    "file": "ANALYSIS.json.gz",
+    "sha256": "6bcc80283c391f9e8bcb6934fe996ca33b56bde1799112b6dbe7d1570c3116cd",
+    "compressed_bytes": 5901128,
+    "uncompressed_bytes": 103900661,
+    "uncompressed_sha256": "fc2480454731dc31d16cd0196aa906229c5de94796e28df66a1a81e72edfcc7c",
+    "exact_gzip_roundtrip": true
+  },
+  "scientific_payloads": {
+    "local_directory": "artifacts/",
+    "uploaded_to_git": false,
+    "training_payload_hashes": "RUN_EVIDENCE.json: COMPLETE.files_sha256; STAGE_C_SEAL.json: complete/checkpoint digests",
+    "source_prediction_hashes": "EVALUATION_MANIFEST.json",
+    "packet_diagnostic_hashes": "ANALYSIS.json.gz: artifacts.packet_diagnostics"
+  },
+  "scope": "Only reports, evidence and compressed numerical metrics are published. IQ caches, checkpoint/optimizer payloads and per-packet NPZ arrays remain local with registered hashes. No additional payload access or scoring."
+}

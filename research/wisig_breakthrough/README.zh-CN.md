@@ -17,7 +17,7 @@
 
 ## 本轮三个有确定出口的工作包
 
-1. **[C 标准方法竞争](../standard_method_competition_c/EXECUTION_ADDENDUM.zh-CN.md)**：原预注册24个梯度fit，C0/C1共享ERM轨迹，C2为RX GroupDRO。工程验收后按原方法/网格/seed/视图/选模和预算执行。只允许fit18内部source-CV，不允许把其Accuracy称为正式CRD。完成后无论晋级与否不追加种子、普通Loss或BN归因。
+1. **[C 标准方法竞争已完成](../standard_method_competition_c/EXECUTION_RESULTS.zh-CN.md)**：24/24次梯度拟合成功，960个epoch、121,920次更新，没有失败重试或额外拟合。主端点C0/C1/C2的source-CV Accuracy为85.0332%/86.1811%/84.5601%。EMA平均+1.1479 pp，但最大受支持TX×RX错误率增加21 pp，未过局部风险门；GroupDRO平均−0.4731 pp，亦未晋级。最终为`NO_STANDARD_METHOD_DEVELOPMENT_PROMOTION`。全部网格、108端点、局部风险、推断延迟和成本已封存；不追加种子、普通Loss或BN归因。这些百分比不能称为正式CRD。
 2. **[M0真实双视图](../wisig_raw_eq_m0/README.zh-CN.md)**：已在配对硬门结束，`STOP_NO_VERIFIABLE_LOCAL_PAIRING`。官方均衡失败筛包及独立compact截取不保留原packet身份，本地审阅材料没有补足；TX信息保留/相关性未评估，不假设安全，不训练双视图候选。这只针对当前证据，不是物理上不可能配对。
 3. **[Full-WiSig确认资格](../wisig_full_confirmation_metadata/README.zh-CN.md)**：额外9 RX身份和官方聚合计数已核验。原10TX×D3–D4各100 raw包的预算仅`2-20`、`8-13`满足；历史未用于方法选择仍未知，已确认合格RX为0、访问关闭。没有读取候选IQ、预测或性能。
 
@@ -29,5 +29,7 @@
 - 两者都不显著：不扩普通Loss搜索，不把区间跨零写成证明无效。
 
 新机制必须有可信信号变化、TX判别保护的可证伪依据，与普通Raw+EQ CE/一致性及最强标准基线公平比较，且最终有正式CRD和迁移证据。当前M0未过配对门，因而**没有获准训练的Raw/EQ新机制**；不因理论公式好看而强行平均/对齐，更不自动改名重试。
+
+本轮已按冻结出口结束三个工作包。EMA的平均收益保留为后续独立预注册应纳入的强参照，但未获稳健晋级；标准方法没有被包装成第三项创新。当前可训练新机制候选为0。用户对额外RX的[历史资格回复](../wisig_full_confirmation_metadata/OWNER_QUALIFICATION_RESPONSE.json)为“无法确认，继续保持资格未定”，合格新RX仍为0、确认访问保持关闭。
 
 独立确认资格与性能选择分离。新RX若不能证明未参与方法选择，后续只能按另行协议报告回顾性benchmark和跨任务迁移，不得称全新RX盲测。当前工作不授权正式target8/日期3–4评分、Full新数据训练或新的LoRa/ManySig拟合。

@@ -1,0 +1,36 @@
+{
+  "status": "NO_STANDARD_METHOD_DEVELOPMENT_PROMOTION",
+  "promotions": {
+    "C1": {
+      "passes": false,
+      "checks": {
+        "mean_accuracy_at_least_1pp": true,
+        "paired_rx_interval_lower_above_zero": true,
+        "both_views_positive": true,
+        "at_least_two_streams_positive": true,
+        "worst_paired_rx_at_least_minus_2pp": true,
+        "supported_tx_rx_risk_increase_at_most_5pp": false
+      },
+      "supported_tx_rx_groups": 117,
+      "interpretation": "Development promotion means worth separately confirming; failure is not proof of universal ineffectiveness. No extra seed or method search is authorized."
+    },
+    "C2": {
+      "passes": false,
+      "checks": {
+        "mean_accuracy_at_least_1pp": false,
+        "paired_rx_interval_lower_above_zero": false,
+        "both_views_positive": false,
+        "at_least_two_streams_positive": true,
+        "worst_paired_rx_at_least_minus_2pp": false,
+        "supported_tx_rx_risk_increase_at_most_5pp": false
+      },
+      "supported_tx_rx_groups": 117,
+      "interpretation": "Development promotion means worth separately confirming; failure is not proof of universal ineffectiveness. No extra seed or method search is authorized."
+    }
+  },
+  "priority": [],
+  "all_arms_retained": true,
+  "final_confirmation_admitted": false,
+  "new_algorithm_validated": false,
+  "AB_attribution_line_closed": true
+}

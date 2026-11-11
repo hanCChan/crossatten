@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "scope": "JSON/text metadata only, no scientific payload reads or decodes",
+  "registration_sha256": "a7353fb2c5c10fb902e05fedbf35d59c00e1f6eefd1afe5e9233166aa354d8b7",
+  "execution_sha256": "9642f55b297453747eeb80ec0eb219e1426444b80935d8eb397ef7668e256272",
+  "qa_code_sha256": "c9d36167fbd4f81cc70eee6bffff746c3790b6303ddaa45f9e460aaecac013e7",
+  "training": {
+    "status": "PASS",
+    "totals": {
+      "gradient_fits": 24,
+      "gradient_epochs": 960,
+      "gradient_updates": 121920,
+      "BN_calibration_passes": 480,
+      "BN_calibration_samples": 7780560,
+      "EMA_updates": 60960
+    },
+    "checked": "All24 completion metadata, every epoch, strict checkpoint ranking, independent LR simulation, fit-only EMA/BN counts, shared initialization and orders"
+  },
+  "limitations": "JSON consistency checks do not independently reconstruct logits, model weights, IQ or numerical batch contents; byte sealing and payload replay remain separate registered checks.",
+  "analysis": {
+    "status": "PASS",
+    "candidate_endpoint_tables": 108,
+    "paired_comparisons": 18,
+    "independently_recomputed_bootstrap_replicates": 10000,
+    "bootstrap_seed": 24501,
+    "chosen_weight_decay": {
+      "C0": 0.001,
+      "C1": 0.001,
+      "C2": 0.001
+    },
+    "checked": "Confusion/error/support/class-pair/margin consistency; all36x3 readouts; same-wd and tuned pair arithmetic; fixed-stream RX means and paired bootstrap; WD selection and every promotion constraint"
+  },
+  "analysis_path": "research\\standard_method_competition_c\\artifacts\\analysis\\report\\ANALYSIS.json"
+}

@@ -1,0 +1,174 @@
+{
+  "status": "COMPLETE",
+  "family_totals": {
+    "ERM_EMA": {
+      "gradient_fits": 12.0,
+      "wall_seconds_since_attempt": 1075.394953500072,
+      "source_input_load_seconds": 1.5060073002241552,
+      "training_with_ema_seconds": 625.6314362998819,
+      "raw_validation_seconds": 79.24937009933637,
+      "ema_update_host_seconds": 103.64946910028812,
+      "ema_update_cuda_seconds": 40.658075045913456,
+      "ema_calibration_seconds": 209.5410869991174,
+      "ema_validation_seconds": 79.03689319902332,
+      "BN_calibration_samples": 7780560.0,
+      "BN_calibration_passes": 480.0,
+      "EMA_updates": 60960.0,
+      "total_fit_loop_seconds": 1042.9662975999527
+    },
+    "RX_GDRO": {
+      "gradient_fits": 12.0,
+      "wall_seconds_since_attempt": 828.8499239999801,
+      "source_input_load_seconds": 1.410208599991165,
+      "training_with_ema_seconds": 688.7782789007761,
+      "raw_validation_seconds": 81.53876610053703,
+      "ema_update_host_seconds": 0.0,
+      "ema_update_cuda_seconds": 0.0,
+      "ema_calibration_seconds": 0.0,
+      "ema_validation_seconds": 0.0,
+      "BN_calibration_samples": 0.0,
+      "BN_calibration_passes": 0.0,
+      "EMA_updates": 0.0,
+      "total_fit_loop_seconds": 796.5819800000172
+    }
+  },
+  "training_budget": {
+    "gradient_fits": 24,
+    "gradient_epochs": 960,
+    "gradient_updates": 121920,
+    "BN_calibration_passes": 480,
+    "BN_calibration_samples": 7780560,
+    "EMA_updates": 60960
+  },
+  "actual_parameters_per_readout": 82426,
+  "peak_cuda_allocated_gib": 0.16843271255493164,
+  "all_fit_wall_seconds": 1904.244877500052,
+  "source_evaluation_seconds_after_attempt_marker": 37.0,
+  "latency_seconds_after_attempt_marker": 436.0,
+  "latency_all_36_readouts": {
+    "C0": {
+      "1": {
+        "readouts": 12,
+        "rounds": 36,
+        "median_round_p50_ms": 2.4578800797462463,
+        "median_round_p95_ms": 5.044237542152405,
+        "min_round_p50_ms": 2.3760160207748413,
+        "max_round_p50_ms": 2.5999680757522583,
+        "median_round_throughput_samples_per_second": 355.99510000161223
+      },
+      "128": {
+        "readouts": 12,
+        "rounds": 36,
+        "median_round_p50_ms": 2.5624799728393555,
+        "median_round_p95_ms": 5.2707648992538445,
+        "min_round_p50_ms": 2.4110080003738403,
+        "max_round_p50_ms": 2.7040159702301025,
+        "median_round_throughput_samples_per_second": 43865.00124046611
+      }
+    },
+    "C1": {
+      "1": {
+        "readouts": 12,
+        "rounds": 36,
+        "median_round_p50_ms": 2.464759945869446,
+        "median_round_p95_ms": 5.064048767089844,
+        "min_round_p50_ms": 2.314751982688904,
+        "max_round_p50_ms": 2.5570720434188843,
+        "median_round_throughput_samples_per_second": 353.4032181659719
+      },
+      "128": {
+        "readouts": 12,
+        "rounds": 36,
+        "median_round_p50_ms": 2.5797119736671448,
+        "median_round_p95_ms": 5.359336006641387,
+        "min_round_p50_ms": 2.3778239488601685,
+        "max_round_p50_ms": 2.844032049179077,
+        "median_round_throughput_samples_per_second": 42949.24225079911
+      }
+    },
+    "C2": {
+      "1": {
+        "readouts": 12,
+        "rounds": 36,
+        "median_round_p50_ms": 2.4895999431610107,
+        "median_round_p95_ms": 5.083391857147216,
+        "min_round_p50_ms": 2.3940160274505615,
+        "max_round_p50_ms": 2.6302239894866943,
+        "median_round_throughput_samples_per_second": 352.05590468349203
+      },
+      "128": {
+        "readouts": 12,
+        "rounds": 36,
+        "median_round_p50_ms": 2.5573520064353943,
+        "median_round_p95_ms": 5.2314365863800045,
+        "min_round_p50_ms": 2.4124799966812134,
+        "max_round_p50_ms": 2.7673600912094116,
+        "median_round_throughput_samples_per_second": 43285.804552762704
+      }
+    }
+  },
+  "latency_primary_wd_readouts": {
+    "C0": {
+      "1": {
+        "readouts": 6,
+        "rounds": 18,
+        "median_round_p50_ms": 2.4548080563545227,
+        "median_round_p95_ms": 5.054760682582855,
+        "min_round_p50_ms": 2.3976958990097046,
+        "max_round_p50_ms": 2.5917439460754395,
+        "median_round_throughput_samples_per_second": 353.66084209974434
+      },
+      "128": {
+        "readouts": 6,
+        "rounds": 18,
+        "median_round_p50_ms": 2.5354159474372864,
+        "median_round_p95_ms": 5.172122371196746,
+        "min_round_p50_ms": 2.4110080003738403,
+        "max_round_p50_ms": 2.7040159702301025,
+        "median_round_throughput_samples_per_second": 43865.00124046611
+      }
+    },
+    "C1": {
+      "1": {
+        "readouts": 6,
+        "rounds": 18,
+        "median_round_p50_ms": 2.458351969718933,
+        "median_round_p95_ms": 5.067367053031921,
+        "min_round_p50_ms": 2.314751982688904,
+        "max_round_p50_ms": 2.5570720434188843,
+        "median_round_throughput_samples_per_second": 349.6895532236766
+      },
+      "128": {
+        "readouts": 6,
+        "rounds": 18,
+        "median_round_p50_ms": 2.505255937576294,
+        "median_round_p95_ms": 5.320557677745819,
+        "min_round_p50_ms": 2.3778239488601685,
+        "max_round_p50_ms": 2.730496048927307,
+        "median_round_throughput_samples_per_second": 42992.244709555096
+      }
+    },
+    "C2": {
+      "1": {
+        "readouts": 6,
+        "rounds": 18,
+        "median_round_p50_ms": 2.481880009174347,
+        "median_round_p95_ms": 5.0920104503631585,
+        "min_round_p50_ms": 2.3951361179351807,
+        "max_round_p50_ms": 2.6302239894866943,
+        "median_round_throughput_samples_per_second": 348.84388372095344
+      },
+      "128": {
+        "readouts": 6,
+        "rounds": 18,
+        "median_round_p50_ms": 2.5546000599861145,
+        "median_round_p95_ms": 5.273625564575195,
+        "min_round_p50_ms": 2.4124799966812134,
+        "max_round_p50_ms": 2.7307679653167725,
+        "median_round_throughput_samples_per_second": 43355.458049630346
+      }
+    }
+  },
+  "latency_aggregation": "Median of per-readout/per-round p50 and p95; not percentiles recomputed from pooled raw timings. All two-wd results and primary-wd subset both retained.",
+  "accounting": "C0/C1 share 12 ERM+EMA gradient fits. training_with_ema_seconds includes EMA updates; EMA host/CUDA seconds are overlapping subset measurements, not additive costs. Calibration and EMA-validation are separately timed. No standalone C0 fit was added to estimate counterfactual overhead. Fit wall includes loading/serialization/hash work after attempt marker; excludes CLI startup and earlier validation. No end-to-end pipeline wall claim."
+}
