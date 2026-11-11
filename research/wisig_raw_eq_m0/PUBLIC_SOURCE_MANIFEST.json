@@ -1,0 +1,73 @@
+{
+  "scope": "Public source text only; never executed",
+  "official_entry_pages": [
+    "https://cores.ee.ucla.edu/wisig/overview/",
+    "https://cores.ee.ucla.edu/wisig/downloads/"
+  ],
+  "sources": [
+    {
+      "repo": "WiSig-dataset/wisig-process-raw",
+      "ref": "6530c6ed6be1d08544ac295040ed50f5babde86a",
+      "path": "matlab_equalization/equalize_channel.m",
+      "sha": "7619ad9b9a4248d2501f209d3b9cc8118937986f",
+      "snapshot": "public_sources/wisig-process-raw/matlab_equalization/equalize_channel.m.txt",
+      "url": "https://github.com/WiSig-dataset/wisig-process-raw/blob/6530c6ed6be1d08544ac295040ed50f5babde86a/matlab_equalization/equalize_channel.m"
+    },
+    {
+      "repo": "WiSig-dataset/wisig-process-raw",
+      "ref": "6530c6ed6be1d08544ac295040ed50f5babde86a",
+      "path": "matlab_equalization/equalize_dataset.m",
+      "sha": "9a5e194391f316ccc0ea77cbe0d2cb7c8ba6415e",
+      "snapshot": "public_sources/wisig-process-raw/matlab_equalization/equalize_dataset.m.txt",
+      "url": "https://github.com/WiSig-dataset/wisig-process-raw/blob/6530c6ed6be1d08544ac295040ed50f5babde86a/matlab_equalization/equalize_dataset.m"
+    },
+    {
+      "repo": "WiSig-dataset/wisig-process-raw",
+      "ref": "6530c6ed6be1d08544ac295040ed50f5babde86a",
+      "path": "python_pkl_creation/py/build_dataset_multirx.py",
+      "sha": "2d46c7e148c6bd29b0b3358e341658ed8b2504c2",
+      "snapshot": "public_sources/wisig-process-raw/python_pkl_creation/py/build_dataset_multirx.py.txt",
+      "url": "https://github.com/WiSig-dataset/wisig-process-raw/blob/6530c6ed6be1d08544ac295040ed50f5babde86a/python_pkl_creation/py/build_dataset_multirx.py"
+    },
+    {
+      "repo": "WiSig-dataset/wisig-process-raw",
+      "ref": "6530c6ed6be1d08544ac295040ed50f5babde86a",
+      "path": "matlab_detection_screening/split_signal_fun.m",
+      "sha": "41c4f05c3aaac8a5f4d31ba3299ffe09c3919280",
+      "snapshot": "public_sources/wisig-process-raw/matlab_detection_screening/split_signal_fun.m.txt",
+      "url": "https://github.com/WiSig-dataset/wisig-process-raw/blob/6530c6ed6be1d08544ac295040ed50f5babde86a/matlab_detection_screening/split_signal_fun.m"
+    },
+    {
+      "repo": "WiSig-dataset/wisig-process-raw",
+      "ref": "6530c6ed6be1d08544ac295040ed50f5babde86a",
+      "path": "matlab_equalization/Readme.txt",
+      "sha": "7da5ed5fc445f3da11ebbf75af49a92d8f74be4b",
+      "snapshot": "public_sources/wisig-process-raw/matlab_equalization/Readme.txt.txt",
+      "url": "https://github.com/WiSig-dataset/wisig-process-raw/blob/6530c6ed6be1d08544ac295040ed50f5babde86a/matlab_equalization/Readme.txt"
+    },
+    {
+      "repo": "WiSig-dataset/wisig-process-raw",
+      "ref": "6530c6ed6be1d08544ac295040ed50f5babde86a",
+      "path": "LICENSE.md",
+      "sha": "da79ee3212d82f43f6adf426808ea188061a1bd5",
+      "snapshot": "public_sources/wisig-process-raw/LICENSE.md.txt",
+      "url": "https://github.com/WiSig-dataset/wisig-process-raw/blob/6530c6ed6be1d08544ac295040ed50f5babde86a/LICENSE.md"
+    },
+    {
+      "repo": "WiSig-dataset/wisig-subset-creation",
+      "ref": "bc8c6bd352a8c184a571e6b4c2d7a890cdfff3d8",
+      "path": "data_utilities.py",
+      "sha": "b748ca37f45296df8d4a67d291e942ceeafbf89e",
+      "snapshot": "public_sources/wisig-subset-creation/data_utilities.py.txt",
+      "url": "https://github.com/WiSig-dataset/wisig-subset-creation/blob/bc8c6bd352a8c184a571e6b4c2d7a890cdfff3d8/data_utilities.py"
+    },
+    {
+      "repo": "WiSig-dataset/wisig-subset-creation",
+      "ref": "bc8c6bd352a8c184a571e6b4c2d7a890cdfff3d8",
+      "path": "LICENSE.md",
+      "sha": "da79ee3212d82f43f6adf426808ea188061a1bd5",
+      "snapshot": "public_sources/wisig-subset-creation/LICENSE.md.txt",
+      "url": "https://github.com/WiSig-dataset/wisig-subset-creation/blob/bc8c6bd352a8c184a571e6b4c2d7a890cdfff3d8/LICENSE.md"
+    }
+  ]
+}

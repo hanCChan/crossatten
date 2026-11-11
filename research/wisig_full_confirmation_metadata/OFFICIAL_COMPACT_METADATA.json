@@ -1,0 +1,51 @@
+{
+  "source_repository": "WiSig-dataset/wisig-subset-creation",
+  "commit": "bc8c6bd352a8c184a571e6b4c2d7a890cdfff3d8",
+  "source_path": "002_FullWiSig_create_compact_datasets.ipynb",
+  "retrieval": "pinned notebook via GitHub connector; code statements inspected without execution",
+  "manyrx_creation_code": {
+    "tx_list": [
+      "1-10",
+      "11-1",
+      "14-10",
+      "14-7",
+      "17-11",
+      "20-15",
+      "20-19",
+      "7-11",
+      "7-14",
+      "8-20"
+    ],
+    "rx_count": 32,
+    "days": [
+      "2021_03_01",
+      "2021_03_08",
+      "2021_03_15",
+      "2021_03_23"
+    ],
+    "max_sig": 200
+  },
+  "singleday_creation_code": {
+    "rx_list": [
+      "1-1",
+      "13-13",
+      "14-7",
+      "2-1",
+      "2-20",
+      "20-1",
+      "7-14",
+      "7-7",
+      "8-13",
+      "8-8"
+    ],
+    "capture_date_list": [
+      "2021_03_23"
+    ],
+    "extra_rx_overlap": [
+      "13-13",
+      "2-20",
+      "8-13"
+    ]
+  },
+  "caution": "The final stored datasets_info notebook output is stale and conflicts with preceding creation code (different ManyRx TX/RX lists). Use pinned creation statements cross-checked against local 05-wisig ManyRx manifest; do not adopt stale output."
+}

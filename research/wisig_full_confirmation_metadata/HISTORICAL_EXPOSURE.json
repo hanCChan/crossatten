@@ -1,0 +1,100 @@
+{
+  "status": "NO_UNSEEN_CLAIM_FROM_LOCAL_ABSENCE",
+  "historical_manyrx_identity_projection": {
+    "path": "10-tifs-validation\\final_receiver_metrics.csv",
+    "sha256": "4b01215f98f772a00bfb25f66298915bdd169c945ae7796e5652e4c56a5e3a73",
+    "rx_count": 32,
+    "rx": [
+      "1-1",
+      "1-19",
+      "1-20",
+      "13-14",
+      "13-7",
+      "14-7",
+      "18-19",
+      "18-2",
+      "19-1",
+      "19-19",
+      "19-2",
+      "19-20",
+      "2-1",
+      "2-19",
+      "20-1",
+      "20-19",
+      "20-20",
+      "23-1",
+      "23-3",
+      "23-5",
+      "23-6",
+      "23-7",
+      "24-13",
+      "24-16",
+      "24-5",
+      "24-6",
+      "3-19",
+      "7-14",
+      "7-7",
+      "8-14",
+      "8-7",
+      "8-8"
+    ],
+    "candidate_overlap": []
+  },
+  "archive_central_directory_only": [
+    {
+      "archive": "multiple_receiver_train.zip",
+      "entry_count": 14,
+      "candidate_identity_name_matches": {
+        "11-10": [],
+        "13-13": [],
+        "14-14": [],
+        "2-20": [],
+        "24-1": [],
+        "24-12": [],
+        "24-18": [],
+        "3-2": [],
+        "8-13": []
+      },
+      "interpretation": "Path-name evidence only; cannot prove absence of embedded receiver data or historical use."
+    },
+    {
+      "archive": "multiple_receiver_test.zip",
+      "entry_count": 38,
+      "candidate_identity_name_matches": {
+        "11-10": [],
+        "13-13": [],
+        "14-14": [],
+        "2-20": [],
+        "24-1": [],
+        "24-12": [],
+        "24-18": [],
+        "3-2": [],
+        "8-13": []
+      },
+      "interpretation": "Path-name evidence only; cannot prove absence of embedded receiver data or historical use."
+    },
+    {
+      "archive": "receiver_drift_dataset.zip",
+      "entry_count": 12,
+      "candidate_identity_name_matches": {
+        "11-10": [],
+        "13-13": [],
+        "14-14": [],
+        "2-20": [],
+        "24-1": [],
+        "24-12": [],
+        "24-18": [],
+        "3-2": [],
+        "8-13": []
+      },
+      "interpretation": "Path-name evidence only; cannot prove absence of embedded receiver data or historical use."
+    }
+  ],
+  "not_proven": [
+    "No use in unarchived/deleted experiments",
+    "No use in other workspaces/machines/accounts",
+    "No inspection of candidate IQ, labels beyond metadata or model outputs in prior human sessions"
+  ],
+  "historical_exposure_status_for_all_nine": "UNKNOWN",
+  "confirmation_access": "CLOSED"
+}

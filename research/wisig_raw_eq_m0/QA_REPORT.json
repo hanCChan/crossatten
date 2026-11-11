@@ -1,0 +1,62 @@
+{
+  "generated_utc": "2026-11-11T08:14:20.655076+00:00",
+  "status": "PASS_METADATA_QA",
+  "json_files_parsed": 6,
+  "public_source_checks": [
+    {
+      "path": "public_sources/wisig-process-raw/matlab_equalization/equalize_channel.m.txt",
+      "git_blob_matches": true,
+      "sha256": "eb6be4dd87b07107897243054fc86086a78df34259243466758781ef7d929cbc"
+    },
+    {
+      "path": "public_sources/wisig-process-raw/matlab_equalization/equalize_dataset.m.txt",
+      "git_blob_matches": true,
+      "sha256": "67247aa3c936777e5fc2e7479caa24c81ac8a76c55ec49d765dba01654caa72b"
+    },
+    {
+      "path": "public_sources/wisig-process-raw/python_pkl_creation/py/build_dataset_multirx.py.txt",
+      "git_blob_matches": true,
+      "sha256": "6f9b51384d82d5f77ffe6ba53f2525565860013dcc0ad632e3c63e94bf3ce3cd"
+    },
+    {
+      "path": "public_sources/wisig-process-raw/matlab_detection_screening/split_signal_fun.m.txt",
+      "git_blob_matches": true,
+      "sha256": "dbeb232ed868aa2945509aa4cb7e905ee7af57a134150a719457c2551e97e246"
+    },
+    {
+      "path": "public_sources/wisig-process-raw/matlab_equalization/Readme.txt.txt",
+      "git_blob_matches": true,
+      "sha256": "56291420d3945b3be1ebfa889e483cd21ab38ad3afd6871316d9ec8d7410c9ea"
+    },
+    {
+      "path": "public_sources/wisig-process-raw/LICENSE.md.txt",
+      "git_blob_matches": true,
+      "sha256": "5d13302991996ac66442e10e98b55ff7f69cf94ea00fc6c2b72d08ab87e86f11"
+    },
+    {
+      "path": "public_sources/wisig-subset-creation/data_utilities.py.txt",
+      "git_blob_matches": true,
+      "sha256": "03c6c2806bac2d5258cbaf0c8e12a2fde9e17495ae31c9d2938eeaba6b17768e"
+    },
+    {
+      "path": "public_sources/wisig-subset-creation/LICENSE.md.txt",
+      "git_blob_matches": true,
+      "sha256": "5d13302991996ac66442e10e98b55ff7f69cf94ea00fc6c2b72d08ab87e86f11"
+    }
+  ],
+  "count_support_sha256_verified": true,
+  "aggregate_count_schema_and_scope_verified": true,
+  "metadata_script_imports": [
+    "__future__",
+    "hashlib",
+    "json",
+    "pathlib",
+    "re",
+    "zipfile"
+  ],
+  "scientific_libraries_imported_by_metadata_script": false,
+  "registered_historical_text_files_unchanged_from_HEAD": true,
+  "scientific_payloads_read_for_QA": 0,
+  "scientific_gate_result": "STOP_NO_VERIFIABLE_LOCAL_PAIRING",
+  "note": "QA checks metadata integrity only; it is not an information-preservation or model-performance test."
+}

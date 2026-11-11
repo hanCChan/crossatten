@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-11-11T08:15:08.438866+00:00",
+  "work_package": "WISIG-RAW-EQ-M0-METADATA-v1",
+  "decision": "STOP_NO_VERIFIABLE_LOCAL_PAIRING",
+  "artifacts": [
+    {
+      "path": "ACCESS_LOG.json",
+      "bytes": 2805,
+      "sha256": "d41e8d4205e4e450967a9b578280bda1e3456e9a5affecf089b81bbf1e8e4407"
+    },
+    {
+      "path": "COUNT_SUPPORT_REFERENCE.json",
+      "bytes": 1597,
+      "sha256": "089e1e47d60711f81c0918e87826abc7c4187d795bcbeccd3855a1e3c9b80a8d"
+    },
+    {
+      "path": "DECISION.json",
+      "bytes": 2511,
+      "sha256": "32dc77f8afcf0ceedcfea25399c213356f3a86d889c3448fc61cda903e8b9f12"
+    },
+    {
+      "path": "LOCAL_METADATA_REVIEW.json",
+      "bytes": 29087,
+      "sha256": "b165d988f0a83d134653f17773518d5efcf86f617e5f0fa495a2fc2c9692aaa3"
+    },
+    {
+      "path": "metadata_review.py",
+      "bytes": 4995,
+      "sha256": "d65af66c9df2dfed3e133ea65c7576a797e05e447403fc196cf47d2e47808894"
+    },
+    {
+      "path": "PRE_REGISTRATION.json",
+      "bytes": 6440,
+      "sha256": "b3c0c90e745fc3fcfc2e849a71a385bc1173ed2c68edf78e1ce57c3c7a7ed701"
+    },
+    {
+      "path": "PREREGISTRATION.zh-CN.md",
+      "bytes": 3257,
+      "sha256": "e0b36da5e36b791833c10bdba6950bd370090275c18ccd79c504b84844faed23"
+    },
+    {
+      "path": "PUBLIC_SOURCE_MANIFEST.json",
+      "bytes": 3864,
+      "sha256": "cc088b9c644fea9947f2a3035c7ae82596a045edd8a0f4ed37dfae02ae1bfdc7"
+    },
+    {
+      "path": "public_sources/.gitattributes",
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "path": "public_sources/wisig-process-raw/LICENSE.md.txt",
+      "bytes": 1494,
+      "sha256": "5d13302991996ac66442e10e98b55ff7f69cf94ea00fc6c2b72d08ab87e86f11"
+    },
+    {
+      "path": "public_sources/wisig-process-raw/matlab_detection_screening/split_signal_fun.m.txt",
+      "bytes": 3226,
+      "sha256": "dbeb232ed868aa2945509aa4cb7e905ee7af57a134150a719457c2551e97e246"
+    },
+    {
+      "path": "public_sources/wisig-process-raw/matlab_equalization/equalize_channel.m.txt",
+      "bytes": 1797,
+      "sha256": "eb6be4dd87b07107897243054fc86086a78df34259243466758781ef7d929cbc"
+    },
+    {
+      "path": "public_sources/wisig-process-raw/matlab_equalization/equalize_dataset.m.txt",
+      "bytes": 1147,
+      "sha256": "67247aa3c936777e5fc2e7479caa24c81ac8a76c55ec49d765dba01654caa72b"
+    },
+    {
+      "path": "public_sources/wisig-process-raw/matlab_equalization/Readme.txt.txt",
+      "bytes": 390,
+      "sha256": "56291420d3945b3be1ebfa889e483cd21ab38ad3afd6871316d9ec8d7410c9ea"
+    },
+    {
+      "path": "public_sources/wisig-process-raw/python_pkl_creation/py/build_dataset_multirx.py.txt",
+      "bytes": 1855,
+      "sha256": "6f9b51384d82d5f77ffe6ba53f2525565860013dcc0ad632e3c63e94bf3ce3cd"
+    },
+    {
+      "path": "public_sources/wisig-subset-creation/data_utilities.py.txt",
+      "bytes": 9654,
+      "sha256": "03c6c2806bac2d5258cbaf0c8e12a2fde9e17495ae31c9d2938eeaba6b17768e"
+    },
+    {
+      "path": "public_sources/wisig-subset-creation/LICENSE.md.txt",
+      "bytes": 1494,
+      "sha256": "5d13302991996ac66442e10e98b55ff7f69cf94ea00fc6c2b72d08ab87e86f11"
+    },
+    {
+      "path": "QA_REPORT.json",
+      "bytes": 2473,
+      "sha256": "d15802c5f54dd1f8ef42828009587eb51b8ee884a9ad1f33a1166fffacb01756"
+    },
+    {
+      "path": "README.zh-CN.md",
+      "bytes": 6868,
+      "sha256": "1d5a24735be996edd976a9812dc844de2bbb4a5931ef58a2bc311904881bfee5"
+    }
+  ],
+  "manifest_self_hash_excluded": true,
+  "scientific_data_included": false,
+  "official_source_snapshots_licensed": true,
+  "historical_files_changed": false
+}

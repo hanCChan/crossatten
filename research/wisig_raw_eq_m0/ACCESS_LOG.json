@@ -1,0 +1,29 @@
+{
+  "work_package": "WISIG-RAW-EQ-M0-METADATA-v1",
+  "date": "2026-11-11",
+  "access_boundary": "Public source and aggregate metadata; existing local text/schema; filenames and ZIP central directory only",
+  "events": [
+    {"action": "read_user_attachment", "path": "C:/Users/HanChengcheng/.codex/attachments/7e6cc4cc-d7e5-4f92-99d5-c18b725dace3/已粘贴的文本.txt", "note": "Read explicitly as UTF-8 after the first PowerShell default-decoding output was garbled."},
+    {"action": "repository_text_discovery", "tool": "rg", "note": "Initial filename/matching-line search included existing historical report/registration text. No referenced scientific files, weights or prediction arrays were opened; no historical performance outcome selected this candidate."},
+    {"action": "read_existing_D4_and_preparation_source_text", "evidence": "LOCAL_METADATA_REVIEW.json", "scientific_loader_executed": false},
+    {"action": "browse_official_UCLA_WiSig_pages", "urls": ["https://cores.ee.ucla.edu/wisig/overview/", "https://cores.ee.ucla.edu/wisig/downloads/"]},
+    {"action": "fetch_pinned_official_source_text", "tool": "GitHub connector", "evidence": "PUBLIC_SOURCE_MANIFEST.json", "snapshots": 8, "upstream_code_executed": false},
+    {"action": "write_independent_metadata_registration", "note": "Initial official code and D4 text had already been inspected. No scientific payload or new scientific result had been opened. Root handles the actual Git commit; no claim of blinded empirical registration."},
+    {"action": "inventory_exact_local_directories", "evidence": "LOCAL_METADATA_REVIEW.json", "directories": 3, "filename_entries": 77},
+    {"action": "inspect_ZIP_central_directory", "path": "D:/crossatten/stage_1/data/wisig/ManyRx.kaggle.v1.zip", "members": ["ManyRx.pkl"], "member_payloads_read": 0, "members_extracted": 0},
+    {"action": "read_and_hash_allowlisted_local_text_metadata", "evidence": "LOCAL_METADATA_REVIEW.json", "files": 11, "note": "Saved scientific artifact hashes are quoted as prior provenance, not recalculated from scientific payloads."},
+    {"action": "read_sibling_public_count_JSON_and_admission_text", "evidence": "COUNT_SUPPORT_REFERENCE.json", "new_binary_metadata_decodes_by_M0": 0, "scientific_evaluation_data": false},
+    {"action": "close_at_G1_prerequisite", "evidence": "DECISION.json", "status": "STOP_NO_VERIFIABLE_LOCAL_PAIRING"}
+  ],
+  "totals_in_this_work_package": {
+    "new_scientific_dataset_downloads": 0,
+    "IQ_or_compact_pickle_payload_decodes": 0,
+    "scientific_NPZ_NPY_or_MAT_payload_reads": 0,
+    "scientific_weight_or_prediction_reads": 0,
+    "scientific_forward_passes": 0,
+    "classifier_or_probe_fits": 0,
+    "new_loss_implementations": 0,
+    "historical_file_modifications": 0,
+    "git_commits_by_this_agent": 0
+  }
+}

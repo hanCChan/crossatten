@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "status": "METADATA_ONLY_COMPLETE_CONFIRMATION_CLOSED",
+  "date_local": "2026-11-11",
+  "official_access": [
+    {
+      "kind": "html/source text",
+      "urls": [
+        "https://cores.ee.ucla.edu/downloads/datasets/wisig/",
+        "https://github.com/WiSig-dataset/wisig-examples",
+        "https://github.com/WiSig-dataset/wisig-subset-creation"
+      ],
+      "purpose": "Official counts, schema, repositories and provenance"
+    },
+    {
+      "kind": "pinned official metadata notebooks/source; never executed",
+      "paths": [
+        "wisig-examples/d002_analyze_compact_datasets.ipynb",
+        "wisig-examples/py/d001_plot_Full_WiSig_tx_rx_grid.py",
+        "wisig-subset-creation/002_FullWiSig_create_compact_datasets.ipynb",
+        "wisig-subset-creation/py/002_FullWiSig_create_compact_datasets.py"
+      ],
+      "purpose": "Count-only schema and explicit compact device/date lists"
+    },
+    {
+      "kind": "failed binary fetch via GitHub connector",
+      "attempts": 2,
+      "result": "HTTP400 GitHub Fetch only accepts UTF-8 text; no decoded metadata supplied"
+    },
+    {
+      "kind": "direct HTTPS metadata-only fallback",
+      "url": "https://raw.githubusercontent.com/WiSig-dataset/wisig-examples/afbf0a95bc888a7e3d9f94fa3442d36dace6e1fb/data_summary.pkl",
+      "bytes": 459700,
+      "git_blob_sha": "3df26215f59e349b1ba9da202de44fc503690039",
+      "sha256": "072ee403d2eed11a2f960a0cc18a7370afdc60fad96d3252ba83d66a91f34146",
+      "payload": "Only registered device/date lists and count matrices; restricted decode; cached locally in ignored artifacts"
+    }
+  ],
+  "local_access": [
+    {
+      "path": "lib/xa/wisig.py",
+      "kind": "source text fixed device list / historical first100 loading rule; not executed"
+    },
+    {
+      "path": "05-wisig/out/05-1-ManyRx-manifest.json",
+      "kind": "historical TX/date/RX metadata"
+    },
+    {
+      "path": "10-tifs-validation/final_receiver_metrics.csv",
+      "kind": "dataset/rx identity projection only; no performance field retained, displayed or analyzed"
+    },
+    {
+      "path": "research/standard_method_competition_c/CONFIRMATION_GATE.json",
+      "kind": "closed gate text read; not modified"
+    },
+    {
+      "path": "research/standard_method_competition_c/SOURCE_PLAN.json and ACCESS_SCOPE.json",
+      "kind": "top-level key inspection only"
+    },
+    {
+      "path": "D:/crossatten",
+      "kind": "bounded rg filename-only search of code/protocol/manifest text for exact candidate identifiers; no scientific payload read; no hit after exclusions; absence is not proof"
+    },
+    {
+      "path": "multiple_receiver_train.zip; multiple_receiver_test.zip; receiver_drift_dataset.zip",
+      "kind": "central directory names only; no entry opened"
+    }
+  ],
+  "scientific_iq_decodes": 0,
+  "weights_or_predictions_loaded": 0,
+  "performance_analyses": 0,
+  "scientific_training_attempts": 0,
+  "candidate_scoring_admitted": false,
+  "confirmation_access": "CLOSED"
+}

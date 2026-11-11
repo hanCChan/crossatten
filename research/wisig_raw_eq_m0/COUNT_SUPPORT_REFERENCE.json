@@ -1,0 +1,23 @@
+{
+  "scope": "Public aggregate signal-count metadata only; no IQ or performance endpoints",
+  "producer_work_package": "wisig_full_confirmation_metadata",
+  "support_file": "../wisig_full_confirmation_metadata/M0_SOURCE_COUNT_SUPPORT.json",
+  "support_file_sha256": "64ccb791f9eeeff9a6ff64be6a51b3f343040bdcaf7fdcec303ea9237c708dfa",
+  "official_repository": "WiSig-dataset/wisig-examples",
+  "official_commit": "afbf0a95bc888a7e3d9f94fa3442d36dace6e1fb",
+  "official_path": "data_summary.pkl",
+  "official_url": "https://github.com/WiSig-dataset/wisig-examples/blob/afbf0a95bc888a7e3d9f94fa3442d36dace6e1fb/data_summary.pkl",
+  "official_metadata_sha256": "072ee403d2eed11a2f960a0cc18a7370afdc60fad96d3252ba83d66a91f34146",
+  "file_admission": "../wisig_full_confirmation_metadata/METADATA_FILE_ADMISSION.json",
+  "static_inspection": "../wisig_full_confirmation_metadata/STATIC_PICKLE_INSPECTION.json",
+  "legal_scope": "fit18 x first two capture dates x historical ManyRx10TX",
+  "cell_count": 360,
+  "unequal_full_dataset_raw_eq_count_cells": 206,
+  "full_dataset_count_totals": {"raw": 333105, "eq": 317149},
+  "limitations": [
+    "These are Full-WiSig original count totals, not counts of mismatched rows among the local first-100 compact/cache rows.",
+    "Unequal counts do not establish cross-view identities, shared subset containment, the actual local drop locations or safety of equalization.",
+    "Even equal counts cannot prove row k identity.",
+    "This M0 agent read only the already decoded public aggregate JSON and source-admission text; it did not decode any pickle."
+  ]
+}

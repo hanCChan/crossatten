@@ -1,0 +1,37 @@
+{
+  "registration_id": "WISIG-RAW-EQ-M0-METADATA-v1",
+  "status": "STOP_NO_VERIFIABLE_LOCAL_PAIRING",
+  "closed": true,
+  "scientific_go": false,
+  "gate_results": {
+    "G0_SOURCE_AND_PROCESSING": "PASS_METADATA_ONLY",
+    "G1_LOCAL_PACKET_IDENTITY": "NOT_VERIFIABLE_FROM_CURRENT_REVIEWED_LOCAL_PROVENANCE",
+    "G2_TX_INFORMATION_SAFETY": "NOT_ASSESSED_G1_NOT_PASSED",
+    "G3_CROSS_RX_RELEVANCE": "NOT_ASSESSED_G1_NOT_PASSED"
+  },
+  "decisive_evidence": [
+    "Pinned official equalize_channel can return an empty output after failed detection or insufficient length.",
+    "Pinned official equalize_dataset appends only nonempty outputs and saves packet_log without original pkt_i or a retained packet-ID map.",
+    "Pinned official pkl packaging saves signal arrays plus node_list; compact packaging separately truncates raw and eq streams by max_sig without joining packet identities.",
+    "Reviewed local D4, INPUT_REGISTRY, preparation source, DOWNLOAD_MANIFEST and fit_manifest establish raw-only caches/provenance but no verified cross-view identity chain.",
+    "Bounded directory/ZIP central-directory review found no external packet mapping sidecar. Local compact pickle payload was deliberately not decoded, so absence of every possible internal field is not claimed."
+  ],
+  "interpretation": "Current local materials do not justify treating row k in raw and eq as the same detected packet. This is neither proof that all rows are mismatched nor universal impossibility of reconstructing valid pairs.",
+  "not_concluded": [
+    "No measured TX-information preservation or destruction conclusion",
+    "No measured cross-RX relevance of Raw/EQ differences",
+    "No receiver-hardware-only causal intervention",
+    "No benefit or failure claim for an untrained dual-view method"
+  ],
+  "actions": {
+    "new_scientific_payload_decodes": 0,
+    "scientific_dataset_downloads": 0,
+    "scientific_forward_passes": 0,
+    "new_classifier_fits": 0,
+    "dual_view_training_authorized": false,
+    "new_loss_authorized": false,
+    "automatic_replay_or_renamed_retry_authorized": false
+  },
+  "future_boundary": "Legally scoped replay of original processing could in principle preserve/reconstruct IDs, but it is outside this closed metadata task. It is not started or scheduled here. Any new source payload analysis or training requires its own concrete scope, committed protocol and engineering acceptance.",
+  "historical_stops": "Unchanged; no historical files modified. C remains independent."
+}

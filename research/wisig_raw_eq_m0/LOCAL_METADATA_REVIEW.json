@@ -1,0 +1,896 @@
+{
+  "scope": "text_schema_and_filename_metadata_only",
+  "text_files": [
+    {
+      "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\classification_failure_diagnostics\\D4_FRONTEND_AUDIT.zh-CN.md",
+      "exists": true,
+      "size_bytes": 5144,
+      "sha256": "ff0901f12eac2db08fdeb9f456703ceb24d7bb95889d8992f34825ab557bc790",
+      "identity_related_text_lines": [
+        {
+          "line": 18,
+          "text": "**同一输入、不同模型：可按确定的数据血缘重建顺序对应。** source-validation 两模型都调用相同冻结 val_ids，逐段顺序预测；held-source 使用相同顺序的 RX/day 单元和相同单元字节哈希，之后顺序预测。运行时逐行核对 y/rx/day 与 source 索引标签。旧预测缺少独立 immutable packet ID，因此这一结论依赖被审计的提取与预测程序，没有独立重新读取 IQ 来核验。"
+        },
+        {
+          "line": 22,
+          "text": "**未均衡 / 均衡版本：本地逐包对应尚未核验。** [WiSig 官方说明](https://cores.ee.ucla.edu/downloads/datasets/wisig/) 描述了同一前导码片段的两个版本，但现有科学缓存只保存版本 0、TX 标签与顺序，没有携带跨版本包 ID、版本 1 的逐包预测或已验收对应表。`equalized_list=[0,1]`、相同 TX/RX/day 标签或相同包数都不足以独立证明本地提取结果逐行相同包。"
+        }
+      ]
+    },
+    {
+      "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\classification_failure_diagnostics\\INPUT_REGISTRY.json",
+      "exists": true,
+      "size_bytes": 588073,
+      "sha256": "3e46db19689d619e4a82e0748292c1edde0a97a2244afbc23879e5b9c7951332",
+      "schema": {
+        "base_commit": {
+          "type": "str"
+        },
+        "client_date": {
+          "type": "str"
+        },
+        "arrays": {
+          "type": "list",
+          "length": 36,
+          "object_fields": [
+            "allowed_days",
+            "allowed_rx",
+            "arm",
+            "expected_metrics",
+            "fold",
+            "keys",
+            "kind",
+            "name",
+            "path",
+            "role",
+            "rx_names",
+            "sha256"
+          ]
+        },
+        "metadata_sha256": {
+          "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\registration.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f0_first_s16001\\fit_manifest.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f0__first__s18101\\config.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f0__first__s18101\\config.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f0__first__s18101\\metrics.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f0__first__s18101\\metrics.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f0__first__s18101\\held_metrics.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f0__first__s18101\\held_metrics.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\B0__f0__first__s18101\\reference.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\B0__f0__first__s18101\\held_metrics.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f1_first_s16001\\fit_manifest.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f1__first__s18101\\config.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f1__first__s18101\\config.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f1__first__s18101\\metrics.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f1__first__s18101\\metrics.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f1__first__s18101\\held_metrics.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f1__first__s18101\\held_metrics.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\B0__f1__first__s18101\\reference.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\B0__f1__first__s18101\\held_metrics.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_manifest.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f2__first__s18101\\config.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f2__first__s18101\\config.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f2__first__s18101\\metrics.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f2__first__s18101\\metrics.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f2__first__s18101\\held_metrics.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f2__first__s18101\\held_metrics.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\B0__f2__first__s18101\\reference.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\B0__f2__first__s18101\\held_metrics.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f3_first_s16001\\fit_manifest.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f3__first__s18101\\config.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f3__first__s18101\\config.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f3__first__s18101\\metrics.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f3__first__s18101\\metrics.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f3__first__s18101\\held_metrics.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f3__first__s18101\\held_metrics.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\B0__f3__first__s18101\\reference.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\B0__f3__first__s18101\\held_metrics.json": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\classification-failure-diagnostics\\13-mixer-cfo-mechanisms\\data.py": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\classification-failure-diagnostics\\17-rx-distortion\\s17_data.py": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\classification-failure-diagnostics\\19-tx-spectral-evidence\\s19_data.py": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\classification-failure-diagnostics\\19-tx-spectral-evidence\\s19_train.py": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\classification-failure-diagnostics\\19-tx-spectral-evidence\\s19_execute.py": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\classification-failure-diagnostics\\20-asknet-source-comparison\\s20_run.py": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\classification-failure-diagnostics\\lib\\xa\\wisig.py": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\classification-failure-diagnostics\\lib\\xa\\explore_models.py": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\classification-failure-diagnostics\\lib\\xa\\frontends.py": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\classification-failure-diagnostics\\13-mixer-cfo-mechanisms\\wifi.py": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\classification-failure-diagnostics\\09-phase-invariance\\phase_features.py": {
+            "type": "str"
+          },
+          "D:\\crossatten\\worktrees\\classification-failure-diagnostics\\05-wisig\\out\\05-1-ManyRx-manifest.json": {
+            "type": "str"
+          }
+        },
+        "folds": {
+          "type": "list",
+          "length": 4,
+          "object_fields": [
+            "data_seed",
+            "fit_rx",
+            "fold",
+            "forbidden_target_rx",
+            "held_rx",
+            "held_sources",
+            "pairing_evidence",
+            "recipe_confound",
+            "rx_names",
+            "split_seed",
+            "train_indices_array_sha256",
+            "train_packets",
+            "val_indices_array_sha256",
+            "val_packets"
+          ]
+        },
+        "prediction_arrays_opened_during_preparation": {
+          "type": "int"
+        },
+        "iq_arrays_opened": {
+          "type": "int"
+        },
+        "checkpoint_loads": {
+          "type": "int"
+        }
+      },
+      "identity_related_text_lines": [
+        {
+          "line": 29024,
+          "text": "      \"pairing_evidence\": \"Same S19 split hashes; deterministic sequential predict(); ordered held cell hashes match; archived labels checked on load. No immutable packet IDs stored.\","
+        },
+        {
+          "line": 29161,
+          "text": "      \"pairing_evidence\": \"Same S19 split hashes; deterministic sequential predict(); ordered held cell hashes match; archived labels checked on load. No immutable packet IDs stored.\","
+        },
+        {
+          "line": 29298,
+          "text": "      \"pairing_evidence\": \"Same S19 split hashes; deterministic sequential predict(); ordered held cell hashes match; archived labels checked on load. No immutable packet IDs stored.\","
+        },
+        {
+          "line": 29435,
+          "text": "      \"pairing_evidence\": \"Same S19 split hashes; deterministic sequential predict(); ordered held cell hashes match; archived labels checked on load. No immutable packet IDs stored.\","
+        }
+      ]
+    },
+    {
+      "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\05-wisig\\README.md",
+      "exists": true,
+      "size_bytes": 2784,
+      "sha256": "c7d64d6a1f41828506eccbc4952bdc69e920f773a9ba29f0fa044a9fe64ef775",
+      "identity_related_text_lines": []
+    },
+    {
+      "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\05-wisig\\05-1-build-wisig-cache.py",
+      "exists": true,
+      "size_bytes": 1609,
+      "sha256": "e9a4dd51c6b77687cfe17331ffc1c7e896b2796ba87752a4a37f2e143364efd7",
+      "identity_related_text_lines": []
+    },
+    {
+      "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\05-wisig\\out\\05-1-ManyRx-manifest.json",
+      "exists": true,
+      "size_bytes": 19117,
+      "sha256": "1456e287b03f6e07e718617ca6d7498c644068615e2d7e6ca8772589a456d896",
+      "schema": {
+        "dataset": {
+          "type": "str"
+        },
+        "tx_list": {
+          "type": "list",
+          "length": 10,
+          "object_fields": []
+        },
+        "capture_dates": {
+          "type": "list",
+          "length": 4,
+          "object_fields": []
+        },
+        "official_rx_order": {
+          "type": "list",
+          "length": 32,
+          "object_fields": []
+        },
+        "non_equalized_index": {
+          "type": "int"
+        },
+        "first_packets_per_cell": {
+          "type": "int"
+        },
+        "counts": {
+          "1-1": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "1-19": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "1-20": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "2-1": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "2-19": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "3-19": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "7-7": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "7-14": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "8-7": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "8-8": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "8-14": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "13-7": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "13-14": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "14-7": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "18-2": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "18-19": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "19-1": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "19-2": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "19-19": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "19-20": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "20-1": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "20-19": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "20-20": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "23-1": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "23-3": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "23-5": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "23-6": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "23-7": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "24-5": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "24-6": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "24-13": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "24-16": {
+            "type": "dict",
+            "keys": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          }
+        },
+        "checks": {
+          "type": "list",
+          "length": 4,
+          "object_fields": [
+            "expected_train",
+            "expected_val",
+            "fold",
+            "matches",
+            "pool",
+            "test_rx",
+            "train",
+            "train_rx",
+            "val"
+          ]
+        },
+        "counts_match": {
+          "type": "bool"
+        },
+        "official_layout": {
+          "type": "str"
+        },
+        "own_layout": {
+          "type": "str"
+        },
+        "source_sha256": {
+          "type": "str"
+        },
+        "archive_sha256": {
+          "type": "str"
+        },
+        "source": {
+          "type": "str"
+        }
+      },
+      "saved_provenance": {
+        "dataset": "ManyRx",
+        "source": "user's existing Kaggle v1 copy",
+        "source_sha256": "f634d90585167437d196c89b7c5a344903180bf4f5a55d02d175b8074e009d9a",
+        "archive_sha256": "b0eca705816b03a47290286fd23ca1a10e02c6f9bd29b5461cfd92c13a86fbdd",
+        "non_equalized_index": 0,
+        "first_packets_per_cell": 100,
+        "tx_list": [
+          "1-10",
+          "11-1",
+          "14-10",
+          "14-7",
+          "17-11",
+          "20-15",
+          "20-19",
+          "7-11",
+          "7-14",
+          "8-20"
+        ],
+        "capture_dates": [
+          "2021_03_01",
+          "2021_03_08",
+          "2021_03_15",
+          "2021_03_23"
+        ]
+      },
+      "identity_related_text_lines": []
+    },
+    {
+      "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\lib\\xa\\wisig.py",
+      "exists": true,
+      "size_bytes": 6098,
+      "sha256": "b4127fba87f5603704c92d2221743c8dedf6898e45c8216b9ddb84b32f42ad67",
+      "identity_related_text_lines": []
+    },
+    {
+      "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\13-mixer-cfo-mechanisms\\data.py",
+      "exists": true,
+      "size_bytes": 5977,
+      "sha256": "578fd207105e5375094bd22a12ec710fd259379c4b1c627d962251256bd71e9e",
+      "identity_related_text_lines": []
+    },
+    {
+      "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\13-mixer-cfo-mechanisms\\pickle_index.py",
+      "exists": true,
+      "size_bytes": 3084,
+      "sha256": "52925d018fbad46396dbf809379e2b8961b368179ba1ef64c4fc9c5031ed319a",
+      "identity_related_text_lines": []
+    },
+    {
+      "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\17-rx-distortion\\s17_data.py",
+      "exists": true,
+      "size_bytes": 2974,
+      "sha256": "68758ba670e687e3097396504288a7b6cae01173b58ac8b52e47cb3096ffa1d9",
+      "identity_related_text_lines": []
+    },
+    {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_manifest.json",
+      "exists": true,
+      "size_bytes": 1194,
+      "sha256": "0fb3a069d62804751a1327ee44ea34f422808083f5db2af0ef52e331db70b88f",
+      "schema": {
+        "rx_names": {
+          "type": "list",
+          "length": 24,
+          "object_fields": []
+        },
+        "fit_rx": {
+          "type": "list",
+          "length": 18,
+          "object_fields": []
+        },
+        "held_rx": {
+          "type": "list",
+          "length": 6,
+          "object_fields": []
+        },
+        "sha256": {
+          "fit_day.npy": {
+            "type": "str"
+          },
+          "fit_rx.npy": {
+            "type": "str"
+          },
+          "fit_x.npy": {
+            "type": "str"
+          },
+          "fit_y.npy": {
+            "type": "str"
+          },
+          "train_ids.npy": {
+            "type": "str"
+          },
+          "val_ids.npy": {
+            "type": "str"
+          }
+        },
+        "source_only": {
+          "type": "bool"
+        }
+      },
+      "identity_related_text_lines": []
+    },
+    {
+      "path": "D:\\crossatten\\stage_1\\data\\wisig\\DOWNLOAD_MANIFEST.json",
+      "exists": true,
+      "size_bytes": 1845,
+      "sha256": "dbfa54ebea8b5b1f8f19a60af33d1272fbbe1e976e7abe88af44270a6ce7daf8",
+      "schema": {
+        "official_dataset_page": {
+          "type": "str"
+        },
+        "datasets": {
+          "ManySig": {
+            "type": "dict",
+            "keys": [
+              "archive",
+              "archive_bytes",
+              "archive_matches_history",
+              "archive_sha256",
+              "download_url",
+              "historical_manifest",
+              "origin",
+              "pickle",
+              "pickle_bytes",
+              "pickle_matches_history",
+              "pickle_sha256",
+              "verified_at"
+            ]
+          },
+          "ManyRx": {
+            "type": "dict",
+            "keys": [
+              "archive",
+              "archive_bytes",
+              "archive_matches_history",
+              "archive_sha256",
+              "download_url",
+              "historical_manifest",
+              "origin",
+              "pickle",
+              "pickle_bytes",
+              "pickle_matches_history",
+              "pickle_sha256",
+              "verified_at"
+            ]
+          }
+        },
+        "preparation": {
+          "type": "str"
+        },
+        "complete": {
+          "type": "bool"
+        }
+      },
+      "identity_related_text_lines": []
+    }
+  ],
+  "directory_inventories": [
+    {
+      "path": "D:\\crossatten\\stage_1\\data\\wisig",
+      "exists": true,
+      "filenames_only": [
+        "DOWNLOAD_MANIFEST.json",
+        "ManyRx.kaggle.v1.zip",
+        "ManyRx.pkl",
+        "ManySig.official.zip",
+        "ManySig.pkl",
+        "README.local.zh-CN.md"
+      ],
+      "json_sidecar_filenames": [
+        "DOWNLOAD_MANIFEST.json"
+      ],
+      "mapping_named_files": []
+    },
+    {
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\wisig\\ManyRx",
+      "exists": true,
+      "filenames_only": [
+        "rx_1-19_day1.npz",
+        "rx_1-19_day2.npz",
+        "rx_1-1_day1.npz",
+        "rx_1-1_day2.npz",
+        "rx_1-20_day1.npz",
+        "rx_1-20_day2.npz",
+        "rx_13-14_day1.npz",
+        "rx_13-14_day2.npz",
+        "rx_13-7_day1.npz",
+        "rx_13-7_day2.npz",
+        "rx_14-7_day1.npz",
+        "rx_14-7_day2.npz",
+        "rx_18-19_day1.npz",
+        "rx_18-19_day2.npz",
+        "rx_18-2_day1.npz",
+        "rx_18-2_day2.npz",
+        "rx_19-19_day1.npz",
+        "rx_19-19_day2.npz",
+        "rx_19-1_day1.npz",
+        "rx_19-1_day2.npz",
+        "rx_19-20_day1.npz",
+        "rx_19-20_day2.npz",
+        "rx_19-2_day1.npz",
+        "rx_19-2_day2.npz",
+        "rx_2-19_day1.npz",
+        "rx_2-19_day2.npz",
+        "rx_2-1_day1.npz",
+        "rx_2-1_day2.npz",
+        "rx_20-19_day1.npz",
+        "rx_20-19_day2.npz",
+        "rx_20-1_day1.npz",
+        "rx_20-1_day2.npz",
+        "rx_20-20_day1.npz",
+        "rx_20-20_day2.npz",
+        "rx_23-1_day1.npz",
+        "rx_23-1_day2.npz",
+        "rx_23-3_day1.npz",
+        "rx_23-3_day2.npz",
+        "rx_23-5_day1.npz",
+        "rx_23-5_day2.npz",
+        "rx_23-6_day1.npz",
+        "rx_23-6_day2.npz",
+        "rx_23-7_day1.npz",
+        "rx_23-7_day2.npz",
+        "rx_24-13_day1.npz",
+        "rx_24-13_day2.npz",
+        "rx_24-16_day1.npz",
+        "rx_24-16_day2.npz",
+        "rx_24-5_day1.npz",
+        "rx_24-5_day2.npz",
+        "rx_24-6_day1.npz",
+        "rx_24-6_day2.npz",
+        "rx_3-19_day1.npz",
+        "rx_3-19_day2.npz",
+        "rx_7-14_day1.npz",
+        "rx_7-14_day2.npz",
+        "rx_7-7_day1.npz",
+        "rx_7-7_day2.npz",
+        "rx_8-14_day1.npz",
+        "rx_8-14_day2.npz",
+        "rx_8-7_day1.npz",
+        "rx_8-7_day2.npz",
+        "rx_8-8_day1.npz",
+        "rx_8-8_day2.npz"
+      ],
+      "json_sidecar_filenames": [],
+      "mapping_named_files": []
+    },
+    {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001",
+      "exists": true,
+      "filenames_only": [
+        "fit_day.npy",
+        "fit_manifest.json",
+        "fit_rx.npy",
+        "fit_x.npy",
+        "fit_y.npy",
+        "train_ids.npy",
+        "val_ids.npy"
+      ],
+      "json_sidecar_filenames": [
+        "fit_manifest.json"
+      ],
+      "mapping_named_files": []
+    }
+  ],
+  "archive_central_directory": {
+    "path": "D:\\crossatten\\stage_1\\data\\wisig\\ManyRx.kaggle.v1.zip",
+    "entries": [
+      {
+        "name": "ManyRx.pkl",
+        "uncompressed_bytes": 2037337668,
+        "compressed_bytes": 1310655125,
+        "crc32": "dd1368d7"
+      }
+    ],
+    "member_payloads_read": 0
+  },
+  "scientific_payload_decodes": 0,
+  "scientific_forward_passes": 0,
+  "scientific_fits": 0
+}
