@@ -1,0 +1,16 @@
+{
+  "scope": "Synthetic numerical checks only; no experiment data",
+  "tests_passed": 7,
+  "checks": [
+    "Margin normalization is invariant to positive score scaling and common shifts",
+    "Zero-margin ties are distinct from argmax accuracy",
+    "CE is finite for extreme logits",
+    "Zero-support cells remain missing, not zero-risk",
+    "Paired error counts and oracle identity are consistent",
+    "Equal-group tail mean uses fractional boundary weight",
+    "Macro-F1 retains absent classes and Wilson handles missing support"
+  ],
+  "command": "python -m unittest discover -s research/classification_failure_diagnostics -p test_*.py -v",
+  "new_model_fits": 0,
+  "iq_reads": 0
+}

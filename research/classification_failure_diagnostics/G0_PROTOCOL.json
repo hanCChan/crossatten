@@ -1,0 +1,59 @@
+{
+  "client_date": "2026-11-11",
+  "base_commit": "7ae38a7b27521c9dc45d2ed1a332e5e584c3e8b8",
+  "stage": "Frozen classification failure diagnostics",
+  "status": "REGISTERED_EXPLORATORY_REANALYSIS",
+  "confirmatory_or_novel_algorithm": false,
+  "new_classifier_fits": 0,
+  "model_forward_calls": 0,
+  "source_iq_reads": 0,
+  "target_reads": 0,
+  "dates_3_4_reads": 0,
+  "hypotheses": [
+    "decision-margin failure",
+    "environment-conditioned statistical change",
+    "source training-group risk imbalance"
+  ],
+  "analyses": [
+    "TX x RX x day support, accuracy, CE, raw/scaled margins, hardest negatives and confusion",
+    "fit-validation vs held-source; matching TX/day strata; score-scale and calibration caveats",
+    "same-input B0/ASK disagreement, common errors, diagnostic oracle ceiling",
+    "same-RX/day frozen-input cross-fold variation with identical cell hashes, never across RX",
+    "training label support, missing cells, high-risk concentration and day rank stability",
+    "static audit of non-equalized/equalized provenance and frontends; no new IQ"
+  ],
+  "predefined_descriptive_settings": {
+    "group_tail_fraction": 0.2,
+    "group_concentration_fraction": 0.1,
+    "high_confidence_probability": 0.9,
+    "calibration_bins": 15,
+    "quantiles": [
+      0.05,
+      0.25,
+      0.5,
+      0.75,
+      0.95
+    ],
+    "rx_bootstrap_draws": 5000,
+    "bootstrap_seed": 21111
+  },
+  "normalized_margin": "(true logit - largest wrong logit) / std(all centered logits), zero std -> 0; diagnostic, not physical boundary distance",
+  "no_new_go_thresholds": true,
+  "no_perturbation_search": true,
+  "forbidden": [
+    "IQ, checkpoint or feature-cache loads",
+    "new inputs/equalized arrays",
+    "target CRD/dates3-4/ManySig/Shen",
+    "unmatched cross-RX packet pairing",
+    "retest S17B FIR/S18 subspace/S19 teacher gate",
+    "changing historical STOP or fitting a new classifier"
+  ],
+  "inference": "All existing held-source results are exploratory; repeated folds/packets/seeds are not new independent RX.",
+  "code_sha256": {
+    "diagnose.py": "ca289e7906dc5e10f0616ff2c86b1f5dc546c3701bf1b12d4dfbf9a4d30c6b72",
+    "prepare.py": "769e29ec72919b3cd2c981526a21b11f122e3da9d074a8270f317c1b7678d4a6",
+    "stats.py": "af26aae1fa7ddd069d154576aa363e4da940f381c4a47138d0470cf8d695cc46",
+    "test_stats.py": "d85ef2f799cd5f43e6323afcafdb7f7118905857b79ee12bd485c060de62de30"
+  },
+  "registry_sha256": "3e46db19689d619e4a82e0748292c1edde0a97a2244afbc23879e5b9c7951332"
+}
