@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "prediction_files_independently_rescored": 16,
+  "tx_rx_day_groups_checked": 3840,
+  "paired_groups_checked": 1920,
+  "archived_rx_confusions_exactly_reproduced": 192,
+  "registered_code_unchanged": true,
+  "historical_tree_diff_isolated": true,
+  "original_array_accesses": 36,
+  "qa_prediction_rereads": 16,
+  "unique_registered_array_paths": 36,
+  "iq_reads": 0,
+  "checkpoint_loads": 0,
+  "model_forward_calls": 0,
+  "new_classifier_fits": 0,
+  "scope": "Independent numerical checks; does not establish causal RX mechanisms, new blind evidence or certified robustness"
+}

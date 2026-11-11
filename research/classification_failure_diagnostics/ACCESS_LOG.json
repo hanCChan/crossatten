@@ -1,0 +1,368 @@
+{
+  "records": [
+    {
+      "kind": "sealed_predictions",
+      "fold": 0,
+      "path": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f0__first__s18101\\source_val_predictions.npz",
+      "sha256": "96c898850e79fb562c7236bc60d243fd8244cf564dfac9004f626be8e065d5cb",
+      "role": "fit_validation",
+      "arm": "B0",
+      "array_name": null,
+      "rows": 10401
+    },
+    {
+      "kind": "sealed_predictions",
+      "fold": 0,
+      "path": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f0__first__s18101\\held_predictions.npz",
+      "sha256": "f50f7e4683485cc1891a841fac3b36e63aa461d9e3c27596a75d8d243298b8c6",
+      "role": "held_source",
+      "arm": "B0",
+      "array_name": null,
+      "rows": 11800
+    },
+    {
+      "kind": "sealed_predictions",
+      "fold": 0,
+      "path": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f0__first__s18101\\source_val_predictions.npz",
+      "sha256": "d99bd60829bbaa4c4dbd31ff677448254df7353c075cebfb9c3c70666122906a",
+      "role": "fit_validation",
+      "arm": "ASK",
+      "array_name": null,
+      "rows": 10401
+    },
+    {
+      "kind": "sealed_predictions",
+      "fold": 0,
+      "path": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f0__first__s18101\\held_predictions.npz",
+      "sha256": "98cf6e0c71de9703fcc3e4287d45031f68038e518698df1960b1eb165d45bc17",
+      "role": "held_source",
+      "arm": "ASK",
+      "array_name": null,
+      "rows": 11800
+    },
+    {
+      "kind": "source_labels_or_split_indices",
+      "fold": 0,
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f0_first_s16001\\fit_y.npy",
+      "sha256": "88ca7150819c63e1cfd73e783e7b6555d970726b3d18470d447ba254620e2e00",
+      "role": "fit_source_metadata",
+      "arm": null,
+      "array_name": "fit_y",
+      "rows": 34668
+    },
+    {
+      "kind": "source_labels_or_split_indices",
+      "fold": 0,
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f0_first_s16001\\fit_rx.npy",
+      "sha256": "73e7e1c5f64b23eebaf3d5fa176b1049da800133fb96d123742fe602546e98ac",
+      "role": "fit_source_metadata",
+      "arm": null,
+      "array_name": "fit_rx",
+      "rows": 34668
+    },
+    {
+      "kind": "source_labels_or_split_indices",
+      "fold": 0,
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f0_first_s16001\\fit_day.npy",
+      "sha256": "a02f1308a5624861d62ce1abaac001b494aaa4ccd65fa0dd832dcfe30b67b2c7",
+      "role": "fit_source_metadata",
+      "arm": null,
+      "array_name": "fit_day",
+      "rows": 34668
+    },
+    {
+      "kind": "source_labels_or_split_indices",
+      "fold": 0,
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f0_first_s16001\\train_ids.npy",
+      "sha256": "35222d9edb897476681663e9373ad1a31708977d54886f1a39b66b7e547fcefc",
+      "role": "fit_source_metadata",
+      "arm": null,
+      "array_name": "train_ids",
+      "rows": 24267
+    },
+    {
+      "kind": "source_labels_or_split_indices",
+      "fold": 0,
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f0_first_s16001\\val_ids.npy",
+      "sha256": "fad5db16254ce8960724ca9d685845fa498d59c5fc2927d7da6e7198830f4693",
+      "role": "fit_source_metadata",
+      "arm": null,
+      "array_name": "val_ids",
+      "rows": 10401
+    },
+    {
+      "kind": "sealed_predictions",
+      "fold": 1,
+      "path": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f1__first__s18101\\source_val_predictions.npz",
+      "sha256": "c64450d07305b351ce7ce6150d9cf02f1464636f46a2ed08ebd5d9e5a363f55a",
+      "role": "fit_validation",
+      "arm": "B0",
+      "array_name": null,
+      "rows": 10341
+    },
+    {
+      "kind": "sealed_predictions",
+      "fold": 1,
+      "path": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f1__first__s18101\\held_predictions.npz",
+      "sha256": "35e86fd786c4c8219caeaea7a84615fe1b018e68a06c4e8074dfaad161b4c674",
+      "role": "held_source",
+      "arm": "B0",
+      "array_name": null,
+      "rows": 12000
+    },
+    {
+      "kind": "sealed_predictions",
+      "fold": 1,
+      "path": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f1__first__s18101\\source_val_predictions.npz",
+      "sha256": "596adddc4c64aaee9202d9677b23bc9c54b2f10382a5650384c5f2dcc525d37e",
+      "role": "fit_validation",
+      "arm": "ASK",
+      "array_name": null,
+      "rows": 10341
+    },
+    {
+      "kind": "sealed_predictions",
+      "fold": 1,
+      "path": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f1__first__s18101\\held_predictions.npz",
+      "sha256": "71fe8ec74c1737ac3fcd087a59f745d534f7f5bdf103e92ad5c5e7a6e97c0bc8",
+      "role": "held_source",
+      "arm": "ASK",
+      "array_name": null,
+      "rows": 12000
+    },
+    {
+      "kind": "source_labels_or_split_indices",
+      "fold": 1,
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f1_first_s16001\\fit_y.npy",
+      "sha256": "03f8e969ae3526f806d20d9358aac9d93bea0e9e18a52959eae5ca6643df5c03",
+      "role": "fit_source_metadata",
+      "arm": null,
+      "array_name": "fit_y",
+      "rows": 34468
+    },
+    {
+      "kind": "source_labels_or_split_indices",
+      "fold": 1,
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f1_first_s16001\\fit_rx.npy",
+      "sha256": "f7debabd056419feae9f3cf9b2e9e2c71d3b3acc26c3a6e7e527372574c450b0",
+      "role": "fit_source_metadata",
+      "arm": null,
+      "array_name": "fit_rx",
+      "rows": 34468
+    },
+    {
+      "kind": "source_labels_or_split_indices",
+      "fold": 1,
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f1_first_s16001\\fit_day.npy",
+      "sha256": "28e3cba59ffba62afff815e673ac396d96d118380e97e29448bc026ded76123c",
+      "role": "fit_source_metadata",
+      "arm": null,
+      "array_name": "fit_day",
+      "rows": 34468
+    },
+    {
+      "kind": "source_labels_or_split_indices",
+      "fold": 1,
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f1_first_s16001\\train_ids.npy",
+      "sha256": "1f8d5f316d0ed2e80f1812411b6fc1a617d8c56df824cbd2f1994f2799ea78e5",
+      "role": "fit_source_metadata",
+      "arm": null,
+      "array_name": "train_ids",
+      "rows": 24127
+    },
+    {
+      "kind": "source_labels_or_split_indices",
+      "fold": 1,
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f1_first_s16001\\val_ids.npy",
+      "sha256": "7d4275cfa0a117772dad7e9ccb5b83cde91b75c67f508dc4ec4c8f69c5a78026",
+      "role": "fit_source_metadata",
+      "arm": null,
+      "array_name": "val_ids",
+      "rows": 10341
+    },
+    {
+      "kind": "sealed_predictions",
+      "fold": 2,
+      "path": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f2__first__s18101\\source_val_predictions.npz",
+      "sha256": "d10533d826440bc4bb27a99041bc1e796e1cb1ee1d4c9e2c81e8d14185f1f503",
+      "role": "fit_validation",
+      "arm": "B0",
+      "array_name": null,
+      "rows": 10401
+    },
+    {
+      "kind": "sealed_predictions",
+      "fold": 2,
+      "path": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f2__first__s18101\\held_predictions.npz",
+      "sha256": "0d8b2b030de2d398fb4be430ffb2d04d6b2ec14d1181c1a3cae87d351ec44150",
+      "role": "held_source",
+      "arm": "B0",
+      "array_name": null,
+      "rows": 12000
+    },
+    {
+      "kind": "sealed_predictions",
+      "fold": 2,
+      "path": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f2__first__s18101\\source_val_predictions.npz",
+      "sha256": "652ff7b6c3cacc2c99222b5f89c1c69ba186661b23a35b0719ac1e074d60c00f",
+      "role": "fit_validation",
+      "arm": "ASK",
+      "array_name": null,
+      "rows": 10401
+    },
+    {
+      "kind": "sealed_predictions",
+      "fold": 2,
+      "path": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f2__first__s18101\\held_predictions.npz",
+      "sha256": "2c96956ac755a3f45c015094912ce91053a877a0117add0e291687109e01f3e4",
+      "role": "held_source",
+      "arm": "ASK",
+      "array_name": null,
+      "rows": 12000
+    },
+    {
+      "kind": "source_labels_or_split_indices",
+      "fold": 2,
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_y.npy",
+      "sha256": "dddba3c9e165ccb0b117ac6cd0eeaac2dc8603f71a541358f06348895a72fef4",
+      "role": "fit_source_metadata",
+      "arm": null,
+      "array_name": "fit_y",
+      "rows": 34668
+    },
+    {
+      "kind": "source_labels_or_split_indices",
+      "fold": 2,
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_rx.npy",
+      "sha256": "0d5e93eb6d0dd5cd83b3f7a79086e608b57683e82a8824b239f219909670c683",
+      "role": "fit_source_metadata",
+      "arm": null,
+      "array_name": "fit_rx",
+      "rows": 34668
+    },
+    {
+      "kind": "source_labels_or_split_indices",
+      "fold": 2,
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_day.npy",
+      "sha256": "09378871910c2dfbb7c232f3aa2251372411c0be005f95c723c72aa50c520192",
+      "role": "fit_source_metadata",
+      "arm": null,
+      "array_name": "fit_day",
+      "rows": 34668
+    },
+    {
+      "kind": "source_labels_or_split_indices",
+      "fold": 2,
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\train_ids.npy",
+      "sha256": "35222d9edb897476681663e9373ad1a31708977d54886f1a39b66b7e547fcefc",
+      "role": "fit_source_metadata",
+      "arm": null,
+      "array_name": "train_ids",
+      "rows": 24267
+    },
+    {
+      "kind": "source_labels_or_split_indices",
+      "fold": 2,
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\val_ids.npy",
+      "sha256": "fad5db16254ce8960724ca9d685845fa498d59c5fc2927d7da6e7198830f4693",
+      "role": "fit_source_metadata",
+      "arm": null,
+      "array_name": "val_ids",
+      "rows": 10401
+    },
+    {
+      "kind": "sealed_predictions",
+      "fold": 3,
+      "path": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f3__first__s18101\\source_val_predictions.npz",
+      "sha256": "412af05ffb401152d3359dcf9ff08cb5c51533b36726685919ccf3d678399b55",
+      "role": "fit_validation",
+      "arm": "B0",
+      "array_name": null,
+      "rows": 10560
+    },
+    {
+      "kind": "sealed_predictions",
+      "fold": 3,
+      "path": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f3__first__s18101\\held_predictions.npz",
+      "sha256": "69f47bcf725753e5246746b5e5d8d6a574060d58db9a0745f88c77551a3c9e51",
+      "role": "held_source",
+      "arm": "B0",
+      "array_name": null,
+      "rows": 12000
+    },
+    {
+      "kind": "sealed_predictions",
+      "fold": 3,
+      "path": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f3__first__s18101\\source_val_predictions.npz",
+      "sha256": "696a3b299d9c00798a3449e4234b664da840f3c3a3ac12d514c759f22a030095",
+      "role": "fit_validation",
+      "arm": "ASK",
+      "array_name": null,
+      "rows": 10560
+    },
+    {
+      "kind": "sealed_predictions",
+      "fold": 3,
+      "path": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f3__first__s18101\\held_predictions.npz",
+      "sha256": "4f0210ab5aff7928fffb3eb3e9964d623d62cea6bfe4b9260d41051e42153ae1",
+      "role": "held_source",
+      "arm": "ASK",
+      "array_name": null,
+      "rows": 12000
+    },
+    {
+      "kind": "source_labels_or_split_indices",
+      "fold": 3,
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f3_first_s16001\\fit_y.npy",
+      "sha256": "38377540ce9242a0ef43af22f5085374e231a3f686ab75de916a8a5c71716d47",
+      "role": "fit_source_metadata",
+      "arm": null,
+      "array_name": "fit_y",
+      "rows": 35200
+    },
+    {
+      "kind": "source_labels_or_split_indices",
+      "fold": 3,
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f3_first_s16001\\fit_rx.npy",
+      "sha256": "25e08b32f0d2c06f4f70b50915384c40a26ff6b9a8063ddd316c12b36f92cf11",
+      "role": "fit_source_metadata",
+      "arm": null,
+      "array_name": "fit_rx",
+      "rows": 35200
+    },
+    {
+      "kind": "source_labels_or_split_indices",
+      "fold": 3,
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f3_first_s16001\\fit_day.npy",
+      "sha256": "8aea3c51e244f25d4b1c77af735d8e539eb87d098606723b360d3d85a3c97940",
+      "role": "fit_source_metadata",
+      "arm": null,
+      "array_name": "fit_day",
+      "rows": 35200
+    },
+    {
+      "kind": "source_labels_or_split_indices",
+      "fold": 3,
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f3_first_s16001\\train_ids.npy",
+      "sha256": "6611bb051ce5eb871b5245004bf421aeb330ee1f1fe2316106fb16a9257ca66e",
+      "role": "fit_source_metadata",
+      "arm": null,
+      "array_name": "train_ids",
+      "rows": 24640
+    },
+    {
+      "kind": "source_labels_or_split_indices",
+      "fold": 3,
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f3_first_s16001\\val_ids.npy",
+      "sha256": "e4c1d1320c0998fb15c60b8ac2e76f9c5b6127d2acb60ef14986a57100df9281",
+      "role": "fit_source_metadata",
+      "arm": null,
+      "array_name": "val_ids",
+      "rows": 10560
+    }
+  ],
+  "checkpoint_loads": 0,
+  "model_forward_calls": 0,
+  "iq_arrays_opened": 0,
+  "source_role_declaration": "All 36 array paths pinned before payload reads; metadata-only registration preceded this run"
+}
