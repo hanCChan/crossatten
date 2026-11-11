@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "scope": "Independent verification of new controlled experiment metadata and derived text JSON; no new experiments or historical log audit.",
+  "synthetic_checks_passed": 19,
+  "independent_metric_group_rows_verified": 5832,
+  "independent_paired_group_rows_verified": 7290,
+  "independent_factor_contrasts_verified": 36,
+  "independent_bootstrap_intervals_recomputed_exactly": 156,
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 22401,
+  "checks": [
+    "All five fixed seeds/roles, 190 updates per epoch, strict-best selection, wait10 stop and actual LR trajectories",
+    "Canonical key/member, full-state and BN/optimizer/scheduler/RNG bitwise replay",
+    "Metric confusion/support/error totals, fixed-class Macro-F1, finite ordered margin quantiles",
+    "Disagreement=corrected+new+bothwrongchanged; secondErrors=firstErrors-corrected+new",
+    "Factorial formulas/per-RX means; paired bootstrap intervals and practical screens",
+    "Worst groups and support totals; all source-held payload access after full seal, no target reads",
+    "A00/replay held logits hashes identical for selected and epoch10",
+    "Lossless gzip roundtrip of full analysis"
+  ],
+  "engineering_notes": [
+    {
+      "stage": "registration_preflight",
+      "issue": "CRLF checkout vs LF Git blob comparison rejected unchanged historical text",
+      "resolution": "Normalize committed text comparison; retain exact runtime byte hashes and synthetic regression; retain draft; no scientific payload/fit."
+    },
+    {
+      "stage": "independent_derived_JSON_QA",
+      "issue": "First parser assumed every top-level key had endpoints; artifacts metadata raised KeyError",
+      "resolution": "Explicit val/held selection; successful full verification; no scientific result/input modified or extra payload reads."
+    }
+  ],
+  "limitations": [
+    "Fixed two initialization/order levels and six historical exploratory held RX",
+    "Bootstrap conditional on observed RX; no seed/RX-population variance attribution",
+    "Selected effects uncertain despite observed churn; auxiliary endpoint cannot replace primary",
+    "Metadata access declarations do not constitute OS-wide monitoring"
+  ]
+}

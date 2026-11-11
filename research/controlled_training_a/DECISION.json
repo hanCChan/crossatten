@@ -1,0 +1,96 @@
+{
+  "status": "STAGE_A_COMPLETE_PREDICTION_CHURN_VERIFIED_SELECTED_EFFECTS_UNCERTAIN",
+  "historical_status_preserved": "CONFOUNDS_VERIFIED_CAUSAL_ATTRIBUTION_UNRESOLVED",
+  "primary_endpoint": "selected",
+  "auxiliary_endpoint": "epoch10",
+  "exact_replay_passed": true,
+  "finite_same_input_sensitivity_verified": true,
+  "selected_held_pairwise_disagreement_range": [
+    0.07425,
+    0.08216666666666665
+  ],
+  "selected_held_accuracy_factor_contrasts": {
+    "init": {
+      "estimate": 0.009,
+      "paired_rx_bootstrap_95_interval": [
+        -0.006499999999999996,
+        0.026291666666666647
+      ],
+      "per_rx": {
+        "1-1": 0.016749999999999987,
+        "1-19": 0.04674999999999996,
+        "1-20": -0.0017499999999999738,
+        "2-1": 0.009500000000000008,
+        "2-19": -0.02124999999999999,
+        "3-19": 0.0040000000000000036
+      },
+      "absolute_practical_scale": 0.01,
+      "exceeds_practical_screen": false,
+      "interval_excludes_zero": false
+    },
+    "order": {
+      "estimate": 0.005250000000000023,
+      "paired_rx_bootstrap_95_interval": [
+        -0.00658333333333332,
+        0.01641666666666668
+      ],
+      "per_rx": {
+        "1-1": -0.009250000000000036,
+        "1-19": 0.02024999999999999,
+        "1-20": -0.0007499999999999729,
+        "2-1": 0.02150000000000002,
+        "2-19": 0.015750000000000042,
+        "3-19": -0.015999999999999903
+      },
+      "absolute_practical_scale": 0.01,
+      "exceeds_practical_screen": false,
+      "interval_excludes_zero": false
+    },
+    "interaction": {
+      "estimate": 0.003333333333333318,
+      "paired_rx_bootstrap_95_interval": [
+        -0.013916666666666688,
+        0.02366666666666663
+      ],
+      "per_rx": {
+        "1-1": -0.018500000000000072,
+        "1-19": 0.01849999999999996,
+        "1-20": -0.007499999999999951,
+        "2-1": 0.04799999999999993,
+        "2-19": -0.022499999999999964,
+        "3-19": 0.0020000000000000018
+      },
+      "absolute_practical_scale": 0.01,
+      "exceeds_practical_screen": false,
+      "interval_excludes_zero": false
+    }
+  },
+  "selected_held_A00_to_A11_accuracy_delta": 0.014250000000000021,
+  "epoch10_held_accuracy_init_auxiliary": {
+    "estimate": 0.017833333333333323,
+    "paired_rx_bootstrap_95_interval": [
+      0.004416666666666652,
+      0.033041666666666664
+    ],
+    "per_rx": {
+      "1-1": 0.03049999999999997,
+      "1-19": 0.049750000000000016,
+      "1-20": -0.007500000000000007,
+      "2-1": 0.015749999999999986,
+      "2-19": 0.008500000000000008,
+      "3-19": 0.009999999999999953
+    },
+    "absolute_practical_scale": 0.01,
+    "exceeds_practical_screen": true,
+    "interval_excludes_zero": true
+  },
+  "small_effects_proven": false,
+  "population_variance_attribution_identified": false,
+  "initialization_vs_RX_composition_ranked": false,
+  "ASKNet_case_explained": false,
+  "new_algorithm_innovation_claimed": false,
+  "new_receiver_confirmation": false,
+  "stage_B": "NOT_STARTED_REQUIRES_SEPARATE_FORMAL_REGISTRATION",
+  "stop_rule": "No extra seeds, architectures or losses appended to Stage A; report both endpoints and all groups.",
+  "next_research_constraint": "Any method choice and validation on unused receivers require their own protocol; B measures replacement of two specific RX collections, not a representative RX-population effect."
+}

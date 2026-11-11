@@ -1,0 +1,31 @@
+{
+  "status": "STAGE_A_COMPLETE",
+  "files_sha256": {
+    ".gitignore": "9484d938c42f9450ecd2836d12996cfc8342af6805548aed4459455cd12c3094",
+    "ACCESS_LOG.jsonl": "fe367907d7f393252bc673400901ed7a78af6282507f6650d77640f8a6b96cad",
+    "ANALYSIS.json.gz": "f0108dbd4e4ddd08b603c27b99d6e19d9e90b5f3cbe633b4b7798fbed34dda5a",
+    "analyze.py": "6f713af576fecd5a169691e0b7bc5626eaa1a92201137e4a446fa2b52af2b8ac",
+    "ARTIFACT_ARCHIVE.json": "6a8eeffaf56679df4e50474b105320d21426a1b333c2cf0508a24d0c044eb15e",
+    "DECISION.json": "a5a8d23994a69f17d29f2e08399b17d5afbca61aa71aa66d9f0ae4b19cd55f8a",
+    "DRAFT_REGISTRATION_BEFORE_LINE_ENDING_FIX.json": "b42f95a5baf4ccb7d441bcb64713364051021c946a2ed094524d254a4285e3e8",
+    "EVALUATION_MANIFEST.json": "434e28223cd8383fc8527f91f7f2596f9a30ee26d7fb636f28dd4a149cb53a96",
+    "EXECUTION.json": "0bcdd28d7c15abf1224930a689dc9d3f114ba04701f4eb8c981cb130972abbf7",
+    "HELD_EVALUATION.json": "c72451b0b22e2c547a79e4c9916ad76bc2aeed0ca4c587c187abd6550e07d612",
+    "HELD_EVALUATION_ATTEMPT.json": "01454efa348c74334f2e5404732b3b5edcee5d34edd4635bbe6f68d35651697f",
+    "PRE_REGISTRATION.json": "0d8c342110df5e96ed97901bf19c76b2e70dbf1dd759936f098d04e7d74ded98",
+    "prepare_registration.py": "08c4cbe063783f63fc73919d329850158b095bc23aeb05a9b1ebb83da336714b",
+    "PREREGISTRATION.zh-CN.md": "e8923ef3d05869865e2f6bc5b00f288c6e711bbce0e166e04180034bd34f1f40",
+    "QA_REPORT.json": "67bfaef1d8dec848c631ff22b2b20dc9953aa56d2ca4b1f4f8901fb9d76fc87a",
+    "README.zh-CN.md": "6d4f9d034949a236c84294fed104bee13efebeaa2060ad88af413a2d70a12b1d",
+    "REPLAY_GATE.json": "7afbba85af613d8e2afe06f5c456981734c03e3ef0f4627a1df4fd5ff3bd24f6",
+    "RESULTS.zh-CN.md": "662d55110b32718653511545f79903b69521aaf0da6fce6469a8f3f2efb33651",
+    "RUN_EVIDENCE.json": "9a94ffbaa0da07ed0daaf6f7639b444e5bd833587cf7d2a350bc11d94ba9a2fd",
+    "runner.py": "9528b22659370324b1210117b022fd955ba010be994cc41511e124543368263b",
+    "STAGE_A_SEAL.json": "21728782e983605f5a15fe19f2d711d7ef3f816e1ea74ee5727984883e520ea8",
+    "test_controls.py": "ef4122b4a288dc514552a71520b59cb606e0278f98864297b428db44fb4eb1f4"
+  },
+  "local_uncompressed_analysis": "See ARTIFACT_ARCHIVE.json for raw and gzip digests; raw JSON remains ignored locally.",
+  "local_binary_artifacts": "Run COMPLETE records, STAGE_A_SEAL and EVALUATION_MANIFEST pin ignored checkpoints/orders/raw predictions; RUN_EVIDENCE contains readable metadata copies.",
+  "registered_implementation_unchanged": true,
+  "historical_artifacts_modified": false
+}

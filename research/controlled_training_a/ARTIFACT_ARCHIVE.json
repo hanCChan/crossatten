@@ -1,0 +1,11 @@
+{
+  "format": "gzip",
+  "archive": "ANALYSIS.json.gz",
+  "archive_sha256": "f0108dbd4e4ddd08b603c27b99d6e19d9e90b5f3cbe633b4b7798fbed34dda5a",
+  "uncompressed_name": "ANALYSIS.json",
+  "uncompressed_sha256": "8d14524c50b6a30e7be126ec6d85e7e17cd67bbc4f9ddf0e381354d3619e0f11",
+  "uncompressed_bytes": 29333340,
+  "archive_bytes": 1738807,
+  "lossless_roundtrip_verified": true,
+  "reason": "Archive complete scientific analysis without adding a 29MB redundant JSON text blob to Git; original remains local."
+}
