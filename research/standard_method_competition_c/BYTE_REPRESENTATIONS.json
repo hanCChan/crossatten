@@ -1,0 +1,1313 @@
+{
+  "status": "PASS",
+  "recorded_at": "2026-11-11T17:24:47+08:00",
+  "github_reference_commit": "efcb1c09ed9a3ce0de88820715e1fe6ab87a69e9",
+  "scope": "Byte representation verification, not new scientific analysis. Previous sha256 records refer to original local bytes; Git normalized CRLF to LF for some text blobs. All differing contents match exactly after newline-only normalization. The archive preserves executed/pinned bytes without changing any frozen source, protocol or result.",
+  "frozen_digest_entries_rechecked": 85,
+  "files_checked": 156,
+  "newline_normalized_files": [
+    "09-phase-invariance/phase_features.py",
+    "10-tifs-validation/PROTOCOL_AND_LEAKAGE_AUDIT.md",
+    "10-tifs-validation/final_receiver_metrics.csv",
+    "lib/legacy_rfhstu/__init__.py",
+    "lib/legacy_rfhstu/cnn_stem.py",
+    "lib/legacy_rfhstu/features.py",
+    "lib/legacy_rfhstu/losses.py",
+    "lib/legacy_rfhstu/mixstyle.py",
+    "lib/legacy_rfhstu/models.py",
+    "lib/legacy_rfhstu/multiscale.py",
+    "lib/legacy_rfhstu/oob_fusion.py",
+    "lib/xa/__init__.py",
+    "lib/xa/aggregate.py",
+    "lib/xa/bench.py",
+    "lib/xa/data.py",
+    "lib/xa/evaluate.py",
+    "lib/xa/explore_models.py",
+    "lib/xa/explore_train.py",
+    "lib/xa/frontends.py",
+    "lib/xa/guard.py",
+    "lib/xa/jobs.py",
+    "lib/xa/launch.py",
+    "lib/xa/models.py",
+    "lib/xa/models2.py",
+    "lib/xa/models3.py",
+    "lib/xa/paper_models.py",
+    "lib/xa/paper_run.py",
+    "lib/xa/paper_train.py",
+    "lib/xa/run_job.py",
+    "lib/xa/train.py",
+    "lib/xa/wisig.py",
+    "research/standard_method_competition_c/analyze.py",
+    "research/standard_method_competition_c/independent_QA.py",
+    "research/wisig_full_confirmation_metadata/CANDIDATE_METADATA.json",
+    "research/wisig_full_confirmation_metadata/HISTORICAL_EXPOSURE.json",
+    "research/wisig_full_confirmation_metadata/M0_SOURCE_COUNT_SUPPORT.json",
+    "research/wisig_full_confirmation_metadata/MANIFEST.json",
+    "research/wisig_full_confirmation_metadata/QA_REPORT.json",
+    "research/wisig_full_confirmation_metadata/STATIC_PICKLE_INSPECTION.json",
+    "research/wisig_raw_eq_m0/LOCAL_METADATA_REVIEW.json",
+    "research/wisig_raw_eq_m0/MANIFEST.json",
+    "research/wisig_raw_eq_m0/QA_REPORT.json",
+    "tests/test_standard_method_competition_c_analysis.py",
+    "tests/test_standard_method_competition_c_independent_qa.py"
+  ],
+  "files": {
+    "09-phase-invariance/phase_features.py": {
+      "execution_local_sha256": "d467175e131cfa719f0fa1f5500a8935bcb864d12dad53160a77247874d1721e",
+      "github_blob_bytes_sha256": "c0abc79224187180b0eea69266d0a38c37d02867761825fc329407db269b9015",
+      "execution_bytes": 2931,
+      "github_blob_bytes": 2865,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "10-tifs-validation/PROTOCOL_AND_LEAKAGE_AUDIT.md": {
+      "execution_local_sha256": "1c51946ec85e444cf83aca1c24eb60a297cb78e4cd348873ea3722fc1971911b",
+      "github_blob_bytes_sha256": "4d110f5e75f27624ec7d4ba88bb31fc0f07892446112f5528881ca82bb572de2",
+      "execution_bytes": 1993,
+      "github_blob_bytes": 1968,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "10-tifs-validation/final_receiver_metrics.csv": {
+      "execution_local_sha256": "4b01215f98f772a00bfb25f66298915bdd169c945ae7796e5652e4c56a5e3a73",
+      "github_blob_bytes_sha256": "f2921008546ec3cb3d2a91b0739790a36f19a47ad20bb2d2981ef7f4f54f3768",
+      "execution_bytes": 17292,
+      "github_blob_bytes": 17027,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "13-mixer-cfo-mechanisms/cfo_descriptive.py": {
+      "execution_local_sha256": "e60de808c7de10decda0844f2e74ae55169df196c9ec9fbb3807c312f4a131da",
+      "github_blob_bytes_sha256": "e60de808c7de10decda0844f2e74ae55169df196c9ec9fbb3807c312f4a131da",
+      "execution_bytes": 5146,
+      "github_blob_bytes": 5146,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "13-mixer-cfo-mechanisms/core.py": {
+      "execution_local_sha256": "a9db92f80e8e1bf1579cab900fabf085f5c33e018dffe6e27f1af64ee94dc527",
+      "github_blob_bytes_sha256": "a9db92f80e8e1bf1579cab900fabf085f5c33e018dffe6e27f1af64ee94dc527",
+      "execution_bytes": 4548,
+      "github_blob_bytes": 4548,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "13-mixer-cfo-mechanisms/data.py": {
+      "execution_local_sha256": "578fd207105e5375094bd22a12ec710fd259379c4b1c627d962251256bd71e9e",
+      "github_blob_bytes_sha256": "578fd207105e5375094bd22a12ec710fd259379c4b1c627d962251256bd71e9e",
+      "execution_bytes": 5977,
+      "github_blob_bytes": 5977,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "13-mixer-cfo-mechanisms/diagnostics.py": {
+      "execution_local_sha256": "883b0a5fcf73ba7c19e94f51ae05f7d003b82a8870b44c6c6d23e4ca02ee7149",
+      "github_blob_bytes_sha256": "883b0a5fcf73ba7c19e94f51ae05f7d003b82a8870b44c6c6d23e4ca02ee7149",
+      "execution_bytes": 15960,
+      "github_blob_bytes": 15960,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "13-mixer-cfo-mechanisms/execute.py": {
+      "execution_local_sha256": "21a7bf48a381842e5fbc044411350ba2faa1fd86cc31796ccab199726e8b1ae8",
+      "github_blob_bytes_sha256": "21a7bf48a381842e5fbc044411350ba2faa1fd86cc31796ccab199726e8b1ae8",
+      "execution_bytes": 5651,
+      "github_blob_bytes": 5651,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "13-mixer-cfo-mechanisms/metrics.py": {
+      "execution_local_sha256": "a9773e0532552f012dc039c42206460d1a5b02001a2bbb44a388258825f85ed7",
+      "github_blob_bytes_sha256": "a9773e0532552f012dc039c42206460d1a5b02001a2bbb44a388258825f85ed7",
+      "execution_bytes": 865,
+      "github_blob_bytes": 865,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "13-mixer-cfo-mechanisms/models.py": {
+      "execution_local_sha256": "606243ff9462358f53a86d2908130c47f69c5dd9d1cfee669cbaf10c7b76e5a1",
+      "github_blob_bytes_sha256": "606243ff9462358f53a86d2908130c47f69c5dd9d1cfee669cbaf10c7b76e5a1",
+      "execution_bytes": 3603,
+      "github_blob_bytes": 3603,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "13-mixer-cfo-mechanisms/pickle_index.py": {
+      "execution_local_sha256": "52925d018fbad46396dbf809379e2b8961b368179ba1ef64c4fc9c5031ed319a",
+      "github_blob_bytes_sha256": "52925d018fbad46396dbf809379e2b8961b368179ba1ef64c4fc9c5031ed319a",
+      "execution_bytes": 3084,
+      "github_blob_bytes": 3084,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "13-mixer-cfo-mechanisms/register.py": {
+      "execution_local_sha256": "1d2241b226e4addbe74401c5acf7cd6acd148fcece15e20cf0c611f11a6b5b3b",
+      "github_blob_bytes_sha256": "1d2241b226e4addbe74401c5acf7cd6acd148fcece15e20cf0c611f11a6b5b3b",
+      "execution_bytes": 5756,
+      "github_blob_bytes": 5756,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "13-mixer-cfo-mechanisms/reports.py": {
+      "execution_local_sha256": "8bcf6ec4ad18d183368b3d0e6bd5c4e58c476442aee16ddba74b099de27aef15",
+      "github_blob_bytes_sha256": "8bcf6ec4ad18d183368b3d0e6bd5c4e58c476442aee16ddba74b099de27aef15",
+      "execution_bytes": 14246,
+      "github_blob_bytes": 14246,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "13-mixer-cfo-mechanisms/status.py": {
+      "execution_local_sha256": "533e7ef2154f0134c8cc887e5a1bd0d42cafcdfa3863c712f462bee048b49b1a",
+      "github_blob_bytes_sha256": "533e7ef2154f0134c8cc887e5a1bd0d42cafcdfa3863c712f462bee048b49b1a",
+      "execution_bytes": 1550,
+      "github_blob_bytes": 1550,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "13-mixer-cfo-mechanisms/train.py": {
+      "execution_local_sha256": "164b0eb9794c4494b34cf1d25f8dfb0c9a4ae8c54af3e03ef9f08b150a670a2a",
+      "github_blob_bytes_sha256": "164b0eb9794c4494b34cf1d25f8dfb0c9a4ae8c54af3e03ef9f08b150a670a2a",
+      "execution_bytes": 11434,
+      "github_blob_bytes": 11434,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "13-mixer-cfo-mechanisms/wifi.py": {
+      "execution_local_sha256": "3402847c350172b670aba40616f5b56ec5ecb2e7176cc199c26d0315d920db37",
+      "github_blob_bytes_sha256": "3402847c350172b670aba40616f5b56ec5ecb2e7176cc199c26d0315d920db37",
+      "execution_bytes": 2549,
+      "github_blob_bytes": 2549,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "17-rx-distortion/s17_augment.py": {
+      "execution_local_sha256": "d0ab78c0dfa41773bbef90e93b1a6ee330971871fc59c1c1125952f798113221",
+      "github_blob_bytes_sha256": "d0ab78c0dfa41773bbef90e93b1a6ee330971871fc59c1c1125952f798113221",
+      "execution_bytes": 3106,
+      "github_blob_bytes": 3106,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "17-rx-distortion/s17_core.py": {
+      "execution_local_sha256": "e026e94981b09eb3f9bcc4d92699507105654376b4e6ac14efa8f1af954efe6c",
+      "github_blob_bytes_sha256": "e026e94981b09eb3f9bcc4d92699507105654376b4e6ac14efa8f1af954efe6c",
+      "execution_bytes": 4599,
+      "github_blob_bytes": 4599,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "17-rx-distortion/s17_data.py": {
+      "execution_local_sha256": "68758ba670e687e3097396504288a7b6cae01173b58ac8b52e47cb3096ffa1d9",
+      "github_blob_bytes_sha256": "68758ba670e687e3097396504288a7b6cae01173b58ac8b52e47cb3096ffa1d9",
+      "execution_bytes": 2974,
+      "github_blob_bytes": 2974,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "17-rx-distortion/s17_diagnostics.py": {
+      "execution_local_sha256": "82f7af3b16a32a0886e267c4ef074cbd3e4b686a66d8456098dbeca32ed504a2",
+      "github_blob_bytes_sha256": "82f7af3b16a32a0886e267c4ef074cbd3e4b686a66d8456098dbeca32ed504a2",
+      "execution_bytes": 3372,
+      "github_blob_bytes": 3372,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "17-rx-distortion/s17_execute.py": {
+      "execution_local_sha256": "3c843aa355c4f1bb22a8f5f4443b9cad431077303c3bc6101dfaff79504a394b",
+      "github_blob_bytes_sha256": "3c843aa355c4f1bb22a8f5f4443b9cad431077303c3bc6101dfaff79504a394b",
+      "execution_bytes": 4025,
+      "github_blob_bytes": 4025,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "17-rx-distortion/s17_features.py": {
+      "execution_local_sha256": "a7df647926635fffa73eb3449e4adc9a90473a2da2d11067bb72675091828a5a",
+      "github_blob_bytes_sha256": "a7df647926635fffa73eb3449e4adc9a90473a2da2d11067bb72675091828a5a",
+      "execution_bytes": 4610,
+      "github_blob_bytes": 4610,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "17-rx-distortion/s17_intervene.py": {
+      "execution_local_sha256": "645db1303e609d71f3fe24d8f4a19686ad10a4171badc27839a32110a2e02928",
+      "github_blob_bytes_sha256": "645db1303e609d71f3fe24d8f4a19686ad10a4171badc27839a32110a2e02928",
+      "execution_bytes": 4405,
+      "github_blob_bytes": 4405,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "17-rx-distortion/s17_jobs.py": {
+      "execution_local_sha256": "3a1616151e306d85caf6ebe95867bc1bb613aeba8e0f1b273e730f46152298f4",
+      "github_blob_bytes_sha256": "3a1616151e306d85caf6ebe95867bc1bb613aeba8e0f1b273e730f46152298f4",
+      "execution_bytes": 341,
+      "github_blob_bytes": 341,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "17-rx-distortion/s17_models.py": {
+      "execution_local_sha256": "3f15c97c9583a080be1c73dde4024e4b2e21e86b196e3df9a706d0b3ff1b2e5a",
+      "github_blob_bytes_sha256": "3f15c97c9583a080be1c73dde4024e4b2e21e86b196e3df9a706d0b3ff1b2e5a",
+      "execution_bytes": 395,
+      "github_blob_bytes": 395,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "17-rx-distortion/s17_register.py": {
+      "execution_local_sha256": "50a82ffe6c2d9feb20e99a2f79ca88549f9bcfa54bc55e8a0b42c25a61038be2",
+      "github_blob_bytes_sha256": "50a82ffe6c2d9feb20e99a2f79ca88549f9bcfa54bc55e8a0b42c25a61038be2",
+      "execution_bytes": 5318,
+      "github_blob_bytes": 5318,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "17-rx-distortion/s17_reports.py": {
+      "execution_local_sha256": "8d303e15feb635928859c027a3264652eb83e7c50235a7ffd3a582ee103c1544",
+      "github_blob_bytes_sha256": "8d303e15feb635928859c027a3264652eb83e7c50235a7ffd3a582ee103c1544",
+      "execution_bytes": 8149,
+      "github_blob_bytes": 8149,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "17-rx-distortion/s17_stats.py": {
+      "execution_local_sha256": "a80641c0d9f034bd1e2478ee3e4446126c61af7be97cf4896a1be1dc176924a4",
+      "github_blob_bytes_sha256": "a80641c0d9f034bd1e2478ee3e4446126c61af7be97cf4896a1be1dc176924a4",
+      "execution_bytes": 1760,
+      "github_blob_bytes": 1760,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "17-rx-distortion/s17_train.py": {
+      "execution_local_sha256": "bb6ea369fb408df297788965e8792b666c1685b0b93b1cf46b8a729af20ef366",
+      "github_blob_bytes_sha256": "bb6ea369fb408df297788965e8792b666c1685b0b93b1cf46b8a729af20ef366",
+      "execution_bytes": 7185,
+      "github_blob_bytes": 7185,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "17-rx-distortion/test_cpu_stats.py": {
+      "execution_local_sha256": "b7dcad1ef172b6cf63f7b31cf2af433e22b9311bfb727969a089c5e325fc81a7",
+      "github_blob_bytes_sha256": "b7dcad1ef172b6cf63f7b31cf2af433e22b9311bfb727969a089c5e325fc81a7",
+      "execution_bytes": 3230,
+      "github_blob_bytes": 3230,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "17-rx-distortion/test_engineering.py": {
+      "execution_local_sha256": "863c7dbd62133af3a71f80f602a386ee61c3d83d1f21b7d9eed5277738559e8e",
+      "github_blob_bytes_sha256": "863c7dbd62133af3a71f80f602a386ee61c3d83d1f21b7d9eed5277738559e8e",
+      "execution_bytes": 4089,
+      "github_blob_bytes": 4089,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "lib/legacy_rfhstu/__init__.py": {
+      "execution_local_sha256": "f78366d19d77282713f4944bc4e8fbdcbb138aac9849a0acf79459f4491dd9f5",
+      "github_blob_bytes_sha256": "007a27587dfbbeb92022331e553a0569802f56a6b1201b49e37a3892dc67544b",
+      "execution_bytes": 145,
+      "github_blob_bytes": 134,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "lib/legacy_rfhstu/cnn_stem.py": {
+      "execution_local_sha256": "b3a8944c96b354d295a96d84876693e95433f67616e23d2804219d0fa1c2762a",
+      "github_blob_bytes_sha256": "137f5ad37f90599f6378d8614fab9911dad07d9def0cbda3071446f7828f24bb",
+      "execution_bytes": 1577,
+      "github_blob_bytes": 1533,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "lib/legacy_rfhstu/features.py": {
+      "execution_local_sha256": "1e9e5aa828adbb382c604ebf7b1bd429c79893ea1169afddaa14596a6c0d5378",
+      "github_blob_bytes_sha256": "c994e56497bebf015a98b469469ecb8838bbae6e9be26aa43ba95f0ba19a933d",
+      "execution_bytes": 5325,
+      "github_blob_bytes": 5196,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "lib/legacy_rfhstu/losses.py": {
+      "execution_local_sha256": "a0ba7f42040203289593ba6a9363f27ea19d5152d8813979a7018cc152e78e28",
+      "github_blob_bytes_sha256": "d77eeedd3c74d1e387ef2ecf0efebc1f567105b238fe9fc4158a22e6d0cef186",
+      "execution_bytes": 7499,
+      "github_blob_bytes": 7317,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "lib/legacy_rfhstu/mixstyle.py": {
+      "execution_local_sha256": "687174caeff6f256b2661399ab70aede396d5ea51af4e312dcbacc01235b94a5",
+      "github_blob_bytes_sha256": "c23de1df2ff3b0cfad250323781f7d97fe04781e0f00c0ed9bb0772f9bf66bf7",
+      "execution_bytes": 940,
+      "github_blob_bytes": 914,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "lib/legacy_rfhstu/models.py": {
+      "execution_local_sha256": "ebb638fac3392fec36bace7e2445ab6d27ef4e3b5adb2c06b35c8bc82f506666",
+      "github_blob_bytes_sha256": "28d865b46f8072d43778f440e51641b7b9b39c17d44820e418ab3d5f7fee3b0b",
+      "execution_bytes": 20820,
+      "github_blob_bytes": 20359,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "lib/legacy_rfhstu/multiscale.py": {
+      "execution_local_sha256": "de51929e7917e793e814319a88b91ef0b17354e4c7614065172e082f16833e35",
+      "github_blob_bytes_sha256": "e0888303717d611dbd9d84c272cfaa739d1e5765f9014640bc95a0464d2904ca",
+      "execution_bytes": 2336,
+      "github_blob_bytes": 2271,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "lib/legacy_rfhstu/oob_fusion.py": {
+      "execution_local_sha256": "030f2886c9a84282eb7e20ce5d318f528e8bfc20902c4b4a17315686ea290259",
+      "github_blob_bytes_sha256": "06a2da3d660cc31dabc67305552cc5cad24a63231ca8a84ac7de1d26d351b1ab",
+      "execution_bytes": 2091,
+      "github_blob_bytes": 2039,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "lib/xa/__init__.py": {
+      "execution_local_sha256": "ca199705017e2d6d6b037d4d732f7caec7d7dff190c77a3d94c0cfaf515ab492",
+      "github_blob_bytes_sha256": "38609a82bc2617862765da5475286bdeba3995008db66ac8b1815b6a00b61d4f",
+      "execution_bytes": 200,
+      "github_blob_bytes": 195,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "lib/xa/aggregate.py": {
+      "execution_local_sha256": "8995baeff876f427338836ad0b2d53de01f95e95148b851067f498d35f592e38",
+      "github_blob_bytes_sha256": "02f436998f3e65b44d6cb1bfd1d34f2dea0f83e2a11c0f8cf20174c47415dd9c",
+      "execution_bytes": 8866,
+      "github_blob_bytes": 8714,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "lib/xa/bench.py": {
+      "execution_local_sha256": "3a94fe229e5b43f45b15ca2f1a06e179b0212f282ea58671e71c718161d20ba7",
+      "github_blob_bytes_sha256": "a35198b9683102022bc56f5d2292d7a26036ffff81d3b39842cdc2b47497c8ee",
+      "execution_bytes": 3092,
+      "github_blob_bytes": 3019,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "lib/xa/data.py": {
+      "execution_local_sha256": "ff861d46e508d807996a924d4439134416b16ba6507856a7335c65d9e4cfc3cb",
+      "github_blob_bytes_sha256": "b5a2ea4351bf7a87556d72a87b47d8260a2e70c5c02dcb7b16a55848be9bcf51",
+      "execution_bytes": 5368,
+      "github_blob_bytes": 5247,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "lib/xa/evaluate.py": {
+      "execution_local_sha256": "365998cf59196e5ebbdad3b34132fe1dfb2a4a2b988c82d660715471167734aa",
+      "github_blob_bytes_sha256": "b8bd6fa8364bf59e93748c2360989d901a3b755f1f5189ca951049012afc598c",
+      "execution_bytes": 1370,
+      "github_blob_bytes": 1336,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "lib/xa/explore_models.py": {
+      "execution_local_sha256": "bcc1616b5fc6ea533183b4c3a9538748a663a1b321bd748a33870b4ef8116467",
+      "github_blob_bytes_sha256": "927cc04a4ea4287eba8428f9ec27bad0033c1c121166dab7a81e7c1d305c4262",
+      "execution_bytes": 7437,
+      "github_blob_bytes": 7267,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "lib/xa/explore_train.py": {
+      "execution_local_sha256": "8e4361d2b21546f5f5b5ba26adccd57618680c720db734561802b8246a33babe",
+      "github_blob_bytes_sha256": "8d82a20be7fb40861fe01d7ef25da8bc0dda037254bbf17e3a0dcddd0eb1f9bf",
+      "execution_bytes": 15686,
+      "github_blob_bytes": 15376,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "lib/xa/frontends.py": {
+      "execution_local_sha256": "967e28c05f168341b4710e4b2253d77b93d92bc9a3dd515fdddaa35e81c2013f",
+      "github_blob_bytes_sha256": "b5ce9c5a702234bbf06156b8ae1cc3fec69f7fbfee197c4eab46e2d2b2f146d0",
+      "execution_bytes": 4518,
+      "github_blob_bytes": 4422,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "lib/xa/guard.py": {
+      "execution_local_sha256": "80562f5a0893be3a3e91cb80ef4636a6b24eb0c76bfa59d3566574633e5fff54",
+      "github_blob_bytes_sha256": "66b2d17e49e4bbc17be7ead701e863670ac4fcf8686682ec2edc62a58c44bfbb",
+      "execution_bytes": 2399,
+      "github_blob_bytes": 2330,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "lib/xa/jobs.py": {
+      "execution_local_sha256": "ef8ac595d7a567c18d5e726b2fe70e9942628e709bf1453dfe0df5e9d07233f0",
+      "github_blob_bytes_sha256": "de4c04de9a73b1c919e5dce80068a2e363f8ed1a8b4fb17c0091af1795266dda",
+      "execution_bytes": 1701,
+      "github_blob_bytes": 1664,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "lib/xa/launch.py": {
+      "execution_local_sha256": "71ca1656dcccf4d26455de6b999de42b2482f73b738a37fca52f354ccec6d4a2",
+      "github_blob_bytes_sha256": "3ba6497d75ac3e14076792a3f5305083808e3271d5e3a5bbf4031b6a72ecb963",
+      "execution_bytes": 3487,
+      "github_blob_bytes": 3415,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "lib/xa/models.py": {
+      "execution_local_sha256": "322049d67d19d196dca8a722fda9de433d846fe1aa3d6d8439c49adeba6554bf",
+      "github_blob_bytes_sha256": "37062521feb82acdfe5a20064fb3002b502b6251ef62220576ac1519eef80ac3",
+      "execution_bytes": 9951,
+      "github_blob_bytes": 9744,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "lib/xa/models2.py": {
+      "execution_local_sha256": "e9c3364868955e6996645a823187dadb553a2a95139e809d43055a93c53eaa23",
+      "github_blob_bytes_sha256": "a4aa30902790d445b99656d5a64a8d7b863e6d81f86f1665edb8dc222a00855c",
+      "execution_bytes": 9154,
+      "github_blob_bytes": 8976,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "lib/xa/models3.py": {
+      "execution_local_sha256": "bade67f8ad50b64c132197d21a86c1897a8c27976a7b8490d2e7131ff025cbba",
+      "github_blob_bytes_sha256": "5d0d11cd540c724571db8c25984c988e817b55013328a11399731dc9b33285a3",
+      "execution_bytes": 5763,
+      "github_blob_bytes": 5625,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "lib/xa/paper_models.py": {
+      "execution_local_sha256": "7c09adc3b481e5b13eeccb93731a00573f16a98f5d35c490a1d5082707c550bd",
+      "github_blob_bytes_sha256": "eff9c4f8f3e74b9fbc28eaf1dc3e6b32c625925e1dfb0fe722fc815d82ab9145",
+      "execution_bytes": 6301,
+      "github_blob_bytes": 6145,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "lib/xa/paper_run.py": {
+      "execution_local_sha256": "4c1bcdf2e98c974c6e03677b69881ea378dc3406c0d9f8a7bbe471290389fec6",
+      "github_blob_bytes_sha256": "34ea459b36dcd2d574c604eee833c320c5eeb599123c5d125c3f5a47a9bcda26",
+      "execution_bytes": 1062,
+      "github_blob_bytes": 1036,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "lib/xa/paper_train.py": {
+      "execution_local_sha256": "e59cab54045ef6cd27a168e937e7571456ad3d2405183efc605e8308e3ed80c8",
+      "github_blob_bytes_sha256": "4b740d709901c8dca9b3ba9774c9209701068d4babbe0284d6c56be55eb11e9e",
+      "execution_bytes": 16790,
+      "github_blob_bytes": 16447,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "lib/xa/run_job.py": {
+      "execution_local_sha256": "534b8f7aa2c8c54c12eb5881850897fa2a69280cde004c84ede19532b0cb576b",
+      "github_blob_bytes_sha256": "4d9d48c945a2493d4f67ce41566e70e4571fa682396ae4a9a3dadcf1c99cb07f",
+      "execution_bytes": 1248,
+      "github_blob_bytes": 1220,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "lib/xa/train.py": {
+      "execution_local_sha256": "906a7fd0a7bbb61fea86e03bcf9b52228a5b26851e53fa904d497be330daa96e",
+      "github_blob_bytes_sha256": "f62bded00879a18c06da99aa44f27c27a35cf7efb1c503f7f1f98c534d57457e",
+      "execution_bytes": 9773,
+      "github_blob_bytes": 9568,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "lib/xa/wisig.py": {
+      "execution_local_sha256": "b4127fba87f5603704c92d2221743c8dedf6898e45c8216b9ddb84b32f42ad67",
+      "github_blob_bytes_sha256": "58d816ce8c6d7424cc073f95e5d272b6826ef4e018a58e26ea626191a80497f8",
+      "execution_bytes": 6098,
+      "github_blob_bytes": 5963,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "research/controlled_training_a/PREREGISTRATION.zh-CN.md": {
+      "execution_local_sha256": "e8923ef3d05869865e2f6bc5b00f288c6e711bbce0e166e04180034bd34f1f40",
+      "github_blob_bytes_sha256": "e8923ef3d05869865e2f6bc5b00f288c6e711bbce0e166e04180034bd34f1f40",
+      "execution_bytes": 8509,
+      "github_blob_bytes": 8509,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/controlled_training_a/analyze.py": {
+      "execution_local_sha256": "6f713af576fecd5a169691e0b7bc5626eaa1a92201137e4a446fa2b52af2b8ac",
+      "github_blob_bytes_sha256": "6f713af576fecd5a169691e0b7bc5626eaa1a92201137e4a446fa2b52af2b8ac",
+      "execution_bytes": 23519,
+      "github_blob_bytes": 23519,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/controlled_training_a/prepare_registration.py": {
+      "execution_local_sha256": "08c4cbe063783f63fc73919d329850158b095bc23aeb05a9b1ebb83da336714b",
+      "github_blob_bytes_sha256": "08c4cbe063783f63fc73919d329850158b095bc23aeb05a9b1ebb83da336714b",
+      "execution_bytes": 7638,
+      "github_blob_bytes": 7638,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/controlled_training_a/runner.py": {
+      "execution_local_sha256": "9528b22659370324b1210117b022fd955ba010be994cc41511e124543368263b",
+      "github_blob_bytes_sha256": "9528b22659370324b1210117b022fd955ba010be994cc41511e124543368263b",
+      "execution_bytes": 33521,
+      "github_blob_bytes": 33521,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/controlled_training_a/test_controls.py": {
+      "execution_local_sha256": "ef4122b4a288dc514552a71520b59cb606e0278f98864297b428db44fb4eb1f4",
+      "github_blob_bytes_sha256": "ef4122b4a288dc514552a71520b59cb606e0278f98864297b428db44fb4eb1f4",
+      "execution_bytes": 6491,
+      "github_blob_bytes": 6491,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/controlled_training_b/DECISION.json": {
+      "execution_local_sha256": "f0bd9ad5908ef7738c7af484a538fafa65e176a7109f23165f05fdf5c6671eec",
+      "github_blob_bytes_sha256": "f0bd9ad5908ef7738c7af484a538fafa65e176a7109f23165f05fdf5c6671eec",
+      "execution_bytes": 9438,
+      "github_blob_bytes": 9438,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/.gitignore": {
+      "execution_local_sha256": "4305b4e8565dd47e0bb52c874137aa9f8eebb2e5f639a516d51933265269c3ad",
+      "github_blob_bytes_sha256": "4305b4e8565dd47e0bb52c874137aa9f8eebb2e5f639a516d51933265269c3ad",
+      "execution_bytes": 17,
+      "github_blob_bytes": 17,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/ACCESS_LOG.json": {
+      "execution_local_sha256": "031f5a6a2ed78e7812f247aa5c4bfed6157fac5fe19e012c11f3071e118cb9ff",
+      "github_blob_bytes_sha256": "031f5a6a2ed78e7812f247aa5c4bfed6157fac5fe19e012c11f3071e118cb9ff",
+      "execution_bytes": 1880,
+      "github_blob_bytes": 1880,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/ACCESS_SCOPE.json": {
+      "execution_local_sha256": "6abccd8eb3752d88d91f3298e769abe3fb8434a590463dbbbc209fbba252498e",
+      "github_blob_bytes_sha256": "6abccd8eb3752d88d91f3298e769abe3fb8434a590463dbbbc209fbba252498e",
+      "execution_bytes": 1450,
+      "github_blob_bytes": 1450,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/ANALYSIS.json.gz": {
+      "execution_local_sha256": "6bcc80283c391f9e8bcb6934fe996ca33b56bde1799112b6dbe7d1570c3116cd",
+      "github_blob_bytes_sha256": "6bcc80283c391f9e8bcb6934fe996ca33b56bde1799112b6dbe7d1570c3116cd",
+      "execution_bytes": 5901128,
+      "github_blob_bytes": 5901128,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/ARTIFACT_ARCHIVE.json": {
+      "execution_local_sha256": "a30aba08cfef92769cf6d23aac08c79c07e1a0f273d5c40a4b20a7454aa7a353",
+      "github_blob_bytes_sha256": "a30aba08cfef92769cf6d23aac08c79c07e1a0f273d5c40a4b20a7454aa7a353",
+      "execution_bytes": 1055,
+      "github_blob_bytes": 1055,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/CANDIDATE_CELLS.json": {
+      "execution_local_sha256": "8966896c823b6afa20f619a0ab7d05cee6cef516a03fbb0c72cb0c48bdf52b83",
+      "github_blob_bytes_sha256": "8966896c823b6afa20f619a0ab7d05cee6cef516a03fbb0c72cb0c48bdf52b83",
+      "execution_bytes": 1767097,
+      "github_blob_bytes": 1767097,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/CANDIDATE_CELLS.md": {
+      "execution_local_sha256": "2ee5e8da74ce2d3213c5b8be9d4efd9979595d959f74d0897f1ea4fcf4c77c0f",
+      "github_blob_bytes_sha256": "2ee5e8da74ce2d3213c5b8be9d4efd9979595d959f74d0897f1ea4fcf4c77c0f",
+      "execution_bytes": 7637,
+      "github_blob_bytes": 7637,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/CLOSURE_QA.json": {
+      "execution_local_sha256": "b9ed42fe9dea639f0bfd207d2cd057ac3589e0c505cc4aa78e09e453b987a449",
+      "github_blob_bytes_sha256": "b9ed42fe9dea639f0bfd207d2cd057ac3589e0c505cc4aa78e09e453b987a449",
+      "execution_bytes": 838,
+      "github_blob_bytes": 838,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/CONFIRMATION_GATE.json": {
+      "execution_local_sha256": "924d82acbe9ab8c86ef1d35695b7a96d54d5e928d0c506468f5810cfe6b81d1b",
+      "github_blob_bytes_sha256": "924d82acbe9ab8c86ef1d35695b7a96d54d5e928d0c506468f5810cfe6b81d1b",
+      "execution_bytes": 1165,
+      "github_blob_bytes": 1165,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/COSTS.json": {
+      "execution_local_sha256": "cbcce839bb8e3311fdaaee21486e88f5cd2c854b04471b2c2c9b29ce0f7a5cb3",
+      "github_blob_bytes_sha256": "cbcce839bb8e3311fdaaee21486e88f5cd2c854b04471b2c2c9b29ce0f7a5cb3",
+      "execution_bytes": 6585,
+      "github_blob_bytes": 6585,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/COSTS.zh-CN.md": {
+      "execution_local_sha256": "4e957f4cc8216f4dc0a5ac4c4e911e419978eae231bf44cd3c9eb487a5152380",
+      "github_blob_bytes_sha256": "4e957f4cc8216f4dc0a5ac4c4e911e419978eae231bf44cd3c9eb487a5152380",
+      "execution_bytes": 2903,
+      "github_blob_bytes": 2903,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/DECISION.json": {
+      "execution_local_sha256": "0ea6424e6ee2f813b1a1d50bc0a9f1cb011c65ffd7ccba58beeda2e8affebcea",
+      "github_blob_bytes_sha256": "0ea6424e6ee2f813b1a1d50bc0a9f1cb011c65ffd7ccba58beeda2e8affebcea",
+      "execution_bytes": 1402,
+      "github_blob_bytes": 1402,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/ENGINEERING_GPU_QA.json": {
+      "execution_local_sha256": "f0d33075c772b38ef886a98b625a716676013a1b76ba29108fccec2770f8a2ad",
+      "github_blob_bytes_sha256": "f0d33075c772b38ef886a98b625a716676013a1b76ba29108fccec2770f8a2ad",
+      "execution_bytes": 616,
+      "github_blob_bytes": 616,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/EVALUATION_MANIFEST.json": {
+      "execution_local_sha256": "4d4dc205284e50e7476ce1945c6eb6857552521e08988ef9b85e4a7a70f022d9",
+      "github_blob_bytes_sha256": "4d4dc205284e50e7476ce1945c6eb6857552521e08988ef9b85e4a7a70f022d9",
+      "execution_bytes": 13262,
+      "github_blob_bytes": 13262,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/EXECUTION_ACCESS_LOG.jsonl": {
+      "execution_local_sha256": "1213bdcf92e63a7dafe953522c14b3b069a061f6e228b3fc2c8e18d3e195dc39",
+      "github_blob_bytes_sha256": "1213bdcf92e63a7dafe953522c14b3b069a061f6e228b3fc2c8e18d3e195dc39",
+      "execution_bytes": 113538,
+      "github_blob_bytes": 113538,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/EXECUTION_ADDENDUM.zh-CN.md": {
+      "execution_local_sha256": "02f37e6396ce9b53b595f15d5fa4ed8209abddf5e0a5593cb987798aa6c2efde",
+      "github_blob_bytes_sha256": "02f37e6396ce9b53b595f15d5fa4ed8209abddf5e0a5593cb987798aa6c2efde",
+      "execution_bytes": 5166,
+      "github_blob_bytes": 5166,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/EXECUTION_QA.json": {
+      "execution_local_sha256": "078ebe191f514666b87d08cecdabfb2c5cb85b24e101973d61ee855966c6109a",
+      "github_blob_bytes_sha256": "078ebe191f514666b87d08cecdabfb2c5cb85b24e101973d61ee855966c6109a",
+      "execution_bytes": 1611,
+      "github_blob_bytes": 1611,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/EXECUTION_REGISTRATION.json": {
+      "execution_local_sha256": "9642f55b297453747eeb80ec0eb219e1426444b80935d8eb397ef7668e256272",
+      "github_blob_bytes_sha256": "9642f55b297453747eeb80ec0eb219e1426444b80935d8eb397ef7668e256272",
+      "execution_bytes": 2325,
+      "github_blob_bytes": 2325,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/EXECUTION_RESULT.json": {
+      "execution_local_sha256": "d700d5d8fe975497659329cb75cb6f35aed6552d0feef5e62547a549559fe902",
+      "github_blob_bytes_sha256": "d700d5d8fe975497659329cb75cb6f35aed6552d0feef5e62547a549559fe902",
+      "execution_bytes": 2255,
+      "github_blob_bytes": 2255,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/EXECUTION_RESULTS.zh-CN.md": {
+      "execution_local_sha256": "51caa7ca81cfa542d0f9f46c1234f96139ffbac54b4727a4456082b2840fc2e1",
+      "github_blob_bytes_sha256": "51caa7ca81cfa542d0f9f46c1234f96139ffbac54b4727a4456082b2840fc2e1",
+      "execution_bytes": 8635,
+      "github_blob_bytes": 8635,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/FULL_COMPARISONS.zh-CN.md": {
+      "execution_local_sha256": "1e9c05e7224cad8650a15ad8c158d330e01e55d2ea9c668404a4878210800fb8",
+      "github_blob_bytes_sha256": "1e9c05e7224cad8650a15ad8c158d330e01e55d2ea9c668404a4878210800fb8",
+      "execution_bytes": 5116,
+      "github_blob_bytes": 5116,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/JOBS.json": {
+      "execution_local_sha256": "cedddeb8454024930149de8374bcfffedb07c9779da532de3ddc275f41b65c99",
+      "github_blob_bytes_sha256": "cedddeb8454024930149de8374bcfffedb07c9779da532de3ddc275f41b65c99",
+      "execution_bytes": 8643,
+      "github_blob_bytes": 8643,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/LATENCY.json": {
+      "execution_local_sha256": "d5feccd5d56cb7583974ed3029eb3d72d51ed68112349da4002490737c5aa748",
+      "github_blob_bytes_sha256": "d5feccd5d56cb7583974ed3029eb3d72d51ed68112349da4002490737c5aa748",
+      "execution_bytes": 64254,
+      "github_blob_bytes": 64254,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/LATENCY_ATTEMPT.json": {
+      "execution_local_sha256": "ff40b4e4dbdbcea47c0846a1d7ed5b369fe71125951da569c5e0204c577042c0",
+      "github_blob_bytes_sha256": "ff40b4e4dbdbcea47c0846a1d7ed5b369fe71125951da569c5e0204c577042c0",
+      "execution_bytes": 65,
+      "github_blob_bytes": 65,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/MANIFEST.json": {
+      "execution_local_sha256": "2ca8307d56fcf3537ae26d8b86e65f236f30bfaf1fcb263729a903ff2ad609f1",
+      "github_blob_bytes_sha256": "2ca8307d56fcf3537ae26d8b86e65f236f30bfaf1fcb263729a903ff2ad609f1",
+      "execution_bytes": 1328,
+      "github_blob_bytes": 1328,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/PREREGISTRATION.zh-CN.md": {
+      "execution_local_sha256": "e5ff8c594859c03b6c62c8b944696c11f67ac9e48c7edd251c7325fbb1e45002",
+      "github_blob_bytes_sha256": "e5ff8c594859c03b6c62c8b944696c11f67ac9e48c7edd251c7325fbb1e45002",
+      "execution_bytes": 12937,
+      "github_blob_bytes": 12937,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/PRE_REGISTRATION.json": {
+      "execution_local_sha256": "a7353fb2c5c10fb902e05fedbf35d59c00e1f6eefd1afe5e9233166aa354d8b7",
+      "github_blob_bytes_sha256": "a7353fb2c5c10fb902e05fedbf35d59c00e1f6eefd1afe5e9233166aa354d8b7",
+      "execution_bytes": 17348,
+      "github_blob_bytes": 17348,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/QA_EXECUTION_REGISTRATION.json": {
+      "execution_local_sha256": "2069b3ecf2bbfec20b280c8f7a95ee57937d5e1475a927ac9bdd2c0b366beca2",
+      "github_blob_bytes_sha256": "2069b3ecf2bbfec20b280c8f7a95ee57937d5e1475a927ac9bdd2c0b366beca2",
+      "execution_bytes": 853,
+      "github_blob_bytes": 853,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/QA_REPORT.json": {
+      "execution_local_sha256": "5dbfc2ba9aa9ae5fe87a2322ea72dfb8037692aa0fbbc37cb9a5524487874e70",
+      "github_blob_bytes_sha256": "5dbfc2ba9aa9ae5fe87a2322ea72dfb8037692aa0fbbc37cb9a5524487874e70",
+      "execution_bytes": 635,
+      "github_blob_bytes": 635,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/README.zh-CN.md": {
+      "execution_local_sha256": "6f8d819051ea70c5c6c3a3db2359bbdc08419ee3ab5d169aa63d3755bd7a4ba3",
+      "github_blob_bytes_sha256": "6f8d819051ea70c5c6c3a3db2359bbdc08419ee3ab5d169aa63d3755bd7a4ba3",
+      "execution_bytes": 6026,
+      "github_blob_bytes": 6026,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/REFERENCES.json": {
+      "execution_local_sha256": "e0bccb05bba4f62f97730831b57702732a3ff86b3d6a84fe2f4a42f8b6fece63",
+      "github_blob_bytes_sha256": "e0bccb05bba4f62f97730831b57702732a3ff86b3d6a84fe2f4a42f8b6fece63",
+      "execution_bytes": 804,
+      "github_blob_bytes": 804,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/RESULTS.zh-CN.md": {
+      "execution_local_sha256": "47582d707f1458bdca3a8a155b90dd484fd872afa393046c4f56adb061f9fa28",
+      "github_blob_bytes_sha256": "47582d707f1458bdca3a8a155b90dd484fd872afa393046c4f56adb061f9fa28",
+      "execution_bytes": 1780,
+      "github_blob_bytes": 1780,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/RUN_EVIDENCE.json": {
+      "execution_local_sha256": "3ecb77e1d3cb62dddc524c63d248f70f5a71182aaaa3c3127043fdb9b5f3c5f4",
+      "github_blob_bytes_sha256": "3ecb77e1d3cb62dddc524c63d248f70f5a71182aaaa3c3127043fdb9b5f3c5f4",
+      "execution_bytes": 1592010,
+      "github_blob_bytes": 1592010,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/SCIENTIFIC_ATTEMPTS.json": {
+      "execution_local_sha256": "57b75c8890d0121184189859e45199a6ecd224eaba4679b2f5a82be01bee7551",
+      "github_blob_bytes_sha256": "57b75c8890d0121184189859e45199a6ecd224eaba4679b2f5a82be01bee7551",
+      "execution_bytes": 19040,
+      "github_blob_bytes": 19040,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/SELECTION_EVALUATION_ATTEMPT.json": {
+      "execution_local_sha256": "644ce10360e68fd57df72572af394ba24908e217b44511c2cbcf7c44fec42849",
+      "github_blob_bytes_sha256": "644ce10360e68fd57df72572af394ba24908e217b44511c2cbcf7c44fec42849",
+      "execution_bytes": 150,
+      "github_blob_bytes": 150,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/SOURCE_PLAN.json": {
+      "execution_local_sha256": "0a29f462891f75fd718c61cabe89fc8682c5a4d71664e23c4d27ecf8a9f26d8b",
+      "github_blob_bytes_sha256": "0a29f462891f75fd718c61cabe89fc8682c5a4d71664e23c4d27ecf8a9f26d8b",
+      "execution_bytes": 156036,
+      "github_blob_bytes": 156036,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/SOURCE_PREFLIGHT.json": {
+      "execution_local_sha256": "bdc29eec8407318e3a5efb4d688091aacdee97e06822139c0ff34737d830708c",
+      "github_blob_bytes_sha256": "bdc29eec8407318e3a5efb4d688091aacdee97e06822139c0ff34737d830708c",
+      "execution_bytes": 1246,
+      "github_blob_bytes": 1246,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/STAGE_C_SEAL.json": {
+      "execution_local_sha256": "880e9be599ba06242ab56bfdafd2b5043a84b10fc85c70744e2e6d7db6715991",
+      "github_blob_bytes_sha256": "880e9be599ba06242ab56bfdafd2b5043a84b10fc85c70744e2e6d7db6715991",
+      "execution_bytes": 19801,
+      "github_blob_bytes": 19801,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/SUMMARY.json": {
+      "execution_local_sha256": "2b2770aea57dc1104acc5972b38c4d6ac29e2e6bb96c3553b8431ea896a12ab3",
+      "github_blob_bytes_sha256": "2b2770aea57dc1104acc5972b38c4d6ac29e2e6bb96c3553b8431ea896a12ab3",
+      "execution_bytes": 2263134,
+      "github_blob_bytes": 2263134,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/TRAINING_EXECUTION_QA.json": {
+      "execution_local_sha256": "861393a9b4b2aa16af938bad088d8ebb0a35194ee33035f2bf26087e5e63dba8",
+      "github_blob_bytes_sha256": "861393a9b4b2aa16af938bad088d8ebb0a35194ee33035f2bf26087e5e63dba8",
+      "execution_bytes": 1000,
+      "github_blob_bytes": 1000,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/analyze.py": {
+      "execution_local_sha256": "a8b069d9df5739b8cb8e05036f87c1e5957032fd6fa1cb87be3ca8febb395b12",
+      "github_blob_bytes_sha256": "3cd06833bd77fe73e9c81c849967b9b2fde27cbe39dde3941d8cf0422ee2a0ca",
+      "execution_bytes": 26803,
+      "github_blob_bytes": 26802,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "research/standard_method_competition_c/archive_execution.py": {
+      "execution_local_sha256": "3341e6d9a16363ca5e9c514522096693f22a6e36be0018d747b93e0512aa5661",
+      "github_blob_bytes_sha256": "3341e6d9a16363ca5e9c514522096693f22a6e36be0018d747b93e0512aa5661",
+      "execution_bytes": 15114,
+      "github_blob_bytes": 15114,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/engine.py": {
+      "execution_local_sha256": "3e8406ae39ea576b9efdb454303df257960e9ae425f772fd4a173a3efbd20bb7",
+      "github_blob_bytes_sha256": "3e8406ae39ea576b9efdb454303df257960e9ae425f772fd4a173a3efbd20bb7",
+      "execution_bytes": 29230,
+      "github_blob_bytes": 29230,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/engineering_gpu.py": {
+      "execution_local_sha256": "438e6c5036e256737c7c3334c6974656e3fca17483f8c54e010c910bb46a6ef8",
+      "github_blob_bytes_sha256": "438e6c5036e256737c7c3334c6974656e3fca17483f8c54e010c910bb46a6ef8",
+      "execution_bytes": 2685,
+      "github_blob_bytes": 2685,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/independent_QA.py": {
+      "execution_local_sha256": "c9d36167fbd4f81cc70eee6bffff746c3790b6303ddaa45f9e460aaecac013e7",
+      "github_blob_bytes_sha256": "4d8b0fbce6fd1636158918cde19b33c7c641175cdcf90df5247ce0f0172b5f50",
+      "execution_bytes": 31344,
+      "github_blob_bytes": 31343,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "research/standard_method_competition_c/methods.py": {
+      "execution_local_sha256": "8416a75b52d44199d27acda481949fa63e308d3f63a0101ae0bb1fe01c466327",
+      "github_blob_bytes_sha256": "8416a75b52d44199d27acda481949fa63e308d3f63a0101ae0bb1fe01c466327",
+      "execution_bytes": 4731,
+      "github_blob_bytes": 4731,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/prepare.py": {
+      "execution_local_sha256": "37b980040cbdaa3ca90649978a95ca4866c65d46c0fc358314afc4deebf2789d",
+      "github_blob_bytes_sha256": "37b980040cbdaa3ca90649978a95ca4866c65d46c0fc358314afc4deebf2789d",
+      "execution_bytes": 11349,
+      "github_blob_bytes": 11349,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/standard_method_competition_c/prepare_execution.py": {
+      "execution_local_sha256": "fe8c9f804b93b184586bb5a3c41dc61b38aa1f6d903ac9870886edcdb909a0ab",
+      "github_blob_bytes_sha256": "fe8c9f804b93b184586bb5a3c41dc61b38aa1f6d903ac9870886edcdb909a0ab",
+      "execution_bytes": 2755,
+      "github_blob_bytes": 2755,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/wisig_breakthrough/README.zh-CN.md": {
+      "execution_local_sha256": "cf4e9467ede9e90b31f98a20a1bbb7a8e517990146385f997283ec0429eeccc5",
+      "github_blob_bytes_sha256": "cf4e9467ede9e90b31f98a20a1bbb7a8e517990146385f997283ec0429eeccc5",
+      "execution_bytes": 4439,
+      "github_blob_bytes": 4439,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/wisig_full_confirmation_metadata/.gitignore": {
+      "execution_local_sha256": "553d888952a23e007d8de3f17e3a76af89c1cd62525beb7d8527ecb5b2bdc867",
+      "github_blob_bytes_sha256": "553d888952a23e007d8de3f17e3a76af89c1cd62525beb7d8527ecb5b2bdc867",
+      "execution_bytes": 24,
+      "github_blob_bytes": 24,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/wisig_full_confirmation_metadata/ACCESS_LOG.json": {
+      "execution_local_sha256": "3a69db0edc06317fc700f10c6cbd5cec37a4cb330cf53f6ebdb4ade9afc10c33",
+      "github_blob_bytes_sha256": "3a69db0edc06317fc700f10c6cbd5cec37a4cb330cf53f6ebdb4ade9afc10c33",
+      "execution_bytes": 3005,
+      "github_blob_bytes": 3005,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/wisig_full_confirmation_metadata/ACCESS_SCOPE.json": {
+      "execution_local_sha256": "e20d42dcb976e28bcb800fe8ec4341bdc243c6b6a63453c5221182d031f28061",
+      "github_blob_bytes_sha256": "e20d42dcb976e28bcb800fe8ec4341bdc243c6b6a63453c5221182d031f28061",
+      "execution_bytes": 1542,
+      "github_blob_bytes": 1542,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/wisig_full_confirmation_metadata/CANDIDATE_METADATA.json": {
+      "execution_local_sha256": "350c2663eaaae85ca0722524d9bdfcc47deef1e55278bbb27489d9885410abf3",
+      "github_blob_bytes_sha256": "f25bde4b3c4a1a517dc4faa14cc997d74f72050039e6ae9c533b92a6a0a8e9a5",
+      "execution_bytes": 29173,
+      "github_blob_bytes": 27789,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "research/wisig_full_confirmation_metadata/HISTORICAL_EXPOSURE.json": {
+      "execution_local_sha256": "d7c081a54e3c43c22104cc9c0435524524289bb49128c3e7478e90a2917521c7",
+      "github_blob_bytes_sha256": "8f9421d458e37502549a94ee540206dadbbbd42c93ca3cf822185ef4e2889dec",
+      "execution_bytes": 2533,
+      "github_blob_bytes": 2433,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "research/wisig_full_confirmation_metadata/M0_SOURCE_COUNT_SUPPORT.json": {
+      "execution_local_sha256": "64ccb791f9eeeff9a6ff64be6a51b3f343040bdcaf7fdcec303ea9237c708dfa",
+      "github_blob_bytes_sha256": "6d4c61e4e989e6cade2f116b8b05da9b726ee4d481a79a77ff9ecc5981e0cd64",
+      "execution_bytes": 28456,
+      "github_blob_bytes": 26982,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "research/wisig_full_confirmation_metadata/MANIFEST.json": {
+      "execution_local_sha256": "5ab68f9a7dbd3159eac83baeb088b050bab51a5647608c3050cbdba8f2ee0547",
+      "github_blob_bytes_sha256": "ac43d89dd96ee7c54505513d2d5ae9ba628c2f2196d52f87eb9fb597ad23f03a",
+      "execution_bytes": 2322,
+      "github_blob_bytes": 2256,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "research/wisig_full_confirmation_metadata/METADATA_FILE_ADMISSION.json": {
+      "execution_local_sha256": "e7fd10f8d9ba723cbba33d54c4d5fb5b472f958cdedc6d04737e7ddb83c74d13",
+      "github_blob_bytes_sha256": "e7fd10f8d9ba723cbba33d54c4d5fb5b472f958cdedc6d04737e7ddb83c74d13",
+      "execution_bytes": 1578,
+      "github_blob_bytes": 1578,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/wisig_full_confirmation_metadata/OFFICIAL_COMPACT_METADATA.json": {
+      "execution_local_sha256": "ffed929a510967950425290be284c86aedd889a823de425561ca226926532212",
+      "github_blob_bytes_sha256": "ffed929a510967950425290be284c86aedd889a823de425561ca226926532212",
+      "execution_bytes": 1206,
+      "github_blob_bytes": 1206,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/wisig_full_confirmation_metadata/OWNER_QUALIFICATION_RESPONSE.json": {
+      "execution_local_sha256": "1b2fa14a407d9d0fc821b455a11230622dba4c9de96c9d470e9317aa50449cc9",
+      "github_blob_bytes_sha256": "1b2fa14a407d9d0fc821b455a11230622dba4c9de96c9d470e9317aa50449cc9",
+      "execution_bytes": 507,
+      "github_blob_bytes": 507,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/wisig_full_confirmation_metadata/QA_REPORT.json": {
+      "execution_local_sha256": "95eaa0b3c4092bd49e2295a874d52684ff4d533ffb2b4d7c7e781696de7a33e3",
+      "github_blob_bytes_sha256": "32b89568aa24803ad6e654b0ee8be4a4d22673409c9aedd1bd61512c7b4feadc",
+      "execution_bytes": 428,
+      "github_blob_bytes": 409,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "research/wisig_full_confirmation_metadata/QUALIFICATION_PROTOCOL.zh-CN.md": {
+      "execution_local_sha256": "912c51fe7b1e09e34bea0c174352f3862e6958ff604f116bdc2abe1e89f5b43f",
+      "github_blob_bytes_sha256": "912c51fe7b1e09e34bea0c174352f3862e6958ff604f116bdc2abe1e89f5b43f",
+      "execution_bytes": 2604,
+      "github_blob_bytes": 2604,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/wisig_full_confirmation_metadata/README.zh-CN.md": {
+      "execution_local_sha256": "c2c32a572f78acbf21fc58fa51c81a680cb038f692b99f2ce0bdbbb6e7d1ff92",
+      "github_blob_bytes_sha256": "c2c32a572f78acbf21fc58fa51c81a680cb038f692b99f2ce0bdbbb6e7d1ff92",
+      "execution_bytes": 6088,
+      "github_blob_bytes": 6088,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/wisig_full_confirmation_metadata/STATIC_PICKLE_INSPECTION.json": {
+      "execution_local_sha256": "bae5e1b98f3afcb5e63642c645ef5a06a1a9c7b0d072cc0066fdaf70bfbbf8ca",
+      "github_blob_bytes_sha256": "8784b8fb61027c02a1d1278f54b554f868443172f72075ba34295564718b7058",
+      "execution_bytes": 3100,
+      "github_blob_bytes": 2889,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "research/wisig_full_confirmation_metadata/decode_counts_metadata.py": {
+      "execution_local_sha256": "3d2e4887a779b67b0fc01b8997d16e0abc714a78812ffb5f8e3a41047256f602",
+      "github_blob_bytes_sha256": "3d2e4887a779b67b0fc01b8997d16e0abc714a78812ffb5f8e3a41047256f602",
+      "execution_bytes": 5936,
+      "github_blob_bytes": 5936,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/wisig_full_confirmation_metadata/inspect_counts_metadata.py": {
+      "execution_local_sha256": "57c04551c4617f7da3d737dad360d16f39194f362c5bcbe6cbd98e5aaf2a9ff0",
+      "github_blob_bytes_sha256": "57c04551c4617f7da3d737dad360d16f39194f362c5bcbe6cbd98e5aaf2a9ff0",
+      "execution_bytes": 2281,
+      "github_blob_bytes": 2281,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/wisig_full_confirmation_metadata/project_historical_metadata.py": {
+      "execution_local_sha256": "8a0c19bcc4e0cf21f04b812fc83b7eee880b1cc727469d416d69caa9725cfaa7",
+      "github_blob_bytes_sha256": "8a0c19bcc4e0cf21f04b812fc83b7eee880b1cc727469d416d69caa9725cfaa7",
+      "execution_bytes": 2713,
+      "github_blob_bytes": 2713,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/wisig_raw_eq_m0/ACCESS_LOG.json": {
+      "execution_local_sha256": "d41e8d4205e4e450967a9b578280bda1e3456e9a5affecf089b81bbf1e8e4407",
+      "github_blob_bytes_sha256": "d41e8d4205e4e450967a9b578280bda1e3456e9a5affecf089b81bbf1e8e4407",
+      "execution_bytes": 2805,
+      "github_blob_bytes": 2805,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/wisig_raw_eq_m0/COUNT_SUPPORT_REFERENCE.json": {
+      "execution_local_sha256": "089e1e47d60711f81c0918e87826abc7c4187d795bcbeccd3855a1e3c9b80a8d",
+      "github_blob_bytes_sha256": "089e1e47d60711f81c0918e87826abc7c4187d795bcbeccd3855a1e3c9b80a8d",
+      "execution_bytes": 1597,
+      "github_blob_bytes": 1597,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/wisig_raw_eq_m0/DECISION.json": {
+      "execution_local_sha256": "32dc77f8afcf0ceedcfea25399c213356f3a86d889c3448fc61cda903e8b9f12",
+      "github_blob_bytes_sha256": "32dc77f8afcf0ceedcfea25399c213356f3a86d889c3448fc61cda903e8b9f12",
+      "execution_bytes": 2511,
+      "github_blob_bytes": 2511,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/wisig_raw_eq_m0/LOCAL_METADATA_REVIEW.json": {
+      "execution_local_sha256": "b165d988f0a83d134653f17773518d5efcf86f617e5f0fa495a2fc2c9692aaa3",
+      "github_blob_bytes_sha256": "f523fd3168940b6390601723f739272bf71cfaa3a8ba7f7b70729b7702a0f130",
+      "execution_bytes": 29087,
+      "github_blob_bytes": 28191,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "research/wisig_raw_eq_m0/MANIFEST.json": {
+      "execution_local_sha256": "ee42c505d3b2e8cbfcab61b4864c8fefac9437098f1af0de64aebaa78f2342e8",
+      "github_blob_bytes_sha256": "74df920d66377fe0c12527274ad5647cd15d93d17b57db8f68ad00e23279954e",
+      "execution_bytes": 3796,
+      "github_blob_bytes": 3689,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "research/wisig_raw_eq_m0/PREREGISTRATION.zh-CN.md": {
+      "execution_local_sha256": "e0b36da5e36b791833c10bdba6950bd370090275c18ccd79c504b84844faed23",
+      "github_blob_bytes_sha256": "e0b36da5e36b791833c10bdba6950bd370090275c18ccd79c504b84844faed23",
+      "execution_bytes": 3257,
+      "github_blob_bytes": 3257,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/wisig_raw_eq_m0/PRE_REGISTRATION.json": {
+      "execution_local_sha256": "b3c0c90e745fc3fcfc2e849a71a385bc1173ed2c68edf78e1ce57c3c7a7ed701",
+      "github_blob_bytes_sha256": "b3c0c90e745fc3fcfc2e849a71a385bc1173ed2c68edf78e1ce57c3c7a7ed701",
+      "execution_bytes": 6440,
+      "github_blob_bytes": 6440,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/wisig_raw_eq_m0/PUBLIC_SOURCE_MANIFEST.json": {
+      "execution_local_sha256": "cc088b9c644fea9947f2a3035c7ae82596a045edd8a0f4ed37dfae02ae1bfdc7",
+      "github_blob_bytes_sha256": "cc088b9c644fea9947f2a3035c7ae82596a045edd8a0f4ed37dfae02ae1bfdc7",
+      "execution_bytes": 3864,
+      "github_blob_bytes": 3864,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/wisig_raw_eq_m0/QA_REPORT.json": {
+      "execution_local_sha256": "d15802c5f54dd1f8ef42828009587eb51b8ee884a9ad1f33a1166fffacb01756",
+      "github_blob_bytes_sha256": "b484e0e2654c736e0da67eab6c9d922b5e888e8dd942678d356bcd4cf9729809",
+      "execution_bytes": 2473,
+      "github_blob_bytes": 2411,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "research/wisig_raw_eq_m0/README.zh-CN.md": {
+      "execution_local_sha256": "1d5a24735be996edd976a9812dc844de2bbb4a5931ef58a2bc311904881bfee5",
+      "github_blob_bytes_sha256": "1d5a24735be996edd976a9812dc844de2bbb4a5931ef58a2bc311904881bfee5",
+      "execution_bytes": 6868,
+      "github_blob_bytes": 6868,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/wisig_raw_eq_m0/metadata_review.py": {
+      "execution_local_sha256": "d65af66c9df2dfed3e133ea65c7576a797e05e447403fc196cf47d2e47808894",
+      "github_blob_bytes_sha256": "d65af66c9df2dfed3e133ea65c7576a797e05e447403fc196cf47d2e47808894",
+      "execution_bytes": 4995,
+      "github_blob_bytes": 4995,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/wisig_raw_eq_m0/public_sources/.gitattributes": {
+      "execution_local_sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+      "github_blob_bytes_sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+      "execution_bytes": 8,
+      "github_blob_bytes": 8,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/wisig_raw_eq_m0/public_sources/wisig-process-raw/LICENSE.md.txt": {
+      "execution_local_sha256": "5d13302991996ac66442e10e98b55ff7f69cf94ea00fc6c2b72d08ab87e86f11",
+      "github_blob_bytes_sha256": "5d13302991996ac66442e10e98b55ff7f69cf94ea00fc6c2b72d08ab87e86f11",
+      "execution_bytes": 1494,
+      "github_blob_bytes": 1494,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/wisig_raw_eq_m0/public_sources/wisig-process-raw/matlab_detection_screening/split_signal_fun.m.txt": {
+      "execution_local_sha256": "dbeb232ed868aa2945509aa4cb7e905ee7af57a134150a719457c2551e97e246",
+      "github_blob_bytes_sha256": "dbeb232ed868aa2945509aa4cb7e905ee7af57a134150a719457c2551e97e246",
+      "execution_bytes": 3226,
+      "github_blob_bytes": 3226,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/wisig_raw_eq_m0/public_sources/wisig-process-raw/matlab_equalization/Readme.txt.txt": {
+      "execution_local_sha256": "56291420d3945b3be1ebfa889e483cd21ab38ad3afd6871316d9ec8d7410c9ea",
+      "github_blob_bytes_sha256": "56291420d3945b3be1ebfa889e483cd21ab38ad3afd6871316d9ec8d7410c9ea",
+      "execution_bytes": 390,
+      "github_blob_bytes": 390,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/wisig_raw_eq_m0/public_sources/wisig-process-raw/matlab_equalization/equalize_channel.m.txt": {
+      "execution_local_sha256": "eb6be4dd87b07107897243054fc86086a78df34259243466758781ef7d929cbc",
+      "github_blob_bytes_sha256": "eb6be4dd87b07107897243054fc86086a78df34259243466758781ef7d929cbc",
+      "execution_bytes": 1797,
+      "github_blob_bytes": 1797,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/wisig_raw_eq_m0/public_sources/wisig-process-raw/matlab_equalization/equalize_dataset.m.txt": {
+      "execution_local_sha256": "67247aa3c936777e5fc2e7479caa24c81ac8a76c55ec49d765dba01654caa72b",
+      "github_blob_bytes_sha256": "67247aa3c936777e5fc2e7479caa24c81ac8a76c55ec49d765dba01654caa72b",
+      "execution_bytes": 1147,
+      "github_blob_bytes": 1147,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/wisig_raw_eq_m0/public_sources/wisig-process-raw/python_pkl_creation/py/build_dataset_multirx.py.txt": {
+      "execution_local_sha256": "6f9b51384d82d5f77ffe6ba53f2525565860013dcc0ad632e3c63e94bf3ce3cd",
+      "github_blob_bytes_sha256": "6f9b51384d82d5f77ffe6ba53f2525565860013dcc0ad632e3c63e94bf3ce3cd",
+      "execution_bytes": 1855,
+      "github_blob_bytes": 1855,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/wisig_raw_eq_m0/public_sources/wisig-subset-creation/LICENSE.md.txt": {
+      "execution_local_sha256": "5d13302991996ac66442e10e98b55ff7f69cf94ea00fc6c2b72d08ab87e86f11",
+      "github_blob_bytes_sha256": "5d13302991996ac66442e10e98b55ff7f69cf94ea00fc6c2b72d08ab87e86f11",
+      "execution_bytes": 1494,
+      "github_blob_bytes": 1494,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "research/wisig_raw_eq_m0/public_sources/wisig-subset-creation/data_utilities.py.txt": {
+      "execution_local_sha256": "03c6c2806bac2d5258cbaf0c8e12a2fde9e17495ae31c9d2938eeaba6b17768e",
+      "github_blob_bytes_sha256": "03c6c2806bac2d5258cbaf0c8e12a2fde9e17495ae31c9d2938eeaba6b17768e",
+      "execution_bytes": 9654,
+      "github_blob_bytes": 9654,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "tests/test_controlled_training_analysis.py": {
+      "execution_local_sha256": "ca277b830afbf2273c06a2740df84f45660c0ce0cd32c6d055d06d9b98cad488",
+      "github_blob_bytes_sha256": "ca277b830afbf2273c06a2740df84f45660c0ce0cd32c6d055d06d9b98cad488",
+      "execution_bytes": 7836,
+      "github_blob_bytes": 7836,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "tests/test_standard_method_competition_c.py": {
+      "execution_local_sha256": "bea30a1de413c58b1b9d29621120c7a94ba8ff03f3f516d520ed6484f41e4950",
+      "github_blob_bytes_sha256": "bea30a1de413c58b1b9d29621120c7a94ba8ff03f3f516d520ed6484f41e4950",
+      "execution_bytes": 8871,
+      "github_blob_bytes": 8871,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "tests/test_standard_method_competition_c_analysis.py": {
+      "execution_local_sha256": "5cee7635b033af0194fe84393df0af52e63562b10987822c61cc32e5cee38e6c",
+      "github_blob_bytes_sha256": "904b6f3a25d4299be78b8cc6ee90c8d4de2f899c2caac3f96088dfbc0f6c4028",
+      "execution_bytes": 16549,
+      "github_blob_bytes": 16548,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    },
+    "tests/test_standard_method_competition_c_engine.py": {
+      "execution_local_sha256": "807f9fb2c741d1754c048d93848c2e864fd9f4878de25311ef17562de757a50b",
+      "github_blob_bytes_sha256": "807f9fb2c741d1754c048d93848c2e864fd9f4878de25311ef17562de757a50b",
+      "execution_bytes": 6036,
+      "github_blob_bytes": 6036,
+      "equal": true,
+      "only_CRLF_to_LF_normalization": false
+    },
+    "tests/test_standard_method_competition_c_independent_qa.py": {
+      "execution_local_sha256": "4f5b2a4605f72b2dd9bf69d5e2c9da7fbe7cfedd8a4336fcdbf6d4646226bbd4",
+      "github_blob_bytes_sha256": "03f176c02d51c8fd349a8d4a51506dd5ab7b5f8a34185e19c5a041c6d10d1af1",
+      "execution_bytes": 9589,
+      "github_blob_bytes": 9588,
+      "equal": false,
+      "only_CRLF_to_LF_normalization": true
+    }
+  },
+  "original_byte_archive": {
+    "path": "FROZEN_EXECUTION_BYTES.zip",
+    "sha256": "1c9e2162d75996a89bdb81b3cdfe0f70278073f7878bf385fef84a9c6cd33ced",
+    "bytes": 256010,
+    "entries": 99,
+    "roundtrip_exact": true,
+    "contains_IQ_weights_or_packet_arrays": false
+  },
+  "additional_training_or_scoring": 0
+}
