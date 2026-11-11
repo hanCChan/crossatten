@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "task": "Full WiSig confirmation eligibility — metadata only",
+  "status": "METADATA_SCOPE_REGISTERED_CONFIRMATION_ACCESS_CLOSED",
+  "registered_local_date": "2026-11-11",
+  "baseline_commit": "bebf6bb0788eb9a834fb508ef169b63985eb0578",
+  "owned_directory": "research/wisig_full_confirmation_metadata",
+  "allowed": [
+    "Official UCLA documentation",
+    "Official WiSig-dataset repository text/source/notebook metadata outputs",
+    "Public device identity and per-TX/RX/day packet-count metadata only after source/schema inspection",
+    "Local historical protocol/device list text; archive entry names without payload"
+  ],
+  "forbidden": [
+    "Candidate IQ or waveform arrays",
+    "Candidate model weights, predictions, margins or accuracy",
+    "Raw/full/compact scientific payload pickles",
+    "Target/held scientific evaluation",
+    "Scientific training",
+    "Claiming absence of historical use from a filename search alone"
+  ],
+  "prospective_gate": [
+    "Exact physical RX identities and disjointness from ManyRx32",
+    "Original ManyRx10 physical TX mapping verified, not class indices",
+    "Per TX/RX/date sample-count support verified in official metadata",
+    "Historical exposure assessed with explicit UNKNOWN when records incomplete",
+    "Frozen cohort and separately committed evaluation protocol before any IQ opening"
+  ],
+  "confirmation_access": "CLOSED",
+  "note": "This registration permits metadata feasibility only. It does not authorize evaluating a confirmation cohort."
+}

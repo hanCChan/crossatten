@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "registration_id": "WISIG-RAW-EQ-M0-METADATA-v1",
+  "stage": "bounded_source_and_metadata_feasibility",
+  "starting_repository_commit": "bebf6bb0788eb9a834fb508ef169b63985eb0578",
+  "registration_timing": {
+    "public_processing_text_and_existing_D4_review_already_seen": true,
+    "scientific_payloads_opened_before_registration": 0,
+    "empirical_preservation_or_performance_results_seen_in_this_work_package": false,
+    "note": "This registers the bounded metadata gate after initial public-code review; it is not presented as a blinded empirical pre-registration. Commit is handled by the root agent before any possible separately admitted scientific step."
+  },
+  "question": "Can the current local WiSig non-equalized and equalized 256-sample Id signals be verified as views of the same detected packet, with supported TX-discriminative safety and cross-RX relevance?",
+  "allowed_now": [
+    "Official UCLA WiSig pages and the explicitly listed pinned public processing/subset source text",
+    "Existing local D4 report, preparation source text and saved provenance/schema metadata",
+    "Public aggregate raw/EQ signal-count JSON supplied by the separately registered Full-WiSig metadata work package; no waveform or performance endpoints",
+    "Filename/directory inventories and ZIP central-directory listings without member extraction",
+    "SHA256 of the allowlisted source/report/metadata text files only"
+  ],
+  "scientific_scope_if_a_later_step_is_explicitly_admitted": {
+    "dataset": "ManyRx",
+    "legal_rx": ["7-7", "7-14", "8-7", "8-8", "8-14", "13-7", "13-14", "14-7", "18-2", "18-19", "23-3", "23-5", "23-6", "23-7", "24-5", "24-6", "24-13", "24-16"],
+    "capture_dates": ["2021_03_01", "2021_03_08"],
+    "tx": ["1-10", "11-1", "14-10", "14-7", "17-11", "20-15", "20-19", "7-11", "7-14", "8-20"],
+    "max_original_raw_rows_per_tx_rx_day": 100,
+    "note": "This names the maximum legal source scope, not permission to open payloads or pair by row index. No scientific payload reader is included or authorized by this metadata registration."
+  },
+  "forbidden_now": [
+    "IQ arrays, full compact pickle unpickling, NumPy payloads, MATLAB signal arrays and scientific model/prediction files",
+    "Downloads of compact, Full, or Raw WiSig scientific datasets",
+    "Scientific forward passes, classifier/probe fitting, optimizer steps or any new loss",
+    "Historical held6, target8, dates 3-4 or other datasets for method selection",
+    "Calling existing scientific loaders or IndexUnpickler even just for convenience"
+  ],
+  "metadata_search_budget": {
+    "official_source_repositories": [
+      {"repository": "WiSig-dataset/wisig-process-raw", "commit": "6530c6ed6be1d08544ac295040ed50f5babde86a", "paths": ["matlab_equalization/equalize_channel.m", "matlab_equalization/equalize_dataset.m", "matlab_equalization/Readme.txt", "matlab_detection_screening/split_signal_fun.m", "python_pkl_creation/py/build_dataset_multirx.py", "LICENSE.md"]},
+      {"repository": "WiSig-dataset/wisig-subset-creation", "commit": "bc8c6bd352a8c184a571e6b4c2d7a890cdfff3d8", "paths": ["data_utilities.py", "LICENSE.md"]}
+    ],
+    "local_text_roots": ["research/classification_failure_diagnostics", "05-wisig", "13-mixer-cfo-mechanisms", "17-rx-distortion", "lib/xa"],
+    "additional_local_text_sidecars": ["D:/crossatten/stage_1/data/wisig/DOWNLOAD_MANIFEST.json", "D:/crossatten/worktrees/s17-rx-distortion/17b-phase-intervention/cache/ManyRx_f2_first_s16001/fit_manifest.json"],
+    "local_data_directory_inventory_only": ["D:/crossatten/stage_1/data/wisig", "D:/crossatten/stage_1/13-mixer-cfo-mechanisms/cache/wisig/ManyRx", "D:/crossatten/worktrees/s17-rx-distortion/17b-phase-intervention/cache/ManyRx_f2_first_s16001"],
+    "scientific_archive_central_directory_only": ["D:/crossatten/stage_1/data/wisig/ManyRx.kaggle.v1.zip"],
+    "new_scientific_fits": 0,
+    "new_scientific_forward_passes": 0,
+    "new_scientific_payload_decodes": 0,
+    "stop_after_first_failed_prerequisite": true,
+    "no_automatic_scope_expansion_or_renamed_retry": true
+  },
+  "ordered_gates": [
+    {
+      "id": "G0_SOURCE_AND_PROCESSING",
+      "pass": "Identify official Raw/EQ Id-signal meaning and pinned production steps; distinguish them from the full unsegmented Raw WiSig captures."
+    },
+    {
+      "id": "G1_LOCAL_PACKET_IDENTITY",
+      "pass": "Every proposed pair has a one-to-one verifiable provenance chain: immutable detected-packet ID / capture-plus-start-offset, or an authenticated retained-original-index map through all screening, equalization failures, crop/resampling and compact truncation stages. Exact local artifact provenance must connect to that map; labels, shape, equal length and equal array index alone never pass.",
+      "fail": "STOP_NO_VERIFIABLE_LOCAL_PAIRING",
+      "consequence": "Do not open IQ, evaluate information preservation, compute view/error correlations, fit any classifier, or implement a dual-view objective."
+    },
+    {
+      "id": "G2_TX_INFORMATION_SAFETY",
+      "pass": "Only after G1 and an exact separately committed and admitted source-only payload/evaluator plan: show TX-discriminative information is retained with predeclared classwise and RX-wise limits. The processing source alone, reconstruction quality, class labels or raw-trained-model EQ accuracy alone cannot establish information safety.",
+      "fail": "STOP_TX_INFORMATION_SAFETY_UNVERIFIED",
+      "status_at_metadata_only_scope": "NOT_ASSESSED; never treated as pass"
+    },
+    {
+      "id": "G3_CROSS_RX_RELEVANCE",
+      "pass": "Only after G1/G2 and separately committed and admitted source-only analysis: show predeclared across-RX relation between paired view differences and TX discrimination failures. A view difference is not itself evidence of a receiver-only intervention or relevant augmentation.",
+      "fail": "STOP_CROSS_RX_RELEVANCE_UNVERIFIED",
+      "status_at_metadata_only_scope": "NOT_ASSESSED; never treated as pass"
+    }
+  ],
+  "global_go_rule": "All G0-G3 pass with actual auditable evidence. Metadata-qualified source provenance alone is not scientific GO and cannot authorize new training.",
+  "exit": "Close M0 at the first unmet prerequisite. Preserve all historical STOP decisions. At most one later trainable candidate may be selected jointly with C, and only under a separate pre-registration; this metadata work package cannot launch it."
+}

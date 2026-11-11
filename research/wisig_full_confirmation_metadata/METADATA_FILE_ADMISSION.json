@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "registered_local_date": "2026-11-11",
+  "status": "ADMITTED_AGGREGATE_METADATA_ONLY",
+  "repository": "WiSig-dataset/wisig-examples",
+  "commit": "afbf0a95bc888a7e3d9f94fa3442d36dace6e1fb",
+  "path": "data_summary.pkl",
+  "url": "https://raw.githubusercontent.com/WiSig-dataset/wisig-examples/afbf0a95bc888a7e3d9f94fa3442d36dace6e1fb/data_summary.pkl",
+  "git_blob_sha": "3df26215f59e349b1ba9da202de44fc503690039",
+  "expected_size_bytes": 459700,
+  "reason": "Official README says number of signals per Tx-Rx for entire dataset; official d001 text reads only date/device lists and count tensors.",
+  "expected_keys": [
+    "capture_date_list",
+    "tx_list",
+    "rx_list",
+    "mat_date",
+    "mat_date_eq"
+  ],
+  "allowed_values": "Device/date strings, numeric count tensors shaped (4 dates, 41 receivers, 174 transmitters). Shapes will be verified; no waveform field is admitted.",
+  "decoding": "Restricted unpickler, only numpy array/dtype reconstruction plus primitive Python containers; abort unknown globals or unexpected schema/type/shape/value.",
+  "not_admitted": [
+    "IdSig_info.pkl",
+    "Any Full/Raw/compact waveform pickle",
+    "Model weights or predictions",
+    "Notebook execution",
+    "Any performance endpoint"
+  ],
+  "references": [
+    "https://github.com/WiSig-dataset/wisig-examples/blob/afbf0a95bc888a7e3d9f94fa3442d36dace6e1fb/README.md",
+    "https://github.com/WiSig-dataset/wisig-examples/blob/afbf0a95bc888a7e3d9f94fa3442d36dace6e1fb/py/d001_plot_Full_WiSig_tx_rx_grid.py"
+  ],
+  "confirmation_access": "CLOSED"
+}
