@@ -1,0 +1,166 @@
+{
+  "status": "PASS",
+  "checks": {
+    "tokens_P0": true,
+    "tokens_P1": true,
+    "tokens_P2": true,
+    "tokens_N19": true,
+    "P1_P2_initial_prediction_exact": true,
+    "P2_N19_initial_prediction_exact": true,
+    "all_endpoint_replays": true,
+    "same_sample_orders": true,
+    "all_24_synthetic_updates": true
+  },
+  "synthetic_gradient_trajectories": 4,
+  "synthetic_gradient_updates": 24,
+  "scientific_IQ_reads": 0,
+  "synthetic_output_directory": "artifacts/synthetic_attempt_002",
+  "prior_engineering_attempt_directories": [
+    "artifacts/synthetic"
+  ],
+  "prior_engineering_failure": "First synthetic fixture used NumPy Windows int32 labels; corrected explicit torch.int64 label conversion before any scientific input read.",
+  "parameters": {
+    "P0": 82426,
+    "P1": 84394,
+    "P2": 83786,
+    "N19": 83786
+  },
+  "synthetic_outputs": {
+    "P0": {
+      "status": "COMPLETE",
+      "job": {
+        "id": "SYNTHETIC",
+        "epochs": 2,
+        "batch": 16,
+        "weight_decay": 0.001,
+        "order_seed": 24201,
+        "stochastic_seed": 24301,
+        "max_gradient_updates": 6,
+        "arm": "P0"
+      },
+      "epochs": 2,
+      "updates": 6,
+      "best_epoch": 1,
+      "best_val_rx_ce": 2.528585910797119,
+      "active_parameters": 82426,
+      "val_inference_replay": {
+        "selected": true,
+        "final40": true
+      },
+      "costs": {
+        "training_seconds": 0.21257989999139681,
+        "validation_seconds": 0.03209999995306134,
+        "fit_loop_seconds": 0.3142150000203401
+      },
+      "checkpoints": {
+        "selected": "3ea5f6d5fba179e7a408ae134ff8f8855a14fbd831766378dbfc30d39891acc9",
+        "final40": "614e2fd3326fef3602543e10544cd70e8c417ad066e77c82b5c57968319e1475"
+      }
+    },
+    "P1": {
+      "status": "COMPLETE",
+      "job": {
+        "id": "SYNTHETIC",
+        "epochs": 2,
+        "batch": 16,
+        "weight_decay": 0.001,
+        "order_seed": 24201,
+        "stochastic_seed": 24301,
+        "max_gradient_updates": 6,
+        "arm": "P1"
+      },
+      "epochs": 2,
+      "updates": 6,
+      "best_epoch": 1,
+      "best_val_rx_ce": 2.529477834701538,
+      "active_parameters": 84394,
+      "val_inference_replay": {
+        "selected": true,
+        "final40": true
+      },
+      "costs": {
+        "training_seconds": 0.1039767999900505,
+        "validation_seconds": 0.017186000011861324,
+        "fit_loop_seconds": 0.2075878999894485
+      },
+      "checkpoints": {
+        "selected": "ca037b219589ac0dc85de37af86b43776968af897286d250b9e576cfbe317127",
+        "final40": "61a0b45eeb2122f7415fda0e97891c870e8afb2c51735504574c9b7992ac0bde"
+      }
+    },
+    "P2": {
+      "status": "COMPLETE",
+      "job": {
+        "id": "SYNTHETIC",
+        "epochs": 2,
+        "batch": 16,
+        "weight_decay": 0.001,
+        "order_seed": 24201,
+        "stochastic_seed": 24301,
+        "max_gradient_updates": 6,
+        "arm": "P2"
+      },
+      "epochs": 2,
+      "updates": 6,
+      "best_epoch": 1,
+      "best_val_rx_ce": 2.529478073120117,
+      "active_parameters": 83786,
+      "val_inference_replay": {
+        "selected": true,
+        "final40": true
+      },
+      "costs": {
+        "training_seconds": 0.07530030002817512,
+        "validation_seconds": 0.013600500009488314,
+        "fit_loop_seconds": 0.16281709994655102
+      },
+      "checkpoints": {
+        "selected": "b8482f7dc869de21fc986b1d070f500862452962e11d5cc95b1bfb2bb22991de",
+        "final40": "67ed4368fe17bb0f38ac6ea07ccb3aed3fd46071554d58739ff02b7c62f050aa"
+      }
+    },
+    "N19": {
+      "status": "COMPLETE",
+      "job": {
+        "id": "SYNTHETIC",
+        "epochs": 2,
+        "batch": 16,
+        "weight_decay": 0.001,
+        "order_seed": 24201,
+        "stochastic_seed": 24301,
+        "max_gradient_updates": 6,
+        "arm": "N19"
+      },
+      "epochs": 2,
+      "updates": 6,
+      "best_epoch": 1,
+      "best_val_rx_ce": 2.529479503631592,
+      "active_parameters": 83786,
+      "val_inference_replay": {
+        "selected": true,
+        "final40": true
+      },
+      "costs": {
+        "training_seconds": 0.07506619999185205,
+        "validation_seconds": 0.014574199973139912,
+        "fit_loop_seconds": 0.15857700002379715
+      },
+      "checkpoints": {
+        "selected": "ce5032eadfa03a7c945efcf445eb11cc9266f97688fe02c2a6baa941fd8c0786",
+        "final40": "abd10ac28f43a3df7e70f0e369647873c56c6816a4f367f85364cbe9f522a096"
+      }
+    }
+  },
+  "environment": {
+    "torch": "2.5.0+cu124",
+    "numpy": "1.26.4",
+    "python": "3.11.8 (tags/v3.11.8:db85d51, Feb  6 2024, 22:03:32) [MSC v.1937 64 bit (AMD64)]",
+    "cuda": "12.4",
+    "cudnn": 90100,
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "capability": [
+      8,
+      9
+    ]
+  }
+}
