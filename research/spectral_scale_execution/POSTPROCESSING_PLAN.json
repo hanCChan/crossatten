@@ -1,0 +1,51 @@
+{
+  "scope": "Reporting and independent recomputation only; no added fitting or model selection",
+  "primary_endpoint": "selected",
+  "auxiliary_endpoints": [
+    "epoch10",
+    "final40"
+  ],
+  "independent_audit": {
+    "metrics": [
+      "RX-equal Accuracy",
+      "Macro-F1 over10 fixed classes",
+      "CE",
+      "per-RX/view/stream",
+      "TXxRX risk",
+      "corrected/new errors"
+    ],
+    "bootstrap": {
+      "RX": 12,
+      "streams_averaged_first": 3,
+      "replicates": 10000,
+      "seed": 24501
+    },
+    "training_trace": [
+      "all12 budgets",
+      "all480 epoch frozen states and BN",
+      "actual paired order",
+      "all60960 gradients and alpha",
+      "epoch0-to40 earliest minimum",
+      "all sealed file hashes"
+    ],
+    "source_IQ_reads": 0
+  },
+  "inference_cost": {
+    "models": "V0/S0 selected endpoints only; F0,F1,F2,E0, no fastest-seed selection",
+    "input": "synthetic CUDA-resident FP32 [128,2,256]",
+    "seed": 27610,
+    "batches": [
+      1,
+      128
+    ],
+    "warmup_per_round": 20,
+    "measurements_per_round": 100,
+    "rounds": 4,
+    "order": "balanced rotations of F0,F1,F2,E0",
+    "timing": "CUDA events, full frontend through classifier, excludes host/disk IO",
+    "optimizer_steps": 0
+  },
+  "training_cost": "Actual recorded incremental side fits plus separately disclosed inherited P0/EMA pretraining; no zero-cost baseline claim",
+  "stop_on_preflight_failure": true,
+  "science_hypothesis_or_recipe_changes": false
+}
