@@ -1,0 +1,36 @@
+{
+  "status": "PASS_EXACT_C_SOURCE_ROLES",
+  "registration_sha256": "7559f03cb6fca49575558d6c2e31fb135c3a57ef0528f9ab961321dac3f9bd6f",
+  "views": {
+    "V0": {
+      "fit_train": {
+        "rows": 16246,
+        "key_sha256": "e336bea2bf62b4a3c949ded8ad4601fed7dd60fdacac16fffa4f1a1407398e2d"
+      },
+      "checkpoint_val": {
+        "rows": 6954,
+        "key_sha256": "8d6df61619bdaa6aa49d654d0958c5b9b03668653d1a8ce6b199edd12e82f619"
+      },
+      "source_selection": {
+        "rows": 11468,
+        "key_sha256": "a858585eba1ded9a7f11ccb6ea37a11e74b1fe04ccdc75193d29d394c18e452e"
+      }
+    },
+    "V1": {
+      "fit_train": {
+        "rows": 16173,
+        "key_sha256": "7e7e7d9fd9525318c916309cc4d3eae960e176b2a9d0113eab76d4a98d1d8f6f"
+      },
+      "checkpoint_val": {
+        "rows": 6995,
+        "key_sha256": "a543408e4ab4aa04dfe06cf0d69101eed53675fccfa596c2a571934ce52b810f"
+      },
+      "source_selection": {
+        "rows": 11500,
+        "key_sha256": "9bd67f4afd92185e1634e80bbcc62153e3980b55795b6843926624e2dc41ae1f"
+      }
+    }
+  },
+  "IQ_payload_loads": 0,
+  "time": "2026-11-11T19:01:50+08:00"
+}
