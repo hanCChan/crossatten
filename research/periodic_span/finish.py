@@ -172,7 +172,7 @@ def report():
     lines+=['','延迟使用每臂V0/S0 selected模型、固定合成CUDA驻留输入，含完整RF前端+HStem+MHA；3轮旋转顺序，每轮20次warmup及100次CUDA-event测量，batch1/128。只报告设备计算延迟，不包含磁盘与主机传输，p95和吞吐见LATENCY.json。','',
         '原源域分割及三个配对流沿用C，wd=.001由此前公开源开发结果固定；这不是未见开发集上的确认。RX bootstrap只覆盖已观察12个源留出RX，三流先平均，不把包或模型当独立样本，多比较未校正。历史held6、target8、日期3–4、Full新RX以及LoRa/ManySig均未访问。','',
         '- [冻结协议](PREREGISTRATION.zh-CN.md)、[机器登记](REGISTRATION.json)、[24次作业](JOBS.json)。',
-        '- [全部端点汇总](SUMMARY.json)、[完整逐包派生分析](ANALYSIS.json.gz)、[独立复核](INDEPENDENT_QA.json)。',
+        '- [全部端点汇总](SUMMARY.json)、[完整分组与配对分析](ANALYSIS.json.gz)、[独立复核](INDEPENDENT_QA.json)。',
         '- [72份源选择预测归档](SOURCE_PREDICTIONS.zip)、[训练封存](TRAINING_SEAL.json)、[实际初态与序列证据](RUN_EVIDENCE.json)。',
         '- [成本](COSTS.json)、[延迟](LATENCY.json)、[本地全状态归档摘要](ARTIFACT_ARCHIVE.json)。',
         '- [原固定窗口STOP证据](../periodic_hstem/AUDIT_RESULT.json)，该文件SHA与新登记逐次核对一致。','',
