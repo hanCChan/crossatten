@@ -1,0 +1,14 @@
+{
+  "status": "UTF8_TRANSCRIPT_ADDED_WITH_ORIGINAL_AUTHORIZATION_BYTES_PRESERVED",
+  "issue": "PowerShell stdin encoding replaced Chinese characters in the first JSON user-text field; structured English authorization fields and this actual conversation approval were intact.",
+  "detected_by": "A bookkeeping wrapper assertion before invocation of the scientific executor; train-all was not called and no scientific attempt was created.",
+  "original_authorization_sha256": "e25b5eafc1116ee558fdf5bb51d235e90825de2789ccb1d0a4273f5edebe8298",
+  "corrected_verbatim_transcript": "USER_AUTHORIZATION.zh-CN.md",
+  "corrected_transcript_sha256": "8b10525d508e86dbb0393c168a2f25566a5b1b1ef6c7ebadc3af62227c67e90a",
+  "correction_scope": "Append a faithful UTF8 source transcript only; no authorization scope, protocol, checkpoint, code or preflight result changed.",
+  "original_preflight_and_authorization_SHA_preserved": true,
+  "scientific_fits_at_detection": 0,
+  "optimizer_updates_at_detection": 0,
+  "scientific_executor_retries": 0,
+  "bookkeeping_launch_rejections": 1
+}
