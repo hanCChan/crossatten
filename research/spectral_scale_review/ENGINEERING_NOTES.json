@@ -1,0 +1,14 @@
+{
+  "scientific_fits": 0,
+  "IQ_reads": 0,
+  "checkpoint_reads": 0,
+  "optimizer_steps": 0,
+  "initial_synthetic_test_issue": {
+    "status": "RESOLVED_REFERENCE_SEMANTICS",
+    "test": "bitwise logits against an original model whose parameters still required gradients",
+    "observed_max_absolute_difference": 1.1920928955078125e-7,
+    "diagnosis": "Parameters and tokens were identical. Setting the original reference requires_grad=False made frozen original and wrapper logits exactly equal; CPU forward rounding changes with parameter gradient flags.",
+    "resolution": "Keep bitwise fallback equality against the frozen F0, plus a separate 1e-6 absolute-tolerance comparison to the original unfrozen reference. No model equation or scientific promotion gate was changed.",
+    "future_requirement": "Before authorized scientific fitting, verify frozen F0 against each sealed P0 on checkpoint_val (max abs logit difference <=1e-6 and identical argmax); verify again on source_selection only after all fits are sealed. Any prediction drift blocks interpretation rather than permitting silent baseline replacement."
+  }
+}
