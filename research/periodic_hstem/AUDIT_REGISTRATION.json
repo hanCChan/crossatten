@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "stage": "PERIODIC_HSTEM_FEASIBILITY",
+  "registered_at": "2026-11-11T18:26:17+08:00",
+  "base_commit": "1f114a892227056e76b9cec09243a409915b8b9d",
+  "gradient_fits": 0,
+  "maximum_packets_per_cell": 16,
+  "minimum_packets_per_present_cell": 8,
+  "period": 20,
+  "primary_window": [
+    20,
+    140
+  ],
+  "window_offsets": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "min_adjacent_coherence": 0.7,
+  "min_neighbor_lag_margin": 0.05,
+  "min_packet_pass_fraction": 0.9,
+  "min_rx_day_pass_fraction": 0.8,
+  "sample_rule": "top16 SHA256(periodic-feasibility-v1|pool_row) in original train_ids per common-fit RX x TX x day",
+  "audit_rx": [
+    "14-7",
+    "18-19",
+    "18-2",
+    "23-5",
+    "23-7",
+    "8-7"
+  ],
+  "rx_names": [
+    "1-1",
+    "1-19",
+    "1-20",
+    "13-14",
+    "13-7",
+    "14-7",
+    "18-19",
+    "18-2",
+    "2-1",
+    "2-19",
+    "23-3",
+    "23-5",
+    "23-6",
+    "23-7",
+    "24-13",
+    "24-16",
+    "24-5",
+    "24-6",
+    "3-19",
+    "7-14",
+    "7-7",
+    "8-14",
+    "8-7",
+    "8-8"
+  ],
+  "allowed_days": [
+    1,
+    2
+  ],
+  "input_whitelist": {
+    "fit_x": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_x.npy",
+      "sha256": "84af80579acafeabfb856e4cc852896636b880a4b885f4e45cc0cdaebae3bb4a"
+    },
+    "fit_y": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_y.npy",
+      "sha256": "dddba3c9e165ccb0b117ac6cd0eeaac2dc8603f71a541358f06348895a72fef4"
+    },
+    "fit_rx": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_rx.npy",
+      "sha256": "0d5e93eb6d0dd5cd83b3f7a79086e608b57683e82a8824b239f219909670c683"
+    },
+    "fit_day": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_day.npy",
+      "sha256": "09378871910c2dfbb7c232f3aa2251372411c0be005f95c723c72aa50c520192"
+    },
+    "train_ids": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\train_ids.npy",
+      "sha256": "35222d9edb897476681663e9373ad1a31708977d54886f1a39b66b7e547fcefc"
+    },
+    "val_ids": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\val_ids.npy",
+      "sha256": "fad5db16254ce8960724ca9d685845fa498d59c5fc2927d7da6e7198830f4693"
+    }
+  },
+  "source_registration_sha256": "ae5ac330020e20e1ac6e3bdaf1367edbd1078e84ed41e2ab446773e2ecf2168e",
+  "source_plan_sha256": "b56432678787a3bfcceb71604f7ace0303cd55b3fc8ee0c7fa88af17a7f4a205",
+  "source_roles_read_for_IQ": [
+    "common_fit_train_only"
+  ],
+  "historical_held6_IQ": false,
+  "target8_IQ": false,
+  "dates3_4_IQ": false,
+  "checkpoint_val_IQ": false,
+  "source_selection_IQ": false,
+  "classifier_or_TX_separability_evaluated": false,
+  "stop_if_failed": true,
+  "automatic_window_or_period_search": false,
+  "code_sha256": {
+    "research/periodic_hstem/audit.py": "458a9650f2141c28a9212fd88e68aceeb8992e123abe23591e7b3df1b2cada53",
+    "research/periodic_hstem/README.zh-CN.md": "f69f37d3ff62ad743890c40973a7294ec9e55e9f7ac97e4ae82016c6a54b5dbf",
+    "tests/test_periodic_hstem_audit.py": "b7c172be5dec99449cee775d65c9185cc82820b56ca59e6774f95a148b461a53"
+  }
+}
