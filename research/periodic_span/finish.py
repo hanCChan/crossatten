@@ -158,7 +158,7 @@ def report():
         lines.append('本候选未获得继续资格，依事前规则停止；不追加seed、跨度、EMA、GroupDRO或新Loss。失败不能推断周期结构不含TX信息，也不能把本轮时间前端、分支宽度、门控与优化共同作用分解成已证实的硬件机制。')
     else:
         lines.append('本候选只获得“值得另行确认”的开发资格；尚需独立协议下与EMA完整配方及既有周期相位特征公平比较，并处理新RX确认资格。本轮不自动执行正式CRD或迁移拟合。')
-    lines+=['','P2对P1是受控的同时间输入比较；P2对P0同时改变前端坐标和分支，不能视为纯粹的周期连接因果效应。共同RMS归一化和时域相位乘积不代表TX/RX分离。边界mask只保证数组索引有效，不保证跨区间抽头来自同一训练字段。','',
+    lines+=['','P2对P1是受控的同时间输入比较；P2对P0同时改变前端坐标和分支，不能视为纯粹的周期连接因果效应。共同RMS归一化和时域相位乘积不代表TX/RX分离。边界mask只保证数组索引有效，不保证跨区间抽头来自同一训练字段。N19的前置局部stem使19与20跨度的有效感受野重叠，因此它是邻近跨度对照，不是严格消除周期信息的干预；特异性条件通过或失败都不能独自证明TX物理机制。','',
         '## 预定辅助端点，未用于择优','','| 端点 | P0 Accuracy | P1 Accuracy | P2 Accuracy | N19 Accuracy |','|---|---:|---:|---:|---:|']
     for endpoint in ('selected','epoch10','final40'):
         a=s['endpoints'][endpoint]['aggregates'];lines.append('| '+endpoint+' | '+' | '.join(f"{a[arm]['rx_equal']['accuracy']*100:.4f}%" for arm in arm_names)+' |')
