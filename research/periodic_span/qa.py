@@ -38,6 +38,11 @@ def main():
         require('committed:'+name,blob==(HERE/name).read_bytes())
     require('seal_registration',seal['registration_sha256']==sha(HERE/'REGISTRATION.json'))
     require('all24_sealed',set(seal['runs'])=={j['id'] for j in jobs} and all(seal['checks'].values()))
+    require('evaluation_matches_seal',manifests['seal_sha256']==sha(HERE/'TRAINING_SEAL.json'))
+    require('summary_decision_matches_full_analysis',summary['decision']==analysis['decision'])
+    for endpoint,block in analysis['endpoints'].items():
+        require('summary_aggregates:'+endpoint,summary['endpoints'][endpoint]['aggregates']=={a:{k:v for k,v in d.items() if k!='tx_rx_stream_mean'} for a,d in block['aggregates'].items()})
+        require('summary_comparisons:'+endpoint,summary['endpoints'][endpoint]['comparisons']=={a:{k:v for k,v in d.items() if k not in ('cells','tx_rx_stream_mean')} for a,d in block['comparisons'].items()})
     # Only the five metadata files are ever opened here; never fit_x.
     pool={}
     for name in ('fit_y','fit_rx','fit_day','train_ids','val_ids'):
@@ -159,10 +164,19 @@ def main():
                 comparisons[name]=dict(checks=gate,accuracy_delta=float(rx_delta.mean()),max_supported_risk_increase=worst,supported_groups=len(risk))
                 if name in ('P2-P1','P2-P0'):require('promotion_gate:'+name,gate==summary['decision']['promotion_gates'][name]['checks'])
     log=[json.loads(line) for line in (HERE/'ACCESS_LOG.jsonl').read_text(encoding='utf-8').splitlines()]
+    specificity=dict(accuracy_positive=comparisons['P2-N19']['accuracy_delta']>0,
+        CE_improves=analysis['endpoints']['selected']['aggregates']['P2']['rx_equal']['ce']<analysis['endpoints']['selected']['aggregates']['N19']['rx_equal']['ce'],
+        both_views_positive=comparisons['P2-N19']['checks']['both_views_positive'])
+    require('independent_physical_specificity',specificity==summary['decision']['specificity_P2_minus_N19'])
+    promoted=all(all(comparisons[name]['checks'].values()) for name in ('P2-P1','P2-P0')) and all(specificity.values())
+    expected_status='PERIODIC_SPAN_WORTH_SEPARATE_CONFIRMATION' if promoted else 'STOP_NO_PERIODIC_SPAN_PROMOTION'
+    require('independent_final_decision',summary['decision']['status']==expected_status)
     whitelist={a['path'] for a in reg['source_input_whitelist'].values()}
     require('only_source_whitelist_access',all(row['path'] in whitelist for row in log))
     selection=[r for r in log if r['action']=='copy_source_selection_rows']
     require('exactly_two_sealed_selection_copies',len(selection)==2 and all(r['job']=='sealed_selection_evaluation' for r in selection))
+    require('exact_training_role_copies',all(sum(row['job']==j['id'] and row['action']==action for row in log)==1
+        for j in jobs for action in ('copy_fit_train_rows','copy_checkpoint_val_rows')))
     from datetime import datetime
     seal_commit=subprocess.check_output(['git','-C',str(ROOT),'log','-1','--format=%cI','--','research/periodic_span/TRAINING_SEAL.json'],text=True).strip()
     require('selection_after_committed_seal',all(datetime.fromisoformat(r['time'])>=datetime.fromisoformat(seal_commit) for r in selection))
