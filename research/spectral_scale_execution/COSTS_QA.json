@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "checks": {
+    "F1/training_loop_seconds": true,
+    "F1/validation_seconds": true,
+    "F1/rollback_probe_seconds": true,
+    "F1/wall_sum": true,
+    "F1/per_fit_peak_max": true,
+    "F2/training_loop_seconds": true,
+    "F2/validation_seconds": true,
+    "F2/rollback_probe_seconds": true,
+    "F2/wall_sum": true,
+    "F2/per_fit_peak_max": true,
+    "latency/F0/1": true,
+    "latency/F0/128": true,
+    "latency/F1/1": true,
+    "latency/F1/128": true,
+    "latency/F2/1": true,
+    "latency/F2/128": true,
+    "latency/E0/1": true,
+    "latency/E0/128": true,
+    "exactly12_fits": true
+  },
+  "check_count": 19,
+  "source_IQ_reads": 0,
+  "optimizer_updates": 0,
+  "memory_definition": "setup() resets peak statistics before each fit; table reports maximum of the six per-fit PyTorch allocated-memory peaks per arm"
+}

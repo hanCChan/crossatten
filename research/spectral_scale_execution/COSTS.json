@@ -1,0 +1,83 @@
+{
+  "status": "COMPLETE",
+  "arms": {
+    "F1": {
+      "fits": 6,
+      "epochs": 240,
+      "updates": 30480,
+      "training_loop_seconds": 217.29361300042365,
+      "validation_seconds": 32.17437389999395,
+      "rollback_probe_seconds": 1.6404641000553966,
+      "per_fit_wall_seconds_sum": 509.4620240999502,
+      "peak_cuda_allocated_gib": 0.14218378067016602
+    },
+    "F2": {
+      "fits": 6,
+      "epochs": 240,
+      "updates": 30480,
+      "training_loop_seconds": 220.79939859965816,
+      "validation_seconds": 32.72588680032641,
+      "rollback_probe_seconds": 1.6593687002314255,
+      "per_fit_wall_seconds_sum": 513.701164799917,
+      "peak_cuda_allocated_gib": 0.1397409439086914
+    }
+  },
+  "scientific_fits": 12,
+  "epochs": 480,
+  "updates": 60960,
+  "invocation": {
+    "status": "COMPLETED",
+    "command": [
+      "D:\\crossatten\\.venv\\Scripts\\python.exe",
+      "research\\spectral_scale_execution\\executor.py",
+      "train-all"
+    ],
+    "started_at": "2026-11-11T22:55:51+08:00",
+    "preflight_commit": "cb11de5d9d0f810b9543fe398103faa2c7ca0ed9",
+    "automatic_retries": 0,
+    "exit_code": 0,
+    "finished_at": "2026-11-11T23:18:50+08:00",
+    "elapsed_wall_seconds": 1379.2803264000104
+  },
+  "inherited_reference_training": {
+    "P0": {
+      "historical_fits": 6,
+      "epochs": 240,
+      "updates": 30480,
+      "historical_training_seconds": 306.07450019964017,
+      "historical_wall_seconds": 363.2031190000707
+    },
+    "E0": {
+      "historical_joint_ERM_EMA_fits": 6,
+      "epochs": 240,
+      "updates": 30480,
+      "historical_training_with_EMA_seconds": 314.80251800006954,
+      "historical_fit_loop_seconds": 521.0800404000329,
+      "historical_BN_calibration_seconds": 103.41431099915644
+    },
+    "scope": "Already completed historical source fits, not new fits; F1/F2 reuse the same six P0 models and their cost is not zero or duplicated per arm."
+  },
+  "environment": {
+    "torch": "2.5.0+cu124",
+    "numpy": "1.26.4",
+    "cuda": "12.4",
+    "cudnn": 90100,
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "capability": [
+      8,
+      9
+    ],
+    "FP32": true,
+    "TF32": false,
+    "deterministic": true
+  },
+  "preflight": {
+    "start": "2026-11-11T22:44:40+08:00",
+    "finish": "2026-11-11T22:53:40+08:00"
+  },
+  "synthetic_engineering_updates": {
+    "CPU": 12,
+    "CUDA": 240
+  },
+  "science_failure_retries": 0
+}
