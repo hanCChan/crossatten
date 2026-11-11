@@ -1,0 +1,18 @@
+{
+  "group_dro": {
+    "paper": "https://arxiv.org/abs/1911.08731v2",
+    "repository": "https://github.com/kohpangwei/group_DRO",
+    "commit": "cbbc1c5b06844e46b87e264326b56056d2a437d1",
+    "loss": "https://github.com/kohpangwei/group_DRO/blob/cbbc1c5b06844e46b87e264326b56056d2a437d1/loss.py",
+    "default_step": 0.01,
+    "full_upstream_trainer_used": false
+  },
+  "ema": {
+    "documentation": "https://docs.pytorch.org/docs/stable/optim.html#weight-averaging-swa-and-ema",
+    "torch_version": "2.5.0+cu124",
+    "actual_local_source": "D:\\crossatten\\.venv\\Lib\\site-packages\\torch\\optim\\swa_utils.py",
+    "actual_local_source_sha256": "e8a483b01403e3cd171b5248fd75ababc0e2cd5d29ae2fe2427234a3219be1bb",
+    "decay": 0.999,
+    "actual_version_pinned_instead_of_online_stable": true
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "synthetic_CPU_tests_passed": 12,
+  "source_roles_and_support_sums_verified": true,
+  "original_pool_accounted_each_view": 34668,
+  "unique_source_selection_rx": 12,
+  "job_matrix_gradient_fits": 24,
+  "arm_readouts": 36,
+  "maximum_gradient_updates": 121920,
+  "maximum_BN_calibration_passes": 480,
+  "code_and_plan_hashes_verified": true,
+  "current_scientific_fits": 0,
+  "current_IQ_decodes": 0,
+  "confirmation_gate_closed": true,
+  "integrated_scientific_trainer_registered": false,
+  "note": "Derived JSON and pinned-file validation, plus synthetic method kernels; no scientific model/target scoring."
+}
