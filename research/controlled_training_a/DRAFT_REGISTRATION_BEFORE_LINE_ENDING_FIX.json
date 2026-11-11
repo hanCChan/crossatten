@@ -1,0 +1,423 @@
+{
+  "schema_version": 1,
+  "stage": "A",
+  "base_commit": "ebd7b20289740fde2ae181f9c46a0ca3560e138c",
+  "registered_at": "2026-11-11T13:10:56+08:00",
+  "status": "PREREGISTERED_BEFORE_NEW_FIT",
+  "maximum_new_fits": 5,
+  "run_sequence": [
+    "A00",
+    "A00-replay",
+    "A10",
+    "A01",
+    "A11"
+  ],
+  "runs": [
+    {
+      "id": "A00",
+      "initialization_seed": 22101,
+      "order_seed": 22201,
+      "stochastic_seed": 22301
+    },
+    {
+      "id": "A00-replay",
+      "initialization_seed": 22101,
+      "order_seed": 22201,
+      "stochastic_seed": 22301
+    },
+    {
+      "id": "A10",
+      "initialization_seed": 22102,
+      "order_seed": 22201,
+      "stochastic_seed": 22301
+    },
+    {
+      "id": "A01",
+      "initialization_seed": 22101,
+      "order_seed": 22202,
+      "stochastic_seed": 22301
+    },
+    {
+      "id": "A11",
+      "initialization_seed": 22102,
+      "order_seed": 22202,
+      "stochastic_seed": 22301
+    }
+  ],
+  "replay_gate": "BITWISE_SEMANTIC_EQUALITY_REQUIRED_BEFORE_A10_A01_A11",
+  "inputs": {
+    "fit_x": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_x.npy",
+      "sha256": "84af80579acafeabfb856e4cc852896636b880a4b885f4e45cc0cdaebae3bb4a"
+    },
+    "fit_y": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_y.npy",
+      "sha256": "dddba3c9e165ccb0b117ac6cd0eeaac2dc8603f71a541358f06348895a72fef4"
+    },
+    "fit_rx": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_rx.npy",
+      "sha256": "0d5e93eb6d0dd5cd83b3f7a79086e608b57683e82a8824b239f219909670c683"
+    },
+    "fit_day": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_day.npy",
+      "sha256": "09378871910c2dfbb7c232f3aa2251372411c0be005f95c723c72aa50c520192"
+    },
+    "train_ids": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\train_ids.npy",
+      "sha256": "35222d9edb897476681663e9373ad1a31708977d54886f1a39b66b7e547fcefc"
+    },
+    "val_ids": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\val_ids.npy",
+      "sha256": "fad5db16254ce8960724ca9d685845fa498d59c5fc2927d7da6e7198830f4693"
+    },
+    "fit_manifest": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_manifest.json",
+      "sha256": "0fb3a069d62804751a1327ee44ea34f422808083f5db2af0ef52e331db70b88f"
+    }
+  },
+  "held_inputs": [
+    {
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\wisig\\ManyRx\\rx_1-1_day1.npz",
+      "sha256": "31cbf9848d941c6d3a6f63c58899104bb1645dd9b0a014ae934ffcf31ea5c41d",
+      "rx": "1-1",
+      "day": 1
+    },
+    {
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\wisig\\ManyRx\\rx_1-1_day2.npz",
+      "sha256": "b0d5e08749194e3bbdcf2950f05ecc55efd616428e4b2cb1189c5703c1973ec9",
+      "rx": "1-1",
+      "day": 2
+    },
+    {
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\wisig\\ManyRx\\rx_1-19_day1.npz",
+      "sha256": "13e07587f97f2e38e59cc2476311aea45fcde16b50a3999976fb1ba936836ee8",
+      "rx": "1-19",
+      "day": 1
+    },
+    {
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\wisig\\ManyRx\\rx_1-19_day2.npz",
+      "sha256": "8e0a03eabc4c19da2ba077fb072fc69f2b2f7ff0a4d41f492f9b459f950a43a5",
+      "rx": "1-19",
+      "day": 2
+    },
+    {
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\wisig\\ManyRx\\rx_1-20_day1.npz",
+      "sha256": "2c1118edfeb3535701c4e188700c16a3b14a423cc37f1c5331c89f3c529aa49b",
+      "rx": "1-20",
+      "day": 1
+    },
+    {
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\wisig\\ManyRx\\rx_1-20_day2.npz",
+      "sha256": "1da2db380ec05c54686a64667a3524b5818a92f0999bb5ac2b136301b54cc8e5",
+      "rx": "1-20",
+      "day": 2
+    },
+    {
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\wisig\\ManyRx\\rx_2-1_day1.npz",
+      "sha256": "0d16e7064562224d873f0ab31b33c40b017641c36f876b23488dcaf256bffba7",
+      "rx": "2-1",
+      "day": 1
+    },
+    {
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\wisig\\ManyRx\\rx_2-1_day2.npz",
+      "sha256": "807633128e29a7d568dfa0fa7432f391d6f8172a9c1b4d05d2e5e6ccbe46acb0",
+      "rx": "2-1",
+      "day": 2
+    },
+    {
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\wisig\\ManyRx\\rx_2-19_day1.npz",
+      "sha256": "2b1e18f38ae8bfeb34a13d06fef434520084e2b82e632eea64feba2a06eb8c6a",
+      "rx": "2-19",
+      "day": 1
+    },
+    {
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\wisig\\ManyRx\\rx_2-19_day2.npz",
+      "sha256": "6f54552169d417adcca099e837c42f8e0c1361a57b94a05ad556abc8b45fc9fa",
+      "rx": "2-19",
+      "day": 2
+    },
+    {
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\wisig\\ManyRx\\rx_3-19_day1.npz",
+      "sha256": "0cb2fd7cfc8d51c9917742ad0a130d3b167a5f29c0c0a0b7c024c7627f754ac0",
+      "rx": "3-19",
+      "day": 1
+    },
+    {
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\wisig\\ManyRx\\rx_3-19_day2.npz",
+      "sha256": "ca1bfdb8d4ee370a406b4bc841e0acd4bb181b35dbe2f96318adff2fd7d486ef",
+      "rx": "3-19",
+      "day": 2
+    }
+  ],
+  "rx_names": [
+    "1-1",
+    "1-19",
+    "1-20",
+    "13-14",
+    "13-7",
+    "14-7",
+    "18-19",
+    "18-2",
+    "2-1",
+    "2-19",
+    "23-3",
+    "23-5",
+    "23-6",
+    "23-7",
+    "24-13",
+    "24-16",
+    "24-5",
+    "24-6",
+    "3-19",
+    "7-14",
+    "7-7",
+    "8-14",
+    "8-7",
+    "8-8"
+  ],
+  "fit_rx": [
+    "7-7",
+    "7-14",
+    "8-7",
+    "8-8",
+    "8-14",
+    "13-7",
+    "13-14",
+    "14-7",
+    "18-2",
+    "18-19",
+    "23-3",
+    "23-5",
+    "23-6",
+    "23-7",
+    "24-5",
+    "24-6",
+    "24-13",
+    "24-16"
+  ],
+  "held_rx": [
+    "1-1",
+    "1-19",
+    "1-20",
+    "2-1",
+    "2-19",
+    "3-19"
+  ],
+  "target_rx": [
+    "19-1",
+    "19-2",
+    "19-19",
+    "19-20",
+    "20-1",
+    "20-19",
+    "20-20",
+    "23-1"
+  ],
+  "source_cell_sha256": {
+    "18-2|1": "d942da25773318f5615ec0f15674eb20663d53135e6b7084753883b5ba361a03",
+    "18-2|2": "4c07ac055dcda0604fa8d72f759dc2a767f865491a2346794b0f60d9a967a6b7",
+    "18-19|1": "28466967789aeff0fb840353fd74ceb80e63e2a23074cf69c1cd1f080fef6314",
+    "18-19|2": "7c884ae08f47b078fc57b05f117180bf9aa9cbe025caf20416c4885e7b5ae20d",
+    "23-3|1": "8ca8f3874e7400465d987d65b5d835f495183d2f04bd6648e2fc16911497fa0f",
+    "23-3|2": "442812fe2637ff5e0406d1ad23c641c55ef1bc8723b78fc07f7a51cda95bb3ff",
+    "23-5|1": "4824942dff62243f69ad7c368481ee5e44709a689da8e0f710cd371f9aaeeeeb",
+    "23-5|2": "699417980b357a1138f1f2956b920a58d3559f40d4a62fe83f6fac5988af6ac0",
+    "23-6|1": "45c8f70ac5103cbed0334c8de50df0188c5cb5c04f91fcb98cf9cd48735d53ca",
+    "23-6|2": "84fe52eda273b6b1d2c09c8c66d95e5d5258b3a601ac0ce8b39d9636b7a03a39",
+    "23-7|1": "f417a462d22222cc167f9c80ca11f085f0611b5f1a14c965ac0b3c7469453921",
+    "23-7|2": "3f8b35d63d5d157349768a416ffbede56ed2dd94740147e6853f905cd6c4c358",
+    "24-5|1": "d8dc1cde20c51eb950fd96ef7a92534e256c04b6d183690a8d1faf3397ce9f4e",
+    "24-5|2": "fcccfb9847f47961bac4efa356526331ae64bd14d48716aed6f8a96302bbec4d",
+    "24-6|1": "cde4f0655ae4a493eaf35b147078a82d29a8663d19fe5fcf0710c918c2854050",
+    "24-6|2": "2108cdb591f269d3404cbff9ab5dfde4753b981d375e93d9b2e38ce407df846a",
+    "24-13|1": "7cc3ddf8b21be05be8f69c8824a7e4adfbac638afe25e64fae30906fbef8baa3",
+    "24-13|2": "e3a0b523df35dcc18613599d906532a5abf4f2eed50b04bf9f7a8a9e03e71717",
+    "24-16|1": "da14e29acceec173b0ed24fcbe7056d0f0c14eedbe78ac3f5b5b063033401018",
+    "24-16|2": "89941b532594d208a48b484c2714f315607f87b325d9521cfa504bc81b4427c6",
+    "7-7|1": "8f23c4c015d193af7be252fd640581d1e1985e21a3598e84bc533614ab5defef",
+    "7-7|2": "f5555217a9e86cb976478280b60f129658895d98f6af73cf55532c7e125ed78a",
+    "7-14|1": "645a072849c74fc835eb0369961be86ff4ca2d34cdfd473bcfaffb7e42cf377b",
+    "7-14|2": "6dc445508b23f1964aa3fa88b39d49fd683a8d082645a998a5b5ee77cd3f4a94",
+    "8-7|1": "b9125bad36563915f63d6549966c69b935054e76df5941a282477b0d36136788",
+    "8-7|2": "3a47af7ccb3fe66f7396f0ec655b4f299c7e02cbad150dec918f570d1e7594a3",
+    "8-8|1": "7653665029f8f9f63f62229c819039b19f3db4583ee1abd1864b04c4eb00ead5",
+    "8-8|2": "c71d21970f341a653e6857e08ceec71531b15f4041b5aa7e8e65b2f9fbb3f4db",
+    "8-14|1": "c999320110eb7ebea143826a8f6db23f0db5a678b697481dc4f710e02018f821",
+    "8-14|2": "61eb6656f0257c16d3e6a1c295c5cb2a55ab4578a93eb99f1402e95305b0ef89",
+    "13-7|1": "175485213cb44d94ae3f8b719527f550c8d4e0fecc1c31f6721d82ff40c9636e",
+    "13-7|2": "808c4ae8beb70dbb2812e89901d50aeddc00e8c96d104d9c4b3f5161845321dc",
+    "13-14|1": "a4c59ffa55066c66462720814b058e5f9033e09a0329d1e71850619926b0e10d",
+    "13-14|2": "a80053bd3d94b2d776c39547341ea63d9f5457091e052780197adc5fbb3f18f7",
+    "14-7|1": "3dadb0dc02c0414021737600213163124ce117c6022ff57f77aa33fc02efa93f",
+    "14-7|2": "e29772eb03c9e5ed878176e9bece6223986cd792bc8dee3b7744bf9447be9b0e",
+    "1-1|1": "31cbf9848d941c6d3a6f63c58899104bb1645dd9b0a014ae934ffcf31ea5c41d",
+    "1-1|2": "b0d5e08749194e3bbdcf2950f05ecc55efd616428e4b2cb1189c5703c1973ec9",
+    "1-19|1": "13e07587f97f2e38e59cc2476311aea45fcde16b50a3999976fb1ba936836ee8",
+    "1-19|2": "8e0a03eabc4c19da2ba077fb072fc69f2b2f7ff0a4d41f492f9b459f950a43a5",
+    "1-20|1": "2c1118edfeb3535701c4e188700c16a3b14a423cc37f1c5331c89f3c529aa49b",
+    "1-20|2": "1da2db380ec05c54686a64667a3524b5818a92f0999bb5ac2b136301b54cc8e5",
+    "2-1|1": "0d16e7064562224d873f0ab31b33c40b017641c36f876b23488dcaf256bffba7",
+    "2-1|2": "807633128e29a7d568dfa0fa7432f391d6f8172a9c1b4d05d2e5e6ccbe46acb0",
+    "2-19|1": "2b1e18f38ae8bfeb34a13d06fef434520084e2b82e632eea64feba2a06eb8c6a",
+    "2-19|2": "6f54552169d417adcca099e837c42f8e0c1361a57b94a05ad556abc8b45fc9fa",
+    "3-19|1": "0cb2fd7cfc8d51c9917742ad0a130d3b167a5f29c0c0a0b7c024c7627f754ac0",
+    "3-19|2": "ca1bfdb8d4ee370a406b4bc841e0acd4bb181b35dbe2f96318adff2fd7d486ef"
+  },
+  "code_sha256": {
+    "09-phase-invariance/phase_features.py": "d467175e131cfa719f0fa1f5500a8935bcb864d12dad53160a77247874d1721e",
+    "13-mixer-cfo-mechanisms/cfo_descriptive.py": "e60de808c7de10decda0844f2e74ae55169df196c9ec9fbb3807c312f4a131da",
+    "13-mixer-cfo-mechanisms/core.py": "a9db92f80e8e1bf1579cab900fabf085f5c33e018dffe6e27f1af64ee94dc527",
+    "13-mixer-cfo-mechanisms/data.py": "578fd207105e5375094bd22a12ec710fd259379c4b1c627d962251256bd71e9e",
+    "13-mixer-cfo-mechanisms/diagnostics.py": "883b0a5fcf73ba7c19e94f51ae05f7d003b82a8870b44c6c6d23e4ca02ee7149",
+    "13-mixer-cfo-mechanisms/execute.py": "21a7bf48a381842e5fbc044411350ba2faa1fd86cc31796ccab199726e8b1ae8",
+    "13-mixer-cfo-mechanisms/metrics.py": "a9773e0532552f012dc039c42206460d1a5b02001a2bbb44a388258825f85ed7",
+    "13-mixer-cfo-mechanisms/models.py": "606243ff9462358f53a86d2908130c47f69c5dd9d1cfee669cbaf10c7b76e5a1",
+    "13-mixer-cfo-mechanisms/pickle_index.py": "52925d018fbad46396dbf809379e2b8961b368179ba1ef64c4fc9c5031ed319a",
+    "13-mixer-cfo-mechanisms/register.py": "1d2241b226e4addbe74401c5acf7cd6acd148fcece15e20cf0c611f11a6b5b3b",
+    "13-mixer-cfo-mechanisms/reports.py": "8bcf6ec4ad18d183368b3d0e6bd5c4e58c476442aee16ddba74b099de27aef15",
+    "13-mixer-cfo-mechanisms/status.py": "533e7ef2154f0134c8cc887e5a1bd0d42cafcdfa3863c712f462bee048b49b1a",
+    "13-mixer-cfo-mechanisms/train.py": "164b0eb9794c4494b34cf1d25f8dfb0c9a4ae8c54af3e03ef9f08b150a670a2a",
+    "13-mixer-cfo-mechanisms/wifi.py": "3402847c350172b670aba40616f5b56ec5ecb2e7176cc199c26d0315d920db37",
+    "17-rx-distortion/s17_augment.py": "d0ab78c0dfa41773bbef90e93b1a6ee330971871fc59c1c1125952f798113221",
+    "17-rx-distortion/s17_core.py": "e026e94981b09eb3f9bcc4d92699507105654376b4e6ac14efa8f1af954efe6c",
+    "17-rx-distortion/s17_data.py": "68758ba670e687e3097396504288a7b6cae01173b58ac8b52e47cb3096ffa1d9",
+    "17-rx-distortion/s17_diagnostics.py": "82f7af3b16a32a0886e267c4ef074cbd3e4b686a66d8456098dbeca32ed504a2",
+    "17-rx-distortion/s17_execute.py": "3c843aa355c4f1bb22a8f5f4443b9cad431077303c3bc6101dfaff79504a394b",
+    "17-rx-distortion/s17_features.py": "a7df647926635fffa73eb3449e4adc9a90473a2da2d11067bb72675091828a5a",
+    "17-rx-distortion/s17_intervene.py": "645db1303e609d71f3fe24d8f4a19686ad10a4171badc27839a32110a2e02928",
+    "17-rx-distortion/s17_jobs.py": "3a1616151e306d85caf6ebe95867bc1bb613aeba8e0f1b273e730f46152298f4",
+    "17-rx-distortion/s17_models.py": "3f15c97c9583a080be1c73dde4024e4b2e21e86b196e3df9a706d0b3ff1b2e5a",
+    "17-rx-distortion/s17_register.py": "50a82ffe6c2d9feb20e99a2f79ca88549f9bcfa54bc55e8a0b42c25a61038be2",
+    "17-rx-distortion/s17_reports.py": "8d303e15feb635928859c027a3264652eb83e7c50235a7ffd3a582ee103c1544",
+    "17-rx-distortion/s17_stats.py": "a80641c0d9f034bd1e2478ee3e4446126c61af7be97cf4896a1be1dc176924a4",
+    "17-rx-distortion/s17_train.py": "bb6ea369fb408df297788965e8792b666c1685b0b93b1cf46b8a729af20ef366",
+    "17-rx-distortion/test_cpu_stats.py": "b7dcad1ef172b6cf63f7b31cf2af433e22b9311bfb727969a089c5e325fc81a7",
+    "17-rx-distortion/test_engineering.py": "863c7dbd62133af3a71f80f602a386ee61c3d83d1f21b7d9eed5277738559e8e",
+    "lib/legacy_rfhstu/__init__.py": "f78366d19d77282713f4944bc4e8fbdcbb138aac9849a0acf79459f4491dd9f5",
+    "lib/legacy_rfhstu/cnn_stem.py": "b3a8944c96b354d295a96d84876693e95433f67616e23d2804219d0fa1c2762a",
+    "lib/legacy_rfhstu/features.py": "1e9e5aa828adbb382c604ebf7b1bd429c79893ea1169afddaa14596a6c0d5378",
+    "lib/legacy_rfhstu/losses.py": "a0ba7f42040203289593ba6a9363f27ea19d5152d8813979a7018cc152e78e28",
+    "lib/legacy_rfhstu/mixstyle.py": "687174caeff6f256b2661399ab70aede396d5ea51af4e312dcbacc01235b94a5",
+    "lib/legacy_rfhstu/models.py": "ebb638fac3392fec36bace7e2445ab6d27ef4e3b5adb2c06b35c8bc82f506666",
+    "lib/legacy_rfhstu/multiscale.py": "de51929e7917e793e814319a88b91ef0b17354e4c7614065172e082f16833e35",
+    "lib/legacy_rfhstu/oob_fusion.py": "030f2886c9a84282eb7e20ce5d318f528e8bfc20902c4b4a17315686ea290259",
+    "lib/xa/__init__.py": "ca199705017e2d6d6b037d4d732f7caec7d7dff190c77a3d94c0cfaf515ab492",
+    "lib/xa/aggregate.py": "8995baeff876f427338836ad0b2d53de01f95e95148b851067f498d35f592e38",
+    "lib/xa/bench.py": "3a94fe229e5b43f45b15ca2f1a06e179b0212f282ea58671e71c718161d20ba7",
+    "lib/xa/data.py": "ff861d46e508d807996a924d4439134416b16ba6507856a7335c65d9e4cfc3cb",
+    "lib/xa/evaluate.py": "365998cf59196e5ebbdad3b34132fe1dfb2a4a2b988c82d660715471167734aa",
+    "lib/xa/explore_models.py": "bcc1616b5fc6ea533183b4c3a9538748a663a1b321bd748a33870b4ef8116467",
+    "lib/xa/explore_train.py": "8e4361d2b21546f5f5b5ba26adccd57618680c720db734561802b8246a33babe",
+    "lib/xa/frontends.py": "967e28c05f168341b4710e4b2253d77b93d92bc9a3dd515fdddaa35e81c2013f",
+    "lib/xa/guard.py": "80562f5a0893be3a3e91cb80ef4636a6b24eb0c76bfa59d3566574633e5fff54",
+    "lib/xa/jobs.py": "ef8ac595d7a567c18d5e726b2fe70e9942628e709bf1453dfe0df5e9d07233f0",
+    "lib/xa/launch.py": "71ca1656dcccf4d26455de6b999de42b2482f73b738a37fca52f354ccec6d4a2",
+    "lib/xa/models.py": "322049d67d19d196dca8a722fda9de433d846fe1aa3d6d8439c49adeba6554bf",
+    "lib/xa/models2.py": "e9c3364868955e6996645a823187dadb553a2a95139e809d43055a93c53eaa23",
+    "lib/xa/models3.py": "bade67f8ad50b64c132197d21a86c1897a8c27976a7b8490d2e7131ff025cbba",
+    "lib/xa/paper_models.py": "7c09adc3b481e5b13eeccb93731a00573f16a98f5d35c490a1d5082707c550bd",
+    "lib/xa/paper_run.py": "4c1bcdf2e98c974c6e03677b69881ea378dc3406c0d9f8a7bbe471290389fec6",
+    "lib/xa/paper_train.py": "e59cab54045ef6cd27a168e937e7571456ad3d2405183efc605e8308e3ed80c8",
+    "lib/xa/run_job.py": "534b8f7aa2c8c54c12eb5881850897fa2a69280cde004c84ede19532b0cb576b",
+    "lib/xa/train.py": "906a7fd0a7bbb61fea86e03bcf9b52228a5b26851e53fa904d497be330daa96e",
+    "lib/xa/wisig.py": "b4127fba87f5603704c92d2221743c8dedf6898e45c8216b9ddb84b32f42ad67",
+    "research/controlled_training_a/analyze.py": "6f713af576fecd5a169691e0b7bc5626eaa1a92201137e4a446fa2b52af2b8ac",
+    "research/controlled_training_a/prepare_registration.py": "3bc1a54b2fdc97ca19fe2097cbef589e9c37997816f337e5d278f9af1b9bef9a",
+    "research/controlled_training_a/PREREGISTRATION.zh-CN.md": "e8923ef3d05869865e2f6bc5b00f288c6e711bbce0e166e04180034bd34f1f40",
+    "research/controlled_training_a/runner.py": "371292c669ae6263ee5e6bee9e760a65d5bf4f53a126908e13f37f0df0868e5b",
+    "research/controlled_training_a/test_controls.py": "bf5c2476c3c154d2f7a9a7705a7b109b08e8dd6334c81f9402a08ce6f6b840b3",
+    "tests/test_controlled_training_analysis.py": "ca277b830afbf2273c06a2740df84f45660c0ce0cd32c6d055d06d9b98cad488"
+  },
+  "output_dir": "research/controlled_training_a/artifacts",
+  "expected_shapes": {
+    "fit_x": [
+      34668,
+      2,
+      256
+    ],
+    "fit_y": [
+      34668
+    ],
+    "train_ids": [
+      24267
+    ],
+    "val_ids": [
+      10401
+    ]
+  },
+  "training": {
+    "optimizer": "Adam",
+    "lr": 0.001,
+    "weight_decay": 0,
+    "batch_size": 128,
+    "maximum_epochs": 40,
+    "precision": "FP32",
+    "selection": "RX_equal_validation_CE_strict_less",
+    "scheduler": {
+      "name": "ReduceLROnPlateau",
+      "factor": 0.1,
+      "patience": 5,
+      "min_lr": 1e-06
+    },
+    "early_wait": 10,
+    "gradient_clipping": false,
+    "augmentation": false,
+    "dropout": false,
+    "deterministic_algorithms": true,
+    "warn_only": false,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false,
+    "cublas_workspace_config": ":4096:8",
+    "cpu_threads": 2
+  },
+  "endpoints": {
+    "primary": "selected",
+    "auxiliary": "epoch10",
+    "engineering": "final"
+  },
+  "analysis": {
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 22401,
+    "confidence_level": 0.95,
+    "meaningful_accuracy": 0.01,
+    "meaningful_macro_f1": 0.01,
+    "meaningful_ce": 0.05,
+    "meaningful_disagreement": 0.05,
+    "uncertainty": "paired_RX_cluster_conditional_descriptive"
+  },
+  "held_access_gate": "ALL_FIVE_RUNS_AND_ENDPOINTS_SEALED_BEFORE_FIRST_HELD_ARRAY_LOAD",
+  "stage_B": "SEPARATE_PREREGISTRATION_REQUIRED_NOT_STARTED",
+  "metadata_access_before_registration": {
+    "array_payload_loads": 0,
+    "model_forward_calls": 0,
+    "checkpoint_loads": 0,
+    "new_fits": 0,
+    "raw_file_hash_reads": [
+      "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_x.npy",
+      "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_y.npy",
+      "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_rx.npy",
+      "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_day.npy",
+      "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\train_ids.npy",
+      "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\val_ids.npy",
+      "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\wisig\\ManyRx\\rx_1-1_day1.npz",
+      "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\wisig\\ManyRx\\rx_1-1_day2.npz",
+      "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\wisig\\ManyRx\\rx_1-19_day1.npz",
+      "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\wisig\\ManyRx\\rx_1-19_day2.npz",
+      "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\wisig\\ManyRx\\rx_1-20_day1.npz",
+      "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\wisig\\ManyRx\\rx_1-20_day2.npz",
+      "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\wisig\\ManyRx\\rx_2-1_day1.npz",
+      "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\wisig\\ManyRx\\rx_2-1_day2.npz",
+      "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\wisig\\ManyRx\\rx_2-19_day1.npz",
+      "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\wisig\\ManyRx\\rx_2-19_day2.npz",
+      "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\wisig\\ManyRx\\rx_3-19_day1.npz",
+      "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\wisig\\ManyRx\\rx_3-19_day2.npz"
+    ],
+    "historical_text_logs": {
+      "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\access.jsonl": "7a59832e80cb6769ec49e263ec86a9775ad1b003544cee0435ddbab8582300fc",
+      "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\access.jsonl": "38e09d3bfa8049d43cb4048c162a8e6cbcce59407bd2046e540e234b4fa12348"
+    },
+    "note": "Byte hashing to verify registered lineage is recorded; no NPZ/NPY payload was decoded."
+  }
+}
