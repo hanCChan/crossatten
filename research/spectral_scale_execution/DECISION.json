@@ -1,0 +1,49 @@
+{
+  "status": "STOP_F2_FROZEN_BACKBONE_RESIDUAL",
+  "candidate": "F2 only",
+  "primary_contrast": "F2-F1",
+  "gates": {
+    "F2-F1": {
+      "passes": false,
+      "checks": {
+        "mean_accuracy_at_least_1pp": false,
+        "paired_rx_interval_lower_above_zero": false,
+        "both_views_positive": false,
+        "at_least_two_streams_positive": true,
+        "worst_paired_rx_at_least_minus_2pp": true,
+        "supported_tx_rx_risk_increase_at_most_5pp": true
+      },
+      "supported_tx_rx_groups": 117,
+      "interpretation": "Development promotion means worth separately confirming; failure is not proof of universal ineffectiveness. No extra seed or method search is authorized."
+    },
+    "F2-F0": {
+      "passes": false,
+      "checks": {
+        "mean_accuracy_at_least_1pp": false,
+        "paired_rx_interval_lower_above_zero": false,
+        "both_views_positive": false,
+        "at_least_two_streams_positive": true,
+        "worst_paired_rx_at_least_minus_2pp": true,
+        "supported_tx_rx_risk_increase_at_most_5pp": true
+      },
+      "supported_tx_rx_groups": 117,
+      "interpretation": "Development promotion means worth separately confirming; failure is not proof of universal ineffectiveness. No extra seed or method search is authorized."
+    },
+    "F2-E0": {
+      "passes": false,
+      "checks": {
+        "mean_accuracy_at_least_1pp": false,
+        "paired_rx_interval_lower_above_zero": false,
+        "both_views_positive": false,
+        "at_least_two_streams_positive": false,
+        "worst_paired_rx_at_least_minus_2pp": false,
+        "supported_tx_rx_risk_increase_at_most_5pp": false
+      },
+      "supported_tx_rx_groups": 117,
+      "interpretation": "Development promotion means worth separately confirming; failure is not proof of universal ineffectiveness. No extra seed or method search is authorized."
+    }
+  },
+  "alpha_or_endpoint_search": false,
+  "independent_CRD_confirmation": false,
+  "interpretation": "Fixed source-CV development on reused source roles; not a new RX population or seed-population result."
+}
