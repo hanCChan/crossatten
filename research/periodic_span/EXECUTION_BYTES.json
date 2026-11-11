@@ -1,0 +1,427 @@
+{
+  "status": "EXACT_REGISTERED_EXECUTION_BYTES_PRESERVED",
+  "files": {
+    "13-mixer-cfo-mechanisms/cfo_descriptive.py": {
+      "bytes": 5146,
+      "sha256": "e60de808c7de10decda0844f2e74ae55169df196c9ec9fbb3807c312f4a131da",
+      "CRLF_lines": 0,
+      "LF_bytes": 61
+    },
+    "13-mixer-cfo-mechanisms/core.py": {
+      "bytes": 4548,
+      "sha256": "a9db92f80e8e1bf1579cab900fabf085f5c33e018dffe6e27f1af64ee94dc527",
+      "CRLF_lines": 0,
+      "LF_bytes": 132
+    },
+    "13-mixer-cfo-mechanisms/data.py": {
+      "bytes": 5977,
+      "sha256": "578fd207105e5375094bd22a12ec710fd259379c4b1c627d962251256bd71e9e",
+      "CRLF_lines": 0,
+      "LF_bytes": 120
+    },
+    "13-mixer-cfo-mechanisms/diagnostics.py": {
+      "bytes": 15960,
+      "sha256": "883b0a5fcf73ba7c19e94f51ae05f7d003b82a8870b44c6c6d23e4ca02ee7149",
+      "CRLF_lines": 0,
+      "LF_bytes": 261
+    },
+    "13-mixer-cfo-mechanisms/execute.py": {
+      "bytes": 5651,
+      "sha256": "21a7bf48a381842e5fbc044411350ba2faa1fd86cc31796ccab199726e8b1ae8",
+      "CRLF_lines": 0,
+      "LF_bytes": 98
+    },
+    "13-mixer-cfo-mechanisms/metrics.py": {
+      "bytes": 865,
+      "sha256": "a9773e0532552f012dc039c42206460d1a5b02001a2bbb44a388258825f85ed7",
+      "CRLF_lines": 0,
+      "LF_bytes": 17
+    },
+    "13-mixer-cfo-mechanisms/models.py": {
+      "bytes": 3603,
+      "sha256": "606243ff9462358f53a86d2908130c47f69c5dd9d1cfee669cbaf10c7b76e5a1",
+      "CRLF_lines": 0,
+      "LF_bytes": 92
+    },
+    "13-mixer-cfo-mechanisms/pickle_index.py": {
+      "bytes": 3084,
+      "sha256": "52925d018fbad46396dbf809379e2b8961b368179ba1ef64c4fc9c5031ed319a",
+      "CRLF_lines": 0,
+      "LF_bytes": 98
+    },
+    "13-mixer-cfo-mechanisms/register.py": {
+      "bytes": 5756,
+      "sha256": "1d2241b226e4addbe74401c5acf7cd6acd148fcece15e20cf0c611f11a6b5b3b",
+      "CRLF_lines": 0,
+      "LF_bytes": 67
+    },
+    "13-mixer-cfo-mechanisms/reports.py": {
+      "bytes": 14246,
+      "sha256": "8bcf6ec4ad18d183368b3d0e6bd5c4e58c476442aee16ddba74b099de27aef15",
+      "CRLF_lines": 0,
+      "LF_bytes": 209
+    },
+    "13-mixer-cfo-mechanisms/status.py": {
+      "bytes": 1550,
+      "sha256": "533e7ef2154f0134c8cc887e5a1bd0d42cafcdfa3863c712f462bee048b49b1a",
+      "CRLF_lines": 0,
+      "LF_bytes": 29
+    },
+    "13-mixer-cfo-mechanisms/train.py": {
+      "bytes": 11434,
+      "sha256": "164b0eb9794c4494b34cf1d25f8dfb0c9a4ae8c54af3e03ef9f08b150a670a2a",
+      "CRLF_lines": 0,
+      "LF_bytes": 197
+    },
+    "13-mixer-cfo-mechanisms/wifi.py": {
+      "bytes": 2549,
+      "sha256": "3402847c350172b670aba40616f5b56ec5ecb2e7176cc199c26d0315d920db37",
+      "CRLF_lines": 0,
+      "LF_bytes": 67
+    },
+    "17-rx-distortion/s17_augment.py": {
+      "bytes": 3106,
+      "sha256": "d0ab78c0dfa41773bbef90e93b1a6ee330971871fc59c1c1125952f798113221",
+      "CRLF_lines": 0,
+      "LF_bytes": 53
+    },
+    "17-rx-distortion/s17_core.py": {
+      "bytes": 4599,
+      "sha256": "e026e94981b09eb3f9bcc4d92699507105654376b4e6ac14efa8f1af954efe6c",
+      "CRLF_lines": 0,
+      "LF_bytes": 100
+    },
+    "17-rx-distortion/s17_data.py": {
+      "bytes": 2974,
+      "sha256": "68758ba670e687e3097396504288a7b6cae01173b58ac8b52e47cb3096ffa1d9",
+      "CRLF_lines": 0,
+      "LF_bytes": 53
+    },
+    "17-rx-distortion/s17_diagnostics.py": {
+      "bytes": 3372,
+      "sha256": "82f7af3b16a32a0886e267c4ef074cbd3e4b686a66d8456098dbeca32ed504a2",
+      "CRLF_lines": 0,
+      "LF_bytes": 44
+    },
+    "17-rx-distortion/s17_execute.py": {
+      "bytes": 4025,
+      "sha256": "3c843aa355c4f1bb22a8f5f4443b9cad431077303c3bc6101dfaff79504a394b",
+      "CRLF_lines": 0,
+      "LF_bytes": 59
+    },
+    "17-rx-distortion/s17_features.py": {
+      "bytes": 4610,
+      "sha256": "a7df647926635fffa73eb3449e4adc9a90473a2da2d11067bb72675091828a5a",
+      "CRLF_lines": 0,
+      "LF_bytes": 70
+    },
+    "17-rx-distortion/s17_intervene.py": {
+      "bytes": 4405,
+      "sha256": "645db1303e609d71f3fe24d8f4a19686ad10a4171badc27839a32110a2e02928",
+      "CRLF_lines": 0,
+      "LF_bytes": 60
+    },
+    "17-rx-distortion/s17_jobs.py": {
+      "bytes": 341,
+      "sha256": "3a1616151e306d85caf6ebe95867bc1bb613aeba8e0f1b273e730f46152298f4",
+      "CRLF_lines": 0,
+      "LF_bytes": 6
+    },
+    "17-rx-distortion/s17_models.py": {
+      "bytes": 395,
+      "sha256": "3f15c97c9583a080be1c73dde4024e4b2e21e86b196e3df9a706d0b3ff1b2e5a",
+      "CRLF_lines": 0,
+      "LF_bytes": 12
+    },
+    "17-rx-distortion/s17_register.py": {
+      "bytes": 5318,
+      "sha256": "50a82ffe6c2d9feb20e99a2f79ca88549f9bcfa54bc55e8a0b42c25a61038be2",
+      "CRLF_lines": 0,
+      "LF_bytes": 58
+    },
+    "17-rx-distortion/s17_reports.py": {
+      "bytes": 8149,
+      "sha256": "8d303e15feb635928859c027a3264652eb83e7c50235a7ffd3a582ee103c1544",
+      "CRLF_lines": 0,
+      "LF_bytes": 83
+    },
+    "17-rx-distortion/s17_stats.py": {
+      "bytes": 1760,
+      "sha256": "a80641c0d9f034bd1e2478ee3e4446126c61af7be97cf4896a1be1dc176924a4",
+      "CRLF_lines": 0,
+      "LF_bytes": 25
+    },
+    "17-rx-distortion/s17_train.py": {
+      "bytes": 7185,
+      "sha256": "bb6ea369fb408df297788965e8792b666c1685b0b93b1cf46b8a729af20ef366",
+      "CRLF_lines": 0,
+      "LF_bytes": 95
+    },
+    "17-rx-distortion/test_cpu_stats.py": {
+      "bytes": 3230,
+      "sha256": "b7dcad1ef172b6cf63f7b31cf2af433e22b9311bfb727969a089c5e325fc81a7",
+      "CRLF_lines": 0,
+      "LF_bytes": 51
+    },
+    "17-rx-distortion/test_engineering.py": {
+      "bytes": 4089,
+      "sha256": "863c7dbd62133af3a71f80f602a386ee61c3d83d1f21b7d9eed5277738559e8e",
+      "CRLF_lines": 0,
+      "LF_bytes": 64
+    },
+    "lib/legacy_rfhstu/__init__.py": {
+      "bytes": 145,
+      "sha256": "f78366d19d77282713f4944bc4e8fbdcbb138aac9849a0acf79459f4491dd9f5",
+      "CRLF_lines": 11,
+      "LF_bytes": 11
+    },
+    "lib/legacy_rfhstu/cnn_stem.py": {
+      "bytes": 1577,
+      "sha256": "b3a8944c96b354d295a96d84876693e95433f67616e23d2804219d0fa1c2762a",
+      "CRLF_lines": 44,
+      "LF_bytes": 44
+    },
+    "lib/legacy_rfhstu/features.py": {
+      "bytes": 5325,
+      "sha256": "1e9e5aa828adbb382c604ebf7b1bd429c79893ea1169afddaa14596a6c0d5378",
+      "CRLF_lines": 129,
+      "LF_bytes": 129
+    },
+    "lib/legacy_rfhstu/losses.py": {
+      "bytes": 7499,
+      "sha256": "a0ba7f42040203289593ba6a9363f27ea19d5152d8813979a7018cc152e78e28",
+      "CRLF_lines": 182,
+      "LF_bytes": 182
+    },
+    "lib/legacy_rfhstu/mixstyle.py": {
+      "bytes": 940,
+      "sha256": "687174caeff6f256b2661399ab70aede396d5ea51af4e312dcbacc01235b94a5",
+      "CRLF_lines": 26,
+      "LF_bytes": 26
+    },
+    "lib/legacy_rfhstu/models.py": {
+      "bytes": 20820,
+      "sha256": "ebb638fac3392fec36bace7e2445ab6d27ef4e3b5adb2c06b35c8bc82f506666",
+      "CRLF_lines": 461,
+      "LF_bytes": 461
+    },
+    "lib/legacy_rfhstu/multiscale.py": {
+      "bytes": 2336,
+      "sha256": "de51929e7917e793e814319a88b91ef0b17354e4c7614065172e082f16833e35",
+      "CRLF_lines": 65,
+      "LF_bytes": 65
+    },
+    "lib/legacy_rfhstu/oob_fusion.py": {
+      "bytes": 2091,
+      "sha256": "030f2886c9a84282eb7e20ce5d318f528e8bfc20902c4b4a17315686ea290259",
+      "CRLF_lines": 52,
+      "LF_bytes": 52
+    },
+    "lib/xa/__init__.py": {
+      "bytes": 200,
+      "sha256": "ca199705017e2d6d6b037d4d732f7caec7d7dff190c77a3d94c0cfaf515ab492",
+      "CRLF_lines": 5,
+      "LF_bytes": 5
+    },
+    "lib/xa/aggregate.py": {
+      "bytes": 8866,
+      "sha256": "8995baeff876f427338836ad0b2d53de01f95e95148b851067f498d35f592e38",
+      "CRLF_lines": 152,
+      "LF_bytes": 152
+    },
+    "lib/xa/bench.py": {
+      "bytes": 3092,
+      "sha256": "3a94fe229e5b43f45b15ca2f1a06e179b0212f282ea58671e71c718161d20ba7",
+      "CRLF_lines": 73,
+      "LF_bytes": 73
+    },
+    "lib/xa/data.py": {
+      "bytes": 5368,
+      "sha256": "ff861d46e508d807996a924d4439134416b16ba6507856a7335c65d9e4cfc3cb",
+      "CRLF_lines": 121,
+      "LF_bytes": 121
+    },
+    "lib/xa/evaluate.py": {
+      "bytes": 1370,
+      "sha256": "365998cf59196e5ebbdad3b34132fe1dfb2a4a2b988c82d660715471167734aa",
+      "CRLF_lines": 34,
+      "LF_bytes": 34
+    },
+    "lib/xa/explore_models.py": {
+      "bytes": 7437,
+      "sha256": "bcc1616b5fc6ea533183b4c3a9538748a663a1b321bd748a33870b4ef8116467",
+      "CRLF_lines": 170,
+      "LF_bytes": 170
+    },
+    "lib/xa/explore_train.py": {
+      "bytes": 15686,
+      "sha256": "8e4361d2b21546f5f5b5ba26adccd57618680c720db734561802b8246a33babe",
+      "CRLF_lines": 310,
+      "LF_bytes": 310
+    },
+    "lib/xa/frontends.py": {
+      "bytes": 4518,
+      "sha256": "967e28c05f168341b4710e4b2253d77b93d92bc9a3dd515fdddaa35e81c2013f",
+      "CRLF_lines": 96,
+      "LF_bytes": 96
+    },
+    "lib/xa/guard.py": {
+      "bytes": 2399,
+      "sha256": "80562f5a0893be3a3e91cb80ef4636a6b24eb0c76bfa59d3566574633e5fff54",
+      "CRLF_lines": 69,
+      "LF_bytes": 69
+    },
+    "lib/xa/jobs.py": {
+      "bytes": 1701,
+      "sha256": "ef8ac595d7a567c18d5e726b2fe70e9942628e709bf1453dfe0df5e9d07233f0",
+      "CRLF_lines": 37,
+      "LF_bytes": 37
+    },
+    "lib/xa/launch.py": {
+      "bytes": 3487,
+      "sha256": "71ca1656dcccf4d26455de6b999de42b2482f73b738a37fca52f354ccec6d4a2",
+      "CRLF_lines": 72,
+      "LF_bytes": 72
+    },
+    "lib/xa/models.py": {
+      "bytes": 9951,
+      "sha256": "322049d67d19d196dca8a722fda9de433d846fe1aa3d6d8439c49adeba6554bf",
+      "CRLF_lines": 207,
+      "LF_bytes": 207
+    },
+    "lib/xa/models2.py": {
+      "bytes": 9154,
+      "sha256": "e9c3364868955e6996645a823187dadb553a2a95139e809d43055a93c53eaa23",
+      "CRLF_lines": 178,
+      "LF_bytes": 178
+    },
+    "lib/xa/models3.py": {
+      "bytes": 5763,
+      "sha256": "bade67f8ad50b64c132197d21a86c1897a8c27976a7b8490d2e7131ff025cbba",
+      "CRLF_lines": 138,
+      "LF_bytes": 138
+    },
+    "lib/xa/paper_models.py": {
+      "bytes": 6301,
+      "sha256": "7c09adc3b481e5b13eeccb93731a00573f16a98f5d35c490a1d5082707c550bd",
+      "CRLF_lines": 156,
+      "LF_bytes": 156
+    },
+    "lib/xa/paper_run.py": {
+      "bytes": 1062,
+      "sha256": "4c1bcdf2e98c974c6e03677b69881ea378dc3406c0d9f8a7bbe471290389fec6",
+      "CRLF_lines": 26,
+      "LF_bytes": 26
+    },
+    "lib/xa/paper_train.py": {
+      "bytes": 16790,
+      "sha256": "e59cab54045ef6cd27a168e937e7571456ad3d2405183efc605e8308e3ed80c8",
+      "CRLF_lines": 343,
+      "LF_bytes": 343
+    },
+    "lib/xa/run_job.py": {
+      "bytes": 1248,
+      "sha256": "534b8f7aa2c8c54c12eb5881850897fa2a69280cde004c84ede19532b0cb576b",
+      "CRLF_lines": 28,
+      "LF_bytes": 28
+    },
+    "lib/xa/train.py": {
+      "bytes": 9773,
+      "sha256": "906a7fd0a7bbb61fea86e03bcf9b52228a5b26851e53fa904d497be330daa96e",
+      "CRLF_lines": 205,
+      "LF_bytes": 205
+    },
+    "lib/xa/wisig.py": {
+      "bytes": 6098,
+      "sha256": "b4127fba87f5603704c92d2221743c8dedf6898e45c8216b9ddb84b32f42ad67",
+      "CRLF_lines": 135,
+      "LF_bytes": 135
+    },
+    "research/controlled_training_a/analyze.py": {
+      "bytes": 23905,
+      "sha256": "8982e7bedfe944654b3e7c6e7206f076940a51b0d47d854c4d8c0a892d35b5cb",
+      "CRLF_lines": 386,
+      "LF_bytes": 386
+    },
+    "research/controlled_training_a/runner.py": {
+      "bytes": 34219,
+      "sha256": "8b04190e25aa77b47b6453a84f013b6dc66fcfb98b55ff5caf6b95b61825dc81",
+      "CRLF_lines": 698,
+      "LF_bytes": 698
+    },
+    "research/periodic_span/ENGINEERING_QA.json": {
+      "bytes": 4766,
+      "sha256": "deb879c63be82585f5d0eb4a9117dd57c846c5f32995fb734f2b5d79c99069d9",
+      "CRLF_lines": 0,
+      "LF_bytes": 166
+    },
+    "research/periodic_span/JOBS.json": {
+      "bytes": 7239,
+      "sha256": "0f8e157f09f3d143452f2ec71432ef1e65aba87d04540c82391aa95d74f3e41f",
+      "CRLF_lines": 0,
+      "LF_bytes": 338
+    },
+    "research/periodic_span/PREREGISTRATION.zh-CN.md": {
+      "bytes": 7608,
+      "sha256": "53e4e12bf9a329e18971bc881a71ce7f2a1828203e87afea0aac1021b89f2623",
+      "CRLF_lines": 0,
+      "LF_bytes": 50
+    },
+    "research/periodic_span/REGISTRATION.json": {
+      "bytes": 15563,
+      "sha256": "7559f03cb6fca49575558d6c2e31fb135c3a57ef0528f9ab961321dac3f9bd6f",
+      "CRLF_lines": 0,
+      "LF_bytes": 278
+    },
+    "research/periodic_span/SOURCE_PLAN.json": {
+      "bytes": 156036,
+      "sha256": "0a29f462891f75fd718c61cabe89fc8682c5a4d71664e23c4d27ecf8a9f26d8b",
+      "CRLF_lines": 0,
+      "LF_bytes": 8015
+    },
+    "research/periodic_span/engine.py": {
+      "bytes": 22658,
+      "sha256": "52ed3d40ccd32bba62f2e0713d8402517f1674c20d62bd66c8fb53c286a87e01",
+      "CRLF_lines": 0,
+      "LF_bytes": 366
+    },
+    "research/periodic_span/models.py": {
+      "bytes": 4182,
+      "sha256": "e206ec399decd3f104c2e016de0c5f76111c2442e34268652f0d473976a24979",
+      "CRLF_lines": 0,
+      "LF_bytes": 101
+    },
+    "research/periodic_span/prepare.py": {
+      "bytes": 7433,
+      "sha256": "3397e10951c8f421b84070d021c8bbf27f61bfc913f1a126869e74d82e7f1748",
+      "CRLF_lines": 0,
+      "LF_bytes": 109
+    },
+    "research/standard_method_competition_c/analyze.py": {
+      "bytes": 27209,
+      "sha256": "1127e733ab0f9e93729757feee4280b77bf99b90b8da8212a83238f06dac1fde",
+      "CRLF_lines": 407,
+      "LF_bytes": 407
+    },
+    "research/standard_method_competition_c/engine.py": {
+      "bytes": 29683,
+      "sha256": "a01fa33013f34f119a35619a9837c2e3cde4e36a4e7e7819d0bd4c17c9769a99",
+      "CRLF_lines": 453,
+      "LF_bytes": 453
+    },
+    "research/standard_method_competition_c/methods.py": {
+      "bytes": 4820,
+      "sha256": "b316be4906dba9f928486298f90d1e2d44d519c95abfc4b28f6f8491ddbad327",
+      "CRLF_lines": 89,
+      "LF_bytes": 89
+    },
+    "tests/test_periodic_span.py": {
+      "bytes": 6125,
+      "sha256": "5495bd22d49958967e53179e1cb44ed06b9ea67d983590d82be393914f0b5bba",
+      "CRLF_lines": 0,
+      "LF_bytes": 120
+    }
+  },
+  "archive_sha256": "82afefb64fd6f107db4e33620c7a1a2f1fafe46054057efd6e84305a7fc2f10b",
+  "scope": "Scientific execution files and registration pinned before fitting; report/QA serialization fixes are separate postprocessing and are retained in Git history."
+}

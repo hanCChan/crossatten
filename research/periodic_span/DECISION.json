@@ -1,0 +1,41 @@
+{
+  "status": "STOP_NO_PERIODIC_SPAN_PROMOTION",
+  "primary_contrast": "P2-P1",
+  "promotion_gates": {
+    "P2-P1": {
+      "passes": false,
+      "checks": {
+        "mean_accuracy_at_least_1pp": false,
+        "paired_rx_interval_lower_above_zero": false,
+        "both_views_positive": false,
+        "at_least_two_streams_positive": true,
+        "worst_paired_rx_at_least_minus_2pp": false,
+        "supported_tx_rx_risk_increase_at_most_5pp": false
+      },
+      "supported_tx_rx_groups": 117,
+      "interpretation": "Development promotion means worth separately confirming; failure is not proof of universal ineffectiveness. No extra seed or method search is authorized."
+    },
+    "P2-P0": {
+      "passes": false,
+      "checks": {
+        "mean_accuracy_at_least_1pp": false,
+        "paired_rx_interval_lower_above_zero": false,
+        "both_views_positive": false,
+        "at_least_two_streams_positive": false,
+        "worst_paired_rx_at_least_minus_2pp": false,
+        "supported_tx_rx_risk_increase_at_most_5pp": false
+      },
+      "supported_tx_rx_groups": 117,
+      "interpretation": "Development promotion means worth separately confirming; failure is not proof of universal ineffectiveness. No extra seed or method search is authorized."
+    }
+  },
+  "specificity_P2_minus_N19": {
+    "accuracy_positive": false,
+    "CE_improves": true,
+    "both_views_positive": false
+  },
+  "no_additional_fits": true,
+  "fixed_window_STOP_unchanged": true,
+  "final_CRD_confirmed": false,
+  "interpretation": "Observed source-CV development with reused source roles; not an independent RX or seed-population confirmation."
+}

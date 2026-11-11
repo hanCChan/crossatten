@@ -161,7 +161,7 @@ def main():
                     at_least_two_streams_positive=sum(np.mean([accuracy[(second,s,r)]-accuracy[(first,s,r)] for r in all_rx])>0 for s in ('S0','S1','S2'))>=2,
                     worst_paired_rx_at_least_minus_2pp=float(rx_delta.min())>=-.02,
                     supported_tx_rx_risk_increase_at_most_5pp=all(r['risk_increase']<=.05 for r in risk))
-                comparisons[name]=dict(checks=gate,accuracy_delta=float(rx_delta.mean()),max_supported_risk_increase=worst,supported_groups=len(risk))
+                comparisons[name]=dict(checks={k:bool(v) for k,v in gate.items()},accuracy_delta=float(rx_delta.mean()),max_supported_risk_increase=worst,supported_groups=len(risk))
                 if name in ('P2-P1','P2-P0'):require('promotion_gate:'+name,gate==summary['decision']['promotion_gates'][name]['checks'])
     log=[json.loads(line) for line in (HERE/'ACCESS_LOG.jsonl').read_text(encoding='utf-8').splitlines()]
     specificity=dict(accuracy_positive=comparisons['P2-N19']['accuracy_delta']>0,

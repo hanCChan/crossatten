@@ -1,0 +1,61 @@
+{
+  "status": "COMPLETE",
+  "arms": {
+    "P0": {
+      "fits": 6,
+      "updates": 30480,
+      "epochs": 240,
+      "training_seconds": 306.07450019964017,
+      "validation_seconds": 41.26349530031439,
+      "wall_seconds": 363.2031190000707,
+      "peak_cuda_allocated_gib": 0.16716241836547852
+    },
+    "P1": {
+      "fits": 6,
+      "updates": 30480,
+      "epochs": 240,
+      "training_seconds": 324.0108264000155,
+      "validation_seconds": 37.333422600175254,
+      "wall_seconds": 380.38110189995496,
+      "peak_cuda_allocated_gib": 0.1793956756591797
+    },
+    "P2": {
+      "fits": 6,
+      "updates": 30480,
+      "epochs": 240,
+      "training_seconds": 643.0501487000729,
+      "validation_seconds": 78.4569609996397,
+      "wall_seconds": 743.2154899998568,
+      "peak_cuda_allocated_gib": 0.17938852310180664
+    },
+    "N19": {
+      "fits": 6,
+      "updates": 30480,
+      "epochs": 240,
+      "training_seconds": 656.3810933000641,
+      "validation_seconds": 80.82928349985741,
+      "wall_seconds": 759.7532790999976,
+      "peak_cuda_allocated_gib": 0.17938852310180664
+    }
+  },
+  "scientific_fits": 24,
+  "epochs": 960,
+  "updates": 121920,
+  "successful_GPU_synthetic_trajectories": 4,
+  "successful_GPU_synthetic_updates": 24,
+  "engineering_attempts": [
+    "artifacts/synthetic"
+  ],
+  "environment": {
+    "torch": "2.5.0+cu124",
+    "numpy": "1.26.4",
+    "python": "3.11.8 (tags/v3.11.8:db85d51, Feb  6 2024, 22:03:32) [MSC v.1937 64 bit (AMD64)]",
+    "cuda": "12.4",
+    "cudnn": 90100,
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "capability": [
+      8,
+      9
+    ]
+  }
+}

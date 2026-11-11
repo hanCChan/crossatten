@@ -1,0 +1,196 @@
+{
+  "status": "COMPLETE",
+  "records": {
+    "P0": {
+      "1": [
+        {
+          "round": 0,
+          "p50_ms": 2.1671520471572876,
+          "p95_ms": 2.7258431792259215,
+          "throughput_samples_per_second": 446.9033104188105
+        },
+        {
+          "round": 1,
+          "p50_ms": 2.4950720071792603,
+          "p95_ms": 5.338676834106445,
+          "throughput_samples_per_second": 334.68564248318967
+        },
+        {
+          "round": 2,
+          "p50_ms": 2.633247971534729,
+          "p95_ms": 4.676852822303772,
+          "throughput_samples_per_second": 344.11016684156056
+        }
+      ],
+      "128": [
+        {
+          "round": 0,
+          "p50_ms": 2.1068800687789917,
+          "p95_ms": 2.6434048891067503,
+          "throughput_samples_per_second": 58235.80142181914
+        },
+        {
+          "round": 1,
+          "p50_ms": 2.675487995147705,
+          "p95_ms": 5.4849632501602175,
+          "throughput_samples_per_second": 39959.95616818484
+        },
+        {
+          "round": 2,
+          "p50_ms": 2.5647040605545044,
+          "p95_ms": 5.57368803024292,
+          "throughput_samples_per_second": 43834.11290935522
+        }
+      ]
+    },
+    "P1": {
+      "1": [
+        {
+          "round": 0,
+          "p50_ms": 2.451856017112732,
+          "p95_ms": 4.748718571662903,
+          "throughput_samples_per_second": 347.43218657819403
+        },
+        {
+          "round": 1,
+          "p50_ms": 2.3648159503936768,
+          "p95_ms": 4.103902506828307,
+          "throughput_samples_per_second": 378.5887637768335
+        },
+        {
+          "round": 2,
+          "p50_ms": 2.2580000162124634,
+          "p95_ms": 4.648280215263366,
+          "throughput_samples_per_second": 369.6974431596993
+        }
+      ],
+      "128": [
+        {
+          "round": 0,
+          "p50_ms": 2.4295520782470703,
+          "p95_ms": 5.28061454296112,
+          "throughput_samples_per_second": 43671.52161961505
+        },
+        {
+          "round": 1,
+          "p50_ms": 2.3616639375686646,
+          "p95_ms": 3.9497359633445734,
+          "throughput_samples_per_second": 50771.89125950576
+        },
+        {
+          "round": 2,
+          "p50_ms": 2.4325119256973267,
+          "p95_ms": 5.2803182840347285,
+          "throughput_samples_per_second": 43260.75793825512
+        }
+      ]
+    },
+    "P2": {
+      "1": [
+        {
+          "round": 0,
+          "p50_ms": 2.3311840295791626,
+          "p95_ms": 4.427059006690978,
+          "throughput_samples_per_second": 387.6593089704581
+        },
+        {
+          "round": 1,
+          "p50_ms": 2.431504011154175,
+          "p95_ms": 4.969771361351013,
+          "throughput_samples_per_second": 366.63273687578396
+        },
+        {
+          "round": 2,
+          "p50_ms": 2.7813280820846558,
+          "p95_ms": 5.852364921569824,
+          "throughput_samples_per_second": 287.27834096982747
+        }
+      ],
+      "128": [
+        {
+          "round": 0,
+          "p50_ms": 5.618815898895264,
+          "p95_ms": 11.660526704788206,
+          "throughput_samples_per_second": 19526.936533366774
+        },
+        {
+          "round": 1,
+          "p50_ms": 6.33296012878418,
+          "p95_ms": 12.027024126052856,
+          "throughput_samples_per_second": 17571.634372772267
+        },
+        {
+          "round": 2,
+          "p50_ms": 6.050304174423218,
+          "p95_ms": 12.606499528884887,
+          "throughput_samples_per_second": 17242.77797795308
+        }
+      ]
+    },
+    "N19": {
+      "1": [
+        {
+          "round": 0,
+          "p50_ms": 2.371551990509033,
+          "p95_ms": 3.1907359004020686,
+          "throughput_samples_per_second": 418.69762765180116
+        },
+        {
+          "round": 1,
+          "p50_ms": 2.819007992744446,
+          "p95_ms": 5.392075204849243,
+          "throughput_samples_per_second": 283.985189937644
+        },
+        {
+          "round": 2,
+          "p50_ms": 2.356656074523926,
+          "p95_ms": 4.675014209747315,
+          "throughput_samples_per_second": 392.82654807748713
+        }
+      ],
+      "128": [
+        {
+          "round": 0,
+          "p50_ms": 6.203904151916504,
+          "p95_ms": 12.251630353927613,
+          "throughput_samples_per_second": 17258.964816127685
+        },
+        {
+          "round": 1,
+          "p50_ms": 5.430880069732666,
+          "p95_ms": 11.051121377944945,
+          "throughput_samples_per_second": 20336.613639033843
+        },
+        {
+          "round": 2,
+          "p50_ms": 5.626880168914795,
+          "p95_ms": 8.726193714141846,
+          "throughput_samples_per_second": 21718.514406557857
+        }
+      ]
+    }
+  },
+  "environment": {
+    "torch": "2.5.0+cu124",
+    "numpy": "1.26.4",
+    "python": "3.11.8 (tags/v3.11.8:db85d51, Feb  6 2024, 22:03:32) [MSC v.1937 64 bit (AMD64)]",
+    "cuda": "12.4",
+    "cudnn": 90100,
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "capability": [
+      8,
+      9
+    ]
+  },
+  "models": "V0/S0 selected endpoint for each arm, fixed in advance of measurement; no fastest-model selection",
+  "scope": "Full RF frontend+HStem+MHA; synthetic CUDA-resident input; no disk/host transfer time",
+  "synthetic_input_seed": 75002,
+  "warmup": 20,
+  "measurements": 100,
+  "rounds": 3,
+  "batches": [
+    1,
+    128
+  ],
+  "time": "2026-11-11T19:47:26+08:00"
+}

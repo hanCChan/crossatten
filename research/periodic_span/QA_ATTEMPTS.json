@@ -1,0 +1,15 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "phase": "serializing final independent QA result after all require checks returned successfully",
+      "status": "FAILED_JSON_SERIALIZATION",
+      "error": "TypeError: Object of type bool_ is not JSON serializable",
+      "fix": "Convert comparison gate values from NumPy bool_ to built-in bool when constructing the output record.",
+      "scientific_model_or_prediction_changes": false,
+      "analysis_or_gate_changes": false,
+      "IQ_reads": 0,
+      "additional_scientific_fits": 0
+    }
+  ]
+}

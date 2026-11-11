@@ -110,7 +110,7 @@ def report():
         points=[agg[arm]['per_stream'][f'S{k}']['accuracy']*100 for k in range(3)]
         ax.scatter(np.array([i-.1,i,i+.1]),points,color='black',s=15,zorder=3)
         ax.text(i,means[i]+.2,f'{means[i]:.2f}',ha='center',fontsize=9)
-    ax.set(ylabel='RX-equal accuracy (%)',title='A. Selected checkpoints; dots are fixed streams',ylim=(max(0,min(means)-8),min(100,max(means)+3)))
+    ax.set(ylabel='RX-equal accuracy (%)',title='A. Selected checkpoints; dots are fixed streams',ylim=(0,100))
     ax=axes[0,1];comp=pairs['P2-P1'];rx=sorted(comp['per_rx'])
     delta=np.array([comp['per_rx'][a]['accuracy_delta']*100 for a in rx])
     ax.barh(rx,delta,color=['#176b87' if v>=0 else '#b43b3b' for v in delta]);ax.axvline(0,color='black',lw=.8)
@@ -141,6 +141,13 @@ def report():
     for arm in arm_names:
         a=agg[arm];worst=a['worst_rx']
         lines.append(f"| {arm} | {a['rx_equal']['accuracy']*100:.4f}% | {a['rx_equal']['macro_f1']*100:.4f}% | {a['rx_equal']['ce']:.6f} | {worst}: {a['per_rx'][worst]['accuracy']*100:.3f}% | {r['parameters'][arm]:,} |")
+    gap=E.read(HERE/'GENERALIZATION_GAP.json')
+    lines+=['','**三种纯时域方案均未能保持原频域路径的跨RX表现。** 本实现保留了原局部stem、32-token接口与分类器，在P1/P2/N19中把前端替换为纯时域视图；没有保留P0频域路径再额外融合周期分支。因此P2对P0的巨大跌幅不能单独归因于dilation20。','',
+        '| 臂 | 训练RX内部checkpoint_val Accuracy | 留出RX source_selection Accuracy |','|---|---:|---:|']
+    for arm in arm_names:
+        g=gap['arms'][arm]
+        lines.append(f"| {arm} | {g['checkpoint_val_RX_equal_accuracy']*100:.4f}% | {g['source_selection_RX_equal_accuracy']*100:.4f}% |")
+    lines+=['','这个差距由已经冻结的selected端点预测作描述性计算，没有新增IQ读取、拟合或选型。它显示本配方下训练RX内部的高识别率没有转化为留出RX表现；尚不能据此断言信道、CFO、BN或RX硬件中的哪一项是原因。P2−P1仍是同一时域输入下的直接增量检验：微小平均差、跨零区间和局部风险均不支持本候选晋级。','']
     lines+=['','P0为原频域骨干；P1为普通41抽头时域分支；P2为时域dilation20；N19为固定dilation19负对照。P1与P2卷积跨度相同，P1多608参数（0.726%），并非严格等参数或等FLOPs。原骨干公共初态、分支公共层、实际包键顺序与预算均已复核；P2/N19初始全部权重相同。','',
         '| 比较 | Accuracy差 / pp | RX条件95%区间 / pp | 最差配对RX差 / pp | 最大受支持TX×RX错误率增加 / pp |',
         '|---|---:|---|---:|---:|']
@@ -174,7 +181,10 @@ def report():
         '- [冻结协议](PREREGISTRATION.zh-CN.md)、[机器登记](REGISTRATION.json)、[24次作业](JOBS.json)。',
         '- [全部端点汇总](SUMMARY.json)、[完整分组与配对分析](ANALYSIS.json.gz)、[独立复核](INDEPENDENT_QA.json)。',
         '- [72份源选择预测归档](SOURCE_PREDICTIONS.zip)、[训练封存](TRAINING_SEAL.json)、[实际初态与序列证据](RUN_EVIDENCE.json)。',
+        '- [训练RX内部与留出RX的描述性差距](GENERALIZATION_GAP.json)、[六次P0基线轨迹复现](BASELINE_REPLAY.json)。',
+        '- [复核器工程失败记录](QA_ATTEMPTS.json)：首次在保存结果时遇到NumPy布尔值序列化问题，仅修复输出类型；模型、预测、评分、门槛及科学fit数均未改变。',
         '- [成本](COSTS.json)、[延迟](LATENCY.json)、[本地全状态归档摘要](ARTIFACT_ARCHIVE.json)。',
+        '- [原始执行代码字节包](FROZEN_EXECUTION_BYTES.zip)及[逐文件SHA](EXECUTION_BYTES.json)，保留旧依赖的CRLF与新代码LF，避免Git换行规范化导致运行字节丢失。',
         '- [原固定窗口STOP证据](../periodic_hstem/AUDIT_RESULT.json)，该文件SHA与新登记逐次核对一致。','',
         '空洞卷积是已有算子，见[Yu & Koltun](https://arxiv.org/abs/1511.07122)；本轮没有把既有算子、19点对照或源开发增益包装成原创性证明。', '']
     (HERE/'RESULTS.zh-CN.md').write_text('\n'.join(lines),encoding='utf-8',newline='\n')

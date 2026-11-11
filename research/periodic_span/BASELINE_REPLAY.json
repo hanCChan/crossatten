@@ -1,0 +1,44 @@
+{
+  "status": "PASS_EXACT_P0_CHECKPOINT_VAL_TRAJECTORY_REPLAY",
+  "fits": [
+    {
+      "job": "V0_S0_P0",
+      "epochs": 40,
+      "max_validation_CE_difference": 0.0,
+      "same_best_epoch": true
+    },
+    {
+      "job": "V0_S1_P0",
+      "epochs": 40,
+      "max_validation_CE_difference": 0.0,
+      "same_best_epoch": true
+    },
+    {
+      "job": "V0_S2_P0",
+      "epochs": 40,
+      "max_validation_CE_difference": 0.0,
+      "same_best_epoch": true
+    },
+    {
+      "job": "V1_S0_P0",
+      "epochs": 40,
+      "max_validation_CE_difference": 0.0,
+      "same_best_epoch": true
+    },
+    {
+      "job": "V1_S1_P0",
+      "epochs": 40,
+      "max_validation_CE_difference": 0.0,
+      "same_best_epoch": true
+    },
+    {
+      "job": "V1_S2_P0",
+      "epochs": 40,
+      "max_validation_CE_difference": 0.0,
+      "same_best_epoch": true
+    }
+  ],
+  "IQ_reads": 0,
+  "source_selection_predictions_read": false,
+  "original_C_evidence_sha256": "b94a83995558a4a54125f73bf19f59ed8ebaf1e4402d81e534071f2f9afd3cbd"
+}

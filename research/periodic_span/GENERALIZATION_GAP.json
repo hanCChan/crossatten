@@ -1,0 +1,194 @@
+{
+  "status": "DESCRIPTIVE_ONLY_NO_SELECTION_OR_EXTRA_FIT",
+  "checkpoint": "predeclared selected endpoint only",
+  "caveat": "Checkpoint validation uses the fit RX; source selection holds out RX within each view. Source roles and receivers are reused from C; gap is descriptive and is not a causal hardware mechanism.",
+  "arms": {
+    "P0": {
+      "checkpoint_val_RX_equal_accuracy": 0.9196056702628765,
+      "source_selection_RX_equal_accuracy": 0.8503317144673882
+    },
+    "P1": {
+      "checkpoint_val_RX_equal_accuracy": 0.9328738986683859,
+      "source_selection_RX_equal_accuracy": 0.28753943976942115
+    },
+    "P2": {
+      "checkpoint_val_RX_equal_accuracy": 0.9323663730951588,
+      "source_selection_RX_equal_accuracy": 0.2896667280611315
+    },
+    "N19": {
+      "checkpoint_val_RX_equal_accuracy": 0.9326315550658203,
+      "source_selection_RX_equal_accuracy": 0.2905867185510767
+    }
+  },
+  "by_job": [
+    {
+      "job": "V0_S0_P0",
+      "arm": "P0",
+      "view": "V0",
+      "stream": "S0",
+      "checkpoint_val_RX_equal_accuracy": 0.9014066306613436
+    },
+    {
+      "job": "V0_S0_P1",
+      "arm": "P1",
+      "view": "V0",
+      "stream": "S0",
+      "checkpoint_val_RX_equal_accuracy": 0.9140849206499123
+    },
+    {
+      "job": "V0_S0_P2",
+      "arm": "P2",
+      "view": "V0",
+      "stream": "S0",
+      "checkpoint_val_RX_equal_accuracy": 0.9130525127483325
+    },
+    {
+      "job": "V0_S0_N19",
+      "arm": "N19",
+      "view": "V0",
+      "stream": "S0",
+      "checkpoint_val_RX_equal_accuracy": 0.9095300183439202
+    },
+    {
+      "job": "V0_S1_P0",
+      "arm": "P0",
+      "view": "V0",
+      "stream": "S1",
+      "checkpoint_val_RX_equal_accuracy": 0.9032000781913276
+    },
+    {
+      "job": "V0_S1_P1",
+      "arm": "P1",
+      "view": "V0",
+      "stream": "S1",
+      "checkpoint_val_RX_equal_accuracy": 0.9106692751054567
+    },
+    {
+      "job": "V0_S1_P2",
+      "arm": "P2",
+      "view": "V0",
+      "stream": "S1",
+      "checkpoint_val_RX_equal_accuracy": 0.913729049832109
+    },
+    {
+      "job": "V0_S1_N19",
+      "arm": "N19",
+      "view": "V0",
+      "stream": "S1",
+      "checkpoint_val_RX_equal_accuracy": 0.9146974946210977
+    },
+    {
+      "job": "V0_S2_P0",
+      "arm": "P0",
+      "view": "V0",
+      "stream": "S2",
+      "checkpoint_val_RX_equal_accuracy": 0.8985077926357102
+    },
+    {
+      "job": "V0_S2_P1",
+      "arm": "P1",
+      "view": "V0",
+      "stream": "S2",
+      "checkpoint_val_RX_equal_accuracy": 0.9133981851703794
+    },
+    {
+      "job": "V0_S2_P2",
+      "arm": "P2",
+      "view": "V0",
+      "stream": "S2",
+      "checkpoint_val_RX_equal_accuracy": 0.9109796030669483
+    },
+    {
+      "job": "V0_S2_N19",
+      "arm": "N19",
+      "view": "V0",
+      "stream": "S2",
+      "checkpoint_val_RX_equal_accuracy": 0.9135271934331205
+    },
+    {
+      "job": "V1_S0_P0",
+      "arm": "P0",
+      "view": "V1",
+      "stream": "S0",
+      "checkpoint_val_RX_equal_accuracy": 0.9400400742236404
+    },
+    {
+      "job": "V1_S0_P1",
+      "arm": "P1",
+      "view": "V1",
+      "stream": "S0",
+      "checkpoint_val_RX_equal_accuracy": 0.9518506602828153
+    },
+    {
+      "job": "V1_S0_P2",
+      "arm": "P2",
+      "view": "V1",
+      "stream": "S0",
+      "checkpoint_val_RX_equal_accuracy": 0.9529511076015811
+    },
+    {
+      "job": "V1_S0_N19",
+      "arm": "N19",
+      "view": "V1",
+      "stream": "S0",
+      "checkpoint_val_RX_equal_accuracy": 0.9535982734919247
+    },
+    {
+      "job": "V1_S1_P0",
+      "arm": "P0",
+      "view": "V1",
+      "stream": "S1",
+      "checkpoint_val_RX_equal_accuracy": 0.9370794690776237
+    },
+    {
+      "job": "V1_S1_P1",
+      "arm": "P1",
+      "view": "V1",
+      "stream": "S1",
+      "checkpoint_val_RX_equal_accuracy": 0.9572102834711637
+    },
+    {
+      "job": "V1_S1_P2",
+      "arm": "P2",
+      "view": "V1",
+      "stream": "S1",
+      "checkpoint_val_RX_equal_accuracy": 0.9574473658771812
+    },
+    {
+      "job": "V1_S1_N19",
+      "arm": "N19",
+      "view": "V1",
+      "stream": "S1",
+      "checkpoint_val_RX_equal_accuracy": 0.9565937920534991
+    },
+    {
+      "job": "V1_S2_P0",
+      "arm": "P0",
+      "view": "V1",
+      "stream": "S2",
+      "checkpoint_val_RX_equal_accuracy": 0.9373999767876137
+    },
+    {
+      "job": "V1_S2_P1",
+      "arm": "P1",
+      "view": "V1",
+      "stream": "S2",
+      "checkpoint_val_RX_equal_accuracy": 0.9500300673305885
+    },
+    {
+      "job": "V1_S2_P2",
+      "arm": "P2",
+      "view": "V1",
+      "stream": "S2",
+      "checkpoint_val_RX_equal_accuracy": 0.9460385994448005
+    },
+    {
+      "job": "V1_S2_N19",
+      "arm": "N19",
+      "view": "V1",
+      "stream": "S2",
+      "checkpoint_val_RX_equal_accuracy": 0.947842558451359
+    }
+  ],
+  "IQ_reads": 0
+}
