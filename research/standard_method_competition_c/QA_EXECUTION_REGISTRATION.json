@@ -1,0 +1,16 @@
+{
+  "status": "REGISTERED_QA_ONLY_BEFORE_SOURCE_SELECTION",
+  "registration_sha256": "a7353fb2c5c10fb902e05fedbf35d59c00e1f6eefd1afe5e9233166aa354d8b7",
+  "execution_sha256": "9642f55b297453747eeb80ec0eb219e1426444b80935d8eb397ef7668e256272",
+  "code_sha256": {
+    "research/standard_method_competition_c/independent_QA.py": "c9d36167fbd4f81cc70eee6bffff746c3790b6303ddaa45f9e460aaecac013e7",
+    "tests/test_standard_method_competition_c_independent_qa.py": "4f5b2a4605f72b2dd9bf69d5e2c9da7fbe7cfedd8a4336fcdbf6d4646226bbd4"
+  },
+  "synthetic_tests_passed": 8,
+  "scope": "Independent numerical checks of current C text metadata and derived JSON only; no new science, IQ, predictions or checkpoint decoding.",
+  "output_files": [
+    "TRAINING_EXECUTION_QA.json",
+    "EXECUTION_QA.json"
+  ],
+  "scientific_methods_or_decision_rules_changed": false
+}
