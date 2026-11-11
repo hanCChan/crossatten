@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "tests": 8,
+  "failures": 0,
+  "errors": 0,
+  "scientific_fits": 0,
+  "source_IQ_reads": 0,
+  "scope": "Synthetic CPU fit loop, IO authorization guards and selected-endpoint analysis; no source checkpoint loaded by this suite",
+  "supplementary_non_optimizer_rechecks": {
+    "tests": [
+      "test_parity_rejects_identity_drift_and_numeric_drift",
+      "test_source_IO_guard_runs_before_any_numpy_load"
+    ],
+    "passed": 2,
+    "optimizer_updates": 0,
+    "reason": "Reject nonfinite archived logits and retain guard-before-IO after final frontend hardening"
+  }
+}

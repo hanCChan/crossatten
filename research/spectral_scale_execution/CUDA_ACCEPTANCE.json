@@ -1,0 +1,152 @@
+{
+  "status": "PASS_FULL40_EPOCH_CUDA_SYNTHETIC_EXECUTOR",
+  "checks": {
+    "F1/all120_updates_logged": true,
+    "F1/finite_every_step": true,
+    "F1/task_side_gradient_starts_zero": true,
+    "F1/alpha_gradient_starts_live": true,
+    "F1/later_task_side_gradient_nonzero": true,
+    "F1/Adam_decay_is_separate_from_task_gradient": true,
+    "F1/no_backbone_gradient_every_step": true,
+    "F1/frozen_parameters_and_BN_every_epoch": true,
+    "F1/alpha0_exact_rollback_every_epoch": true,
+    "F1/all_endpoint_prediction_replays": true,
+    "F1/correct_epoch0_to40_checkpoint_choice": true,
+    "F1/optimizer_only3201": true,
+    "F2/all120_updates_logged": true,
+    "F2/finite_every_step": true,
+    "F2/task_side_gradient_starts_zero": true,
+    "F2/alpha_gradient_starts_live": true,
+    "F2/later_task_side_gradient_nonzero": true,
+    "F2/Adam_decay_is_separate_from_task_gradient": true,
+    "F2/no_backbone_gradient_every_step": true,
+    "F2/frozen_parameters_and_BN_every_epoch": true,
+    "F2/alpha0_exact_rollback_every_epoch": true,
+    "F2/all_endpoint_prediction_replays": true,
+    "F2/correct_epoch0_to40_checkpoint_choice": true,
+    "F2/optimizer_only3201": true,
+    "paired_initial/frozen_backbone_sha256": true,
+    "paired_initial/common_residual_sha256": true,
+    "paired_initial/rng_sha256": true,
+    "paired_initial/scheduler_sha256": true,
+    "paired40epoch/relative_order_sha256": true,
+    "paired40epoch/canonical_order_sha256": true,
+    "paired40epoch/class_day_order_sha256": true
+  },
+  "check_count": 31,
+  "synthetic_trajectories": 2,
+  "synthetic_optimizer_updates": 240,
+  "synthetic_gradient_epochs": 80,
+  "backbone_source": "random construction only; recovered source P0/EMA were used only in separate forward parity checks",
+  "outputs": {
+    "F1": {
+      "status": "COMPLETE",
+      "job": {
+        "id": "CUDA_SYNTHETIC",
+        "epochs": 40,
+        "batch": 8,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "stochastic_seed": 26301,
+        "order_seed": 24201,
+        "max_gradient_updates": 120,
+        "arm": "F1"
+      },
+      "epochs": 40,
+      "updates": 120,
+      "best_epoch": 35,
+      "best_val_rx_ce": 2.4855587482452393,
+      "frozen_backbone_sha256": "0cedaa0f1f29585269d06072d3a247dd5fa4a120ac5f589e12cc265ce52d3b3e",
+      "initial_task_side_gradient_l2": 0.0,
+      "initial_task_alpha_gradient": 0.0006447166088037193,
+      "first_side_parameter_delta_l2": 0.05651802569627762,
+      "all_task_gradients_finite": true,
+      "all_backbone_gradients_absent": true,
+      "validation_endpoint_replay": {
+        "epoch0": true,
+        "selected": true,
+        "final40": true,
+        "epoch10": true
+      },
+      "active_parameters": 3201,
+      "total_parameters": 85627,
+      "costs": {
+        "training_seconds": 1.4022980001172982,
+        "validation_seconds": 0.5089079000754282,
+        "rollback_probe_seconds": 0.3750714000198059,
+        "total_loop_seconds": 3.295469200005755
+      },
+      "checkpoints": {
+        "epoch0": "9def78c1e8457ceee319b44e8cf30374a8d6d8d98aea49a4327c9d96b86c63b7",
+        "selected": "aeb77316b3325f6fd0005b4032b5b695a2607d6a5fd99e732df20ea75356b290",
+        "final40": "686ffbf9a7cc1863d00173786701dfb76ab978571ab3126df14656aaf5a2ddb3",
+        "epoch10": "fabd754956bb4c3e87f067cab751ddff98b643db328b44e3eb6713ab7dd5a7e8"
+      }
+    },
+    "F2": {
+      "status": "COMPLETE",
+      "job": {
+        "id": "CUDA_SYNTHETIC",
+        "epochs": 40,
+        "batch": 8,
+        "lr": 0.001,
+        "weight_decay": 0.001,
+        "stochastic_seed": 26301,
+        "order_seed": 24201,
+        "max_gradient_updates": 120,
+        "arm": "F2"
+      },
+      "epochs": 40,
+      "updates": 120,
+      "best_epoch": 30,
+      "best_val_rx_ce": 2.4855799674987793,
+      "frozen_backbone_sha256": "0cedaa0f1f29585269d06072d3a247dd5fa4a120ac5f589e12cc265ce52d3b3e",
+      "initial_task_side_gradient_l2": 0.0,
+      "initial_task_alpha_gradient": -0.0029614700470119715,
+      "first_side_parameter_delta_l2": 0.05651721730828285,
+      "all_task_gradients_finite": true,
+      "all_backbone_gradients_absent": true,
+      "validation_endpoint_replay": {
+        "epoch0": true,
+        "selected": true,
+        "final40": true,
+        "epoch10": true
+      },
+      "active_parameters": 3201,
+      "total_parameters": 85627,
+      "costs": {
+        "training_seconds": 2.2647512000403367,
+        "validation_seconds": 0.8481503999792039,
+        "rollback_probe_seconds": 0.4778188999625854,
+        "total_loop_seconds": 5.446471000032034
+      },
+      "checkpoints": {
+        "epoch0": "3ef38420d9527df0c569b9b229e4ba12030210402f92e5a664f92796715b81d6",
+        "selected": "948549d6570b6fa5dc966abe043158892f1b708f4f79b0ebac421504e01c33d0",
+        "final40": "3c7960cfe35e4770bff697bada8ee92e67d4ab36c81237c3d53be872ee958b1e",
+        "epoch10": "89b28785b29326f1f6cac97a1967191f4d28a2fe88cc6040f1c4814937d4827e"
+      }
+    }
+  },
+  "synthetic_artifact_directory": "artifacts/synthetic_attempt_001",
+  "prior_attempts": [],
+  "wall_seconds": 10.792319800006226,
+  "scientific_fits": 0,
+  "source_IQ_reads": 0,
+  "source_prediction_decodes": 0,
+  "environment": {
+    "torch": "2.5.0+cu124",
+    "numpy": "1.26.4",
+    "cuda": "12.4",
+    "cudnn": 90100,
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "capability": [
+      8,
+      9
+    ],
+    "FP32": true,
+    "TF32": false,
+    "deterministic": true
+  },
+  "time": "2026-11-11T21:49:57+08:00"
+}
