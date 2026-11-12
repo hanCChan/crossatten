@@ -1,0 +1,18 @@
+{
+  "time": "2026-11-12T15:14:35+08:00",
+  "checkpoints": {
+    "p1__Shen__H1__f0__all__s201": "b08ba03cd023bf0e9cc34dfe73d0f7614817b58f743a97716ef5520635253f9a",
+    "p1__Shen__H2__f0__all__s201": "8ce8292c77f44d2d0719ecb2080fba68c1e346504779b2e4dff242f701343400",
+    "p1__Shen__H1__f0__all__s202": "1902746e85fe655598ef2500ce6d92a067c12fe266a7b0d9da5dbf9cb9cfada4",
+    "p1__Shen__H2__f0__all__s202": "e3ef079c906abc43a7bb8519d94f1c92a035cc6d43bfc72f025cc0073a544612",
+    "p1__Shen__H1__f0__all__s203": "20747ad6d7dc81d6d02be1667edd53846669c6f9c70b57143bc405b0ed642ee1",
+    "p1__Shen__H2__f0__all__s203": "ff90e8a7e3719493ac1df85c29532362808eaa9ccee4304aaba69694d473f31e",
+    "p1__Shen__H1__f1__all__s201": "4e5d1c08764fffc0e3228808f56cf0641ed0e9350f0901ecf197ab49d3e6ff12",
+    "p1__Shen__H2__f1__all__s201": "73c078f29d988155078044070b858203d3b94d4c2c0e186749661f35e6c2fb34",
+    "p1__Shen__H1__f1__all__s202": "130687b5831a951127c13480e9045eae81cf847d545ea5896dd51949e10e36db",
+    "p1__Shen__H2__f1__all__s202": "7bd7c4ba77e1a5b59498209423e01e71500accbc2680ebd47a335ca9cf99ffee",
+    "p1__Shen__H1__f1__all__s203": "1c2cd9539e55928de91f831e47d864b5897bb193a5f62c08130ae6bd91cde247",
+    "p1__Shen__H2__f1__all__s203": "9af87036916d441f1ca0ff5647d0c88d39925a256abeca2a6673a6f575e37fce"
+  },
+  "rule": "All12 minimum source-CE checkpoints sealed before target reads"
+}
