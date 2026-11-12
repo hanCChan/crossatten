@@ -86,8 +86,13 @@ def register():
 def validate():
     path=HERE/'REGISTRATION.json'
     if not path.exists():raise PermissionError('Committed M1-A registration required before source IO')
-    committed(path);r=read(path)
-    for group in (r['code_sha256'],r['history_sha256'],r['parent_protocol_sha256']):
+    committed(path);r=read(path);codes=dict(r['code_sha256'])
+    amendment=HERE/'ENGINEERING_AMENDMENT.json'
+    if amendment.exists():
+        committed(amendment);a=read(amendment)
+        if a['original_registration_sha256']!=sha(path) or set(a['updated_code_sha256'])!={'research/m1_mirror_identifiability/runner.py'}:raise ValueError('Invalid serialization-only amendment')
+        codes.update(a['updated_code_sha256'])
+    for group in (codes,r['history_sha256'],r['parent_protocol_sha256']):
         for name,digest in group.items():
             if sha(ROOT/name)!=digest:raise ValueError('Frozen code/evidence changed:'+name)
     for name,digest in r['document_sha256'].items():
@@ -122,7 +127,7 @@ def synthetic():
                                     error=float(np.linalg.norm(fit['theta']-true));tol=6*np.sqrt(2)*sigma/np.linalg.svd(U,compute_uv=False)[-1]
                                     max_ratio=max(max_ratio,error/tol);recoveries+=1
                                     if error>tol:raise ValueError('Registered noise-dependent recovery tolerance failed')
-                            groups.append(dict(tx_present=tx!=0,rx_present=rx!=0,cfo_hz=cfo,shift=shift,channel_taps=len(channel),snr_db=snr,packets=8,valid=count,held_nmse_mean=float(np.mean(nmse))))
+                            groups.append(dict(tx_present=bool(tx!=0),rx_present=bool(rx!=0),cfo_hz=cfo,shift=shift,channel_taps=len(channel),snr_db=snr,packets=8,valid=count,held_nmse_mean=float(np.mean(nmse))))
             if tx==0 and rx!=0:
                 s=C.template(C.N[:80]);U=np.stack([s,s.conj()],1)
                 fit=C.svd_fit(U,C.forward(C.N[:80],tx,rx))

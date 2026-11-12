@@ -1,0 +1,19 @@
+{
+  "status": "PRE_SOURCE_SERIALIZATION_ONLY_ENGINEERING_CORRECTION",
+  "original_registration_sha256": "3337a59ac4b886da147bda12caa1d62a5e89e33240198d0fcfb35acbc6a793b8",
+  "updated_code_sha256": {
+    "research/m1_mirror_identifiability/runner.py": "f24f12382dac2eedcfb3f6b0e4ca26a3805b0cd4aa8b1b70ce23bb391eca9457"
+  },
+  "reason": "Cast two synthetic scenario labels from numpy.bool_ to Python bool for JSON; add committed amendment verification. Core mathematics, samples, seeds, tolerance, validity rules and scientific protocol unchanged.",
+  "preserved_failure_files": {
+    "SYNTHETIC_PARTIAL_ATTEMPT1.json.txt": "943e33f53652dcab8342b9b303449bf5fa21ac672c0f2e50a525aa79b0b5c7be",
+    "SYNTHETIC_CONSOLE_ATTEMPT1.txt": "f5aeaa79502702de0d5231da219b4e610233b76035bab6ce9ecbbf4ebfa80e6d"
+  },
+  "first_attempt_computed_packets": 1728,
+  "first_attempt_valid": 1665,
+  "first_attempt_valid_fraction": 0.9635416666666666,
+  "scientific_input_reads_at_correction": 0,
+  "classifier_fits": 0,
+  "neural_updates": 0,
+  "repeat": "Same deterministic synthetic seed and exact scenario grid to emit the complete result after serialization fix; no scientific source retry"
+}
