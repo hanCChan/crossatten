@@ -1,0 +1,314 @@
+{
+  "H0": {
+    "params": 133690,
+    "cnn_receptive_field": 350,
+    "token_stride": 256,
+    "overlap": 94,
+    "first_token_center": 127.5,
+    "tokens": 32,
+    "bn_layers": 5,
+    "layers": [
+      {
+        "name": "0",
+        "kernel": 7,
+        "padding": 3,
+        "stride": 1,
+        "output_length": 8192
+      },
+      {
+        "name": "3",
+        "kernel": 5,
+        "padding": 2,
+        "stride": 1,
+        "output_length": 8192
+      },
+      {
+        "name": "tokenize.0",
+        "kernel": 8,
+        "padding": 2,
+        "stride": 4,
+        "output_length": 2048
+      },
+      {
+        "name": "tokenize.3",
+        "kernel": 8,
+        "padding": 2,
+        "stride": 4,
+        "output_length": 512
+      },
+      {
+        "name": "tokenize.6",
+        "kernel": 8,
+        "padding": 2,
+        "stride": 4,
+        "output_length": 128
+      },
+      {
+        "name": "tokenize.9",
+        "kernel": 4,
+        "padding": 0,
+        "stride": 4,
+        "output_length": 32
+      }
+    ],
+    "scope": "Local CNN coordinates only; global FFT and TrueIB prevent an end-to-end physical support interpretation",
+    "token_shape": [
+      2,
+      32,
+      64
+    ]
+  },
+  "P0": {
+    "params": 134266,
+    "cnn_receptive_field": 266,
+    "token_stride": 256,
+    "overlap": 10,
+    "first_token_center": 127.5,
+    "tokens": 32,
+    "bn_layers": 2,
+    "layers": [
+      {
+        "name": "0",
+        "kernel": 7,
+        "padding": 3,
+        "stride": 1,
+        "output_length": 8192
+      },
+      {
+        "name": "3",
+        "kernel": 5,
+        "padding": 2,
+        "stride": 1,
+        "output_length": 8192
+      },
+      {
+        "name": "tokenize.0",
+        "kernel": 256,
+        "padding": 0,
+        "stride": 256,
+        "output_length": 32
+      },
+      {
+        "name": "tokenize.1",
+        "kernel": 1,
+        "padding": 0,
+        "stride": 1,
+        "output_length": 32
+      }
+    ],
+    "scope": "Local CNN coordinates only; global FFT and TrueIB prevent an end-to-end physical support interpretation",
+    "token_shape": [
+      2,
+      32,
+      64
+    ]
+  },
+  "H1": {
+    "params": 134266,
+    "cnn_receptive_field": 350,
+    "token_stride": 256,
+    "overlap": 94,
+    "first_token_center": 127.5,
+    "tokens": 32,
+    "bn_layers": 2,
+    "layers": [
+      {
+        "name": "0",
+        "kernel": 7,
+        "padding": 3,
+        "stride": 1,
+        "output_length": 8192
+      },
+      {
+        "name": "3",
+        "kernel": 5,
+        "padding": 2,
+        "stride": 1,
+        "output_length": 8192
+      },
+      {
+        "name": "tokenize.0",
+        "kernel": 340,
+        "padding": 42,
+        "stride": 256,
+        "output_length": 32
+      },
+      {
+        "name": "tokenize.1",
+        "kernel": 1,
+        "padding": 0,
+        "stride": 1,
+        "output_length": 32
+      }
+    ],
+    "scope": "Local CNN coordinates only; global FFT and TrueIB prevent an end-to-end physical support interpretation",
+    "token_shape": [
+      2,
+      32,
+      64
+    ]
+  },
+  "H2": {
+    "params": 133338,
+    "cnn_receptive_field": 350,
+    "token_stride": 256,
+    "overlap": 94,
+    "first_token_center": 127.5,
+    "tokens": 32,
+    "bn_layers": 2,
+    "layers": [
+      {
+        "name": "0",
+        "kernel": 7,
+        "padding": 3,
+        "stride": 1,
+        "output_length": 8192
+      },
+      {
+        "name": "3",
+        "kernel": 5,
+        "padding": 2,
+        "stride": 1,
+        "output_length": 8192
+      },
+      {
+        "name": "tokenize.0",
+        "kernel": 8,
+        "padding": 2,
+        "stride": 4,
+        "output_length": 2048
+      },
+      {
+        "name": "tokenize.3",
+        "kernel": 8,
+        "padding": 2,
+        "stride": 4,
+        "output_length": 512
+      },
+      {
+        "name": "tokenize.6",
+        "kernel": 8,
+        "padding": 2,
+        "stride": 4,
+        "output_length": 128
+      },
+      {
+        "name": "tokenize.9",
+        "kernel": 4,
+        "padding": 0,
+        "stride": 4,
+        "output_length": 32
+      }
+    ],
+    "scope": "Local CNN coordinates only; global FFT and TrueIB prevent an end-to-end physical support interpretation",
+    "token_shape": [
+      2,
+      32,
+      64
+    ]
+  },
+  "S1": {
+    "params": 134266,
+    "cnn_receptive_field": 266,
+    "token_stride": 256,
+    "overlap": 10,
+    "first_token_center": 127.5,
+    "tokens": 32,
+    "bn_layers": 2,
+    "layers": [
+      {
+        "name": "0",
+        "kernel": 7,
+        "padding": 3,
+        "stride": 1,
+        "output_length": 8192
+      },
+      {
+        "name": "3",
+        "kernel": 5,
+        "padding": 2,
+        "stride": 1,
+        "output_length": 8192
+      },
+      {
+        "name": "tokenize.0",
+        "kernel": 256,
+        "padding": 0,
+        "stride": 256,
+        "output_length": 32
+      },
+      {
+        "name": "tokenize.1",
+        "kernel": 1,
+        "padding": 0,
+        "stride": 1,
+        "output_length": 32
+      }
+    ],
+    "scope": "Local CNN coordinates only; global FFT and TrueIB prevent an end-to-end physical support interpretation",
+    "token_shape": [
+      2,
+      32,
+      64
+    ]
+  },
+  "S2": {
+    "params": 133690,
+    "cnn_receptive_field": 350,
+    "token_stride": 256,
+    "overlap": 94,
+    "first_token_center": 127.5,
+    "tokens": 32,
+    "bn_layers": 2,
+    "layers": [
+      {
+        "name": "0",
+        "kernel": 7,
+        "padding": 3,
+        "stride": 1,
+        "output_length": 8192
+      },
+      {
+        "name": "3",
+        "kernel": 5,
+        "padding": 2,
+        "stride": 1,
+        "output_length": 8192
+      },
+      {
+        "name": "tokenize.0",
+        "kernel": 8,
+        "padding": 2,
+        "stride": 4,
+        "output_length": 2048
+      },
+      {
+        "name": "tokenize.3",
+        "kernel": 8,
+        "padding": 2,
+        "stride": 4,
+        "output_length": 512
+      },
+      {
+        "name": "tokenize.6",
+        "kernel": 8,
+        "padding": 2,
+        "stride": 4,
+        "output_length": 128
+      },
+      {
+        "name": "tokenize.9",
+        "kernel": 4,
+        "padding": 0,
+        "stride": 4,
+        "output_length": 32
+      }
+    ],
+    "scope": "Local CNN coordinates only; global FFT and TrueIB prevent an end-to-end physical support interpretation",
+    "token_shape": [
+      2,
+      32,
+      64
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "time": "2026-11-12T16:13:56+08:00",
+  "status": "NOT_QUALIFIED_AS_NEW_UNTOUCHED_HOLDOUT",
+  "receivers": [
+    "b200_2",
+    "b200_mini_2",
+    "b210_2",
+    "n210_2",
+    "n210_3",
+    "pluto_2"
+  ],
+  "reason": "Used as blind set by paper 1; reused history; NOT opened in this protocol (any filename containing these names is refused by lib/xa/guard.py, including Location_* files of n210_2/n210_3).",
+  "source_files": {
+    "configs/protocol.json": "913d38626d9bcaa285b0ba7816bd8e863a91778f1fc62e4dd7d27c70415a119a",
+    "docs/PROTOCOL.md": "8a2998c3d449f0f5089dfe9b627fcdc474c1cb150916eeba8c300d937fadc976"
+  },
+  "data_opened": false,
+  "new_evaluation_authorized": false
+}

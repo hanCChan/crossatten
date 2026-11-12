@@ -1,0 +1,545 @@
+{
+  "stage": "S22",
+  "time": "2026-11-12T16:16:35+08:00",
+  "base_git": "d2d444fc8013263f8e6481be45e60ba52b5a63a1",
+  "maximum_new_fits": 12,
+  "jobs": [
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "S1",
+      "fold": 0,
+      "seed": 201
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "S2",
+      "fold": 0,
+      "seed": 201
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "S1",
+      "fold": 0,
+      "seed": 202
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "S2",
+      "fold": 0,
+      "seed": 202
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "S1",
+      "fold": 0,
+      "seed": 203
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "S2",
+      "fold": 0,
+      "seed": 203
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "S1",
+      "fold": 1,
+      "seed": 201
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "S2",
+      "fold": 1,
+      "seed": 201
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "S1",
+      "fold": 1,
+      "seed": 202
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "S2",
+      "fold": 1,
+      "seed": 202
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "S1",
+      "fold": 1,
+      "seed": 203
+    },
+    {
+      "phase": "p1",
+      "dataset": "Shen",
+      "arm": "S2",
+      "fold": 1,
+      "seed": 203
+    }
+  ],
+  "references": {
+    "H0_f0_s201": {
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s201",
+      "sha256": {
+        "model.pt": "be14533e73c5b83c3534e09a5837dc013f5e5b001b95396984c8f6d4e8ec6833",
+        "config.json": "6a1c50c769db70664cc71215841a206d675b28dc1df49f4a3690be26285b0955",
+        "metrics.json": "ec24bfc09e8eb22eace0e3fbcc6a7965586bdfcaf6a5281a24a6e631d53649cc",
+        "history.csv": "ebc36cb7967194cb424d4255a5f34d714f6b6049f7930e992415f66a0b0422ae",
+        "target_metrics.json": "3de31ad050848db6c2868f6279b3c3e6899534573aa588b2ff64f9101c08007a",
+        "preds_dev_val.npz": "59a996b4412c078f4c6a708d8b0246cb6bbde713cfff09e8e735031a03f6aef2",
+        "preds_confirm.npz": "d0f841c4f58561e13ec34a1b31acf99d7562df63fe8a2a500933b8bba7afc824"
+      }
+    },
+    "H0_f0_s202": {
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s202",
+      "sha256": {
+        "model.pt": "abf47db65b28d02f51bde927ba9a0a5473f445df4cbb53a5f0f26938af7334ca",
+        "config.json": "9f3e573b8ab50e238d6c4fac55d23138720ebcf7db733a74873c280faa8b3dc5",
+        "metrics.json": "4226548e1f6e42df614c2c01ebb4efec33066fe39b078916adb9131b647ef5d2",
+        "history.csv": "c4201741eeea5c8141498ce27159222bddf09eaf68b0f6c77a9279fc71034280",
+        "target_metrics.json": "daee401ed2918824194ca5ab20512f9c5207f9b4b2561d869cdfb16cd997aa89",
+        "preds_dev_val.npz": "79a2eaad7636c7feb222e45165c34c9eebb1f433c3a81b575ace3cfe17182655",
+        "preds_confirm.npz": "8e901f5f1f867b7592d1e51a2c11815c80b88884c7d80ee841ff4f27953b56f0"
+      }
+    },
+    "H0_f0_s203": {
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s203",
+      "sha256": {
+        "model.pt": "8abe846f047a4b215aeb1f5c57baad2e25b21614cb329b27e12f1a4e9e11e7cb",
+        "config.json": "c1745e1fe10ee5603e0e4ca054700e0369e6c6d1862c8023f1b4327cd442524a",
+        "metrics.json": "9f0cf4a6891c1dbd244596c5003a77e9dd56edd99720761a0fa96b22c830ac73",
+        "history.csv": "cf2937730ae72e32d769e5030faa352f0c1d23fee1b0cb04446fd644aec679b7",
+        "target_metrics.json": "1b3960103702512105df7d5da98f4cc94a793867f5e9798c6ab93120a522c22c",
+        "preds_dev_val.npz": "2e2084275287419c8b75ba8a05f5e29ad8686b23bda3f8181a5d3bae15b275ab",
+        "preds_confirm.npz": "79de7c35ece4f0e922a0bfa2bcd50b1007e87a93b6ce0f9528f1f236dd1112b7"
+      }
+    },
+    "H0_f1_s201": {
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s201",
+      "sha256": {
+        "model.pt": "0996333761c13f30703acb0e3051ff676ea1f5dfa6fb1f0b04b4ccc3a7a48119",
+        "config.json": "b591db1b8c418c7f66a9da39a7064b57c33bc7cd9dd3f0f0d263a4f8cc35071a",
+        "metrics.json": "72a345d4293e175e9636ebc49950672e60766f072577164eb902874b1cfbe4e7",
+        "history.csv": "0f61ce80888ec74e2801f900c57f49011e0b93f817728ba862ab0a5963ffca5d",
+        "target_metrics.json": "dd1cde57d561acfc40b9ba4ff8f47b48f5a5994bff8c0902627821ce21864a4f",
+        "preds_dev_val.npz": "cae8b0f5cd999522d3617854b66231b7aa7698124534cdd6045978706ddca394",
+        "preds_confirm.npz": "74c7bc4c3851a7e332bdfac61372fc8b49feafdce00df43fb3025b19afbb7a7c"
+      }
+    },
+    "H0_f1_s202": {
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s202",
+      "sha256": {
+        "model.pt": "75b252c7984d013eba842b0691b44a7f3af96bbb830aba3617823d4f0c4048c9",
+        "config.json": "551d33ff33cd94d7191a736d6ed2247b21436d3adba7536952bdc5a46791356b",
+        "metrics.json": "52f695aea5c3f40ceec0a937ed00dc7fd11558a5bebb5deb6d026db10202361f",
+        "history.csv": "6224f29970e27bcb24402810e50f3b8e96e5ffae85961477ad213ceb1d7cf8d2",
+        "target_metrics.json": "d1d570bd3bc67c4acc272c0706284ee14ee4ccbd47749fb213308db32d374426",
+        "preds_dev_val.npz": "2842622370cdb057d2f75df61edf9e0b8e2a790b96b0bbae4b8845b50d97f976",
+        "preds_confirm.npz": "1d47dfaa247a91f8598b2513467b6c972d344ea9a19601c507661488e10f4162"
+      }
+    },
+    "H0_f1_s203": {
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s203",
+      "sha256": {
+        "model.pt": "fec5bfade4d1d90faf89dc6f5b42dec243e3a7e3f2cb06b15cd255bd79f17314",
+        "config.json": "3ec97b0e80816abbe7963fcb0494ba5a18cd54c01a8db7899c8c3a3fd7fe4895",
+        "metrics.json": "9e030a37ad1e89541fbf32465d48b7d3a93c0c3d7d5e763b386b986af1fb1e2a",
+        "history.csv": "07459679c9c8d2b7dd3ccf0a4af9ce8051dc52d23aee61be7415c11b6ffaf3b6",
+        "target_metrics.json": "a28fe0e4caf273fa2949c4e0a2bd15b2aaae67f8c5186ec6cdf638744d32c726",
+        "preds_dev_val.npz": "ffdd7d02cfef31f8a381294930f0e9442d7a09f3f7aa2729e620954f09d2d6a3",
+        "preds_confirm.npz": "b3e1fee48686e1e3e18f626b3b89189cdfb57665ae33d65ec62158ea0467975c"
+      }
+    },
+    "P0_f0_s201": {
+      "path": "D:\\crossatten\\worktrees\\s15-hstem-attribution\\15-hstem-attribution\\runs\\p1__Shen__C2_lite_mha__f0__all__s201",
+      "sha256": {
+        "model.pt": "855613f64f3f8b7de8ab1a6521c209f6cc406386362c297168dfadcc120da6bb",
+        "config.json": "b5d388d23a551c3eaeec235d41256bea7181f4e8172dd8f46ecd7cdbb5031f41",
+        "metrics.json": "cd037c375468ee1608c7974a9d44c860bac8d32a7071c139d2956b20627ddb78",
+        "history.csv": "5462be2e3eeff2ee8ced553c398ee9d97568a2b45f70cadeb9b89337a601da9e",
+        "target_metrics.json": "b2fd6b15a10e1ae6cfc12313fd960cf181a30a099da4e12b16e010b874ec9d59",
+        "preds_dev_val.npz": "180dc8ade0dcfbcd5a049cd6f9d72f0d9f2ff1f9d3e77fa531f1e06d1f22166e",
+        "preds_confirm.npz": "a1008813d33dbeeed00ba65e67995d374baebdc28d6d8427423d1caa8e995912"
+      }
+    },
+    "P0_f0_s202": {
+      "path": "D:\\crossatten\\worktrees\\s15-hstem-attribution\\15-hstem-attribution\\runs\\p1__Shen__C2_lite_mha__f0__all__s202",
+      "sha256": {
+        "model.pt": "65b0840e3020bdd7c8c005603e580e4fdbfbcedb510612a4201cb3b1b807d944",
+        "config.json": "6db43ebff4ba99f0114402e2033242b9902a0017c45ce1eeff13672dc2c8c051",
+        "metrics.json": "9b24434e5045ac494f9c0e9c96aa9ba05dad4b149b2705f13b4eff13efa018c9",
+        "history.csv": "7c24a9a9d9f892fac9487b3279ef461fa9308f0b591b9d4da26bb1ff1dbf4922",
+        "target_metrics.json": "0c86b561e4bad3da0306b0755ded3e9511ae3ee806f53f2948c3453606d3cc49",
+        "preds_dev_val.npz": "ba5781aa58a592e14dc8087ac2fd8a088a05c648114b18b19633fdc90fd305f9",
+        "preds_confirm.npz": "900cf715b02d178591bf871249d1a968a7b99e14ad6e4e1a2e4999fbd9ec9c56"
+      }
+    },
+    "P0_f0_s203": {
+      "path": "D:\\crossatten\\worktrees\\s15-hstem-attribution\\15-hstem-attribution\\runs\\p1__Shen__C2_lite_mha__f0__all__s203",
+      "sha256": {
+        "model.pt": "2e84d128b9b6381296249ce20194da743bdd848aced13ba5216621f2f72c2467",
+        "config.json": "05efab3b10272ea0fc9cde55465ecbde6d91932f9a8b5b21f649b038ce31cda3",
+        "metrics.json": "5cd912ec5c45c94ac2374eaca41b2fc59e0ac0a6de9691aebede1e8f69a79a51",
+        "history.csv": "db3de60ca460cfc468ed3f7431d33afa8a8a8d13fe9ff196902f2595b6159a06",
+        "target_metrics.json": "a14d70af65c4b8ef63186dc40428601d4b2f66ceb44a67c7a0681a5d2529ab0c",
+        "preds_dev_val.npz": "06e6bfa3eac35d08e046ea3dee30270e4209c0495ea308615027d96d19c74566",
+        "preds_confirm.npz": "2576f1b2c91d4b8831b03f6125e0a9e33688106c0c88d1d4f95752bd919f96a5"
+      }
+    },
+    "P0_f1_s201": {
+      "path": "D:\\crossatten\\worktrees\\s15-hstem-attribution\\15-hstem-attribution\\runs\\p1__Shen__C2_lite_mha__f1__all__s201",
+      "sha256": {
+        "model.pt": "3454f0e2e0e21a4099abbe17b2af37311b9178f2611c6cf8609abf82d617f57f",
+        "config.json": "7c2959fe54f92a0b40216b1e08e36f4ca8cee5d7e9e77665a535e5b3f650e0e0",
+        "metrics.json": "95e8e67bbfa5b9f2ac8334fdb6ec54d80496fabe31bc593614f03f76b71c8a0b",
+        "history.csv": "da247c401b95abc92380c585c7015b248473ce9ed2346dc785ef672f990d7e8e",
+        "target_metrics.json": "e3a9f210a97f193170a4123a9ecb98ef529a393bad38514cd828779aaaf8eec9",
+        "preds_dev_val.npz": "171bc88fa0de47c098844401f5ce0b141ca6c40c75abfb7262c483608d6be376",
+        "preds_confirm.npz": "79beed3ec123b3906fc00fc14eb2ec1a342f84ebeec32a1355097fa3699671a9"
+      }
+    },
+    "P0_f1_s202": {
+      "path": "D:\\crossatten\\worktrees\\s15-hstem-attribution\\15-hstem-attribution\\runs\\p1__Shen__C2_lite_mha__f1__all__s202",
+      "sha256": {
+        "model.pt": "eeaa364efe07b3a1621b8813d0f42709cbac7d28a84858c4bafc51b87221a617",
+        "config.json": "1e33bd943909936c454e3f25eee18621f42d259498e5ffedc83d5eb029ef0e3d",
+        "metrics.json": "d6a8c95bb6cfe7123fd2b94ce4e017a484e3d7dcff938c2dd0a5fa9c8e659a36",
+        "history.csv": "be3f72e16da3cb4faaad0a2d17ecd24cb3989e42d23a492970db36dc35694b9b",
+        "target_metrics.json": "ea9c7f5b573e94519e7c1d2e9e12717170fa41292b8daf11da44907a86fa70c6",
+        "preds_dev_val.npz": "1be999e54419d82cf8f95ec2ac139862509600ed51cfaf8553a202e4a1b70698",
+        "preds_confirm.npz": "963a4009e48a4eaa9110899c7c6b4ce6152ebc56b769a2ad118c92cd03ebd2bd"
+      }
+    },
+    "P0_f1_s203": {
+      "path": "D:\\crossatten\\worktrees\\s15-hstem-attribution\\15-hstem-attribution\\runs\\p1__Shen__C2_lite_mha__f1__all__s203",
+      "sha256": {
+        "model.pt": "452159cedef2ae6383ab99295b880130b049c0a423ae30c7d539f0ca9ff8ccda",
+        "config.json": "0dddbdb97b5f0b4f2f9d9d776d24f2d5d25c03429af19ed474b870f6aa52cc2c",
+        "metrics.json": "bcbbd57639afa44dc1313016d3801432687b1797275c0142a7351c979c1a0e5c",
+        "history.csv": "f73ab4eca862e40632fa1c4a2409ee87ab7ebb11a0f99030a6ae500bc96dc7df",
+        "target_metrics.json": "5bf37365b3361cf5ae7e49bfe2a67417cb64596d91aa894ca285bf0c64a5eb82",
+        "preds_dev_val.npz": "0cf4daecb3034f388075e40c8460061946d6abda12eda20fc7450edce6e31858",
+        "preds_confirm.npz": "3df5defe08c9dec6dfd98a122886d6e8b20b7d92ec28e9ac9f5b88032865bf36"
+      }
+    },
+    "H1_f0_s201": {
+      "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H1__f0__all__s201",
+      "sha256": {
+        "model.pt": "b08ba03cd023bf0e9cc34dfe73d0f7614817b58f743a97716ef5520635253f9a",
+        "config.json": "e281d46cdbe66a3607c909954b4ed51a57881a8a0ac2e7da61b38dfc9858a788",
+        "metrics.json": "42a96aae75550ca078beca6c5cf345b6eb50da022565ce709f1119505d8f4547",
+        "history.csv": "e6b55c935023418beeff2b5fc6e87ad70df4ac17db31f5795981ee02090b4c26",
+        "evaluation.json": "cde53e07f97c9bac0c983c4719e3d4dbf07b14188e24bdf5d53ed4c9c58b1724",
+        "diagnostics_dev_val.npz": "24f0365f5fe0d6e67553fdcf47bdcbfd9588f5611f7e21d6697dadddf5d91e27",
+        "diagnostics_confirm.npz": "373f1917f87a4529618ce5a3eef3f3f4a128cb27a66aafb2ed113d0be6acc695"
+      }
+    },
+    "H1_f0_s202": {
+      "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H1__f0__all__s202",
+      "sha256": {
+        "model.pt": "1902746e85fe655598ef2500ce6d92a067c12fe266a7b0d9da5dbf9cb9cfada4",
+        "config.json": "d0a7179ef3866deb2e0a43f07af3868812425e382eedd2fb8ff8cfff497c90e9",
+        "metrics.json": "c55dc29e6a84f41ea2ebb7b773a30c90d206dfcf43a8adadc6707770585d0039",
+        "history.csv": "5711c30279bb574d339414354e8b0adf2c89ce753621b7b92389cadad78f0f82",
+        "evaluation.json": "c1b2f12ce5ff82881c5eceb5647df5a663c0cc8cf187fbb0984754455ba6b8a2",
+        "diagnostics_dev_val.npz": "7502dcf91b72a9c01aaedc12677bea5d412be7f984f0a144c24160fcf5563d8e",
+        "diagnostics_confirm.npz": "ecacc6096b5698956edb8fcbb005a45a04011daadb91baf145803688dda44879"
+      }
+    },
+    "H1_f0_s203": {
+      "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H1__f0__all__s203",
+      "sha256": {
+        "model.pt": "20747ad6d7dc81d6d02be1667edd53846669c6f9c70b57143bc405b0ed642ee1",
+        "config.json": "98aeb16f2e0b36badf88c99cb5c46a3fd3a4a27a3c9de5defb7ee792863e84a3",
+        "metrics.json": "3789712d39ef8d361e7a6bc42167c7c0d507bac46bf1d907d75880b9f60e2d5d",
+        "history.csv": "5aab133f77d38dc90ea4a50db3b09773c974cc4f34344be3137ad0525cc79708",
+        "evaluation.json": "570c7514a1205198176a64174b03b07479793fb0092566dc64713f3130e50b94",
+        "diagnostics_dev_val.npz": "82f29f1ac4bd7a643173ef30721ca2d7c674e0d151700b1e35885a71588c2df9",
+        "diagnostics_confirm.npz": "19279e0038fd41379a4c980ab5eb1f04c6425990fb2f7c4d6e00b95ab0cb0ff8"
+      }
+    },
+    "H1_f1_s201": {
+      "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H1__f1__all__s201",
+      "sha256": {
+        "model.pt": "4e5d1c08764fffc0e3228808f56cf0641ed0e9350f0901ecf197ab49d3e6ff12",
+        "config.json": "51d7e22964914b7c624f1ac9055eb50ad4375cb0545c85ec14a4bcc211c268fe",
+        "metrics.json": "7c6a015f0f520d9689c3a79931d0ca3a1dd82bd90ed496f94038786d29e83366",
+        "history.csv": "cf6c20ab12b8af0fb395f492500f833e611b9cada9bc796807fe78fd0d090fa1",
+        "evaluation.json": "069bc17ed2bfe9fb68a9748b26d4edfeeb1184ecaa6588f0eb9763adf0247c2c",
+        "diagnostics_dev_val.npz": "fc1c894a4e1e631a007f4dbc43b0df46865835027b54100044fe6170ff98cd58",
+        "diagnostics_confirm.npz": "2c8ff53b61ff0511e1e70c510ad7a2bc93ff7c16f027bcfa18bbb37fe6d26ce2"
+      }
+    },
+    "H1_f1_s202": {
+      "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H1__f1__all__s202",
+      "sha256": {
+        "model.pt": "130687b5831a951127c13480e9045eae81cf847d545ea5896dd51949e10e36db",
+        "config.json": "74890d574e04bf727b5fc93858f3922731ede780c4dc94415bbce114b48fdaea",
+        "metrics.json": "acf3f421658f3102538c311adae63beb224dbf76e244240b1ef19af219e0ef76",
+        "history.csv": "3605c1dc0178d2afddcb28019fdadbaab563a0b6365448607058392993d17eb9",
+        "evaluation.json": "4ac7f3c9f1ca86a18b6fdc5ebcd09c58b5c01d11edd91696774f746680ff3081",
+        "diagnostics_dev_val.npz": "f02e47b5ee66157625f0074c1f96c221d2cbbaff0eca8b6ac8c271fb733a99d6",
+        "diagnostics_confirm.npz": "2b45b1cf7c1dfde7c2085117dca706d1cdf1088b334b5eb2829f443a02c70c79"
+      }
+    },
+    "H1_f1_s203": {
+      "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H1__f1__all__s203",
+      "sha256": {
+        "model.pt": "1c2cd9539e55928de91f831e47d864b5897bb193a5f62c08130ae6bd91cde247",
+        "config.json": "c3a9251187d5d701a883da253d7f17d7364b274a92b6a26460008385d40623aa",
+        "metrics.json": "89e34dde443d32a638ad6d909be79517e196409f083e9021d93a58c65ca2b668",
+        "history.csv": "a269dfa29efa00d78be00ddd3e61c3d9a863cc71951ce297d737473f15eb1abf",
+        "evaluation.json": "5341a917d602d0b29cfbddd4d4f59432d816ecdceb8d43c151e7ddc8b6903513",
+        "diagnostics_dev_val.npz": "901466fd15ba34deb8abf8641c00f091475e0335fb72e6961b6d61154af004f1",
+        "diagnostics_confirm.npz": "7fc496d6eaa2ff523aaa2b39024f1ab77d03040be77014b42fc65444c2507a16"
+      }
+    },
+    "H2_f0_s201": {
+      "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f0__all__s201",
+      "sha256": {
+        "model.pt": "8ce8292c77f44d2d0719ecb2080fba68c1e346504779b2e4dff242f701343400",
+        "config.json": "a347395e354718210658d95c23e9f656a2628cd792915c0dc292b7e6403a8c82",
+        "metrics.json": "6c3121dc525eea8da74f33157723c416d7293903b91f7c251da67eab1bec78c9",
+        "history.csv": "650dbed00d81aad11784f96e154d9b660466841e8bf51bc15089f00d070208ee",
+        "evaluation.json": "4cb55c532d92a8ec6c6badd08fe1eeb755d811697c3b76902be96ddb30f88423",
+        "diagnostics_dev_val.npz": "025cac96fcdac0b2e6f255d6be49263eb77876cac547d67ce909f045f0044c07",
+        "diagnostics_confirm.npz": "f5d3601dccf7c2d071d15ca4ade1d2d07005e3a8cefa91633dfdccef0baf8d8f"
+      }
+    },
+    "H2_f0_s202": {
+      "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f0__all__s202",
+      "sha256": {
+        "model.pt": "e3ef079c906abc43a7bb8519d94f1c92a035cc6d43bfc72f025cc0073a544612",
+        "config.json": "9aa89e41ad9958c3c22328796913106207ff166a854eed67066f82d8f1acc843",
+        "metrics.json": "ddaaafdc9318e028399ef22e6d5d11a185d7c65f84d24a94f1db9c4e071fa719",
+        "history.csv": "f43eb91cbf638a6b6c3c1bee14ae5b2506f629b4fea7aa8e51bd89664f827371",
+        "evaluation.json": "8b5c4babf8323582abb78e36801d0809b5da9dcd1e034e85bbbfd5ce335bbb9f",
+        "diagnostics_dev_val.npz": "caf2a80ac9d59127286f16f55188a099257309cd032359411486a3d0452f20cb",
+        "diagnostics_confirm.npz": "c634d3a1791337f4716bd054867f6c400bebeb10f4368858e917d75a5ecf7554"
+      }
+    },
+    "H2_f0_s203": {
+      "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f0__all__s203",
+      "sha256": {
+        "model.pt": "ff90e8a7e3719493ac1df85c29532362808eaa9ccee4304aaba69694d473f31e",
+        "config.json": "68ef78fcefc1c552ed75fce77aeae8caf3b465a78987fc3b5c6a3dfaa4d57eb7",
+        "metrics.json": "d0f6d67c3507193d476f18a8ec3b9dea018e30d991b853d405f7fc52b62fe35c",
+        "history.csv": "351fa97cf71d786bcc30a4f37edd1c4c2c994bbb0e6d6b17e585680dcd21e8e5",
+        "evaluation.json": "59a33105709b1a63089ddb9f3fbe2975406489a2ea610ab053ddebda0041b884",
+        "diagnostics_dev_val.npz": "bc14331d5b17bfab8956d37e7b41719dc03fca6076905ff7df4d55a20466208e",
+        "diagnostics_confirm.npz": "cfc457eb7f324e7131c85649459c78f40e5a1a477c7275fec92a709cc9cc6dbb"
+      }
+    },
+    "H2_f1_s201": {
+      "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f1__all__s201",
+      "sha256": {
+        "model.pt": "73c078f29d988155078044070b858203d3b94d4c2c0e186749661f35e6c2fb34",
+        "config.json": "66258ac401a46adeb1588a7c55266bc90ec201f1272db9c53837133d2310f037",
+        "metrics.json": "3ab764b1304ee889963f03cf90b6bda3adb2ffb1c0c8df9c50b22d48d23d8f6c",
+        "history.csv": "9435394f55cd883db37388e7b6e68cca03d73e538682cfb0af59fdb98db6ce4d",
+        "evaluation.json": "26d9b9e6c91d9e175bafe9f45fecb4708573d80a0f8b093e9773ba154d9235d8",
+        "diagnostics_dev_val.npz": "e7548ee0898d4761907babba94b150e9adeee8f291936be4f37a3877ffed017a",
+        "diagnostics_confirm.npz": "6a662450884fd842f674fc341cae88c48eb74e23b2c3037e559876fcdc88ff78"
+      }
+    },
+    "H2_f1_s202": {
+      "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f1__all__s202",
+      "sha256": {
+        "model.pt": "7bd7c4ba77e1a5b59498209423e01e71500accbc2680ebd47a335ca9cf99ffee",
+        "config.json": "c320d8b82dc2855a9ee208e87cd355e0d2d6014e557a33f0649af08e9d83ecf4",
+        "metrics.json": "46595ea2bb6012806174e900c73ccb1c041105159a1413d9ae45566e9b5f6cbd",
+        "history.csv": "7fa954876f8d0ed2da4644be260d1b2f19e20e7e7d9691d654189a9dd2b02e1d",
+        "evaluation.json": "2a78a1c189122e58d072324fc279fad06277b57d40fda35b23c6cca8d86a89b1",
+        "diagnostics_dev_val.npz": "97a6bdbf8fad1792688f2c8a2f0a42eca32fc5c01a9dd75f2e4b331c76f5bebc",
+        "diagnostics_confirm.npz": "241cb1bc55956c82e078d8b9e33049e8093206b83bba296d7fc3ecb2d057b582"
+      }
+    },
+    "H2_f1_s203": {
+      "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f1__all__s203",
+      "sha256": {
+        "model.pt": "9af87036916d441f1ca0ff5647d0c88d39925a256abeca2a6673a6f575e37fce",
+        "config.json": "365a4875c5b9d551254c94eaf09de0d69d2659cbd6b1834b231908b33a245d01",
+        "metrics.json": "ad7412e59eb8b8a2b445fe6daea057f025438d17c1b42a2e933e6465001fa073",
+        "history.csv": "4fe8ac49cdeba4edfe54fb3b11710cdf34502fb4323ca7a4648f1348c3b85b1f",
+        "evaluation.json": "b9eee6bf252de777f59ec5a42d0137b69cd48b695a07cb26b46d1b6e73bb38ab",
+        "diagnostics_dev_val.npz": "326c284da3e54fe221ad54a60b11ff14491bc84a20af0723dbbe1e2b015e3876",
+        "diagnostics_confirm.npz": "f1c0faabc37364e9f04a883e123ec9a6b253f2c4b4ef00571a7a12b71d29ece1"
+      }
+    }
+  },
+  "primary_comparisons": [
+    [
+      "H1",
+      "S1"
+    ],
+    [
+      "S1",
+      "P0"
+    ],
+    [
+      "H0",
+      "S2"
+    ],
+    [
+      "S2",
+      "H2"
+    ]
+  ],
+  "primary": "RX equal dev_val accuracy",
+  "gate": {
+    "practical_delta_pp": 0.5,
+    "minimum_positive_pairs": 5,
+    "fold_directions": "both positive",
+    "receiver_bootstrap_lower": "strictly >0",
+    "worst_receiver_delta_pp": -2,
+    "equivalence": "conditional RX95% interval entirely inside [-0.5,+0.5]pp and both fold mean differences within +/-0.5pp; otherwise do not declare equivalence"
+  },
+  "intervention_S1": "Fixed linear align_corners=False interpolation 256->340, scale sqrt(256/340), then linear340->256; stride256,padding0; same learned kernel, biases, group8 and 80->64 projection",
+  "design_deviation": "Original center-crop is rank194 with62 inactive taps (19840 nominal parameters disconnected). Replaced before training or target reads with rank256 round-trip smoothing. This is not the originally proposed center-crop S1. No trained crop candidate.",
+  "intervention_S2": "Replace precisely three tokenizer BN by channel affine with weight1,bias0; preserve352 affine parameters; no BN running buffers or batch statistics in these three modules",
+  "training": {
+    "recipe": "Unmodified S13 Shen200",
+    "precision": "FP32",
+    "batch": 64,
+    "epochs": 200,
+    "awgn": "U[0,50)dB",
+    "optimizer": "AdamW1e-3,wd5e-4,warmup5/cosine",
+    "checkpoint": "minimum source RX equal CE",
+    "paired_seeds": [
+      201,
+      202,
+      203
+    ],
+    "torch": "2.5.0+cu124",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+  },
+  "secondary": [
+    "RX equal macroF1 and cross-entropy",
+    "perRX and TXxRX errors/margins",
+    "normalized TX centroid distances",
+    "params/MACs/resident FP32 batch1,batch128 latency"
+  ],
+  "robustness": {
+    "models": [
+      "H0",
+      "P0"
+    ],
+    "data": "All source-validation packets only;not unseen-RX evidence",
+    "conditions": [
+      "clean",
+      "snr20",
+      "snr10",
+      "snr0",
+      "shift-4",
+      "shift-1",
+      "shift1",
+      "shift4"
+    ],
+    "random_stream": "stable_seed(S22-robust,fold,seed,condition);same for H0/P0",
+    "shift": "zero-padded sample shifts;not circular roll",
+    "use": "descriptive only;no model selection or tuning"
+  },
+  "recovery": "Before fit:24 baselines strict load and exact source metrics/CE. After all12 new checkpoints committed:216 archived baseline target arrays bit-exact; new target evaluation only then.",
+  "access": "No blind RX or WiSig data. Existing dev primary; historical confirm descriptive. Blind qualification from existing docs/logs only.",
+  "stop": "Only12 new fits. No H3, crop fit, kernels, losses, anti-alias training, seed replacement, blind evaluation or outcome-driven model replacement. Technical failures preserved; no automatic scientific retry.",
+  "uncertainty": "Receiver-cluster conditional bootstrap,5000 draws fixed seed14014; seeds/folds not independent receivers; four predeclared comparisons reported together without multiplicity correction",
+  "limitations": [
+    "Round-trip is an invertible kernel reparameterization; it changes initialization/smoothing/optimization and frequency response, not only support",
+    "H1-S1 is not a pure support intervention; physical receptive field is global because TrueIB/FFT",
+    "Affine-only does not isolate BN training statistics vs running statistics vs optimization dynamics",
+    "CUDA linear interpolation backward may be nondeterministic under original warn_only setting; shared inputs/noise seeds remain paired",
+    "Historical confirm and paper1 blind history are not new independent evidence"
+  ],
+  "code_sha256": {
+    "13-mixer-cfo-mechanisms/cfo_descriptive.py": "e60de808c7de10decda0844f2e74ae55169df196c9ec9fbb3807c312f4a131da",
+    "13-mixer-cfo-mechanisms/core.py": "a9db92f80e8e1bf1579cab900fabf085f5c33e018dffe6e27f1af64ee94dc527",
+    "13-mixer-cfo-mechanisms/data.py": "578fd207105e5375094bd22a12ec710fd259379c4b1c627d962251256bd71e9e",
+    "13-mixer-cfo-mechanisms/diagnostics.py": "883b0a5fcf73ba7c19e94f51ae05f7d003b82a8870b44c6c6d23e4ca02ee7149",
+    "13-mixer-cfo-mechanisms/execute.py": "21a7bf48a381842e5fbc044411350ba2faa1fd86cc31796ccab199726e8b1ae8",
+    "13-mixer-cfo-mechanisms/metrics.py": "a9773e0532552f012dc039c42206460d1a5b02001a2bbb44a388258825f85ed7",
+    "13-mixer-cfo-mechanisms/models.py": "606243ff9462358f53a86d2908130c47f69c5dd9d1cfee669cbaf10c7b76e5a1",
+    "13-mixer-cfo-mechanisms/pickle_index.py": "52925d018fbad46396dbf809379e2b8961b368179ba1ef64c4fc9c5031ed319a",
+    "13-mixer-cfo-mechanisms/register.py": "1d2241b226e4addbe74401c5acf7cd6acd148fcece15e20cf0c611f11a6b5b3b",
+    "13-mixer-cfo-mechanisms/reports.py": "8bcf6ec4ad18d183368b3d0e6bd5c4e58c476442aee16ddba74b099de27aef15",
+    "13-mixer-cfo-mechanisms/status.py": "533e7ef2154f0134c8cc887e5a1bd0d42cafcdfa3863c712f462bee048b49b1a",
+    "13-mixer-cfo-mechanisms/train.py": "164b0eb9794c4494b34cf1d25f8dfb0c9a4ae8c54af3e03ef9f08b150a670a2a",
+    "13-mixer-cfo-mechanisms/wifi.py": "3402847c350172b670aba40616f5b56ec5ecb2e7176cc199c26d0315d920db37",
+    "15-hstem-attribution/architecture_search.json": "56a749bdf8fd346a55f9d900913acd76915055a6829e46f358031a04f55ef2ad",
+    "15-hstem-attribution/s15_core.py": "e37958e21f579314680a6ac1d0b35302f6a5b1e2307fedf336af5c335002a195",
+    "15-hstem-attribution/s15_data.py": "df1917a39b0f933ea735c4946cba40cdd691ad049b17fa0adde8396cb205f295",
+    "15-hstem-attribution/s15_execute.py": "d9c7b8fcf8bdf28abf9a409e3702df3317cbc43fbf9f1bd3ea703f299a5cfe4e",
+    "15-hstem-attribution/s15_models.py": "0d361cf9ac5ce2794975827e2b89a31615d4a1eaa171f5c073d1c7afffe810d4",
+    "15-hstem-attribution/s15_register.py": "1b754a5ef2204461b705249aa3d4d784f23765a38f0469b4d40200c28691fd36",
+    "15-hstem-attribution/s15_reports.py": "afdbce3425aaa3295b44aa6d122c6a0783b56e53ced192c881528b1de8087bd1",
+    "15-hstem-attribution/s15_stats.py": "03e0c2e9c39afa0d0e0e5e50a857fbf3de3c0b80f9bca951222ff471e8e05c57",
+    "15-hstem-attribution/s15_train.py": "c247c37cf5089f6ecdf675c9f4b5bd2f4078c06c819941d57d9e2eb39a26e849",
+    "21-hstem-mechanisms/s21_core.py": "7c15bb0a3e64444be6146627252897d2c0e0489352d5ac5a4f673a40d53acf0f",
+    "21-hstem-mechanisms/s21_data.py": "a2e665180532f5f2dbf7a40a446949c231d7ea2199f26c3e2a155bb70d068739",
+    "21-hstem-mechanisms/s21_evaluate.py": "505283d86af9e957cfbb92e77a11e824e746e82ce012112cd8d3cacda5097758",
+    "21-hstem-mechanisms/s21_execute.py": "7a979b36fab583d54ee8f1402cd0b7c9f11079d52a07986c030968c9d2af97fd",
+    "21-hstem-mechanisms/s21_models.py": "5dea148df54a7db8c2aba1f5190340e913330f18b59610c1a7869fc07baea28a",
+    "21-hstem-mechanisms/s21_register.py": "583bb0d790885b8bf8001ac96003b30e1810c7fb6ad7879be1d1106427abd139",
+    "21-hstem-mechanisms/s21_report.py": "f0360932fcb323f7c60e0cb3eb2a33c92d34d7a073cea59e7bff6139a4c17ca4",
+    "21-hstem-mechanisms/s21_train.py": "2ffb8c2b1da2e93e3cbf92454a625335b7f78b964427a98001e62d6d967fd4f9",
+    "21-hstem-mechanisms/test_s21.py": "9e164d2a194afa0eb4af8cb1158fa90ab1512023b3df8db13d2113222df2586b",
+    "22-mechanism-closure/s22_audit.py": "f889e7522a552fea2f8b4b2fbd2e5362b6d1b99cb94c97e25dd342fba5e822d9",
+    "22-mechanism-closure/s22_core.py": "a8fbe78b62b48754196dad1132e1d6b440a0ba4e574990ba62676da9c69febf1",
+    "22-mechanism-closure/s22_cost.py": "69a30d5de0a73e56c5f3f09a0fcab652ec5e3d12727fe4f8b17134bab2819dd6",
+    "22-mechanism-closure/s22_data.py": "08f178ba7245a29072b1ea6f504c24df997e2b60877a50943e9bf0754f9bdcc8",
+    "22-mechanism-closure/s22_evaluate.py": "e5058977407999de9e43758da126243ffbf838a8a66676a230d0fffbdc858c7b",
+    "22-mechanism-closure/s22_execute.py": "80fc1a9a8e8697ed2f619cabe0d6b755f55ebb3f0ae2ec760ceb46aa53b40132",
+    "22-mechanism-closure/s22_models.py": "b322334b00c7f653358229ddd3537b02c681e712f8894547c933a24604e44cb0",
+    "22-mechanism-closure/s22_paper.py": "745da0f2adea4ea519a947a9136332b2d3f8d5956de600b2d3ff34f4754a4807",
+    "22-mechanism-closure/s22_register.py": "d0bfdd6ab2a3b15958ffbb0d4bd7df506432f3d825411b77935a1cb6325abd81",
+    "22-mechanism-closure/s22_report.py": "51639c7d0087801d36d71bbf405df519799eb2651995fd30d06d56b91fb3068a",
+    "22-mechanism-closure/s22_robustness.py": "1a2abae1a364defe14efd443e0040dc459008a0e939358710d33c128efe7fb76",
+    "22-mechanism-closure/s22_train.py": "d606d2f32282ba1ddbcd395283309475afdeaf6403aa6bd1e41fb572e1589568",
+    "22-mechanism-closure/test_s22.py": "bafcdebcf99fefbb4183f7a95497c92cca50f5ef8561462cb0c3ce21e2adf9ce",
+    "configs/protocol.json": "913d38626d9bcaa285b0ba7816bd8e863a91778f1fc62e4dd7d27c70415a119a",
+    "lib/legacy_rfhstu/__init__.py": "f78366d19d77282713f4944bc4e8fbdcbb138aac9849a0acf79459f4491dd9f5",
+    "lib/legacy_rfhstu/cnn_stem.py": "b3a8944c96b354d295a96d84876693e95433f67616e23d2804219d0fa1c2762a",
+    "lib/legacy_rfhstu/features.py": "1e9e5aa828adbb382c604ebf7b1bd429c79893ea1169afddaa14596a6c0d5378",
+    "lib/legacy_rfhstu/losses.py": "a0ba7f42040203289593ba6a9363f27ea19d5152d8813979a7018cc152e78e28",
+    "lib/legacy_rfhstu/mixstyle.py": "687174caeff6f256b2661399ab70aede396d5ea51af4e312dcbacc01235b94a5",
+    "lib/legacy_rfhstu/models.py": "ebb638fac3392fec36bace7e2445ab6d27ef4e3b5adb2c06b35c8bc82f506666",
+    "lib/legacy_rfhstu/multiscale.py": "de51929e7917e793e814319a88b91ef0b17354e4c7614065172e082f16833e35",
+    "lib/legacy_rfhstu/oob_fusion.py": "030f2886c9a84282eb7e20ce5d318f528e8bfc20902c4b4a17315686ea290259",
+    "lib/xa/__init__.py": "ca199705017e2d6d6b037d4d732f7caec7d7dff190c77a3d94c0cfaf515ab492",
+    "lib/xa/aggregate.py": "8995baeff876f427338836ad0b2d53de01f95e95148b851067f498d35f592e38",
+    "lib/xa/bench.py": "3a94fe229e5b43f45b15ca2f1a06e179b0212f282ea58671e71c718161d20ba7",
+    "lib/xa/data.py": "ff861d46e508d807996a924d4439134416b16ba6507856a7335c65d9e4cfc3cb",
+    "lib/xa/evaluate.py": "365998cf59196e5ebbdad3b34132fe1dfb2a4a2b988c82d660715471167734aa",
+    "lib/xa/explore_models.py": "bcc1616b5fc6ea533183b4c3a9538748a663a1b321bd748a33870b4ef8116467",
+    "lib/xa/explore_train.py": "8e4361d2b21546f5f5b5ba26adccd57618680c720db734561802b8246a33babe",
+    "lib/xa/frontends.py": "967e28c05f168341b4710e4b2253d77b93d92bc9a3dd515fdddaa35e81c2013f",
+    "lib/xa/guard.py": "80562f5a0893be3a3e91cb80ef4636a6b24eb0c76bfa59d3566574633e5fff54",
+    "lib/xa/jobs.py": "ef8ac595d7a567c18d5e726b2fe70e9942628e709bf1453dfe0df5e9d07233f0",
+    "lib/xa/launch.py": "71ca1656dcccf4d26455de6b999de42b2482f73b738a37fca52f354ccec6d4a2",
+    "lib/xa/models.py": "322049d67d19d196dca8a722fda9de433d846fe1aa3d6d8439c49adeba6554bf",
+    "lib/xa/models2.py": "e9c3364868955e6996645a823187dadb553a2a95139e809d43055a93c53eaa23",
+    "lib/xa/models3.py": "bade67f8ad50b64c132197d21a86c1897a8c27976a7b8490d2e7131ff025cbba",
+    "lib/xa/paper_models.py": "7c09adc3b481e5b13eeccb93731a00573f16a98f5d35c490a1d5082707c550bd",
+    "lib/xa/paper_run.py": "4c1bcdf2e98c974c6e03677b69881ea378dc3406c0d9f8a7bbe471290389fec6",
+    "lib/xa/paper_train.py": "e59cab54045ef6cd27a168e937e7571456ad3d2405183efc605e8308e3ed80c8",
+    "lib/xa/run_job.py": "534b8f7aa2c8c54c12eb5881850897fa2a69280cde004c84ede19532b0cb576b",
+    "lib/xa/train.py": "906a7fd0a7bbb61fea86e03bcf9b52228a5b26851e53fa904d497be330daa96e",
+    "lib/xa/wisig.py": "b4127fba87f5603704c92d2221743c8dedf6898e45c8216b9ddb84b32f42ad67"
+  },
+  "artifacts_sha256": {
+    "architecture_audit.json": "86a72560e6060a00dafc7d34f6635d61de57e83af16b91caefeeb2f9a2c9a412",
+    "parameterization_audit.json": "d0fd753c8325dc9aebb98ea5fbf2a50f324dc13dddd7d48013b7eb2efd28615f",
+    "jobs_p1.json": "eb9066b1b5877ded7478b4001e1c75e8d430ebcb5d33de5e94ec5607f066881d"
+  }
+}
