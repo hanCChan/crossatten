@@ -1,0 +1,15 @@
+{
+  "time": "2026-11-12T19:46:12+08:00",
+  "scope": "Source validation only;fixed H0/P0;zero-padded shifts;input-added AWGN nominal dB;not independent RX generalization",
+  "rows": 480,
+  "conditions": [
+    "clean",
+    "snr20",
+    "snr10",
+    "snr0",
+    "shift-4",
+    "shift-1",
+    "shift1",
+    "shift4"
+  ]
+}

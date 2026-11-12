@@ -1,6 +1,6 @@
 {
-  "time": "2026-11-12T16:13:57+08:00",
-  "status": "PREPARED",
+  "time": "2026-11-12T19:46:15+08:00",
+  "status": "COMPLETE",
   "unicode_display_checked": [
     "BLIND_QUALIFICATION.zh-CN.md",
     "MANUSCRIPT_DRAFT.zh-CN.md",
@@ -11,11 +11,17 @@
   "blind_data_opened": false,
   "files": {
     "paper/BLIND_QUALIFICATION.zh-CN.md": "aa24f17b5262a6e1ceb72b6874207735f3200d91272fb9ad04900a3984e9ebeb",
+    "paper/class_geometry.csv": "d76142b0ed73f8236a82c24748313ed3c3b76abe5974b94c13421a9f7cf364b7",
+    "paper/cost_table.csv": "4078c6ad4933ca52e2dbc93f94e144720f976b5527f5e533e5bbc8d1a6c058c1",
     "paper/historical_mixer_patch_anchors.csv": "da6fe915cea89d717d4bf3dc677bbfd08259cb96aec92e845e35be625842b7eb",
     "paper/historical_shen_external_methods.csv": "801c60a5782de7e1da205115ab8b912936cedcb40d525b994999b530796c7790",
-    "paper/MANUSCRIPT_DRAFT.zh-CN.md": "7e427f707a0aee78704b39ec1c97983d48d8bca317dec525843e040030be54e4",
+    "paper/main_ablation_table.csv": "fe62acd634a449a53378a08500f49327a8b7e85623b496d7d0f74bfeee437147",
+    "paper/MANUSCRIPT_DRAFT.zh-CN.md": "a7a69afe1ba70b6ba1629afbb3297509d18010e933fa744b158c956afee064f8",
+    "paper/mechanism_results.png": "df94d6217366c52346d0fabd929e087cce059fe2c72c97491062939dc0354737",
+    "paper/mechanism_results.svg": "0d056555c702917e9fc3e06135e703733764c438a701a92cd497176a929cf003",
     "paper/model_structure.png": "b139cbedc187a132e28674761073a7f67cd3d172aeba17e3963a8d3086d5f5e3",
-    "paper/model_structure.svg": "04bd56b59b1c8132af8310ff94f962a9bce71744f6098ba25ed4d478db2b237a",
+    "paper/model_structure.svg": "38d75bfcd4a196ee0c3943ef7eed9c530057db249ff29dde630590e96dfb1fb5",
+    "paper/paired_contrasts.csv": "68bd48fb2585fe668a3a59eab51702ffb67b912f185be2642c7aecd9d8065c8d",
     "paper/provenance_A0_cnn_confirm.json": "0ec32ba0a04b8ef5a5fc45c6253f512e5c10a018d8cef90f736a16e65f5379c4",
     "paper/provenance_A0_cnn_dev_val.json": "0ec32ba0a04b8ef5a5fc45c6253f512e5c10a018d8cef90f736a16e65f5379c4",
     "paper/provenance_A3_rfhstu_confirm.json": "5ef620532874f7ad68faf7174118b1e9827d9b52b49d3084e34031e8ba5dd093",
@@ -23,6 +29,9 @@
     "paper/provenance_E1_patch_mha_confirm.json": "afef87e7d7cd13847ab1db327bf76b43493c234333f97783f391e51bb2145675",
     "paper/provenance_E1_patch_mha_dev_val.json": "afef87e7d7cd13847ab1db327bf76b43493c234333f97783f391e51bb2145675",
     "paper/provenance_E2_patch_hstu_confirm.json": "d3dd35dd6ac93839c5aeb1de919ea21b9136418a087b03fba63e2e48bdccaadc",
-    "paper/provenance_E2_patch_hstu_dev_val.json": "d3dd35dd6ac93839c5aeb1de919ea21b9136418a087b03fba63e2e48bdccaadc"
+    "paper/provenance_E2_patch_hstu_dev_val.json": "d3dd35dd6ac93839c5aeb1de919ea21b9136418a087b03fba63e2e48bdccaadc",
+    "paper/receiver_metrics.csv": "b949cd99fa7c57896f6b858a71a853cd9545b5c7b44b3929f4487a774bac7e38",
+    "paper/robustness_source.csv": "f714ded4bb4d69411b323a83448c839664220738a36b7859c06101fc405a769b",
+    "paper/tx_rx_deltas.csv": "04b3088636b9f1d2fac6bf83efe6a657f3c03c57383ddadafd8cdf9ad91235a1"
   }
 }

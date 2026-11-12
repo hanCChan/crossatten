@@ -1,0 +1,22 @@
+{
+  "time": "2026-11-12T19:45:35+08:00",
+  "status": "COMPLETE_STOP",
+  "formal_fits": 12,
+  "reused_fits": 24,
+  "main_model": "Fixed H0 HStem+MHA 133690 parameters",
+  "signals": {
+    "H1-S1": true,
+    "S1-P0": true,
+    "H0-S2": false,
+    "S2-H2": false
+  },
+  "conditional_equivalence": {
+    "H1-S1": false,
+    "S1-P0": false,
+    "H0-S2": false,
+    "S2-H2": true
+  },
+  "no_additional_training": true,
+  "blind_evaluated": false,
+  "S1_deviation": "Full-rank round-trip smoothing, not center-crop"
+}

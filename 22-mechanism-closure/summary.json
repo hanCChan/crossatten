@@ -1,0 +1,383 @@
+{
+  "time": "2026-11-12T19:45:35+08:00",
+  "arms": [
+    {
+      "arm": "H0",
+      "role": "dev_val",
+      "acc": 97.33500000000001,
+      "macro_f1": 97.32614172784186,
+      "ce": 0.08326910397681964,
+      "margin": 6.5415980339050295,
+      "seed_sd_pp": 0.3076930288453038,
+      "worst_rx_acc": 93.66666666666667
+    },
+    {
+      "arm": "H0",
+      "role": "confirm",
+      "acc": 96.50833333333333,
+      "macro_f1": 96.46370687513034,
+      "ce": 0.11234958982424485,
+      "margin": 6.3437336683273315,
+      "seed_sd_pp": 0.13438711185724977,
+      "worst_rx_acc": 90.86666666666667
+    },
+    {
+      "arm": "P0",
+      "role": "dev_val",
+      "acc": 94.64833333333334,
+      "macro_f1": 94.62532260622748,
+      "ce": 0.15360858342256792,
+      "margin": 5.674215809504191,
+      "seed_sd_pp": 0.13650396819629323,
+      "worst_rx_acc": 90.91666666666667
+    },
+    {
+      "arm": "P0",
+      "role": "confirm",
+      "acc": 93.36666666666667,
+      "macro_f1": 93.27056020084012,
+      "ce": 0.22594152623766986,
+      "margin": 5.369057605663936,
+      "seed_sd_pp": 0.1644514239322091,
+      "worst_rx_acc": 86.11666666666667
+    },
+    {
+      "arm": "H1",
+      "role": "dev_val",
+      "acc": 96.345,
+      "macro_f1": 96.32053469882759,
+      "ce": 0.10657848848763217,
+      "margin": 5.759323787689209,
+      "seed_sd_pp": 0.39594822893908993,
+      "worst_rx_acc": 91.45
+    },
+    {
+      "arm": "H1",
+      "role": "confirm",
+      "acc": 94.94166666666668,
+      "macro_f1": 94.8585755342338,
+      "ce": 0.17753455614698513,
+      "margin": 5.469755699237187,
+      "seed_sd_pp": 0.12411142507172611,
+      "worst_rx_acc": 87.14166666666667
+    },
+    {
+      "arm": "H2",
+      "role": "dev_val",
+      "acc": 96.145,
+      "macro_f1": 96.13474690053144,
+      "ce": 0.11897426154469494,
+      "margin": 6.402781470616659,
+      "seed_sd_pp": 0.26457513110646014,
+      "worst_rx_acc": 94.09999999999998
+    },
+    {
+      "arm": "H2",
+      "role": "confirm",
+      "acc": 95.45833333333333,
+      "macro_f1": 95.3975615669295,
+      "ce": 0.16112147213209763,
+      "margin": 6.16510193546613,
+      "seed_sd_pp": 0.406314097507499,
+      "worst_rx_acc": 90.60000000000001
+    },
+    {
+      "arm": "S1",
+      "role": "dev_val",
+      "acc": 95.52666666666667,
+      "macro_f1": 95.50003974972118,
+      "ce": 0.12949735400138887,
+      "margin": 5.676012849807739,
+      "seed_sd_pp": 0.41765216787817744,
+      "worst_rx_acc": 91.08333333333333
+    },
+    {
+      "arm": "S1",
+      "role": "confirm",
+      "acc": 94.05,
+      "macro_f1": 93.95162082172591,
+      "ce": 0.20293890834638328,
+      "margin": 5.368805984656016,
+      "seed_sd_pp": 0.5512414965330503,
+      "worst_rx_acc": 86.425
+    },
+    {
+      "arm": "S2",
+      "role": "dev_val",
+      "acc": 96.41666666666666,
+      "macro_f1": 96.40169746010028,
+      "ce": 0.1162124277976806,
+      "margin": 6.481256675720215,
+      "seed_sd_pp": 0.7519530127164403,
+      "worst_rx_acc": 94.38333333333333
+    },
+    {
+      "arm": "S2",
+      "role": "confirm",
+      "acc": 95.35208333333334,
+      "macro_f1": 95.30666906539328,
+      "ce": 0.1633574234577755,
+      "margin": 6.23462254802386,
+      "seed_sd_pp": 0.343257222550873,
+      "worst_rx_acc": 89.86666666666667
+    }
+  ],
+  "contrasts": [
+    {
+      "contrast": "H1-S1",
+      "role": "dev_val",
+      "mean_delta_pp": 0.8183333333333342,
+      "positive_pairs": 6,
+      "pairs": 6,
+      "receivers": 10,
+      "worst_receiver_delta_pp": 0.04999999999999242,
+      "ci95_pp": [
+        0.5616666666666673,
+        1.0533333333333332
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction",
+      "fold_delta_pp": {
+        "0": 0.8599999999999984,
+        "1": 0.7766666666666698
+      },
+      "practical_signal": true,
+      "conditional_equivalence": false,
+      "f1": {
+        "mean_delta_pp": 0.820494949106429,
+        "positive_pairs": 6,
+        "pairs": 6,
+        "receivers": 10,
+        "worst_receiver_delta_pp": 0.08371230425977672,
+        "ci95_pp": [
+          0.5690778813687881,
+          1.0532850812159467
+        ],
+        "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+      }
+    },
+    {
+      "contrast": "H1-S1",
+      "role": "confirm",
+      "mean_delta_pp": 0.891666666666671,
+      "positive_pairs": 5,
+      "pairs": 6,
+      "receivers": 4,
+      "worst_receiver_delta_pp": 0.7166666666666733,
+      "ci95_pp": [
+        0.7666666666666717,
+        1.0166666666666706
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction",
+      "fold_delta_pp": {
+        "0": 0.7583333333333364,
+        "1": 1.0250000000000057
+      },
+      "practical_signal": true,
+      "conditional_equivalence": false,
+      "f1": {
+        "mean_delta_pp": 0.9069547125078662,
+        "positive_pairs": 5,
+        "pairs": 6,
+        "receivers": 4,
+        "worst_receiver_delta_pp": 0.7734920538335714,
+        "ci95_pp": [
+          0.7979518034684621,
+          1.01595762154727
+        ],
+        "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+      }
+    },
+    {
+      "contrast": "S1-P0",
+      "role": "dev_val",
+      "mean_delta_pp": 0.8783333333333326,
+      "positive_pairs": 5,
+      "pairs": 6,
+      "receivers": 10,
+      "worst_receiver_delta_pp": 0.1666666666666714,
+      "ci95_pp": [
+        0.5466666666666683,
+        1.2517083333333308
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction",
+      "fold_delta_pp": {
+        "0": 0.6566666666666663,
+        "1": 1.099999999999999
+      },
+      "practical_signal": true,
+      "conditional_equivalence": false,
+      "f1": {
+        "mean_delta_pp": 0.8747171434936623,
+        "positive_pairs": 5,
+        "pairs": 6,
+        "receivers": 10,
+        "worst_receiver_delta_pp": 0.1119935299557729,
+        "ci95_pp": [
+          0.5400559351630159,
+          1.247749292964445
+        ],
+        "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+      }
+    },
+    {
+      "contrast": "S1-P0",
+      "role": "confirm",
+      "mean_delta_pp": 0.6833333333333323,
+      "positive_pairs": 5,
+      "pairs": 6,
+      "receivers": 4,
+      "worst_receiver_delta_pp": 0.30833333333333,
+      "ci95_pp": [
+        0.4249999999999977,
+        0.8583333333333314
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction",
+      "fold_delta_pp": {
+        "0": 0.8249999999999993,
+        "1": 0.5416666666666655
+      },
+      "practical_signal": true,
+      "conditional_equivalence": false,
+      "f1": {
+        "mean_delta_pp": 0.681060620885812,
+        "positive_pairs": 5,
+        "pairs": 6,
+        "receivers": 4,
+        "worst_receiver_delta_pp": 0.29263590095840897,
+        "ci95_pp": [
+          0.4154438494541962,
+          0.8601709835512908
+        ],
+        "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+      }
+    },
+    {
+      "contrast": "H0-S2",
+      "role": "dev_val",
+      "mean_delta_pp": 0.9183333333333338,
+      "positive_pairs": 4,
+      "pairs": 6,
+      "receivers": 10,
+      "worst_receiver_delta_pp": -0.7166666666666733,
+      "ci95_pp": [
+        0.4916666666666657,
+        1.2950416666666686
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction",
+      "fold_delta_pp": {
+        "0": 0.5233333333333339,
+        "1": 1.3133333333333335
+      },
+      "practical_signal": false,
+      "conditional_equivalence": false,
+      "f1": {
+        "mean_delta_pp": 0.9244442677416004,
+        "positive_pairs": 4,
+        "pairs": 6,
+        "receivers": 10,
+        "worst_receiver_delta_pp": -0.6794074940766753,
+        "ci95_pp": [
+          0.5027749461226975,
+          1.300116355889427
+        ],
+        "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+      }
+    },
+    {
+      "contrast": "H0-S2",
+      "role": "confirm",
+      "mean_delta_pp": 1.1562499999999982,
+      "positive_pairs": 6,
+      "pairs": 6,
+      "receivers": 4,
+      "worst_receiver_delta_pp": 0.9999999999999977,
+      "ci95_pp": [
+        1.0083333333333317,
+        1.304166666666665
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction",
+      "fold_delta_pp": {
+        "0": 1.2041666666666622,
+        "1": 1.1083333333333343
+      },
+      "practical_signal": true,
+      "conditional_equivalence": false,
+      "f1": {
+        "mean_delta_pp": 1.157037809737054,
+        "positive_pairs": 6,
+        "pairs": 6,
+        "receivers": 4,
+        "worst_receiver_delta_pp": 0.993469127384787,
+        "ci95_pp": [
+          1.0043645132000425,
+          1.3097111062740652
+        ],
+        "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+      }
+    },
+    {
+      "contrast": "S2-H2",
+      "role": "dev_val",
+      "mean_delta_pp": 0.2716666666666688,
+      "positive_pairs": 5,
+      "pairs": 6,
+      "receivers": 10,
+      "worst_receiver_delta_pp": -0.16666666666666666,
+      "ci95_pp": [
+        0.1350000000000013,
+        0.41000000000000086
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction",
+      "fold_delta_pp": {
+        "0": 0.33000000000000207,
+        "1": 0.21333333333333543
+      },
+      "practical_signal": false,
+      "conditional_equivalence": true,
+      "f1": {
+        "mean_delta_pp": 0.26695055956880087,
+        "positive_pairs": 5,
+        "pairs": 6,
+        "receivers": 10,
+        "worst_receiver_delta_pp": -0.16697815172772815,
+        "ci95_pp": [
+          0.12974001050883938,
+          0.40773008204877476
+        ],
+        "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+      }
+    },
+    {
+      "contrast": "S2-H2",
+      "role": "confirm",
+      "mean_delta_pp": -0.10624999999999869,
+      "positive_pairs": 2,
+      "pairs": 6,
+      "receivers": 4,
+      "worst_receiver_delta_pp": -0.7333333333333343,
+      "ci95_pp": [
+        -0.5041666666666677,
+        0.29166666666667024
+      ],
+      "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction",
+      "fold_delta_pp": {
+        "0": -0.2749999999999974,
+        "1": 0.0625
+      },
+      "practical_signal": false,
+      "conditional_equivalence": false,
+      "f1": {
+        "mean_delta_pp": -0.09089250153622785,
+        "positive_pairs": 2,
+        "pairs": 6,
+        "receivers": 4,
+        "worst_receiver_delta_pp": -0.6705928740817768,
+        "ci95_pp": [
+          -0.4734075869946738,
+          0.2916225839222181
+        ],
+        "uncertainty": "RX-cluster bootstrap conditional on these fitted seeds; no multiplicity correction"
+      }
+    }
+  ]
+}
