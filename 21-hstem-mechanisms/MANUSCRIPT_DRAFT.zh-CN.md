@@ -18,4 +18,6 @@ S21的实际结果及贡献边界如下；训练完成前不预填机制结论�
 
 <!-- S21_RESULTS -->
 
-待本轮12次拟合与严格配对恢复全部通过后填写。
+S21 完成12次新增拟合。H0/P0/H1/H2 的 RX 等权开发准确率分别为 97.335% / 94.648% / 96.345% / 96.145%。H1−P0 为 +1.697 pp；H2−H0 为 -1.190 pp。
+
+Overlap-Patch recovered at least half the gap in both fold directions; filter/support confounds remain. Removing tokenizer BN caused consistent material degradation; normalization/affine/optimization effects remain inseparable.

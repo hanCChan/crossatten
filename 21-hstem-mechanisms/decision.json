@@ -1,0 +1,12 @@
+{
+  "time": "2026-11-12T15:37:17+08:00",
+  "status": "COMPLETE_STOP",
+  "formal_fits": 12,
+  "reused_baselines": 12,
+  "recovery_ratio": 0.6315136476426766,
+  "overlap_followup_signal": true,
+  "bn_importance_signal": true,
+  "conclusion": "Overlap-Patch recovered at least half the gap in both fold directions; filter/support confounds remain. Removing tokenizer BN caused consistent material degradation; normalization/affine/optimization effects remain inseparable.",
+  "H3_executed": false,
+  "additional_search_authorized": false
+}

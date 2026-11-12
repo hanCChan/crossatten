@@ -1,0 +1,26 @@
+{
+  "time": "2026-11-12T15:28:00+08:00",
+  "action": "Create missing baseline diagnostic output directories; rerun frozen evaluation only",
+  "created": [
+    "reused__H0__f0__s201",
+    "reused__H0__f0__s202",
+    "reused__H0__f0__s203",
+    "reused__H0__f1__s201",
+    "reused__H0__f1__s202",
+    "reused__H0__f1__s203",
+    "reused__P0__f0__s201",
+    "reused__P0__f0__s202",
+    "reused__P0__f0__s203",
+    "reused__P0__f1__s201",
+    "reused__P0__f1__s202",
+    "reused__P0__f1__s203"
+  ],
+  "training_code_changed": false,
+  "evaluation_code_changed": false,
+  "new_fit_retries": 0,
+  "formal_fits": 12,
+  "all_sealed_model_sha256_verified": true,
+  "checkpoint_seal_sha256": "0618606d5de103da62ced595d5b78045094da9c0c14d7204616afefa7397a5f2",
+  "original_failure_preserved": "EVALUATION_DIRECTORY_FAILURE.json",
+  "model_selection_or_threshold_changes": false
+}

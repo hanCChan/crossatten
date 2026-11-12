@@ -1,0 +1,5 @@
+{
+  "time": "2026-11-12T15:14:57+08:00",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\s21_execute.py\", line 53, in <module>\n    try:run()\n        ^^^^^\n  File \"D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\s21_execute.py\", line 43, in run\n    child('s21_evaluate.py','--arm',arm,'--fold',str(fold),'--seed',str(seed),log=HERE/'evaluation.log')\n  File \"D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\s21_execute.py\", line 14, in child\n    subprocess.run([sys.executable,'-X','utf8','-u',str(HERE/script),*args],cwd=ROOT,env=env,stdout=f,stderr=subprocess.STDOUT,check=True)\n  File \"D:\\python\\Lib\\subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['D:\\\\crossatten\\\\.venv\\\\Scripts\\\\python.exe', '-X', 'utf8', '-u', 'D:\\\\crossatten\\\\worktrees\\\\s21-hstem-mechanisms\\\\21-hstem-mechanisms\\\\s21_evaluate.py', '--arm', 'H0', '--fold', '0', '--seed', '201']' returned non-zero exit status 1.\n",
+  "automatic_retry": false
+}
