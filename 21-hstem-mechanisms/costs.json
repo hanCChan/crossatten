@@ -1,0 +1,272 @@
+{
+  "time": "2026-11-12T11:59:31+08:00",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "torch": "2.5.0+cu124",
+  "scope": "Resident FP32 IQ to logits;3 repeats;20warmup/100timings; FMA2; FFT/interpolation/elementwise incomplete; latency includes actual interpolation",
+  "rows": [
+    {
+      "arm": "H0",
+      "repeat": 0,
+      "batch": 1,
+      "params": 133690,
+      "counted_macs": 95027840.0,
+      "counted_mflops": 190.05568,
+      "p50_ms": 2.1934399604797363,
+      "p95_ms": 2.4572287082672117,
+      "packets_per_second": 442.79267393500106
+    },
+    {
+      "arm": "H0",
+      "repeat": 1,
+      "batch": 1,
+      "params": 133690,
+      "counted_macs": 95027840.0,
+      "counted_mflops": 190.05568,
+      "p50_ms": 2.005504012107849,
+      "p95_ms": 2.226255929470062,
+      "packets_per_second": 492.0585687711961
+    },
+    {
+      "arm": "H0",
+      "repeat": 2,
+      "batch": 1,
+      "params": 133690,
+      "counted_macs": 95027840.0,
+      "counted_mflops": 190.05568,
+      "p50_ms": 2.0117599964141846,
+      "p95_ms": 2.955532908439635,
+      "packets_per_second": 467.0933117459358
+    },
+    {
+      "arm": "H0",
+      "repeat": 0,
+      "batch": 128,
+      "params": 133690,
+      "counted_macs": 95027840.0,
+      "counted_mflops": 190.05568,
+      "p50_ms": 15.909311771392822,
+      "p95_ms": 16.823506450653078,
+      "packets_per_second": 7976.924832273074
+    },
+    {
+      "arm": "H0",
+      "repeat": 1,
+      "batch": 128,
+      "params": 133690,
+      "counted_macs": 95027840.0,
+      "counted_mflops": 190.05568,
+      "p50_ms": 16.39822483062744,
+      "p95_ms": 17.628489398956297,
+      "packets_per_second": 7788.196274284564
+    },
+    {
+      "arm": "H0",
+      "repeat": 2,
+      "batch": 128,
+      "params": 133690,
+      "counted_macs": 95027840.0,
+      "counted_mflops": 190.05568,
+      "p50_ms": 16.674816131591797,
+      "p95_ms": 17.264999198913575,
+      "packets_per_second": 7662.933582524444
+    },
+    {
+      "arm": "P0",
+      "repeat": 0,
+      "batch": 1,
+      "params": 134266,
+      "counted_macs": 55345792.0,
+      "counted_mflops": 110.691584,
+      "p50_ms": 1.9419360160827637,
+      "p95_ms": 2.1330911755561828,
+      "packets_per_second": 512.706591608643
+    },
+    {
+      "arm": "P0",
+      "repeat": 1,
+      "batch": 1,
+      "params": 134266,
+      "counted_macs": 55345792.0,
+      "counted_mflops": 110.691584,
+      "p50_ms": 1.838752031326294,
+      "p95_ms": 2.2053872704505917,
+      "packets_per_second": 515.9859026014791
+    },
+    {
+      "arm": "P0",
+      "repeat": 2,
+      "batch": 1,
+      "params": 134266,
+      "counted_macs": 55345792.0,
+      "counted_mflops": 110.691584,
+      "p50_ms": 1.8409280180931091,
+      "p95_ms": 1.967630350589752,
+      "packets_per_second": 528.7467328319483
+    },
+    {
+      "arm": "P0",
+      "repeat": 0,
+      "batch": 128,
+      "params": 134266,
+      "counted_macs": 55345792.0,
+      "counted_mflops": 110.691584,
+      "p50_ms": 13.149696350097656,
+      "p95_ms": 13.959257793426513,
+      "packets_per_second": 9666.50413216089
+    },
+    {
+      "arm": "P0",
+      "repeat": 1,
+      "batch": 128,
+      "params": 134266,
+      "counted_macs": 55345792.0,
+      "counted_mflops": 110.691584,
+      "p50_ms": 13.239807605743408,
+      "p95_ms": 14.010430812835693,
+      "packets_per_second": 9602.470467435556
+    },
+    {
+      "arm": "P0",
+      "repeat": 2,
+      "batch": 128,
+      "params": 134266,
+      "counted_macs": 55345792.0,
+      "counted_mflops": 110.691584,
+      "p50_ms": 13.294079780578613,
+      "p95_ms": 13.957887935638428,
+      "packets_per_second": 9608.719737037176
+    },
+    {
+      "arm": "H1",
+      "repeat": 0,
+      "batch": 1,
+      "params": 134266,
+      "counted_macs": 56205952.0,
+      "counted_mflops": 112.411904,
+      "p50_ms": 1.9290879964828491,
+      "p95_ms": 3.6959807395935056,
+      "packets_per_second": 447.92707839980574
+    },
+    {
+      "arm": "H1",
+      "repeat": 1,
+      "batch": 1,
+      "params": 134266,
+      "counted_macs": 56205952.0,
+      "counted_mflops": 112.411904,
+      "p50_ms": 1.9682400226593018,
+      "p95_ms": 3.5967487692832947,
+      "packets_per_second": 440.3090306346535
+    },
+    {
+      "arm": "H1",
+      "repeat": 2,
+      "batch": 1,
+      "params": 134266,
+      "counted_macs": 56205952.0,
+      "counted_mflops": 112.411904,
+      "p50_ms": 2.0379838943481445,
+      "p95_ms": 3.8060606956481933,
+      "packets_per_second": 406.61836895649014
+    },
+    {
+      "arm": "H1",
+      "repeat": 0,
+      "batch": 128,
+      "params": 134266,
+      "counted_macs": 56205952.0,
+      "counted_mflops": 112.411904,
+      "p50_ms": 19.02478313446045,
+      "p95_ms": 19.78516502380371,
+      "packets_per_second": 6677.463664410671
+    },
+    {
+      "arm": "H1",
+      "repeat": 1,
+      "batch": 128,
+      "params": 134266,
+      "counted_macs": 56205952.0,
+      "counted_mflops": 112.411904,
+      "p50_ms": 19.230607986450195,
+      "p95_ms": 19.989606285095213,
+      "packets_per_second": 6618.6272369829785
+    },
+    {
+      "arm": "H1",
+      "repeat": 2,
+      "batch": 128,
+      "params": 134266,
+      "counted_macs": 56205952.0,
+      "counted_mflops": 112.411904,
+      "p50_ms": 19.379552841186523,
+      "p95_ms": 19.920691204071044,
+      "packets_per_second": 6608.595401467484
+    },
+    {
+      "arm": "H2",
+      "repeat": 0,
+      "batch": 1,
+      "params": 133338,
+      "counted_macs": 95027840.0,
+      "counted_mflops": 190.05568,
+      "p50_ms": 2.049168109893799,
+      "p95_ms": 3.827294337749481,
+      "packets_per_second": 420.9993663349784
+    },
+    {
+      "arm": "H2",
+      "repeat": 1,
+      "batch": 1,
+      "params": 133338,
+      "counted_macs": 95027840.0,
+      "counted_mflops": 190.05568,
+      "p50_ms": 2.009424090385437,
+      "p95_ms": 3.646166396141052,
+      "packets_per_second": 449.5879540727954
+    },
+    {
+      "arm": "H2",
+      "repeat": 2,
+      "batch": 1,
+      "params": 133338,
+      "counted_macs": 95027840.0,
+      "counted_mflops": 190.05568,
+      "p50_ms": 2.0603679418563843,
+      "p95_ms": 3.78286075592041,
+      "packets_per_second": 428.0864151929786
+    },
+    {
+      "arm": "H2",
+      "repeat": 0,
+      "batch": 128,
+      "params": 133338,
+      "counted_macs": 95027840.0,
+      "counted_mflops": 190.05568,
+      "p50_ms": 15.273887634277344,
+      "p95_ms": 15.971698904037476,
+      "packets_per_second": 8336.21959585481
+    },
+    {
+      "arm": "H2",
+      "repeat": 1,
+      "batch": 128,
+      "params": 133338,
+      "counted_macs": 95027840.0,
+      "counted_mflops": 190.05568,
+      "p50_ms": 15.305216312408447,
+      "p95_ms": 15.942297410964965,
+      "packets_per_second": 8317.27786064818
+    },
+    {
+      "arm": "H2",
+      "repeat": 2,
+      "batch": 128,
+      "params": 133338,
+      "counted_macs": 95027840.0,
+      "counted_mflops": 190.05568,
+      "p50_ms": 15.294928073883057,
+      "p95_ms": 15.678515577316285,
+      "packets_per_second": 8342.022221948431
+    }
+  ]
+}

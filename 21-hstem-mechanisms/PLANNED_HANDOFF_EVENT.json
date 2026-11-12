@@ -1,0 +1,5 @@
+{
+  "time": "2026-11-12T12:17:29+08:00",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\s21_execute.py\", line 53, in <module>\n    try:run()\n        ^^^^^\n  File \"D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\s21_execute.py\", line 24, in run\n    if (HERE/'STOP_REQUESTED').exists():raise RuntimeError('User stop at fit boundary')\n                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: User stop at fit boundary\n",
+  "automatic_retry": false
+}
