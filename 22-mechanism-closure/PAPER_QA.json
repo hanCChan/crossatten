@@ -1,5 +1,5 @@
 {
-  "time": "2026-11-12T19:46:15+08:00",
+  "time": "2026-11-12T19:51:32+08:00",
   "status": "COMPLETE",
   "unicode_display_checked": [
     "BLIND_QUALIFICATION.zh-CN.md",
@@ -13,10 +13,11 @@
     "paper/BLIND_QUALIFICATION.zh-CN.md": "aa24f17b5262a6e1ceb72b6874207735f3200d91272fb9ad04900a3984e9ebeb",
     "paper/class_geometry.csv": "d76142b0ed73f8236a82c24748313ed3c3b76abe5974b94c13421a9f7cf364b7",
     "paper/cost_table.csv": "4078c6ad4933ca52e2dbc93f94e144720f976b5527f5e533e5bbc8d1a6c058c1",
+    "paper/DISCUSSION.zh-CN.md": "90c4f193a87fc2900b8974b01523fb66b114ca82546e424fb2ab32fb5e881fa1",
     "paper/historical_mixer_patch_anchors.csv": "da6fe915cea89d717d4bf3dc677bbfd08259cb96aec92e845e35be625842b7eb",
     "paper/historical_shen_external_methods.csv": "801c60a5782de7e1da205115ab8b912936cedcb40d525b994999b530796c7790",
     "paper/main_ablation_table.csv": "fe62acd634a449a53378a08500f49327a8b7e85623b496d7d0f74bfeee437147",
-    "paper/MANUSCRIPT_DRAFT.zh-CN.md": "a7a69afe1ba70b6ba1629afbb3297509d18010e933fa744b158c956afee064f8",
+    "paper/MANUSCRIPT_DRAFT.zh-CN.md": "d4d73361e8312671f24904a4287122a8e0b1da8e722e11ed290d697358b3bae4",
     "paper/mechanism_results.png": "df94d6217366c52346d0fabd929e087cce059fe2c72c97491062939dc0354737",
     "paper/mechanism_results.svg": "0d056555c702917e9fc3e06135e703733764c438a701a92cd497176a929cf003",
     "paper/model_structure.png": "b139cbedc187a132e28674761073a7f67cd3d172aeba17e3963a8d3086d5f5e3",
@@ -33,5 +34,12 @@
     "paper/receiver_metrics.csv": "b949cd99fa7c57896f6b858a71a853cd9545b5c7b44b3929f4487a774bac7e38",
     "paper/robustness_source.csv": "f714ded4bb4d69411b323a83448c839664220738a36b7859c06101fc405a769b",
     "paper/tx_rx_deltas.csv": "04b3088636b9f1d2fac6bf83efe6a657f3c03c57383ddadafd8cdf9ad91235a1"
+  },
+  "editorial_review": {
+    "time": "2026-11-12T19:51:33+08:00",
+    "scope": "Human-reviewed scientific interpretation and source-stress limitations; no data/model/gate changes",
+    "figure_visually_reviewed": "paper/mechanism_results.png",
+    "manuscript_before_sha256": "a7a69afe1ba70b6ba1629afbb3297509d18010e933fa744b158c956afee064f8",
+    "discussion_sha256": "90c4f193a87fc2900b8974b01523fb66b114ca82546e424fb2ab32fb5e881fa1"
   }
 }
