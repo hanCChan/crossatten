@@ -1,0 +1,519 @@
+{
+  "stage": "S23",
+  "time": "2026-11-12T22:17:08+08:00",
+  "base_git": "f856725147ce8e9f733ca0c761c878588e0a1148",
+  "maximum_new_fits": 0,
+  "maximum_new_architecture_candidates": 0,
+  "references": {
+    "H0_f0_s201": {
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s201",
+      "sha256": {
+        "model.pt": "be14533e73c5b83c3534e09a5837dc013f5e5b001b95396984c8f6d4e8ec6833",
+        "config.json": "6a1c50c769db70664cc71215841a206d675b28dc1df49f4a3690be26285b0955",
+        "metrics.json": "ec24bfc09e8eb22eace0e3fbcc6a7965586bdfcaf6a5281a24a6e631d53649cc",
+        "history.csv": "ebc36cb7967194cb424d4255a5f34d714f6b6049f7930e992415f66a0b0422ae"
+      }
+    },
+    "H0_f0_s202": {
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s202",
+      "sha256": {
+        "model.pt": "abf47db65b28d02f51bde927ba9a0a5473f445df4cbb53a5f0f26938af7334ca",
+        "config.json": "9f3e573b8ab50e238d6c4fac55d23138720ebcf7db733a74873c280faa8b3dc5",
+        "metrics.json": "4226548e1f6e42df614c2c01ebb4efec33066fe39b078916adb9131b647ef5d2",
+        "history.csv": "c4201741eeea5c8141498ce27159222bddf09eaf68b0f6c77a9279fc71034280"
+      }
+    },
+    "H0_f0_s203": {
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s203",
+      "sha256": {
+        "model.pt": "8abe846f047a4b215aeb1f5c57baad2e25b21614cb329b27e12f1a4e9e11e7cb",
+        "config.json": "c1745e1fe10ee5603e0e4ca054700e0369e6c6d1862c8023f1b4327cd442524a",
+        "metrics.json": "9f0cf4a6891c1dbd244596c5003a77e9dd56edd99720761a0fa96b22c830ac73",
+        "history.csv": "cf2937730ae72e32d769e5030faa352f0c1d23fee1b0cb04446fd644aec679b7"
+      }
+    },
+    "H0_f1_s201": {
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s201",
+      "sha256": {
+        "model.pt": "0996333761c13f30703acb0e3051ff676ea1f5dfa6fb1f0b04b4ccc3a7a48119",
+        "config.json": "b591db1b8c418c7f66a9da39a7064b57c33bc7cd9dd3f0f0d263a4f8cc35071a",
+        "metrics.json": "72a345d4293e175e9636ebc49950672e60766f072577164eb902874b1cfbe4e7",
+        "history.csv": "0f61ce80888ec74e2801f900c57f49011e0b93f817728ba862ab0a5963ffca5d"
+      }
+    },
+    "H0_f1_s202": {
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s202",
+      "sha256": {
+        "model.pt": "75b252c7984d013eba842b0691b44a7f3af96bbb830aba3617823d4f0c4048c9",
+        "config.json": "551d33ff33cd94d7191a736d6ed2247b21436d3adba7536952bdc5a46791356b",
+        "metrics.json": "52f695aea5c3f40ceec0a937ed00dc7fd11558a5bebb5deb6d026db10202361f",
+        "history.csv": "6224f29970e27bcb24402810e50f3b8e96e5ffae85961477ad213ceb1d7cf8d2"
+      }
+    },
+    "H0_f1_s203": {
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s203",
+      "sha256": {
+        "model.pt": "fec5bfade4d1d90faf89dc6f5b42dec243e3a7e3f2cb06b15cd255bd79f17314",
+        "config.json": "3ec97b0e80816abbe7963fcb0494ba5a18cd54c01a8db7899c8c3a3fd7fe4895",
+        "metrics.json": "9e030a37ad1e89541fbf32465d48b7d3a93c0c3d7d5e763b386b986af1fb1e2a",
+        "history.csv": "07459679c9c8d2b7dd3ccf0a4af9ce8051dc52d23aee61be7415c11b6ffaf3b6"
+      }
+    },
+    "P0_f0_s201": {
+      "path": "D:\\crossatten\\worktrees\\s15-hstem-attribution\\15-hstem-attribution\\runs\\p1__Shen__C2_lite_mha__f0__all__s201",
+      "sha256": {
+        "model.pt": "855613f64f3f8b7de8ab1a6521c209f6cc406386362c297168dfadcc120da6bb",
+        "config.json": "b5d388d23a551c3eaeec235d41256bea7181f4e8172dd8f46ecd7cdbb5031f41",
+        "metrics.json": "cd037c375468ee1608c7974a9d44c860bac8d32a7071c139d2956b20627ddb78",
+        "history.csv": "5462be2e3eeff2ee8ced553c398ee9d97568a2b45f70cadeb9b89337a601da9e"
+      }
+    },
+    "P0_f0_s202": {
+      "path": "D:\\crossatten\\worktrees\\s15-hstem-attribution\\15-hstem-attribution\\runs\\p1__Shen__C2_lite_mha__f0__all__s202",
+      "sha256": {
+        "model.pt": "65b0840e3020bdd7c8c005603e580e4fdbfbcedb510612a4201cb3b1b807d944",
+        "config.json": "6db43ebff4ba99f0114402e2033242b9902a0017c45ce1eeff13672dc2c8c051",
+        "metrics.json": "9b24434e5045ac494f9c0e9c96aa9ba05dad4b149b2705f13b4eff13efa018c9",
+        "history.csv": "7c24a9a9d9f892fac9487b3279ef461fa9308f0b591b9d4da26bb1ff1dbf4922"
+      }
+    },
+    "P0_f0_s203": {
+      "path": "D:\\crossatten\\worktrees\\s15-hstem-attribution\\15-hstem-attribution\\runs\\p1__Shen__C2_lite_mha__f0__all__s203",
+      "sha256": {
+        "model.pt": "2e84d128b9b6381296249ce20194da743bdd848aced13ba5216621f2f72c2467",
+        "config.json": "05efab3b10272ea0fc9cde55465ecbde6d91932f9a8b5b21f649b038ce31cda3",
+        "metrics.json": "5cd912ec5c45c94ac2374eaca41b2fc59e0ac0a6de9691aebede1e8f69a79a51",
+        "history.csv": "db3de60ca460cfc468ed3f7431d33afa8a8a8d13fe9ff196902f2595b6159a06"
+      }
+    },
+    "P0_f1_s201": {
+      "path": "D:\\crossatten\\worktrees\\s15-hstem-attribution\\15-hstem-attribution\\runs\\p1__Shen__C2_lite_mha__f1__all__s201",
+      "sha256": {
+        "model.pt": "3454f0e2e0e21a4099abbe17b2af37311b9178f2611c6cf8609abf82d617f57f",
+        "config.json": "7c2959fe54f92a0b40216b1e08e36f4ca8cee5d7e9e77665a535e5b3f650e0e0",
+        "metrics.json": "95e8e67bbfa5b9f2ac8334fdb6ec54d80496fabe31bc593614f03f76b71c8a0b",
+        "history.csv": "da247c401b95abc92380c585c7015b248473ce9ed2346dc785ef672f990d7e8e"
+      }
+    },
+    "P0_f1_s202": {
+      "path": "D:\\crossatten\\worktrees\\s15-hstem-attribution\\15-hstem-attribution\\runs\\p1__Shen__C2_lite_mha__f1__all__s202",
+      "sha256": {
+        "model.pt": "eeaa364efe07b3a1621b8813d0f42709cbac7d28a84858c4bafc51b87221a617",
+        "config.json": "1e33bd943909936c454e3f25eee18621f42d259498e5ffedc83d5eb029ef0e3d",
+        "metrics.json": "d6a8c95bb6cfe7123fd2b94ce4e017a484e3d7dcff938c2dd0a5fa9c8e659a36",
+        "history.csv": "be3f72e16da3cb4faaad0a2d17ecd24cb3989e42d23a492970db36dc35694b9b"
+      }
+    },
+    "P0_f1_s203": {
+      "path": "D:\\crossatten\\worktrees\\s15-hstem-attribution\\15-hstem-attribution\\runs\\p1__Shen__C2_lite_mha__f1__all__s203",
+      "sha256": {
+        "model.pt": "452159cedef2ae6383ab99295b880130b049c0a423ae30c7d539f0ca9ff8ccda",
+        "config.json": "0dddbdb97b5f0b4f2f9d9d776d24f2d5d25c03429af19ed474b870f6aa52cc2c",
+        "metrics.json": "bcbbd57639afa44dc1313016d3801432687b1797275c0142a7351c979c1a0e5c",
+        "history.csv": "f73ab4eca862e40632fa1c4a2409ee87ab7ebb11a0f99030a6ae500bc96dc7df"
+      }
+    },
+    "H1_f0_s201": {
+      "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H1__f0__all__s201",
+      "sha256": {
+        "model.pt": "b08ba03cd023bf0e9cc34dfe73d0f7614817b58f743a97716ef5520635253f9a",
+        "config.json": "e281d46cdbe66a3607c909954b4ed51a57881a8a0ac2e7da61b38dfc9858a788",
+        "metrics.json": "42a96aae75550ca078beca6c5cf345b6eb50da022565ce709f1119505d8f4547",
+        "history.csv": "e6b55c935023418beeff2b5fc6e87ad70df4ac17db31f5795981ee02090b4c26"
+      }
+    },
+    "H1_f0_s202": {
+      "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H1__f0__all__s202",
+      "sha256": {
+        "model.pt": "1902746e85fe655598ef2500ce6d92a067c12fe266a7b0d9da5dbf9cb9cfada4",
+        "config.json": "d0a7179ef3866deb2e0a43f07af3868812425e382eedd2fb8ff8cfff497c90e9",
+        "metrics.json": "c55dc29e6a84f41ea2ebb7b773a30c90d206dfcf43a8adadc6707770585d0039",
+        "history.csv": "5711c30279bb574d339414354e8b0adf2c89ce753621b7b92389cadad78f0f82"
+      }
+    },
+    "H1_f0_s203": {
+      "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H1__f0__all__s203",
+      "sha256": {
+        "model.pt": "20747ad6d7dc81d6d02be1667edd53846669c6f9c70b57143bc405b0ed642ee1",
+        "config.json": "98aeb16f2e0b36badf88c99cb5c46a3fd3a4a27a3c9de5defb7ee792863e84a3",
+        "metrics.json": "3789712d39ef8d361e7a6bc42167c7c0d507bac46bf1d907d75880b9f60e2d5d",
+        "history.csv": "5aab133f77d38dc90ea4a50db3b09773c974cc4f34344be3137ad0525cc79708"
+      }
+    },
+    "H1_f1_s201": {
+      "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H1__f1__all__s201",
+      "sha256": {
+        "model.pt": "4e5d1c08764fffc0e3228808f56cf0641ed0e9350f0901ecf197ab49d3e6ff12",
+        "config.json": "51d7e22964914b7c624f1ac9055eb50ad4375cb0545c85ec14a4bcc211c268fe",
+        "metrics.json": "7c6a015f0f520d9689c3a79931d0ca3a1dd82bd90ed496f94038786d29e83366",
+        "history.csv": "cf6c20ab12b8af0fb395f492500f833e611b9cada9bc796807fe78fd0d090fa1"
+      }
+    },
+    "H1_f1_s202": {
+      "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H1__f1__all__s202",
+      "sha256": {
+        "model.pt": "130687b5831a951127c13480e9045eae81cf847d545ea5896dd51949e10e36db",
+        "config.json": "74890d574e04bf727b5fc93858f3922731ede780c4dc94415bbce114b48fdaea",
+        "metrics.json": "acf3f421658f3102538c311adae63beb224dbf76e244240b1ef19af219e0ef76",
+        "history.csv": "3605c1dc0178d2afddcb28019fdadbaab563a0b6365448607058392993d17eb9"
+      }
+    },
+    "H1_f1_s203": {
+      "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H1__f1__all__s203",
+      "sha256": {
+        "model.pt": "1c2cd9539e55928de91f831e47d864b5897bb193a5f62c08130ae6bd91cde247",
+        "config.json": "c3a9251187d5d701a883da253d7f17d7364b274a92b6a26460008385d40623aa",
+        "metrics.json": "89e34dde443d32a638ad6d909be79517e196409f083e9021d93a58c65ca2b668",
+        "history.csv": "a269dfa29efa00d78be00ddd3e61c3d9a863cc71951ce297d737473f15eb1abf"
+      }
+    },
+    "H2_f0_s201": {
+      "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f0__all__s201",
+      "sha256": {
+        "model.pt": "8ce8292c77f44d2d0719ecb2080fba68c1e346504779b2e4dff242f701343400",
+        "config.json": "a347395e354718210658d95c23e9f656a2628cd792915c0dc292b7e6403a8c82",
+        "metrics.json": "6c3121dc525eea8da74f33157723c416d7293903b91f7c251da67eab1bec78c9",
+        "history.csv": "650dbed00d81aad11784f96e154d9b660466841e8bf51bc15089f00d070208ee"
+      }
+    },
+    "H2_f0_s202": {
+      "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f0__all__s202",
+      "sha256": {
+        "model.pt": "e3ef079c906abc43a7bb8519d94f1c92a035cc6d43bfc72f025cc0073a544612",
+        "config.json": "9aa89e41ad9958c3c22328796913106207ff166a854eed67066f82d8f1acc843",
+        "metrics.json": "ddaaafdc9318e028399ef22e6d5d11a185d7c65f84d24a94f1db9c4e071fa719",
+        "history.csv": "f43eb91cbf638a6b6c3c1bee14ae5b2506f629b4fea7aa8e51bd89664f827371"
+      }
+    },
+    "H2_f0_s203": {
+      "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f0__all__s203",
+      "sha256": {
+        "model.pt": "ff90e8a7e3719493ac1df85c29532362808eaa9ccee4304aaba69694d473f31e",
+        "config.json": "68ef78fcefc1c552ed75fce77aeae8caf3b465a78987fc3b5c6a3dfaa4d57eb7",
+        "metrics.json": "d0f6d67c3507193d476f18a8ec3b9dea018e30d991b853d405f7fc52b62fe35c",
+        "history.csv": "351fa97cf71d786bcc30a4f37edd1c4c2c994bbb0e6d6b17e585680dcd21e8e5"
+      }
+    },
+    "H2_f1_s201": {
+      "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f1__all__s201",
+      "sha256": {
+        "model.pt": "73c078f29d988155078044070b858203d3b94d4c2c0e186749661f35e6c2fb34",
+        "config.json": "66258ac401a46adeb1588a7c55266bc90ec201f1272db9c53837133d2310f037",
+        "metrics.json": "3ab764b1304ee889963f03cf90b6bda3adb2ffb1c0c8df9c50b22d48d23d8f6c",
+        "history.csv": "9435394f55cd883db37388e7b6e68cca03d73e538682cfb0af59fdb98db6ce4d"
+      }
+    },
+    "H2_f1_s202": {
+      "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f1__all__s202",
+      "sha256": {
+        "model.pt": "7bd7c4ba77e1a5b59498209423e01e71500accbc2680ebd47a335ca9cf99ffee",
+        "config.json": "c320d8b82dc2855a9ee208e87cd355e0d2d6014e557a33f0649af08e9d83ecf4",
+        "metrics.json": "46595ea2bb6012806174e900c73ccb1c041105159a1413d9ae45566e9b5f6cbd",
+        "history.csv": "7fa954876f8d0ed2da4644be260d1b2f19e20e7e7d9691d654189a9dd2b02e1d"
+      }
+    },
+    "H2_f1_s203": {
+      "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f1__all__s203",
+      "sha256": {
+        "model.pt": "9af87036916d441f1ca0ff5647d0c88d39925a256abeca2a6673a6f575e37fce",
+        "config.json": "365a4875c5b9d551254c94eaf09de0d69d2659cbd6b1834b231908b33a245d01",
+        "metrics.json": "ad7412e59eb8b8a2b445fe6daea057f025438d17c1b42a2e933e6465001fa073",
+        "history.csv": "4fe8ac49cdeba4edfe54fb3b11710cdf34502fb4323ca7a4648f1348c3b85b1f"
+      }
+    },
+    "S1_f0_s201": {
+      "path": "D:\\crossatten\\worktrees\\s22-mechanism-closure\\22-mechanism-closure\\runs\\p1__Shen__S1__f0__all__s201",
+      "sha256": {
+        "model.pt": "dda89868c693eae8cab1dd73e34099a8d3a6e4d8b744a3e1080eaf29c7ab448a",
+        "config.json": "4b91b80c5ddc15917a1e9ec2b457c4730c85738fdb9e9e64dbc505a833934f46",
+        "metrics.json": "09769f4fcd48a704c888401fb461c4b20b705465aba2018029e562e6f31d449e",
+        "history.csv": "5c10ffa170a36edb372517571c78b583891db458b4cca7e5bdd9691d9680ed17"
+      }
+    },
+    "S1_f0_s202": {
+      "path": "D:\\crossatten\\worktrees\\s22-mechanism-closure\\22-mechanism-closure\\runs\\p1__Shen__S1__f0__all__s202",
+      "sha256": {
+        "model.pt": "7d032a125b4008457ad6f4230c0adf04185da30d00bc8eededcb99fdeca44032",
+        "config.json": "7b42d389f9355fa1f63cc139f549fcb0a7a9a40c1b3a3f4582b3aa63b2a02fcd",
+        "metrics.json": "c6117f6814f3de8b46d310c89579720e48618a62afbc82cec32f45fb35a582cd",
+        "history.csv": "531a7e305a25287883164cec3956d09422ca4701dd772332fb479d863e649a94"
+      }
+    },
+    "S1_f0_s203": {
+      "path": "D:\\crossatten\\worktrees\\s22-mechanism-closure\\22-mechanism-closure\\runs\\p1__Shen__S1__f0__all__s203",
+      "sha256": {
+        "model.pt": "a801af05b45f444f12dc041669bd302165b61f73eb55cd8411eebf282e7cb1d6",
+        "config.json": "b16852c1ac003c3b179d95604391f20e2c9df7d134287c41fe3b1c54d237440e",
+        "metrics.json": "a8ce6309dc8e81efe5c7176bf92f6849db30f4e4905ed4586df6df6cb81c538f",
+        "history.csv": "8bf2bc52fa773301a7ad5d4299e4daa30783ca26b000d9282aadd1043752d60c"
+      }
+    },
+    "S1_f1_s201": {
+      "path": "D:\\crossatten\\worktrees\\s22-mechanism-closure\\22-mechanism-closure\\runs\\p1__Shen__S1__f1__all__s201",
+      "sha256": {
+        "model.pt": "90c4f22e2684d4e0715a988e0d01788191249ecc05a1b1df1fbb417c54f94e51",
+        "config.json": "8d617ae1fff32f7bbcb1936267193f8e9671374918092ec1d7e8c8ddc5982304",
+        "metrics.json": "5b2590d6a6f6febd475f8315eba4967909967fd20f709a7c72a0f5baea6e9078",
+        "history.csv": "918bd7a171e49fb8de1bd300f51694676a10c2b7a82e74ae9e7792a56104e51c"
+      }
+    },
+    "S1_f1_s202": {
+      "path": "D:\\crossatten\\worktrees\\s22-mechanism-closure\\22-mechanism-closure\\runs\\p1__Shen__S1__f1__all__s202",
+      "sha256": {
+        "model.pt": "9022574ee687622426aec8952776bf7afc3784c83b565d6d60691cf99375545e",
+        "config.json": "063d05f5b59aaf5dcd3478cd175ead62d87a3fbe01eff09f8fdcc1b87134724e",
+        "metrics.json": "44f5b6f04df71a49d3d24bb5530f2b17cef2ae99beaa8514db0d86d26873f212",
+        "history.csv": "7af6ac139bb06d7e671f493b45913aa252fdb81e591d772bd39d386b4bda6fc8"
+      }
+    },
+    "S1_f1_s203": {
+      "path": "D:\\crossatten\\worktrees\\s22-mechanism-closure\\22-mechanism-closure\\runs\\p1__Shen__S1__f1__all__s203",
+      "sha256": {
+        "model.pt": "2cd0b3cd3984ad56c61e661e4cd2a05027319fe368c69df2e57eaada9e6e31e2",
+        "config.json": "b77691e7f4470746458a58845198842fb9af83e896f742604a51fd521d460234",
+        "metrics.json": "f42658b5f074e9ee61363df119a2672a9eb264d3b73b9f919f0300cc52386014",
+        "history.csv": "2afc2125f70b5e62c88298d0a05c6771c953dab5fec30b5ed2041b7956770bf8"
+      }
+    },
+    "S2_f0_s201": {
+      "path": "D:\\crossatten\\worktrees\\s22-mechanism-closure\\22-mechanism-closure\\runs\\p1__Shen__S2__f0__all__s201",
+      "sha256": {
+        "model.pt": "dcef935c307c4e84c5d5cec3f4f9c7a49768f62c0f3d800eca5650e831c9e834",
+        "config.json": "f0d51b157e5e7d3d50b3231fa6e96cb1912b346d05d2fedd6a180454f04a5848",
+        "metrics.json": "f88175dca39639cd23d303b338327f6fb74912aaec3e31a31133fc543536c534",
+        "history.csv": "13fe32828195dc4173f30c01a017936600b55981134449f64e6f1947dcaa9052"
+      }
+    },
+    "S2_f0_s202": {
+      "path": "D:\\crossatten\\worktrees\\s22-mechanism-closure\\22-mechanism-closure\\runs\\p1__Shen__S2__f0__all__s202",
+      "sha256": {
+        "model.pt": "ab191157c9690c4c8b42088705c0390e85ef24574e27a6d92c3dca4fe96a8012",
+        "config.json": "5f07819cbc52932682b1857474be3905062951d5cc72e1c0f1a13879a6643f86",
+        "metrics.json": "4c305db12883d4ff14efb677c6c136368fb90b26d5c823f82e88a225d60263da",
+        "history.csv": "4983cfe3ae6866e7ba337b9101ee93e690c6fb7967008b72e6dbc8ae288a1c51"
+      }
+    },
+    "S2_f0_s203": {
+      "path": "D:\\crossatten\\worktrees\\s22-mechanism-closure\\22-mechanism-closure\\runs\\p1__Shen__S2__f0__all__s203",
+      "sha256": {
+        "model.pt": "826cf728d57497a88920b7e9567500ab5a28057025ad14a337d8e3abbe5df1a3",
+        "config.json": "ef5323b0048bddfa76ddb4852a84a906d31503100a796cd08c74a599152e2679",
+        "metrics.json": "b6c8318b416caa3c795a78aaf7cedc7ef50aad0e5125fae3206261fe54020f69",
+        "history.csv": "4700f9e09914be70d85ff6dc5f363e682afd48851f9da23292ed4b5e3cd1cfcc"
+      }
+    },
+    "S2_f1_s201": {
+      "path": "D:\\crossatten\\worktrees\\s22-mechanism-closure\\22-mechanism-closure\\runs\\p1__Shen__S2__f1__all__s201",
+      "sha256": {
+        "model.pt": "b7fb580d00dec5da1647a02af960f8a94bacee2a8941cb0d02f94ed4b8ff0145",
+        "config.json": "c5452558bc45e429fd47cb7e19800d5414c7409a185af9ef43de03139014696e",
+        "metrics.json": "cc586e5676ebdcf738f2c524b987081f37e64f3cd035634e1b598d7bc3359804",
+        "history.csv": "e3ae9e92688807d3ea809b2e9d2a9905ebda8cec656a54d643a17554229acd69"
+      }
+    },
+    "S2_f1_s202": {
+      "path": "D:\\crossatten\\worktrees\\s22-mechanism-closure\\22-mechanism-closure\\runs\\p1__Shen__S2__f1__all__s202",
+      "sha256": {
+        "model.pt": "5cf79be3bd0e38b34f9ce40b044349b69435780e5ec5b829e1ba6019cf066d7d",
+        "config.json": "d13973d7195c33dc8f60f46e73652847c126a428938c5bbc14cf1b19ae3a5dca",
+        "metrics.json": "9b4c49a271b2117630827307410154c813f00aebf31d0410a43e1464abc79fa5",
+        "history.csv": "9f7a6f7c547d7bec22e02624872918dd80a9da8c7225be17c1ab6a2410488fe4"
+      }
+    },
+    "S2_f1_s203": {
+      "path": "D:\\crossatten\\worktrees\\s22-mechanism-closure\\22-mechanism-closure\\runs\\p1__Shen__S2__f1__all__s203",
+      "sha256": {
+        "model.pt": "3d43b6492670ea01939d81c705afe491dfe4302dbba76afb7852b80c9e0e598d",
+        "config.json": "041b3fed4b91fe7d496867cbafc45c6cfadfcfc3e1525b8f8ec4ec939aa094f7",
+        "metrics.json": "b318c018ab1866965b82b7de55f3b256bae98a8426bc1bc0c0ff785f23754383",
+        "history.csv": "c9a171aa5da5614d5d49fae8c2aba049a7e2ef90496f7b86c99dc18c705f438c"
+      }
+    }
+  },
+  "data": "Only original source-validation40/TX/RX,2000 packets/fold;source HDF5 schema/attribute names only with zero waveform rows;no source-training analysis,dev,confirm,blind or WiSig raw samples",
+  "equivalence": {
+    "models": [
+      "S1 materialized as standard256 Conv1d",
+      "H0 with exactly three tokenizer Conv-BN pairs folded"
+    ],
+    "fits_per_conversion": 6,
+    "full_source_validation": true,
+    "atol": 0.0001,
+    "rtol": 0.0001,
+    "report": [
+      "max/rms/relative logit error",
+      "prediction agreement",
+      "CE",
+      "structure",
+      "same learned function vs different training path"
+    ],
+    "failure": "Record failure;do not loosen tolerance"
+  },
+  "kernels": {
+    "models": [
+      "P0",
+      "S1",
+      "H1"
+    ],
+    "nfft": 1024,
+    "bands_cycles_per_feature_sample": [
+      0,
+      0.125,
+      0.25,
+      0.5
+    ],
+    "scope": "Effective first grouped temporal kernel;not physical RF transfer function"
+  },
+  "local_gradients": {
+    "models": [
+      "P0",
+      "S1",
+      "H1",
+      "H0",
+      "S2",
+      "H2"
+    ],
+    "data": "First source-validation packet in each RXxTX cell;50 packets/fold",
+    "mode": "Frozen checkpoint eval-mode CE sensitivity;not recorded historical training gradients",
+    "optimizer_steps": 0
+  },
+  "timing": {
+    "models": [
+      "H0",
+      "P0"
+    ],
+    "shifts": [
+      -4,
+      -1,
+      1,
+      4
+    ],
+    "kinds": [
+      "zero",
+      "circular"
+    ],
+    "full_source_validation": true,
+    "fft_locked_diagnostics": "Circular +/-4 with only the FFT-magnitude channel replaced by its unshifted counterpart;internal intervention,not physical input",
+    "layer_probe_packets": 50,
+    "metrics": [
+      "Accuracy/F1/CE/true-class margin",
+      "perRX/TX errors",
+      "relative feature response and eligible integer-stride equivariance",
+      "raw boundary energy and closure",
+      "frontend commutation and Fourier shift theorem"
+    ]
+  },
+  "interpretation": {
+    "boundary_dominant": "Circular4 mean drop <=5pp and <=20% of zero4 mean drop;descriptive signal only",
+    "zero_boundary_insufficient": "Circular4 mean drop >=20pp with positive drops in >=5/6 fits for both signs;not proof of physical acquisition error",
+    "physical_validity": "If synchronization/timestamps/adjacent samples unavailable,never equate circular or zero shifts with real capture errors",
+    "decision": "A:write within demonstrated aligned-protocol scope,or B:separate new-method proposal only if a practically grounded defect is supported;do not start new fits"
+  },
+  "latency": {
+    "precision": "FP32",
+    "batches": [
+      1,
+      128
+    ],
+    "repeats": 3,
+    "warmup": 10,
+    "measurements": 50,
+    "scope": "Resident IQ to logits;conditional desktop GPU timing"
+  },
+  "trajectory": "All36 archived200-epoch histories;no new checkpoint selection;best epochs audited only",
+  "frontend_fact": "Actual FFT input is normalized magnitude,not explicit FFT phase;time-domain atan2 phase is a different channel;time/frequency indices are concatenated",
+  "paper1_source": {
+    "path": "refs/OOB_IOTJ.pdf",
+    "sha256": "cdbdfbdaa1d40108ee58353ad346566e855c23d96da46fbcdcd356c7694ab442",
+    "read_only": true
+  },
+  "stop": "S23 is the last bounded mechanism analysis;no automatic S24,optimizer,new seed,new loss,augmentation or anti-alias training",
+  "environment": {
+    "torch": "2.5.0+cu124",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+  },
+  "uncertainty": "Exploratory source-validation evidence;receiver units;no independent confirmation or causal hardware attribution",
+  "code_sha256": {
+    "13-mixer-cfo-mechanisms/cfo_descriptive.py": "e60de808c7de10decda0844f2e74ae55169df196c9ec9fbb3807c312f4a131da",
+    "13-mixer-cfo-mechanisms/core.py": "a9db92f80e8e1bf1579cab900fabf085f5c33e018dffe6e27f1af64ee94dc527",
+    "13-mixer-cfo-mechanisms/data.py": "578fd207105e5375094bd22a12ec710fd259379c4b1c627d962251256bd71e9e",
+    "13-mixer-cfo-mechanisms/diagnostics.py": "883b0a5fcf73ba7c19e94f51ae05f7d003b82a8870b44c6c6d23e4ca02ee7149",
+    "13-mixer-cfo-mechanisms/execute.py": "21a7bf48a381842e5fbc044411350ba2faa1fd86cc31796ccab199726e8b1ae8",
+    "13-mixer-cfo-mechanisms/metrics.py": "a9773e0532552f012dc039c42206460d1a5b02001a2bbb44a388258825f85ed7",
+    "13-mixer-cfo-mechanisms/models.py": "606243ff9462358f53a86d2908130c47f69c5dd9d1cfee669cbaf10c7b76e5a1",
+    "13-mixer-cfo-mechanisms/pickle_index.py": "52925d018fbad46396dbf809379e2b8961b368179ba1ef64c4fc9c5031ed319a",
+    "13-mixer-cfo-mechanisms/register.py": "1d2241b226e4addbe74401c5acf7cd6acd148fcece15e20cf0c611f11a6b5b3b",
+    "13-mixer-cfo-mechanisms/reports.py": "8bcf6ec4ad18d183368b3d0e6bd5c4e58c476442aee16ddba74b099de27aef15",
+    "13-mixer-cfo-mechanisms/status.py": "533e7ef2154f0134c8cc887e5a1bd0d42cafcdfa3863c712f462bee048b49b1a",
+    "13-mixer-cfo-mechanisms/train.py": "164b0eb9794c4494b34cf1d25f8dfb0c9a4ae8c54af3e03ef9f08b150a670a2a",
+    "13-mixer-cfo-mechanisms/wifi.py": "3402847c350172b670aba40616f5b56ec5ecb2e7176cc199c26d0315d920db37",
+    "15-hstem-attribution/architecture_search.json": "56a749bdf8fd346a55f9d900913acd76915055a6829e46f358031a04f55ef2ad",
+    "15-hstem-attribution/s15_core.py": "e37958e21f579314680a6ac1d0b35302f6a5b1e2307fedf336af5c335002a195",
+    "15-hstem-attribution/s15_data.py": "df1917a39b0f933ea735c4946cba40cdd691ad049b17fa0adde8396cb205f295",
+    "15-hstem-attribution/s15_execute.py": "d9c7b8fcf8bdf28abf9a409e3702df3317cbc43fbf9f1bd3ea703f299a5cfe4e",
+    "15-hstem-attribution/s15_models.py": "0d361cf9ac5ce2794975827e2b89a31615d4a1eaa171f5c073d1c7afffe810d4",
+    "15-hstem-attribution/s15_register.py": "1b754a5ef2204461b705249aa3d4d784f23765a38f0469b4d40200c28691fd36",
+    "15-hstem-attribution/s15_reports.py": "afdbce3425aaa3295b44aa6d122c6a0783b56e53ced192c881528b1de8087bd1",
+    "15-hstem-attribution/s15_stats.py": "03e0c2e9c39afa0d0e0e5e50a857fbf3de3c0b80f9bca951222ff471e8e05c57",
+    "15-hstem-attribution/s15_train.py": "c247c37cf5089f6ecdf675c9f4b5bd2f4078c06c819941d57d9e2eb39a26e849",
+    "21-hstem-mechanisms/s21_core.py": "7c15bb0a3e64444be6146627252897d2c0e0489352d5ac5a4f673a40d53acf0f",
+    "21-hstem-mechanisms/s21_data.py": "a2e665180532f5f2dbf7a40a446949c231d7ea2199f26c3e2a155bb70d068739",
+    "21-hstem-mechanisms/s21_evaluate.py": "505283d86af9e957cfbb92e77a11e824e746e82ce012112cd8d3cacda5097758",
+    "21-hstem-mechanisms/s21_execute.py": "7a979b36fab583d54ee8f1402cd0b7c9f11079d52a07986c030968c9d2af97fd",
+    "21-hstem-mechanisms/s21_models.py": "5dea148df54a7db8c2aba1f5190340e913330f18b59610c1a7869fc07baea28a",
+    "21-hstem-mechanisms/s21_register.py": "583bb0d790885b8bf8001ac96003b30e1810c7fb6ad7879be1d1106427abd139",
+    "21-hstem-mechanisms/s21_report.py": "f0360932fcb323f7c60e0cb3eb2a33c92d34d7a073cea59e7bff6139a4c17ca4",
+    "21-hstem-mechanisms/s21_train.py": "2ffb8c2b1da2e93e3cbf92454a625335b7f78b964427a98001e62d6d967fd4f9",
+    "21-hstem-mechanisms/test_s21.py": "9e164d2a194afa0eb4af8cb1158fa90ab1512023b3df8db13d2113222df2586b",
+    "22-mechanism-closure/s22_audit.py": "f889e7522a552fea2f8b4b2fbd2e5362b6d1b99cb94c97e25dd342fba5e822d9",
+    "22-mechanism-closure/s22_core.py": "a8fbe78b62b48754196dad1132e1d6b440a0ba4e574990ba62676da9c69febf1",
+    "22-mechanism-closure/s22_cost.py": "69a30d5de0a73e56c5f3f09a0fcab652ec5e3d12727fe4f8b17134bab2819dd6",
+    "22-mechanism-closure/s22_data.py": "08f178ba7245a29072b1ea6f504c24df997e2b60877a50943e9bf0754f9bdcc8",
+    "22-mechanism-closure/s22_evaluate.py": "e5058977407999de9e43758da126243ffbf838a8a66676a230d0fffbdc858c7b",
+    "22-mechanism-closure/s22_execute.py": "80fc1a9a8e8697ed2f619cabe0d6b755f55ebb3f0ae2ec760ceb46aa53b40132",
+    "22-mechanism-closure/s22_models.py": "b322334b00c7f653358229ddd3537b02c681e712f8894547c933a24604e44cb0",
+    "22-mechanism-closure/s22_paper.py": "745da0f2adea4ea519a947a9136332b2d3f8d5956de600b2d3ff34f4754a4807",
+    "22-mechanism-closure/s22_register.py": "d0bfdd6ab2a3b15958ffbb0d4bd7df506432f3d825411b77935a1cb6325abd81",
+    "22-mechanism-closure/s22_report.py": "51639c7d0087801d36d71bbf405df519799eb2651995fd30d06d56b91fb3068a",
+    "22-mechanism-closure/s22_robustness.py": "1a2abae1a364defe14efd443e0040dc459008a0e939358710d33c128efe7fb76",
+    "22-mechanism-closure/s22_train.py": "d606d2f32282ba1ddbcd395283309475afdeaf6403aa6bd1e41fb572e1589568",
+    "22-mechanism-closure/test_s22.py": "bafcdebcf99fefbb4183f7a95497c92cca50f5ef8561462cb0c3ce21e2adf9ce",
+    "23-hstem-mechanism-evidence/s23_core.py": "7bc640f16dd144c7121407e1e994e40321a5e61d29bcfe5409665ac4a2557099",
+    "23-hstem-mechanism-evidence/s23_data.py": "8baf3d7594280c857d9b3b622fbffe4960ef0af26f8cac7e946b45038d55977e",
+    "23-hstem-mechanism-evidence/s23_math.py": "03cde7aa98905ab67faf6db4744f2e2dded7c07f3d1a83cdfcf969f9219f758a",
+    "23-hstem-mechanism-evidence/s23_register.py": "fd6772e140cb35050b78b5ee4d7f2161ba33428b5053df2eb10ae757817f5c2a",
+    "23-hstem-mechanism-evidence/s23_report.py": "16e14d5d98f8a7a42df04addf7fcd136616fc42b179131f2e907af7e8b0d3be5",
+    "23-hstem-mechanism-evidence/s23_run.py": "e45625db1affcba88e57467ed5663f4b90b09d043320befebe9537584bd93a1b",
+    "23-hstem-mechanism-evidence/test_s23.py": "1219b056258f71ced1c0093eb6ae5ea9e588c7e8250268abd17491a578ac04cc",
+    "configs/protocol.json": "913d38626d9bcaa285b0ba7816bd8e863a91778f1fc62e4dd7d27c70415a119a",
+    "lib/legacy_rfhstu/__init__.py": "f78366d19d77282713f4944bc4e8fbdcbb138aac9849a0acf79459f4491dd9f5",
+    "lib/legacy_rfhstu/cnn_stem.py": "b3a8944c96b354d295a96d84876693e95433f67616e23d2804219d0fa1c2762a",
+    "lib/legacy_rfhstu/features.py": "1e9e5aa828adbb382c604ebf7b1bd429c79893ea1169afddaa14596a6c0d5378",
+    "lib/legacy_rfhstu/losses.py": "a0ba7f42040203289593ba6a9363f27ea19d5152d8813979a7018cc152e78e28",
+    "lib/legacy_rfhstu/mixstyle.py": "687174caeff6f256b2661399ab70aede396d5ea51af4e312dcbacc01235b94a5",
+    "lib/legacy_rfhstu/models.py": "ebb638fac3392fec36bace7e2445ab6d27ef4e3b5adb2c06b35c8bc82f506666",
+    "lib/legacy_rfhstu/multiscale.py": "de51929e7917e793e814319a88b91ef0b17354e4c7614065172e082f16833e35",
+    "lib/legacy_rfhstu/oob_fusion.py": "030f2886c9a84282eb7e20ce5d318f528e8bfc20902c4b4a17315686ea290259",
+    "lib/xa/__init__.py": "ca199705017e2d6d6b037d4d732f7caec7d7dff190c77a3d94c0cfaf515ab492",
+    "lib/xa/aggregate.py": "8995baeff876f427338836ad0b2d53de01f95e95148b851067f498d35f592e38",
+    "lib/xa/bench.py": "3a94fe229e5b43f45b15ca2f1a06e179b0212f282ea58671e71c718161d20ba7",
+    "lib/xa/data.py": "ff861d46e508d807996a924d4439134416b16ba6507856a7335c65d9e4cfc3cb",
+    "lib/xa/evaluate.py": "365998cf59196e5ebbdad3b34132fe1dfb2a4a2b988c82d660715471167734aa",
+    "lib/xa/explore_models.py": "bcc1616b5fc6ea533183b4c3a9538748a663a1b321bd748a33870b4ef8116467",
+    "lib/xa/explore_train.py": "8e4361d2b21546f5f5b5ba26adccd57618680c720db734561802b8246a33babe",
+    "lib/xa/frontends.py": "967e28c05f168341b4710e4b2253d77b93d92bc9a3dd515fdddaa35e81c2013f",
+    "lib/xa/guard.py": "80562f5a0893be3a3e91cb80ef4636a6b24eb0c76bfa59d3566574633e5fff54",
+    "lib/xa/jobs.py": "ef8ac595d7a567c18d5e726b2fe70e9942628e709bf1453dfe0df5e9d07233f0",
+    "lib/xa/launch.py": "71ca1656dcccf4d26455de6b999de42b2482f73b738a37fca52f354ccec6d4a2",
+    "lib/xa/models.py": "322049d67d19d196dca8a722fda9de433d846fe1aa3d6d8439c49adeba6554bf",
+    "lib/xa/models2.py": "e9c3364868955e6996645a823187dadb553a2a95139e809d43055a93c53eaa23",
+    "lib/xa/models3.py": "bade67f8ad50b64c132197d21a86c1897a8c27976a7b8490d2e7131ff025cbba",
+    "lib/xa/paper_models.py": "7c09adc3b481e5b13eeccb93731a00573f16a98f5d35c490a1d5082707c550bd",
+    "lib/xa/paper_run.py": "4c1bcdf2e98c974c6e03677b69881ea378dc3406c0d9f8a7bbe471290389fec6",
+    "lib/xa/paper_train.py": "e59cab54045ef6cd27a168e937e7571456ad3d2405183efc605e8308e3ed80c8",
+    "lib/xa/run_job.py": "534b8f7aa2c8c54c12eb5881850897fa2a69280cde004c84ede19532b0cb576b",
+    "lib/xa/train.py": "906a7fd0a7bbb61fea86e03bcf9b52228a5b26851e53fa904d497be330daa96e",
+    "lib/xa/wisig.py": "b4127fba87f5603704c92d2221743c8dedf6898e45c8216b9ddb84b32f42ad67"
+  },
+  "artifacts_sha256": {}
+}
