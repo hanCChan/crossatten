@@ -1,0 +1,209 @@
+{
+  "status": "REGISTERED_M1_A_ONLY",
+  "base_commit": "81ec47637594e764141a4774f6481a481b6d8ccd",
+  "registered_at": "2026-11-12T10:37:48+08:00",
+  "user_authorization": "M1-A design preregistration, synthetic tests and bounded source physics; no classifier or network fitting; publish this new research branch",
+  "code_sha256": {
+    "research/m1_mirror_identifiability/core.py": "8d6dae8ff3a93ed7b1535bf0cf4a5a1c074dbf9ec7567fa871f6da3463949abd",
+    "research/m1_mirror_identifiability/report.py": "a5f8d3339f8e53ef7c6e0e81076442ca0facd885822c9726ffce581ee432fe77",
+    "research/m1_mirror_identifiability/runner.py": "fe8500d2590847beb065b334dbfbc226e678992e80e937d88714b5c6dfbf28d5",
+    "research/m1_mirror_identifiability/verify.py": "056555109803c7c8f24f70448437a8676848bfb0800fd3545639ebcffab21597",
+    "tests/test_m1_mirror.py": "cc2195e7d88f7eedc4dad96d8be9331ab5c0be614799946e584b2a1cb79fb0ad"
+  },
+  "document_sha256": {
+    "IDENTIFIABILITY.md": "1e30aea42ee7ab8228d725246f2f13f299b416f262ff6d8ccd5c9dbc7c67403b",
+    "PHYSICAL_MODEL.md": "00475d49989836d3023d6254c4f8d92a658c54ba4e77159b6dec41079455652b",
+    "PREREGISTRATION.zh-CN.md": "a177a21c5589b2c6e0b9bcef7bbf1580b184b5b5174bc7d24dc1c2f2fe66f623",
+    "README.zh-CN.md": "c88417102b44100315fd9478a9ac460ef53efefc0d3bb7dbddd2af6aaa309d03",
+    "SOURCES.md": "35bc3fdd2b0d93e41c7490d99c124409e4109ffbdfc5a892bae0af673985452b"
+  },
+  "history_sha256": {
+    "research/periodic_hstem/ARTIFACT_MANIFEST.json": "f29d0e1b63f88d513c775b69cd576741c481c7d63388bb25528fd486ae06282c",
+    "research/periodic_hstem/AUDIT_RESULT.json": "ca308c1e516f7880d7c62f62907d5dfaea6e7e339e92c8d78234e97b7aa955f9",
+    "research/periodic_span/ARTIFACT_MANIFEST.json": "b94747586e0f1ffcb9514684dd7276dfe2e59fdb3f7d82cedd9bddd19c967abc",
+    "research/periodic_span/DECISION.json": "003697bb189646f0f75c9235adb4adaa2f6cd06bc0a8fc44c8b9d7f050bed04a",
+    "research/spectral_scale_review/ARTIFACT_MANIFEST.json": "d6fd0d423d0567387ab1eedde09166afc40cb741be51d19d0eb548dab7b9c277",
+    "research/spectral_scale_review/REGISTRATION.json": "feeec49cf65e9c2702a559d31f500252520fd5060b23b563279c19c27e7512e2",
+    "research/spectral_scale_execution/SCIENCE_ARTIFACT_MANIFEST.json": "f1c1dba55876e07d464af87d2444adda81c257a04d6bda49b59c51b3e0ce80fd",
+    "research/spectral_scale_execution/SCIENCE_STATUS.json": "f763afa98e1c87eaa9bf7346514c66b02970bded7c9e28721791aa966a4871ac",
+    "research/spectral_scale_execution/DECISION.json": "feb5991b517d3b86c8cc18408d49c0bdfb169e674cad9ca7e9a30b1271889424",
+    "research/wisig_raw_eq_m0/PUBLIC_SOURCE_MANIFEST.json": "3d274b923b2e18cc1981bc703f963a9eb455b24ddcd9825d3c8fa7d0fc571174",
+    "research/wisig_raw_eq_m0/LOCAL_METADATA_REVIEW.json": "b165d988f0a83d134653f17773518d5efcf86f617e5f0fa495a2fc2c9692aaa3",
+    "research/wisig_raw_eq_m0/DECISION.json": "aebd93bf98ede037173719acdd6853b23507d85b8eda33f03aec19a46346d9d0",
+    "09-phase-invariance/RESULTS.md": "0c3a976091ae80ad550a700b63fda8be35dcd58600bd7ef7fe2814c247582027",
+    "17-rx-distortion/s17_diagnostics.py": "82f7af3b16a32a0886e267c4ef074cbd3e4b686a66d8456098dbeca32ed504a2",
+    "17-rx-distortion/D0_RESULTS.zh-CN.md": "dc5c3d25a0b4d301bfd54dcc091de5223311f78bc985e19db025f85b0975413b",
+    "17-rx-distortion/decision_d0.json": "e1e515eb19e1a2d82e9ea4d6042f475227567993dffe2cf9f6bcfc15e1d0314c",
+    "19-tx-spectral-evidence/RESULTS.zh-CN.md": "0e8be3f20bdedcfd459af136b042151e6c593e6cc97ddeddd1b4748b55e68016",
+    "lib/xa/wisig.py": "b4127fba87f5603704c92d2221743c8dedf6898e45c8216b9ddb84b32f42ad67",
+    "13-mixer-cfo-mechanisms/data.py": "578fd207105e5375094bd22a12ec710fd259379c4b1c627d962251256bd71e9e"
+  },
+  "official_snapshots": {
+    "research/wisig_raw_eq_m0/public_sources/wisig-process-raw/matlab_equalization/equalize_channel.m.txt": {
+      "sha256": "eb6be4dd87b07107897243054fc86086a78df34259243466758781ef7d929cbc",
+      "git_blob": "7619ad9b9a4248d2501f209d3b9cc8118937986f",
+      "url": "https://github.com/WiSig-dataset/wisig-process-raw/blob/6530c6ed6be1d08544ac295040ed50f5babde86a/matlab_equalization/equalize_channel.m"
+    },
+    "research/wisig_raw_eq_m0/public_sources/wisig-process-raw/matlab_equalization/equalize_dataset.m.txt": {
+      "sha256": "67247aa3c936777e5fc2e7479caa24c81ac8a76c55ec49d765dba01654caa72b",
+      "git_blob": "9a5e194391f316ccc0ea77cbe0d2cb7c8ba6415e",
+      "url": "https://github.com/WiSig-dataset/wisig-process-raw/blob/6530c6ed6be1d08544ac295040ed50f5babde86a/matlab_equalization/equalize_dataset.m"
+    },
+    "research/wisig_raw_eq_m0/public_sources/wisig-process-raw/python_pkl_creation/py/build_dataset_multirx.py.txt": {
+      "sha256": "6f9b51384d82d5f77ffe6ba53f2525565860013dcc0ad632e3c63e94bf3ce3cd",
+      "git_blob": "2d46c7e148c6bd29b0b3358e341658ed8b2504c2",
+      "url": "https://github.com/WiSig-dataset/wisig-process-raw/blob/6530c6ed6be1d08544ac295040ed50f5babde86a/python_pkl_creation/py/build_dataset_multirx.py"
+    },
+    "research/wisig_raw_eq_m0/public_sources/wisig-process-raw/matlab_detection_screening/split_signal_fun.m.txt": {
+      "sha256": "dbeb232ed868aa2945509aa4cb7e905ee7af57a134150a719457c2551e97e246",
+      "git_blob": "41c4f05c3aaac8a5f4d31ba3299ffe09c3919280",
+      "url": "https://github.com/WiSig-dataset/wisig-process-raw/blob/6530c6ed6be1d08544ac295040ed50f5babde86a/matlab_detection_screening/split_signal_fun.m"
+    },
+    "research/wisig_raw_eq_m0/public_sources/wisig-process-raw/matlab_equalization/Readme.txt.txt": {
+      "sha256": "56291420d3945b3be1ebfa889e483cd21ab38ad3afd6871316d9ec8d7410c9ea",
+      "git_blob": "7da5ed5fc445f3da11ebbf75af49a92d8f74be4b",
+      "url": "https://github.com/WiSig-dataset/wisig-process-raw/blob/6530c6ed6be1d08544ac295040ed50f5babde86a/matlab_equalization/Readme.txt"
+    },
+    "research/wisig_raw_eq_m0/public_sources/wisig-process-raw/LICENSE.md.txt": {
+      "sha256": "5d13302991996ac66442e10e98b55ff7f69cf94ea00fc6c2b72d08ab87e86f11",
+      "git_blob": "da79ee3212d82f43f6adf426808ea188061a1bd5",
+      "url": "https://github.com/WiSig-dataset/wisig-process-raw/blob/6530c6ed6be1d08544ac295040ed50f5babde86a/LICENSE.md"
+    }
+  },
+  "parent_protocol_sha256": {
+    "research/standard_method_competition_c/PRE_REGISTRATION.json": "ae5ac330020e20e1ac6e3bdaf1367edbd1078e84ed41e2ab446773e2ecf2168e",
+    "research/standard_method_competition_c/SOURCE_PLAN.json": "b56432678787a3bfcceb71604f7ace0303cd55b3fc8ee0c7fa88af17a7f4a205"
+  },
+  "input_whitelist": {
+    "fit_x": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_x.npy",
+      "sha256": "84af80579acafeabfb856e4cc852896636b880a4b885f4e45cc0cdaebae3bb4a"
+    },
+    "fit_y": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_y.npy",
+      "sha256": "dddba3c9e165ccb0b117ac6cd0eeaac2dc8603f71a541358f06348895a72fef4"
+    },
+    "fit_rx": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_rx.npy",
+      "sha256": "0d5e93eb6d0dd5cd83b3f7a79086e608b57683e82a8824b239f219909670c683"
+    },
+    "fit_day": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_day.npy",
+      "sha256": "09378871910c2dfbb7c232f3aa2251372411c0be005f95c723c72aa50c520192"
+    },
+    "train_ids": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\train_ids.npy",
+      "sha256": "35222d9edb897476681663e9373ad1a31708977d54886f1a39b66b7e547fcefc"
+    }
+  },
+  "rx_names": [
+    "1-1",
+    "1-19",
+    "1-20",
+    "13-14",
+    "13-7",
+    "14-7",
+    "18-19",
+    "18-2",
+    "2-1",
+    "2-19",
+    "23-3",
+    "23-5",
+    "23-6",
+    "23-7",
+    "24-13",
+    "24-16",
+    "24-5",
+    "24-6",
+    "3-19",
+    "7-14",
+    "7-7",
+    "8-14",
+    "8-7",
+    "8-8"
+  ],
+  "audit_rx": [
+    "14-7",
+    "18-19",
+    "18-2",
+    "23-5",
+    "23-7",
+    "8-7"
+  ],
+  "days": [
+    1,
+    2
+  ],
+  "sample_prefix": "M1-A-v1",
+  "per_cell": 16,
+  "min_cell": 8,
+  "source_role": "intersection of both views fit_train; no source_selection in either view",
+  "fs": 25000000,
+  "window": [
+    20,
+    180
+  ],
+  "fit": [
+    20,
+    100
+  ],
+  "validation": [
+    100,
+    180
+  ],
+  "phase_step": 0.25,
+  "condition_max": 10,
+  "fit_nmse_max": 0.15,
+  "validation_nmse_max": 0.15,
+  "cfo_abs_hz_max": 200000,
+  "q_abs_max": 0.5,
+  "a_abs_min": 0.1,
+  "overall_valid_min": 0.9,
+  "rx_day_valid_min": 0.8,
+  "advantage_min": 0.02,
+  "bootstrap": {
+    "clusters": 6,
+    "draws": 10000,
+    "seed": 27102
+  },
+  "synthetic": {
+    "seed": 27101,
+    "packets": 1728,
+    "SNR_dB": [
+      10,
+      20,
+      30
+    ],
+    "cfo_hz": [
+      -100000,
+      0,
+      100000
+    ],
+    "shifts": [
+      0,
+      0.5,
+      3
+    ],
+    "replicates": 8,
+    "valid_min": 0.9,
+    "noise_tolerance": "6*sqrt(2)*sigma/sigma_min(U_fit)"
+  },
+  "forbidden": [
+    "checkpoint_val IQ",
+    "source_selection IQ or predictions",
+    "historical held6",
+    "target8",
+    "days3-4",
+    "Full unknown RX",
+    "weights",
+    "embedding",
+    "cross-RX packet pairing",
+    "classification training",
+    "M1-B",
+    "M1-C"
+  ],
+  "maximum_classifier_fits": 0,
+  "maximum_neural_updates": 0,
+  "automatic_rescue": false,
+  "user_request_sha256": "846f7d5f7406b3f3c8258d05b8f06cdbc07c943f296a8d3fbd8849890f55bffb"
+}
