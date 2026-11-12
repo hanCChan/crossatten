@@ -5,6 +5,7 @@ import os
 from pathlib import Path
 import subprocess
 import sys
+import time
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
@@ -31,7 +32,13 @@ def write(p, value):
     p = Path(p); p.parent.mkdir(parents=True, exist_ok=True)
     temp = p.with_name(p.name+'.tmp')
     temp.write_text(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False)+'\n', encoding='utf-8', newline='\n')
-    os.replace(temp, p)
+    for attempt in range(20):
+        try:
+            os.replace(temp,p)
+            break
+        except PermissionError:
+            if attempt==19:raise
+            time.sleep(.05)
 def git(*args): return subprocess.check_output(['git', '-C', str(ROOT), *args], text=True, encoding='utf-8').strip()
 def committed(p):
     rel = Path(p).resolve().relative_to(ROOT).as_posix()

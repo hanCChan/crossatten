@@ -1,0 +1,13 @@
+{
+  "time": "2026-11-12T22:23:36+08:00",
+  "parent_registration_sha256": "5cdd52c1585043c0310d721b6d66ff2c1bdbac9ec32489c0907796691fba3dd6",
+  "protocol_changes": [],
+  "reason": "Technical IO repair plus transparent post-failure numerical appendix. Original source interventions,36 checkpoints,tolerances,zero-fit limit and all default precision failures retained.",
+  "additional_numerical_control": "Compare all six H0 Conv-BN pairs with cudnn TF32 on/off, same source validation and unchanged atol=rtol1e-4;not a new architecture or training candidate",
+  "code_sha256": {
+    "23-hstem-mechanism-evidence/s23_core.py": "4202422611045eb45330f4e7ffe6662ec503e27df6868a2237909ef88a502ab0",
+    "23-hstem-mechanism-evidence/test_s23.py": "de9fc792fc6c7fa5349ab890f86c7b53261f89bf835f9e8786a153d03f8cb38a",
+    "23-hstem-mechanism-evidence/s23_precision.py": "cef2edd20c1a0039063e4b611db17535c042926e21448b6491fc9113b86fb1d4"
+  },
+  "original_default_equivalence_csv_sha256": "ce5191c5cccde97c1cca306abc8374adfc93f794f5e6424a7557d82a1aa820db"
+}

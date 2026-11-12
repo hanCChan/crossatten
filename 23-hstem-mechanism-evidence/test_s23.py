@@ -4,6 +4,17 @@ from s23_math import build,operator,materialize_s1,fold_h0,equivalence,shifted,d
 from s23_run import local_gradients
 
 def run():
+    import tempfile
+    from pathlib import Path
+    from unittest.mock import patch
+    from s23_core import write,read,os
+    original=os.replace;calls=[]
+    def temporarily_locked(*args):
+        calls.append(1)
+        if len(calls)<3:raise PermissionError('simulated transient Windows reader lock')
+        return original(*args)
+    with tempfile.TemporaryDirectory() as folder,patch('s23_core.os.replace',side_effect=temporarily_locked):
+        p=Path(folder)/'record.json';write(p,dict(ok=True));assert read(p)==dict(ok=True) and len(calls)==3
     torch.set_num_threads(2);T=operator();singular=torch.linalg.svdvals(T)
     assert torch.linalg.matrix_rank(T)==256 and .38<float(singular.min())<.40
     w=torch.randn(2,256,dtype=torch.float64,requires_grad=True);v=w@T.T;loss=v.square().sum();gw,gv=torch.autograd.grad(loss,[w,v]);assert torch.allclose(gw,gv@T,atol=1e-12,rtol=1e-12)
