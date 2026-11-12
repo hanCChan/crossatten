@@ -55,7 +55,7 @@ def report():
                 for rx in x:
                     local.append(dict(contrast=a+'-'+b,role=role,fold=fold,seed=seed,rx=rx,delta_pp=100*(x[rx]['acc']-y[rx]['acc']),delta_f1_pp=100*(x[rx]['macro_f1']-y[rx]['macro_f1'])))
             deltas+=local;stats=paired(local)
-            stats['negative_pairs']=sum(np.mean([r['delta_pp'] for r in local if r['fold']==f and r['seed']==s])<0 for f,s in itertools.product([0,1],[201,202,203]))
+            stats['negative_pairs']=sum(bool(np.mean([r['delta_pp'] for r in local if r['fold']==f and r['seed']==s])<0) for f,s in itertools.product([0,1],[201,202,203]))
             stats['fold_delta_pp']={str(f):float(np.mean([r['delta_pp'] for r in local if r['fold']==f])) for f in [0,1]}
             contrasts.append(dict(contrast=a+'-'+b,role=role,**stats,f1=paired(local,'delta_f1_pp')))
             right={(r['fold'],r['seed'],r['rx'],r['tx']):r for r in txrows if r['arm']==b and r['role']==role}

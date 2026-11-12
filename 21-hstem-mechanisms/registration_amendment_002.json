@@ -1,0 +1,12 @@
+{
+  "time": "2026-11-12T12:03:04+08:00",
+  "parent_registration_sha256": "f10270a81a80ba73e4378f41bfd54432fc7ea5884dabd3c3c7066c29e2c641e6",
+  "protocol_changes": [],
+  "reason": "Pre-target end-to-end synthetic QA: serialize negative-pair count as native Python int; exercise all paired tables, recovery, BN gate, geometry and manuscript generation using temporary synthetic arrays only. No model/training/selection/scientific changes.",
+  "code_sha256": {
+    "21-hstem-mechanisms/s21_report.py": "f0360932fcb323f7c60e0cb3eb2a33c92d34d7a073cea59e7bff6139a4c17ca4",
+    "21-hstem-mechanisms/test_s21.py": "9e164d2a194afa0eb4af8cb1158fa90ab1512023b3df8db13d2113222df2586b"
+  },
+  "target_data_read": false,
+  "completed_new_fits": 0
+}
