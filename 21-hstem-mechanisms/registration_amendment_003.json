@@ -1,0 +1,13 @@
+{
+  "time": "2026-11-12T15:39:00+08:00",
+  "parent_registration_sha256": "91be567f5a475d859778a70eb4a2c21f335cd6a56dc75f7be1006a2d665139b3",
+  "protocol_changes": [],
+  "reason": "Permanent filesystem-only repair after all24 evaluations and final audit passed: create baseline diagnostic output directory before saving. All12 model hashes, source selection, inference operations, comparisons and thresholds unchanged. No retraining or additional outcomes required.",
+  "code_sha256": {
+    "21-hstem-mechanisms/s21_evaluate.py": "505283d86af9e957cfbb92e77a11e824e746e82ce012112cd8d3cacda5097758"
+  },
+  "after_complete_evaluation": true,
+  "source_seal_sha256": "0618606d5de103da62ced595d5b78045094da9c0c14d7204616afefa7397a5f2",
+  "formal_fits": 12,
+  "new_fit_retries": 0
+}

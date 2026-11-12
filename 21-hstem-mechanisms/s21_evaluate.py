@@ -53,6 +53,7 @@ def evaluate(arm,fold,seed):
         for name,digest in ref['sha256'].items():
             if sha(source/name)!=digest: raise ValueError('Baseline reference changed')
     else: source=out=HERE/'runs'/job_id(dict(arm=arm,fold=fold,seed=seed))
+    out.mkdir(parents=True,exist_ok=True)
     if (out/'evaluation.json').exists(): return
     cfg=read(source/'config.json'); previous.setup(cfg['data_seed'])
     model=build(arm,cfg['data_seed']).cuda().eval()

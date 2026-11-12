@@ -1,6 +1,6 @@
 {
   "time": "2026-11-12T12:13:32+08:00",
-  "status": "STOP_TECHNICAL_REVIEW",
+  "status": "COMPLETE_STOP",
   "old_worker_pids": [
     37344,
     44260
@@ -9,6 +9,9 @@
   "resumed_at": "2026-11-12T12:17:30+08:00",
   "completed_fits_at_handoff": 1,
   "remaining_fits": 11,
-  "finished_at": "2026-11-12T15:14:58+08:00",
-  "returncode": 1
+  "finished_at": "2026-11-12T15:39:00+08:00",
+  "returncode": 0,
+  "previous_background_returncode": 1,
+  "completion_driver": "Foreground evaluation-only recovery; all12 fits unchanged",
+  "final_audit_sha256": "18c7e3a720a086e763b9817ed90d4f6fd305c26032e59277207f09870114fa3b"
 }
