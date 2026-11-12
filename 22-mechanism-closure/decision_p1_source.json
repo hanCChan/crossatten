@@ -1,0 +1,18 @@
+{
+  "time": "2026-11-12T19:31:38+08:00",
+  "checkpoints": {
+    "p1__Shen__S1__f0__all__s201": "dda89868c693eae8cab1dd73e34099a8d3a6e4d8b744a3e1080eaf29c7ab448a",
+    "p1__Shen__S2__f0__all__s201": "dcef935c307c4e84c5d5cec3f4f9c7a49768f62c0f3d800eca5650e831c9e834",
+    "p1__Shen__S1__f0__all__s202": "7d032a125b4008457ad6f4230c0adf04185da30d00bc8eededcb99fdeca44032",
+    "p1__Shen__S2__f0__all__s202": "ab191157c9690c4c8b42088705c0390e85ef24574e27a6d92c3dca4fe96a8012",
+    "p1__Shen__S1__f0__all__s203": "a801af05b45f444f12dc041669bd302165b61f73eb55cd8411eebf282e7cb1d6",
+    "p1__Shen__S2__f0__all__s203": "826cf728d57497a88920b7e9567500ab5a28057025ad14a337d8e3abbe5df1a3",
+    "p1__Shen__S1__f1__all__s201": "90c4f22e2684d4e0715a988e0d01788191249ecc05a1b1df1fbb417c54f94e51",
+    "p1__Shen__S2__f1__all__s201": "b7fb580d00dec5da1647a02af960f8a94bacee2a8941cb0d02f94ed4b8ff0145",
+    "p1__Shen__S1__f1__all__s202": "9022574ee687622426aec8952776bf7afc3784c83b565d6d60691cf99375545e",
+    "p1__Shen__S2__f1__all__s202": "5cf79be3bd0e38b34f9ce40b044349b69435780e5ec5b829e1ba6019cf066d7d",
+    "p1__Shen__S1__f1__all__s203": "2cd0b3cd3984ad56c61e661e4cd2a05027319fe368c69df2e57eaada9e6e31e2",
+    "p1__Shen__S2__f1__all__s203": "3d43b6492670ea01939d81c705afe491dfe4302dbba76afb7852b80c9e0e598d"
+  },
+  "rule": "All12 source-CE-selected checkpoints sealed before any target RX read"
+}
