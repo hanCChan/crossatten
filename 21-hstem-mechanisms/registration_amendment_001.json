@@ -1,0 +1,13 @@
+{
+  "time": "2026-11-12T12:01:44+08:00",
+  "parent_registration_sha256": "a778081e88e3ef83c41c6a6f4454da8807cc9e979e8e12d9fda8f8f8af820a56",
+  "protocol_changes": [],
+  "reason": "Pre-target code review: count strictly negative fit deltas for the preregistered >=5/6 BN gate; ties must not count as negative. Add hash-chained technical amendment validation; retain all original model/training/selection/metric rules and twelve-fit budget. No weights discarded or retrained.",
+  "code_sha256": {
+    "21-hstem-mechanisms/s21_core.py": "7c15bb0a3e64444be6146627252897d2c0e0489352d5ac5a4f673a40d53acf0f",
+    "21-hstem-mechanisms/s21_report.py": "186dd9250a7657ae8e14deb16c5cc630b98db2054ef5810699d907fe55d19cf2",
+    "21-hstem-mechanisms/test_s21.py": "ebab449276158009d7bfbfb9e8a33ad1cd43298128da51a1066f49af84c1d4db"
+  },
+  "target_data_read": false,
+  "completed_new_fits": 0
+}

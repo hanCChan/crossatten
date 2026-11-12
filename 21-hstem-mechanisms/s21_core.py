@@ -48,7 +48,13 @@ def baseline_path(arm, fold, seed):
     return (S13 if arm == 'H0' else S15)/'runs'/job_id(dict(arm='A1_mha' if arm == 'H0' else 'C2_lite_mha', fold=fold, seed=seed))
 def validate():
     committed(HERE/'registration.json'); r = read(HERE/'registration.json')
-    for rel, digest in r['code_sha256'].items():
+    effective=dict(r['code_sha256']);parent=sha(HERE/'registration.json')
+    for p in sorted(HERE.glob('registration_amendment_*.json')):
+        committed(p); amendment=read(p)
+        if amendment['parent_registration_sha256']!=parent or amendment['protocol_changes']:
+            raise ValueError('Invalid technical amendment: '+p.name)
+        effective.update(amendment['code_sha256']);parent=sha(p)
+    for rel, digest in effective.items():
         if sha(ROOT/rel) != digest: raise ValueError('Frozen code changed: '+rel)
     for filename, digest in r['artifacts_sha256'].items():
         if sha(HERE/filename) != digest: raise ValueError('Frozen artifact changed: '+filename)

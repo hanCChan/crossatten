@@ -15,6 +15,9 @@ def recovery(h0,p0,h1):
     denominator=h0-p0
     return (h1-p0)/denominator if denominator>=.25 else None
 
+def bn_signal(contrast):
+    return bool(contrast['mean_delta_pp']<=-1 and contrast['negative_pairs']>=5 and all(v<0 for v in contrast['fold_delta_pp'].values()))
+
 def outpath(arm,fold,seed):
     return HERE/'runs'/(f'reused__{arm}__f{fold}__s{seed}' if arm in ['H0','P0'] else job_id(dict(arm=arm,fold=fold,seed=seed)))
 
@@ -52,6 +55,7 @@ def report():
                 for rx in x:
                     local.append(dict(contrast=a+'-'+b,role=role,fold=fold,seed=seed,rx=rx,delta_pp=100*(x[rx]['acc']-y[rx]['acc']),delta_f1_pp=100*(x[rx]['macro_f1']-y[rx]['macro_f1'])))
             deltas+=local;stats=paired(local)
+            stats['negative_pairs']=sum(np.mean([r['delta_pp'] for r in local if r['fold']==f and r['seed']==s])<0 for f,s in itertools.product([0,1],[201,202,203]))
             stats['fold_delta_pp']={str(f):float(np.mean([r['delta_pp'] for r in local if r['fold']==f])) for f in [0,1]}
             contrasts.append(dict(contrast=a+'-'+b,role=role,**stats,f1=paired(local,'delta_f1_pp')))
             right={(r['fold'],r['seed'],r['rx'],r['tx']):r for r in txrows if r['arm']==b and r['role']==role}
@@ -65,7 +69,7 @@ def report():
     h1=next(r for r in contrasts if r['contrast']=='H1-P0' and r['role']=='dev_val')
     h2=next(r for r in contrasts if r['contrast']=='H2-H0' and r['role']=='dev_val')
     overlap=bool(rho is not None and rho>=.5 and all(v>0 for v in h1['fold_delta_pp'].values()))
-    bn=bool(h2['mean_delta_pp']<=-1 and h2['positive_pairs']<=1 and all(v<0 for v in h2['fold_delta_pp'].values()))
+    bn=bn_signal(h2)
     conclusion=('Overlap-Patch recovered at least half the gap in both fold directions; filter/support confounds remain.' if overlap else 'This fixed overlap/interpolation intervention did not meet the registered recovery signal; it does not falsify all local-context hypotheses.')
     conclusion+=' '+('Removing tokenizer BN caused consistent material degradation; normalization/affine/optimization effects remain inseparable.' if bn else 'Removing tokenizer BN did not meet the registered consistent material-degradation signal; smaller effects are still possible.')
     decision=dict(time=now(),status='COMPLETE_STOP',formal_fits=12,reused_baselines=12,recovery_ratio=rho,overlap_followup_signal=overlap,bn_importance_signal=bn,conclusion=conclusion,H3_executed=False,additional_search_authorized=False)
