@@ -1,0 +1,2089 @@
+{
+  "status": "COMPLETED",
+  "overall": {
+    "packets": 1872,
+    "valid": 131,
+    "valid_fraction": 0.06997863247863248,
+    "advantage_mean": -0.0049181663120591605,
+    "failure_reasons": {
+      "fit_template_mismatch": 1734,
+      "held_template_mismatch": 1738,
+      "CFO_out_of_registered_range": 114,
+      "weak_direct_or_large_effective_mirror": 145
+    },
+    "q_abs_mean_valid": 0.043915454751446446
+  },
+  "per_rx": {
+    "14-7": {
+      "packets": 320,
+      "valid": 21,
+      "valid_fraction": 0.065625,
+      "advantage_mean": -0.002951015565975803,
+      "failure_reasons": {
+        "fit_template_mismatch": 292,
+        "held_template_mismatch": 296,
+        "CFO_out_of_registered_range": 3,
+        "weak_direct_or_large_effective_mirror": 2
+      },
+      "q_abs_mean_valid": 0.09654332567513571
+    },
+    "18-19": {
+      "packets": 320,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "CFO_out_of_registered_range": 31,
+        "fit_template_mismatch": 320,
+        "held_template_mismatch": 320,
+        "weak_direct_or_large_effective_mirror": 38
+      },
+      "q_abs_mean_valid": null
+    },
+    "18-2": {
+      "packets": 320,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 320,
+        "held_template_mismatch": 320,
+        "CFO_out_of_registered_range": 23,
+        "weak_direct_or_large_effective_mirror": 30
+      },
+      "q_abs_mean_valid": null
+    },
+    "23-5": {
+      "packets": 288,
+      "valid": 30,
+      "valid_fraction": 0.10416666666666667,
+      "advantage_mean": -0.006946513526577772,
+      "failure_reasons": {
+        "fit_template_mismatch": 258,
+        "held_template_mismatch": 258,
+        "weak_direct_or_large_effective_mirror": 15,
+        "CFO_out_of_registered_range": 11
+      },
+      "q_abs_mean_valid": 0.02906363779964879
+    },
+    "23-7": {
+      "packets": 304,
+      "valid": 80,
+      "valid_fraction": 0.2631578947368421,
+      "advantage_mean": -0.02059831072173715,
+      "failure_reasons": {
+        "fit_template_mismatch": 224,
+        "held_template_mismatch": 224
+      },
+      "q_abs_mean_valid": 0.03567006999090214
+    },
+    "8-7": {
+      "packets": 320,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 320,
+        "held_template_mismatch": 320,
+        "CFO_out_of_registered_range": 46,
+        "weak_direct_or_large_effective_mirror": 60
+      },
+      "q_abs_mean_valid": null
+    }
+  },
+  "per_day": {
+    "1": {
+      "packets": 928,
+      "valid": 47,
+      "valid_fraction": 0.05064655172413793,
+      "advantage_mean": -0.004856485539789209,
+      "failure_reasons": {
+        "fit_template_mismatch": 880,
+        "held_template_mismatch": 879,
+        "CFO_out_of_registered_range": 58,
+        "weak_direct_or_large_effective_mirror": 76
+      },
+      "q_abs_mean_valid": 0.047503563144764276
+    },
+    "2": {
+      "packets": 944,
+      "valid": 84,
+      "valid_fraction": 0.08898305084745763,
+      "advantage_mean": -0.004978801647510978,
+      "failure_reasons": {
+        "fit_template_mismatch": 854,
+        "held_template_mismatch": 859,
+        "CFO_out_of_registered_range": 56,
+        "weak_direct_or_large_effective_mirror": 69
+      },
+      "q_abs_mean_valid": 0.041907822674232896
+    }
+  },
+  "per_rx_day": [
+    {
+      "rx": "14-7",
+      "day": 1,
+      "packets": 160,
+      "valid": 17,
+      "valid_fraction": 0.10625,
+      "advantage_mean": -0.0032596632165574403,
+      "failure_reasons": {
+        "fit_template_mismatch": 142,
+        "held_template_mismatch": 141,
+        "CFO_out_of_registered_range": 2,
+        "weak_direct_or_large_effective_mirror": 1
+      },
+      "q_abs_mean_valid": 0.08861111444963296
+    },
+    {
+      "rx": "14-7",
+      "day": 2,
+      "packets": 160,
+      "valid": 4,
+      "valid_fraction": 0.025,
+      "advantage_mean": -0.002642367915394167,
+      "failure_reasons": {
+        "fit_template_mismatch": 150,
+        "held_template_mismatch": 155,
+        "CFO_out_of_registered_range": 1,
+        "weak_direct_or_large_effective_mirror": 1
+      },
+      "q_abs_mean_valid": 0.13025522338352233
+    },
+    {
+      "rx": "18-19",
+      "day": 1,
+      "packets": 160,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "CFO_out_of_registered_range": 17,
+        "fit_template_mismatch": 160,
+        "held_template_mismatch": 160,
+        "weak_direct_or_large_effective_mirror": 19
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-19",
+      "day": 2,
+      "packets": 160,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 160,
+        "held_template_mismatch": 160,
+        "CFO_out_of_registered_range": 14,
+        "weak_direct_or_large_effective_mirror": 19
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-2",
+      "day": 1,
+      "packets": 160,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 160,
+        "held_template_mismatch": 160,
+        "CFO_out_of_registered_range": 13,
+        "weak_direct_or_large_effective_mirror": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-2",
+      "day": 2,
+      "packets": 160,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "CFO_out_of_registered_range": 10,
+        "fit_template_mismatch": 160,
+        "held_template_mismatch": 160,
+        "weak_direct_or_large_effective_mirror": 14
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-5",
+      "day": 1,
+      "packets": 144,
+      "valid": 14,
+      "valid_fraction": 0.09722222222222222,
+      "advantage_mean": -0.01226142309448363,
+      "failure_reasons": {
+        "fit_template_mismatch": 130,
+        "held_template_mismatch": 130,
+        "weak_direct_or_large_effective_mirror": 4,
+        "CFO_out_of_registered_range": 5
+      },
+      "q_abs_mean_valid": 0.038134257148702645
+    },
+    {
+      "rx": "23-5",
+      "day": 2,
+      "packets": 144,
+      "valid": 16,
+      "valid_fraction": 0.1111111111111111,
+      "advantage_mean": -0.001631603958671914,
+      "failure_reasons": {
+        "fit_template_mismatch": 128,
+        "held_template_mismatch": 128,
+        "CFO_out_of_registered_range": 6,
+        "weak_direct_or_large_effective_mirror": 11
+      },
+      "q_abs_mean_valid": 0.021126845869226675
+    },
+    {
+      "rx": "23-7",
+      "day": 1,
+      "packets": 144,
+      "valid": 16,
+      "valid_fraction": 0.1111111111111111,
+      "advantage_mean": -0.01541408014353856,
+      "failure_reasons": {
+        "fit_template_mismatch": 128,
+        "held_template_mismatch": 128
+      },
+      "q_abs_mean_valid": 0.012024932629895263
+    },
+    {
+      "rx": "23-7",
+      "day": 2,
+      "packets": 160,
+      "valid": 64,
+      "valid_fraction": 0.4,
+      "advantage_mean": -0.025264118242115878,
+      "failure_reasons": {
+        "fit_template_mismatch": 96,
+        "held_template_mismatch": 96
+      },
+      "q_abs_mean_valid": 0.041581354331153855
+    },
+    {
+      "rx": "8-7",
+      "day": 1,
+      "packets": 160,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 160,
+        "held_template_mismatch": 160,
+        "CFO_out_of_registered_range": 21,
+        "weak_direct_or_large_effective_mirror": 36
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "8-7",
+      "day": 2,
+      "packets": 160,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 160,
+        "held_template_mismatch": 160,
+        "CFO_out_of_registered_range": 25,
+        "weak_direct_or_large_effective_mirror": 24
+      },
+      "q_abs_mean_valid": null
+    }
+  ],
+  "cells": [
+    {
+      "rx": "14-7",
+      "day": 1,
+      "tx": 0,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "14-7",
+      "day": 1,
+      "tx": 1,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "14-7",
+      "day": 1,
+      "tx": 2,
+      "packets": 16,
+      "valid": 12,
+      "valid_fraction": 0.75,
+      "advantage_mean": -0.017674419500686118,
+      "failure_reasons": {
+        "fit_template_mismatch": 3,
+        "held_template_mismatch": 4
+      },
+      "q_abs_mean_valid": 0.12074659441596773
+    },
+    {
+      "rx": "14-7",
+      "day": 1,
+      "tx": 3,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "14-7",
+      "day": 1,
+      "tx": 4,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "14-7",
+      "day": 1,
+      "tx": 5,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "14-7",
+      "day": 1,
+      "tx": 6,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "14-7",
+      "day": 1,
+      "tx": 7,
+      "packets": 16,
+      "valid": 5,
+      "valid_fraction": 0.3125,
+      "advantage_mean": -0.01492221266488828,
+      "failure_reasons": {
+        "fit_template_mismatch": 11,
+        "held_template_mismatch": 9,
+        "CFO_out_of_registered_range": 1,
+        "weak_direct_or_large_effective_mirror": 1
+      },
+      "q_abs_mean_valid": 0.01148596253042949
+    },
+    {
+      "rx": "14-7",
+      "day": 1,
+      "tx": 8,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 1
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "14-7",
+      "day": 1,
+      "tx": 9,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "14-7",
+      "day": 2,
+      "tx": 0,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 1,
+        "weak_direct_or_large_effective_mirror": 1
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "14-7",
+      "day": 2,
+      "tx": 1,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "14-7",
+      "day": 2,
+      "tx": 2,
+      "packets": 16,
+      "valid": 4,
+      "valid_fraction": 0.25,
+      "advantage_mean": -0.026423679153941667,
+      "failure_reasons": {
+        "fit_template_mismatch": 6,
+        "held_template_mismatch": 11
+      },
+      "q_abs_mean_valid": 0.13025522338352233
+    },
+    {
+      "rx": "14-7",
+      "day": 2,
+      "tx": 3,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "14-7",
+      "day": 2,
+      "tx": 4,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "14-7",
+      "day": 2,
+      "tx": 5,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "14-7",
+      "day": 2,
+      "tx": 6,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "14-7",
+      "day": 2,
+      "tx": 7,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "14-7",
+      "day": 2,
+      "tx": 8,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "14-7",
+      "day": 2,
+      "tx": 9,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-19",
+      "day": 1,
+      "tx": 0,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "CFO_out_of_registered_range": 4,
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "weak_direct_or_large_effective_mirror": 4
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-19",
+      "day": 1,
+      "tx": 1,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 3,
+        "weak_direct_or_large_effective_mirror": 3
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-19",
+      "day": 1,
+      "tx": 2,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 2,
+        "weak_direct_or_large_effective_mirror": 2
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-19",
+      "day": 1,
+      "tx": 3,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "weak_direct_or_large_effective_mirror": 3,
+        "CFO_out_of_registered_range": 1
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-19",
+      "day": 1,
+      "tx": 4,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 1,
+        "weak_direct_or_large_effective_mirror": 1
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-19",
+      "day": 1,
+      "tx": 5,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 1,
+        "weak_direct_or_large_effective_mirror": 1
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-19",
+      "day": 1,
+      "tx": 6,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-19",
+      "day": 1,
+      "tx": 7,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 4,
+        "weak_direct_or_large_effective_mirror": 2
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-19",
+      "day": 1,
+      "tx": 8,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "weak_direct_or_large_effective_mirror": 3,
+        "CFO_out_of_registered_range": 1
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-19",
+      "day": 1,
+      "tx": 9,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-19",
+      "day": 2,
+      "tx": 0,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 5,
+        "weak_direct_or_large_effective_mirror": 5
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-19",
+      "day": 2,
+      "tx": 1,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "CFO_out_of_registered_range": 1,
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "weak_direct_or_large_effective_mirror": 1
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-19",
+      "day": 2,
+      "tx": 2,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 1,
+        "weak_direct_or_large_effective_mirror": 1
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-19",
+      "day": 2,
+      "tx": 3,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 1,
+        "weak_direct_or_large_effective_mirror": 1
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-19",
+      "day": 2,
+      "tx": 4,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "weak_direct_or_large_effective_mirror": 2
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-19",
+      "day": 2,
+      "tx": 5,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "weak_direct_or_large_effective_mirror": 2
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-19",
+      "day": 2,
+      "tx": 6,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "weak_direct_or_large_effective_mirror": 1
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-19",
+      "day": 2,
+      "tx": 7,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 3,
+        "weak_direct_or_large_effective_mirror": 2
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-19",
+      "day": 2,
+      "tx": 8,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 3,
+        "weak_direct_or_large_effective_mirror": 3
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-19",
+      "day": 2,
+      "tx": 9,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "weak_direct_or_large_effective_mirror": 1
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-2",
+      "day": 1,
+      "tx": 0,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 3,
+        "weak_direct_or_large_effective_mirror": 5
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-2",
+      "day": 1,
+      "tx": 1,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-2",
+      "day": 1,
+      "tx": 2,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 1,
+        "weak_direct_or_large_effective_mirror": 1
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-2",
+      "day": 1,
+      "tx": 3,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 1,
+        "weak_direct_or_large_effective_mirror": 1
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-2",
+      "day": 1,
+      "tx": 4,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 1,
+        "weak_direct_or_large_effective_mirror": 1
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-2",
+      "day": 1,
+      "tx": 5,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-2",
+      "day": 1,
+      "tx": 6,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 1,
+        "weak_direct_or_large_effective_mirror": 1
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-2",
+      "day": 1,
+      "tx": 7,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 4,
+        "weak_direct_or_large_effective_mirror": 5
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-2",
+      "day": 1,
+      "tx": 8,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 2,
+        "weak_direct_or_large_effective_mirror": 2
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-2",
+      "day": 1,
+      "tx": 9,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-2",
+      "day": 2,
+      "tx": 0,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "CFO_out_of_registered_range": 3,
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "weak_direct_or_large_effective_mirror": 5
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-2",
+      "day": 2,
+      "tx": 1,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "CFO_out_of_registered_range": 4,
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "weak_direct_or_large_effective_mirror": 5
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-2",
+      "day": 2,
+      "tx": 2,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-2",
+      "day": 2,
+      "tx": 3,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-2",
+      "day": 2,
+      "tx": 4,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-2",
+      "day": 2,
+      "tx": 5,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-2",
+      "day": 2,
+      "tx": 6,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-2",
+      "day": 2,
+      "tx": 7,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 3,
+        "weak_direct_or_large_effective_mirror": 2
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-2",
+      "day": 2,
+      "tx": 8,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "weak_direct_or_large_effective_mirror": 1
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "18-2",
+      "day": 2,
+      "tx": 9,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "weak_direct_or_large_effective_mirror": 1
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-5",
+      "day": 1,
+      "tx": 0,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "weak_direct_or_large_effective_mirror": 1
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-5",
+      "day": 1,
+      "tx": 1,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-5",
+      "day": 1,
+      "tx": 2,
+      "packets": 0,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {},
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-5",
+      "day": 1,
+      "tx": 3,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-5",
+      "day": 1,
+      "tx": 4,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-5",
+      "day": 1,
+      "tx": 5,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-5",
+      "day": 1,
+      "tx": 6,
+      "packets": 16,
+      "valid": 14,
+      "valid_fraction": 0.875,
+      "advantage_mean": -0.11035280785035267,
+      "failure_reasons": {
+        "CFO_out_of_registered_range": 2,
+        "fit_template_mismatch": 2,
+        "held_template_mismatch": 2,
+        "weak_direct_or_large_effective_mirror": 2
+      },
+      "q_abs_mean_valid": 0.038134257148702645
+    },
+    {
+      "rx": "23-5",
+      "day": 1,
+      "tx": 7,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 1
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-5",
+      "day": 1,
+      "tx": 8,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-5",
+      "day": 1,
+      "tx": 9,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 2,
+        "weak_direct_or_large_effective_mirror": 1
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-5",
+      "day": 2,
+      "tx": 0,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 4,
+        "weak_direct_or_large_effective_mirror": 4
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-5",
+      "day": 2,
+      "tx": 1,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-5",
+      "day": 2,
+      "tx": 2,
+      "packets": 0,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {},
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-5",
+      "day": 2,
+      "tx": 3,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 1,
+        "weak_direct_or_large_effective_mirror": 2
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-5",
+      "day": 2,
+      "tx": 4,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-5",
+      "day": 2,
+      "tx": 5,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-5",
+      "day": 2,
+      "tx": 6,
+      "packets": 16,
+      "valid": 16,
+      "valid_fraction": 1.0,
+      "advantage_mean": -0.014684435628047224,
+      "failure_reasons": {},
+      "q_abs_mean_valid": 0.021126845869226675
+    },
+    {
+      "rx": "23-5",
+      "day": 2,
+      "tx": 7,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "weak_direct_or_large_effective_mirror": 3
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-5",
+      "day": 2,
+      "tx": 8,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-5",
+      "day": 2,
+      "tx": 9,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 1,
+        "weak_direct_or_large_effective_mirror": 2
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-7",
+      "day": 1,
+      "tx": 0,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-7",
+      "day": 1,
+      "tx": 1,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-7",
+      "day": 1,
+      "tx": 2,
+      "packets": 0,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {},
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-7",
+      "day": 1,
+      "tx": 3,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-7",
+      "day": 1,
+      "tx": 4,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-7",
+      "day": 1,
+      "tx": 5,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-7",
+      "day": 1,
+      "tx": 6,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-7",
+      "day": 1,
+      "tx": 7,
+      "packets": 16,
+      "valid": 16,
+      "valid_fraction": 1.0,
+      "advantage_mean": -0.13872672129184704,
+      "failure_reasons": {},
+      "q_abs_mean_valid": 0.012024932629895263
+    },
+    {
+      "rx": "23-7",
+      "day": 1,
+      "tx": 8,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-7",
+      "day": 1,
+      "tx": 9,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-7",
+      "day": 2,
+      "tx": 0,
+      "packets": 16,
+      "valid": 16,
+      "valid_fraction": 1.0,
+      "advantage_mean": -0.04174142020592123,
+      "failure_reasons": {},
+      "q_abs_mean_valid": 0.07901702309900607
+    },
+    {
+      "rx": "23-7",
+      "day": 2,
+      "tx": 1,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-7",
+      "day": 2,
+      "tx": 2,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-7",
+      "day": 2,
+      "tx": 3,
+      "packets": 16,
+      "valid": 16,
+      "valid_fraction": 1.0,
+      "advantage_mean": -0.028218173235440517,
+      "failure_reasons": {},
+      "q_abs_mean_valid": 0.06989601858020744
+    },
+    {
+      "rx": "23-7",
+      "day": 2,
+      "tx": 4,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-7",
+      "day": 2,
+      "tx": 5,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-7",
+      "day": 2,
+      "tx": 6,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "23-7",
+      "day": 2,
+      "tx": 7,
+      "packets": 16,
+      "valid": 16,
+      "valid_fraction": 1.0,
+      "advantage_mean": -0.14371536035034288,
+      "failure_reasons": {},
+      "q_abs_mean_valid": 0.009067091461359032
+    },
+    {
+      "rx": "23-7",
+      "day": 2,
+      "tx": 8,
+      "packets": 16,
+      "valid": 16,
+      "valid_fraction": 1.0,
+      "advantage_mean": -0.03896622862945415,
+      "failure_reasons": {},
+      "q_abs_mean_valid": 0.008345284184042841
+    },
+    {
+      "rx": "23-7",
+      "day": 2,
+      "tx": 9,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "8-7",
+      "day": 1,
+      "tx": 0,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 3,
+        "weak_direct_or_large_effective_mirror": 3
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "8-7",
+      "day": 1,
+      "tx": 1,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 3,
+        "weak_direct_or_large_effective_mirror": 4
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "8-7",
+      "day": 1,
+      "tx": 2,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "CFO_out_of_registered_range": 2,
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "weak_direct_or_large_effective_mirror": 3
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "8-7",
+      "day": 1,
+      "tx": 3,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "CFO_out_of_registered_range": 5,
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "weak_direct_or_large_effective_mirror": 5
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "8-7",
+      "day": 1,
+      "tx": 4,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "weak_direct_or_large_effective_mirror": 15,
+        "CFO_out_of_registered_range": 1
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "8-7",
+      "day": 1,
+      "tx": 5,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "8-7",
+      "day": 1,
+      "tx": 6,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 3,
+        "weak_direct_or_large_effective_mirror": 2
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "8-7",
+      "day": 1,
+      "tx": 7,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 1,
+        "weak_direct_or_large_effective_mirror": 1
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "8-7",
+      "day": 1,
+      "tx": 8,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 3,
+        "weak_direct_or_large_effective_mirror": 3
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "8-7",
+      "day": 1,
+      "tx": 9,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "8-7",
+      "day": 2,
+      "tx": 0,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 3,
+        "weak_direct_or_large_effective_mirror": 3
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "8-7",
+      "day": 2,
+      "tx": 1,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "CFO_out_of_registered_range": 8,
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "weak_direct_or_large_effective_mirror": 8
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "8-7",
+      "day": 2,
+      "tx": 2,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 3,
+        "weak_direct_or_large_effective_mirror": 1
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "8-7",
+      "day": 2,
+      "tx": 3,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "CFO_out_of_registered_range": 1,
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "weak_direct_or_large_effective_mirror": 1
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "8-7",
+      "day": 2,
+      "tx": 4,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 1,
+        "weak_direct_or_large_effective_mirror": 1
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "8-7",
+      "day": 2,
+      "tx": 5,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 2,
+        "weak_direct_or_large_effective_mirror": 2
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "8-7",
+      "day": 2,
+      "tx": 6,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 3,
+        "weak_direct_or_large_effective_mirror": 5
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "8-7",
+      "day": 2,
+      "tx": 7,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 3,
+        "weak_direct_or_large_effective_mirror": 3
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "8-7",
+      "day": 2,
+      "tx": 8,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16
+      },
+      "q_abs_mean_valid": null
+    },
+    {
+      "rx": "8-7",
+      "day": 2,
+      "tx": 9,
+      "packets": 16,
+      "valid": 0,
+      "valid_fraction": 0.0,
+      "advantage_mean": 0.0,
+      "failure_reasons": {
+        "fit_template_mismatch": 16,
+        "held_template_mismatch": 16,
+        "CFO_out_of_registered_range": 1
+      },
+      "q_abs_mean_valid": null
+    }
+  ],
+  "mean_advantage_RX_equal": -0.005082639969048454,
+  "advantage_RX_conditional95": [
+    -0.011456907615298204,
+    -0.0004918359276626338
+  ],
+  "linear_to_WL_RX_equal_gain": 0.0016444371152398976,
+  "gates": {
+    "overall_valid_at_least90": false,
+    "every_RX_day_at_least80": false,
+    "present_cell_support_at_least8": true,
+    "all_RX_days_present": true,
+    "mean_validation_advantage_at_least2percent": false,
+    "all_RX_advantage_positive": false,
+    "both_days_advantage_positive": false,
+    "RX_conditional_interval_lower_positive": false,
+    "WL_beats_L_on_held_segment": true
+  },
+  "decision": "STOP_EXPLICIT_MIRROR_ESTIMATOR",
+  "correlations_with_validity_descriptive": {
+    "abs_CFO": -0.05752728656794221,
+    "fit_nmse": -0.4417800348307062,
+    "channel_proxy_cv": -0.41568322581611755
+  },
+  "registration_sha256": "3337a59ac4b886da147bda12caa1d62a5e89e33240198d0fcfb35acbc6a793b8",
+  "packet_diagnostics_sha256": "0914a6fecc7d033fda0bdef149bad0ff5c791be5dc900c1337fb43e9e81a0bcd",
+  "source_selection_reads": 0,
+  "checkpoint_val_IQ_reads": 0,
+  "classifier_fits": 0,
+  "time": "2026-11-12T10:42:17+08:00"
+}

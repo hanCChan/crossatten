@@ -1,0 +1,28 @@
+{
+  "status": "COMPLETED_STOP_EXPLICIT_MIRROR_ESTIMATOR",
+  "base_commit": "81ec47637594e764141a4774f6481a481b6d8ccd",
+  "branch": "research/wisig-m1-mirror",
+  "phase": "M1-A only",
+  "unique_synthetic_packets": 1728,
+  "synthetic_executions": 2,
+  "total_synthetic_packet_computations": 3456,
+  "synthetic_engineering_format_failures": 1,
+  "unique_source_IQ_packets": 1872,
+  "source_audit_executions": 1,
+  "independent_replay_same_packets": 1872,
+  "classifier_fits": 0,
+  "neural_updates": 0,
+  "source_selection_reads": 0,
+  "checkpoint_val_IQ_reads": 0,
+  "target_data_reads": 0,
+  "M1_B_eligible": false,
+  "M1_C_authorized": false,
+  "automatic_new_candidate": false,
+  "environment": {
+    "python": "3.11.8 (tags/v3.11.8:db85d51, Feb  6 2024, 22:03:32) [MSC v.1937 64 bit (AMD64)]",
+    "numpy": "1.26.4",
+    "scipy": "1.15.1",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "estimation_dtype": "complex128"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "status": "STOP_EXPLICIT_MIRROR_ESTIMATOR",
+  "gates": {
+    "overall_valid_at_least90": false,
+    "every_RX_day_at_least80": false,
+    "present_cell_support_at_least8": true,
+    "all_RX_days_present": true,
+    "mean_validation_advantage_at_least2percent": false,
+    "all_RX_advantage_positive": false,
+    "both_days_advantage_positive": false,
+    "RX_conditional_interval_lower_positive": false,
+    "WL_beats_L_on_held_segment": true
+  },
+  "M1_B_authorized": false,
+  "M1_C_authorized": false,
+  "neural_updates": 0,
+  "classifier_fits": 0,
+  "interpretation": "Only the registered gauge-defined effective estimator; no TX/RX causal separation or TX separability conclusion",
+  "closed": true
+}
