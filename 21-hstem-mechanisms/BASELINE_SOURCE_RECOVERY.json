@@ -1,0 +1,115 @@
+{
+  "time": "2026-11-12T11:58:48+08:00",
+  "status": "PASS",
+  "models": [
+    {
+      "arm": "H0",
+      "fold": 0,
+      "seed": 201,
+      "strict_state_load": true,
+      "source_metrics_exact": true,
+      "source_ce": 0.04263255000114441,
+      "source_ce_delta": 0.0
+    },
+    {
+      "arm": "H0",
+      "fold": 0,
+      "seed": 202,
+      "strict_state_load": true,
+      "source_metrics_exact": true,
+      "source_ce": 0.055064328014850616,
+      "source_ce_delta": 0.0
+    },
+    {
+      "arm": "H0",
+      "fold": 0,
+      "seed": 203,
+      "strict_state_load": true,
+      "source_metrics_exact": true,
+      "source_ce": 0.06202102452516556,
+      "source_ce_delta": 0.0
+    },
+    {
+      "arm": "P0",
+      "fold": 0,
+      "seed": 201,
+      "strict_state_load": true,
+      "source_metrics_exact": true,
+      "source_ce": 0.15676672756671906,
+      "source_ce_delta": 0.0
+    },
+    {
+      "arm": "P0",
+      "fold": 0,
+      "seed": 202,
+      "strict_state_load": true,
+      "source_metrics_exact": true,
+      "source_ce": 0.12440772354602814,
+      "source_ce_delta": 0.0
+    },
+    {
+      "arm": "P0",
+      "fold": 0,
+      "seed": 203,
+      "strict_state_load": true,
+      "source_metrics_exact": true,
+      "source_ce": 0.11425814777612686,
+      "source_ce_delta": 0.0
+    },
+    {
+      "arm": "H0",
+      "fold": 1,
+      "seed": 201,
+      "strict_state_load": true,
+      "source_metrics_exact": true,
+      "source_ce": 0.06361857801675797,
+      "source_ce_delta": 0.0
+    },
+    {
+      "arm": "H0",
+      "fold": 1,
+      "seed": 202,
+      "strict_state_load": true,
+      "source_metrics_exact": true,
+      "source_ce": 0.07295726984739304,
+      "source_ce_delta": 0.0
+    },
+    {
+      "arm": "H0",
+      "fold": 1,
+      "seed": 203,
+      "strict_state_load": true,
+      "source_metrics_exact": true,
+      "source_ce": 0.05783529952168465,
+      "source_ce_delta": 0.0
+    },
+    {
+      "arm": "P0",
+      "fold": 1,
+      "seed": 201,
+      "strict_state_load": true,
+      "source_metrics_exact": true,
+      "source_ce": 0.13065564632415771,
+      "source_ce_delta": 0.0
+    },
+    {
+      "arm": "P0",
+      "fold": 1,
+      "seed": 202,
+      "strict_state_load": true,
+      "source_metrics_exact": true,
+      "source_ce": 0.13183045387268066,
+      "source_ce_delta": 0.0
+    },
+    {
+      "arm": "P0",
+      "fold": 1,
+      "seed": 203,
+      "strict_state_load": true,
+      "source_metrics_exact": true,
+      "source_ce": 0.13017109036445618,
+      "source_ce_delta": 0.0
+    }
+  ],
+  "target_data_read": false
+}
