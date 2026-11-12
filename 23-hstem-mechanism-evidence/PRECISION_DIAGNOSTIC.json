@@ -1,0 +1,14 @@
+{
+  "time": "2026-11-12T22:28:17+08:00",
+  "scope": "Post-failure numerical control;all original failures retained;no tolerance or scientific threshold changes",
+  "new_fits": 0,
+  "atol": 0.0001,
+  "rtol": 0.0001,
+  "default_cudnn_tf32_all_pass": false,
+  "strict_fp32_all_pass": true,
+  "default_max_abs": 0.01956784725189209,
+  "strict_max_abs": 5.3882598876953125e-05,
+  "strict_prediction_disagreements": 0,
+  "default_to_strict_original_prediction_changes": 0,
+  "export_requirement": "Disable cudnn and matmul TF32 for strict FP32 numerical equivalence;no global exactness claim in default reduced-precision convolution"
+}

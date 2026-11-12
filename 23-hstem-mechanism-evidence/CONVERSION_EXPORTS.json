@@ -1,0 +1,79 @@
+{
+  "time": "2026-11-12T22:35:41+08:00",
+  "new_fits": 0,
+  "artifacts": [
+    {
+      "path": "converted/H0_f0_s201_strict_fp32.pt",
+      "sha256": "a25f018a4c4fd10016e1227f844097f28b0a54eafdc59e1540fe51128ac69bc9",
+      "published": false,
+      "precision": "TF32 disabled"
+    },
+    {
+      "path": "converted/H0_f0_s202_strict_fp32.pt",
+      "sha256": "4bc6a7b7ad62347bcd9e3b0067c148b04bb2ccffc7cd56e7e510ca35f9be86b8",
+      "published": false,
+      "precision": "TF32 disabled"
+    },
+    {
+      "path": "converted/H0_f0_s203_strict_fp32.pt",
+      "sha256": "ceaeb4abe2c2af03833fb302fea5918c5a8288de0ccef0f1018aeee924607850",
+      "published": false,
+      "precision": "TF32 disabled"
+    },
+    {
+      "path": "converted/H0_f1_s201_strict_fp32.pt",
+      "sha256": "3c2759387b38d07e69c8999625fd28ad10f372fe86786e1de64fb42871406f57",
+      "published": false,
+      "precision": "TF32 disabled"
+    },
+    {
+      "path": "converted/H0_f1_s202_strict_fp32.pt",
+      "sha256": "0dd9f7e6096cea2eb1bcae169b6b845d5b12323a89967100ce56b70687df930b",
+      "published": false,
+      "precision": "TF32 disabled"
+    },
+    {
+      "path": "converted/H0_f1_s203_strict_fp32.pt",
+      "sha256": "618a0a111d12dd8a602d13313cad16bce97e6ade3e0f17bd2826785a0ca83eb8",
+      "published": false,
+      "precision": "TF32 disabled"
+    },
+    {
+      "path": "converted/S1_f0_s201.pt",
+      "sha256": "727e627e7b5fde754aec5b492226ac4e2242643be4a553a188264559dbea3f69",
+      "published": false,
+      "precision": "original settings"
+    },
+    {
+      "path": "converted/S1_f0_s202.pt",
+      "sha256": "72566370c2ba28c289c88270e3db53503f021f8ba684ef80e577da91dcaae751",
+      "published": false,
+      "precision": "original settings"
+    },
+    {
+      "path": "converted/S1_f0_s203.pt",
+      "sha256": "c0cd686dfe9544593693270d2acd19020128d793b436fe2eb13708c391214fc3",
+      "published": false,
+      "precision": "original settings"
+    },
+    {
+      "path": "converted/S1_f1_s201.pt",
+      "sha256": "3841822deaa2cedb357b5ed11ded0ed569a7f551dbdf7b5803aa3bcafac6433d",
+      "published": false,
+      "precision": "original settings"
+    },
+    {
+      "path": "converted/S1_f1_s202.pt",
+      "sha256": "73f8657fce430f9dd3de7a5a3f651984b255752a08fc4cf29f1280b58c20806b",
+      "published": false,
+      "precision": "original settings"
+    },
+    {
+      "path": "converted/S1_f1_s203.pt",
+      "sha256": "2a796944d28e95d4aaa4267bd617ffae055748cddd06fd451533750344a2b25f",
+      "published": false,
+      "precision": "original settings"
+    }
+  ],
+  "scope": "Local derived inference states only;original checkpoints unchanged"
+}

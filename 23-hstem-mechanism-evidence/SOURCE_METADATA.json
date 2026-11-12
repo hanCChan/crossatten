@@ -1,0 +1,382 @@
+{
+  "time": "2026-11-12T22:28:18+08:00",
+  "records": [
+    {
+      "rx": "b200_mini_1",
+      "path": "D:\\crossatten\\stage_1\\data\\raw\\b200_mini_1_train.h5",
+      "available": true,
+      "fields": {
+        "CFO": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        },
+        "SNR": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        },
+        "data": {
+          "shape": [
+            8000,
+            16384
+          ],
+          "dtype": "float64"
+        },
+        "label": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        }
+      },
+      "root_attribute_names": [],
+      "waveform_arrays_read": false
+    },
+    {
+      "rx": "b210_1",
+      "path": "D:\\crossatten\\stage_1\\data\\raw\\b210_1_train.h5",
+      "available": true,
+      "fields": {
+        "CFO": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        },
+        "SNR": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        },
+        "data": {
+          "shape": [
+            8000,
+            16384
+          ],
+          "dtype": "float64"
+        },
+        "label": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        }
+      },
+      "root_attribute_names": [],
+      "waveform_arrays_read": false
+    },
+    {
+      "rx": "pluto_1",
+      "path": "D:\\crossatten\\stage_1\\data\\raw\\pluto_1_train.h5",
+      "available": true,
+      "fields": {
+        "CFO": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        },
+        "SNR": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        },
+        "data": {
+          "shape": [
+            8000,
+            16384
+          ],
+          "dtype": "float64"
+        },
+        "label": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        }
+      },
+      "root_attribute_names": [],
+      "waveform_arrays_read": false
+    },
+    {
+      "rx": "rtl_1",
+      "path": "D:\\crossatten\\stage_1\\data\\raw\\rtl_1_train.h5",
+      "available": true,
+      "fields": {
+        "CFO": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        },
+        "SNR": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        },
+        "data": {
+          "shape": [
+            8000,
+            16384
+          ],
+          "dtype": "float64"
+        },
+        "label": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        }
+      },
+      "root_attribute_names": [],
+      "waveform_arrays_read": false
+    },
+    {
+      "rx": "rtl_2",
+      "path": "D:\\crossatten\\stage_1\\data\\raw\\rtl_2_train.h5",
+      "available": true,
+      "fields": {
+        "CFO": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        },
+        "SNR": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        },
+        "data": {
+          "shape": [
+            8000,
+            16384
+          ],
+          "dtype": "float64"
+        },
+        "label": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        }
+      },
+      "root_attribute_names": [],
+      "waveform_arrays_read": false
+    },
+    {
+      "rx": "rtl_3",
+      "path": "D:\\crossatten\\stage_1\\data\\raw\\rtl_3_train.h5",
+      "available": true,
+      "fields": {
+        "CFO": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        },
+        "SNR": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        },
+        "data": {
+          "shape": [
+            8000,
+            16384
+          ],
+          "dtype": "float64"
+        },
+        "label": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        }
+      },
+      "root_attribute_names": [],
+      "waveform_arrays_read": false
+    },
+    {
+      "rx": "rtl_5",
+      "path": "D:\\crossatten\\stage_1\\data\\raw\\rtl_5_train.h5",
+      "available": true,
+      "fields": {
+        "CFO": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        },
+        "SNR": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        },
+        "data": {
+          "shape": [
+            8000,
+            16384
+          ],
+          "dtype": "float64"
+        },
+        "label": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        }
+      },
+      "root_attribute_names": [],
+      "waveform_arrays_read": false
+    },
+    {
+      "rx": "rtl_6",
+      "path": "D:\\crossatten\\stage_1\\data\\raw\\rtl_6_train.h5",
+      "available": true,
+      "fields": {
+        "CFO": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        },
+        "SNR": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        },
+        "data": {
+          "shape": [
+            8000,
+            16384
+          ],
+          "dtype": "float64"
+        },
+        "label": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        }
+      },
+      "root_attribute_names": [],
+      "waveform_arrays_read": false
+    },
+    {
+      "rx": "rtl_7",
+      "path": "D:\\crossatten\\stage_1\\data\\raw\\rtl_7_train.h5",
+      "available": true,
+      "fields": {
+        "CFO": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        },
+        "SNR": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        },
+        "data": {
+          "shape": [
+            8000,
+            16384
+          ],
+          "dtype": "float64"
+        },
+        "label": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        }
+      },
+      "root_attribute_names": [],
+      "waveform_arrays_read": false
+    },
+    {
+      "rx": "rtl_9",
+      "path": "D:\\crossatten\\stage_1\\data\\raw\\rtl_9_train.h5",
+      "available": true,
+      "fields": {
+        "CFO": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        },
+        "SNR": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        },
+        "data": {
+          "shape": [
+            8000,
+            16384
+          ],
+          "dtype": "float64"
+        },
+        "label": {
+          "shape": [
+            1,
+            8000
+          ],
+          "dtype": "float64"
+        }
+      },
+      "root_attribute_names": [],
+      "waveform_arrays_read": false
+    }
+  ],
+  "cache_fields": [
+    "x",
+    "y",
+    "rows",
+    "hash manifest"
+  ],
+  "interpretation": "Schema audit only;window rows do not supply adjacent continuous samples or a validated deployment synchronization-error distribution"
+}

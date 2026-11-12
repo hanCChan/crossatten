@@ -1,0 +1,15 @@
+{
+  "time": "2026-11-12T22:35:41+08:00",
+  "status": "COMPLETE_STOP",
+  "recommendation": "A",
+  "meaning": "Complete a manuscript within the already-aligned finite-source LoRa scope;do not claim general synchronization robustness,hardware receiver-invariance or submission readiness",
+  "new_fits": 0,
+  "automatic_next_stage": false,
+  "source_models_recovered": 36,
+  "S1_materialization_bit_exact": true,
+  "default_BN_tolerance_pass": false,
+  "strict_fp32_BN_tolerance_pass": true,
+  "zero_padding_alone_explains_timing_failure": false,
+  "physical_deployment_timing_distribution_verified": false,
+  "blind_qualified_as_new": false
+}

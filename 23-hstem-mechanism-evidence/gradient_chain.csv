@@ -1,0 +1,7 @@
+﻿arm,fold,seed,max_abs,rms_abs,relative_l2,scope
+S1,0,201,7.227888188729437e-07,3.113615699710994e-08,4.050742303815133e-06,grad_w = grad_v @ T;row convention;not an AdamW update
+S1,0,202,7.257930002418922e-07,2.1124012853134964e-08,4.434775919620819e-06,grad_w = grad_v @ T;row convention;not an AdamW update
+S1,0,203,1.1475017000633914e-06,3.655028194225961e-08,3.883495379899526e-06,grad_w = grad_v @ T;row convention;not an AdamW update
+S1,1,201,1.3585990046582896e-06,3.408183380516573e-08,3.52648239677214e-06,grad_w = grad_v @ T;row convention;not an AdamW update
+S1,1,202,7.239730099931063e-07,2.9095527883082646e-08,4.0178541759710254e-06,grad_w = grad_v @ T;row convention;not an AdamW update
+S1,1,203,1.0939124937339728e-06,3.625219095176158e-08,4.635959107047968e-06,grad_w = grad_v @ T;row convention;not an AdamW update
