@@ -1,0 +1,14 @@
+test_25MHz_reference_and_conjugate_time_ambiguity (m1_tests.PhysicsTests.test_25MHz_reference_and_conjugate_time_ambiguity) ... ok
+test_RX_only_is_not_a_TX_parameter (m1_tests.PhysicsTests.test_RX_only_is_not_a_TX_parameter) ... ok
+test_SVD_recovery_and_rank_condition_rejection (m1_tests.PhysicsTests.test_SVD_recovery_and_rank_condition_rejection) ... ok
+test_admissible_cascade_gauge (m1_tests.PhysicsTests.test_admissible_cascade_gauge) ... ok
+test_control_same_support_and_distinct_subspace (m1_tests.PhysicsTests.test_control_same_support_and_distinct_subspace) ... ok
+test_full_cascade_and_wrong_common_rotation (m1_tests.PhysicsTests.test_full_cascade_and_wrong_common_rotation) ... ok
+test_held_segment_cannot_change_fitted_quantities (m1_tests.PhysicsTests.test_held_segment_cannot_change_fitted_quantities) ... ok
+test_invalid_boundaries_and_IO_guard (m1_tests.PhysicsTests.test_invalid_boundaries_and_IO_guard) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.217s
+
+OK
+{'status': 'PASS', 'synthetic_packets': 1728, 'valid_fraction': 0.9635416666666666}
