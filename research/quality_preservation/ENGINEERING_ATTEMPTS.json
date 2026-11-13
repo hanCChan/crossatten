@@ -1,0 +1,18 @@
+{
+  "attempts": [
+    {
+      "id": "synthetic_B1",
+      "status": "FAILED_BEFORE_FIRST_UPDATE",
+      "reason": "Windows numpy arange default int32 labels; CUDA cross entropy requires int64",
+      "scientific_fits": 0
+    },
+    {
+      "id": "synthetic_v2_B1_B2_N0",
+      "status": "PASS",
+      "fix": "Explicit int64 fixture metadata; unchanged scientific kernel",
+      "checks": 22,
+      "synthetic_updates": 240,
+      "scientific_fits": 0
+    }
+  ]
+}

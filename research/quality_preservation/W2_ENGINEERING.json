@@ -1,0 +1,310 @@
+{
+  "status": "PASS",
+  "checks": {
+    "B1_identity_initialization": true,
+    "B1_all_trainable": true,
+    "B1_same_parameter_count": true,
+    "B1_80_updates": true,
+    "B1_10240_BN_samples": true,
+    "B1_EMA_replay": true,
+    "B2_identity_initialization": true,
+    "B2_all_trainable": true,
+    "B2_same_parameter_count": true,
+    "B2_80_updates": true,
+    "B2_10240_BN_samples": true,
+    "B2_EMA_replay": true,
+    "N0_identity_initialization": true,
+    "N0_all_trainable": true,
+    "N0_same_parameter_count": true,
+    "N0_80_updates": true,
+    "N0_10240_BN_samples": true,
+    "N0_EMA_replay": true,
+    "common_initial_parameters": true,
+    "negative_control_no_self_pair": true,
+    "negative_control_is_permutation": true,
+    "negative_control_deterministic": true
+  },
+  "synthetic_fits": 3,
+  "synthetic_updates": 240,
+  "scientific_fits": 0,
+  "source_IQ_reads": 0,
+  "torch": "2.5.0+cu124",
+  "numpy": "1.26.4",
+  "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "results": {
+    "B1": {
+      "status": "COMPLETE",
+      "job": {
+        "id": "synthetic_B1",
+        "family": "ERM_EMA",
+        "readouts": [
+          "C0",
+          "C1"
+        ],
+        "stochastic_seed": 24301,
+        "order_seed": 24201,
+        "weight_decay": 0.001,
+        "epochs": 40,
+        "batch": 128,
+        "max_gradient_updates": 80
+      },
+      "epochs": 40,
+      "updates": 80,
+      "best_epochs": {
+        "C0": 24,
+        "C1": 40
+      },
+      "best_val_rx_ce": {
+        "C0": 2.350942373275757,
+        "C1": 2.3213627338409424
+      },
+      "active_parameters": 83554,
+      "costs": {
+        "training_with_ema_seconds": 1.3135280999704264,
+        "raw_validation_seconds": 0.2443074000038905,
+        "ema_update_host_seconds": 0.202278299984755,
+        "ema_update_cuda_seconds": 0.05675321581959723,
+        "ema_calibration_seconds": 0.5460702999989735,
+        "ema_validation_seconds": 0.1814458999579074,
+        "BN_calibration_samples": 10240,
+        "BN_calibration_passes": 40,
+        "EMA_updates": 80,
+        "total_fit_loop_seconds": 4.221752200013725
+      },
+      "val_inference_replay": {
+        "C0_selected": {
+          "exact": true,
+          "max_abs_numeric_difference": 0.0,
+          "differing_paths": [],
+          "differing_path_count": 0
+        },
+        "C0_epoch10": {
+          "exact": true,
+          "max_abs_numeric_difference": 0.0,
+          "differing_paths": [],
+          "differing_path_count": 0
+        },
+        "C0_final40": {
+          "exact": true,
+          "max_abs_numeric_difference": 0.0,
+          "differing_paths": [],
+          "differing_path_count": 0
+        },
+        "C1_selected": {
+          "exact": true,
+          "max_abs_numeric_difference": 0.0,
+          "differing_paths": [],
+          "differing_path_count": 0
+        },
+        "C1_epoch10": {
+          "exact": true,
+          "max_abs_numeric_difference": 0.0,
+          "differing_paths": [],
+          "differing_path_count": 0
+        },
+        "C1_final40": {
+          "exact": true,
+          "max_abs_numeric_difference": 0.0,
+          "differing_paths": [],
+          "differing_path_count": 0
+        }
+      },
+      "group_names": [
+        "r0",
+        "r1"
+      ],
+      "checkpoints": {
+        "C0_selected.pt": "dd395532f3866dc50c03c0f894121f7a6012ca69f050d1ce9914136a162e2da7",
+        "C0_epoch10.pt": "5c8024ed48df8d11d6a9ee811f4818699b0129373ea536c9458eddddbcc3399e",
+        "C0_final40.pt": "66c78ffd12ca6ae918e189eb1e6a7f6ace9476c211e3f4194a597eaa86dba397",
+        "C1_selected.pt": "8e82a6d691dddb4ae7010365bafb3cd03cebe609a4bef11e24661a85720703a8",
+        "C1_epoch10.pt": "3eb97400eb4daa0696fa6153e40cafc7e76f8f9a054a3a5aa1e1038da1def171",
+        "C1_final40.pt": "168cfabfd9710d99aa7dd1b913c7610fcc2a95e5cc3aa931a4e5dc58ed23af81"
+      }
+    },
+    "B2": {
+      "status": "COMPLETE",
+      "job": {
+        "id": "synthetic_B2",
+        "family": "ERM_EMA",
+        "readouts": [
+          "C0",
+          "C1"
+        ],
+        "stochastic_seed": 24301,
+        "order_seed": 24201,
+        "weight_decay": 0.001,
+        "epochs": 40,
+        "batch": 128,
+        "max_gradient_updates": 80
+      },
+      "epochs": 40,
+      "updates": 80,
+      "best_epochs": {
+        "C0": 24,
+        "C1": 40
+      },
+      "best_val_rx_ce": {
+        "C0": 2.35081148147583,
+        "C1": 2.3213725090026855
+      },
+      "active_parameters": 83554,
+      "costs": {
+        "training_with_ema_seconds": 1.2102434999978868,
+        "raw_validation_seconds": 0.1763127000303939,
+        "ema_update_host_seconds": 0.2982154000783339,
+        "ema_update_cuda_seconds": 0.06361974394321442,
+        "ema_calibration_seconds": 0.5871912999864435,
+        "ema_validation_seconds": 0.16845079997438006,
+        "BN_calibration_samples": 10240,
+        "BN_calibration_passes": 40,
+        "EMA_updates": 80,
+        "total_fit_loop_seconds": 4.192720100007136
+      },
+      "val_inference_replay": {
+        "C0_selected": {
+          "exact": true,
+          "max_abs_numeric_difference": 0.0,
+          "differing_paths": [],
+          "differing_path_count": 0
+        },
+        "C0_epoch10": {
+          "exact": true,
+          "max_abs_numeric_difference": 0.0,
+          "differing_paths": [],
+          "differing_path_count": 0
+        },
+        "C0_final40": {
+          "exact": true,
+          "max_abs_numeric_difference": 0.0,
+          "differing_paths": [],
+          "differing_path_count": 0
+        },
+        "C1_selected": {
+          "exact": true,
+          "max_abs_numeric_difference": 0.0,
+          "differing_paths": [],
+          "differing_path_count": 0
+        },
+        "C1_epoch10": {
+          "exact": true,
+          "max_abs_numeric_difference": 0.0,
+          "differing_paths": [],
+          "differing_path_count": 0
+        },
+        "C1_final40": {
+          "exact": true,
+          "max_abs_numeric_difference": 0.0,
+          "differing_paths": [],
+          "differing_path_count": 0
+        }
+      },
+      "group_names": [
+        "r0",
+        "r1"
+      ],
+      "checkpoints": {
+        "C0_selected.pt": "f55f9cb7e387ccbdd082da35c703015887b76edf3ea967aabf57f486861a3e44",
+        "C0_epoch10.pt": "a5e0accd8aba74f5cfad377c2692cda7ed93e0d1c40433bdce61cca69e6f922d",
+        "C0_final40.pt": "77c9dfcf07b23071b8ba9f6015059df868140963e04f95ff903d49477c126b93",
+        "C1_selected.pt": "53bfd756e9f801dee4d941d95ac576d13bae8721d4c256aa4440f33c0b9c6866",
+        "C1_epoch10.pt": "7a9395af2707bb7a3ea83013d92ea8ac154b9fa7dc1e79db12fd1413cd2c452b",
+        "C1_final40.pt": "444de050a300c206fd57a596a88de0b2d6d473ccd4f6dece2d164deda45d6262"
+      }
+    },
+    "N0": {
+      "status": "COMPLETE",
+      "job": {
+        "id": "synthetic_N0",
+        "family": "ERM_EMA",
+        "readouts": [
+          "C0",
+          "C1"
+        ],
+        "stochastic_seed": 24301,
+        "order_seed": 24201,
+        "weight_decay": 0.001,
+        "epochs": 40,
+        "batch": 128,
+        "max_gradient_updates": 80
+      },
+      "epochs": 40,
+      "updates": 80,
+      "best_epochs": {
+        "C0": 24,
+        "C1": 40
+      },
+      "best_val_rx_ce": {
+        "C0": 2.3508834838867188,
+        "C1": 2.3213672637939453
+      },
+      "active_parameters": 83554,
+      "costs": {
+        "training_with_ema_seconds": 1.3087595999677433,
+        "raw_validation_seconds": 0.1902189999964321,
+        "ema_update_host_seconds": 0.4490424000105122,
+        "ema_update_cuda_seconds": 0.053552032083272916,
+        "ema_calibration_seconds": 0.5914163999841549,
+        "ema_validation_seconds": 0.19198019999021199,
+        "BN_calibration_samples": 10240,
+        "BN_calibration_passes": 40,
+        "EMA_updates": 80,
+        "total_fit_loop_seconds": 4.305996600000071
+      },
+      "val_inference_replay": {
+        "C0_selected": {
+          "exact": true,
+          "max_abs_numeric_difference": 0.0,
+          "differing_paths": [],
+          "differing_path_count": 0
+        },
+        "C0_epoch10": {
+          "exact": true,
+          "max_abs_numeric_difference": 0.0,
+          "differing_paths": [],
+          "differing_path_count": 0
+        },
+        "C0_final40": {
+          "exact": true,
+          "max_abs_numeric_difference": 0.0,
+          "differing_paths": [],
+          "differing_path_count": 0
+        },
+        "C1_selected": {
+          "exact": true,
+          "max_abs_numeric_difference": 0.0,
+          "differing_paths": [],
+          "differing_path_count": 0
+        },
+        "C1_epoch10": {
+          "exact": true,
+          "max_abs_numeric_difference": 0.0,
+          "differing_paths": [],
+          "differing_path_count": 0
+        },
+        "C1_final40": {
+          "exact": true,
+          "max_abs_numeric_difference": 0.0,
+          "differing_paths": [],
+          "differing_path_count": 0
+        }
+      },
+      "group_names": [
+        "r0",
+        "r1"
+      ],
+      "checkpoints": {
+        "C0_selected.pt": "22a33195329f4a7b4fd1d4087850edbffec3409ae7979c0e65dc1217bba3ec65",
+        "C0_epoch10.pt": "2801d890c9f3207d56ed4e8115fcc1099857325d9c51691f241ee7dd34fabc3d",
+        "C0_final40.pt": "190c2d17f7e5d76f4efed61497b2b254e91621b22fc0fd99218adae1a4b3651d",
+        "C1_selected.pt": "1db49598b7a88b202936d7563dc912d71ae02e15e7521b8006efeefcb49b96d4",
+        "C1_epoch10.pt": "dfcd0ca0aa1fab082c690f510a1857665664061a091b62da7f621c27f46e46e4",
+        "C1_final40.pt": "5ad8b5d33f706b1039b2207ee69c9b68076de3414fd953dd25acba14edd75d55"
+      }
+    }
+  },
+  "code_sha256": {
+    "w2_models.py": "da8e4c0d9deea26dd48b8137d786676c592ff950d0d5a65b3a506ffffa4ecfe2",
+    "w2_engineering.py": "b607118c023e331ce7d94d591935a27a16f0a0bf91852f7ff952ef9b138b8f02"
+  }
+}
