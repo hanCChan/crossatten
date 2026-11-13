@@ -1,0 +1,1829 @@
+{
+  "status": "PREREGISTERED_W1_CONDITIONAL_W2",
+  "date": "2026-11-13",
+  "authorization": "参考方案执行，可以根据现实成果，独立思考",
+  "base_commit": "02537cb",
+  "source_input_whitelist": {
+    "fit_x": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_x.npy",
+      "sha256": "84af80579acafeabfb856e4cc852896636b880a4b885f4e45cc0cdaebae3bb4a"
+    },
+    "fit_y": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_y.npy",
+      "sha256": "dddba3c9e165ccb0b117ac6cd0eeaac2dc8603f71a541358f06348895a72fef4"
+    },
+    "fit_rx": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_rx.npy",
+      "sha256": "0d5e93eb6d0dd5cd83b3f7a79086e608b57683e82a8824b239f219909670c683"
+    },
+    "fit_day": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_day.npy",
+      "sha256": "09378871910c2dfbb7c232f3aa2251372411c0be005f95c723c72aa50c520192"
+    },
+    "train_ids": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\train_ids.npy",
+      "sha256": "35222d9edb897476681663e9373ad1a31708977d54886f1a39b66b7e547fcefc"
+    },
+    "val_ids": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\val_ids.npy",
+      "sha256": "fad5db16254ce8960724ca9d685845fa498d59c5fc2927d7da6e7198830f4693"
+    },
+    "fit_manifest": {
+      "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_manifest.json",
+      "sha256": "0fb3a069d62804751a1327ee44ea34f422808083f5db2af0ef52e331db70b88f"
+    }
+  },
+  "rx_names": [
+    "1-1",
+    "1-19",
+    "1-20",
+    "13-14",
+    "13-7",
+    "14-7",
+    "18-19",
+    "18-2",
+    "2-1",
+    "2-19",
+    "23-3",
+    "23-5",
+    "23-6",
+    "23-7",
+    "24-13",
+    "24-16",
+    "24-5",
+    "24-6",
+    "3-19",
+    "7-14",
+    "7-7",
+    "8-14",
+    "8-7",
+    "8-8"
+  ],
+  "views": [
+    {
+      "id": "V0",
+      "source_selection_rx": [
+        "8-8",
+        "24-16",
+        "7-7",
+        "24-6",
+        "7-14",
+        "23-3"
+      ],
+      "source_selection": {
+        "rows": 11468,
+        "dtype": "int64",
+        "indices_array_sha256": "d8b6aa77c5d1bfc09c3f804ec6013e69a2d2714d7bed72b667f03881c01befeb",
+        "rx": [
+          "23-3",
+          "24-16",
+          "24-6",
+          "7-14",
+          "7-7",
+          "8-8"
+        ],
+        "days": [
+          1,
+          2
+        ],
+        "tx_day_support": [
+          {
+            "tx": 0,
+            "day": 1,
+            "rows": 400
+          },
+          {
+            "tx": 0,
+            "day": 2,
+            "rows": 568
+          },
+          {
+            "tx": 1,
+            "day": 1,
+            "rows": 600
+          },
+          {
+            "tx": 1,
+            "day": 2,
+            "rows": 600
+          },
+          {
+            "tx": 2,
+            "day": 1,
+            "rows": 600
+          },
+          {
+            "tx": 2,
+            "day": 2,
+            "rows": 500
+          },
+          {
+            "tx": 3,
+            "day": 1,
+            "rows": 600
+          },
+          {
+            "tx": 3,
+            "day": 2,
+            "rows": 600
+          },
+          {
+            "tx": 4,
+            "day": 1,
+            "rows": 600
+          },
+          {
+            "tx": 4,
+            "day": 2,
+            "rows": 600
+          },
+          {
+            "tx": 5,
+            "day": 1,
+            "rows": 600
+          },
+          {
+            "tx": 5,
+            "day": 2,
+            "rows": 600
+          },
+          {
+            "tx": 6,
+            "day": 1,
+            "rows": 600
+          },
+          {
+            "tx": 6,
+            "day": 2,
+            "rows": 600
+          },
+          {
+            "tx": 7,
+            "day": 1,
+            "rows": 600
+          },
+          {
+            "tx": 7,
+            "day": 2,
+            "rows": 600
+          },
+          {
+            "tx": 8,
+            "day": 1,
+            "rows": 500
+          },
+          {
+            "tx": 8,
+            "day": 2,
+            "rows": 500
+          },
+          {
+            "tx": 9,
+            "day": 1,
+            "rows": 600
+          },
+          {
+            "tx": 9,
+            "day": 2,
+            "rows": 600
+          }
+        ],
+        "tx_rx_day_support": [
+          {
+            "rx": "23-3",
+            "tx": 0,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "23-3",
+            "tx": 0,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "23-3",
+            "tx": 1,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "23-3",
+            "tx": 1,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "23-3",
+            "tx": 2,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "23-3",
+            "tx": 2,
+            "day": 2,
+            "rows": 0
+          },
+          {
+            "rx": "23-3",
+            "tx": 3,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "23-3",
+            "tx": 3,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "23-3",
+            "tx": 4,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "23-3",
+            "tx": 4,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "23-3",
+            "tx": 5,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "23-3",
+            "tx": 5,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "23-3",
+            "tx": 6,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "23-3",
+            "tx": 6,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "23-3",
+            "tx": 7,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "23-3",
+            "tx": 7,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "23-3",
+            "tx": 8,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "23-3",
+            "tx": 8,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "23-3",
+            "tx": 9,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "23-3",
+            "tx": 9,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-16",
+            "tx": 0,
+            "day": 1,
+            "rows": 0
+          },
+          {
+            "rx": "24-16",
+            "tx": 0,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-16",
+            "tx": 1,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-16",
+            "tx": 1,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-16",
+            "tx": 2,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-16",
+            "tx": 2,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-16",
+            "tx": 3,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-16",
+            "tx": 3,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-16",
+            "tx": 4,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-16",
+            "tx": 4,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-16",
+            "tx": 5,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-16",
+            "tx": 5,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-16",
+            "tx": 6,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-16",
+            "tx": 6,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-16",
+            "tx": 7,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-16",
+            "tx": 7,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-16",
+            "tx": 8,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-16",
+            "tx": 8,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-16",
+            "tx": 9,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-16",
+            "tx": 9,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-6",
+            "tx": 0,
+            "day": 1,
+            "rows": 0
+          },
+          {
+            "rx": "24-6",
+            "tx": 0,
+            "day": 2,
+            "rows": 68
+          },
+          {
+            "rx": "24-6",
+            "tx": 1,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-6",
+            "tx": 1,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-6",
+            "tx": 2,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-6",
+            "tx": 2,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-6",
+            "tx": 3,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-6",
+            "tx": 3,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-6",
+            "tx": 4,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-6",
+            "tx": 4,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-6",
+            "tx": 5,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-6",
+            "tx": 5,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-6",
+            "tx": 6,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-6",
+            "tx": 6,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-6",
+            "tx": 7,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-6",
+            "tx": 7,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-6",
+            "tx": 8,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-6",
+            "tx": 8,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-6",
+            "tx": 9,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-6",
+            "tx": 9,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "7-14",
+            "tx": 0,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "7-14",
+            "tx": 0,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "7-14",
+            "tx": 1,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "7-14",
+            "tx": 1,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "7-14",
+            "tx": 2,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "7-14",
+            "tx": 2,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "7-14",
+            "tx": 3,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "7-14",
+            "tx": 3,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "7-14",
+            "tx": 4,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "7-14",
+            "tx": 4,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "7-14",
+            "tx": 5,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "7-14",
+            "tx": 5,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "7-14",
+            "tx": 6,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "7-14",
+            "tx": 6,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "7-14",
+            "tx": 7,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "7-14",
+            "tx": 7,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "7-14",
+            "tx": 8,
+            "day": 1,
+            "rows": 0
+          },
+          {
+            "rx": "7-14",
+            "tx": 8,
+            "day": 2,
+            "rows": 0
+          },
+          {
+            "rx": "7-14",
+            "tx": 9,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "7-14",
+            "tx": 9,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "7-7",
+            "tx": 0,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "7-7",
+            "tx": 0,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "7-7",
+            "tx": 1,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "7-7",
+            "tx": 1,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "7-7",
+            "tx": 2,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "7-7",
+            "tx": 2,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "7-7",
+            "tx": 3,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "7-7",
+            "tx": 3,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "7-7",
+            "tx": 4,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "7-7",
+            "tx": 4,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "7-7",
+            "tx": 5,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "7-7",
+            "tx": 5,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "7-7",
+            "tx": 6,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "7-7",
+            "tx": 6,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "7-7",
+            "tx": 7,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "7-7",
+            "tx": 7,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "7-7",
+            "tx": 8,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "7-7",
+            "tx": 8,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "7-7",
+            "tx": 9,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "7-7",
+            "tx": 9,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "8-8",
+            "tx": 0,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "8-8",
+            "tx": 0,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "8-8",
+            "tx": 1,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "8-8",
+            "tx": 1,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "8-8",
+            "tx": 2,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "8-8",
+            "tx": 2,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "8-8",
+            "tx": 3,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "8-8",
+            "tx": 3,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "8-8",
+            "tx": 4,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "8-8",
+            "tx": 4,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "8-8",
+            "tx": 5,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "8-8",
+            "tx": 5,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "8-8",
+            "tx": 6,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "8-8",
+            "tx": 6,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "8-8",
+            "tx": 7,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "8-8",
+            "tx": 7,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "8-8",
+            "tx": 8,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "8-8",
+            "tx": 8,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "8-8",
+            "tx": 9,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "8-8",
+            "tx": 9,
+            "day": 2,
+            "rows": 100
+          }
+        ]
+      }
+    },
+    {
+      "id": "V1",
+      "source_selection_rx": [
+        "13-14",
+        "23-6",
+        "13-7",
+        "24-5",
+        "24-13",
+        "8-14"
+      ],
+      "source_selection": {
+        "rows": 11500,
+        "dtype": "int64",
+        "indices_array_sha256": "d3470e5240390dcb40dcabd90b78748215f7710827a9a02ff756ca7850816096",
+        "rx": [
+          "13-14",
+          "13-7",
+          "23-6",
+          "24-13",
+          "24-5",
+          "8-14"
+        ],
+        "days": [
+          1,
+          2
+        ],
+        "tx_day_support": [
+          {
+            "tx": 0,
+            "day": 1,
+            "rows": 600
+          },
+          {
+            "tx": 0,
+            "day": 2,
+            "rows": 600
+          },
+          {
+            "tx": 1,
+            "day": 1,
+            "rows": 600
+          },
+          {
+            "tx": 1,
+            "day": 2,
+            "rows": 600
+          },
+          {
+            "tx": 2,
+            "day": 1,
+            "rows": 600
+          },
+          {
+            "tx": 2,
+            "day": 2,
+            "rows": 500
+          },
+          {
+            "tx": 3,
+            "day": 1,
+            "rows": 500
+          },
+          {
+            "tx": 3,
+            "day": 2,
+            "rows": 500
+          },
+          {
+            "tx": 4,
+            "day": 1,
+            "rows": 600
+          },
+          {
+            "tx": 4,
+            "day": 2,
+            "rows": 600
+          },
+          {
+            "tx": 5,
+            "day": 1,
+            "rows": 600
+          },
+          {
+            "tx": 5,
+            "day": 2,
+            "rows": 600
+          },
+          {
+            "tx": 6,
+            "day": 1,
+            "rows": 600
+          },
+          {
+            "tx": 6,
+            "day": 2,
+            "rows": 600
+          },
+          {
+            "tx": 7,
+            "day": 1,
+            "rows": 500
+          },
+          {
+            "tx": 7,
+            "day": 2,
+            "rows": 500
+          },
+          {
+            "tx": 8,
+            "day": 1,
+            "rows": 600
+          },
+          {
+            "tx": 8,
+            "day": 2,
+            "rows": 600
+          },
+          {
+            "tx": 9,
+            "day": 1,
+            "rows": 600
+          },
+          {
+            "tx": 9,
+            "day": 2,
+            "rows": 600
+          }
+        ],
+        "tx_rx_day_support": [
+          {
+            "rx": "13-14",
+            "tx": 0,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "13-14",
+            "tx": 0,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "13-14",
+            "tx": 1,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "13-14",
+            "tx": 1,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "13-14",
+            "tx": 2,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "13-14",
+            "tx": 2,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "13-14",
+            "tx": 3,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "13-14",
+            "tx": 3,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "13-14",
+            "tx": 4,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "13-14",
+            "tx": 4,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "13-14",
+            "tx": 5,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "13-14",
+            "tx": 5,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "13-14",
+            "tx": 6,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "13-14",
+            "tx": 6,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "13-14",
+            "tx": 7,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "13-14",
+            "tx": 7,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "13-14",
+            "tx": 8,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "13-14",
+            "tx": 8,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "13-14",
+            "tx": 9,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "13-14",
+            "tx": 9,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "13-7",
+            "tx": 0,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "13-7",
+            "tx": 0,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "13-7",
+            "tx": 1,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "13-7",
+            "tx": 1,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "13-7",
+            "tx": 2,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "13-7",
+            "tx": 2,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "13-7",
+            "tx": 3,
+            "day": 1,
+            "rows": 0
+          },
+          {
+            "rx": "13-7",
+            "tx": 3,
+            "day": 2,
+            "rows": 0
+          },
+          {
+            "rx": "13-7",
+            "tx": 4,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "13-7",
+            "tx": 4,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "13-7",
+            "tx": 5,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "13-7",
+            "tx": 5,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "13-7",
+            "tx": 6,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "13-7",
+            "tx": 6,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "13-7",
+            "tx": 7,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "13-7",
+            "tx": 7,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "13-7",
+            "tx": 8,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "13-7",
+            "tx": 8,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "13-7",
+            "tx": 9,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "13-7",
+            "tx": 9,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "23-6",
+            "tx": 0,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "23-6",
+            "tx": 0,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "23-6",
+            "tx": 1,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "23-6",
+            "tx": 1,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "23-6",
+            "tx": 2,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "23-6",
+            "tx": 2,
+            "day": 2,
+            "rows": 0
+          },
+          {
+            "rx": "23-6",
+            "tx": 3,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "23-6",
+            "tx": 3,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "23-6",
+            "tx": 4,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "23-6",
+            "tx": 4,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "23-6",
+            "tx": 5,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "23-6",
+            "tx": 5,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "23-6",
+            "tx": 6,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "23-6",
+            "tx": 6,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "23-6",
+            "tx": 7,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "23-6",
+            "tx": 7,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "23-6",
+            "tx": 8,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "23-6",
+            "tx": 8,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "23-6",
+            "tx": 9,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "23-6",
+            "tx": 9,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-13",
+            "tx": 0,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-13",
+            "tx": 0,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-13",
+            "tx": 1,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-13",
+            "tx": 1,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-13",
+            "tx": 2,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-13",
+            "tx": 2,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-13",
+            "tx": 3,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-13",
+            "tx": 3,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-13",
+            "tx": 4,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-13",
+            "tx": 4,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-13",
+            "tx": 5,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-13",
+            "tx": 5,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-13",
+            "tx": 6,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-13",
+            "tx": 6,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-13",
+            "tx": 7,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-13",
+            "tx": 7,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-13",
+            "tx": 8,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-13",
+            "tx": 8,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-13",
+            "tx": 9,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-13",
+            "tx": 9,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-5",
+            "tx": 0,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-5",
+            "tx": 0,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-5",
+            "tx": 1,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-5",
+            "tx": 1,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-5",
+            "tx": 2,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-5",
+            "tx": 2,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-5",
+            "tx": 3,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-5",
+            "tx": 3,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-5",
+            "tx": 4,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-5",
+            "tx": 4,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-5",
+            "tx": 5,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-5",
+            "tx": 5,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-5",
+            "tx": 6,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-5",
+            "tx": 6,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-5",
+            "tx": 7,
+            "day": 1,
+            "rows": 0
+          },
+          {
+            "rx": "24-5",
+            "tx": 7,
+            "day": 2,
+            "rows": 0
+          },
+          {
+            "rx": "24-5",
+            "tx": 8,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-5",
+            "tx": 8,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "24-5",
+            "tx": 9,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "24-5",
+            "tx": 9,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "8-14",
+            "tx": 0,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "8-14",
+            "tx": 0,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "8-14",
+            "tx": 1,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "8-14",
+            "tx": 1,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "8-14",
+            "tx": 2,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "8-14",
+            "tx": 2,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "8-14",
+            "tx": 3,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "8-14",
+            "tx": 3,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "8-14",
+            "tx": 4,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "8-14",
+            "tx": 4,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "8-14",
+            "tx": 5,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "8-14",
+            "tx": 5,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "8-14",
+            "tx": 6,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "8-14",
+            "tx": 6,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "8-14",
+            "tx": 7,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "8-14",
+            "tx": 7,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "8-14",
+            "tx": 8,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "8-14",
+            "tx": 8,
+            "day": 2,
+            "rows": 100
+          },
+          {
+            "rx": "8-14",
+            "tx": 9,
+            "day": 1,
+            "rows": 100
+          },
+          {
+            "rx": "8-14",
+            "tx": 9,
+            "day": 2,
+            "rows": 100
+          }
+        ]
+      }
+    }
+  ],
+  "predictions": {
+    "V0/S0/F0": {
+      "path": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V0_S0_P0\\selected_selection.npz",
+      "sha256": "c757a8d022ea083c487b3368608abfc5be68c07eec47748cc6ded8ff19f1772c"
+    },
+    "V0/S0/E0": {
+      "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S0_wd1e3_ERM_EMA\\C1_selected_selection.npz",
+      "sha256": "b9d3e78db0f7b027d657733b226e55caa26fbfff5390857513468887b3dd6981"
+    },
+    "V0/S1/F0": {
+      "path": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V0_S1_P0\\selected_selection.npz",
+      "sha256": "fbd9b543a99f5324e83e46bf590a3d9b0b789bfd8905c5a4268958c49ea27a0c"
+    },
+    "V0/S1/E0": {
+      "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S1_wd1e3_ERM_EMA\\C1_selected_selection.npz",
+      "sha256": "1a7f5e562d4e9e804aabdc2b08d36737854f98d18e1391966ad63bc443348900"
+    },
+    "V0/S2/F0": {
+      "path": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V0_S2_P0\\selected_selection.npz",
+      "sha256": "b3c53195427040ee62dbe2a39bdb2c9179d2ccb52597dc83fbe15ae96adb8a52"
+    },
+    "V0/S2/E0": {
+      "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S2_wd1e3_ERM_EMA\\C1_selected_selection.npz",
+      "sha256": "395b56913f3ed84bd2df1ab10c8c785b810333db45519f82064e3f23ac04f71f"
+    },
+    "V1/S0/F0": {
+      "path": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V1_S0_P0\\selected_selection.npz",
+      "sha256": "934a01f0d8f34656d28c8ea7c06c69fea299b33bcfe556fe384db9d49aeb127e"
+    },
+    "V1/S0/E0": {
+      "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S0_wd1e3_ERM_EMA\\C1_selected_selection.npz",
+      "sha256": "90c7edc6ab1dbeefb6b410f9beea61e86e6ccb4f88fc6b671e04316a5e461b9c"
+    },
+    "V1/S1/F0": {
+      "path": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V1_S1_P0\\selected_selection.npz",
+      "sha256": "7e9b41ca4d1228aebee9962e6df6a8fb18529de30774ffaacfc24ce7539357f2"
+    },
+    "V1/S1/E0": {
+      "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S1_wd1e3_ERM_EMA\\C1_selected_selection.npz",
+      "sha256": "0faa781d37f6200fd30fcd8923d4933f2d4c77ee5c5ef84078c281e655096835"
+    },
+    "V1/S2/F0": {
+      "path": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V1_S2_P0\\selected_selection.npz",
+      "sha256": "b76c9ee709ad7bcb549f63fee8e65d9abc20dada0d148c84475e0459f0756bcc"
+    },
+    "V1/S2/E0": {
+      "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S2_wd1e3_ERM_EMA\\C1_selected_selection.npz",
+      "sha256": "2bc1e91e4e193dde73f00d15006c13dc4b41bdf6954c099794df18a4decfaf5c"
+    }
+  },
+  "primary": "q20_mean",
+  "bootstrap_seed": 27113,
+  "bootstrap_count": 20000,
+  "maximum_W1_deep_fits": 0,
+  "maximum_conditional_W2_fits": 24,
+  "code_sha256": {
+    "quality.py": "cd58d4451b08985639f3e9eb1e694dde2c2985a183ef1eb51dd98d74ff55d9b2",
+    "test_quality.py": "21fbbe2f117ed7d91e5f5f0c79dad07e912f74090a32e6e50f247b70d16ad6fb",
+    "run_w1.py": "db38466298a415775158d07a8f873a0b5e1d8d95c8220cc766b2af64b7adb738",
+    "PREREGISTRATION.zh-CN.md": "a41c82364005757695f76153a35f1b8efd3da66635fc3dccab10fbba5a113296"
+  }
+}

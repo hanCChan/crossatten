@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "tests": 6,
+  "command": "D:/crossatten/.venv/Scripts/python.exe research/quality_preservation/test_quality.py",
+  "checks": [
+    "CFO and gain invariance",
+    "controlled noise lowers repeatability",
+    "local corruption localization",
+    "invalid packets retained",
+    "conditional fixed-TX confounding removal",
+    "stable ties and RX bootstrap positive control"
+  ]
+}
