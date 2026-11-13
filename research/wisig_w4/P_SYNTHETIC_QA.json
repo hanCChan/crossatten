@@ -1,0 +1,147 @@
+{
+  "status": "PASS",
+  "CPU_geometry_and_sampler_tests": 7,
+  "GPU_auxiliary_optimization_updates": 24,
+  "GPU_synthetic_fits": 2,
+  "paired_initialization_and_sample_order_exact": true,
+  "relation_gradient_nonzero": true,
+  "geometry_collapse_guard_passed": true,
+  "EMA_BN_calibration_preserves_state": true,
+  "head_transfer_preserves_shared_state": true,
+  "lambda_example": {
+    "seed": 0,
+    "lambda_value": 0.061317790023059114,
+    "probes": [
+      {
+        "CE": 4.349565505981445,
+        "relation": 0.14213013648986816,
+        "CE_gradient_norm": 1.848302960395813,
+        "relation_gradient_norm": 3.0299627780914307,
+        "minimum_relative_spread": 2.664390802383423
+      },
+      {
+        "CE": 4.3383684158325195,
+        "relation": 0.1439482718706131,
+        "CE_gradient_norm": 1.8497120141983032,
+        "relation_gradient_norm": 3.2638320922851562,
+        "minimum_relative_spread": 2.976515293121338
+      },
+      {
+        "CE": 4.338374614715576,
+        "relation": 0.13277891278266907,
+        "CE_gradient_norm": 1.8463530540466309,
+        "relation_gradient_norm": 3.136406421661377,
+        "minimum_relative_spread": 2.770909309387207
+      },
+      {
+        "CE": 4.341028213500977,
+        "relation": 0.12061727046966553,
+        "CE_gradient_norm": 1.839678168296814,
+        "relation_gradient_norm": 2.612056255340576,
+        "minimum_relative_spread": 2.484813928604126
+      }
+    ],
+    "fit_batches": 4,
+    "optimizer_updates": 0,
+    "initial_state_sha256": "8d7745e18c256eb6a5feb2ba0763eef6cb14ca46cbe0c2f1554683cd6f3797f9",
+    "original_state_and_rng_preserved": true
+  },
+  "official_IQ_reads": 0,
+  "scientific_fits": 0,
+  "engineering_results": {
+    "A1": {
+      "status": "COMPLETE",
+      "job": {
+        "id": "engineering_A1",
+        "stage": "aux",
+        "arm": "A1",
+        "seed": 0,
+        "epochs": 1,
+        "synthetic_only": true
+      },
+      "updates": 12,
+      "best_epoch": 1,
+      "best_aux_val_RX_CE": 4.050439834594727,
+      "parameter_count": 86456,
+      "initial_state_sha256": "8d7745e18c256eb6a5feb2ba0763eef6cb14ca46cbe0c2f1554683cd6f3797f9",
+      "lambda_used": 0,
+      "seconds": 0.37653860000136774,
+      "costs": {
+        "gradient_seconds": 0.20474609998927917,
+        "validation_seconds": 0.040638699996634386,
+        "BN_calibration_seconds": 0.042272599996067584,
+        "BN_samples": 2304,
+        "BN_passes": 1,
+        "EMA_updates": 12
+      },
+      "selected_validation_bitwise_replay": true,
+      "selected_checkpoint": {
+        "path": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\engineering_A1\\selected.pt",
+        "sha256": "106c90b0c67eb9a7b9ade2f2c9f36bcba07cef7e469a0c68bafa1cf23a4871c7",
+        "bytes": 364842
+      },
+      "selected_predictions": {
+        "path": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\engineering_A1\\selected_val.npz",
+        "sha256": "5be1d4bb014102c6240bea5ab9fa16cfeae8bf825071607c3f1c4518e1d7b02c",
+        "bytes": 209707
+      },
+      "final_state": {
+        "path": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\engineering_A1\\final_state.pt",
+        "sha256": "db3acb660960467e876b323812004f1f97fa0bf7fcecaba2f550c83a1a211a24",
+        "bytes": 1455834
+      },
+      "history": {
+        "path": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\engineering_A1\\HISTORY.json",
+        "sha256": "084f1fadeb0520c82bfcce6763d0c847867e9cc5caeabcf280d1cb4a2cde2d73",
+        "bytes": 498
+      }
+    },
+    "A2": {
+      "status": "COMPLETE",
+      "job": {
+        "id": "engineering_A2",
+        "stage": "aux",
+        "arm": "A2",
+        "seed": 0,
+        "epochs": 1,
+        "synthetic_only": true
+      },
+      "updates": 12,
+      "best_epoch": 1,
+      "best_aux_val_RX_CE": 4.051905632019043,
+      "parameter_count": 86456,
+      "initial_state_sha256": "8d7745e18c256eb6a5feb2ba0763eef6cb14ca46cbe0c2f1554683cd6f3797f9",
+      "lambda_used": 0.061317790023059114,
+      "seconds": 0.2788072000112152,
+      "costs": {
+        "gradient_seconds": 0.14682569999422412,
+        "validation_seconds": 0.022380100010195747,
+        "BN_calibration_seconds": 0.03765699999348726,
+        "BN_samples": 2304,
+        "BN_passes": 1,
+        "EMA_updates": 12
+      },
+      "selected_validation_bitwise_replay": true,
+      "selected_checkpoint": {
+        "path": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\engineering_A2\\selected.pt",
+        "sha256": "2eb22a3cbee4acc0244f4ad3438560e89d55fcdc65613185536613a4ce775e19",
+        "bytes": 364842
+      },
+      "selected_predictions": {
+        "path": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\engineering_A2\\selected_val.npz",
+        "sha256": "4200bfbcdca3d7f5d476d1ee0b1a6ad25b143b90871a40a52aa97cb70d0e7426",
+        "bytes": 209741
+      },
+      "final_state": {
+        "path": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\engineering_A2\\final_state.pt",
+        "sha256": "2ef23c1eee01db51702e53b328334851510c07a0a4909a08d8e40219cfac6ce3",
+        "bytes": 1455834
+      },
+      "history": {
+        "path": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\engineering_A2\\HISTORY.json",
+        "sha256": "53843d801b7564b37bf9b1b743f7d96161c44d2fa36f653680c3b917cd5fe60e",
+        "bytes": 517
+      }
+    }
+  }
+}
