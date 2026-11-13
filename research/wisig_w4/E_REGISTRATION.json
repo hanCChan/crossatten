@@ -1,0 +1,17 @@
+{
+  "status": "FROZEN_BEFORE_PAIRED_PREDICTION_VALUES",
+  "time": "2026-11-13T07:44:06.588673+00:00",
+  "primary_oracle_headroom_pp": 3,
+  "aggregation": "Mean of four fold RX-equal oracle minus best single in that fold",
+  "fusion": "At most one RX-equal fit-validation CE-minimizing scalar alpha per fold; T=1; 64 derivative bisections",
+  "files_sha256": {
+    "research/wisig_w4/e_audit.py": "48af12d6156e6a5c0e6fcd3b29d156bb11ff12276a500b78abcc2303050a2aaf",
+    "research/wisig_w4/common.py": "589846c7ca9020154c2c924cfc2e66b9575dbed644964ea7e988d9fa9e553a79",
+    "research/wisig_w4/E_INPUTS.json": "afbbad8206b743bc5cbea5bd10d559e3d3cd1e4a70df96d85c238a499f8ec4d9",
+    "research/wisig_w4/PREREGISTRATION.zh-CN.md": "c07f051201d325fa4633400ca40dda63d6a6d337373558d02377ff3325c79d05",
+    "19-tx-spectral-evidence/s19_data.py": "2487334a4a9cd63a6ef1a4e436f227e845325a4837865fc211553115f692ae75",
+    "20-asknet-source-comparison/s20_run.py": "c326b616542e7f0d5d296c064be1a825c09fdc0d342e393232d93afa745c21eb",
+    "20-asknet-source-comparison/s20_finalize.py": "d24da1721915b9ce726b1c2cb85475f92b301c99e639c4a26a58a494e9fee914"
+  },
+  "new_neural_fits": 0
+}
