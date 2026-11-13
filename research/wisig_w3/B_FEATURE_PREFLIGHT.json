@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "only_synthetic_IQ": true,
+  "official_IQ_rows_decoded": 0,
+  "models": {
+    "EMA": {
+      "checkpoint": {
+        "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S0_wd1e3_ERM_EMA\\C1_selected.pt",
+        "sha256": "8aa97fb78d5a7992b081c274911644d02b51e66b7385959ab76e9e63e9eafb79"
+      },
+      "feature_head_equals_original_forward": true,
+      "shape": [
+        7,
+        64
+      ],
+      "state_sha256": "a8d816d2206a1b5ffcf934cc481a269dcea1939663a524d3db2b17a4d5a6b536",
+      "unchanged": true
+    },
+    "ERM": {
+      "checkpoint": {
+        "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S0_wd1e3_ERM_EMA\\C0_selected.pt",
+        "sha256": "8503320e833d30c3f9ab565846faf228ab4231b9f4c737648ccc41cdbb592145"
+      },
+      "feature_head_equals_original_forward": true,
+      "shape": [
+        7,
+        64
+      ],
+      "state_sha256": "71eecf240d321862bed05d2880ae14ad4390aff447320c073060c8245e12f9a8",
+      "unchanged": true
+    }
+  }
+}
