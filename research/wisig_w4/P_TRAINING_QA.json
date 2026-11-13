@@ -1,0 +1,138 @@
+{
+  "status": "PASS_PRE_HELD_TRAINING_AND_TRANSFER_AUDIT",
+  "time": "2026-11-13T08:18:58.755677+00:00",
+  "own_code_sha256": "f6509e0cc11cd4db6e5e887842e7564ba5794a954dd5b36a73f4389d0439efe6",
+  "fits": [
+    {
+      "job": "A1_S0_aux",
+      "all_checkpoint_hashes_pass": true,
+      "fixed_40_epochs": true,
+      "selected_epoch_is_first_minimum": true
+    },
+    {
+      "job": "A2_S0_aux",
+      "all_checkpoint_hashes_pass": true,
+      "fixed_40_epochs": true,
+      "selected_epoch_is_first_minimum": true
+    },
+    {
+      "job": "A1_S1_aux",
+      "all_checkpoint_hashes_pass": true,
+      "fixed_40_epochs": true,
+      "selected_epoch_is_first_minimum": true
+    },
+    {
+      "job": "A2_S1_aux",
+      "all_checkpoint_hashes_pass": true,
+      "fixed_40_epochs": true,
+      "selected_epoch_is_first_minimum": true
+    },
+    {
+      "job": "A1_S2_aux",
+      "all_checkpoint_hashes_pass": true,
+      "fixed_40_epochs": true,
+      "selected_epoch_is_first_minimum": true
+    },
+    {
+      "job": "A2_S2_aux",
+      "all_checkpoint_hashes_pass": true,
+      "fixed_40_epochs": true,
+      "selected_epoch_is_first_minimum": true
+    },
+    {
+      "job": "A1_S0_downstream",
+      "all_checkpoint_hashes_pass": true,
+      "fixed_40_epochs": true,
+      "selected_epoch_is_first_minimum": true
+    },
+    {
+      "job": "A2_S0_downstream",
+      "all_checkpoint_hashes_pass": true,
+      "fixed_40_epochs": true,
+      "selected_epoch_is_first_minimum": true
+    },
+    {
+      "job": "A1_S1_downstream",
+      "all_checkpoint_hashes_pass": true,
+      "fixed_40_epochs": true,
+      "selected_epoch_is_first_minimum": true
+    },
+    {
+      "job": "A2_S1_downstream",
+      "all_checkpoint_hashes_pass": true,
+      "fixed_40_epochs": true,
+      "selected_epoch_is_first_minimum": true
+    },
+    {
+      "job": "A1_S2_downstream",
+      "all_checkpoint_hashes_pass": true,
+      "fixed_40_epochs": true,
+      "selected_epoch_is_first_minimum": true
+    },
+    {
+      "job": "A2_S2_downstream",
+      "all_checkpoint_hashes_pass": true,
+      "fixed_40_epochs": true,
+      "selected_epoch_is_first_minimum": true
+    }
+  ],
+  "transfers": [
+    {
+      "model": "A1_S0_downstream",
+      "encoder_and_BN_equal_selected_auxiliary_EMA": true,
+      "ten_class_head_equal_A0_random_initialization": true,
+      "optimizer_and_scheduler_reset_equal_A0": true,
+      "all_40_training_orders_exactly_equal_A0": true
+    },
+    {
+      "model": "A2_S0_downstream",
+      "encoder_and_BN_equal_selected_auxiliary_EMA": true,
+      "ten_class_head_equal_A0_random_initialization": true,
+      "optimizer_and_scheduler_reset_equal_A0": true,
+      "all_40_training_orders_exactly_equal_A0": true
+    },
+    {
+      "model": "A1_S1_downstream",
+      "encoder_and_BN_equal_selected_auxiliary_EMA": true,
+      "ten_class_head_equal_A0_random_initialization": true,
+      "optimizer_and_scheduler_reset_equal_A0": true,
+      "all_40_training_orders_exactly_equal_A0": true
+    },
+    {
+      "model": "A2_S1_downstream",
+      "encoder_and_BN_equal_selected_auxiliary_EMA": true,
+      "ten_class_head_equal_A0_random_initialization": true,
+      "optimizer_and_scheduler_reset_equal_A0": true,
+      "all_40_training_orders_exactly_equal_A0": true
+    },
+    {
+      "model": "A1_S2_downstream",
+      "encoder_and_BN_equal_selected_auxiliary_EMA": true,
+      "ten_class_head_equal_A0_random_initialization": true,
+      "optimizer_and_scheduler_reset_equal_A0": true,
+      "all_40_training_orders_exactly_equal_A0": true
+    },
+    {
+      "model": "A2_S2_downstream",
+      "encoder_and_BN_equal_selected_auxiliary_EMA": true,
+      "ten_class_head_equal_A0_random_initialization": true,
+      "optimizer_and_scheduler_reset_equal_A0": true,
+      "all_40_training_orders_exactly_equal_A0": true
+    }
+  ],
+  "A1_A2_auxiliary_sample_orders_identical": true,
+  "A0_reuses": 3,
+  "new_fits": 12,
+  "total_new_updates": 56400,
+  "held_source_or_aux24_IQ_reads": 0,
+  "role_metadata": {
+    "path": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\P_ROLE_METADATA.npz",
+    "sha256": "ec3c3d9338d1df01749b08ce088c2a37744759909f479865cf86b07ab8bf4a18",
+    "bytes": 674762
+  },
+  "history_evidence": {
+    "path": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\P_TRAINING_EVIDENCE.json",
+    "sha256": "64c55f523e5cef128e1e1a2618228749a96c11ec04da0388a10a5e9732dce238",
+    "bytes": 626319
+  }
+}
