@@ -1,0 +1,120 @@
+{
+  "status": "FIT_ONLY_INITIAL_PROBES_NO_OPTIMIZER_UPDATES",
+  "scales": {
+    "0": {
+      "seed": 0,
+      "lambda_value": 0.02715589235715018,
+      "probes": [
+        {
+          "CE": 4.322214603424072,
+          "relation": 0.495363712310791,
+          "CE_gradient_norm": 2.1291656494140625,
+          "relation_gradient_norm": 7.518568515777588,
+          "minimum_relative_spread": 3.653071165084839
+        },
+        {
+          "CE": 4.554427146911621,
+          "relation": 0.7013828158378601,
+          "CE_gradient_norm": 2.227513313293457,
+          "relation_gradient_norm": 10.052290916442871,
+          "minimum_relative_spread": 5.212224960327148
+        },
+        {
+          "CE": 4.206392765045166,
+          "relation": 0.4435502588748932,
+          "CE_gradient_norm": 2.260659694671631,
+          "relation_gradient_norm": 6.6947245597839355,
+          "minimum_relative_spread": 3.82143235206604
+        },
+        {
+          "CE": 4.622265338897705,
+          "relation": 0.5792452692985535,
+          "CE_gradient_norm": 2.5392673015594482,
+          "relation_gradient_norm": 9.453086853027344,
+          "minimum_relative_spread": 3.3839449882507324
+        }
+      ],
+      "fit_batches": 4,
+      "optimizer_updates": 0,
+      "initial_state_sha256": "8d7745e18c256eb6a5feb2ba0763eef6cb14ca46cbe0c2f1554683cd6f3797f9",
+      "original_state_and_rng_preserved": true
+    },
+    "1": {
+      "seed": 1,
+      "lambda_value": 0.03340067892566192,
+      "probes": [
+        {
+          "CE": 4.387654781341553,
+          "relation": 0.3973850905895233,
+          "CE_gradient_norm": 2.2515156269073486,
+          "relation_gradient_norm": 6.104811668395996,
+          "minimum_relative_spread": 5.370862007141113
+        },
+        {
+          "CE": 4.265212535858154,
+          "relation": 0.47519248723983765,
+          "CE_gradient_norm": 2.077796697616577,
+          "relation_gradient_norm": 6.918018817901611,
+          "minimum_relative_spread": 5.1132683753967285
+        },
+        {
+          "CE": 4.294764041900635,
+          "relation": 0.5059192180633545,
+          "CE_gradient_norm": 2.4036316871643066,
+          "relation_gradient_norm": 6.25950813293457,
+          "minimum_relative_spread": 5.902754783630371
+        },
+        {
+          "CE": 4.397561550140381,
+          "relation": 0.45959901809692383,
+          "CE_gradient_norm": 2.082960367202759,
+          "relation_gradient_norm": 7.112048149108887,
+          "minimum_relative_spread": 5.325489044189453
+        }
+      ],
+      "fit_batches": 4,
+      "optimizer_updates": 0,
+      "initial_state_sha256": "d2a243ee5c4d1a0121a82596f1dbb5d275444db0d90a74f37b49251ae7a220a5",
+      "original_state_and_rng_preserved": true
+    },
+    "2": {
+      "seed": 2,
+      "lambda_value": 0.023068843573587773,
+      "probes": [
+        {
+          "CE": 4.45611047744751,
+          "relation": 0.7541536688804626,
+          "CE_gradient_norm": 2.4231209754943848,
+          "relation_gradient_norm": 10.261141777038574,
+          "minimum_relative_spread": 3.8637826442718506
+        },
+        {
+          "CE": 4.335914611816406,
+          "relation": 0.8894005417823792,
+          "CE_gradient_norm": 1.8699396848678589,
+          "relation_gradient_norm": 10.240898132324219,
+          "minimum_relative_spread": 5.328306198120117
+        },
+        {
+          "CE": 4.17209005355835,
+          "relation": 0.6117997765541077,
+          "CE_gradient_norm": 2.264200210571289,
+          "relation_gradient_norm": 9.814980506896973,
+          "minimum_relative_spread": 3.7467339038848877
+        },
+        {
+          "CE": 4.197096347808838,
+          "relation": 0.8261733651161194,
+          "CE_gradient_norm": 2.5954713821411133,
+          "relation_gradient_norm": 9.358710289001465,
+          "minimum_relative_spread": 3.181925058364868
+        }
+      ],
+      "fit_batches": 4,
+      "optimizer_updates": 0,
+      "initial_state_sha256": "230528457926f883dcb2bf057a8e114d36143e4fc2d2353d888fba32dc41c53c",
+      "original_state_and_rng_preserved": true
+    }
+  },
+  "source": "First four fixed balanced fit batches per seed; no auxiliary val, aux24 or source-selection values"
+}

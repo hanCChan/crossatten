@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "roles": [
+    {
+      "role": "fit_train",
+      "rows": 16246,
+      "RX": [
+        "13-14",
+        "13-7",
+        "14-7",
+        "18-19",
+        "18-2",
+        "23-5",
+        "23-6",
+        "23-7",
+        "24-13",
+        "24-5",
+        "8-14",
+        "8-7"
+      ],
+      "keys_sha256": "e336bea2bf62b4a3c949ded8ad4601fed7dd60fdacac16fffa4f1a1407398e2d",
+      "indices_sha256": "6ab6780a101dbd0f80842470334b83102dde124099b5b309414acf17eabf4287"
+    },
+    {
+      "role": "checkpoint_val",
+      "rows": 6954,
+      "RX": [
+        "13-14",
+        "13-7",
+        "14-7",
+        "18-19",
+        "18-2",
+        "23-5",
+        "23-6",
+        "23-7",
+        "24-13",
+        "24-5",
+        "8-14",
+        "8-7"
+      ],
+      "keys_sha256": "8d6df61619bdaa6aa49d654d0958c5b9b03668653d1a8ce6b199edd12e82f619",
+      "indices_sha256": "43b1fce891c2d04c58cfbc1b68d82d84b08c2aebc8e1df9d6cc6a93f279c3f63"
+    }
+  ],
+  "IQ_rows_read": 23200,
+  "forbidden_target_D3_D4_historical_held6_reads": 0
+}

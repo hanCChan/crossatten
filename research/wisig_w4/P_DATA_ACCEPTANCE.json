@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "time": "2026-11-13T07:57:14.351243+00:00",
+  "A0_strict_reuse": [
+    {
+      "seed": 0,
+      "status": "PASS_EXACT_A0_REUSE",
+      "initial_model_exact": true,
+      "all_train_validation_keys_exact": true,
+      "validation_logits_bitwise_exact": true,
+      "frozen_model_state_unchanged": true
+    },
+    {
+      "seed": 1,
+      "status": "PASS_EXACT_A0_REUSE",
+      "initial_model_exact": true,
+      "all_train_validation_keys_exact": true,
+      "validation_logits_bitwise_exact": true,
+      "frozen_model_state_unchanged": true
+    },
+    {
+      "seed": 2,
+      "status": "PASS_EXACT_A0_REUSE",
+      "initial_model_exact": true,
+      "all_train_validation_keys_exact": true,
+      "validation_logits_bitwise_exact": true,
+      "frozen_model_state_unchanged": true
+    }
+  ],
+  "aux_fit_packets": 20736,
+  "aux_val_packets": 6912,
+  "downstream_train_packets": 16246,
+  "downstream_checkpoint_val_packets": 6954,
+  "aux24_IQ_rows_read": 0,
+  "source_selection_IQ_rows_read": 0,
+  "cache_sha256": {
+    "P_AUX_TRAIN.npz": "8fab0ebc16521fa63aae317455612274231076b20507db0aaa54cac1d6986053",
+    "P_DOWNSTREAM_TRAIN.npz": "ab9194e1cc71d3609a3a5cb11ff3f48751683378b17665de54226174181dda1e"
+  },
+  "initial_scales_sha256": "14942eae783b2de7daec5be49c78849a4d4fc2eaea11c522963a4697268c1d0d",
+  "new_optimizer_updates": 0,
+  "new_scientific_fits": 0
+}
