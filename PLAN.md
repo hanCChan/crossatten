@@ -1,3 +1,6 @@
+<!-- SUBMISSION_PREPARATION_2026_11_13 -->
+2026-11-13 当前阶段：[LoRa 英文 IEEE 投稿审阅稿与源包](publication/lora_hstem/README.md)已完成（主稿6页、补充6页）；[WiSig 当前路线正式结题](research/WISIG_CLOSURE_2026_11_13.md)。模型保持冻结，本轮新增训练/IQ/权重加载均为0；[完整交付状态](publication/PREPARATION_STATUS.json)。
+
 # 研究路线：Shen 跨接收机 CrossAttn v2（第二篇论文）
 
 **目标：** 在严格 0-shot 跨 RX 闭集识别中，通过改进信号前处理、RF 表征、时频融合和训练机制，尽可能提升效果。参数量暂不设上限，但每个实验臂都要记录参数、FLOPs、吞吐和端到端延迟。

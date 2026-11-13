@@ -1,0 +1,9 @@
+﻿arm,role,accuracy_pct,macro_f1_pct,parameters,fits,scope
+E1_patch_mha,dev_val,95.22166666666666,95.1861766390149,571434,6,S13/S14 historical same protocol anchors; mixers differ; no new forward
+E1_patch_mha,confirm,93.68541666666668,93.58697471444695,571434,6,S13/S14 historical same protocol anchors; mixers differ; no new forward
+E2_patch_hstu,dev_val,95.88833333333332,95.84338616699212,580136,6,S13/S14 historical same protocol anchors; mixers differ; no new forward
+E2_patch_hstu,confirm,94.31666666666666,94.2009122745862,580136,6,S13/S14 historical same protocol anchors; mixers differ; no new forward
+A0_cnn,dev_val,94.25333333333332,94.10502513872957,100154,6,S13/S14 historical same protocol anchors; mixers differ; no new forward
+A0_cnn,confirm,93.16250000000001,93.04748893462776,100154,6,S13/S14 historical same protocol anchors; mixers differ; no new forward
+A3_rfhstu,dev_val,97.46000000000001,97.45722125970131,142392,6,S13/S14 historical same protocol anchors; mixers differ; no new forward
+A3_rfhstu,confirm,96.44791666666667,96.38173100054969,142392,6,S13/S14 historical same protocol anchors; mixers differ; no new forward

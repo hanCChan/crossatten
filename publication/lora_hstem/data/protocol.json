@@ -1,0 +1,54 @@
+{
+  "name": "P-H5x160",
+  "version": 1,
+  "frozen_date": "2026-10-25",
+  "purpose": "Paper 2 (Shen CrossAttn v2): strict 0-shot closed-set 10-TX identification on unseen receivers; hard low-budget source protocol",
+  "dataset": {
+    "name": "Shen et al. TMC2024 receiver-agnostic LoRa corpus (20 SDR receivers, 10 TX, labels 31..40)",
+    "license": "CC BY-NC-SA 4.0 (dataset and original code)",
+    "raw_dir": "data/raw",
+    "file_pattern": "{rx}_train.h5",
+    "fs_hz": 1000000.0,
+    "lora_bw_hz": 125000.0,
+    "sf": 7,
+    "packet_len": 8192
+  },
+  "blind_receivers_never_open": ["b200_2", "b200_mini_2", "b210_2", "n210_2", "n210_3", "pluto_2"],
+  "blind_note": "Used as blind set by paper 1; reused history; NOT opened in this protocol (any filename containing these names is refused by lib/xa/guard.py, including Location_* files of n210_2/n210_3).",
+  "dev_receivers": ["b200_1", "b200_mini_1", "b210_1", "n210_1", "pluto_1", "rtl_1", "rtl_2", "rtl_3", "rtl_4", "rtl_5", "rtl_6", "rtl_7", "rtl_8", "rtl_9"],
+  "packet_selection": {
+    "seed": 20261012,
+    "per_tx": 200,
+    "rule": "rng=np.random.default_rng(20261012); ids=sort(concat([rng.choice(flatnonzero(label==c),200,replace=False) for c in 31..40])) -- identical to gai src/shen_p2a8/g1_data.py build_shen (rl1 g1_cache_v1)",
+    "source_train": "first 160 selected rows per TX (ascending row index)",
+    "source_val": "remaining 40 selected rows per TX",
+    "eval": "all 200 selected rows per TX (2000 packets per RX)"
+  },
+  "folds": [
+    {"fold": 0, "source": ["b210_1", "rtl_1", "rtl_3", "rtl_6", "rtl_9"], "dev_val": ["b200_mini_1", "pluto_1", "rtl_2", "rtl_5", "rtl_7"]},
+    {"fold": 1, "source": ["b200_mini_1", "pluto_1", "rtl_2", "rtl_5", "rtl_7"], "dev_val": ["b210_1", "rtl_1", "rtl_3", "rtl_6", "rtl_9"]}
+  ],
+  "folds_note": "Source sets = gai g1 source_receiver_folds = rl1 R01/P2 formal sources (fold0 = rl1 CV0, fold1 = rl1 CV1); dev_val = rl1 outer RX, so rl1 CE/ccalign numbers are same-protocol anchors (different models/recipes).",
+  "confirm_receivers": ["b200_1", "n210_1", "rtl_4", "rtl_8"],
+  "confirm_note": "gai g1 'development_receivers'; never used by rl1. Paper 1 used all 14 dev RX (b200_1 was a paper-1 dev fold). DISCLOSURE: on 2026-10-24 (before this freeze) the review computed signal-level statistics on b200_1 and n210_1 (comb/off-comb band ratio, SNR-field correlation, <=400 packets) and CFO-field summaries on all 14 dev RX; no model was trained or evaluated on them. From now on they are loaded only by stage=confirm jobs.",
+  "roles": {
+    "source": "training (first160/TX) and source-only checkpoint selection (last40/TX)",
+    "dev_val": "exploration: compare arms, choose candidates; never used for checkpoint/LR schedule inside a fit",
+    "confirm": "loaded only after the stage's decision file is frozen; never used for any choice in that stage"
+  },
+  "seeds": {"exploration": [101, 102], "confirmation": [201, 202, 203]},
+  "pairing": "arms sharing (fold, seed) share data order and AWGN realisations (data_seed = sha256('P-H5x160|fold|seed'))",
+  "checkpoint_rule": "per recipe (lib/xa/recipes.py); only source_val packets may influence checkpoint, LR schedule or early stopping",
+  "metrics": {
+    "primary": "RX-equal mean packet accuracy over the role's receivers",
+    "secondary": ["RX-equal macro-F1", "worst RX accuracy", "per-RX accuracy", "seed SD", "paired (fold,seed) deltas"],
+    "statistical_unit": "receiver (seeds are training repeats, not receivers; packets are not independent units)"
+  },
+  "forbidden": [
+    "opening blind receiver files",
+    "using dev_val or confirm RX for checkpoint/early-stop/LR schedule",
+    "using confirm RX for any choice within the stage that evaluates them",
+    "using CFO/SNR HDF5 fields as model inputs (diagnostics only in this round)",
+    "reporting only best seed/RX/arm"
+  ]
+}

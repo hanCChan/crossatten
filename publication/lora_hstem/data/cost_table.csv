@@ -1,0 +1,7 @@
+﻿arm,parameters,counted_macs,batch1_p50_ms,batch128_p50_ms,scope
+H0,133690,95027840.0,2.5103039741516113,16.12339210510254,Same-GPU resident FP32;3 repeats;FFT/interpolation/elementwise incomplete in MACs
+P0,134266,55345792.0,2.2809760570526123,13.453184127807617,Same-GPU resident FP32;3 repeats;FFT/interpolation/elementwise incomplete in MACs
+H1,134266,56205952.0,2.342911958694458,19.33910369873047,Same-GPU resident FP32;3 repeats;FFT/interpolation/elementwise incomplete in MACs
+H2,133338,95027840.0,2.429087996482849,15.644623756408691,Same-GPU resident FP32;3 repeats;FFT/interpolation/elementwise incomplete in MACs
+S1,134266,55345792.0,2.373215913772583,13.513567924499512,Same-GPU resident FP32;3 repeats;FFT/interpolation/elementwise incomplete in MACs
+S2,133690,95027840.0,2.6606719493865967,16.7683687210083,Same-GPU resident FP32;3 repeats;FFT/interpolation/elementwise incomplete in MACs

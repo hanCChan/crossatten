@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-13",
+  "status": "MANUSCRIPT_REVIEW_PACKAGE_COMPLETE",
+  "branch": "writing/lora-submission-preparation",
+  "WiSig": "CLOSED_CURRENT_IMPLEMENTATIONS_KEEP_W1_FINDING",
+  "LoRa": "FROZEN_MODEL_MANUSCRIPT_PREPARATION",
+  "new_scientific_fits": 0,
+  "new_IQ_payload_reads": 0,
+  "new_checkpoint_deserializations": 0,
+  "main_pages": 6,
+  "supplement_pages": 6,
+  "document_checks": 18,
+  "portable_rendered_pages_identical": 12,
+  "portable_WiSig_checks": 175,
+  "artifacts": {
+    "latex_source": "output\\review\\lora_hstem_submission_source.zip",
+    "latex_source_sha256": "30eb3559cd2d9a41e55aae58b8ae7c72d7ad8c69d7f26f505874de5882ee09eb",
+    "wisig_audit": "output\\review\\wisig_closure_audit.zip",
+    "wisig_audit_sha256": "dae59f81c1f86f15d4b61e92a219f2e0f7fb7c3b216bd929a61fba0a0ca7fa6f",
+    "pdfs": {
+      "lora_hstem_manuscript.pdf": {
+        "path": "output\\pdf\\lora_hstem_manuscript.pdf",
+        "sha256": "f2ac6f5c673d9cacc4f071a2f08d96fe631b2e5fd8f69ea1ad64e59577a9ac58"
+      },
+      "lora_hstem_supplement.pdf": {
+        "path": "output\\pdf\\lora_hstem_supplement.pdf",
+        "sha256": "9acc10f620a628639234bd4a617572196c1c4efc4ef649e81500e8468bf97c06"
+      }
+    }
+  },
+  "remaining_editorial_inputs": [
+    "Final author/affiliation/funding details",
+    "Target journal and its specific submission requirements",
+    "Confirmed publication metadata for related OOB work"
+  ],
+  "scientific_limitations_retained": [
+    "No fresh independently qualified receiver confirmation",
+    "Limited novelty scope and inherited components disclosed",
+    "Higher MACs/latency than matched Patch-Lite",
+    "Digital-shift sensitivity and original TF32 folding failures retained"
+  ],
+  "submitted_to_a_journal": false
+}

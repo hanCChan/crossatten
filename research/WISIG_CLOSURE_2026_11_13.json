@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-13",
+  "status": "CLOSED_CURRENT_WISIG_ALGORITHM_SEARCH",
+  "stages": [
+    {
+      "stage": "P2",
+      "status": "STOP_NO_PERIODIC_SPAN_PROMOTION",
+      "decision": "research\\periodic_span\\DECISION.json",
+      "sha256": "003697bb189646f0f75c9235adb4adaa2f6cd06bc0a8fc44c8b9d7f050bed04a",
+      "closed": true
+    },
+    {
+      "stage": "F2",
+      "status": "STOP_F2_FROZEN_BACKBONE_RESIDUAL",
+      "decision": "research\\spectral_scale_execution\\DECISION.json",
+      "sha256": "feb5991b517d3b86c8cc18408d49c0bdfb169e674cad9ca7e9a30b1271889424",
+      "closed": true
+    },
+    {
+      "stage": "M1",
+      "status": "STOP_EXPLICIT_MIRROR_ESTIMATOR",
+      "decision": "research\\m1_mirror_identifiability\\DECISION.json",
+      "sha256": "202c32d63d94447cd71d64dafa53ef1768a0482fd72f3d5b3fe7b7f8d2f4a051",
+      "closed": true
+    },
+    {
+      "stage": "W1/W2",
+      "status": "STOP_W2_QUALITY_GATE_NOT_PROMOTED",
+      "decision": "research\\quality_preservation\\W2_RESULT.json",
+      "sha256": "3ddca0815db9853435ef848df83ebb9ab81757a8852e4e813bdf82e914ff9751",
+      "closed": true
+    }
+  ],
+  "W1_finding_retained": true,
+  "new_neural_training_in_this_turn": 0,
+  "new_IQ_reads_in_this_turn": 0,
+  "optional_risk_coverage_not_executed": true,
+  "restart_requirements": [
+    "New falsifiable physically identifiable hypothesis",
+    "Available acquisition/data evidence",
+    "Substantive difference from existing methods",
+    "Qualified evaluation protocol with exposure disclosed",
+    "Separate bounded preregistration before training"
+  ],
+  "LoRa_priority": "Prepare bounded-scope manuscript without changing the verified model",
+  "interpretation": "STOP applies to the registered implementations, not a proof that all future cross-receiver methods are impossible."
+}

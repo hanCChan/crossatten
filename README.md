@@ -1,3 +1,6 @@
+<!-- SUBMISSION_PREPARATION_2026_11_13 -->
+2026-11-13 当前阶段：[LoRa 英文 IEEE 投稿审阅稿与源包](publication/lora_hstem/README.md)已完成（主稿6页、补充6页）；[WiSig 当前路线正式结题](research/WISIG_CLOSURE_2026_11_13.md)。模型保持冻结，本轮新增训练/IQ/权重加载均为0；[完整交付状态](publication/PREPARATION_STATUS.json)。
+
 <!-- QUALITY_PRESERVATION_2026_11_13 -->
 2026-11-13 当前研究分支新增：[WiSig质量假设与18次受控竞争](research/quality_preservation/RESEARCH_DECISION.zh-CN.md)已完成，判定`STOP_W2_QUALITY_GATE_NOT_PROMOTED`。LoRa保持冻结；历史结果和独立确认资格不变。
 

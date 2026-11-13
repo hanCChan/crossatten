@@ -1,0 +1,161 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=.85in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,graphicx,booktabs,longtable,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Supplement: Hierarchical RF Tokenization for Cross-Receiver LoRa Identification},pdfauthor={Anonymous review draft}}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{Hierarchical RF Tokenization: Supplement}\fancyhead[R]{Review draft}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlist{nosep}
+\title{Supplementary Material\\\large Hierarchical RF Tokenization for Parameter-Efficient\\Cross-Receiver LoRa Identification}
+\author{Anonymous review draft}\date{13 November 2026}
+\begin{document}
+\maketitle
+\noindent This supplement records the protocol, controls, data roles, numerical qualifications, and inherited components of the consolidated study. It introduces no new training, model selection, or receiver scoring. The numerical CSV files are distributed with the source bundle and retain their original precision.
+
+\section{Receiver Protocol and Exposure Ledger}
+The frozen protocol is P-H5x160. The corpus has ten transmitters with original labels 31--40, twenty SDR receivers, 1 MHz sample rate, nominal 125 kHz LoRa bandwidth, spreading factor 7, and 8,192-complex-sample windows. Models do not consume the dataset's CFO or SNR fields.
+
+\begin{table}[htbp]\centering\small
+\begin{tabular}{p{2.25cm}p{6.2cm}p{6.2cm}}\toprule
+Fold & Source RX & Development RX\\\midrule
+0 & b210\_1, rtl\_1, rtl\_3, rtl\_6, rtl\_9 & b200\_mini\_1, pluto\_1, rtl\_2, rtl\_5, rtl\_7\\
+1 & b200\_mini\_1, pluto\_1, rtl\_2, rtl\_5, rtl\_7 & b210\_1, rtl\_1, rtl\_3, rtl\_6, rtl\_9\\\bottomrule
+\end{tabular}
+\end{table}
+
+Historical confirmation uses four receivers: b200\_1 and n210\_1, together with rtl\_4 and rtl\_8. The present protocol does not open six other receivers: b200\_2, b200\_mini\_2, b210\_2, n210\_2, n210\_3, and pluto\_2. They were used by the related OOB study and must not be described as new, never-exposed blind receivers.
+
+For each receiver, packet selection uses NumPy's default random generator with seed 20261012, selects 200 rows without replacement per transmitter, and sorts the selected original row indices. For source training, the first 160 selected rows per transmitter train the model and the remaining 40 select its checkpoint. Each evaluation receiver supplies all 200 selected packets per transmitter. Within a fitted model there is no source/evaluation receiver overlap. Across the two complementary folds, a receiver can be a source for one model and an evaluation receiver for another.
+
+The four historical-confirmation receivers have been used in preceding project stages. Earlier signal-level diagnostics were also performed on some of them before the current frozen protocol. Stage-specific sealing prevents a stage's confirmation outcome from changing that stage's fitted checkpoint; it does not erase cumulative development exposure. The public paper should not call historical confirmation an independent blind replication.
+
+\section{Training and Architecture Details}
+\begin{table}[htbp]\centering
+\begin{tabular}{ll}\toprule
+Item & Fixed value\\\midrule
+Source budget per fold & 8,000 train + 2,000 validation packets\\
+Fitted instances per configuration & Two folds $\times$ three seeds (201, 202, 203)\\
+Batch / epochs & 64 / 200, without early stopping\\
+Optimizer & AdamW, weight decay $5\times10^{-4}$\\
+Learning rate & Peak $10^{-3}$; 5-epoch warm-up; cosine decay\\
+Training noise & Per-packet added-noise ratio uniform in [0, 50) dB\\
+Checkpoint & Minimum source RX-equal validation cross-entropy\\
+Reported validation batch & 128\\
+Recorded environment & PyTorch 2.5.0+cu124, RTX 4060 Laptop GPU\\\bottomrule
+\end{tabular}
+\end{table}
+
+The generator seeds for order and added noise are derived from a stable SHA256 seed of the protocol, fold, and seed label. The same derived stream is used for paired arms. With 8,000 source packets, the implementation runs 125 full batches per epoch; no training packets are dropped. The complete fixed recipe is included in \texttt{data/code\_13-mixer-cfo-mechanisms\_\_train.py} and the archived baseline configuration.
+
+All strictly in-band views are reconstructed after RMS normalization and FFT masking. FFT magnitude is transformed by $\log(1+|X|)$ and standardized per window. Amplitude uses $\log(1+\sqrt{I^2+Q^2+10^{-6}})$; phase is $\operatorname{atan2}(Q,I)/\pi$. The channels are I, Q, normalized FFT magnitude, log amplitude, and phase. Their shared array index combines temporal and frequency coordinates. It is not a physical time alignment between a frequency bin and a time sample.
+
+\begin{table}[htbp]\centering\small
+\begin{tabular}{lrrrrl}\toprule
+HStem stage & Input channels & Output channels & Kernel & Stride & Following operation\\\midrule
+Shared front-end 1 & 5 & 32 & 7 & 1 & BN + LeakyReLU\\
+Shared front-end 2 & 32 & 32 & 5 & 1 & BN + LeakyReLU\\
+Tokenizer 1 & 32 & 48 & 8 & 4 & BN + GELU\\
+Tokenizer 2 & 48 & 64 & 8 & 4 & BN + GELU\\
+Tokenizer 3 & 64 & 64 & 8 & 4 & BN + GELU\\
+Tokenizer 4 & 64 & 64 & 4 & 4 & None\\\bottomrule
+\end{tabular}
+\end{table}
+
+The first three tokenizer convolutions have padding 2; the last has padding 0. The shared convolutions preserve length with padding 3 and 2. All variants retain 32 tokens, dimension 64, stride 256, and first-token center 127.5 in feature coordinates. Full Patch and Patch-Lite CNN support is 266; HStem and Overlap-Patch support is 350. Global FFT and band projection preclude interpreting these as end-to-end physical RF receptive fields.
+
+Patch-Lite uses groups 8 and intermediate width 80. A data-free search minimizes maximum full-model parameter-count mismatch across both mixer choices, with a 1\% tolerance, and breaks ties by fewer groups and intermediate channels. It is a matched-budget control, not an exact capacity or arithmetic-cost match.
+
+\section{Cross-Mixer Controls and Receiver Results}
+\begin{table}[htbp]\centering
+\caption{Same-stage S15 controls. These RF-HSTU numbers are not the different historical S06 best result.}\label{tab:mixers}
+\input{tables/mixers.tex}
+\end{table}
+
+The HStem minus Patch-Lite development difference is 2.687 pp for MHA and 1.733 pp for RF-HSTU. Their reported conditional RX 95\% intervals are [2.375, 3.083] and [1.400, 2.150] pp, respectively; both have six of six positive fitted pairs. The corresponding historical-confirmation differences are 3.142 and 2.806 pp. The historical-confirmation columns are descriptive because their receivers have prior exposure.
+
+\input{tables/receivers.tex}
+
+\section{Mechanism Contrasts and Local Risk}
+The four planned development contrasts are reproduced below with the exact stability decision. The interval is not the only criterion. Positive pairs count fold/seed repetitions; the independent clustering unit is RX.
+
+\begin{center}\small
+\begin{tabular}{lrrrrl}\toprule
+Contrast & Mean pp & RX 95\% interval & Positive pairs & Worst RX pp & Signal\\\midrule
+Overlap -- Smooth & +0.818 & [+0.562,+1.053] & 6/6 & +0.050 & Pass\\
+Smooth -- Patch-Lite & +0.878 & [+0.547,+1.252] & 5/6 & +0.167 & Pass\\
+HStem -- AffineOnly & +0.918 & [+0.492,+1.295] & 4/6 & -0.717 & Does not pass\\
+AffineOnly -- NoMidBN & +0.272 & [+0.135,+0.410] & 5/6 & -0.167 & Does not pass\\\bottomrule
+\end{tabular}
+\end{center}
+
+The practical signal requires at least +0.5 pp, both folds positive, at least five of six positive fitted pairs, interval lower bound above zero, and worst-RX difference at least -2 pp. AffineOnly minus NoMidBN falls within the predefined small-effect range on development receivers; it is not evidence of literal equality. On historical-confirmation receivers, that contrast is -0.106 pp with interval [-0.504,+0.292] pp. No multiplicity adjustment is applied; all four planned contrasts are retained.
+
+The file \texttt{tx\_rx\_deltas.csv} contains every recorded fold/seed/TX/RX error-count and error-rate change for these contrasts. Its sign convention is candidate minus reference error: positive values indicate additional errors, even when the corresponding mean accuracy contrast is positive. Local risk must therefore be read with the error sign convention, not inferred from an accuracy ranking. The per-RX table and raw CSV files are provided rather than suppressing cells that do not favor the main model.
+
+\section{Parameterization, Conversion, and Precision}
+The trained Smooth-RoundTrip kernel expands 256 to 340 positions using linear interpolation with \texttt{align\_corners=False}, scales by $\sqrt{256/340}$, and interpolates back to 256 positions. The resulting map has rank 256. Its singular values span approximately 0.389185 to 0.917756; the eigenvalues of $TT^{\mathsf T}$ span 0.151465 to 0.842277. Its Fourier-basis off-diagonal energy fraction is approximately 5.309\%, so it is not a strictly diagonal frequency rescaling.
+
+A rejected center-crop proposal had rank 194 and would leave 62 base taps inactive. That audit preceded training of the corrected control. No scientifically trained center-crop result is substituted for the full-rank version.
+
+\begin{center}
+\begin{tabular}{p{6.3cm}rrrr}\toprule
+Conversion & Models & Evaluations & Maximum logit error & Pass count\\\midrule
+Smooth-RoundTrip to ordinary convolution & 6 & 12,000 & 0 & 6/6\\
+HStem BN fold, default TF32 enabled & 6 & 12,000 & 0.019568 & 0/6\\
+HStem BN fold, TF32 disabled & 6 & 12,000 & $5.39\times10^{-5}$ & 6/6\\\bottomrule
+\end{tabular}
+\end{center}
+
+The BN tolerance is $\mathrm{atol}=\mathrm{rtol}=10^{-4}$. Predicted classes are unchanged in all listed conversion comparisons. Strict-precision BN folding is a follow-up numerical diagnostic after the original failures, not a replacement record. Folding reduces the independent learned parameter count from 133,690 to 133,338 by absorbing affine terms into convolution weights.
+
+Default-setting interpolation materialization timings have source-model median single-packet p50 values approximately 2.331 ms before and 2.186 ms after conversion, and batch-128 values 14.610 and 14.456 ms. These are separate from the primary tokenizer cost benchmark. Default-setting conversion timings must not be used to claim speed under the strict-precision BN-folding condition. Full per-model/per-repeat measurements and the two precision settings are supplied as CSV files.
+
+\section{Noise, Alignment, and Missing Acquisition Information}
+Frozen source-validation noise results are listed for completeness. Added-noise ratios are relative to observed packet power, not a recovered physical SNR. These tests do not add a new independent receiver evaluation.
+
+\begin{center}
+\begin{tabular}{lrr}\toprule
+Condition & HStem accuracy (\%) & Patch-Lite accuracy (\%)\\\midrule
+Clean & 98.175 & 95.925\\
+Added AWGN 20 dB & 86.500 & 81.008\\
+Added AWGN 10 dB & 58.233 & 52.650\\
+Added AWGN 0 dB & 30.583 & 27.975\\\bottomrule
+\end{tabular}
+\end{center}
+
+HStem's circular -1/+1-sample accuracies are 81.167\%/75.933\%. Circular -4/+4-sample accuracies are 21.858\%/17.775\%; the corresponding zero-filled results are 21.867\%/17.383\%. Patch-Lite also collapses. Circular shifts preserve discrete sample content; energy and FFT-magnitude differences are numerical-scale in the recorded checks. Locking the magnitude view causes at most a 0.0083 pp accuracy change and does not recover performance.
+
+The existing source HDF5 schema provides fixed IQ windows with label, CFO, and SNR fields. It does not provide neighboring continuous samples, packet-detection timestamps, ground-truth synchronization offsets, or a validated deployment-error distribution. These absences prevent turning the synthetic shift sensitivity into an established synchronization-error mechanism. No synchronization-robust network is proposed or trained to rescue the stress-test outcome.
+
+\section{Historical External-Method Context}
+The following archived same-corpus comparisons use differing implementations, input treatments, recipe variants, and selection procedures. They are retained for context rather than pooled with S22's paired mechanism samples. The full CSV also includes historical internal architectures. Results under an original full-input recipe must not be reinterpreted as strictly in-band performance.
+
+\input{tables/historical_external.tex}
+
+The contrastive receiver/channel method cited in the main paper is discussed as related work, not included as a newly trained baseline. No result from its different public-data protocol is copied into a numerical ranking. Consequently, this study makes no exhaustive state-of-the-art claim.
+
+\section{Overlap With the Related OOB Manuscript}
+\begin{longtable}{p{2.5cm}p{5.6cm}p{6.7cm}}
+\toprule Dimension & Related OOB study & Present contribution boundary\\\midrule\endfirsthead
+\toprule Dimension & Related OOB study & Present contribution boundary\\\midrule\endhead
+Question & Frozen-model dependence on OOB pathways & Strictly in-band token formation and parameter efficiency\\
+Signal front-end & RMS/TrueIB and five channels & Inherited unchanged; not claimed as new\\
+Local front-end & Kernel-7/kernel-5 CNN and token interface & Inherited unchanged\\
+Tokenizer & Large stride-256 patch projection & Hierarchical replacement; matched controls and interventions\\
+Mixer & OOB fusion and HSTU-style processing & No OOB fusion; ordinary MHA main model; inherited gated mixer as a control\\
+Corpus & Same 20-SDR, 10-TX LoRa source & No new corpus or receiver qualification\\
+Protocol & Different development budgets/selection history & Source-only checkpointing, disclosed reuse; no cross-paper causal accuracy subtraction\\
+Former blind RX & Six receivers evaluated by the prior study & Not opened here; cannot be relabeled never-exposed\\
+Mechanism & Digital pathway dependence, not physical hardware isolation & Parameterization and numerical function checks, not hardware invariance\\\bottomrule
+\end{longtable}
+
+The supplied related manuscript is titled \emph{Diagnosing Receiver-Sensitive Out-of-Band Dependencies in LoRa Radio-Frequency Fingerprint Identification}, by Ziyang Wang, Chengcheng Han, Jianhuan Chen, and Xin Zhang. The review draft cites the author-supplied manuscript without inventing its publication status or DOI. Its final publication metadata and relationship disclosure must be confirmed by the authors before submission. Its full PDF is not redistributed in this source bundle.
+
+\section{Artifact Contents and Audit Boundaries}
+The source bundle contains the main and supplementary LaTeX files, bibliography, figures, complete frozen aggregate/per-receiver/local-risk tables, inherited implementation snapshots relevant to the stated method, and a SHA256 provenance manifest. Figure and table preparation reads only already-derived CSV/JSON and code files. It performs zero IQ-array reads, checkpoint deserializations, gradient updates, or additional receiver scoring.
+
+The script \texttt{prepare\_evidence.py} binds source copies to SHA256 hashes and verifies that both role-level mean accuracies recompute from the per-receiver rows. It is a manuscript-data consistency check, not an independent rerun of every historical experiment. Existing original data, weights, licenses, registration files, and exposure history remain authoritative for those experiments.
+
+\end{document}

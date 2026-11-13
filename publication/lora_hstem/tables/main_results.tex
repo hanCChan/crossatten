@@ -1,0 +1,15 @@
+\begin{table}[t]
+\centering\caption{Consolidated MHA results. Dev: development RX; Hist.: historical confirmation with prior exposure. SD is across three seed means, each averaged over folds.}
+\label{tab:main}
+\setlength{\tabcolsep}{3pt}\footnotesize
+\begin{tabular}{lrrrr}
+\toprule Model & Params & Dev (\%) & SD & Hist. (\%)\\\midrule
+Full Patch & 571,434 & 95.222 & 0.415 & 93.685\\
+Patch-Lite & 134,266 & 94.648 & 0.137 & 93.367\\
+Smooth-RoundTrip & 134,266 & 95.527 & 0.418 & 94.050\\
+Overlap-Patch & 134,266 & 96.345 & 0.396 & 94.942\\
+NoMidBN & 133,338 & 96.145 & 0.265 & 95.458\\
+AffineOnly & 133,690 & 96.417 & 0.752 & 95.352\\
+HStem & 133,690 & 97.335 & 0.308 & 96.508\\
+\bottomrule\end{tabular}
+\end{table}

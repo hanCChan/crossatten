@@ -1,0 +1,14 @@
+\begin{table}[t]
+\centering\caption{Recorded same-GPU forward costs. MACs incompletely cover FFT/interpolation/elementwise work. Latency is resident-input p50, without I/O.}
+\label{tab:costs}
+\setlength{\tabcolsep}{4pt}\footnotesize
+\begin{tabular}{lrrr}
+\toprule Model & MACs (M) & Batch 1 (ms) & Batch 128 (ms)\\\midrule
+Patch-Lite & 55.346 & 2.281 & 13.453\\
+Smooth-RoundTrip & 55.346 & 2.373 & 13.514\\
+Overlap-Patch & 56.206 & 2.343 & 19.339\\
+NoMidBN & 95.028 & 2.429 & 15.645\\
+AffineOnly & 95.028 & 2.661 & 16.768\\
+HStem & 95.028 & 2.510 & 16.123\\
+\bottomrule\end{tabular}
+\end{table}

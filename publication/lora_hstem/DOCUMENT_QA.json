@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "checks": {
+    "lora_hstem_manuscript_no_build_warnings": true,
+    "lora_hstem_manuscript_six_nonempty_pages": true,
+    "lora_hstem_manuscript_no_unresolved_citations": true,
+    "lora_hstem_manuscript_review_author_label": true,
+    "lora_hstem_manuscript_render_page_count_matches": true,
+    "lora_hstem_manuscript_no_bitmap_fonts": true,
+    "lora_hstem_supplement_no_build_warnings": true,
+    "lora_hstem_supplement_six_nonempty_pages": true,
+    "lora_hstem_supplement_no_unresolved_citations": true,
+    "lora_hstem_supplement_review_author_label": true,
+    "lora_hstem_supplement_render_page_count_matches": true,
+    "lora_hstem_supplement_no_bitmap_fonts": true,
+    "all_frozen_source_copies_match": true,
+    "aggregate_evidence_checks_passed": true,
+    "preparation_no_scientific_computation": true,
+    "main_contains_main_accuracy_and_parameter_budget": true,
+    "main_discloses_TF32_and_shift_failure": true,
+    "main_discloses_prior_exposure": true
+  },
+  "page_counts": {
+    "lora_hstem_manuscript": 6,
+    "lora_hstem_supplement": 6
+  },
+  "source_copies": 34,
+  "new_scientific_fits": 0,
+  "new_IQ_reads": 0,
+  "visual_review": "PASS: latest rendered PNGs of all12 pages inspected, including full-page tables, formulas, figures and bibliography; no clipping, overlaps or unreadable glyphs observed",
+  "visual_review_pages": 12,
+  "layout_corrections": [
+    "split overlong projection formula",
+    "rewrote unbreakable numeric/list paragraphs",
+    "enlarged diagram and plot labels",
+    "balanced final manuscript columns"
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "status": "PASS",
+  "checks": {
+    "all_development_means_reproduced": true,
+    "all_historical_means_reproduced": true,
+    "HStem_parameter_count": true,
+    "matched_control_parameter_count": true,
+    "all_source_copies_exact": true
+  },
+  "source_files": [
+    {
+      "source": "D:\\crossatten\\worktrees\\s23-mechanism-evidence\\22-mechanism-closure\\paper\\main_ablation_table.csv",
+      "destination": "data/main_ablation_table.csv",
+      "sha256": "fe62acd634a449a53378a08500f49327a8b7e85623b496d7d0f74bfeee437147"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s23-mechanism-evidence\\22-mechanism-closure\\paper\\paired_contrasts.csv",
+      "destination": "data/paired_contrasts.csv",
+      "sha256": "68bd48fb2585fe668a3a59eab51702ffb67b912f185be2642c7aecd9d8065c8d"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s23-mechanism-evidence\\22-mechanism-closure\\paper\\cost_table.csv",
+      "destination": "data/cost_table.csv",
+      "sha256": "4078c6ad4933ca52e2dbc93f94e144720f976b5527f5e533e5bbc8d1a6c058c1"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s23-mechanism-evidence\\22-mechanism-closure\\paper\\receiver_metrics.csv",
+      "destination": "data/receiver_metrics.csv",
+      "sha256": "b949cd99fa7c57896f6b858a71a853cd9545b5c7b44b3929f4487a774bac7e38"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s23-mechanism-evidence\\22-mechanism-closure\\paper\\tx_rx_deltas.csv",
+      "destination": "data/tx_rx_deltas.csv",
+      "sha256": "04b3088636b9f1d2fac6bf83efe6a657f3c03c57383ddadafd8cdf9ad91235a1"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s23-mechanism-evidence\\22-mechanism-closure\\paper\\robustness_source.csv",
+      "destination": "data/robustness_source.csv",
+      "sha256": "f714ded4bb4d69411b323a83448c839664220738a36b7859c06101fc405a769b"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s23-mechanism-evidence\\22-mechanism-closure\\paper\\historical_mixer_patch_anchors.csv",
+      "destination": "data/historical_mixer_patch_anchors.csv",
+      "sha256": "da6fe915cea89d717d4bf3dc677bbfd08259cb96aec92e845e35be625842b7eb"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s23-mechanism-evidence\\22-mechanism-closure\\paper\\historical_shen_external_methods.csv",
+      "destination": "data/historical_shen_external_methods.csv",
+      "sha256": "801c60a5782de7e1da205115ab8b912936cedcb40d525b994999b530796c7790"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s23-mechanism-evidence\\23-hstem-mechanism-evidence\\equivalence.csv",
+      "destination": "data/s23_equivalence.csv",
+      "sha256": "1b1b1130096a294df0c7dbe948f164725805cb37bac826fdf0ca2ca64ddc9139"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s23-mechanism-evidence\\23-hstem-mechanism-evidence\\precision_equivalence.csv",
+      "destination": "data/s23_precision_equivalence.csv",
+      "sha256": "92f8e0ffe290d02bb1d1cdf801322adfc05ca9189e3747cf80ac79de648a4f95"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s23-mechanism-evidence\\23-hstem-mechanism-evidence\\timing_summary.csv",
+      "destination": "data/s23_timing_summary.csv",
+      "sha256": "912d00dc332b4fcc25c2bc083f41b2bb17ea2b1d236d3f61224ab3b3edb895bb"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s23-mechanism-evidence\\23-hstem-mechanism-evidence\\conversion_latency.csv",
+      "destination": "data/s23_conversion_latency.csv",
+      "sha256": "8f0f8dab9a649f9fcf73db4ddef725c9d6c7927d48654ec38bc42b191aa2a908"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s23-mechanism-evidence\\23-hstem-mechanism-evidence\\OPERATOR.json",
+      "destination": "data/s23_OPERATOR.json",
+      "sha256": "e754c6908c9dd3e006c86bda46e3a2c2621fbea7b6e23cccaced03b7804e06f3"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s23-mechanism-evidence\\23-hstem-mechanism-evidence\\PAPER_OVERLAP_REVIEW.zh-CN.md",
+      "destination": "data/s23_PAPER_OVERLAP_REVIEW.zh-CN.md",
+      "sha256": "3d63ba9adfd3cb31f5bc17686bccae3dca04261eb0dfeeaf8d59c426ba7e6725"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s23-mechanism-evidence\\23-hstem-mechanism-evidence\\MATHEMATICAL_SCOPE.zh-CN.md",
+      "destination": "data/s23_MATHEMATICAL_SCOPE.zh-CN.md",
+      "sha256": "04f2b61bdd250f6bbc6f4b7795761da4511a1b15d60e8b82015f5b62c09b5f51"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s23-mechanism-evidence\\23-hstem-mechanism-evidence\\RESEARCH_INTERPRETATION.zh-CN.md",
+      "destination": "data/s23_RESEARCH_INTERPRETATION.zh-CN.md",
+      "sha256": "91f2ba3a456a468087e394d28563e00da1bbbf1bb3e21cfbecc83c12c69e9a5f"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s23-mechanism-evidence\\23-hstem-mechanism-evidence\\FINAL_AUDIT.json",
+      "destination": "data/s23_FINAL_AUDIT.json",
+      "sha256": "cbdf099012da1d0a7ae8e25d7d606853b886ebb99423201f6192f5ecfce7085f"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s23-mechanism-evidence\\23-hstem-mechanism-evidence\\registration.json",
+      "destination": "data/s23_registration.json",
+      "sha256": "5cdd52c1585043c0310d721b6d66ff2c1bdbac9ec32489c0907796691fba3dd6"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s15-hstem-attribution\\15-hstem-attribution\\summary.json",
+      "destination": "data/s15_summary.json",
+      "sha256": "06eac9f2da7b3306835c110cf96c8ecbfadd2c1a29ec190436fd8aeb76807710"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-quality-preservation\\configs\\protocol.json",
+      "destination": "data/protocol.json",
+      "sha256": "913d38626d9bcaa285b0ba7816bd8e863a91778f1fc62e4dd7d27c70415a119a"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s23-mechanism-evidence\\22-mechanism-closure\\costs.json",
+      "destination": "data/s22_costs.json",
+      "sha256": "4fd677d4587eee0db6bc55342c4b54c5b333f8a84594d968d31547f5bf564e38"
+    },
+    {
+      "source": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s201\\config.json",
+      "destination": "data/baseline_training_config.json",
+      "sha256": "6a1c50c769db70664cc71215841a206d675b28dc1df49f4a3690be26285b0955"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-quality-preservation\\lib\\xa\\frontends.py",
+      "destination": "data/code_lib__xa__frontends.py",
+      "sha256": "967e28c05f168341b4710e4b2253d77b93d92bc9a3dd515fdddaa35e81c2013f"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-quality-preservation\\lib\\xa\\models3.py",
+      "destination": "data/code_lib__xa__models3.py",
+      "sha256": "bade67f8ad50b64c132197d21a86c1897a8c27976a7b8490d2e7131ff025cbba"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-quality-preservation\\lib\\xa\\models2.py",
+      "destination": "data/code_lib__xa__models2.py",
+      "sha256": "e9c3364868955e6996645a823187dadb553a2a95139e809d43055a93c53eaa23"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-quality-preservation\\lib\\legacy_rfhstu\\features.py",
+      "destination": "data/code_lib__legacy_rfhstu__features.py",
+      "sha256": "1e9e5aa828adbb382c604ebf7b1bd429c79893ea1169afddaa14596a6c0d5378"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-quality-preservation\\lib\\legacy_rfhstu\\cnn_stem.py",
+      "destination": "data/code_lib__legacy_rfhstu__cnn_stem.py",
+      "sha256": "b3a8944c96b354d295a96d84876693e95433f67616e23d2804219d0fa1c2762a"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-quality-preservation\\lib\\legacy_rfhstu\\models.py",
+      "destination": "data/code_lib__legacy_rfhstu__models.py",
+      "sha256": "ebb638fac3392fec36bace7e2445ab6d27ef4e3b5adb2c06b35c8bc82f506666"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-quality-preservation\\13-mixer-cfo-mechanisms\\models.py",
+      "destination": "data/code_13-mixer-cfo-mechanisms__models.py",
+      "sha256": "606243ff9462358f53a86d2908130c47f69c5dd9d1cfee669cbaf10c7b76e5a1"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-quality-preservation\\13-mixer-cfo-mechanisms\\train.py",
+      "destination": "data/code_13-mixer-cfo-mechanisms__train.py",
+      "sha256": "164b0eb9794c4494b34cf1d25f8dfb0c9a4ae8c54af3e03ef9f08b150a670a2a"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-quality-preservation\\15-hstem-attribution\\s15_models.py",
+      "destination": "data/code_15-hstem-attribution__s15_models.py",
+      "sha256": "0d361cf9ac5ce2794975827e2b89a31615d4a1eaa171f5c073d1c7afffe810d4"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s23-mechanism-evidence\\21-hstem-mechanisms\\s21_models.py",
+      "destination": "data/code_21-hstem-mechanisms__s21_models.py",
+      "sha256": "5dea148df54a7db8c2aba1f5190340e913330f18b59610c1a7869fc07baea28a"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s23-mechanism-evidence\\22-mechanism-closure\\s22_models.py",
+      "destination": "data/code_22-mechanism-closure__s22_models.py",
+      "sha256": "b322334b00c7f653358229ddd3537b02c681e712f8894547c933a24604e44cb0"
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s23-mechanism-evidence\\22-mechanism-closure\\s22_train.py",
+      "destination": "data/code_22-mechanism-closure__s22_train.py",
+      "sha256": "d606d2f32282ba1ddbcd395283309475afdeaf6403aa6bd1e41fb572e1589568"
+    }
+  ],
+  "new_fits": 0,
+  "IQ_reads": 0,
+  "checkpoint_loads": 0
+}

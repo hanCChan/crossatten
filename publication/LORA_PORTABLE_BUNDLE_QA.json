@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "archive": "output\\review\\lora_hstem_submission_source.zip",
+  "sha256": "30eb3559cd2d9a41e55aae58b8ae7c72d7ad8c69d7f26f505874de5882ee09eb",
+  "bytes": 1106267,
+  "bundled_files": 62,
+  "portable_build_stdout": "lora_hstem_manuscript 6 pages []\nlora_hstem_supplement 6 pages []",
+  "portable_checks_stdout": "PASS 18 checks {'lora_hstem_manuscript': 6, 'lora_hstem_supplement': 6}",
+  "all12_rendered_pages_identical": true,
+  "render_sha_checks": {
+    "lora_hstem_manuscript_page1": true,
+    "lora_hstem_manuscript_page2": true,
+    "lora_hstem_manuscript_page3": true,
+    "lora_hstem_manuscript_page4": true,
+    "lora_hstem_manuscript_page5": true,
+    "lora_hstem_manuscript_page6": true,
+    "lora_hstem_supplement_page1": true,
+    "lora_hstem_supplement_page2": true,
+    "lora_hstem_supplement_page3": true,
+    "lora_hstem_supplement_page4": true,
+    "lora_hstem_supplement_page5": true,
+    "lora_hstem_supplement_page6": true
+  },
+  "text_equality": {
+    "lora_hstem_manuscript": true,
+    "lora_hstem_supplement": true
+  },
+  "compilation_requires_original_D_paths": false,
+  "new_scientific_fits": 0,
+  "new_IQ_reads": 0,
+  "pdfs": {
+    "lora_hstem_manuscript.pdf": {
+      "path": "output\\pdf\\lora_hstem_manuscript.pdf",
+      "sha256": "f2ac6f5c673d9cacc4f071a2f08d96fe631b2e5fd8f69ea1ad64e59577a9ac58"
+    },
+    "lora_hstem_supplement.pdf": {
+      "path": "output\\pdf\\lora_hstem_supplement.pdf",
+      "sha256": "9acc10f620a628639234bd4a617572196c1c4efc4ef649e81500e8468bf97c06"
+    }
+  }
+}
