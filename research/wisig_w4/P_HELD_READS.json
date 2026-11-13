@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "roles": [
+    {
+      "role": "source_selection",
+      "rows": 11468,
+      "RX": [
+        "23-3",
+        "24-16",
+        "24-6",
+        "7-14",
+        "7-7",
+        "8-8"
+      ],
+      "keys_sha256": "a858585eba1ded9a7f11ccb6ea37a11e74b1fe04ccdc75193d29d394c18e452e",
+      "indices_sha256": "d8b6aa77c5d1bfc09c3f804ec6013e69a2d2714d7bed72b667f03881c01befeb"
+    }
+  ],
+  "IQ_rows_read": 11468,
+  "forbidden_target_D3_D4_historical_held6_reads": 0
+}

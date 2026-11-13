@@ -1,0 +1,154 @@
+{
+  "status": "ALL_NINE_DOWNSTREAM_PREDICTIONS_AND_SIX_AUX24_FEATURES_FROZEN",
+  "time": "2026-11-13T08:22:48.809295+00:00",
+  "predictions": {
+    "A0/0": {
+      "path": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\P_A0_S0_selection.npz",
+      "sha256": "b9d3e78db0f7b027d657733b226e55caa26fbfff5390857513468887b3dd6981",
+      "bytes": 488031
+    },
+    "A1/0": {
+      "path": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\P_A1_S0_selection.npz",
+      "sha256": "f23060a835169348aea6226d20013b9bb12dd56c13b549cf0c696970691bd680",
+      "bytes": 485648
+    },
+    "A2/0": {
+      "path": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\P_A2_S0_selection.npz",
+      "sha256": "d86d273b6cb15fcb17f5ebb7720ceb8c06796cc09e2fd64230864ad83f5f4c80",
+      "bytes": 486826
+    },
+    "A1/1": {
+      "path": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\P_A1_S1_selection.npz",
+      "sha256": "f8f43ceb0400dc76ad5587caa15d0a973e67c126d0f4abc89aea58c7bc8cbb40",
+      "bytes": 488053
+    },
+    "A2/1": {
+      "path": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\P_A2_S1_selection.npz",
+      "sha256": "bcc045c76ce74f2496331344ad3482b8adf1e40efb674f99ab56ad742377c270",
+      "bytes": 487671
+    },
+    "A0/1": {
+      "path": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\P_A0_S1_selection.npz",
+      "sha256": "1a7f5e562d4e9e804aabdc2b08d36737854f98d18e1391966ad63bc443348900",
+      "bytes": 487474
+    },
+    "A2/2": {
+      "path": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\P_A2_S2_selection.npz",
+      "sha256": "366e739ce88bd0fe10289854bee3ad7a23623976d1d21761ddbb627940192ba3",
+      "bytes": 484653
+    },
+    "A0/2": {
+      "path": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\P_A0_S2_selection.npz",
+      "sha256": "395b56913f3ed84bd2df1ab10c8c785b810333db45519f82064e3f23ac04f71f",
+      "bytes": 486353
+    },
+    "A1/2": {
+      "path": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\P_A1_S2_selection.npz",
+      "sha256": "b451cf493dcbcd9435c29fe16481d0de2bb71e74cbba32e754a9044628314025",
+      "bytes": 484734
+    }
+  },
+  "downstream_frozen_states": [
+    {
+      "model": "A0/0",
+      "before_state_sha256": "a8d816d2206a1b5ffcf934cc481a269dcea1939663a524d3db2b17a4d5a6b536",
+      "after_state_sha256": "a8d816d2206a1b5ffcf934cc481a269dcea1939663a524d3db2b17a4d5a6b536",
+      "unchanged": true
+    },
+    {
+      "model": "A1/0",
+      "before_state_sha256": "3d016f0a38e4bffa552dfabc8b04314c8c9d64bbe29f8eff14bd94cd1a98a76f",
+      "after_state_sha256": "3d016f0a38e4bffa552dfabc8b04314c8c9d64bbe29f8eff14bd94cd1a98a76f",
+      "unchanged": true
+    },
+    {
+      "model": "A2/0",
+      "before_state_sha256": "802f65a75a16002cd7a5158fc85fbd3d1ee36c1e896a64452879dc4648b42477",
+      "after_state_sha256": "802f65a75a16002cd7a5158fc85fbd3d1ee36c1e896a64452879dc4648b42477",
+      "unchanged": true
+    },
+    {
+      "model": "A1/1",
+      "before_state_sha256": "eb071109032a87d9bc9bf83eae6e7fac52af7fee05420265b06097dbaba8d358",
+      "after_state_sha256": "eb071109032a87d9bc9bf83eae6e7fac52af7fee05420265b06097dbaba8d358",
+      "unchanged": true
+    },
+    {
+      "model": "A2/1",
+      "before_state_sha256": "f5aed5b3e1ca7bde6915b6264d73480b046545bda1f1921d0ee8bfad5bc3848a",
+      "after_state_sha256": "f5aed5b3e1ca7bde6915b6264d73480b046545bda1f1921d0ee8bfad5bc3848a",
+      "unchanged": true
+    },
+    {
+      "model": "A0/1",
+      "before_state_sha256": "d394772eeaf189b0195f7dd7fd983150da153883ddde35878f1a876123e11d51",
+      "after_state_sha256": "d394772eeaf189b0195f7dd7fd983150da153883ddde35878f1a876123e11d51",
+      "unchanged": true
+    },
+    {
+      "model": "A2/2",
+      "before_state_sha256": "44dfafd58bf22d87b3abcd79885ec909ebc1652ef40b13293daa1c30f4533cd8",
+      "after_state_sha256": "44dfafd58bf22d87b3abcd79885ec909ebc1652ef40b13293daa1c30f4533cd8",
+      "unchanged": true
+    },
+    {
+      "model": "A0/2",
+      "before_state_sha256": "46437b49ef781b0531154c4ff10c48a393f03218ffe0757c8590f3bb3fe225aa",
+      "after_state_sha256": "46437b49ef781b0531154c4ff10c48a393f03218ffe0757c8590f3bb3fe225aa",
+      "unchanged": true
+    },
+    {
+      "model": "A1/2",
+      "before_state_sha256": "34d4b70f2b32a902f325e32263e60d985b8b46ae55c2d197bec1d4bcc1167914",
+      "after_state_sha256": "34d4b70f2b32a902f325e32263e60d985b8b46ae55c2d197bec1d4bcc1167914",
+      "unchanged": true
+    }
+  ],
+  "auxiliary_frozen_states": [
+    {
+      "model": "A1_S0",
+      "before_state_sha256": "1b10d6c03c0180ad39ffc33c31cddcb9fb1e006a2469a5270c890ab2de330908",
+      "after_state_sha256": "1b10d6c03c0180ad39ffc33c31cddcb9fb1e006a2469a5270c890ab2de330908",
+      "unchanged": true
+    },
+    {
+      "model": "A2_S0",
+      "before_state_sha256": "41fad16f67087465aafd9db3fb727b2c149c874828f10f9ee600a819220772bb",
+      "after_state_sha256": "41fad16f67087465aafd9db3fb727b2c149c874828f10f9ee600a819220772bb",
+      "unchanged": true
+    },
+    {
+      "model": "A1_S1",
+      "before_state_sha256": "137cc22beecea99860e774624e05b181dba9c7d01fcba58873324a7ffc394ac3",
+      "after_state_sha256": "137cc22beecea99860e774624e05b181dba9c7d01fcba58873324a7ffc394ac3",
+      "unchanged": true
+    },
+    {
+      "model": "A2_S1",
+      "before_state_sha256": "529b4a14f96898ed616991aec97cfa2c714352cb3a0d1150fe92f8bee8775140",
+      "after_state_sha256": "529b4a14f96898ed616991aec97cfa2c714352cb3a0d1150fe92f8bee8775140",
+      "unchanged": true
+    },
+    {
+      "model": "A1_S2",
+      "before_state_sha256": "48bc6c87e04855b25315f8d15bcfe62602d0d55486dc066236d42020251d0a76",
+      "after_state_sha256": "48bc6c87e04855b25315f8d15bcfe62602d0d55486dc066236d42020251d0a76",
+      "unchanged": true
+    },
+    {
+      "model": "A2_S2",
+      "before_state_sha256": "640d8f439b820f6083102b2297e44c4c9aeeac849af868addef5f711e158cf3d",
+      "after_state_sha256": "640d8f439b820f6083102b2297e44c4c9aeeac849af868addef5f711e158cf3d",
+      "unchanged": true
+    }
+  ],
+  "auxiliary_features": {
+    "path": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\P_AUX24_FEATURES.npz",
+    "sha256": "5a14db5ca1fcea60520549c01ebd402b3e37028b0ac9804e961f23bb61b8518d",
+    "bytes": 13124172
+  },
+  "model_seal_sha256": "6accd0cae2ada2422d6b73340d583f123a5c53b7f24fe3d05ab216e736ffc8a2",
+  "evaluation_registration_sha256": "c819b48ae35701a0e9d339b0008218208567ed930ef7dfec2910f3183f59c34d",
+  "forbidden_actual_target_D3_D4_historical_held6_IQ_reads": 0,
+  "neural_fits": 0
+}
