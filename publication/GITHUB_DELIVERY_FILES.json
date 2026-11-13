@@ -1,0 +1,84 @@
+{
+  "status": "BYTE_IDENTITIES_VERIFIED_BEFORE_GITHUB_PUSH",
+  "repository": "hanCChan/crossatten",
+  "branch": "research/wisig-w3-transfer",
+  "all_original_scientific_commits_preserved": true,
+  "files": [
+    {
+      "path": "output/review/lora_hstem_submission_source.zip",
+      "bytes": 1106267,
+      "sha256": "30eb3559cd2d9a41e55aae58b8ae7c72d7ad8c69d7f26f505874de5882ee09eb",
+      "git_blob_sha1": "b4ac720542a62c47262aba5df83de6725280ffdc"
+    },
+    {
+      "path": "output/review/wisig_closure_audit.zip",
+      "bytes": 44802991,
+      "sha256": "dae59f81c1f86f15d4b61e92a219f2e0f7fb7c3b216bd929a61fba0a0ca7fa6f",
+      "git_blob_sha1": "93d2a04aeedecc8bc8abb815b17a99caa20c41f4"
+    },
+    {
+      "path": "output/review/wisig_w3_ab_review.zip",
+      "bytes": 22435768,
+      "sha256": "19beebd5d97aeaf8d55845fe523c8b2778f19d67dffb5d9eac7714854f0d71b7",
+      "git_blob_sha1": "80bb7dbfd10febc9c0641338950ad18575ab27b7"
+    },
+    {
+      "path": "research/wisig_w3/artifacts/B_FEATURES.npz",
+      "bytes": 17513313,
+      "sha256": "56ef6e1f349ac6df96fa98d266b7b0186ad6a70d117558a42b15a6bfb4daeb80",
+      "git_blob_sha1": "d7380d5efb477d09d0d949df90cb2d67394d0dbe"
+    },
+    {
+      "path": "research/wisig_w3/artifacts/B_OPERATORS.npz",
+      "bytes": 6872084,
+      "sha256": "16d1b3796caf9099f2b01272f203953b6f2bc0d01bd58ecee86e7d69779c7e64",
+      "git_blob_sha1": "7c965a46a10e7b6442464b2e7b2095083f9d5496"
+    },
+    {
+      "path": "output/pdf/lora_hstem_manuscript.pdf",
+      "bytes": 454907,
+      "sha256": "f2ac6f5c673d9cacc4f071a2f08d96fe631b2e5fd8f69ea1ad64e59577a9ac58",
+      "git_blob_sha1": "3909f37a148c5ffb1cd2da958bdbda8a4a027efa"
+    },
+    {
+      "path": "output/pdf/lora_hstem_supplement.pdf",
+      "bytes": 238750,
+      "sha256": "9acc10f620a628639234bd4a617572196c1c4efc4ef649e81500e8468bf97c06",
+      "git_blob_sha1": "dbe65ae676fc0c05a113595e35a6bc96ae5c05fc"
+    },
+    {
+      "path": "research/wisig_w3/artifacts/002_FullWiSig_create_compact_datasets.py",
+      "bytes": 4276,
+      "sha256": "40b204986b5b7af20a3077f4b8307c297a6a10825768623096bbe7e91a1c2ce9",
+      "git_blob_sha1": "c09581cb9c5a6be24f2aa0f433988b2967ad71df"
+    },
+    {
+      "path": "research/wisig_w3/artifacts/data_utilities.py",
+      "bytes": 9654,
+      "sha256": "03c6c2806bac2d5258cbaf0c8e12a2fde9e17495ae31c9d2938eeaba6b17768e",
+      "git_blob_sha1": "b748ca37f45296df8d4a67d291e942ceeafbf89e"
+    },
+    {
+      "path": "publication/lora_hstem/main.tex",
+      "bytes": 27672,
+      "sha256": "96f90526374e97b0f3f2a28c0edc48ef807d2baccf9ab31c5e655a62a0a73ae1",
+      "git_blob_sha1": "3f44591f2af7d9bcec80edf7ea984fd8b094fa99"
+    },
+    {
+      "path": "publication/lora_hstem/supplement.tex",
+      "bytes": 15404,
+      "sha256": "68e347afc2b7e5f402d9be5b78741879afdf69248b779d406e2cc9829b13a137",
+      "git_blob_sha1": "2b0b7a6f7e9d04fcd3da86333be87f3fa5a52a11"
+    },
+    {
+      "path": "publication/lora_hstem/references.bib",
+      "bytes": 3175,
+      "sha256": "85da44270104d63828ef4bab160285e48bfd192469cebf44d18ca2373be59f11",
+      "git_blob_sha1": "aef3d228718f31b695fae016bcca78200f1a311b"
+    }
+  ],
+  "archive_files": 3,
+  "raw_IQ_included": false,
+  "neural_training_performed": 0,
+  "note": "Portable archives remain byte-for-byte identical to their independently verified local versions."
+}
