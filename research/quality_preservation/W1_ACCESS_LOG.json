@@ -1,0 +1,116 @@
+[
+  {
+    "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_y.npy",
+    "action": "source_metadata",
+    "sha256": "dddba3c9e165ccb0b117ac6cd0eeaac2dc8603f71a541358f06348895a72fef4"
+  },
+  {
+    "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_rx.npy",
+    "action": "source_metadata",
+    "sha256": "0d5e93eb6d0dd5cd83b3f7a79086e608b57683e82a8824b239f219909670c683"
+  },
+  {
+    "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_day.npy",
+    "action": "source_metadata",
+    "sha256": "09378871910c2dfbb7c232f3aa2251372411c0be005f95c723c72aa50c520192"
+  },
+  {
+    "path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_x.npy",
+    "action": "hash_and_mmap_source_fit18",
+    "sha256": "84af80579acafeabfb856e4cc852896636b880a4b885f4e45cc0cdaebae3bb4a"
+  },
+  {
+    "action": "copy_source_selection_IQ",
+    "view": "V0",
+    "rows": 11468,
+    "RX": [
+      "8-8",
+      "24-16",
+      "7-7",
+      "24-6",
+      "7-14",
+      "23-3"
+    ],
+    "days": [
+      1,
+      2
+    ]
+  },
+  {
+    "path": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V0_S0_P0\\selected_selection.npz",
+    "action": "decode_frozen_selected_source_prediction",
+    "sha256": "c757a8d022ea083c487b3368608abfc5be68c07eec47748cc6ded8ff19f1772c"
+  },
+  {
+    "path": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V0_S1_P0\\selected_selection.npz",
+    "action": "decode_frozen_selected_source_prediction",
+    "sha256": "fbd9b543a99f5324e83e46bf590a3d9b0b789bfd8905c5a4268958c49ea27a0c"
+  },
+  {
+    "path": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V0_S2_P0\\selected_selection.npz",
+    "action": "decode_frozen_selected_source_prediction",
+    "sha256": "b3c53195427040ee62dbe2a39bdb2c9179d2ccb52597dc83fbe15ae96adb8a52"
+  },
+  {
+    "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S0_wd1e3_ERM_EMA\\C1_selected_selection.npz",
+    "action": "decode_frozen_selected_source_prediction",
+    "sha256": "b9d3e78db0f7b027d657733b226e55caa26fbfff5390857513468887b3dd6981"
+  },
+  {
+    "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S1_wd1e3_ERM_EMA\\C1_selected_selection.npz",
+    "action": "decode_frozen_selected_source_prediction",
+    "sha256": "1a7f5e562d4e9e804aabdc2b08d36737854f98d18e1391966ad63bc443348900"
+  },
+  {
+    "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S2_wd1e3_ERM_EMA\\C1_selected_selection.npz",
+    "action": "decode_frozen_selected_source_prediction",
+    "sha256": "395b56913f3ed84bd2df1ab10c8c785b810333db45519f82064e3f23ac04f71f"
+  },
+  {
+    "action": "copy_source_selection_IQ",
+    "view": "V1",
+    "rows": 11500,
+    "RX": [
+      "13-14",
+      "23-6",
+      "13-7",
+      "24-5",
+      "24-13",
+      "8-14"
+    ],
+    "days": [
+      1,
+      2
+    ]
+  },
+  {
+    "path": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V1_S0_P0\\selected_selection.npz",
+    "action": "decode_frozen_selected_source_prediction",
+    "sha256": "934a01f0d8f34656d28c8ea7c06c69fea299b33bcfe556fe384db9d49aeb127e"
+  },
+  {
+    "path": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V1_S1_P0\\selected_selection.npz",
+    "action": "decode_frozen_selected_source_prediction",
+    "sha256": "7e9b41ca4d1228aebee9962e6df6a8fb18529de30774ffaacfc24ce7539357f2"
+  },
+  {
+    "path": "D:\\crossatten\\worktrees\\wisig-periodic-hstem\\research\\periodic_span\\artifacts\\V1_S2_P0\\selected_selection.npz",
+    "action": "decode_frozen_selected_source_prediction",
+    "sha256": "b76c9ee709ad7bcb549f63fee8e65d9abc20dada0d148c84475e0459f0756bcc"
+  },
+  {
+    "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S0_wd1e3_ERM_EMA\\C1_selected_selection.npz",
+    "action": "decode_frozen_selected_source_prediction",
+    "sha256": "90c7edc6ab1dbeefb6b410f9beea61e86e6ccb4f88fc6b671e04316a5e461b9c"
+  },
+  {
+    "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S1_wd1e3_ERM_EMA\\C1_selected_selection.npz",
+    "action": "decode_frozen_selected_source_prediction",
+    "sha256": "0faa781d37f6200fd30fcd8923d4933f2d4c77ee5c5ef84078c281e655096835"
+  },
+  {
+    "path": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S2_wd1e3_ERM_EMA\\C1_selected_selection.npz",
+    "action": "decode_frozen_selected_source_prediction",
+    "sha256": "2bc1e91e4e193dde73f00d15006c13dc4b41bdf6954c099794df18a4decfaf5c"
+  }
+]

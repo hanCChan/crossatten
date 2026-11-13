@@ -1,0 +1,410 @@
+[
+  {
+    "view": "V0",
+    "model": "F0",
+    "feature": "q20_mean",
+    "difference_pp": 7.612345679012346,
+    "streams_pp": [
+      7.579012345679012,
+      6.924546114742193,
+      8.33347857661583
+    ],
+    "all_rx_equal_accuracy_pct": 88.42085881290585,
+    "low_packet_fraction": 0.25,
+    "low_group_error_pct": 17.672363678642018,
+    "other_error_pct": 9.324497151494013,
+    "low_error_share": 0.3871625063678043,
+    "invalid_packets": 0
+  },
+  {
+    "view": "V0",
+    "model": "E0",
+    "feature": "q20_mean",
+    "difference_pp": 7.551585572500605,
+    "streams_pp": [
+      7.737908496732026,
+      6.929774872912127,
+      7.987073347857662
+    ],
+    "all_rx_equal_accuracy_pct": 89.48731138159461,
+    "low_packet_fraction": 0.25,
+    "low_group_error_pct": 16.591094058830368,
+    "other_error_pct": 8.208347866527149,
+    "low_error_share": 0.4025387870239775,
+    "invalid_packets": 0
+  },
+  {
+    "view": "V0",
+    "model": "F0",
+    "feature": "q20_min",
+    "difference_pp": 8.280658436213992,
+    "streams_pp": [
+      8.783950617283951,
+      7.645533769063181,
+      8.412490922294845
+    ],
+    "all_rx_equal_accuracy_pct": 88.42085881290585,
+    "low_packet_fraction": 0.25,
+    "low_group_error_pct": 17.963027554935472,
+    "other_error_pct": 9.227609192729528,
+    "low_error_share": 0.39353031074885375,
+    "invalid_packets": 0
+  },
+  {
+    "view": "V0",
+    "model": "E0",
+    "feature": "q20_min",
+    "difference_pp": 7.7827160493827146,
+    "streams_pp": [
+      8.275889615105301,
+      7.623456790123459,
+      7.44880174291939
+    ],
+    "all_rx_equal_accuracy_pct": 89.48731138159461,
+    "low_packet_fraction": 0.25,
+    "low_group_error_pct": 16.62597372398558,
+    "other_error_pct": 8.196721311475407,
+    "low_error_share": 0.4033850493653033,
+    "invalid_packets": 0
+  },
+  {
+    "view": "V0",
+    "model": "F0",
+    "feature": "phase_consistency",
+    "difference_pp": 7.26172839506173,
+    "streams_pp": [
+      7.082570806100217,
+      7.164197530864197,
+      7.538416848220771
+    ],
+    "all_rx_equal_accuracy_pct": 88.42085881290585,
+    "low_packet_fraction": 0.25,
+    "low_group_error_pct": 17.230554586675968,
+    "other_error_pct": 9.471766848816028,
+    "low_error_share": 0.3774834437086092,
+    "invalid_packets": 0
+  },
+  {
+    "view": "V0",
+    "model": "E0",
+    "feature": "phase_consistency",
+    "difference_pp": 7.487097555071411,
+    "streams_pp": [
+      7.525272331154684,
+      6.810965867828613,
+      8.125054466230937
+    ],
+    "all_rx_equal_accuracy_pct": 89.48731138159461,
+    "low_packet_fraction": 0.25,
+    "low_group_error_pct": 16.32368329264039,
+    "other_error_pct": 8.297484788590474,
+    "low_error_share": 0.39605077574047953,
+    "invalid_packets": 0
+  },
+  {
+    "view": "V0",
+    "model": "F0",
+    "feature": "lag19",
+    "difference_pp": 6.662551440329217,
+    "streams_pp": [
+      6.1567901234567906,
+      6.677051561365286,
+      7.1538126361655765
+    ],
+    "all_rx_equal_accuracy_pct": 88.42085881290585,
+    "low_packet_fraction": 0.25,
+    "low_group_error_pct": 16.823625159865134,
+    "other_error_pct": 9.607409991086307,
+    "low_error_share": 0.36856851757514003,
+    "invalid_packets": 0
+  },
+  {
+    "view": "V0",
+    "model": "E0",
+    "feature": "lag19",
+    "difference_pp": 6.781893004115226,
+    "streams_pp": [
+      6.659041394335513,
+      6.134422657952069,
+      7.552214960058097
+    ],
+    "all_rx_equal_accuracy_pct": 89.48731138159461,
+    "low_packet_fraction": 0.25,
+    "low_group_error_pct": 15.823741425415646,
+    "other_error_pct": 8.464132077665386,
+    "low_error_share": 0.3839210155148096,
+    "invalid_packets": 0
+  },
+  {
+    "view": "V0",
+    "model": "F0",
+    "feature": "lag21",
+    "difference_pp": 6.572984749455337,
+    "streams_pp": [
+      6.914669571532316,
+      6.3464778503994195,
+      6.457806826434278
+    ],
+    "all_rx_equal_accuracy_pct": 88.42085881290585,
+    "low_packet_fraction": 0.25,
+    "low_group_error_pct": 16.823625159865134,
+    "other_error_pct": 9.607409991086307,
+    "low_error_share": 0.3685685175751401,
+    "invalid_packets": 0
+  },
+  {
+    "view": "V0",
+    "model": "E0",
+    "feature": "lag21",
+    "difference_pp": 6.279835390946501,
+    "streams_pp": [
+      6.283732752360204,
+      6.144299201161947,
+      6.4114742193173555
+    ],
+    "all_rx_equal_accuracy_pct": 89.48731138159461,
+    "low_packet_fraction": 0.25,
+    "low_group_error_pct": 15.591210324380885,
+    "other_error_pct": 8.541642444676976,
+    "low_error_share": 0.37827926657263755,
+    "invalid_packets": 0
+  },
+  {
+    "view": "V0",
+    "model": "F0",
+    "feature": "tail20",
+    "difference_pp": 4.568917937545389,
+    "streams_pp": [
+      5.862817719680465,
+      3.8480029048656506,
+      3.995933188090051
+    ],
+    "all_rx_equal_accuracy_pct": 88.42085881290585,
+    "low_packet_fraction": 0.25,
+    "low_group_error_pct": 15.30054644808743,
+    "other_error_pct": 10.115102895012207,
+    "low_error_share": 0.3352012226184411,
+    "invalid_packets": 0
+  },
+  {
+    "view": "V0",
+    "model": "E0",
+    "feature": "tail20",
+    "difference_pp": 4.106995884773663,
+    "streams_pp": [
+      4.029266521423383,
+      2.8185185185185184,
+      5.473202614379086
+    ],
+    "all_rx_equal_accuracy_pct": 89.48731138159461,
+    "low_packet_fraction": 0.25,
+    "low_group_error_pct": 13.82397395651668,
+    "other_error_pct": 9.130721233965042,
+    "low_error_share": 0.3354019746121297,
+    "invalid_packets": 0
+  },
+  {
+    "view": "V1",
+    "model": "F0",
+    "feature": "q20_mean",
+    "difference_pp": 27.496707818930037,
+    "streams_pp": [
+      26.409876543209876,
+      28.671604938271603,
+      27.408641975308644
+    ],
+    "all_rx_equal_accuracy_pct": 81.64548408057179,
+    "low_packet_fraction": 0.25,
+    "low_group_error_pct": 39.130434782608695,
+    "other_error_pct": 11.443478260869565,
+    "low_error_share": 0.5326704545454546,
+    "invalid_packets": 0
+  },
+  {
+    "view": "V1",
+    "model": "E0",
+    "feature": "q20_mean",
+    "difference_pp": 27.514814814814812,
+    "streams_pp": [
+      26.766666666666666,
+      27.930864197530866,
+      27.846913580246916
+    ],
+    "all_rx_equal_accuracy_pct": 82.87482131254062,
+    "low_packet_fraction": 0.25,
+    "low_group_error_pct": 37.92463768115942,
+    "other_error_pct": 10.183574879227052,
+    "low_error_share": 0.5538435489332881,
+    "invalid_packets": 0
+  },
+  {
+    "view": "V1",
+    "model": "F0",
+    "feature": "q20_min",
+    "difference_pp": 27.62674897119341,
+    "streams_pp": [
+      26.375308641975305,
+      28.90864197530864,
+      27.5962962962963
+    ],
+    "all_rx_equal_accuracy_pct": 81.64548408057179,
+    "low_packet_fraction": 0.25,
+    "low_group_error_pct": 39.142028985507245,
+    "other_error_pct": 11.43961352657005,
+    "low_error_share": 0.5328282828282828,
+    "invalid_packets": 0
+  },
+  {
+    "view": "V1",
+    "model": "E0",
+    "feature": "q20_min",
+    "difference_pp": 27.76995884773663,
+    "streams_pp": [
+      27.26049382716049,
+      28.301234567901236,
+      27.748148148148147
+    ],
+    "all_rx_equal_accuracy_pct": 82.87482131254062,
+    "low_packet_fraction": 0.25,
+    "low_group_error_pct": 38.00579710144927,
+    "other_error_pct": 10.156521739130435,
+    "low_error_share": 0.5550287842871655,
+    "invalid_packets": 0
+  },
+  {
+    "view": "V1",
+    "model": "F0",
+    "feature": "phase_consistency",
+    "difference_pp": 27.37818930041152,
+    "streams_pp": [
+      26.8,
+      27.81234567901235,
+      27.522222222222222
+    ],
+    "all_rx_equal_accuracy_pct": 81.64548408057179,
+    "low_packet_fraction": 0.25,
+    "low_group_error_pct": 38.85217391304348,
+    "other_error_pct": 11.53623188405797,
+    "low_error_share": 0.5288825757575758,
+    "invalid_packets": 0
+  },
+  {
+    "view": "V1",
+    "model": "E0",
+    "feature": "phase_consistency",
+    "difference_pp": 27.54279835390946,
+    "streams_pp": [
+      27.329629629629625,
+      27.308641975308646,
+      27.990123456790126
+    ],
+    "all_rx_equal_accuracy_pct": 82.87482131254062,
+    "low_packet_fraction": 0.25,
+    "low_group_error_pct": 37.7159420289855,
+    "other_error_pct": 10.253140096618358,
+    "low_error_share": 0.5507958008804605,
+    "invalid_packets": 0
+  },
+  {
+    "view": "V1",
+    "model": "F0",
+    "feature": "lag19",
+    "difference_pp": 10.915637860082304,
+    "streams_pp": [
+      10.68641975308642,
+      10.953086419753086,
+      11.107407407407408
+    ],
+    "all_rx_equal_accuracy_pct": 81.64548408057179,
+    "low_packet_fraction": 0.25,
+    "low_group_error_pct": 26.58550724637681,
+    "other_error_pct": 15.62512077294686,
+    "low_error_share": 0.3619002525252525,
+    "invalid_packets": 0
+  },
+  {
+    "view": "V1",
+    "model": "E0",
+    "feature": "lag19",
+    "difference_pp": 10.355967078189302,
+    "streams_pp": [
+      10.045679012345678,
+      10.375308641975309,
+      10.646913580246915
+    ],
+    "all_rx_equal_accuracy_pct": 82.87482131254062,
+    "low_packet_fraction": 0.25,
+    "low_group_error_pct": 24.892753623188405,
+    "other_error_pct": 14.527536231884058,
+    "low_error_share": 0.36352861496782934,
+    "invalid_packets": 0
+  },
+  {
+    "view": "V1",
+    "model": "F0",
+    "feature": "lag21",
+    "difference_pp": 9.686008230452673,
+    "streams_pp": [
+      9.649382716049383,
+      9.328395061728395,
+      10.080246913580247
+    ],
+    "all_rx_equal_accuracy_pct": 81.64548408057179,
+    "low_packet_fraction": 0.25,
+    "low_group_error_pct": 25.65797101449275,
+    "other_error_pct": 15.934299516908212,
+    "low_error_share": 0.3492739898989899,
+    "invalid_packets": 0
+  },
+  {
+    "view": "V1",
+    "model": "E0",
+    "feature": "lag21",
+    "difference_pp": 9.282716049382714,
+    "streams_pp": [
+      8.875308641975309,
+      9.096296296296297,
+      9.876543209876543
+    ],
+    "all_rx_equal_accuracy_pct": 82.87482131254062,
+    "low_packet_fraction": 0.25,
+    "low_group_error_pct": 24.139130434782608,
+    "other_error_pct": 14.778743961352655,
+    "low_error_share": 0.35252285811039624,
+    "invalid_packets": 0
+  },
+  {
+    "view": "V1",
+    "model": "F0",
+    "feature": "tail20",
+    "difference_pp": 5.4259259259259265,
+    "streams_pp": [
+      5.71358024691358,
+      5.550617283950616,
+      5.01358024691358
+    ],
+    "all_rx_equal_accuracy_pct": 81.64548408057179,
+    "low_packet_fraction": 0.25,
+    "low_group_error_pct": 22.30724637681159,
+    "other_error_pct": 17.051207729468597,
+    "low_error_share": 0.30366161616161613,
+    "invalid_packets": 0
+  },
+  {
+    "view": "V1",
+    "model": "E0",
+    "feature": "tail20",
+    "difference_pp": 4.451440329218106,
+    "streams_pp": [
+      4.9296296296296305,
+      3.6395061728395066,
+      4.785185185185186
+    ],
+    "all_rx_equal_accuracy_pct": 82.87482131254062,
+    "low_packet_fraction": 0.25,
+    "low_group_error_pct": 20.33623188405797,
+    "other_error_pct": 16.046376811594204,
+    "low_error_share": 0.296986115814426,
+    "invalid_packets": 0
+  }
+]
