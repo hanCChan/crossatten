@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "tests": 4,
+  "protocols": [
+    3,
+    4,
+    5
+  ],
+  "checks": [
+    "No numeric waveform payload bytes read while constructing index",
+    "Selected rows decode bitwise exactly",
+    "Non-admitted cells refused before file read",
+    "Arbitrary pickle globals and shape/byte mismatches refused"
+  ],
+  "scientific_IQ_decodes": 0
+}
