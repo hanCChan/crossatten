@@ -1,3 +1,6 @@
+<!-- W4_2026_11_13 -->
+2026-11-13 最新：[W4完整结果](research/wisig_w4/README.zh-CN.md)。源侧V0三seed的A0/A1/A2 Accuracy为89.4873%/91.6902%/93.0480%；A2−A1平均+1.3578pp，但只有2/3seed正向，依预注册不晋级。12次新拟合/56,400更新；A0复用3次。E等权融合有平均+1.1083pp收益，但最差唯一RX−2.85pp。均为内部源域结果，非目标CRD/SOTA。独立复核及异目录复算通过；[机器状态](research/WISIG_W4_STATUS_2026_11_13.json)、[含15份所选权重的审阅包](output/review/wisig_w4_review.zip)。旧STOP与LoRa不变，第二视图未启动。
+
 <!-- W3_AB_2026_11_13 -->
 2026-11-13 最新：[W3-A/B跨TX接收变化检验](research/wisig_w3/README.zh-CN.md)已完成。A通过：96辅助TX、6源RX、D1/D2共36,864包；B的rank8相对最强简单对照误差增加1.87%，且类间几何未过门槛，停止当前实现。新增神经训练0，W3-C未启动。下一步不得通过改rank、岭参数、划分或增加生成器补救本轮；[完整状态](research/WISIG_W3_AB_STATUS_2026_11_13.json)。此前STOP和LoRa稿件保持原结论。
 

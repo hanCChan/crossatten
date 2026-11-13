@@ -1,0 +1,801 @@
+{
+  "status": "EXACT_REPLAY_INPUTS_AND_SELECTED_WEIGHTS",
+  "raw_IQ_included": false,
+  "optimizer_states_included": false,
+  "selected_weight_files": 15,
+  "files": [
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S0_aux\\COMPLETE.json",
+      "relative": "research/wisig_w4/artifacts/A1_S0_aux/COMPLETE.json",
+      "sha256": "2f22216c03c28e0ef202df14d528f9e1b55af1e91774cfabf6fd6d3a1b24ba76",
+      "bytes": 1816
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S0_aux\\selected_val.npz",
+      "relative": "research/wisig_w4/artifacts/A1_S0_aux/selected_val.npz",
+      "sha256": "d606f2f4a982cb103ad88af6ceca70d5de4e1b7e76b2b8da5cfa27bc1f286561",
+      "bytes": 1883307
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S0_aux\\selected.pt",
+      "relative": "research/wisig_w4/artifacts/review_checkpoints/A1_S0_aux.pt",
+      "sha256": "7d616f2ea5594d0d7ce8c93d4bbc59e431eea910f2eec0b031610776df5247e4",
+      "bytes": 364970
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S0_aux\\HISTORY.json",
+      "relative": "research/wisig_w4/artifacts/A1_S0_aux/HISTORY.json",
+      "sha256": "c88f8bc08469ab2b91222337abfcba3decf2d1b9df5385f7f878b4d2777e6142",
+      "bytes": 20161
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S0_aux\\INITIAL.json",
+      "relative": "research/wisig_w4/artifacts/A1_S0_aux/INITIAL.json",
+      "sha256": "71dea73cd0a813011c7c012b7a7c16a34b9f247ada4658c4beba0b862f04cd8b",
+      "bytes": 124
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S0_aux\\COMPLETE.json",
+      "relative": "research/wisig_w4/artifacts/A2_S0_aux/COMPLETE.json",
+      "sha256": "0e258b1669219d9b934402af533efeded16a9c6b31006f9b985620d8e24c2f68",
+      "bytes": 1830
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S0_aux\\selected_val.npz",
+      "relative": "research/wisig_w4/artifacts/A2_S0_aux/selected_val.npz",
+      "sha256": "e669f8eb1ce7d123a092bf73a8865686d935b08405adc5a3e3169b81ccec359c",
+      "bytes": 1882831
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S0_aux\\selected.pt",
+      "relative": "research/wisig_w4/artifacts/review_checkpoints/A2_S0_aux.pt",
+      "sha256": "c172bda6569de9a47a4d627545e520580b0b0fc8faba9f57bfe778714517d209",
+      "bytes": 364970
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S0_aux\\HISTORY.json",
+      "relative": "research/wisig_w4/artifacts/A2_S0_aux/HISTORY.json",
+      "sha256": "53c0249e95d212169ab8795dbd4115ec6fea83e5f19bcc72aa7c899c22769eb0",
+      "bytes": 20804
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S0_aux\\INITIAL.json",
+      "relative": "research/wisig_w4/artifacts/A2_S0_aux/INITIAL.json",
+      "sha256": "71dea73cd0a813011c7c012b7a7c16a34b9f247ada4658c4beba0b862f04cd8b",
+      "bytes": 124
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S1_aux\\COMPLETE.json",
+      "relative": "research/wisig_w4/artifacts/A1_S1_aux/COMPLETE.json",
+      "sha256": "94f0b66529f45e7d587b58b570172ec7db1743630b23b7ff46874520ef99426d",
+      "bytes": 1815
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S1_aux\\selected_val.npz",
+      "relative": "research/wisig_w4/artifacts/A1_S1_aux/selected_val.npz",
+      "sha256": "e813f6bc02705d14c0c2a384c458c710f68e43f31122b24065209bdfc843de51",
+      "bytes": 1882112
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S1_aux\\selected.pt",
+      "relative": "research/wisig_w4/artifacts/review_checkpoints/A1_S1_aux.pt",
+      "sha256": "15dd72597d35be9e1fde4d47a0e00aaba3b189fe72c9838acd778989af4d504f",
+      "bytes": 364970
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S1_aux\\HISTORY.json",
+      "relative": "research/wisig_w4/artifacts/A1_S1_aux/HISTORY.json",
+      "sha256": "730224978e1d153741970b87e5877e04079a1177ffc7a3499c6f29ef2aa04285",
+      "bytes": 20169
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S1_aux\\INITIAL.json",
+      "relative": "research/wisig_w4/artifacts/A1_S1_aux/INITIAL.json",
+      "sha256": "68b00f6e4262820e28a31d35193dc44cdcf0d35c4282d2fafe9328bdff3f7336",
+      "bytes": 124
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S1_aux\\COMPLETE.json",
+      "relative": "research/wisig_w4/artifacts/A2_S1_aux/COMPLETE.json",
+      "sha256": "10a7fffbf3e045c08a38c0ad822e5dc8650a0e6988d78ef711453ecb88e9c12e",
+      "bytes": 1831
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S1_aux\\selected_val.npz",
+      "relative": "research/wisig_w4/artifacts/A2_S1_aux/selected_val.npz",
+      "sha256": "6d9d65356f594f47d6a1b838a31ce7b291c75fce1caed74f1a4f9ba785e16d70",
+      "bytes": 1883198
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S1_aux\\selected.pt",
+      "relative": "research/wisig_w4/artifacts/review_checkpoints/A2_S1_aux.pt",
+      "sha256": "08a1ff83ae22dda4d4c6e3572390753ace7c78511ef2d5474b0e3366fb1615a5",
+      "bytes": 364970
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S1_aux\\HISTORY.json",
+      "relative": "research/wisig_w4/artifacts/A2_S1_aux/HISTORY.json",
+      "sha256": "fe3d69f2666bdd5fcb6a811eea536c81ff84aa6d58d95089dd68c08764260fcd",
+      "bytes": 20815
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S1_aux\\INITIAL.json",
+      "relative": "research/wisig_w4/artifacts/A2_S1_aux/INITIAL.json",
+      "sha256": "68b00f6e4262820e28a31d35193dc44cdcf0d35c4282d2fafe9328bdff3f7336",
+      "bytes": 124
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S2_aux\\COMPLETE.json",
+      "relative": "research/wisig_w4/artifacts/A1_S2_aux/COMPLETE.json",
+      "sha256": "9ca759bd732f2ba18ddef14f69265c765c243243e7818079b606eeba55a8fbb8",
+      "bytes": 1818
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S2_aux\\selected_val.npz",
+      "relative": "research/wisig_w4/artifacts/A1_S2_aux/selected_val.npz",
+      "sha256": "16f640c0a7661ea99c43f817edf1c6a54e045ece869cb1224f423a5436628787",
+      "bytes": 1882820
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S2_aux\\selected.pt",
+      "relative": "research/wisig_w4/artifacts/review_checkpoints/A1_S2_aux.pt",
+      "sha256": "02a1378106d71722c157d3a77328996d5e982f13c9f3cd711ab34df4e49d9110",
+      "bytes": 364970
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S2_aux\\HISTORY.json",
+      "relative": "research/wisig_w4/artifacts/A1_S2_aux/HISTORY.json",
+      "sha256": "759e8dc4d932a742e77d49b68e15a208609d15c4b6ee28172ee13501de21a974",
+      "bytes": 20162
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S2_aux\\INITIAL.json",
+      "relative": "research/wisig_w4/artifacts/A1_S2_aux/INITIAL.json",
+      "sha256": "baaf6aa1fd4b3bf255bcb0f72e946e02d2057ebb313812149e32479610bf59c1",
+      "bytes": 124
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S2_aux\\COMPLETE.json",
+      "relative": "research/wisig_w4/artifacts/A2_S2_aux/COMPLETE.json",
+      "sha256": "4cc6477c8bd93227908bfaf6df030bf0f3f406d9959e3279064c1b6b7b7bf83f",
+      "bytes": 1834
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S2_aux\\selected_val.npz",
+      "relative": "research/wisig_w4/artifacts/A2_S2_aux/selected_val.npz",
+      "sha256": "7fc0709d08ce3035240c7dbe614ac1ac0a87d2c5ba8ecc7dede454e89e4ac19f",
+      "bytes": 1884388
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S2_aux\\selected.pt",
+      "relative": "research/wisig_w4/artifacts/review_checkpoints/A2_S2_aux.pt",
+      "sha256": "0fa0af7050e65ef4a66a4a58c7c986dbb45d07a48cedad0dcbb12dcd3c453f59",
+      "bytes": 364970
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S2_aux\\HISTORY.json",
+      "relative": "research/wisig_w4/artifacts/A2_S2_aux/HISTORY.json",
+      "sha256": "b5a8542a956b8beb2846743d19638e8d4952e17b04f0581fa22426e73fc8ba02",
+      "bytes": 20853
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S2_aux\\INITIAL.json",
+      "relative": "research/wisig_w4/artifacts/A2_S2_aux/INITIAL.json",
+      "sha256": "baaf6aa1fd4b3bf255bcb0f72e946e02d2057ebb313812149e32479610bf59c1",
+      "bytes": 124
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S0_downstream\\COMPLETE.json",
+      "relative": "research/wisig_w4/artifacts/A1_S0_downstream/COMPLETE.json",
+      "sha256": "24e28caf537cc624428f53e2010edee12b1cc74a9eb9e00d7b0d0462f11243fe",
+      "bytes": 3236
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S0_downstream\\C1_selected_val.npz",
+      "relative": "research/wisig_w4/artifacts/A1_S0_downstream/C1_selected_val.npz",
+      "sha256": "13299fee21007f91c0c1111cdb40ad0436bbfb504653d19623cebc919c35690c",
+      "bytes": 421346
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S0_downstream\\C1_selected.pt",
+      "relative": "research/wisig_w4/artifacts/review_checkpoints/A1_S0_downstream.pt",
+      "sha256": "b16ef35c814be52bd2765cae45b38f97d889d579f15e6d8df091040d979bcd16",
+      "bytes": 348702
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S0_downstream\\HISTORY.json",
+      "relative": "research/wisig_w4/artifacts/A1_S0_downstream/HISTORY.json",
+      "sha256": "0445725f843d5be9571c2f333138eb649ae9a15bc99f7aed8ab04b24e1246cf7",
+      "bytes": 46681
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S0_downstream\\INITIAL.json",
+      "relative": "research/wisig_w4/artifacts/A1_S0_downstream/INITIAL.json",
+      "sha256": "fb35eeac3e3271252c418653b15e575cc4057260303601b6af5fd5fe4984d474",
+      "bytes": 444
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S0_downstream\\COMPLETE.json",
+      "relative": "research/wisig_w4/artifacts/A2_S0_downstream/COMPLETE.json",
+      "sha256": "3d8b107e64f1a91434fecf2b4bb0aaf0c529be39abcce01461210d7c18d6fa60",
+      "bytes": 3235
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S0_downstream\\C1_selected_val.npz",
+      "relative": "research/wisig_w4/artifacts/A2_S0_downstream/C1_selected_val.npz",
+      "sha256": "a8260dc1ffe04405d8091c764e77beacaf487cf327b064bf6e59b35633ed8636",
+      "bytes": 421881
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S0_downstream\\C1_selected.pt",
+      "relative": "research/wisig_w4/artifacts/review_checkpoints/A2_S0_downstream.pt",
+      "sha256": "775ee96fc48a4a99596e7b014ee16ae3ac0c2d66f04762dac1339810d5af9b1a",
+      "bytes": 348702
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S0_downstream\\HISTORY.json",
+      "relative": "research/wisig_w4/artifacts/A2_S0_downstream/HISTORY.json",
+      "sha256": "a0de1619efb132c81d6f033bd9d4a1b66c5782301d8acd0cdfc3461b62b88771",
+      "bytes": 46698
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S0_downstream\\INITIAL.json",
+      "relative": "research/wisig_w4/artifacts/A2_S0_downstream/INITIAL.json",
+      "sha256": "212a01fcf80db99784dd89e2579a9091032644f9f9e0cd7b705dac4297275b82",
+      "bytes": 444
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S1_downstream\\COMPLETE.json",
+      "relative": "research/wisig_w4/artifacts/A1_S1_downstream/COMPLETE.json",
+      "sha256": "059e60085fbd1d0a705932c2ee065ebffdab7c3e532736650727347695031dac",
+      "bytes": 3236
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S1_downstream\\C1_selected_val.npz",
+      "relative": "research/wisig_w4/artifacts/A1_S1_downstream/C1_selected_val.npz",
+      "sha256": "e41c4cfd6bc5e4f154ea1f4284f25206de66fa940b36b4f680eef39abf48364b",
+      "bytes": 422716
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S1_downstream\\C1_selected.pt",
+      "relative": "research/wisig_w4/artifacts/review_checkpoints/A1_S1_downstream.pt",
+      "sha256": "9d0d50dfe436144f51fcf4f20b8896e51332295b35198efd780cf848dcc9e306",
+      "bytes": 348702
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S1_downstream\\HISTORY.json",
+      "relative": "research/wisig_w4/artifacts/A1_S1_downstream/HISTORY.json",
+      "sha256": "d3a05346a55569d12c6d8b14545d3ad9f5fa344aa1f81a0a712bfc562f194309",
+      "bytes": 46747
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S1_downstream\\INITIAL.json",
+      "relative": "research/wisig_w4/artifacts/A1_S1_downstream/INITIAL.json",
+      "sha256": "326187b56dc0eac6342f50e3dbc3eccf7687b6a732b114705c63126938a580e6",
+      "bytes": 444
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S1_downstream\\COMPLETE.json",
+      "relative": "research/wisig_w4/artifacts/A2_S1_downstream/COMPLETE.json",
+      "sha256": "763032ee5f58d6e7e9c8271742bb870078c1f36becc4b36861abf14336b89b14",
+      "bytes": 3239
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S1_downstream\\C1_selected_val.npz",
+      "relative": "research/wisig_w4/artifacts/A2_S1_downstream/C1_selected_val.npz",
+      "sha256": "8d9e2979c8d82d008552719f77a8445b26e7b0f9ee9188b7d6aa6507ff12d7b8",
+      "bytes": 422436
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S1_downstream\\C1_selected.pt",
+      "relative": "research/wisig_w4/artifacts/review_checkpoints/A2_S1_downstream.pt",
+      "sha256": "c47631d9975d2df22605faaa62dc5bfead54e5814ce2431a28a0eb9c4b3f944e",
+      "bytes": 348702
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S1_downstream\\HISTORY.json",
+      "relative": "research/wisig_w4/artifacts/A2_S1_downstream/HISTORY.json",
+      "sha256": "6453f5c46689fdb88c9f42c4dd201e09549f70a362b278fbcf7f8a64b5efc738",
+      "bytes": 46754
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S1_downstream\\INITIAL.json",
+      "relative": "research/wisig_w4/artifacts/A2_S1_downstream/INITIAL.json",
+      "sha256": "61c81b747f8ba4e3b5eef0614072a593e5f1d9f55e3a84883392b97713cc38b1",
+      "bytes": 444
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S2_downstream\\COMPLETE.json",
+      "relative": "research/wisig_w4/artifacts/A1_S2_downstream/COMPLETE.json",
+      "sha256": "cb3b795decb56b3d9849e1e8499c7cfba021b45bf3a4317f5de247ec906cfe29",
+      "bytes": 3231
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S2_downstream\\C1_selected_val.npz",
+      "relative": "research/wisig_w4/artifacts/A1_S2_downstream/C1_selected_val.npz",
+      "sha256": "8c4b042e691b949096da00e6c8b7abca42f951a718e8bcb22f363dac5b8a4bb7",
+      "bytes": 420550
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S2_downstream\\C1_selected.pt",
+      "relative": "research/wisig_w4/artifacts/review_checkpoints/A1_S2_downstream.pt",
+      "sha256": "64ea329413c696a434be56f49cb8f5fefc2ebff7a1c30241681e08414050e5a6",
+      "bytes": 348702
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S2_downstream\\HISTORY.json",
+      "relative": "research/wisig_w4/artifacts/A1_S2_downstream/HISTORY.json",
+      "sha256": "a03aa5939a74369273f28b990a62e953dc7793fe4f1ba659a25a6843b7f75643",
+      "bytes": 46708
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S2_downstream\\INITIAL.json",
+      "relative": "research/wisig_w4/artifacts/A1_S2_downstream/INITIAL.json",
+      "sha256": "204ac26cb8735e3e7d56292c52f8b0e360fcea46b4b9466b4617abfa90aa332d",
+      "bytes": 444
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S2_downstream\\COMPLETE.json",
+      "relative": "research/wisig_w4/artifacts/A2_S2_downstream/COMPLETE.json",
+      "sha256": "cdc6d87c516b08d34f1d7abe000a025d1f0557971084d41e6923c67fb1193d2b",
+      "bytes": 3237
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S2_downstream\\C1_selected_val.npz",
+      "relative": "research/wisig_w4/artifacts/A2_S2_downstream/C1_selected_val.npz",
+      "sha256": "7561b22ab3ceef9ba4ce97859af942c6d943e02e4ab7b3e2fbbea1a024cb291c",
+      "bytes": 421019
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S2_downstream\\C1_selected.pt",
+      "relative": "research/wisig_w4/artifacts/review_checkpoints/A2_S2_downstream.pt",
+      "sha256": "889e582950e8aed16b9dc2ad83e59ef46b6b443c4d900f40355f119da5418a2e",
+      "bytes": 348702
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S2_downstream\\HISTORY.json",
+      "relative": "research/wisig_w4/artifacts/A2_S2_downstream/HISTORY.json",
+      "sha256": "f80c11a12051253e3d6c87914b8642e6af5d3aab6b92e2776dae61baedcb60c9",
+      "bytes": 46704
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A2_S2_downstream\\INITIAL.json",
+      "relative": "research/wisig_w4/artifacts/A2_S2_downstream/INITIAL.json",
+      "sha256": "a87fe022bfc8a8e41f20ac599936162fb0d76378dafd89980d2da9e840d78d8a",
+      "bytes": 444
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S0_wd1e3_ERM_EMA\\C1_selected.pt",
+      "relative": "research/wisig_w4/artifacts/review_checkpoints/A0_S0.pt",
+      "sha256": "8aa97fb78d5a7992b081c274911644d02b51e66b7385959ab76e9e63e9eafb79",
+      "bytes": 348702
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S0_wd1e3_ERM_EMA\\C1_selected_val.npz",
+      "relative": "research/wisig_w4/artifacts/review_metadata/084a06f410bde3d789d511718e85112292252555bc0bf4f27829f9df6586b0eb.npz",
+      "sha256": "084a06f410bde3d789d511718e85112292252555bc0bf4f27829f9df6586b0eb",
+      "bytes": 423574
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S0_wd1e3_ERM_EMA\\INITIAL.json",
+      "relative": "research/wisig_w4/artifacts/review_metadata/8bcafef33d4b8b405bc4e343eda57539fb7da2d67b284324f6aa5e144b2b7f88.json",
+      "sha256": "8bcafef33d4b8b405bc4e343eda57539fb7da2d67b284324f6aa5e144b2b7f88",
+      "bytes": 444
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S0_wd1e3_ERM_EMA\\SAMPLE_KEYS.npz",
+      "relative": "research/wisig_w4/artifacts/review_metadata/e9fdae5ca6b128b590953bff6fcbdff25f8abbd2acfecd36efc4ab4b79e12b74.npz",
+      "sha256": "e9fdae5ca6b128b590953bff6fcbdff25f8abbd2acfecd36efc4ab4b79e12b74",
+      "bytes": 492680
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S0_wd1e3_ERM_EMA\\C1_selected_selection.npz",
+      "relative": "research/wisig_w4/artifacts/P_A0_S0_selection.npz",
+      "sha256": "b9d3e78db0f7b027d657733b226e55caa26fbfff5390857513468887b3dd6981",
+      "bytes": 488031
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S1_wd1e3_ERM_EMA\\C1_selected.pt",
+      "relative": "research/wisig_w4/artifacts/review_checkpoints/A0_S1.pt",
+      "sha256": "549d9064775e5544b868850f8871a65c8c53afb52b2b5f9edd9f7d0f221d5272",
+      "bytes": 348702
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S1_wd1e3_ERM_EMA\\C1_selected_val.npz",
+      "relative": "research/wisig_w4/artifacts/review_metadata/487f240b2fe13538d898b896d6f29e7ba8ab5c3715029de1bdd450f2314c0e0e.npz",
+      "sha256": "487f240b2fe13538d898b896d6f29e7ba8ab5c3715029de1bdd450f2314c0e0e",
+      "bytes": 423399
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S1_wd1e3_ERM_EMA\\INITIAL.json",
+      "relative": "research/wisig_w4/artifacts/review_metadata/5b7800009e3a7f15123072019d2d8715dbf3aa24f4ce3ad98cc7168704c68dec.json",
+      "sha256": "5b7800009e3a7f15123072019d2d8715dbf3aa24f4ce3ad98cc7168704c68dec",
+      "bytes": 444
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S1_wd1e3_ERM_EMA\\SAMPLE_KEYS.npz",
+      "relative": "research/wisig_w4/artifacts/review_metadata/e9fdae5ca6b128b590953bff6fcbdff25f8abbd2acfecd36efc4ab4b79e12b74.npz",
+      "sha256": "e9fdae5ca6b128b590953bff6fcbdff25f8abbd2acfecd36efc4ab4b79e12b74",
+      "bytes": 492680
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S1_wd1e3_ERM_EMA\\C1_selected_selection.npz",
+      "relative": "research/wisig_w4/artifacts/P_A0_S1_selection.npz",
+      "sha256": "1a7f5e562d4e9e804aabdc2b08d36737854f98d18e1391966ad63bc443348900",
+      "bytes": 487474
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S2_wd1e3_ERM_EMA\\C1_selected.pt",
+      "relative": "research/wisig_w4/artifacts/review_checkpoints/A0_S2.pt",
+      "sha256": "a29c82a4ac77fc34ad1504527090c8b59a01f7e6002f11cce80b2ab7546bc82c",
+      "bytes": 348702
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S2_wd1e3_ERM_EMA\\C1_selected_val.npz",
+      "relative": "research/wisig_w4/artifacts/review_metadata/33ef61066284e2e539f4d1cbc7ff691d97606e210238b3152696a63d5c8d60a3.npz",
+      "sha256": "33ef61066284e2e539f4d1cbc7ff691d97606e210238b3152696a63d5c8d60a3",
+      "bytes": 423073
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S2_wd1e3_ERM_EMA\\INITIAL.json",
+      "relative": "research/wisig_w4/artifacts/review_metadata/c916510a81208180d3340fd51423e13aed6ce4fe44e00a89f1ac4b1b1bff8a25.json",
+      "sha256": "c916510a81208180d3340fd51423e13aed6ce4fe44e00a89f1ac4b1b1bff8a25",
+      "bytes": 444
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S2_wd1e3_ERM_EMA\\SAMPLE_KEYS.npz",
+      "relative": "research/wisig_w4/artifacts/review_metadata/e9fdae5ca6b128b590953bff6fcbdff25f8abbd2acfecd36efc4ab4b79e12b74.npz",
+      "sha256": "e9fdae5ca6b128b590953bff6fcbdff25f8abbd2acfecd36efc4ab4b79e12b74",
+      "bytes": 492680
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V0_S2_wd1e3_ERM_EMA\\C1_selected_selection.npz",
+      "relative": "research/wisig_w4/artifacts/P_A0_S2_selection.npz",
+      "sha256": "395b56913f3ed84bd2df1ab10c8c785b810333db45519f82064e3f23ac04f71f",
+      "bytes": 486353
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\P_A0_S0_selection.npz",
+      "relative": "research/wisig_w4/artifacts/P_A0_S0_selection.npz",
+      "sha256": "b9d3e78db0f7b027d657733b226e55caa26fbfff5390857513468887b3dd6981",
+      "bytes": 488031
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\P_A1_S0_selection.npz",
+      "relative": "research/wisig_w4/artifacts/P_A1_S0_selection.npz",
+      "sha256": "f23060a835169348aea6226d20013b9bb12dd56c13b549cf0c696970691bd680",
+      "bytes": 485648
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\P_A2_S0_selection.npz",
+      "relative": "research/wisig_w4/artifacts/P_A2_S0_selection.npz",
+      "sha256": "d86d273b6cb15fcb17f5ebb7720ceb8c06796cc09e2fd64230864ad83f5f4c80",
+      "bytes": 486826
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\P_A1_S1_selection.npz",
+      "relative": "research/wisig_w4/artifacts/P_A1_S1_selection.npz",
+      "sha256": "f8f43ceb0400dc76ad5587caa15d0a973e67c126d0f4abc89aea58c7bc8cbb40",
+      "bytes": 488053
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\P_A2_S1_selection.npz",
+      "relative": "research/wisig_w4/artifacts/P_A2_S1_selection.npz",
+      "sha256": "bcc045c76ce74f2496331344ad3482b8adf1e40efb674f99ab56ad742377c270",
+      "bytes": 487671
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\P_A0_S1_selection.npz",
+      "relative": "research/wisig_w4/artifacts/P_A0_S1_selection.npz",
+      "sha256": "1a7f5e562d4e9e804aabdc2b08d36737854f98d18e1391966ad63bc443348900",
+      "bytes": 487474
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\P_A2_S2_selection.npz",
+      "relative": "research/wisig_w4/artifacts/P_A2_S2_selection.npz",
+      "sha256": "366e739ce88bd0fe10289854bee3ad7a23623976d1d21761ddbb627940192ba3",
+      "bytes": 484653
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\P_A0_S2_selection.npz",
+      "relative": "research/wisig_w4/artifacts/P_A0_S2_selection.npz",
+      "sha256": "395b56913f3ed84bd2df1ab10c8c785b810333db45519f82064e3f23ac04f71f",
+      "bytes": 486353
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\P_A1_S2_selection.npz",
+      "relative": "research/wisig_w4/artifacts/P_A1_S2_selection.npz",
+      "sha256": "b451cf493dcbcd9435c29fe16481d0de2bb71e74cbba32e754a9044628314025",
+      "bytes": 484734
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\P_AUX24_FEATURES.npz",
+      "relative": "research/wisig_w4/artifacts/P_AUX24_FEATURES.npz",
+      "sha256": "5a14db5ca1fcea60520549c01ebd402b3e37028b0ac9804e961f23bb61b8518d",
+      "bytes": 13124172
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\P_TRAINING_EVIDENCE.json",
+      "relative": "research/wisig_w4/artifacts/P_TRAINING_EVIDENCE.json",
+      "sha256": "64c55f523e5cef128e1e1a2618228749a96c11ec04da0388a10a5e9732dce238",
+      "bytes": 626319
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\P_ROLE_METADATA.npz",
+      "relative": "research/wisig_w4/artifacts/P_ROLE_METADATA.npz",
+      "sha256": "ec3c3d9338d1df01749b08ce088c2a37744759909f479865cf86b07ab8bf4a18",
+      "bytes": 674762
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\E_PAIRED.npz",
+      "relative": "research/wisig_w4/artifacts/E_PAIRED.npz",
+      "sha256": "58d2b25a818f311f76358f14b383f70bc449752b00ed99905671c00387da3b91",
+      "bytes": 7017724
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f0_first_s16001\\fit_manifest.json",
+      "relative": "research/wisig_w4/artifacts/review_metadata/ec8b536d58e36ed15c7cdb8ecdad52b5e692a7965e9069cfd7ea63daa21f62f0.json",
+      "sha256": "ec8b536d58e36ed15c7cdb8ecdad52b5e692a7965e9069cfd7ea63daa21f62f0",
+      "bytes": 1208
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f0_first_s16001\\train_ids.npy",
+      "relative": "research/wisig_w4/artifacts/review_metadata/35222d9edb897476681663e9373ad1a31708977d54886f1a39b66b7e547fcefc.npy",
+      "sha256": "35222d9edb897476681663e9373ad1a31708977d54886f1a39b66b7e547fcefc",
+      "bytes": 97196
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f0_first_s16001\\val_ids.npy",
+      "relative": "research/wisig_w4/artifacts/review_metadata/fad5db16254ce8960724ca9d685845fa498d59c5fc2927d7da6e7198830f4693.npy",
+      "sha256": "fad5db16254ce8960724ca9d685845fa498d59c5fc2927d7da6e7198830f4693",
+      "bytes": 41732
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f0__first__s18101\\held_predictions.npz",
+      "relative": "research/wisig_w4/artifacts/review_metadata/98cf6e0c71de9703fcc3e4287d45031f68038e518698df1960b1eb165d45bc17.npz",
+      "sha256": "98cf6e0c71de9703fcc3e4287d45031f68038e518698df1960b1eb165d45bc17",
+      "bytes": 440234
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f0__first__s18101\\source_val_predictions.npz",
+      "relative": "research/wisig_w4/artifacts/review_metadata/d99bd60829bbaa4c4dbd31ff677448254df7353c075cebfb9c3c70666122906a.npz",
+      "sha256": "d99bd60829bbaa4c4dbd31ff677448254df7353c075cebfb9c3c70666122906a",
+      "bytes": 406505
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f0__first__s18101\\config.json",
+      "relative": "research/wisig_w4/artifacts/review_metadata/25804c73e75e867a97896ab0c89df67326d5bc812ae376061d51dda3a7a46fcf.json",
+      "sha256": "25804c73e75e867a97896ab0c89df67326d5bc812ae376061d51dda3a7a46fcf",
+      "bytes": 1393
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f0__first__s18101\\held_metrics.json",
+      "relative": "research/wisig_w4/artifacts/review_metadata/42e14ae2cecf92bdd96be6715c2cd4fe6d1dbbb5c16b11e16c8d0ec1689d7424.json",
+      "sha256": "42e14ae2cecf92bdd96be6715c2cd4fe6d1dbbb5c16b11e16c8d0ec1689d7424",
+      "bytes": 15779
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f0__first__s18101\\held_predictions.npz",
+      "relative": "research/wisig_w4/artifacts/review_metadata/f50f7e4683485cc1891a841fac3b36e63aa461d9e3c27596a75d8d243298b8c6.npz",
+      "sha256": "f50f7e4683485cc1891a841fac3b36e63aa461d9e3c27596a75d8d243298b8c6",
+      "bytes": 440896
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f0__first__s18101\\source_val_predictions.npz",
+      "relative": "research/wisig_w4/artifacts/review_metadata/96c898850e79fb562c7236bc60d243fd8244cf564dfac9004f626be8e065d5cb.npz",
+      "sha256": "96c898850e79fb562c7236bc60d243fd8244cf564dfac9004f626be8e065d5cb",
+      "bytes": 407019
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f0__first__s18101\\config.json",
+      "relative": "research/wisig_w4/artifacts/review_metadata/ed88c4faed314c9b6c67b34e9edfd583ca64925355c0db37b4b627642c82c81e.json",
+      "sha256": "ed88c4faed314c9b6c67b34e9edfd583ca64925355c0db37b4b627642c82c81e",
+      "bytes": 998
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f0__first__s18101\\held_metrics.json",
+      "relative": "research/wisig_w4/artifacts/review_metadata/0b36d03be20b261979ec4b07661e198df9b013e3e7f0631d305928a1eb3f7e74.json",
+      "sha256": "0b36d03be20b261979ec4b07661e198df9b013e3e7f0631d305928a1eb3f7e74",
+      "bytes": 15641
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f1_first_s16001\\fit_manifest.json",
+      "relative": "research/wisig_w4/artifacts/review_metadata/554b89544db9df34ddf0509b4de1d776ff32c93ddb19a49c51187636bd702949.json",
+      "sha256": "554b89544db9df34ddf0509b4de1d776ff32c93ddb19a49c51187636bd702949",
+      "bytes": 1202
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f1_first_s16001\\train_ids.npy",
+      "relative": "research/wisig_w4/artifacts/review_metadata/1f8d5f316d0ed2e80f1812411b6fc1a617d8c56df824cbd2f1994f2799ea78e5.npy",
+      "sha256": "1f8d5f316d0ed2e80f1812411b6fc1a617d8c56df824cbd2f1994f2799ea78e5",
+      "bytes": 96636
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f1_first_s16001\\val_ids.npy",
+      "relative": "research/wisig_w4/artifacts/review_metadata/7d4275cfa0a117772dad7e9ccb5b83cde91b75c67f508dc4ec4c8f69c5a78026.npy",
+      "sha256": "7d4275cfa0a117772dad7e9ccb5b83cde91b75c67f508dc4ec4c8f69c5a78026",
+      "bytes": 41492
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f1__first__s18101\\held_predictions.npz",
+      "relative": "research/wisig_w4/artifacts/review_metadata/71fe8ec74c1737ac3fcd087a59f745d534f7f5bdf103e92ad5c5e7a6e97c0bc8.npz",
+      "sha256": "71fe8ec74c1737ac3fcd087a59f745d534f7f5bdf103e92ad5c5e7a6e97c0bc8",
+      "bytes": 447237
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f1__first__s18101\\source_val_predictions.npz",
+      "relative": "research/wisig_w4/artifacts/review_metadata/596adddc4c64aaee9202d9677b23bc9c54b2f10382a5650384c5f2dcc525d37e.npz",
+      "sha256": "596adddc4c64aaee9202d9677b23bc9c54b2f10382a5650384c5f2dcc525d37e",
+      "bytes": 404185
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f1__first__s18101\\config.json",
+      "relative": "research/wisig_w4/artifacts/review_metadata/855df8238f194079c6c3e3bf5d6f12d3d28471c0f0e6294963ebc116aaf20f69.json",
+      "sha256": "855df8238f194079c6c3e3bf5d6f12d3d28471c0f0e6294963ebc116aaf20f69",
+      "bytes": 1391
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f1__first__s18101\\held_metrics.json",
+      "relative": "research/wisig_w4/artifacts/review_metadata/118190f215a7701048bca6870be635ef26a1ea45978f21f24f0314787937cb7a.json",
+      "sha256": "118190f215a7701048bca6870be635ef26a1ea45978f21f24f0314787937cb7a",
+      "bytes": 15726
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f1__first__s18101\\held_predictions.npz",
+      "relative": "research/wisig_w4/artifacts/review_metadata/35e86fd786c4c8219caeaea7a84615fe1b018e68a06c4e8074dfaad161b4c674.npz",
+      "sha256": "35e86fd786c4c8219caeaea7a84615fe1b018e68a06c4e8074dfaad161b4c674",
+      "bytes": 448118
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f1__first__s18101\\source_val_predictions.npz",
+      "relative": "research/wisig_w4/artifacts/review_metadata/c64450d07305b351ce7ce6150d9cf02f1464636f46a2ed08ebd5d9e5a363f55a.npz",
+      "sha256": "c64450d07305b351ce7ce6150d9cf02f1464636f46a2ed08ebd5d9e5a363f55a",
+      "bytes": 403929
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f1__first__s18101\\config.json",
+      "relative": "research/wisig_w4/artifacts/review_metadata/119609856eda9316d16693a5f07e35e37d489b384360099979cbde75c44c21db.json",
+      "sha256": "119609856eda9316d16693a5f07e35e37d489b384360099979cbde75c44c21db",
+      "bytes": 999
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f1__first__s18101\\held_metrics.json",
+      "relative": "research/wisig_w4/artifacts/review_metadata/ebb21cce17e21c12a0164fcf126461a82328d1ea6a2273dc73b7df1e97d4daca.json",
+      "sha256": "ebb21cce17e21c12a0164fcf126461a82328d1ea6a2273dc73b7df1e97d4daca",
+      "bytes": 15586
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\fit_manifest.json",
+      "relative": "research/wisig_w4/artifacts/review_metadata/0fb3a069d62804751a1327ee44ea34f422808083f5db2af0ef52e331db70b88f.json",
+      "sha256": "0fb3a069d62804751a1327ee44ea34f422808083f5db2af0ef52e331db70b88f",
+      "bytes": 1194
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\train_ids.npy",
+      "relative": "research/wisig_w4/artifacts/review_metadata/35222d9edb897476681663e9373ad1a31708977d54886f1a39b66b7e547fcefc.npy",
+      "sha256": "35222d9edb897476681663e9373ad1a31708977d54886f1a39b66b7e547fcefc",
+      "bytes": 97196
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f2_first_s16001\\val_ids.npy",
+      "relative": "research/wisig_w4/artifacts/review_metadata/fad5db16254ce8960724ca9d685845fa498d59c5fc2927d7da6e7198830f4693.npy",
+      "sha256": "fad5db16254ce8960724ca9d685845fa498d59c5fc2927d7da6e7198830f4693",
+      "bytes": 41732
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f2__first__s18101\\held_predictions.npz",
+      "relative": "research/wisig_w4/artifacts/review_metadata/2c96956ac755a3f45c015094912ce91053a877a0117add0e291687109e01f3e4.npz",
+      "sha256": "2c96956ac755a3f45c015094912ce91053a877a0117add0e291687109e01f3e4",
+      "bytes": 448486
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f2__first__s18101\\source_val_predictions.npz",
+      "relative": "research/wisig_w4/artifacts/review_metadata/652ff7b6c3cacc2c99222b5f89c1c69ba186661b23a35b0719ac1e074d60c00f.npz",
+      "sha256": "652ff7b6c3cacc2c99222b5f89c1c69ba186661b23a35b0719ac1e074d60c00f",
+      "bytes": 406972
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f2__first__s18101\\config.json",
+      "relative": "research/wisig_w4/artifacts/review_metadata/cf9160e9e3e65f393a676fb3dbd0863ca9b1b8a5ef2bd85a3959f776c674d087.json",
+      "sha256": "cf9160e9e3e65f393a676fb3dbd0863ca9b1b8a5ef2bd85a3959f776c674d087",
+      "bytes": 1387
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f2__first__s18101\\held_metrics.json",
+      "relative": "research/wisig_w4/artifacts/review_metadata/3216533b8b232ef354405e7bbab36ca36f92c4d796560ab121a77ef087106dd2.json",
+      "sha256": "3216533b8b232ef354405e7bbab36ca36f92c4d796560ab121a77ef087106dd2",
+      "bytes": 15745
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f2__first__s18101\\held_predictions.npz",
+      "relative": "research/wisig_w4/artifacts/review_metadata/0d8b2b030de2d398fb4be430ffb2d04d6b2ec14d1181c1a3cae87d351ec44150.npz",
+      "sha256": "0d8b2b030de2d398fb4be430ffb2d04d6b2ec14d1181c1a3cae87d351ec44150",
+      "bytes": 449035
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f2__first__s18101\\source_val_predictions.npz",
+      "relative": "research/wisig_w4/artifacts/review_metadata/d10533d826440bc4bb27a99041bc1e796e1cb1ee1d4c9e2c81e8d14185f1f503.npz",
+      "sha256": "d10533d826440bc4bb27a99041bc1e796e1cb1ee1d4c9e2c81e8d14185f1f503",
+      "bytes": 407653
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f2__first__s18101\\config.json",
+      "relative": "research/wisig_w4/artifacts/review_metadata/200465cb486049e696276eb60501ed4ebe6ef014c3aba054ac9bcef362a9dbe4.json",
+      "sha256": "200465cb486049e696276eb60501ed4ebe6ef014c3aba054ac9bcef362a9dbe4",
+      "bytes": 999
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f2__first__s18101\\held_metrics.json",
+      "relative": "research/wisig_w4/artifacts/review_metadata/2b6fd075a8897783997d662a093ee7e2dd48c055ab1a59b5eb5877b27fa7e83b.json",
+      "sha256": "2b6fd075a8897783997d662a093ee7e2dd48c055ab1a59b5eb5877b27fa7e83b",
+      "bytes": 15617
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f3_first_s16001\\fit_manifest.json",
+      "relative": "research/wisig_w4/artifacts/review_metadata/f4c254085789a1b048805f6d0ef93b9d2b6890964642c309ce0f6763666c38f3.json",
+      "sha256": "f4c254085789a1b048805f6d0ef93b9d2b6890964642c309ce0f6763666c38f3",
+      "bytes": 1198
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f3_first_s16001\\train_ids.npy",
+      "relative": "research/wisig_w4/artifacts/review_metadata/6611bb051ce5eb871b5245004bf421aeb330ee1f1fe2316106fb16a9257ca66e.npy",
+      "sha256": "6611bb051ce5eb871b5245004bf421aeb330ee1f1fe2316106fb16a9257ca66e",
+      "bytes": 98688
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\cache\\ManyRx_f3_first_s16001\\val_ids.npy",
+      "relative": "research/wisig_w4/artifacts/review_metadata/e4c1d1320c0998fb15c60b8ac2e76f9c5b6127d2acb60ef14986a57100df9281.npy",
+      "sha256": "e4c1d1320c0998fb15c60b8ac2e76f9c5b6127d2acb60ef14986a57100df9281",
+      "bytes": 42368
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f3__first__s18101\\held_predictions.npz",
+      "relative": "research/wisig_w4/artifacts/review_metadata/4f0210ab5aff7928fffb3eb3e9964d623d62cea6bfe4b9260d41051e42153ae1.npz",
+      "sha256": "4f0210ab5aff7928fffb3eb3e9964d623d62cea6bfe4b9260d41051e42153ae1",
+      "bytes": 447535
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f3__first__s18101\\source_val_predictions.npz",
+      "relative": "research/wisig_w4/artifacts/review_metadata/696a3b299d9c00798a3449e4234b664da840f3c3a3ac12d514c759f22a030095.npz",
+      "sha256": "696a3b299d9c00798a3449e4234b664da840f3c3a3ac12d514c759f22a030095",
+      "bytes": 412563
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f3__first__s18101\\config.json",
+      "relative": "research/wisig_w4/artifacts/review_metadata/39783351762809922363f81e28a0d59eea5a42f03043a409ef15cdc425477e33.json",
+      "sha256": "39783351762809922363f81e28a0d59eea5a42f03043a409ef15cdc425477e33",
+      "bytes": 1389
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s20-asknet-source-comparison\\20-asknet-source-comparison\\runs\\ASK__f3__first__s18101\\held_metrics.json",
+      "relative": "research/wisig_w4/artifacts/review_metadata/a914846d608f6578a5f2763d63c4a0a016ad51e5303c7210e4ed94c991d690b3.json",
+      "sha256": "a914846d608f6578a5f2763d63c4a0a016ad51e5303c7210e4ed94c991d690b3",
+      "bytes": 15716
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f3__first__s18101\\held_predictions.npz",
+      "relative": "research/wisig_w4/artifacts/review_metadata/69f47bcf725753e5246746b5e5d8d6a574060d58db9a0745f88c77551a3c9e51.npz",
+      "sha256": "69f47bcf725753e5246746b5e5d8d6a574060d58db9a0745f88c77551a3c9e51",
+      "bytes": 448255
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f3__first__s18101\\source_val_predictions.npz",
+      "relative": "research/wisig_w4/artifacts/review_metadata/412af05ffb401152d3359dcf9ff08cb5c51533b36726685919ccf3d678399b55.npz",
+      "sha256": "412af05ffb401152d3359dcf9ff08cb5c51533b36726685919ccf3d678399b55",
+      "bytes": 412951
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f3__first__s18101\\config.json",
+      "relative": "research/wisig_w4/artifacts/review_metadata/0661cd8f265c0ad749d69289111c0f927441892e37cdd2c255757b38fea8a233.json",
+      "sha256": "0661cd8f265c0ad749d69289111c0f927441892e37cdd2c255757b38fea8a233",
+      "bytes": 999
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\s19-tx-spectral-evidence\\19-tx-spectral-evidence\\runs\\ManyRx__B0__f3__first__s18101\\held_metrics.json",
+      "relative": "research/wisig_w4/artifacts/review_metadata/737006341a5ddc6261a312d89fd0382cd01549393351dabe518452a473e31ab3.json",
+      "sha256": "737006341a5ddc6261a312d89fd0382cd01549393351dabe518452a473e31ab3",
+      "bytes": 15635
+    }
+  ],
+  "scope": "Predictions/features/training histories/role metadata plus 12 selected new checkpoints and 3 reused A0 checkpoints; no raw training replay."
+}

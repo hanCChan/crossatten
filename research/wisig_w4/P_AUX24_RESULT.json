@@ -1,0 +1,55 @@
+{
+  "status": "POST_SEAL_AUXILIARY_DIAGNOSTIC_ONLY",
+  "summary": {
+    "A1_S0": {
+      "prototype_diagnostic_accuracy_pct": 42.26996527777779,
+      "normalized_margin": -0.07759272977866255,
+      "normalized_RX_relation_MSE": 0.11686128876298646,
+      "minimum_relative_class_spread": 123.11760821741898
+    },
+    "A2_S0": {
+      "prototype_diagnostic_accuracy_pct": 44.9435763888889,
+      "normalized_margin": -0.07109884480243545,
+      "normalized_RX_relation_MSE": 0.11084372280701021,
+      "minimum_relative_class_spread": 122.48133549353649
+    },
+    "A1_S1": {
+      "prototype_diagnostic_accuracy_pct": 42.29383680555554,
+      "normalized_margin": -0.07795355719973421,
+      "normalized_RX_relation_MSE": 0.11290111869736423,
+      "minimum_relative_class_spread": 120.52387762091277
+    },
+    "A2_S1": {
+      "prototype_diagnostic_accuracy_pct": 45.58159722222222,
+      "normalized_margin": -0.06047759095964494,
+      "normalized_RX_relation_MSE": 0.11540121807886669,
+      "minimum_relative_class_spread": 118.10870692182041
+    },
+    "A1_S2": {
+      "prototype_diagnostic_accuracy_pct": 44.995659722222214,
+      "normalized_margin": -0.06808760752450989,
+      "normalized_RX_relation_MSE": 0.11736206314132963,
+      "minimum_relative_class_spread": 115.80997896516843
+    },
+    "A2_S2": {
+      "prototype_diagnostic_accuracy_pct": 45.961371527777786,
+      "normalized_margin": -0.051107311534400485,
+      "normalized_RX_relation_MSE": 0.10295096678730167,
+      "minimum_relative_class_spread": 117.8383517026197
+    }
+  },
+  "A2_minus_A1_prototype_accuracy_pp": {
+    "mean": 2.3090277777777857,
+    "per_seed": [
+      2.673611111111107,
+      3.2877604166666785,
+      0.9657118055555713
+    ]
+  },
+  "uses_labeled_support_prototypes": true,
+  "RX_seen_during_auxiliary_pretraining": true,
+  "not_downstream10TX_accuracy": true,
+  "not_zero_shot_unknown_RX": true,
+  "not_used_for_checkpoint_or_gate": true,
+  "data_qualification": "24 TX excluded from W4 fitting; these observations were part of prior W3 exploration, not historically untouched."
+}

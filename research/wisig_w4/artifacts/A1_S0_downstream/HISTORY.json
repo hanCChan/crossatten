@@ -1,0 +1,1042 @@
+[
+  {
+    "epoch": 1,
+    "updates": 127,
+    "train_ce": 0.4873532627833149,
+    "train_objective": 0.4873532627759772,
+    "train_accuracy": 0.8609503877877631,
+    "val_rx_ce": {
+      "C0": 0.3026518225669861,
+      "C1": 1.6192559003829956
+    },
+    "best_epochs": {
+      "C0": 1,
+      "C1": 1
+    },
+    "lr_used": 0.001,
+    "lr_next": 0.001,
+    "relative_order_sha256": "22c743ad174dded8adec6a60781596bf3e808b77ca0cd1c2b135f0f6924ec010",
+    "canonical_order_sha256": "99b88b29dcc244207fb478cb1023df3c4d701895b002467033b6afb51ba19cd0",
+    "class_day_order_sha256": "4cbd14b7c96606b49a320b181527d9bd9a11f8d7a4ce1e5ffc04268b9f0c10e8",
+    "student_sha256": "d36bfd866fc03af695089105947392b12f0d45935cb3dff738931372e854877c",
+    "optimizer_sha256": "6887853ab3666f6335b7ff0da354fefbbffa3e7939aea3266730825278568228",
+    "scheduler_sha256": "e26493a81879ff96b0455d05a020ef867ec167889078f80f5905cd73a355d4d3",
+    "rng_sha256": "3ad35ca226491a188b18d8e7252904b95a8c556dc8108db2b8eaea253ad31669",
+    "state_sha256": "c8472ddc980602d70a9a8a129a5519ca1d3975f5bbba9c05938829f81b13f060",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 2,
+    "updates": 254,
+    "train_ce": 0.26172342474173255,
+    "train_objective": 0.26172342471421595,
+    "train_accuracy": 0.9143173704296442,
+    "val_rx_ce": {
+      "C0": 0.26323699951171875,
+      "C1": 1.1656084060668945
+    },
+    "best_epochs": {
+      "C0": 2,
+      "C1": 2
+    },
+    "lr_used": 0.001,
+    "lr_next": 0.001,
+    "relative_order_sha256": "bed44c5194f6abf1a0eceda60bf95c4d9ead67bdd8a4f32aceeee3bf794348fb",
+    "canonical_order_sha256": "13388b3cd49675ca6a747d7591a5ad49e49a4ef01e3a3d04055ebc133a5c2f5d",
+    "class_day_order_sha256": "c730e8f08542d206a768ef091b8348d17388528142946505b4e4a1aa1fe4f651",
+    "student_sha256": "4744ce1e70c45d3d7484af87533d1f9a12169232f169cb9bae6df20829fb47cf",
+    "optimizer_sha256": "adfe6b2b9f5f6cb06a81c68884a779663e8901f421f5ed3ef287ec6e20273724",
+    "scheduler_sha256": "8a92c453358a899a9edcded88f42694d7beef46c45c25605335de2b6c09d0739",
+    "rng_sha256": "692aa8de3360467886c3b412d728af8b1cabaf79735d40b2bf7f76fa65726018",
+    "state_sha256": "0e034c8d4885dc1a68e93bb0f2076d46667931843d7069036723d1bc0374a1d7",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 3,
+    "updates": 381,
+    "train_ce": 0.22171199009158143,
+    "train_objective": 0.22171199014661466,
+    "train_accuracy": 0.9255816816447126,
+    "val_rx_ce": {
+      "C0": 0.26335519552230835,
+      "C1": 0.8126623034477234
+    },
+    "best_epochs": {
+      "C0": 2,
+      "C1": 3
+    },
+    "lr_used": 0.001,
+    "lr_next": 0.001,
+    "relative_order_sha256": "55889a64a4da89afd471c181100f8d494056f058c2d404cc44058a4bd2edd86c",
+    "canonical_order_sha256": "c8c1d61f09c3eabaa7e6adb9c2f1e923819acfae9e4fabaaf51ee6323fba4602",
+    "class_day_order_sha256": "a3531bc101047c9e6c4856c3d7ae02d9cdf586126d24f094f0a423e0a0f0382f",
+    "student_sha256": "77550261b25e61db7e2be3ce73c59a6d16985e80d86bb23a5acdfb36b486d2fe",
+    "optimizer_sha256": "d147f747c156c3e02a989eaa6aa40d571790537576371fec556793eb74780b26",
+    "scheduler_sha256": "193e0c1d71d6707caa43dbca8d180097c62304927c721866c428eb51805cbf3a",
+    "rng_sha256": "f4c8ba5a47a4549efc009f3dd309f6c1153a30f3b934d587ba8b38ef29c2f084",
+    "state_sha256": "af9f6c92ba8ac00ff4c1bd6292c7bf2a26c7f4493b9ae96cb0ece4bdb2b627bb",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 4,
+    "updates": 508,
+    "train_ce": 0.18576580947158403,
+    "train_objective": 0.18576580949910063,
+    "train_accuracy": 0.938815708482088,
+    "val_rx_ce": {
+      "C0": 0.26975321769714355,
+      "C1": 0.5800914764404297
+    },
+    "best_epochs": {
+      "C0": 2,
+      "C1": 4
+    },
+    "lr_used": 0.001,
+    "lr_next": 0.001,
+    "relative_order_sha256": "db05105c0ad4370866f81a7e6236005108291a41220e492cf04df4405506f1da",
+    "canonical_order_sha256": "501dde39e10c604a8d935ad9e6fed6181f1ed5dcb7a18fa39034e5966b4e7b8a",
+    "class_day_order_sha256": "d0433e2fe0f57edd033f3ea2f335ee55f218e675fa416b136f29a10c75ef8bde",
+    "student_sha256": "e83400986551f6e72efdc72317b57ce1f2ebb032a48c5351740901b5aaca7388",
+    "optimizer_sha256": "58c0dc034345b5dc7f1b8de6a09d8dac68e7e952f76d5fcda673c3a55c1c8f00",
+    "scheduler_sha256": "dbee28e0d48df73cefef7633b8384a2b2d5f63ed47844b24988c91c633304bf9",
+    "rng_sha256": "d30ca4e7bd2d5d7fcb04dd675c609998e5195835e631db5336155044e59f6840",
+    "state_sha256": "cf7aa027087ba695ab1de7d15233ba0fb217ba64398e224e80a389af7a4354e7",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 5,
+    "updates": 635,
+    "train_ce": 0.16823510021231788,
+    "train_objective": 0.16823510023433116,
+    "train_accuracy": 0.9430629077926874,
+    "val_rx_ce": {
+      "C0": 0.2571394741535187,
+      "C1": 0.4422454237937927
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 5
+    },
+    "lr_used": 0.001,
+    "lr_next": 0.001,
+    "relative_order_sha256": "ce794182eec466610cb79397c81a236f3a2619672f2841c17ffba8e8a68c0218",
+    "canonical_order_sha256": "02eb708f10e48d69146fef1a0cb1a675052ce026c3eb2cd25639109fc5382daf",
+    "class_day_order_sha256": "1fda347f533dd72c99eaabf16aa206037c97893f4a91ffa7dd946dfd7d9ee489",
+    "student_sha256": "59f27f73962ca5d82f7f754c37dd97be2f0859a634fcd0ea7ebd9499531231fc",
+    "optimizer_sha256": "1d012e197298199f7efc297ef83cdabb3b8007724fcdd0002bb3ce03d9e24b7b",
+    "scheduler_sha256": "b37f48a6fca72c522b2b246836e298573e66909dbabeb246bfe2d8580357a8bf",
+    "rng_sha256": "114bf243bad79de0c78f84ae5437b4b6e7189f60eb482f0de55545adb151080a",
+    "state_sha256": "4fd05abe4d0946f1ede350bc0f5651fc3cd3ae4630bcb4f06be295967813c508",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 6,
+    "updates": 762,
+    "train_ce": 0.15839840267204408,
+    "train_objective": 0.1583984026729613,
+    "train_accuracy": 0.9467561245845131,
+    "val_rx_ce": {
+      "C0": 0.28747355937957764,
+      "C1": 0.36143243312835693
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 6
+    },
+    "lr_used": 0.001,
+    "lr_next": 0.001,
+    "relative_order_sha256": "c113829ea5f879ef4b52323aec498151e84bd97e08da0d1df757e8cbf8280b0d",
+    "canonical_order_sha256": "dfbcc4b085af195c8ac6a91f51d73c80e3def9651ce2fcb68ab6121159f4c4d5",
+    "class_day_order_sha256": "49786c51ce550475a63211846f519cef73e431477988d39633cd85d8273260e3",
+    "student_sha256": "cd12d331f95ab67d9706496027ddce99f275192d0d5e524e61a9accdbf435400",
+    "optimizer_sha256": "2e062b8a1aa12c47e41e25165ee45427853c9ef7bf76473ec3a1dfc56f5b5524",
+    "scheduler_sha256": "2e4ada14cfaa58e8b7df8fb405e57316e3fc0a812639a011a21699a121743a2c",
+    "rng_sha256": "6e0209945534cf2a4f17463553ee8412f3c19dee95cd81e32010e0bc40742e00",
+    "state_sha256": "efc36279f5285d8590dfee927b78b4c33f35ea9d270c83a37f1c2f59cc0e4ef4",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 7,
+    "updates": 889,
+    "train_ce": 0.14262077979496748,
+    "train_objective": 0.14262077977570586,
+    "train_accuracy": 0.9519881817062662,
+    "val_rx_ce": {
+      "C0": 0.27397286891937256,
+      "C1": 0.3146170973777771
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 7
+    },
+    "lr_used": 0.001,
+    "lr_next": 0.001,
+    "relative_order_sha256": "350278b17c461faffc8f0538dcaf4c3c733ca8e8e16b3440f022b00bd7890cb7",
+    "canonical_order_sha256": "559ce2fa115f52737fd416becd1487ec2c959e58dc5747ca4720984cc3327c83",
+    "class_day_order_sha256": "83eb49f77d7d22791d7608b1484f1c68d9641dad1e71f643a4a7056453ece519",
+    "student_sha256": "7c35f37ab82a3cb5f78778d42a8e0fe705fdaf4f0d658262a85b20144e5d8a07",
+    "optimizer_sha256": "4bef7a2ee448c22253cb59ae1c98c20010e9a4acc6bd69c8247b9255bab8a945",
+    "scheduler_sha256": "eb3d6c48605cf2be4774b085e34aeef9ac53b50878662eba1f5bf3b145b2b10e",
+    "rng_sha256": "9c0368154646f1cfaddba4e220965fb171c40575a972d605d3fc8b8f4e95465b",
+    "state_sha256": "46c569ed746d389c04c04fcb8512e9127a29f5459e3dbf53fe1ef7d6a3c036c1",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 8,
+    "updates": 1016,
+    "train_ce": 0.12687599848280337,
+    "train_objective": 0.1268759984662934,
+    "train_accuracy": 0.9578973285731872,
+    "val_rx_ce": {
+      "C0": 0.28245362639427185,
+      "C1": 0.2869894206523895
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 8
+    },
+    "lr_used": 0.001,
+    "lr_next": 0.001,
+    "relative_order_sha256": "9311b6154f2fb364e2969f1e29d0371b9778fa2bdef99b5cbadf45a44e6d809a",
+    "canonical_order_sha256": "1e03753ada72e4b74a2744a146a372b37b78838e4d2a2827a917c885471d9513",
+    "class_day_order_sha256": "d98e7273d6f61dc6d04e37b4f526f3fdfb2bbc90f351f26e1ce96c4d007c6c6a",
+    "student_sha256": "87426e072acef73d31a9b8ea77779dae6649d33717f29807cd6248ffd8dfe52d",
+    "optimizer_sha256": "3d07030cade2989c29db58247c6b9df72e82d4c89121b2729f85315a0a477709",
+    "scheduler_sha256": "1213ac2d70e171c18c8c52d2d5e6edb966c935c0a701892f7e4364c210f4b9fa",
+    "rng_sha256": "0e1e7c67eec0e491b40aac93e88d9b09335bd5d3276fcb00ee1ab5560af6b512",
+    "state_sha256": "18b359d7008f52bd1481055b34c1ae816f0815cbfc2a5709cfd5914a8069f1be",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 9,
+    "updates": 1143,
+    "train_ce": 0.12724488377057463,
+    "train_objective": 0.12724488377057463,
+    "train_accuracy": 0.9578357749599902,
+    "val_rx_ce": {
+      "C0": 0.27866828441619873,
+      "C1": 0.26977717876434326
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 9
+    },
+    "lr_used": 0.001,
+    "lr_next": 0.001,
+    "relative_order_sha256": "0c89e92c26ba39b30fabaae0e274fef2c6ffff2ef6f5f521994eb955ec9c9783",
+    "canonical_order_sha256": "e982298deced3f4a2a1c36573ac8b97e6299222e636fe77942a1c5ce04183ae6",
+    "class_day_order_sha256": "cb5777a106e00985b522525ec66bb558158797179edee595d4bf6552248ac03c",
+    "student_sha256": "9569e16a29e215445b550de18b214d526792fa3745bb462ab32ecc1b68139a2b",
+    "optimizer_sha256": "1628a42ac67aa6f32f873870fa56f85e9344e98272b0130aad2ceaf7a4b3cbea",
+    "scheduler_sha256": "21de18bb3c4bf1231c570870c72e71dd3a63d0b64b8d404ae4d27a6ff6459494",
+    "rng_sha256": "186e8352b348b3e3d7508961ea2281f1ec0d644213ddc5820eb91c35ac685e1a",
+    "state_sha256": "d3fde2b2b870d85fce7a2fe34ef63b87a3aa376aee13a3af50db4808d646b024",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 10,
+    "updates": 1270,
+    "train_ce": 0.11010996138654758,
+    "train_objective": 0.11010996139571978,
+    "train_accuracy": 0.9636833682137141,
+    "val_rx_ce": {
+      "C0": 0.2844915986061096,
+      "C1": 0.25924235582351685
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 10
+    },
+    "lr_used": 0.001,
+    "lr_next": 0.001,
+    "relative_order_sha256": "732777d7e758a4bcd4f0f9219b78bf92dedfabaa6857e356452061b06927ad2f",
+    "canonical_order_sha256": "72a6cc4202736b1dc8837e92bf40e56f7263e74a2f6289d2925d87cb17d264af",
+    "class_day_order_sha256": "71fae9df79e46465663e6c4fadc25a6fad4fb892503aa7a81f052cdf0a25b7cf",
+    "student_sha256": "48bad992830f33e1331295bdd6456a5e9952abff7a2cb6610db4795151c3c2bd",
+    "optimizer_sha256": "d289bc9f144c3a4a71625b774791f62c6bee0436897c17afe8715519547d3bb2",
+    "scheduler_sha256": "d3191f2fc7b6034a742cc9f759e222acc8da83535c23ca2782c30f11419c7e77",
+    "rng_sha256": "c7fc2c6e7e816c5abc2484c541471c65370d2a81fdf7b30ac2981ce0032431ce",
+    "state_sha256": "fc77a2f35f149415e733b98102e72b501162c90f9bf7ec480ce4761b89968341",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 11,
+    "updates": 1397,
+    "train_ce": 0.10365241483472096,
+    "train_objective": 0.10365241482967624,
+    "train_accuracy": 0.9660224055152038,
+    "val_rx_ce": {
+      "C0": 0.30077868700027466,
+      "C1": 0.2526929974555969
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 11
+    },
+    "lr_used": 0.001,
+    "lr_next": 0.0001,
+    "relative_order_sha256": "add3cae0299e2e9bbff8fbe997c572dfae79d891d467c01a479b6106a985cbc7",
+    "canonical_order_sha256": "d0494ae2b5fa1b0198c3344f56f560328ef7884f6e08c5980695ceb6461ecb7f",
+    "class_day_order_sha256": "f2d55cec8868738a734b9d12853c9d7de0e4983f6c3d903556313991b3548c5f",
+    "student_sha256": "5a635ea40b32a3aa4cc985071cfd7db38dd8ddfe1c1795a02312078d96bfa508",
+    "optimizer_sha256": "b54cf8b66273b6565346e56cd8e4cb4260e502056e17b52960834819f5955d49",
+    "scheduler_sha256": "699770c225dd1dac1ffba17bf54e3a07b26d6df3552c432554c45b23d0be911a",
+    "rng_sha256": "cf36f276b808b3d5f3c8dfe413e744486858616b5243d180355716cd5cc0858e",
+    "state_sha256": "5aaae42660ce470e91f84fe4a4b964c586c9fc9d37191757e41444199002f68b",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 12,
+    "updates": 1524,
+    "train_ce": 0.07093683313328425,
+    "train_objective": 0.07093683313832896,
+    "train_accuracy": 0.9794410931921704,
+    "val_rx_ce": {
+      "C0": 0.28309696912765503,
+      "C1": 0.24923484027385712
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 12
+    },
+    "lr_used": 0.0001,
+    "lr_next": 0.0001,
+    "relative_order_sha256": "04106e0f0c2200d7eab98adcc8b953a2b2b46c8e768def8c5fbcbc34d4b38f1e",
+    "canonical_order_sha256": "52cd5c8a36e8ee8a4a0ed79ef5abf8cd4459c8b67702c6efa28214b75a0d63cb",
+    "class_day_order_sha256": "576321720e48a4f94da73ebf5d8daca8d8cd0f530ad16832cc1d356e35ccdec8",
+    "student_sha256": "e9548711d21b65e6707a12457bea527cd254a754f33d88a2fba6bf133c1537f2",
+    "optimizer_sha256": "c35b9ba4e227df9a5587cb626e65a85a6387dfccc86f120abeae5a0fcbd5c59f",
+    "scheduler_sha256": "b7d065c4ead645d9bea132645f18ab7650901da5ae93319322a2ad8f487b6590",
+    "rng_sha256": "3d7e087fb3e40d4eb71a323a8ed9e9281023f69e42bb515b4491d5eaea0821a7",
+    "state_sha256": "1f6a47f0aa3a0af2cd97c16370d2705fbc3c327e611c34f87aabd40b431a4c2c",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 13,
+    "updates": 1651,
+    "train_ce": 0.05104267275804489,
+    "train_objective": 0.05104267276217238,
+    "train_accuracy": 0.9860273298042596,
+    "val_rx_ce": {
+      "C0": 0.29058241844177246,
+      "C1": 0.24836698174476624
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 13
+    },
+    "lr_used": 0.0001,
+    "lr_next": 0.0001,
+    "relative_order_sha256": "9f170008bc8182fade92fa3a8be5db74e867ec57daf5fd0c2cb80ad31a37a497",
+    "canonical_order_sha256": "e51fd832758274094c3b6a5f5b1251bd2abf9a04c6697c9e4df88a0377cf80fb",
+    "class_day_order_sha256": "519fbb24d5a0aa72b5e73177a0ec382feb3e49ad43e79a2ba9a843f7bbff3aee",
+    "student_sha256": "f812c0ca4c1c04b26738a7ab3524dc073e26598ff015eb040a733729671813ac",
+    "optimizer_sha256": "f0ace3fd79e496d0fe64e19d2fe1a763cf80a0ea2df61588f46fb0866708ca71",
+    "scheduler_sha256": "150c16c539ff7648a91a030f47fb4c2fa88bee1c4ab743322dac20f51980c768",
+    "rng_sha256": "1b35abdf736640aa554211dda27c26311d3664482f2a2e582d3c1f8781d98d8d",
+    "state_sha256": "7860d8bc7b5ff84b9166e1eb758510fca512c0e05000e97a1cbec2d57c9a2bb4",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 14,
+    "updates": 1778,
+    "train_ce": 0.04266295360180452,
+    "train_objective": 0.042662953598364944,
+    "train_accuracy": 0.9881201526529607,
+    "val_rx_ce": {
+      "C0": 0.2996581196784973,
+      "C1": 0.2493676394224167
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 13
+    },
+    "lr_used": 0.0001,
+    "lr_next": 0.0001,
+    "relative_order_sha256": "cd9be90047c34f69c6e1e143c1afe54ddaca6bf5633235e04ee511162de0ef3e",
+    "canonical_order_sha256": "db340cedb3d88ec3837045e171a2304a7a0964a5ca5699c2b8c65668b5b3831e",
+    "class_day_order_sha256": "32476a8114c57b241ba2567681dcdf4c5ec3e2474f0d15d686b40a20185dee79",
+    "student_sha256": "6874dd848d8bbd658a6d48c8223aa792c86b631129299b6431bc1ece05769a85",
+    "optimizer_sha256": "f85d167d723160a486179d2ce6a8b4cb1debc6ddba0f27df35fec74c335fa3c7",
+    "scheduler_sha256": "432af89a6df264686401cfd3055c45f823b002097ac3fc2066116e85d75f3f5f",
+    "rng_sha256": "8809c329e0e794b3d6d403b1d15a1f9ab6221512879ef67b9b5dbcf1985b9cf8",
+    "state_sha256": "868bd0de4d08cdbb695df8fb247763660205f10bfedeb57155085dce5caa97d8",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 15,
+    "updates": 1905,
+    "train_ce": 0.03651444974768034,
+    "train_objective": 0.03651444975089061,
+    "train_accuracy": 0.9903360827280562,
+    "val_rx_ce": {
+      "C0": 0.3121755123138428,
+      "C1": 0.2518173158168793
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 13
+    },
+    "lr_used": 0.0001,
+    "lr_next": 0.0001,
+    "relative_order_sha256": "1ac67880d03f667e3b18d84bda6dcb806327fd5f7ce0370b2c2ba8a7bedb8b6b",
+    "canonical_order_sha256": "0ef325e77668af7e411ef0033d51c94b37495c3528780f26bf56f402b3f2a253",
+    "class_day_order_sha256": "4a7b6d7ac0fe1b154892722edd0be552d78e478dd373d929a4f5661530c3e7d6",
+    "student_sha256": "1c87cd22db905180c1b99456a1b81d2107da51522e09b9263511e7e434c1b7b5",
+    "optimizer_sha256": "9f22bc9a0a3b26fda0ebdb38d63da055df83523d518592f653ca44ee6d2fa2b0",
+    "scheduler_sha256": "3e7a43d7f964f56b9cdd2533d0d9d7bbd4ac1b2b0bdae04e560b375f27f700a2",
+    "rng_sha256": "930f7c1f0cb813221b66671f1a0aacc8e3433a5aeba87471352d3c83d63e9abd",
+    "state_sha256": "c74631c9020b6c827ac51884f3d47e570290178c52da85c9bab01f6acd579238",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 16,
+    "updates": 2032,
+    "train_ce": 0.0318972991521937,
+    "train_objective": 0.03189729915632119,
+    "train_accuracy": 0.9923673519635603,
+    "val_rx_ce": {
+      "C0": 0.31617826223373413,
+      "C1": 0.2555457651615143
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 13
+    },
+    "lr_used": 0.0001,
+    "lr_next": 0.0001,
+    "relative_order_sha256": "74acfc92eee487425746931a9429da279f49972f8636821726d164ce4d300b88",
+    "canonical_order_sha256": "82d18660ce5e7d367eb78516ba6d36db2687d3a1ec9432f661c6b3f4916cf588",
+    "class_day_order_sha256": "450f4182682565235596c0c7a02e882b0e539cbe2eca2c22d0d1b2d86f107c39",
+    "student_sha256": "938da071853bb022874c2f6056d58b29a884ff56a4d311eb477e7b829bd0fb0f",
+    "optimizer_sha256": "db7c7c8c36ef596e0b6541739a1c1a01af74175e50b9da6fa5a42fdae97f87b3",
+    "scheduler_sha256": "76361a7665388a57f03b69f7334b0c9ffab4b7209fbde384c4a55565a3f90f98",
+    "rng_sha256": "fcf5c4c2dfadf25119e601c295b239b8067dff2d27c4ad32ef2c8eb8c002ccf0",
+    "state_sha256": "1017a21721c4454821bfc177389a4147868c813d14cd8eee854f65051ce0d5c5",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 17,
+    "updates": 2159,
+    "train_ce": 0.02807824846912484,
+    "train_objective": 0.02807824847141789,
+    "train_accuracy": 0.9937830850670935,
+    "val_rx_ce": {
+      "C0": 0.3283810615539551,
+      "C1": 0.26031002402305603
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 13
+    },
+    "lr_used": 0.0001,
+    "lr_next": 1e-05,
+    "relative_order_sha256": "fcf8d68eb303cc6a86589ef45d06b12a8b3fe20f50c1cfb6c016681060c78288",
+    "canonical_order_sha256": "7cf8e5622264746338b00c790ccdb8c934be8b5d4102748cd903bf5b05c41748",
+    "class_day_order_sha256": "29490ce62e85e5524ec07a69581371dc096be0661150ef95ed1569e97c865d11",
+    "student_sha256": "98e4b60e48ee80036cfd0959e99b4af41b453aecce8b521e79416a0110bed5f8",
+    "optimizer_sha256": "dc5b726832d2695d2c74e3e76160892a50312c4745b05a3238ca5aa61e2ba0bb",
+    "scheduler_sha256": "316daa1b243082cb1f74453a2d90ef719eeb5681312ff112d9da660ac7d1c5c2",
+    "rng_sha256": "b5b6dddd0703e21ae57e5b0eb97965ee9b3cef82a3f8496b68cd8117d521be95",
+    "state_sha256": "31b34c21bb1e4ff10608e92441c224c4eca091a652ec03ceba23ba14b2621e55",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 18,
+    "updates": 2286,
+    "train_ce": 0.023022894328500226,
+    "train_objective": 0.02302289434134131,
+    "train_accuracy": 0.9966145512741598,
+    "val_rx_ce": {
+      "C0": 0.3272143602371216,
+      "C1": 0.26581984758377075
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 13
+    },
+    "lr_used": 1e-05,
+    "lr_next": 1e-05,
+    "relative_order_sha256": "06cb3a04cdda88f6e6dcfb50637f6626491f2e73b7aa8dddac4b97692eda5537",
+    "canonical_order_sha256": "929eb6628c1ea329f0ad9d891d70f728b1bd969ce909a08f2b5caa03ba4f9481",
+    "class_day_order_sha256": "87191a3272d97010b7b62a92de23d6a452c5353d456947879a128c77a98afb1b",
+    "student_sha256": "8f9651fd1886d331731a62e0d5ebb7e0f741fccd8ba11517742f6025aca84a73",
+    "optimizer_sha256": "9beb8eb64958844857af481c25c6e34ea0a30a57b12623312013dca138a4e383",
+    "scheduler_sha256": "0436d0ca67a8d3908627627e59bfd5f3f15d3d7aaaebfba6f90d1dd47bd21b19",
+    "rng_sha256": "607583c9fa87ec323e3258704b4abe674c0def12d059efaff01f5aa339f2d281",
+    "state_sha256": "2fea5ad926d64e034d6f8bf04d626ae737cd4ba6ed4a9d4f8a1b237a642727a5",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 19,
+    "updates": 2413,
+    "train_ce": 0.022173227490308058,
+    "train_objective": 0.022173227482511684,
+    "train_accuracy": 0.9966145512741598,
+    "val_rx_ce": {
+      "C0": 0.3276172876358032,
+      "C1": 0.2714028060436249
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 13
+    },
+    "lr_used": 1e-05,
+    "lr_next": 1e-05,
+    "relative_order_sha256": "78383722662f19ee232166f16e17ff13eb05e86496bfdd414db345b42834840d",
+    "canonical_order_sha256": "7fbf8bc935015c58889869ca32bf1ba90f523af166fc91dd19adf2ad6986d5d8",
+    "class_day_order_sha256": "d1ab0b1fdfc771153f9ed8c622779a9cb9ed60b18321d7ab75376bdf42f66a3c",
+    "student_sha256": "e08e165dee6b1536ff4e06f317cedb73e7336e6fa9dd92726087b16055565797",
+    "optimizer_sha256": "ca5b08fde7dd7423e2514139564fa18c3c6e79dde78d7eb5aa33026c162bfbac",
+    "scheduler_sha256": "9d5f5404d7055c7b9ba2b2eb896742c0f38069751ce140e9b4b47d5b3577bc80",
+    "rng_sha256": "e0ca68e97cdb048439b91d6a36a4d885d10a6277f65583792aaaab3dcc7cd67e",
+    "state_sha256": "051badcf7871839e2f8a1d69938ab5c7a11b1b9cd49dff3c7b99c460eb29aca6",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 20,
+    "updates": 2540,
+    "train_ce": 0.021994620976183314,
+    "train_objective": 0.021994620971826515,
+    "train_accuracy": 0.9963683368213714,
+    "val_rx_ce": {
+      "C0": 0.32944294810295105,
+      "C1": 0.276924192905426
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 13
+    },
+    "lr_used": 1e-05,
+    "lr_next": 1e-05,
+    "relative_order_sha256": "ee43ccf4c559089e112136298e509f1956be394d24885526c696cdf59bcf0a31",
+    "canonical_order_sha256": "e7ebb38bfa2fda009e932dfa4ce6178811014e86411555961486745c3191b6b9",
+    "class_day_order_sha256": "75d30c9c925580638b766862aef5d8e0507815761d8cafa38c314923572b2f50",
+    "student_sha256": "9c2f23458e572b26b0d3469835751a25b4ddf6ad28ec879208e63b823b913ff5",
+    "optimizer_sha256": "8ba8d40eb4c40c81934956411ffa57f77effa7c660e970dd4287b15bd22c8047",
+    "scheduler_sha256": "f22cc7f825ab14b32e3732ffb03f4931c3c925ca15cd0dee8aba3b46b073b71e",
+    "rng_sha256": "d6b626ab4d924ce93bb8031e8e38515f6655ca15d36000e833d5c2e53ac59e61",
+    "state_sha256": "9e3b6452f0263a876bf54f99430dadd73fadd8b4ed4a4d32f5d4a518ac51b25b",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 21,
+    "updates": 2667,
+    "train_ce": 0.021404716140249747,
+    "train_objective": 0.021404716131077542,
+    "train_accuracy": 0.996737658500554,
+    "val_rx_ce": {
+      "C0": 0.32995498180389404,
+      "C1": 0.2822466492652893
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 13
+    },
+    "lr_used": 1e-05,
+    "lr_next": 1e-05,
+    "relative_order_sha256": "266e6f1ebd6810313fc06d7f66ff6574d5e3027fb1dc104a0e7692a96ca2a84e",
+    "canonical_order_sha256": "d716737ea56e5239080ba07f9a6d205aabd521f1495eb246e5fc1db865ab4f6e",
+    "class_day_order_sha256": "deb651fcc1e285a1f32f9ee81bc2b1413892c332d83e7bec70704ef455ac263c",
+    "student_sha256": "b0f255eb56112d479bde144aa3e43bd308b21220668ea0fae27cc73222d7e7ed",
+    "optimizer_sha256": "0b150620a364d47dd31de4431f67a5654c621eda1335c0334ee134de01cab1db",
+    "scheduler_sha256": "fb106c38563fc70bc4ec05e0952869ebec34e1049191d2b3b120f8048c7d5e7d",
+    "rng_sha256": "d87534a358b68a977d52025c526b8e9c9fad0771c5e63a75c7e790cc5f8b796d",
+    "state_sha256": "07c8f231345a248c5879741ebc9366b4a5cb97609b8dfe63a7ea606d96f9ab70",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 22,
+    "updates": 2794,
+    "train_ce": 0.0209423417669644,
+    "train_objective": 0.020942341765817878,
+    "train_accuracy": 0.9969838729533423,
+    "val_rx_ce": {
+      "C0": 0.33099624514579773,
+      "C1": 0.2873530685901642
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 13
+    },
+    "lr_used": 1e-05,
+    "lr_next": 1e-05,
+    "relative_order_sha256": "6f7b6627af54c7e1dfd1c6fb9f75d3ae34e43bba99942a3c01b9d55b6c79437f",
+    "canonical_order_sha256": "c27fd80aad0a0a735422deeca0a61f92b29c1181ea5bf9bac142169078a73770",
+    "class_day_order_sha256": "ec9560eb808f42804ebe92462e3071f87768a1e34063f823454417959edb0967",
+    "student_sha256": "1e64233ca24349d706a7a7ea177ef607b83b28fc84cf0f602ee4498f08204ac2",
+    "optimizer_sha256": "466fb062c6e0e1c2b4216f939d6c1252f2cba5bca1f0babcd4ce8103afea6332",
+    "scheduler_sha256": "9531994266615d34e4ee41e41b4d153626133b45101c07bebecb47b255d086ab",
+    "rng_sha256": "0c832375443b536bdbc3c77fcaa78650d407e2c7ef8b8631093088dae45f95c5",
+    "state_sha256": "873851df04c91b638c714c976ae7e0ad78283520ef56d62974418b6b0d153532",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 23,
+    "updates": 2921,
+    "train_ce": 0.020872267055992832,
+    "train_objective": 0.020872267053470474,
+    "train_accuracy": 0.996737658500554,
+    "val_rx_ce": {
+      "C0": 0.33189141750335693,
+      "C1": 0.2920827269554138
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 13
+    },
+    "lr_used": 1e-05,
+    "lr_next": 1.0000000000000002e-06,
+    "relative_order_sha256": "fab08a124b1e3e5ebafc3558605face9861bd975d08021a0a10ecabc687a3eb9",
+    "canonical_order_sha256": "c291314e3b358c16f7cd132ceccaf72a460cab065ee3ff8a8d45f7e265e15594",
+    "class_day_order_sha256": "3d3250565b65f602ae9ca8c4389e738a47ab1093cf274ef54aa206d30338503d",
+    "student_sha256": "f43fd15938f7f53b9ac0fa66f9b16583b984fa8c3cc46842cf23c60218411e01",
+    "optimizer_sha256": "56f9a5e02b0aba6bfc135a7bd4f179f49abd75fcd6d28bd4c91647b752d112eb",
+    "scheduler_sha256": "3638b19e54c30bd240ae4182189788008df581878cfb52f71a37e75e69aeb7a9",
+    "rng_sha256": "14904a44a6da1e62e50c42f6531e06c1abdadc7e9b036c177c713d31338f13f8",
+    "state_sha256": "545f7425b91edf13898a8e9dfe56c9f17a434169cfb3c5e468308a0b91356beb",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 24,
+    "updates": 3048,
+    "train_ce": 0.020264501174242056,
+    "train_objective": 0.020264501174012753,
+    "train_accuracy": 0.9969838729533423,
+    "val_rx_ce": {
+      "C0": 0.3316297233104706,
+      "C1": 0.29647815227508545
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 13
+    },
+    "lr_used": 1.0000000000000002e-06,
+    "lr_next": 1.0000000000000002e-06,
+    "relative_order_sha256": "46ada2dabd44746ce722532b310251521df55a942daa53cec58add19eec58c41",
+    "canonical_order_sha256": "8dd3b8102eb702e4818ded457f12805d82f0cff2ccb30b2c8e4779c81dfafb9a",
+    "class_day_order_sha256": "e4ea9e825e5c022f95bd83fda38d35e35c5053bb1942a0155c0c9840ba945af3",
+    "student_sha256": "80cb229a6ef7b6127a3b6928299114699c2ffc26f369e9612b9aca0890bfa0c3",
+    "optimizer_sha256": "c5c7461f15de5295244be2e3593ba3b3ed1374a09b5fea75b7882c4652a36c5f",
+    "scheduler_sha256": "f4a346f939d1b0275e18a31f7d92d713feb800d85f9ea8b66c1857e7d54661b0",
+    "rng_sha256": "0b90449ddbaefb356035d41d34999e93937c97470c1550807cc0d5d90a9d12ba",
+    "state_sha256": "e917b08564f5427bc81c32a1abe6fa12a6450f0fb63a47d6171531ea7668acd9",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 25,
+    "updates": 3175,
+    "train_ce": 0.02020366164274027,
+    "train_objective": 0.020203661647326367,
+    "train_accuracy": 0.9972916410193279,
+    "val_rx_ce": {
+      "C0": 0.33227622509002686,
+      "C1": 0.3004626929759979
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 13
+    },
+    "lr_used": 1.0000000000000002e-06,
+    "lr_next": 1.0000000000000002e-06,
+    "relative_order_sha256": "7f0cfed1abda1265ce97a2d6ff4c6fce1f7d15b187ed7942c7ea4430b5e58531",
+    "canonical_order_sha256": "6241cbba9b4a8cdb08e48facbad85db4c04482046ea9e1e82c45b98f4cc879b2",
+    "class_day_order_sha256": "0f1f8d0215da296618ee3b9e03f3f36e8427d3adcbd68f6f8051c240022b88fd",
+    "student_sha256": "198e4d553aaa183651e124d7019258aa65a7b4592e55923f0a501ed45e820b95",
+    "optimizer_sha256": "72f9079bc7bd3ad3dfdf1c31dd20ea3df71271daf712ee5938ae619d93d67155",
+    "scheduler_sha256": "ac494959ec25051553136b0afe9f754f54b5da2bad46fec2ec90797ee553a4c3",
+    "rng_sha256": "08505fe8f404349158266787b44ea6921c0087105c5f1c582a6eafc382220584",
+    "state_sha256": "13aac88b3288d5671993c548884fea153f7fdf450c295f18c02f67f99593bdb3",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 26,
+    "updates": 3302,
+    "train_ce": 0.020220153872989952,
+    "train_objective": 0.02022015386909177,
+    "train_accuracy": 0.9972300874061307,
+    "val_rx_ce": {
+      "C0": 0.3319076895713806,
+      "C1": 0.30405813455581665
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 13
+    },
+    "lr_used": 1.0000000000000002e-06,
+    "lr_next": 1.0000000000000002e-06,
+    "relative_order_sha256": "ebe983c4cde02920db6db91cc335d97cf777e4ab6cee09660d02422b254f0fb4",
+    "canonical_order_sha256": "d95f63c59be6e3c3d915a2bdcec3eca2bd3dec51ff81893ded76cc031b144475",
+    "class_day_order_sha256": "ba18e5242d59aa95cf0ebe8d2f05465b3df8c1ae5d9ed360a3040ab99d325281",
+    "student_sha256": "36294fddab4bf0cee597eeb109bad9e246c265db1e1843b057e98b0e2fdf3147",
+    "optimizer_sha256": "36cf3e3d1189531f03e86381040d4a9a52a6ac5607465a49a2db8871e2314a00",
+    "scheduler_sha256": "0bad453d51bc682b8d28db84a748e22b7d393ffedbfb452670ff04a728a84c21",
+    "rng_sha256": "e20c8708c32621f98e2c256e6d51b36a0fd92c575862dd3844d705d6eb38573e",
+    "state_sha256": "3939ce03b3d52232b8f543dedd9e60e15257bbdaf1c7631cf8acbf48638a12a3",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 27,
+    "updates": 3429,
+    "train_ce": 0.020407603418212152,
+    "train_objective": 0.02040760341947333,
+    "train_accuracy": 0.9969223193401453,
+    "val_rx_ce": {
+      "C0": 0.33207201957702637,
+      "C1": 0.3072752058506012
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 13
+    },
+    "lr_used": 1.0000000000000002e-06,
+    "lr_next": 1.0000000000000002e-06,
+    "relative_order_sha256": "7657b809fb81c5de55fc3b241956e5ef8c4010f5d5d211d37b8fee7b8dc26fad",
+    "canonical_order_sha256": "0f9973ee5bbbaa1456165ff95f68769dbb026ddf9e62af7e4aff687a7aff1669",
+    "class_day_order_sha256": "ee6dc8a6691e1929930991ce1e6f86edc8ad16f5b9e5c565338a0e35bbefe988",
+    "student_sha256": "a78dbbc48ac7f5a7bb432cba4f4a90bc4b93411ae0224f92030358f6bdc686ec",
+    "optimizer_sha256": "dffc6695480554e0771b2228f32c28a3b1b736d96fef33338a70327112f9a776",
+    "scheduler_sha256": "1ee871fae9d1deeb91d0689ba10681696c0acbfd6314ee148a643af755bab733",
+    "rng_sha256": "e76ada4b6585cf67bf78ab56cee0a0884483b0ca461cbfab996846ed542f7e74",
+    "state_sha256": "9a9b88da38391a8cd906aa656ac6f4159167d97aba9e03948443f55e6d062088",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 28,
+    "updates": 3556,
+    "train_ce": 0.020196233471670013,
+    "train_objective": 0.020196233468918353,
+    "train_accuracy": 0.9971685337929337,
+    "val_rx_ce": {
+      "C0": 0.3332837224006653,
+      "C1": 0.3101632595062256
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 13
+    },
+    "lr_used": 1.0000000000000002e-06,
+    "lr_next": 1.0000000000000002e-06,
+    "relative_order_sha256": "d05aaafcfd9b6619a7d76d07d8dbf150f35a962d312725948be6c67ac865acf7",
+    "canonical_order_sha256": "7bb5e55501482f06b7c040916639121e1ac3de3c1f4c4fb952973b846fe815ab",
+    "class_day_order_sha256": "1744926cab8c3d2d2b02cb80204ce719f382145fd8d302027036a506957be3dc",
+    "student_sha256": "9ab6a706d6621f5c0f415de550103cbd1b9979c8dbcd796e8d039d9a4b91d939",
+    "optimizer_sha256": "88f5e55061284e12151360a5bd08209fa5c5baaf823cec27e58f037a017345d9",
+    "scheduler_sha256": "99e91d9ed943bf4f81f5bbcaf5645480f74e77f02ca4608c441c5e8fb04ea0b0",
+    "rng_sha256": "e3bf97a4fa721e60714bd23c0a9fd7060784a56e18fb9a39480357bac8e38f5b",
+    "state_sha256": "1d3f6aeaf6bbf1876fcaf2e41cf316655f76117a0c973bcca5927af91084274d",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 29,
+    "updates": 3683,
+    "train_ce": 0.02019864116031431,
+    "train_objective": 0.02019864116123153,
+    "train_accuracy": 0.9972916410193279,
+    "val_rx_ce": {
+      "C0": 0.3323103189468384,
+      "C1": 0.3127428889274597
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 13
+    },
+    "lr_used": 1.0000000000000002e-06,
+    "lr_next": 1.0000000000000002e-06,
+    "relative_order_sha256": "d5ededbc56bb5a3ab598b0134dbd31c7611067ad1ebc70fb82cba338ae79e090",
+    "canonical_order_sha256": "4374aabf9a2365f2ff6313447478bb599b12c318b5a78eb131ada90da01d9764",
+    "class_day_order_sha256": "9daefeb1c607bb971e9ac56d78b5a97bab1ec0454d5125dc34a5998d3e6c8e82",
+    "student_sha256": "5ac9b7ea231a2af976498c5be1a72b4df450423e24864a9f9921cd855634a70f",
+    "optimizer_sha256": "e7c172de0e622bd2512f34af8f0ddc4c73f1d278da7f50693f016f30e3fea7d6",
+    "scheduler_sha256": "27b89052157dd6638d056a359a501e145f8b9b332f9308ba83120115b4cc54d7",
+    "rng_sha256": "8512283d9a730e27412f04b681560f15f5000b46d9ca526b4dc6a4090803f530",
+    "state_sha256": "fcfddddd5cf1d34a65100d909104834c56770e76b19af04e2a96e4b5e070b2ff",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 30,
+    "updates": 3810,
+    "train_ce": 0.020207032207255143,
+    "train_objective": 0.020207032210694722,
+    "train_accuracy": 0.9969223193401453,
+    "val_rx_ce": {
+      "C0": 0.33252131938934326,
+      "C1": 0.3150337338447571
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 13
+    },
+    "lr_used": 1.0000000000000002e-06,
+    "lr_next": 1.0000000000000002e-06,
+    "relative_order_sha256": "ae2f293d20258d3b3f9818f62663ca28a5a76827649847b949b5581e41d2cc65",
+    "canonical_order_sha256": "4547c0f13845135517c0373e37889ca3a2b718c6861b1a74ca9a6410f7e40a13",
+    "class_day_order_sha256": "cb3e69daa7cc9762efe286145b4a46067abf6c0afc685b66cdcc7c54973b05c5",
+    "student_sha256": "135bae955e547455764ba1458a7b4fd30ba7ea0ae7535b7f54d5fc0a967e35f5",
+    "optimizer_sha256": "c2c4233e9bcb4bc718f6299a4a054ffa3b6524deb16266f235432c367590ea17",
+    "scheduler_sha256": "cc4522a8cd24b2ec31a460b69d334349a32f6ed50314b30883b1d2552dc20929",
+    "rng_sha256": "04c56105eebf131bfe9b62650184b17ae84cfcb33a51c222258a899576012b4a",
+    "state_sha256": "ae07498fe4e1b9eb4355f7b2655cc4ce1618f93b01609a52bcef8b310e33f080",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 31,
+    "updates": 3937,
+    "train_ce": 0.02006802955284856,
+    "train_objective": 0.020068029549982245,
+    "train_accuracy": 0.9972916410193279,
+    "val_rx_ce": {
+      "C0": 0.33205080032348633,
+      "C1": 0.317068874835968
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 13
+    },
+    "lr_used": 1.0000000000000002e-06,
+    "lr_next": 1.0000000000000002e-06,
+    "relative_order_sha256": "0de03643b17cf9015e5d4f5ad911abb66ced63e96df6e37ec50564b30774b316",
+    "canonical_order_sha256": "78b7d2860dfb2293dc1f2fcf88d48891e7544d5e3acfb512e6198e8c5ada9d07",
+    "class_day_order_sha256": "95b83acd7c23b7e34cf816ea913dd5844cb5293b864169663a56ba91dcf34cd0",
+    "student_sha256": "5467b7335d79ac9e9092ae29fe9e6f1624866f8c7bf5446cc336ba19874d8607",
+    "optimizer_sha256": "50d5dc731aa5c2aae0341123e05a07ee388d1c84e6ae2720876523b7bec6e4c9",
+    "scheduler_sha256": "fccff7592eaaec5ac140a6e88e193816c5169ab04ed2402ead811764c00d4fac",
+    "rng_sha256": "31c987588a3327a4afa1411422797baeca3280d08d1f84fae5d1032341ed5508",
+    "state_sha256": "eb6295fc5c46f8dd4dbfb51e1865f5cf564db589379b0639d1ed7639b8aafb40",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 32,
+    "updates": 4064,
+    "train_ce": 0.020025553370026934,
+    "train_objective": 0.020025553373237203,
+    "train_accuracy": 0.9971069801797365,
+    "val_rx_ce": {
+      "C0": 0.3326406180858612,
+      "C1": 0.3188783526420593
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 13
+    },
+    "lr_used": 1.0000000000000002e-06,
+    "lr_next": 1.0000000000000002e-06,
+    "relative_order_sha256": "10cbf52d7451bc386de1d6d6fbfecc991194effc59cb5e0971e80cad697b779a",
+    "canonical_order_sha256": "7b253b5d6f779ee99ac29c9905cd57c0207bdc26c1d728cd7bc414388f398763",
+    "class_day_order_sha256": "dae412e39eba11e2d51737ea1e7eb331350e14e19da50de6f30751cfaa69ff97",
+    "student_sha256": "1c2a30d31cf3d4465f3242f93ad302a4b57216bead53cfacc311a238e6064c6f",
+    "optimizer_sha256": "6366d93d75314fe7c5a3cf1d631ca37f972650de22239a03941224ed45d2c05b",
+    "scheduler_sha256": "976173c6fe57b9a43a3598c9151d3e1173aca648bc1866b4cef80676fc3ffadd",
+    "rng_sha256": "a191e63a771c2eb5315079d19b7666a5d1cd2cfb9b8617d992b3e98ff65796e4",
+    "state_sha256": "f34715e810ed689e58f65f98e984a1702d1582bd27820458ada18988f4841444",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 33,
+    "updates": 4191,
+    "train_ce": 0.020184316534457736,
+    "train_objective": 0.020184316533196557,
+    "train_accuracy": 0.9966761048873569,
+    "val_rx_ce": {
+      "C0": 0.33197155594825745,
+      "C1": 0.320493221282959
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 13
+    },
+    "lr_used": 1.0000000000000002e-06,
+    "lr_next": 1.0000000000000002e-06,
+    "relative_order_sha256": "f8f7b2b9093bc466f99e3a6ac842c368c398f4c0b2571ec17353eddc652b0aa3",
+    "canonical_order_sha256": "56d5de6fe5468f7e015edbd2707b39955e8738b0b41df911c4ac769e4b917d1c",
+    "class_day_order_sha256": "b373bed66c77399ec790cae9eb24f3be714f4977a078bd0d621cc622bed6314c",
+    "student_sha256": "3b0226e1b31b2b8ee7e91085e4bb800a924db22edf8ec57c7ca6a8fde120b2fd",
+    "optimizer_sha256": "a486f27e9ffa62fa65ce220038df3af16fe89787e2f17706cf51f23d0af9b51d",
+    "scheduler_sha256": "2f33e48353708d102ca3f7c7e87d6322d4e9379275ce0c1acb6f5a4ba11edced",
+    "rng_sha256": "f7297e84929964a18d0270ab2d58f9163c762548d38f8ea37b606542596eb9ba",
+    "state_sha256": "7f169fe8e1f3dc63e45b74ccbd4d542d14c2d4b735b55ac2c9ed1c891207f6ac",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 34,
+    "updates": 4318,
+    "train_ce": 0.019935082702467657,
+    "train_objective": 0.01993508269719364,
+    "train_accuracy": 0.9973531946325249,
+    "val_rx_ce": {
+      "C0": 0.33292144536972046,
+      "C1": 0.3219338655471802
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 13
+    },
+    "lr_used": 1.0000000000000002e-06,
+    "lr_next": 1.0000000000000002e-06,
+    "relative_order_sha256": "e685eca27bfed2eaa8c4d6d609bc18e92f3a1774612dec9ed0ebcc9883646cf8",
+    "canonical_order_sha256": "cfb4d5b389dd371feae187f85cd999504fb436b01fbc508bbe38390f61e7299d",
+    "class_day_order_sha256": "ceaf9981960a13d7a69a21ee4188af45a89285692271a4e6f88c4409a44e2a8d",
+    "student_sha256": "95743f913f3b8607fb62e61783f4770327686b3b3e8387e75364afbaa724547c",
+    "optimizer_sha256": "dde4111957b1d45583a8515c18a146d03433779489f8ff4aa7f8a229f7011c60",
+    "scheduler_sha256": "1e4d176d517406690a551608c3329cd299c7f47357dae1393cdd50c6b4073d66",
+    "rng_sha256": "ab4fc15f38eda9bae756534123c6aa0f05c6e26b1f37c5d9ba2d857a3c1e54dc",
+    "state_sha256": "88e159f6e7053b374dbd61280d5cf9ae29acc19a8add0bcc83436daf413c4a56",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 35,
+    "updates": 4445,
+    "train_ce": 0.019819063886726752,
+    "train_objective": 0.019819063890051676,
+    "train_accuracy": 0.9972300874061307,
+    "val_rx_ce": {
+      "C0": 0.33208733797073364,
+      "C1": 0.32321983575820923
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 13
+    },
+    "lr_used": 1.0000000000000002e-06,
+    "lr_next": 1.0000000000000002e-06,
+    "relative_order_sha256": "db004b674559a5142b8c9ecc13f54a8d719e0763ff84d2c2825deb33090e8559",
+    "canonical_order_sha256": "1eaa9724312ab110560987abbcfc56e012d1c531d7c8b72654eb8f6173e97ef7",
+    "class_day_order_sha256": "be23aee66e1f0a23d525ce3bb612f93a8fe24cba61f6ac553deb1f4c95ef7ca1",
+    "student_sha256": "03380b579f2883b1e783884a487a9e1804564eabbd704f500831a0ddcee6538e",
+    "optimizer_sha256": "a7217e7123228ad2e2e34a6ae6fcaa5d397ee6183009172055cee744a3024fde",
+    "scheduler_sha256": "feb9740862db39ffe477edc9761a0f22a69532e2d0828ff6e7cfa90e531a4b30",
+    "rng_sha256": "f14f198a6272037c9d900ff7ee9ffc5b28ed3ec9f2d9d6f9492513ec91ac2a56",
+    "state_sha256": "a45aa7d080f06900caf06c1b1a8649505aa67862af4eb2dc7bca9333e391a248",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 36,
+    "updates": 4572,
+    "train_ce": 0.01990434954454933,
+    "train_objective": 0.01990434954225628,
+    "train_accuracy": 0.9971685337929337,
+    "val_rx_ce": {
+      "C0": 0.3329225480556488,
+      "C1": 0.3243694305419922
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 13
+    },
+    "lr_used": 1.0000000000000002e-06,
+    "lr_next": 1.0000000000000002e-06,
+    "relative_order_sha256": "08670d709ffaf7c36fc5c67a1413b35b3a558b95dbf9a798f13f9a895819b888",
+    "canonical_order_sha256": "c47c48555a0b6e6bc0f9a1c6350abe5ada2e331e4665002b3db6b2301a4b2299",
+    "class_day_order_sha256": "69460186731859b9746fbb62daa72367b2212525784e326cc2478d8d773d3580",
+    "student_sha256": "2ab1c90eac49086151d508c1e47e0e6aea1a599772bdb536cd82f98b019ea9a1",
+    "optimizer_sha256": "4e0c7cda5bbb26c12be2c30b0831fd0ac54c3f681ad64e418ea869a3cc21fbd2",
+    "scheduler_sha256": "058e40f9984636b20a3eaed0c99a0092f9f2468b89a932c52ff9bc19cf176e0a",
+    "rng_sha256": "b31063750ad7200e24446b1a2328e9be04ecf3872da21112dfebe28c34557c43",
+    "state_sha256": "e1f5050030464f532eacd031a369cb825cd4d60e3e066fc38d43b703673df41d",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 37,
+    "updates": 4699,
+    "train_ce": 0.0198911851106658,
+    "train_objective": 0.019891185105850393,
+    "train_accuracy": 0.9972300874061307,
+    "val_rx_ce": {
+      "C0": 0.3336389660835266,
+      "C1": 0.32539480924606323
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 13
+    },
+    "lr_used": 1.0000000000000002e-06,
+    "lr_next": 1.0000000000000002e-06,
+    "relative_order_sha256": "e4d4841e608a82d4d4f4d93016d2090a836050d0017105b198f02097108eb9fc",
+    "canonical_order_sha256": "c1be9616ce587ced57ca49e645c02e123b3324643d700e74921515a63688e617",
+    "class_day_order_sha256": "360ff94fbba76298501a874b47c5b64bc10d96dc1975da9f66e85adb92bfa338",
+    "student_sha256": "59a8adbfb96bf15bd7aa4ad0ab7b0572a35899283ce4014bf77b01d631dc6633",
+    "optimizer_sha256": "21ce115a24ed35f3bdd51f7e01583f878e12ca571c4e0e70d0fefaf9a8b178b5",
+    "scheduler_sha256": "f7c18dcbf86ca36c08aa8103eff567d36f7260761c2e6dd09387cc9bb8778efe",
+    "rng_sha256": "2e345e908b7b4d93020c883e77905d1a11fb801ecc44243a94e89c9c8af9ffb4",
+    "state_sha256": "4a33315bcb7a102ff640008e9f13196ad1ab6a338efb3e87d00555266d550a16",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 38,
+    "updates": 4826,
+    "train_ce": 0.019730790842346968,
+    "train_objective": 0.019730790842346968,
+    "train_accuracy": 0.9971685337929337,
+    "val_rx_ce": {
+      "C0": 0.3334113359451294,
+      "C1": 0.32631000876426697
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 13
+    },
+    "lr_used": 1.0000000000000002e-06,
+    "lr_next": 1.0000000000000002e-06,
+    "relative_order_sha256": "c06292d504bf2b962022c7a1142af85d87536cbc49029abbfa2920740aa17a03",
+    "canonical_order_sha256": "9e4597cdc4e544d630107fdce1bf6a9618191593f18f2bad32451d7d7cf23f48",
+    "class_day_order_sha256": "8ebf54fef274ddb0515a530ca76694ac860d4d4362c7133618b35e225ee94476",
+    "student_sha256": "fac53c0f4d5b665a055403143e7b37b5dc92e76621385c2d6c840a658c51d3b4",
+    "optimizer_sha256": "8c4c7db769a898ca920b8da4825bce2ec8c4362902caa6ddc56a5e64f6bb0c94",
+    "scheduler_sha256": "95f4527aae50df6425e2f2edceecfc14f2c4f3f9217eb9b765bc896b6aed0535",
+    "rng_sha256": "7ee2b4c53a0f527a4d4ada6af7987ee7f0c57abdddd51b5e572e6b32b2b7a736",
+    "state_sha256": "97b136bd3c36f3b2d5d61b1905b1a7589c407a56e065f3b8eeb8ecff36377118",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 39,
+    "updates": 4953,
+    "train_ce": 0.019823209652829667,
+    "train_objective": 0.019823209658332987,
+    "train_accuracy": 0.9971069801797365,
+    "val_rx_ce": {
+      "C0": 0.33341214060783386,
+      "C1": 0.3271394371986389
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 13
+    },
+    "lr_used": 1.0000000000000002e-06,
+    "lr_next": 1.0000000000000002e-06,
+    "relative_order_sha256": "dc98d673b1611b4a9094aa8d13b27880cccf803ae26c8d9dd842de6f99c0ff03",
+    "canonical_order_sha256": "6193f4f71161e786255439a53a966e7b7ba8a043c1ad289079e0f81e7c6cd8ff",
+    "class_day_order_sha256": "f7738d8ec2f9e285c2746457fc6adfa58c722b3595a6e1976e1585837b115fde",
+    "student_sha256": "21ad9cce6e2e1083376ca6cb11d55ac9febeb62302604e216f64a4e1b4080291",
+    "optimizer_sha256": "c54ca4c3e1ef304ac71b12062171ebdb4bfc7c58386a3968ff191aba5b52b26a",
+    "scheduler_sha256": "8e44f51974212ce5c395788ceffb055ab059c502303baa282ddd04da4943dff7",
+    "rng_sha256": "9aec952528fa427f9731251f4ac88c42ee0c4d849e7182e48cccdd7bee63e215",
+    "state_sha256": "4ffb25cfe04913968f942e5c071868c68ef772b85c6a031e86b674cceb33744a",
+    "calibration_preserved_training_state": true
+  },
+  {
+    "epoch": 40,
+    "updates": 5080,
+    "train_ce": 0.01964625949550259,
+    "train_objective": 0.019646259496075853,
+    "train_accuracy": 0.9971685337929337,
+    "val_rx_ce": {
+      "C0": 0.3338392376899719,
+      "C1": 0.3278811275959015
+    },
+    "best_epochs": {
+      "C0": 5,
+      "C1": 13
+    },
+    "lr_used": 1.0000000000000002e-06,
+    "lr_next": 1.0000000000000002e-06,
+    "relative_order_sha256": "297828c5a0fa81ef85776ca985edab144e6c92de6faa9da4792e630e299c610e",
+    "canonical_order_sha256": "71ef499a57b99157c3f881a1ebd5b8fede313178dd9bb39bb08e222f99e8b775",
+    "class_day_order_sha256": "804c60db29e9b1a974327d73229347861ea6ccacce821b54cde3de4b2e237fc4",
+    "student_sha256": "99e163f0fec2750fdf112e6eb25ec735eff59f28a6415a2edad6791f96b71e2e",
+    "optimizer_sha256": "cee15d4c7ced41728334161b3df653821924cc8eb0b0f607a07b411581ec6ceb",
+    "scheduler_sha256": "586f1e5983e97b0c048d6d50e9216644833fffee74b237a6247f219ba8a64b57",
+    "rng_sha256": "4cbddbde1c2ae8ca9f9a57ba8cc96012d404bbbd6b5a5cf78104218b306f582d",
+    "state_sha256": "4324613f40a7e8e851b86bc4e942efdc004e18e2d8d94e7636fc42c727845696",
+    "calibration_preserved_training_state": true
+  }
+]

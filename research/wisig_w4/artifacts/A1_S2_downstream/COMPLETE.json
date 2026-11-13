@@ -1,0 +1,106 @@
+{
+  "status": "COMPLETE",
+  "job": {
+    "id": "A1_S2_downstream",
+    "arm": "A1",
+    "seed": 2,
+    "stage": "downstream",
+    "epochs": 40,
+    "expected_updates": 5080,
+    "initial_state_sha256": "Pretrained encoder plus exact A0 random 10-class head"
+  },
+  "epochs": 40,
+  "updates": 5080,
+  "best_epochs": {
+    "C0": 4,
+    "C1": 12
+  },
+  "best_val_rx_ce": {
+    "C0": 0.273708701133728,
+    "C1": 0.268474817276001
+  },
+  "active_parameters": 82426,
+  "costs": {
+    "training_with_ema_seconds": 51.3232488000649,
+    "raw_validation_seconds": 6.356887399990228,
+    "ema_update_host_seconds": 8.991804899982526,
+    "ema_update_cuda_seconds": 3.3801170223057273,
+    "ema_calibration_seconds": 17.04711010007304,
+    "ema_validation_seconds": 6.16250009999203,
+    "BN_calibration_samples": 649840,
+    "BN_calibration_passes": 40,
+    "EMA_updates": 5080,
+    "total_fit_loop_seconds": 84.72732019999239
+  },
+  "val_inference_replay": {
+    "C0_selected": {
+      "exact": true,
+      "max_abs_numeric_difference": 0.0,
+      "differing_paths": [],
+      "differing_path_count": 0
+    },
+    "C0_epoch10": {
+      "exact": true,
+      "max_abs_numeric_difference": 0.0,
+      "differing_paths": [],
+      "differing_path_count": 0
+    },
+    "C0_final40": {
+      "exact": true,
+      "max_abs_numeric_difference": 0.0,
+      "differing_paths": [],
+      "differing_path_count": 0
+    },
+    "C1_selected": {
+      "exact": true,
+      "max_abs_numeric_difference": 0.0,
+      "differing_paths": [],
+      "differing_path_count": 0
+    },
+    "C1_epoch10": {
+      "exact": true,
+      "max_abs_numeric_difference": 0.0,
+      "differing_paths": [],
+      "differing_path_count": 0
+    },
+    "C1_final40": {
+      "exact": true,
+      "max_abs_numeric_difference": 0.0,
+      "differing_paths": [],
+      "differing_path_count": 0
+    }
+  },
+  "group_names": [
+    "13-14",
+    "13-7",
+    "14-7",
+    "18-19",
+    "18-2",
+    "23-5",
+    "23-6",
+    "23-7",
+    "24-13",
+    "24-5",
+    "8-14",
+    "8-7"
+  ],
+  "checkpoints": {
+    "C0_selected.pt": "d589f8558ba52da94c630b7e1a0fad69afd931b2298302c919b69bebd14b0742",
+    "C0_epoch10.pt": "1f8d010b817c133ef8d4890b22a020dac619fc5ad00000296e8e0af5e5e2f522",
+    "C0_final40.pt": "f3fae9d76e59da796fbc1a809f7f2e86e84450d82dea75855e057a71167f4501",
+    "C1_selected.pt": "64ea329413c696a434be56f49cb8f5fefc2ebff7a1c30241681e08414050e5a6",
+    "C1_epoch10.pt": "e93678a32c5f71077cc46dbceaefc976ae493a99d8349ed08aab785be78650aa",
+    "C1_final40.pt": "8d8032a5b8a79a18113a94dc1370e6f906ce3889aa94c032b873f90304215fe2"
+  },
+  "pretraining_checkpoint_sha256": "02a1378106d71722c157d3a77328996d5e982f13c9f3cd711ab34df4e49d9110",
+  "selected_checkpoint": {
+    "path": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S2_downstream\\C1_selected.pt",
+    "sha256": "64ea329413c696a434be56f49cb8f5fefc2ebff7a1c30241681e08414050e5a6",
+    "bytes": 348702
+  },
+  "selected_predictions": {
+    "path": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\research\\wisig_w4\\artifacts\\A1_S2_downstream\\C1_selected_val.npz",
+    "sha256": "8c4b042e691b949096da00e6c8b7abca42f951a718e8bcb22f363dac5b8a4bb7",
+    "bytes": 420550
+  }
+}

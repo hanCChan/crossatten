@@ -1,0 +1,13 @@
+{
+  "status": "PASS_FRESH_DIRECTORY_PORTABLE_REPLAY",
+  "archive": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\output\\review\\wisig_w4_review.zip",
+  "bytes": 52734485,
+  "sha256": "ad961970b5d25ce92698b403d49e1e794c830bcdb8739027409317e00667481d",
+  "entries": 274,
+  "portable_checks": 6320,
+  "selected_checkpoints": 15,
+  "raw_IQ_included": false,
+  "optimizer_states_included": false,
+  "reproduction_boundary": "Prediction/feature-to-result, role/history/hash audit; not retraining raw IQ",
+  "command": "python research/wisig_w4/audit_w4.py --portable"
+}

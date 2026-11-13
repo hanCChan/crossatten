@@ -1,0 +1,28 @@
+{
+  "job": {
+    "phase": "pilot",
+    "dataset": "ManyRx",
+    "arm": "M0",
+    "fold": 0,
+    "group": "first",
+    "seed": 18101,
+    "split_seed": 16001
+  },
+  "data_seed": 492422696,
+  "source_split_seed": 16001,
+  "epochs_budget": 40,
+  "batch": 128,
+  "optimizer": "Adam1e-3;ReduceLROnPlateau factor.1 patience5 min1e-6;earlywait10",
+  "precision": "FP32",
+  "augmentation_probability": 0.5,
+  "active_params": 82426,
+  "profile_sha256": null,
+  "git_sha": "9f10d625edcfab7e6715536cbef054810d719698",
+  "input_roles": "fit RX dates1-2 only; source held evaluated only after phase checkpoint seal",
+  "initial_state_sha256": "5b370cf5fe1a167a037199154bf52c1730cea7453a383f6ac7352d564efbd9c0",
+  "arm": "B0",
+  "fold": 0,
+  "reused": true,
+  "original_config_sha256": "93d197ddf0dc0bdfe44f40c9918bd4c1dc6d9666eee1779e1465924565b16544",
+  "original_checkpoint_path": "D:\\crossatten\\worktrees\\s17-rx-distortion\\17b-phase-intervention\\runs\\pilot__ManyRx__M0__f0__first__s18101\\model.pt"
+}

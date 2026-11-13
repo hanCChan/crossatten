@@ -1,0 +1,63 @@
+{
+  "fold": 0,
+  "arm": "ASK",
+  "macro_seed": 18101,
+  "data_seed": 492422696,
+  "split_seed": 16001,
+  "train_packets": 24267,
+  "val_packets": 10401,
+  "train_indices_sha256": "6ae074b99bbeee9abcb863f7da217408ac0479e92daa13f34b4b91e4f48a2d20",
+  "val_indices_sha256": "8882fedd48ab7dcaf11f5ba87aff239a5731f12801470ea222c8c3bb7d3e8f82",
+  "official_commit": "f00846d68425315b68ae69b8c6b712e08559c2fe",
+  "official_defaults": {
+    "candidates": [
+      8,
+      16,
+      24,
+      32,
+      48,
+      64
+    ],
+    "patch_size": 64,
+    "embed_dim": 128,
+    "mlp_ratio": 2.0
+  },
+  "parameter_elements": 100240,
+  "real_scalar_dof": 116369,
+  "epochs_max": 200,
+  "batch": 128,
+  "optimizer": "official Adam1e-3 wd0;Plateau factor.1 patience5 min1e-6;earlystop10",
+  "precision": "FP32",
+  "selection": "official packet-equal source validation CE",
+  "shuffle": "official CPU DataLoader/global Torch RNG",
+  "initial_state_sha256": "c438f91c5cd0b79ebb95f661bd8dd628db9d99fe437a44b6e9ee13958ac15706",
+  "git_sha": "4e50f76e2b94fe6887b6cd3278d26f0c0b410347",
+  "fit_rx": [
+    "18-2",
+    "18-19",
+    "19-1",
+    "19-2",
+    "19-19",
+    "19-20",
+    "20-1",
+    "20-19",
+    "20-20",
+    "23-1",
+    "23-3",
+    "23-5",
+    "23-6",
+    "23-7",
+    "24-5",
+    "24-6",
+    "24-13",
+    "24-16"
+  ],
+  "held_rx": [
+    "8-7",
+    "8-8",
+    "8-14",
+    "13-7",
+    "13-14",
+    "14-7"
+  ]
+}

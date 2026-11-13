@@ -1,0 +1,207 @@
+{
+  "status": "COMPLETED_FIRST_W4_TRIAL_RELATION_NOT_PROMOTED",
+  "date": "2026-11-13",
+  "branch": "research/wisig-w4-decision-pretrain",
+  "historical_base": "598ba17",
+  "E": {
+    "oracle_headroom_pp": 3.484027777777773,
+    "fixed_fusion": {
+      "ASKNet": 0.9158912037037036,
+      "HStem": 0.9071180555555555,
+      "equal_logit": 0.9269745370370371,
+      "fit_CE_scalar": 0.9223356481481483
+    },
+    "source_only": true,
+    "neural_fits": 0
+  },
+  "P": {
+    "status": "STOP_W4P_RELATIONAL_PRETRAINING_NOT_PROMOTED",
+    "summary": {
+      "A0": {
+        "RX_equal_accuracy_pct": 89.48731138159461,
+        "per_seed_RX_equal_accuracy_pct": [
+          89.70060284842488,
+          88.80854256149534,
+          89.95278873486357
+        ],
+        "per_RX_seed_mean_accuracy_pct": {
+          "8-8": 98.41666666666667,
+          "24-16": 92.19298245614034,
+          "7-7": 93.13333333333333,
+          "24-6": 88.86509635974305,
+          "7-14": 78.33333333333333,
+          "23-3": 85.98245614035086
+        },
+        "worst_RX_seed_mean_accuracy_pct": 78.33333333333333,
+        "RX_equal_macro_F1_pct": 85.67832028752106,
+        "packet_accuracy_pct": 89.69596558539706,
+        "packet_macro_F1_pct": 89.51489206959536
+      },
+      "A1": {
+        "RX_equal_accuracy_pct": 91.69021939216348,
+        "per_seed_RX_equal_accuracy_pct": [
+          91.11734318844935,
+          93.32122627530043,
+          90.63208871274067
+        ],
+        "per_RX_seed_mean_accuracy_pct": {
+          "8-8": 98.46666666666665,
+          "24-16": 92.94736842105264,
+          "7-7": 93.0,
+          "24-6": 90.57815845824412,
+          "7-14": 85.5,
+          "23-3": 89.64912280701753
+        },
+        "worst_RX_seed_mean_accuracy_pct": 85.5,
+        "RX_equal_macro_F1_pct": 88.51751568632997,
+        "packet_accuracy_pct": 91.81781188233926,
+        "packet_macro_F1_pct": 91.68369924856682
+      },
+      "A2": {
+        "RX_equal_accuracy_pct": 93.04802494180569,
+        "per_seed_RX_equal_accuracy_pct": [
+          93.3414179929958,
+          92.62751261630164,
+          93.17514421611965
+        ],
+        "per_RX_seed_mean_accuracy_pct": {
+          "8-8": 98.51666666666667,
+          "24-16": 93.50877192982456,
+          "7-7": 93.28333333333335,
+          "24-6": 91.54175588865097,
+          "7-14": 92.64814814814815,
+          "23-3": 88.78947368421052
+        },
+        "worst_RX_seed_mean_accuracy_pct": 88.78947368421052,
+        "RX_equal_macro_F1_pct": 90.06363959449621,
+        "packet_accuracy_pct": 93.10545285431927,
+        "packet_macro_F1_pct": 93.01822139856318
+      }
+    },
+    "comparisons": {
+      "A2_minus_A1": {
+        "mean_gain_pp": 1.3578055496422128,
+        "per_seed_gain_pp": [
+          2.224074804546447,
+          -0.6937136589987887,
+          2.54305550337898
+        ],
+        "positive_seeds": 2,
+        "per_RX_seed_mean_gain_pp": {
+          "8-8": 0.05000000000001137,
+          "24-16": 0.5614035087719174,
+          "7-7": 0.28333333333334565,
+          "24-6": 0.9635974304068498,
+          "7-14": 7.148148148148152,
+          "23-3": -0.8596491228070136
+        },
+        "worst_RX_seed_mean_gain_pp": -0.8596491228070136,
+        "worst_seed_RX_gain_pp": -3.5999999999999943,
+        "conditional_RX_interval": {
+          "mean_pp": 1.3578055496422106,
+          "CI95_pp": [
+            -0.17478054522458328,
+            3.790229201364111
+          ],
+          "RX_clusters": 6,
+          "replicates": 10000,
+          "seed": 42101,
+          "condition": "Fixed three trained seeds and six repeatedly developed internal source RX; not independent target or fresh-RX uncertainty"
+        }
+      },
+      "A2_minus_A0": {
+        "mean_gain_pp": 3.5607135602110986,
+        "per_seed_gain_pp": [
+          3.6408151445709223,
+          3.8189700548063,
+          3.2223554812560735
+        ],
+        "positive_seeds": 3,
+        "per_RX_seed_mean_gain_pp": {
+          "8-8": 0.09999999999999432,
+          "24-16": 1.3157894736842195,
+          "7-7": 0.1500000000000199,
+          "24-6": 2.676659528907919,
+          "7-14": 14.314814814814824,
+          "23-3": 2.807017543859658
+        },
+        "worst_RX_seed_mean_gain_pp": 0.09999999999999432,
+        "worst_seed_RX_gain_pp": -4.657387580299783,
+        "conditional_RX_interval": {
+          "mean_pp": 3.5607135602111057,
+          "CI95_pp": [
+            0.7328947368421197,
+            8.088020252868674
+          ],
+          "RX_clusters": 6,
+          "replicates": 10000,
+          "seed": 42101,
+          "condition": "Fixed three trained seeds and six repeatedly developed internal source RX; not independent target or fresh-RX uncertainty"
+        }
+      },
+      "A1_minus_A0": {
+        "mean_gain_pp": 2.2029080105688856,
+        "per_seed_gain_pp": [
+          1.4167403400244751,
+          4.512683713805089,
+          0.6792999778770934
+        ],
+        "positive_seeds": 3,
+        "per_RX_seed_mean_gain_pp": {
+          "8-8": 0.04999999999998295,
+          "24-16": 0.7543859649123021,
+          "7-7": -0.13333333333332575,
+          "24-6": 1.7130620985010694,
+          "7-14": 7.166666666666671,
+          "23-3": 3.6666666666666714
+        },
+        "worst_RX_seed_mean_gain_pp": -0.13333333333332575,
+        "worst_seed_RX_gain_pp": -4.950000000000003,
+        "conditional_RX_interval": {
+          "mean_pp": 2.2029080105688954,
+          "CI95_pp": [
+            0.38346356612444765,
+            4.457732571972405
+          ],
+          "RX_clusters": 6,
+          "replicates": 10000,
+          "seed": 42101,
+          "condition": "Fixed three trained seeds and six repeatedly developed internal source RX; not independent target or fresh-RX uncertainty"
+        }
+      }
+    },
+    "gates": {
+      "A2_vs_A1_gain_ge_1pp": true,
+      "all_three_seed_gains_positive": false,
+      "worst_seed_averaged_RX_vs_A1_ge_minus2pp": true,
+      "A2_overall_not_worse_than_A0": true,
+      "worst_seed_averaged_RX_vs_A0_ge_minus2pp": true
+    },
+    "neural_fits": 12,
+    "A0_reused": 3,
+    "updates": 56400,
+    "independent_target_or_D3_D4_reads": 0,
+    "second_view_started": false
+  },
+  "verification": {
+    "local": 6216,
+    "portable": 6320,
+    "local_Torch_transfer_audit": "PASS",
+    "figures_visually_verified": 2
+  },
+  "review_package": {
+    "status": "PASS_FRESH_DIRECTORY_PORTABLE_REPLAY",
+    "archive": "D:\\crossatten\\worktrees\\wisig-w4-decision-pretrain\\output\\review\\wisig_w4_review.zip",
+    "bytes": 52734485,
+    "sha256": "ad961970b5d25ce92698b403d49e1e794c830bcdb8739027409317e00667481d",
+    "entries": 274,
+    "portable_checks": 6320,
+    "selected_checkpoints": 15,
+    "raw_IQ_included": false,
+    "optimizer_states_included": false,
+    "reproduction_boundary": "Prediction/feature-to-result, role/history/hash audit; not retraining raw IQ",
+    "command": "python research/wisig_w4/audit_w4.py --portable"
+  },
+  "LoRa_readonly": true,
+  "prior_STOP_unchanged": true
+}
