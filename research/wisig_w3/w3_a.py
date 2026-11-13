@@ -7,8 +7,9 @@ import io
 import json
 import pickle
 import urllib.request
+import urllib.error
+import http.cookiejar
 import numpy as np
-import requests
 
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[1]
@@ -31,11 +32,11 @@ class Counts(pickle.Unpickler):
 
 
 def session():
-    s=requests.Session();s.proxies.update({'http':'http://127.0.0.1:78','https':'http://127.0.0.1:78'});return s
+    return urllib.request.build_opener(urllib.request.ProxyHandler({'http':'http://127.0.0.1:78','https':'http://127.0.0.1:78'}),urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
 
 
 def metadata():
-    scope=json.loads((HERE/'ACCESS_SCOPE.json').read_text())
+    scope=json.loads((HERE/'ACCESS_SCOPE.json').read_text(encoding='utf8'))
     artifacts=HERE/'artifacts';artifacts.mkdir(exist_ok=True)
     payload=COUNT.read_bytes()
     if len(payload)!=459700 or hashlib.sha256(payload).hexdigest()!='072ee403d2eed11a2f960a0cc18a7370afdc60fad96d3252ba83d66a91f34146':raise ValueError('Count metadata identity differs')
@@ -45,10 +46,10 @@ def metadata():
     if any(v.shape!=(4,41,174) or not np.isfinite(v).all() or (v<0).any() or (v!=np.floor(v)).any() for v in matrices.values()):raise ValueError('Invalid counts')
     s=session();sources={}
     for name in ('py/002_FullWiSig_create_compact_datasets.py','data_utilities.py'):
-        r=s.get(PUBLIC+name,timeout=45);r.raise_for_status()
-        if len(r.content)>100000:raise ValueError('Unexpected source size')
-        p=artifacts/name.split('/')[-1];p.write_bytes(r.content)
-        sources[name]=dict(url=PUBLIC+name,path=str(p),sha256=sha(p),bytes=len(r.content))
+        with s.open(PUBLIC+name,timeout=45) as response:content=response.read(100001)
+        if len(content)>100000:raise ValueError('Unexpected source size')
+        p=artifacts/name.split('/')[-1];p.write_bytes(content)
+        sources[name]=dict(url=PUBLIC+name,path=str(p),sha256=sha(p),bytes=len(content))
     tree=ast.parse((artifacts/'002_FullWiSig_create_compact_datasets.py').read_text(encoding='utf8'))
     current={};compact={}
     for node in tree.body:
@@ -60,10 +61,10 @@ def metadata():
                     if target.id=='max_n' and current.get('dataset_name') in ('ManyTx','ManyRx','ManySig','SingleDay'):
                         compact[current['dataset_name']]={k:current[k] for k in ('tx_list','rx_list','capture_date_list','max_n')}
     assert len(compact['ManyTx']['tx_list'])==150 and len(compact['ManyTx']['rx_list'])==18
-    historical=json.loads((ROOT/'05-wisig/out/05-1-ManyRx-manifest.json').read_text())
+    historical=json.loads((ROOT/'05-wisig/out/05-1-ManyRx-manifest.json').read_text(encoding='utf8'))
     assert compact['ManyRx']['tx_list']==historical['tx_list']
     target_tx=set(compact['ManyRx']['tx_list'])|set(compact['ManySig']['tx_list'])
-    plan=json.loads((ROOT/'research/standard_method_competition_c/SOURCE_PLAN.json').read_text())
+    plan=json.loads((ROOT/'research/standard_method_competition_c/SOURCE_PLAN.json').read_text(encoding='utf8'))
     source=next(v for v in plan['views'] if v['id']=='V0')['fit_rx']
     source_rx=sorted(set(source)&set(compact['ManyTx']['rx_list']))
     aux=sorted(set(compact['ManyTx']['tx_list'])-target_tx)
@@ -96,10 +97,12 @@ def metadata():
 def probe():
     url='https://drive.usercontent.google.com/download?id=17EnvGFoflJEh1xhFC8wx5fhCuPYhWt2l&export=download&confirm=t'
     s=session();out={}
-    with s.get(url,headers={'Range':'bytes=0-0'},stream=True,timeout=45) as r:
-        out=dict(url=url,status=r.status_code,headers={k:v for k,v in r.headers.items() if k.lower() in ('content-type','content-length','content-range','content-disposition','accept-ranges')},final_url=r.url)
-        if r.status_code>=400 or 'text/html' in r.headers.get('Content-Type',''):
-            out['diagnostic']=r.raw.read(3000).decode('utf8','replace')
+    try:r=s.open(urllib.request.Request(url,headers={'Range':'bytes=0-0'}),timeout=45)
+    except urllib.error.HTTPError as error:r=error
+    with r:
+        out=dict(url=url,status=r.status,headers={k:v for k,v in r.headers.items() if k.lower() in ('content-type','content-length','content-range','content-disposition','accept-ranges')},final_url=r.url)
+        if r.status>=400 or 'text/html' in r.headers.get('Content-Type',''):
+            out['diagnostic']=r.read(3000).decode('utf8','replace')
     write('A_OFFICIAL_DOWNLOAD_PROBE.json',out);print(json.dumps(out,indent=2))
 
 
