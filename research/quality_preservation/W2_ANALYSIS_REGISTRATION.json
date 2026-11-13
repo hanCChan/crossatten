@@ -1,0 +1,15 @@
+{
+  "status": "ANALYSIS_FROZEN_BEFORE_SOURCE_SCORING",
+  "date": "2026-11-13",
+  "code_sha256": "8b4cd2696e558a4758fb10f623a80e73b4ebc60e911aecaae274052d2e1848d7",
+  "protocol_sha256": "3a8affb17df4363dd11fb453e4e3ee2288b9cabe0f17600ce54a0974c1d19bf0",
+  "primary_endpoint": "clean EMA selected RX-equal accuracy, full coverage",
+  "additional_noise_db": [
+    20,
+    10,
+    0
+  ],
+  "independent_unit": "receiver; average streams within receiver",
+  "bootstrap_seed": 27113,
+  "bootstrap_count": 20000
+}
