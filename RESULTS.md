@@ -1,3 +1,6 @@
+<!-- QUALITY_PRESERVATION_2026_11_13 -->
+2026-11-13 当前研究分支新增：[WiSig质量假设与18次受控竞争](research/quality_preservation/RESEARCH_DECISION.zh-CN.md)已完成，判定`STOP_W2_QUALITY_GATE_NOT_PROMOTED`。LoRa保持冻结；历史结果和独立确认资格不变。
+
 # crossatten 全部结果汇报
 
 证据截止：**2026-10-25**。范围：Shen 阶段 00–03、WiSig 数据与发布权重验证（M2），以及[阶段06论文竞争力验证](06-paper-validation/README.md)。

@@ -1,3 +1,6 @@
+<!-- QUALITY_PRESERVATION_2026_11_13 -->
+2026-11-13 当前研究分支新增：[WiSig质量假设与18次受控竞争](research/quality_preservation/RESEARCH_DECISION.zh-CN.md)已完成，判定`STOP_W2_QUALITY_GATE_NOT_PROMOTED`。LoRa保持冻结；历史结果和独立确认资格不变。
+
 # crossatten：Shen LoRa 跨接收机 CrossAttn v2（第二篇论文工作区）
 
 本目录用于在**严格 0-shot 跨接收机**场景下，系统地改进论文 1 的 CrossAttn-OOB。研究路线见 [PLAN.md](PLAN.md)，协议见 [docs/PROTOCOL.md](docs/PROTOCOL.md)。

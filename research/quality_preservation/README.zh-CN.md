@@ -2,6 +2,8 @@
 
 用户2026-11-13要求参考所附方案执行，并根据现实成果独立判断。本分支`exp/wisig-quality-preservation`基于`02537cb`，保留原LoRa及WiSig负面证据，独立执行W1→有条件W2，不修改旧阶段门槛，也不访问目标RX或日期3–4。
 
+**本轮已经完成。** W1支持质量关联；18/18次W2拟合后，B0/B1/B2/N0的源域留RX Accuracy分别为86.1811%/86.0383%/86.1988%/86.2426%。B2没有通过收益及负对照门，判定`STOP_W2_QUALITY_GATE_NOT_PROMOTED`，不追加补救实验。175项结果复核通过；优先阅读[实际成果与研究决策](RESEARCH_DECISION.zh-CN.md)及[完整W2结果](W2_RESULTS.zh-CN.md)。
+
 ## 阅读顺序
 
 1. [W1预注册](PREREGISTRATION.zh-CN.md)及[结果](RESULTS.zh-CN.md)：22,968合法源包，冻结普通频域及EMA预测；TX×RX×Day内控制混杂。EMA低一致性四分位比其余包高17.5332pp错误，RX条件95%区间[9.0440,26.9902]pp、12/12 RX同向。W1通过后直接进入已授权W2。
@@ -10,6 +12,8 @@
 4. [文献核验](RELATED_WORK_AUDIT.zh-CN.md)：区分出版方/作者核实信息与未读全文的细节，不用跨协议数字宣传领先。
 
 W2终态以`W2_RESULT.json`和`W2_RESULTS.zh-CN.md`为准（全部训练封存并评分后生成）；`W2_LIVE.json`、`W2_PROGRESS.json`只反映运行进度。ATTEMPT文件记录启动时快照，不代替终态。
+
+![W2匹配对照和新增噪声结果](W2_COMPARISON.png)
 
 ![W1按RX的条件错误差](W1_QUALITY_ASSOCIATION.png)
 
