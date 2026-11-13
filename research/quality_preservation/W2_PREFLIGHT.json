@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "references": [
+    {
+      "reference": "V0/S0",
+      "exact_roles": true,
+      "exact_common_initialization": true,
+      "EMA_prediction_bitwise_replay": true
+    },
+    {
+      "reference": "V0/S1",
+      "exact_roles": true,
+      "exact_common_initialization": true,
+      "EMA_prediction_bitwise_replay": true
+    },
+    {
+      "reference": "V0/S2",
+      "exact_roles": true,
+      "exact_common_initialization": true,
+      "EMA_prediction_bitwise_replay": true
+    },
+    {
+      "reference": "V1/S0",
+      "exact_roles": true,
+      "exact_common_initialization": true,
+      "EMA_prediction_bitwise_replay": true
+    },
+    {
+      "reference": "V1/S1",
+      "exact_roles": true,
+      "exact_common_initialization": true,
+      "EMA_prediction_bitwise_replay": true
+    },
+    {
+      "reference": "V1/S2",
+      "exact_roles": true,
+      "exact_common_initialization": true,
+      "EMA_prediction_bitwise_replay": true
+    }
+  ],
+  "new_scientific_fits": 0
+}
