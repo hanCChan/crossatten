@@ -21,3 +21,7 @@ research/m1_mirror_identifiability/** text eol=lf
 research/m1_mirror_identifiability/*.zip binary
 tests/test_m1_mirror.py text eol=lf
 research/m1_mirror_identifiability/USER_REQUEST.txt -text
+
+# Preserve frozen evidence and its SHA256 bindings across platform checkouts.
+publication/lora_hstem/** -text
+research/quality_preservation/** -text
