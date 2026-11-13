@@ -1,0 +1,23 @@
+{
+  "status": "SEALED_MODELS_AND_FIXED_ENDPOINTS_BEFORE_NEW_HELD_SOURCE_READOUT",
+  "time": "2026-11-13T08:22:25.322987+00:00",
+  "files_sha256": {
+    "research/wisig_w4/p_evaluate.py": "cf48bcb571112f70ba963dcd9386479ffde2aa022893602286522c7bcf2864c5",
+    "research/wisig_w4/p_analyze.py": "e974862489cdfaa2669a019ea21569c0b4f5d07e31f24ac68a682f1734b2e218",
+    "research/wisig_w4/metrics.py": "e041846962eda1461fddf29cd5fd82ee9d3962c29cc47345f3af755b1e390bf4",
+    "research/wisig_w4/p_data.py": "20c6881e21cb90d6efc2a323fac87dbbf7d413201f48863f59dd5e4507c8d10b",
+    "research/wisig_w4/p_models.py": "9432a311195147aea07684f6e85edbc73ef2598844007314f728e1100397c18b",
+    "research/wisig_w4/common.py": "589846c7ca9020154c2c924cfc2e66b9575dbed644964ea7e988d9fa9e553a79",
+    "research/wisig_w4/P_MODEL_SEAL.json": "6accd0cae2ada2422d6b73340d583f123a5c53b7f24fe3d05ab216e736ffc8a2",
+    "research/wisig_w4/DATA_PLAN.json": "5d9b21b6f49db7ec38090ae204e4582964b848f5b6f6a7e8e50d15f2f93b2eb2",
+    "research/wisig_w4/PREREGISTRATION.zh-CN.md": "c07f051201d325fa4633400ca40dda63d6a6d337373558d02377ff3325c79d05",
+    "research/wisig_w4/EXECUTION_REGISTRATION.json": "eeb333f8d32e64d2658d4201b645e2d7bee16f10dc1a8c754674f564d749ae72",
+    "research/wisig_w4/P_TRAINING_QA.json": "6f170605b437da53dde09feb80308a6f3870ccd45a33fcd10031d8e516cb6243"
+  },
+  "expected_predictions": 9,
+  "held_source_packets_per_model": 11468,
+  "aux24_diagnostic_packets": 9216,
+  "primary": "RX-equal Accuracy, three paired seeds, predefined five gates",
+  "auxiliary_TX_diagnostic": "24-class labeled source-RX/day prototypes; never a downstream deployment result",
+  "forbidden_actual_target_or_D3_D4_or_historical_held6_IQ": true
+}
