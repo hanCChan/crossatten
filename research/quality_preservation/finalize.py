@@ -1,0 +1,49 @@
+"""Close the completed bounded experiment; no training, inference, or IQ reads."""
+import json
+from pathlib import Path
+from run_w1 import HERE,ROOT,digest,write
+
+
+def main():
+    r=json.loads((HERE/'W2_RESULT.json').read_text(encoding='utf8'))
+    qa=json.loads((HERE/'RESULTS_QA.json').read_text(encoding='utf8'))
+    if qa['status']!='PASS' or r['new_scientific_fits']!=18:raise ValueError('Incomplete experiment or QA')
+    labels={'B0':'EMA强基线','B1':'普通特征门控','B2':'真实质量门控','N0':'打乱质量负对照'}
+    main_values={a:next(t['accuracy_pct'] for t in r['totals'] if t['arm']==a and t['condition']=='clean' and t['subset']=='all') for a in labels}
+    accepted=r['status'].startswith('PASS')
+    d={c['control']:c for c in r['comparisons']}
+    text=['# 本轮实际成果与研究决策','',f"本轮已完成W1、18/18次W2新科学拟合、三个额外噪声条件及{qa['count']}项结果复核。判定：`{r['status']}`。",'',
+        '## 质量线索得到支持，算法价值单独判断','',
+        'W1对22,968源包复用冻结预测，在同TX×RX×Day内比较。EMA基线低一致性四分位错误率比其余组高17.5332pp，RX聚类95%条件区间[9.0440,26.9902]pp，12/12 RX同向。这是关联证据，不能直接写成低质量造成错误或新算法已经保留指纹。','',
+        '|方法|全包源域留RX Accuracy %|','|---|---:|']
+    for a,label in labels.items():text.append(f'|{a} {label}|{main_values[a]:.4f}|')
+    text+=['',f"B2−B1为{d['B1']['mean_delta_pp']:+.4f}pp；B2−B0为{d['B0']['mean_delta_pp']:+.4f}pp；B2−N0为{d['N0']['mean_delta_pp']:+.4f}pp。区间、两视图/三流、最差RX和TX×RX风险详见[完整W2结果](W2_RESULTS.zh-CN.md)。",'',
+        ('全部预设门通过，值得在合格的外部协议继续验证；当前不是独立RX确认，也不能单凭门控收益认定期刊原创性。' if accepted else '本实现至少一项事前门未通过，到此停止，不再增加Loss、种子或结构补救。质量代理有预测价值，不等于简单条件门控能恢复原本受损的判别信息；这次受控结果不能被重新包装成算法突破。'),'',
+        '## LoRa的执行结论','',
+        '保持已验证模型冻结，贡献收拢为“特定LoRa表示下的高效层级tokenization”及两项支撑证据，见[LoRa贡献与稿件组织](LORA_CONTRIBUTIONS.zh-CN.md)。本轮LoRa训练0；既有高准确率、默认TF32折叠数值失败、时移敏感性、论文1继承和历史Confirm使用情况均保留。', '',
+        '## 后续判断','',
+        '不继续普通模块/损失搜索。若未来开展新的独立研究，应先补足尚未被方法选择使用的评价协议，或真实连续IQ与同步/采集元数据。W1并不能区分不可恢复的信息缺失、接收机效应与信道/采集混杂；本轮N0也只检验样本与代理的对应关系，不能单独排除代理含有TX相关身份线索。新增研究需要新的可证伪机制，不以本轮数据继续调到正结果。', '',
+        '## 交付与范围','',
+        f"- 新科学拟合18次、720epoch、91,440优化步；B0复用6次历史EMA拟合。训练循环实测合计{r['total_fit_loop_seconds']:.2f}秒。质量预处理时间不含在该循环成本中，不作推断延迟优势声明。",
+        '- 目标RX、historical held6、Day3–4和Full新RX访问0；未恢复其盲测资格。没有拒识或删包。',
+        '- 三个新增门控同为83,554参数，B0为82,426参数；无冻结主干侧路。',
+        '- 全部正常/低一致性/日期/噪声/逐RX/类风险表、预测SHA、代码和训练记录均保留在本目录。权重、优化器状态及逐包预测保留本地artifacts/。',
+        '- 研究分支exp/wisig-quality-preservation；本轮未向外部服务推送或发布。']
+    (HERE/'RESEARCH_DECISION.zh-CN.md').write_text('\n'.join(text)+'\n',encoding='utf8')
+    write('W2_LIVE.json',dict(status='COMPLETE',completed=18,total=18,decision=r['status']))
+    progress=json.loads((HERE/'W2_PROGRESS.json').read_text(encoding='utf8'));progress['status']='COMPLETE';write('W2_PROGRESS.json',progress)
+    write('FINAL_STATUS.json',dict(status='COMPLETE',decision=r['status'],scientific_fits=18,gradient_updates=91440,
+        QA_checks=qa['count'],QA_pass=True,target_access=0,LoRa_new_fits=0,additional_fits_authorized_or_started=0))
+    manifest={p.relative_to(HERE).as_posix():digest(p) for p in HERE.iterdir() if p.is_file() and p.name!='DELIVERY_MANIFEST.json'}
+    write('DELIVERY_MANIFEST.json',dict(status='COMPLETE',files_sha256=manifest,
+        scientific_payloads='W1_RESULT.json and W2_RESULT.json contain local packet/checkpoint digests; full training files are pinned by W2_TRAINING_SEAL.json and COMPLETE.json'))
+    for filename in ('README.md','RESULTS.md'):
+        p=ROOT/filename;old=p.read_text(encoding='utf8')
+        marker='<!-- QUALITY_PRESERVATION_2026_11_13 -->'
+        if marker not in old:
+            intro=f"{marker}\n2026-11-13 当前研究分支新增：[WiSig质量假设与18次受控竞争](research/quality_preservation/RESEARCH_DECISION.zh-CN.md)已完成，判定`{r['status']}`。LoRa保持冻结；历史结果和独立确认资格不变。\n\n"
+            p.write_text(intro+old,encoding='utf8')
+    print(r['status'],main_values,flush=True)
+
+
+if __name__=='__main__':main()
