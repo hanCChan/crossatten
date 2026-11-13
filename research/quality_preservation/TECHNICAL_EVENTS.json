@@ -1,0 +1,23 @@
+{
+  "events": [
+    {
+      "stage": "registration",
+      "event": "First Git commit lacked author identity",
+      "resolution": "Per-command Codex service identity, no global configuration changed",
+      "scientific_updates": 0
+    },
+    {
+      "stage": "W2 startup",
+      "event": "Attempted validation while registry preparation process was still running; committed-registry guard rejected startup",
+      "resolution": "Waited for prepare completion, committed complete registry, then started preflight; no scientific attempt or source loading before rejection",
+      "scientific_updates_before_rejection": 0
+    },
+    {
+      "stage": "W1_QA",
+      "event": "Numpy boolean JSON serialization failed after independent numerical recomputation",
+      "resolution": "Converted boolean scalars for output; numerical formulas unchanged",
+      "additional_IQ_reads": 0,
+      "additional_fits": 0
+    }
+  ]
+}
