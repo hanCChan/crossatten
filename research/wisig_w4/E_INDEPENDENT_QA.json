@@ -1,0 +1,319 @@
+{
+  "status": "PASS",
+  "numerical_checks": 2521,
+  "own_code_sha256": "e9dfed8fc14036801f5cc295b2567f14b53fae611158960c6aa5aa1612d3918a",
+  "all_historical_metadata_seals_match": true,
+  "all_quadrant_rows_recomputed": true,
+  "fit_only_scalar_KKT_verified": true,
+  "raw_IQ_reads": 0,
+  "neural_fits": 0,
+  "oracle_headroom_primary_pp": 3.484027777777773,
+  "unique_RX_oracle_gain_pp": 3.2847222222222228,
+  "unique_RX_conditional_oracle_gain_CI95_pp": [
+    2.3041666666666667,
+    4.329236111111111
+  ],
+  "fusion_risk": {
+    "equal_logit": {
+      "worst_fold_RX_gain_vs_ASK_pp": -5.049999999999999,
+      "worst_unique_RX_gain_vs_ASK_pp": -2.8499999999999965,
+      "paired": [
+        {
+          "fold": 0,
+          "RX": "8-7",
+          "gain_vs_ASK_pp": 0.14999999999999458,
+          "gain_vs_HStem_pp": 1.8000000000000016
+        },
+        {
+          "fold": 0,
+          "RX": "8-8",
+          "gain_vs_ASK_pp": 0.5000000000000004,
+          "gain_vs_HStem_pp": 0.15000000000000568
+        },
+        {
+          "fold": 0,
+          "RX": "8-14",
+          "gain_vs_ASK_pp": 0.6500000000000061,
+          "gain_vs_HStem_pp": 3.500000000000003
+        },
+        {
+          "fold": 0,
+          "RX": "13-7",
+          "gain_vs_ASK_pp": 1.0000000000000009,
+          "gain_vs_HStem_pp": 1.055555555555554
+        },
+        {
+          "fold": 0,
+          "RX": "13-14",
+          "gain_vs_ASK_pp": 2.0499999999999963,
+          "gain_vs_HStem_pp": 0.8499999999999952
+        },
+        {
+          "fold": 0,
+          "RX": "14-7",
+          "gain_vs_ASK_pp": 0.550000000000006,
+          "gain_vs_HStem_pp": 2.0000000000000018
+        },
+        {
+          "fold": 1,
+          "RX": "1-1",
+          "gain_vs_ASK_pp": 0.40000000000000036,
+          "gain_vs_HStem_pp": 3.1000000000000028
+        },
+        {
+          "fold": 1,
+          "RX": "1-19",
+          "gain_vs_ASK_pp": -1.3499999999999956,
+          "gain_vs_HStem_pp": 2.400000000000002
+        },
+        {
+          "fold": 1,
+          "RX": "1-20",
+          "gain_vs_ASK_pp": 2.400000000000002,
+          "gain_vs_HStem_pp": 0.40000000000000036
+        },
+        {
+          "fold": 1,
+          "RX": "2-1",
+          "gain_vs_ASK_pp": -2.599999999999991,
+          "gain_vs_HStem_pp": 0.40000000000000036
+        },
+        {
+          "fold": 1,
+          "RX": "2-19",
+          "gain_vs_ASK_pp": 2.0499999999999963,
+          "gain_vs_HStem_pp": 1.200000000000001
+        },
+        {
+          "fold": 1,
+          "RX": "3-19",
+          "gain_vs_ASK_pp": 4.05000000000001,
+          "gain_vs_HStem_pp": 3.300000000000003
+        },
+        {
+          "fold": 2,
+          "RX": "1-1",
+          "gain_vs_ASK_pp": 1.100000000000001,
+          "gain_vs_HStem_pp": 1.2499999999999956
+        },
+        {
+          "fold": 2,
+          "RX": "1-19",
+          "gain_vs_ASK_pp": -5.049999999999999,
+          "gain_vs_HStem_pp": 6.550000000000001
+        },
+        {
+          "fold": 2,
+          "RX": "1-20",
+          "gain_vs_ASK_pp": 5.099999999999993,
+          "gain_vs_HStem_pp": 0.24999999999999467
+        },
+        {
+          "fold": 2,
+          "RX": "2-1",
+          "gain_vs_ASK_pp": -4.349999999999998,
+          "gain_vs_HStem_pp": 6.099999999999994
+        },
+        {
+          "fold": 2,
+          "RX": "2-19",
+          "gain_vs_ASK_pp": 4.800000000000004,
+          "gain_vs_HStem_pp": 0.649999999999995
+        },
+        {
+          "fold": 2,
+          "RX": "3-19",
+          "gain_vs_ASK_pp": 8.299999999999997,
+          "gain_vs_HStem_pp": 0.24999999999999467
+        },
+        {
+          "fold": 3,
+          "RX": "1-1",
+          "gain_vs_ASK_pp": 1.9499999999999962,
+          "gain_vs_HStem_pp": 0.14999999999999458
+        },
+        {
+          "fold": 3,
+          "RX": "1-19",
+          "gain_vs_ASK_pp": 0.45000000000000595,
+          "gain_vs_HStem_pp": 3.1500000000000083
+        },
+        {
+          "fold": 3,
+          "RX": "1-20",
+          "gain_vs_ASK_pp": 2.6999999999999913,
+          "gain_vs_HStem_pp": 0.649999999999995
+        },
+        {
+          "fold": 3,
+          "RX": "2-1",
+          "gain_vs_ASK_pp": -1.6000000000000014,
+          "gain_vs_HStem_pp": 3.6499999999999977
+        },
+        {
+          "fold": 3,
+          "RX": "2-19",
+          "gain_vs_ASK_pp": 0.5000000000000004,
+          "gain_vs_HStem_pp": 3.5499999999999976
+        },
+        {
+          "fold": 3,
+          "RX": "3-19",
+          "gain_vs_ASK_pp": 2.849999999999997,
+          "gain_vs_HStem_pp": 1.3000000000000012
+        }
+      ]
+    },
+    "fit_CE_scalar": {
+      "worst_fold_RX_gain_vs_ASK_pp": -6.899999999999995,
+      "worst_unique_RX_gain_vs_ASK_pp": -4.216666666666665,
+      "paired": [
+        {
+          "fold": 0,
+          "RX": "8-7",
+          "gain_vs_ASK_pp": 0.24999999999999467,
+          "gain_vs_HStem_pp": 1.9000000000000017
+        },
+        {
+          "fold": 0,
+          "RX": "8-8",
+          "gain_vs_ASK_pp": 0.5000000000000004,
+          "gain_vs_HStem_pp": 0.15000000000000568
+        },
+        {
+          "fold": 0,
+          "RX": "8-14",
+          "gain_vs_ASK_pp": -0.5499999999999949,
+          "gain_vs_HStem_pp": 2.300000000000002
+        },
+        {
+          "fold": 0,
+          "RX": "13-7",
+          "gain_vs_ASK_pp": 1.1666666666666714,
+          "gain_vs_HStem_pp": 1.2222222222222245
+        },
+        {
+          "fold": 0,
+          "RX": "13-14",
+          "gain_vs_ASK_pp": 1.849999999999996,
+          "gain_vs_HStem_pp": 0.649999999999995
+        },
+        {
+          "fold": 0,
+          "RX": "14-7",
+          "gain_vs_ASK_pp": 0.550000000000006,
+          "gain_vs_HStem_pp": 2.0000000000000018
+        },
+        {
+          "fold": 1,
+          "RX": "1-1",
+          "gain_vs_ASK_pp": 0.30000000000000027,
+          "gain_vs_HStem_pp": 3.0000000000000027
+        },
+        {
+          "fold": 1,
+          "RX": "1-19",
+          "gain_vs_ASK_pp": -1.5000000000000013,
+          "gain_vs_HStem_pp": 2.2499999999999964
+        },
+        {
+          "fold": 1,
+          "RX": "1-20",
+          "gain_vs_ASK_pp": 2.400000000000002,
+          "gain_vs_HStem_pp": 0.40000000000000036
+        },
+        {
+          "fold": 1,
+          "RX": "2-1",
+          "gain_vs_ASK_pp": -2.5499999999999967,
+          "gain_vs_HStem_pp": 0.44999999999999485
+        },
+        {
+          "fold": 1,
+          "RX": "2-19",
+          "gain_vs_ASK_pp": 2.0000000000000018,
+          "gain_vs_HStem_pp": 1.1500000000000066
+        },
+        {
+          "fold": 1,
+          "RX": "3-19",
+          "gain_vs_ASK_pp": 4.05000000000001,
+          "gain_vs_HStem_pp": 3.300000000000003
+        },
+        {
+          "fold": 2,
+          "RX": "1-1",
+          "gain_vs_ASK_pp": 0.8500000000000063,
+          "gain_vs_HStem_pp": 1.0000000000000009
+        },
+        {
+          "fold": 2,
+          "RX": "1-19",
+          "gain_vs_ASK_pp": -6.899999999999995,
+          "gain_vs_HStem_pp": 4.700000000000005
+        },
+        {
+          "fold": 2,
+          "RX": "1-20",
+          "gain_vs_ASK_pp": 5.249999999999999,
+          "gain_vs_HStem_pp": 0.40000000000000036
+        },
+        {
+          "fold": 2,
+          "RX": "2-1",
+          "gain_vs_ASK_pp": -6.599999999999994,
+          "gain_vs_HStem_pp": 3.849999999999998
+        },
+        {
+          "fold": 2,
+          "RX": "2-19",
+          "gain_vs_ASK_pp": 5.100000000000005,
+          "gain_vs_HStem_pp": 0.9499999999999953
+        },
+        {
+          "fold": 2,
+          "RX": "3-19",
+          "gain_vs_ASK_pp": 8.450000000000003,
+          "gain_vs_HStem_pp": 0.40000000000000036
+        },
+        {
+          "fold": 3,
+          "RX": "1-1",
+          "gain_vs_ASK_pp": 1.9499999999999962,
+          "gain_vs_HStem_pp": 0.14999999999999458
+        },
+        {
+          "fold": 3,
+          "RX": "1-19",
+          "gain_vs_ASK_pp": -1.3000000000000012,
+          "gain_vs_HStem_pp": 1.4000000000000012
+        },
+        {
+          "fold": 3,
+          "RX": "1-20",
+          "gain_vs_ASK_pp": 2.7999999999999914,
+          "gain_vs_HStem_pp": 0.7499999999999951
+        },
+        {
+          "fold": 3,
+          "RX": "2-1",
+          "gain_vs_ASK_pp": -3.500000000000003,
+          "gain_vs_HStem_pp": 1.749999999999996
+        },
+        {
+          "fold": 3,
+          "RX": "2-19",
+          "gain_vs_ASK_pp": -1.649999999999996,
+          "gain_vs_HStem_pp": 1.4000000000000012
+        },
+        {
+          "fold": 3,
+          "RX": "3-19",
+          "gain_vs_ASK_pp": 2.5499999999999967,
+          "gain_vs_HStem_pp": 1.0000000000000009
+        }
+      ]
+    }
+  },
+  "note": "Oracle and per-fold best single are labeled diagnostics; S20 source protocol differs from W4-P V0."
+}
