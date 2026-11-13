@@ -1,0 +1,43 @@
+{
+  "status": "PASS_CANONICAL_SOURCE_CACHE_LINEAGE_PAIRING",
+  "folds": [
+    {
+      "fold": 0,
+      "training_RX_disjoint": true,
+      "source_cell_SHA_equal": true,
+      "labels_RX_day_order_equal": true,
+      "derived_packet_keys_unique": 11800,
+      "keys_sha256": "f1a2aed578aa084e187b1b8db21f9cca763069232f0432f6bb767f761d1fedf5",
+      "provenance": "Same sealed RX/day source-cell arrays, common deterministic loader and sequential inference; cache-row-derived keys, not independently recorded RF emission IDs"
+    },
+    {
+      "fold": 1,
+      "training_RX_disjoint": true,
+      "source_cell_SHA_equal": true,
+      "labels_RX_day_order_equal": true,
+      "derived_packet_keys_unique": 12000,
+      "keys_sha256": "21617887863253f64b94611029fd92c87a683c5cda26cfb79cb1b81f86cd60bf",
+      "provenance": "Same sealed RX/day source-cell arrays, common deterministic loader and sequential inference; cache-row-derived keys, not independently recorded RF emission IDs"
+    },
+    {
+      "fold": 2,
+      "training_RX_disjoint": true,
+      "source_cell_SHA_equal": true,
+      "labels_RX_day_order_equal": true,
+      "derived_packet_keys_unique": 12000,
+      "keys_sha256": "21617887863253f64b94611029fd92c87a683c5cda26cfb79cb1b81f86cd60bf",
+      "provenance": "Same sealed RX/day source-cell arrays, common deterministic loader and sequential inference; cache-row-derived keys, not independently recorded RF emission IDs"
+    },
+    {
+      "fold": 3,
+      "training_RX_disjoint": true,
+      "source_cell_SHA_equal": true,
+      "labels_RX_day_order_equal": true,
+      "derived_packet_keys_unique": 12000,
+      "keys_sha256": "21617887863253f64b94611029fd92c87a683c5cda26cfb79cb1b81f86cd60bf",
+      "provenance": "Same sealed RX/day source-cell arrays, common deterministic loader and sequential inference; cache-row-derived keys, not independently recorded RF emission IDs"
+    }
+  ],
+  "raw_IQ_reads": 0,
+  "caveat": "No independent RF emission ID field existed in saved NPZ. Pairing is supported by the original common loader and exact cache-cell provenance."
+}
