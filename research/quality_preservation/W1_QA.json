@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "checks": {
+    "V0_quality_definition": true,
+    "V0_source_days_only": true,
+    "V0_all_packets_finite": true,
+    "V1_quality_definition": true,
+    "V1_source_days_only": true,
+    "V1_all_packets_finite": true,
+    "W1_unique_packet_ids": true,
+    "F0_independent_conditional_effect": true,
+    "F0_independent_RX_interval": true,
+    "E0_independent_conditional_effect": true,
+    "E0_independent_RX_interval": true
+  },
+  "count": 11,
+  "additional_IQ_reads": 0,
+  "additional_fits": 0
+}
