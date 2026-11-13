@@ -1,0 +1,17 @@
+{
+  "status": "METADATA_AND_SCOPE_FROZEN_BEFORE_W4_SCIENTIFIC_READOUT",
+  "time": "2026-11-13T07:41:58.787970+00:00",
+  "maximum_new_neural_fits": 15,
+  "maximum_pretrain_fits": 6,
+  "maximum_downstream_fits": 9,
+  "expected_A0_reused": 3,
+  "files_sha256": {
+    "research/wisig_w4/PREREGISTRATION.zh-CN.md": "c07f051201d325fa4633400ca40dda63d6a6d337373558d02377ff3325c79d05",
+    "research/wisig_w4/DATA_PLAN.json": "5d9b21b6f49db7ec38090ae204e4582964b848f5b6f6a7e8e50d15f2f93b2eb2",
+    "research/wisig_w4/E_INPUTS.json": "afbbad8206b743bc5cbea5bd10d559e3d3cd1e4a70df96d85c238a499f8ec4d9",
+    "research/wisig_w4/prepare.py": "5af5163a3c08bc5d68c439b0f2175f04b769e868b255c83fad153098958d645d",
+    "research/wisig_w4/common.py": "589846c7ca9020154c2c924cfc2e66b9575dbed644964ea7e988d9fa9e553a79"
+  },
+  "forbidden_real_target_or_D3_D4": true,
+  "E_only_historical_prediction_exception": true
+}
