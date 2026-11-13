@@ -1,0 +1,15 @@
+{
+  "stage": "W3-A/B",
+  "date": "2026-11-13",
+  "authorization": "正式开启 W3-A/W3-B，但不要直接授权新训练",
+  "old_STOP_results_unchanged": true,
+  "W3_A_allowed": ["Pinned official count metadata", "Official compact-creation and loading source text", "Download-link and size metadata", "Opaque acquisition of the official ManyTx archive, at most 3.5GB compressed; no waveform decode before B registration", "Metadata-only selective indexing after synthetic acceptance"],
+  "W3_B_condition": "A source-only auxiliary cohort and exact packet/array manifest must pass before any IQ decoding; B code and gates must be committed before feature readout",
+  "maximum_new_neural_fits": 0,
+  "W3_C_authorized": false,
+  "forbidden": ["Target RX waveform decoding or feature extraction", "Day3/4 waveform decoding", "Target ManyRx/ManySig TX in auxiliary cohort", "Changing existing receiver blind qualification", "Training generators, new backbones, losses or augmentations"],
+  "candidate_source_view": "Original C V0 fit_RX intersect official ManyTx RX",
+  "metadata_feasibility_floor": {"source_RX": 6, "auxiliary_TX": 40, "raw_packets_per_TX_RX_day": 32, "source_days": [1,2]},
+  "download_source": "Official UCLA ManyTx link; a monolithic archive is opaque storage, not permission to decode every cell",
+  "claim_boundary": "Receiver-associated statistical transport, confounded by location/channel/capture, not identified receiver hardware response"
+}
