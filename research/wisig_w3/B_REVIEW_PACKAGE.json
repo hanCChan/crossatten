@@ -1,0 +1,26 @@
+{
+  "status": "PASS_PORTABLE_FEATURE_LEVEL_REVIEW",
+  "archive": "D:\\crossatten\\worktrees\\wisig-quality-preservation\\output\\review\\wisig_w3_ab_review.zip",
+  "bytes": 22435768,
+  "sha256": "19beebd5d97aeaf8d55845fe523c8b2778f19d67dffb5d9eac7714854f0d71b7",
+  "files": 123,
+  "portable_audit_checks": 12110,
+  "verified_in_fresh_directory": "D:\\crossatten\\worktrees\\wisig-quality-preservation\\output\\review\\w3_portable_verification_20261113T050642Z",
+  "verification_command": "python research/wisig_w3/audit_b.py --portable",
+  "dependencies": [
+    "Python 3.10+",
+    "NumPy"
+  ],
+  "raw_IQ_included": false,
+  "neural_weights_included": false,
+  "included": [
+    "Frozen 64D source-only EMA/ERM features",
+    "All shallow operator parameters",
+    "Registered code and metadata",
+    "Full metric tables and results",
+    "Report and figures",
+    "NumPy-only verifier"
+  ],
+  "reproduction_boundary": "Feature-to-result arithmetic and fit-TX normal equations; not raw-IQ-to-feature extraction",
+  "all_final_archive_entry_hashes_checked": true
+}

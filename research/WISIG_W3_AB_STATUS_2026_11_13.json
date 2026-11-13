@@ -1,0 +1,61 @@
+{
+  "status": "COMPLETED_W3_A_B_RANK8_STOPPED_NO_W3_C",
+  "date": "2026-11-13",
+  "branch": "research/wisig-w3-transfer",
+  "worktree": "D:/crossatten/worktrees/wisig-quality-preservation",
+  "report": "research/wisig_w3/README.zh-CN.md",
+  "registration_commit_before_IQ": "5165f11bfa9006c9052561dcde435184f5293d8d",
+  "outcome_commit_before_review": "e6a92f2",
+  "W3_A": {
+    "status": "PASS",
+    "auxiliary_TX": 96,
+    "source_RX": 6,
+    "source_days": [1, 2],
+    "cells": 1152,
+    "packets": 36864,
+    "target_TX_union_excluded": 11,
+    "forbidden_RX_day_TX_IQ_rows_read": 0,
+    "fresh_independent_Full_RX_qualified": 0
+  },
+  "W3_B": {
+    "status": "STOP_W3B_LINEAR_TRANSPORT_HYPOTHESIS",
+    "implementation_scope": "Prespecified rank8 residual mapping on fixed pooled features; not all possible receiver-associated transfer",
+    "EMA_transport_error_rank8": 0.3216180386871443,
+    "EMA_transport_error_strongest_simple_control": 0.31572792918296955,
+    "EMA_relative_error_reduction": -0.018655649246542616,
+    "EMA_TX_cluster_relative_error_reduction_CI95": [-0.036429470316914146, -0.0014865638986101138],
+    "EMA_positive_directed_RX_pairs": 12,
+    "directed_RX_pairs": 30,
+    "EMA_median_TX_squared_distance_ratio": 0.7405374502935917,
+    "EMA_minimum_pair_context_TX_squared_distance_ratio": 0.3843851095325467,
+    "ERM_relative_error_reduction": -0.015699962172244897,
+    "new_neural_fits": 0,
+    "linear_operator_fits": 1200,
+    "PCA_fits": 8,
+    "official_feature_attempts": 1,
+    "W3_C_authorized": false,
+    "W3_C_started": false
+  },
+  "verification": {
+    "repository_audit": "PASS",
+    "repository_checks": 12205,
+    "portable_audit": "PASS",
+    "portable_checks": 12110,
+    "all_held_TX_metric_rows_replayed": 69120,
+    "all_geometry_rows_replayed": 1440,
+    "bootstrap_recomputed": true,
+    "all_registered_working_file_hashes_unchanged": true,
+    "frozen_model_state_hashes_unchanged": true,
+    "figures_visually_inspected": 2
+  },
+  "review_package": {
+    "path": "output/review/wisig_w3_ab_review.zip",
+    "bytes": 22435768,
+    "sha256": "19beebd5d97aeaf8d55845fe523c8b2778f19d67dffb5d9eac7714854f0d71b7",
+    "raw_IQ_included": false,
+    "boundary": "Feature-to-result review; not full IQ-to-feature replay"
+  },
+  "LoRa_manuscript_unchanged": true,
+  "prior_STOP_results_unchanged": true,
+  "new_algorithm_or_unseen_RX_accuracy_claim": false
+}

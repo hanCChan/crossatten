@@ -1,5 +1,8 @@
+<!-- W3_AB_2026_11_13 -->
+2026-11-13 最新：[W3-A/B完整报告](research/wisig_w3/README.zh-CN.md)：A通过（96辅助TX、6源RX、36,864包）；B停止当前rank8实现。EMA相对最强简单对照的误差下降为−1.866%（95% TX条件区间[−3.643%,−0.149%]），12/30有向RX对改善，类间距离平方保持率中位数0.741、最差0.384；ERM敏感性方向也为负。新增神经训练0、浅层拟合1200、PCA拟合8；W3-C未启动。逐TX/几何/区间独立复算及异目录审阅包验证通过；[机器状态](research/WISIG_W3_AB_STATUS_2026_11_13.json)。
+
 <!-- SUBMISSION_PREPARATION_2026_11_13 -->
-2026-11-13 当前阶段：[LoRa 英文 IEEE 投稿审阅稿与源包](publication/lora_hstem/README.md)已完成（主稿6页、补充6页）；[WiSig 当前路线正式结题](research/WISIG_CLOSURE_2026_11_13.md)。模型保持冻结，本轮新增训练/IQ/权重加载均为0；[完整交付状态](publication/PREPARATION_STATUS.json)。
+2026-11-13 上一阶段（投稿准备）：[LoRa英文IEEE投稿审阅稿与源包](publication/lora_hstem/README.md)已完成（主稿6页、补充6页）；[WiSig此前具体实现正式结题](research/WISIG_CLOSURE_2026_11_13.md)。该投稿准备阶段新增训练/IQ/权重加载均为0；[投稿准备交付状态](publication/PREPARATION_STATUS.json)。
 
 <!-- QUALITY_PRESERVATION_2026_11_13 -->
 2026-11-13 当前研究分支新增：[WiSig质量假设与18次受控竞争](research/quality_preservation/RESEARCH_DECISION.zh-CN.md)已完成，判定`STOP_W2_QUALITY_GATE_NOT_PROMOTED`。LoRa保持冻结；历史结果和独立确认资格不变。

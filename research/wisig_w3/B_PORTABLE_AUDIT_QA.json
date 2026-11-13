@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "checks_passed": 12110,
+  "portable_mode": true,
+  "own_code_sha256": "4080a6993e54d3418968626c1f7eb187645078821db13e2a942ebf070a6a9cbc",
+  "official_IQ_rows_read_by_audit": 0,
+  "neural_fits": 0,
+  "operators_refitted": 0,
+  "all_fit_normal_equations_verified": true,
+  "all_69120_held_TX_rows_replayed": true,
+  "all_1440_geometry_rows_replayed": true,
+  "bootstrap_recomputed": true,
+  "scientific_decision": "STOP_W3B_LINEAR_TRANSPORT_HYPOTHESIS",
+  "note": "Audit uses frozen features, saved parameters and independent distance arithmetic; no target data or neural libraries."
+}

@@ -1,0 +1,12 @@
+{
+  "purpose": "Engineering events; none changed the frozen scientific estimator or threshold",
+  "official_feature_readout_attempts": 1,
+  "official_primary_analysis_attempts": 1,
+  "post_result_neural_fits": 0,
+  "post_result_hyperparameter_or_split_changes": 0,
+  "events": [
+    {"stage": "metadata acquisition", "event": "requests module unavailable; used standard-library urllib with the existing local proxy", "official_IQ_read": false},
+    {"stage": "metadata text", "event": "Default Windows text encoding rejected UTF-8 source; switched to explicit UTF-8", "official_IQ_read": false},
+    {"stage": "post-result independent audit", "event": "Two initial Git-blob comparisons rejected LF/CRLF differences in historical Python and metadata text; verifier now permits newline-only text conversion while separately requiring all exact registered working-file SHA256 digests", "official_IQ_read": false, "prespecified_files_changed": false}
+  ]
+}
