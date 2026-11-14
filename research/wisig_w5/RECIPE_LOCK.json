@@ -1,0 +1,18 @@
+{
+  "status": "PASS_W4_A1_ALGORITHM_UNCHANGED",
+  "checks": {
+    "p_models_byte_equal": true,
+    "fit_aux_AST_equal": true,
+    "data_functions_equal_except_V1_audit_label": true
+  },
+  "W4_reference_commit": "cd597a5",
+  "new_algorithms": 0,
+  "lambda_value": 0.0,
+  "V0_pretrained_weights_reused": false,
+  "copied_source_sha256": {
+    "p_models.py": "9432a311195147aea07684f6e85edbc73ef2598844007314f728e1100397c18b",
+    "p_fit.py": "ad80efd5a6d28333ccb15a47fa69e22a43737591ac57f1ea3a3cdc8da5ecc773",
+    "p_data.py": "20c6881e21cb90d6efc2a323fac87dbbf7d413201f48863f59dd5e4507c8d10b"
+  },
+  "IQ_decoded_before_admission": 0
+}

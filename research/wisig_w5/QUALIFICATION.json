@@ -1,0 +1,141 @@
+{
+  "status": "PASS_UNIQUE_SAME_72TX_SIX_RX_COHORT",
+  "V1_fit_RX": [
+    "7-7",
+    "7-14",
+    "8-7",
+    "8-8",
+    "14-7",
+    "18-2",
+    "18-19",
+    "23-3",
+    "23-5",
+    "23-7",
+    "24-6",
+    "24-16"
+  ],
+  "V1_held_RX": [
+    "13-14",
+    "23-6",
+    "13-7",
+    "24-5",
+    "24-13",
+    "8-14"
+  ],
+  "candidate_RX": [
+    "14-7",
+    "18-19",
+    "18-2",
+    "7-14",
+    "7-7",
+    "8-7",
+    "8-8"
+  ],
+  "all_six_RX_combinations": [
+    {
+      "RX": [
+        "14-7",
+        "18-19",
+        "18-2",
+        "7-14",
+        "7-7",
+        "8-7"
+      ],
+      "eligible_aux_TX": 96,
+      "original_72_supported": 72,
+      "missing_original_TX": []
+    },
+    {
+      "RX": [
+        "14-7",
+        "18-19",
+        "18-2",
+        "7-14",
+        "7-7",
+        "8-8"
+      ],
+      "eligible_aux_TX": 97,
+      "original_72_supported": 71,
+      "missing_original_TX": [
+        "20-1"
+      ]
+    },
+    {
+      "RX": [
+        "14-7",
+        "18-19",
+        "18-2",
+        "7-14",
+        "8-7",
+        "8-8"
+      ],
+      "eligible_aux_TX": 96,
+      "original_72_supported": 71,
+      "missing_original_TX": [
+        "20-1"
+      ]
+    },
+    {
+      "RX": [
+        "14-7",
+        "18-19",
+        "18-2",
+        "7-7",
+        "8-7",
+        "8-8"
+      ],
+      "eligible_aux_TX": 98,
+      "original_72_supported": 71,
+      "missing_original_TX": [
+        "20-1"
+      ]
+    },
+    {
+      "RX": [
+        "14-7",
+        "18-19",
+        "7-14",
+        "7-7",
+        "8-7",
+        "8-8"
+      ],
+      "eligible_aux_TX": 100,
+      "original_72_supported": 71,
+      "missing_original_TX": [
+        "20-1"
+      ]
+    },
+    {
+      "RX": [
+        "14-7",
+        "18-2",
+        "7-14",
+        "7-7",
+        "8-7",
+        "8-8"
+      ],
+      "eligible_aux_TX": 108,
+      "original_72_supported": 71,
+      "missing_original_TX": [
+        "20-1"
+      ]
+    },
+    {
+      "RX": [
+        "18-19",
+        "18-2",
+        "7-14",
+        "7-7",
+        "8-7",
+        "8-8"
+      ],
+      "eligible_aux_TX": 97,
+      "original_72_supported": 71,
+      "missing_original_TX": [
+        "20-1"
+      ]
+    }
+  ],
+  "count_metadata_sha256": "072ee403d2eed11a2f960a0cc18a7370afdc60fad96d3252ba83d66a91f34146",
+  "IQ_values_read": 0
+}
