@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "time": "2026-11-14T01:55:24.075846+00:00",
+  "A0_strict_reuse": [
+    {
+      "seed": 0,
+      "status": "PASS_EXACT_A0_REUSE",
+      "initial_model_exact": true,
+      "all_train_validation_keys_exact": true,
+      "validation_logits_bitwise_exact": true,
+      "frozen_model_state_unchanged": true
+    },
+    {
+      "seed": 1,
+      "status": "PASS_EXACT_A0_REUSE",
+      "initial_model_exact": true,
+      "all_train_validation_keys_exact": true,
+      "validation_logits_bitwise_exact": true,
+      "frozen_model_state_unchanged": true
+    },
+    {
+      "seed": 2,
+      "status": "PASS_EXACT_A0_REUSE",
+      "initial_model_exact": true,
+      "all_train_validation_keys_exact": true,
+      "validation_logits_bitwise_exact": true,
+      "frozen_model_state_unchanged": true
+    }
+  ],
+  "aux_fit_packets": 20736,
+  "aux_val_packets": 6912,
+  "downstream_train_packets": 16173,
+  "downstream_checkpoint_val_packets": 6995,
+  "aux24_IQ_rows_read": 0,
+  "source_selection_IQ_rows_read": 0,
+  "cache_sha256": {
+    "P_AUX_TRAIN.npz": "6ed7d36c6699e45e75b98e8ef37d9da5b115c55e210f1d0e2bdf2ebed8ba1777",
+    "P_DOWNSTREAM_TRAIN.npz": "4a2dac3a8f25e6e9800f12561c2e1a8605876717f111fab3293149ba775311fd"
+  },
+  "initial_scales_sha256": "c48f97c547af057ba4ece2e652ad03cb5a9725a70149e023fd48ce8999f2d9f4",
+  "new_optimizer_updates": 0,
+  "new_scientific_fits": 0
+}

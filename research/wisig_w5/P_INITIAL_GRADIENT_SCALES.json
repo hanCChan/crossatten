@@ -1,0 +1,21 @@
+{
+  "status": "RANDOM_INITIALIZATIONS_EXACT_NO_GRADIENT_PROBES",
+  "scales": {
+    "0": {
+      "initial_state_sha256": "8d7745e18c256eb6a5feb2ba0763eef6cb14ca46cbe0c2f1554683cd6f3797f9",
+      "lambda_value": 0.0,
+      "compared_to_W4_random_initialization": true
+    },
+    "1": {
+      "initial_state_sha256": "d2a243ee5c4d1a0121a82596f1dbb5d275444db0d90a74f37b49251ae7a220a5",
+      "lambda_value": 0.0,
+      "compared_to_W4_random_initialization": true
+    },
+    "2": {
+      "initial_state_sha256": "230528457926f883dcb2bf057a8e114d36143e4fc2d2353d888fba32dc41c53c",
+      "lambda_value": 0.0,
+      "compared_to_W4_random_initialization": true
+    }
+  },
+  "source": "Same random W4 initializations; lambda fixed zero; no gradient probes"
+}
