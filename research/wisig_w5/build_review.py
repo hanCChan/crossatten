@@ -30,6 +30,7 @@ def collect():
         add(ref['selection'],f'research/wisig_w5/artifacts/P_A0_S{seed}_selection.npz')
     for item in receipt['predictions'].values():add(item)
     for item in (tq['history_evidence'],tq['role_metadata']):add(item)
+    add(read(HERE/'QUALIFICATION_EVIDENCE.json')['count_metadata'])
     # Historical W4 plan is metadata required by the unchanged-TX audit.
     q=ROOT/'research/wisig_w4/DATA_PLAN.json';add(dict(path=str(q),sha256=sha(q)))
     index=dict(status='EXACT_REPLAY_INPUTS_AND_SELECTED_WEIGHTS',raw_IQ_included=False,optimizer_states_included=False,

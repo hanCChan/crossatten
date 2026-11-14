@@ -1,7 +1,7 @@
 """Independent NumPy-only replay of W5-A classification, gates, roles and diagnostics."""
 import os
 os.environ['OPENBLAS_NUM_THREADS']='2'
-import argparse,ast,csv,hashlib,json
+import argparse,ast,csv,hashlib,itertools,json
 from pathlib import Path,PureWindowsPath
 import numpy as np
 
@@ -40,9 +40,27 @@ def main(portable=False):
         return p
     for name in ('ADMISSION_REGISTRATION.json','EXECUTION_REGISTRATION.json','P_EVALUATION_REGISTRATION.json'):
         for rel,digest in read(HERE/name)['files_sha256'].items():require(sha(ROOT/rel)==digest,'bound code/evidence:'+rel)
+    old=ROOT/'research/wisig_w4'
+    require(sha(HERE/'p_models.py')==sha(old/'p_models.py'),'exact W4 A1 model implementation')
+    def funcs(path):
+        return {n.name:ast.dump(n,include_attributes=False) for n in ast.parse(path.read_text(encoding='utf-8')).body if isinstance(n,(ast.FunctionDef,ast.ClassDef))}
+    require(funcs(HERE/'p_fit.py')['fit_aux']==funcs(old/'p_fit.py')['fit_aux'],'exact W4 auxiliary training AST')
+    x=funcs(HERE/'p_data.py');y=funcs(old/'p_data.py')
+    require(all(x[k]==y[k].replace('mmap_C_V0_admitted_IQ_rows','mmap_C_V1_admitted_IQ_rows') for k in y),'W4 data processing unchanged apart from V1 audit label')
     plan=read(HERE/'DATA_PLAN.json');aux_tx=plan['aux_train_TX']
     require(len(aux_tx)==72 and plan['aux_diagnostic_TX']==[],'fixed 72 TX; no additional diagnostic IQ')
     require(aux_tx==read(ROOT/'research/wisig_w4/DATA_PLAN.json')['aux_train_TX'],'W4 original 72 TX and order unchanged')
+    qe=read(HERE/'QUALIFICATION_EVIDENCE.json');q=read(HERE/'QUALIFICATION.json')
+    with np.load(resolve(qe['count_metadata']),allow_pickle=False) as v:
+        txlist=v['TX'].tolist();rxlist=v['RX'].tolist();counts=v['counts']
+    require(counts.shape==(4,41,174),'official counts tensor schema')
+    combos=[]
+    for group in itertools.combinations(q['candidate_RX'],6):
+        eligible=[t for t in qe['auxiliary_TX_pool'] if min(counts[d,rxlist.index(r),txlist.index(t)] for r in group for d in (0,1))>=32]
+        combos.append(dict(RX=list(group),eligible_aux_TX=len(eligible),original_72_supported=len(set(eligible)&set(aux_tx)),missing_original_TX=sorted(set(aux_tx)-set(eligible))))
+    require(combos==q['all_six_RX_combinations'],'all seven receiver qualifications independently replayed')
+    valid=[v for v in combos if v['original_72_supported']==72]
+    require(len(valid)==1 and valid[0]['RX']==plan['aux_RX'],'unique legal receiver group preserving original 72 TX')
     require(not set(aux_tx)&set(plan['excluded_target_TX']),'excluded target TX union')
     require(set(plan['aux_RX'])<=set(plan['view']['fit_rx']),'auxiliary RX contained in V1 fit12')
     require(not set(plan['aux_RX'])&set(plan['view']['source_selection_rx']),'no auxiliary held-source RX')
