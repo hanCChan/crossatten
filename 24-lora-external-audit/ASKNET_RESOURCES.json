@@ -1,0 +1,16 @@
+{
+  "constructor": "official ResCISNet(num_classes=10), all defaults; meta tensors only",
+  "parameter_elements": 74153872,
+  "real_degrees_of_freedom": 141246353,
+  "parameter_bytes": 564985412,
+  "koopman_complex_matrix_shape": [
+    8191,
+    8191
+  ],
+  "one_complex64_matrix_bytes": 536739848,
+  "matrix_weight_grad_adam_two_moments_bytes_lower_bound": 2146959392,
+  "qr_scaling": "O(8191^3) each forward, plus backward and matrix products",
+  "full_default_gpu_forward_backward": "NOT_RUN",
+  "reduced_candidates_used_for_main_result": false,
+  "note": "Memory lower bound excludes QR workspace/graph, other matrices, backbone and activations. Feasibility is unverified."
+}

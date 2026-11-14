@@ -1,0 +1,118 @@
+{
+  "accesses": [
+    {
+      "fold": 0,
+      "rx": "b210_1",
+      "path": "D:\\crossatten\\stage_1\\data\\raw\\b210_1_train.h5",
+      "fields": [
+        "label",
+        "data"
+      ],
+      "purpose": "phase1_source_identity_and_preprocessing",
+      "forbidden_metadata_read": false
+    },
+    {
+      "fold": 0,
+      "rx": "rtl_1",
+      "path": "D:\\crossatten\\stage_1\\data\\raw\\rtl_1_train.h5",
+      "fields": [
+        "label",
+        "data"
+      ],
+      "purpose": "phase1_source_identity_and_preprocessing",
+      "forbidden_metadata_read": false
+    },
+    {
+      "fold": 0,
+      "rx": "rtl_3",
+      "path": "D:\\crossatten\\stage_1\\data\\raw\\rtl_3_train.h5",
+      "fields": [
+        "label",
+        "data"
+      ],
+      "purpose": "phase1_source_identity_and_preprocessing",
+      "forbidden_metadata_read": false
+    },
+    {
+      "fold": 0,
+      "rx": "rtl_6",
+      "path": "D:\\crossatten\\stage_1\\data\\raw\\rtl_6_train.h5",
+      "fields": [
+        "label",
+        "data"
+      ],
+      "purpose": "phase1_source_identity_and_preprocessing",
+      "forbidden_metadata_read": false
+    },
+    {
+      "fold": 0,
+      "rx": "rtl_9",
+      "path": "D:\\crossatten\\stage_1\\data\\raw\\rtl_9_train.h5",
+      "fields": [
+        "label",
+        "data"
+      ],
+      "purpose": "phase1_source_identity_and_preprocessing",
+      "forbidden_metadata_read": false
+    },
+    {
+      "fold": 1,
+      "rx": "b200_mini_1",
+      "path": "D:\\crossatten\\stage_1\\data\\raw\\b200_mini_1_train.h5",
+      "fields": [
+        "label",
+        "data"
+      ],
+      "purpose": "phase1_source_identity_and_preprocessing",
+      "forbidden_metadata_read": false
+    },
+    {
+      "fold": 1,
+      "rx": "pluto_1",
+      "path": "D:\\crossatten\\stage_1\\data\\raw\\pluto_1_train.h5",
+      "fields": [
+        "label",
+        "data"
+      ],
+      "purpose": "phase1_source_identity_and_preprocessing",
+      "forbidden_metadata_read": false
+    },
+    {
+      "fold": 1,
+      "rx": "rtl_2",
+      "path": "D:\\crossatten\\stage_1\\data\\raw\\rtl_2_train.h5",
+      "fields": [
+        "label",
+        "data"
+      ],
+      "purpose": "phase1_source_identity_and_preprocessing",
+      "forbidden_metadata_read": false
+    },
+    {
+      "fold": 1,
+      "rx": "rtl_5",
+      "path": "D:\\crossatten\\stage_1\\data\\raw\\rtl_5_train.h5",
+      "fields": [
+        "label",
+        "data"
+      ],
+      "purpose": "phase1_source_identity_and_preprocessing",
+      "forbidden_metadata_read": false
+    },
+    {
+      "fold": 1,
+      "rx": "rtl_7",
+      "path": "D:\\crossatten\\stage_1\\data\\raw\\rtl_7_train.h5",
+      "fields": [
+        "label",
+        "data"
+      ],
+      "purpose": "phase1_source_identity_and_preprocessing",
+      "forbidden_metadata_read": false
+    }
+  ],
+  "blind_reads": 0,
+  "confirm_reads": 0,
+  "evaluation_role_reads": 0,
+  "note": "Each file is opened only as source of its own fold; no model/evaluation is run."
+}

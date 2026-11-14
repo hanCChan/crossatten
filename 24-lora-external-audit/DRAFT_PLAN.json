@@ -1,0 +1,121 @@
+{
+  "stage": "S24",
+  "status": "DRAFT_NOT_FROZEN",
+  "maximum_authorized_fits": 0,
+  "phase1_completed": true,
+  "all_method_training_gates_passed": false,
+  "protocol_sha256": "913d38626d9bcaa285b0ba7816bd8e863a91778f1fc62e4dd7d27c70415a119a",
+  "base_git": "e041f09",
+  "views": [
+    "native",
+    "strict_ib"
+  ],
+  "folds": [
+    {
+      "fold": 0,
+      "source": [
+        "b210_1",
+        "rtl_1",
+        "rtl_3",
+        "rtl_6",
+        "rtl_9"
+      ],
+      "dev_val": [
+        "b200_mini_1",
+        "pluto_1",
+        "rtl_2",
+        "rtl_5",
+        "rtl_7"
+      ]
+    },
+    {
+      "fold": 1,
+      "source": [
+        "b200_mini_1",
+        "pluto_1",
+        "rtl_2",
+        "rtl_5",
+        "rtl_7"
+      ],
+      "dev_val": [
+        "b210_1",
+        "rtl_1",
+        "rtl_3",
+        "rtl_6",
+        "rtl_9"
+      ]
+    }
+  ],
+  "seeds": [
+    201,
+    202,
+    203
+  ],
+  "per_source_rx_tx": {
+    "train": 160,
+    "source_val": 40
+  },
+  "candidate_primary_methods": [
+    "shen_tmc2024",
+    "asknet_lora",
+    "ib_rff_shen_adapted"
+  ],
+  "candidate_secondary_methods": [
+    "shen_tifs2022",
+    "shen_tifs2023",
+    "ma_tifs2025",
+    "ricai2024_gmlp"
+  ],
+  "proposed_primary_final_checkpoints": 36,
+  "proposed_primary_fit_upper_bound": 48,
+  "proposed_fit_count_explanation": "2 views x 2 folds x 3 seeds x (1 DANN + 1 ASKNet + 2 IB stages), conditional on gates, configuration freeze and authorization; no hyperparameter search included",
+  "frozen_hstem_reuse": {
+    "checkpoints": 6,
+    "params": 133690,
+    "source": "S13 A1_mha / S23 H0",
+    "reuse_same_result_in_both_views": true,
+    "new_fits": 0
+  },
+  "checkpoint_selection": "source_val only; exact per-method scalar/loss/noise/restore rules must be frozen before fits",
+  "source_only_search": "No search authorized; IB alpha/patch remain unresolved. Any search needs explicit source-only budget and separate registration.",
+  "evaluation": {
+    "dev_val": "report only, after checkpoint/configuration seal; no adaptation",
+    "confirm": "historically exposed; excluded from current access, optional report only after separate frozen decision",
+    "blind": "never open",
+    "primary": "receiver-equal packet accuracy",
+    "secondary": [
+      "receiver-equal macro-F1",
+      "worst receiver",
+      "all per-RX values",
+      "seed SD",
+      "paired fold/seed deltas"
+    ]
+  },
+  "costs": [
+    "parameter elements and real degrees of freedom",
+    "MACs with FFT/QR coverage disclosed",
+    "same-machine GPU p50/p95 and batch throughput",
+    "native preprocessing time",
+    "total stage1+stage2 training time"
+  ],
+  "pairing": "Same raw packet identities/fold/seed; use original H0 data_seed where compatible. Different architectures and augmentation do not imply identical RNG streams.",
+  "failure_policy": "Keep every attempt/error; no target-driven reruns, RX changes, alpha tuning or best-seed reporting",
+  "blockers": [
+    {
+      "method": "shen_tmc2024",
+      "item": "TF-to-port weight transfer parity unverified; fix RX validation indexing and freeze source-only selection/augmentation rule"
+    },
+    {
+      "method": "asknet_lora",
+      "item": "Default 8191-mode full-model GPU forward/backward and batch budget unverified; no silent cutoff reduction"
+    },
+    {
+      "method": "ib_rff_shen_adapted",
+      "item": "Official LoRa recipe absent; freeze and audit seq_len/patch/alpha and source-only two-stage initialization"
+    },
+    {
+      "method": "shen_tifs2022",
+      "item": "Triplet/channel-augmentation/gallery closed-set adaptation not integrated; no auxiliary TX or target enrollment"
+    }
+  ]
+}

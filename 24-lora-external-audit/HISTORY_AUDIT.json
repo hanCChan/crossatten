@@ -1,0 +1,276 @@
+{
+  "source_manifest_comparisons": [
+    {
+      "rx": "b210_1",
+      "reference_manifest": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\shen\\b210_1\\manifest.json",
+      "sha256": "3814271b8d1f0d8b296a238869d4fc1bd9b4198a09633f94cccda31c2349f937",
+      "rows_equal": true,
+      "iq_equal": true
+    },
+    {
+      "rx": "rtl_1",
+      "reference_manifest": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\shen\\rtl_1\\manifest.json",
+      "sha256": "73af1ef24b82019ce13f913b56cfad38de227aac290eda0a425725b7f87f5d66",
+      "rows_equal": true,
+      "iq_equal": true
+    },
+    {
+      "rx": "rtl_3",
+      "reference_manifest": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\shen\\rtl_3\\manifest.json",
+      "sha256": "ad9d5d562eb548d63d622ce756026cfbb5fbd95a3d85b1f873c485d492ab6b82",
+      "rows_equal": true,
+      "iq_equal": true
+    },
+    {
+      "rx": "rtl_6",
+      "reference_manifest": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\shen\\rtl_6\\manifest.json",
+      "sha256": "a372c0813388f667deb569043e7c6f650c50317e9ff8d7a5aac91bd5ee7b156b",
+      "rows_equal": true,
+      "iq_equal": true
+    },
+    {
+      "rx": "rtl_9",
+      "reference_manifest": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\shen\\rtl_9\\manifest.json",
+      "sha256": "9aa0674820e2c1b77f824bce0df2a3669954e02e2b48098445dcfaa9b85af113",
+      "rows_equal": true,
+      "iq_equal": true
+    },
+    {
+      "rx": "b200_mini_1",
+      "reference_manifest": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\shen\\b200_mini_1\\manifest.json",
+      "sha256": "e1a36351ce5c54c5147cedb5e44c49fb2a48f1d19106fedcdc15eb40b1279089",
+      "rows_equal": true,
+      "iq_equal": true
+    },
+    {
+      "rx": "pluto_1",
+      "reference_manifest": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\shen\\pluto_1\\manifest.json",
+      "sha256": "893e85ce0b0c5447e33e429fd32a7a0fbe94acdfe3814193676490a563d31f31",
+      "rows_equal": true,
+      "iq_equal": true
+    },
+    {
+      "rx": "rtl_2",
+      "reference_manifest": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\shen\\rtl_2\\manifest.json",
+      "sha256": "e4088e5d3390576f0caf9c3b78de66f315703f2c116007e51961658fc8f65253",
+      "rows_equal": true,
+      "iq_equal": true
+    },
+    {
+      "rx": "rtl_5",
+      "reference_manifest": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\shen\\rtl_5\\manifest.json",
+      "sha256": "92483e20e96d140ecddc478e9f64e0fe8a769c5689be27da736409d274cf75d8",
+      "rows_equal": true,
+      "iq_equal": true
+    },
+    {
+      "rx": "rtl_7",
+      "reference_manifest": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\cache\\shen\\rtl_7\\manifest.json",
+      "sha256": "f88344aec5d647dc909b0d09d38c16a070a5ea76930e9d5c896393dc313f0dfd",
+      "rows_equal": true,
+      "iq_equal": true
+    }
+  ],
+  "frozen_hstem_checkpoints": [
+    {
+      "key": "H0_f0_s201",
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s201",
+      "passed": true,
+      "artifacts": {
+        "model.pt": {
+          "sha256": "be14533e73c5b83c3534e09a5837dc013f5e5b001b95396984c8f6d4e8ec6833",
+          "expected": "be14533e73c5b83c3534e09a5837dc013f5e5b001b95396984c8f6d4e8ec6833"
+        },
+        "config.json": {
+          "sha256": "6a1c50c769db70664cc71215841a206d675b28dc1df49f4a3690be26285b0955",
+          "expected": "6a1c50c769db70664cc71215841a206d675b28dc1df49f4a3690be26285b0955"
+        },
+        "metrics.json": {
+          "sha256": "ec24bfc09e8eb22eace0e3fbcc6a7965586bdfcaf6a5281a24a6e631d53649cc",
+          "expected": "ec24bfc09e8eb22eace0e3fbcc6a7965586bdfcaf6a5281a24a6e631d53649cc"
+        },
+        "history.csv": {
+          "sha256": "ebc36cb7967194cb424d4255a5f34d714f6b6049f7930e992415f66a0b0422ae",
+          "expected": "ebc36cb7967194cb424d4255a5f34d714f6b6049f7930e992415f66a0b0422ae"
+        }
+      },
+      "job": {
+        "phase": "p1",
+        "dataset": "Shen",
+        "arm": "A1_mha",
+        "fold": 0,
+        "seed": 201
+      },
+      "data_seed": 2808879044,
+      "params": 133690,
+      "checkpoint_rule": "minimum_source_receiver_equal_ce"
+    },
+    {
+      "key": "H0_f0_s202",
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s202",
+      "passed": true,
+      "artifacts": {
+        "model.pt": {
+          "sha256": "abf47db65b28d02f51bde927ba9a0a5473f445df4cbb53a5f0f26938af7334ca",
+          "expected": "abf47db65b28d02f51bde927ba9a0a5473f445df4cbb53a5f0f26938af7334ca"
+        },
+        "config.json": {
+          "sha256": "9f3e573b8ab50e238d6c4fac55d23138720ebcf7db733a74873c280faa8b3dc5",
+          "expected": "9f3e573b8ab50e238d6c4fac55d23138720ebcf7db733a74873c280faa8b3dc5"
+        },
+        "metrics.json": {
+          "sha256": "4226548e1f6e42df614c2c01ebb4efec33066fe39b078916adb9131b647ef5d2",
+          "expected": "4226548e1f6e42df614c2c01ebb4efec33066fe39b078916adb9131b647ef5d2"
+        },
+        "history.csv": {
+          "sha256": "c4201741eeea5c8141498ce27159222bddf09eaf68b0f6c77a9279fc71034280",
+          "expected": "c4201741eeea5c8141498ce27159222bddf09eaf68b0f6c77a9279fc71034280"
+        }
+      },
+      "job": {
+        "phase": "p1",
+        "dataset": "Shen",
+        "arm": "A1_mha",
+        "fold": 0,
+        "seed": 202
+      },
+      "data_seed": 2602222937,
+      "params": 133690,
+      "checkpoint_rule": "minimum_source_receiver_equal_ce"
+    },
+    {
+      "key": "H0_f0_s203",
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s203",
+      "passed": true,
+      "artifacts": {
+        "model.pt": {
+          "sha256": "8abe846f047a4b215aeb1f5c57baad2e25b21614cb329b27e12f1a4e9e11e7cb",
+          "expected": "8abe846f047a4b215aeb1f5c57baad2e25b21614cb329b27e12f1a4e9e11e7cb"
+        },
+        "config.json": {
+          "sha256": "c1745e1fe10ee5603e0e4ca054700e0369e6c6d1862c8023f1b4327cd442524a",
+          "expected": "c1745e1fe10ee5603e0e4ca054700e0369e6c6d1862c8023f1b4327cd442524a"
+        },
+        "metrics.json": {
+          "sha256": "9f0cf4a6891c1dbd244596c5003a77e9dd56edd99720761a0fa96b22c830ac73",
+          "expected": "9f0cf4a6891c1dbd244596c5003a77e9dd56edd99720761a0fa96b22c830ac73"
+        },
+        "history.csv": {
+          "sha256": "cf2937730ae72e32d769e5030faa352f0c1d23fee1b0cb04446fd644aec679b7",
+          "expected": "cf2937730ae72e32d769e5030faa352f0c1d23fee1b0cb04446fd644aec679b7"
+        }
+      },
+      "job": {
+        "phase": "p1",
+        "dataset": "Shen",
+        "arm": "A1_mha",
+        "fold": 0,
+        "seed": 203
+      },
+      "data_seed": 1569434962,
+      "params": 133690,
+      "checkpoint_rule": "minimum_source_receiver_equal_ce"
+    },
+    {
+      "key": "H0_f1_s201",
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s201",
+      "passed": true,
+      "artifacts": {
+        "model.pt": {
+          "sha256": "0996333761c13f30703acb0e3051ff676ea1f5dfa6fb1f0b04b4ccc3a7a48119",
+          "expected": "0996333761c13f30703acb0e3051ff676ea1f5dfa6fb1f0b04b4ccc3a7a48119"
+        },
+        "config.json": {
+          "sha256": "b591db1b8c418c7f66a9da39a7064b57c33bc7cd9dd3f0f0d263a4f8cc35071a",
+          "expected": "b591db1b8c418c7f66a9da39a7064b57c33bc7cd9dd3f0f0d263a4f8cc35071a"
+        },
+        "metrics.json": {
+          "sha256": "72a345d4293e175e9636ebc49950672e60766f072577164eb902874b1cfbe4e7",
+          "expected": "72a345d4293e175e9636ebc49950672e60766f072577164eb902874b1cfbe4e7"
+        },
+        "history.csv": {
+          "sha256": "0f61ce80888ec74e2801f900c57f49011e0b93f817728ba862ab0a5963ffca5d",
+          "expected": "0f61ce80888ec74e2801f900c57f49011e0b93f817728ba862ab0a5963ffca5d"
+        }
+      },
+      "job": {
+        "phase": "p1",
+        "dataset": "Shen",
+        "arm": "A1_mha",
+        "fold": 1,
+        "seed": 201
+      },
+      "data_seed": 3016222868,
+      "params": 133690,
+      "checkpoint_rule": "minimum_source_receiver_equal_ce"
+    },
+    {
+      "key": "H0_f1_s202",
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s202",
+      "passed": true,
+      "artifacts": {
+        "model.pt": {
+          "sha256": "75b252c7984d013eba842b0691b44a7f3af96bbb830aba3617823d4f0c4048c9",
+          "expected": "75b252c7984d013eba842b0691b44a7f3af96bbb830aba3617823d4f0c4048c9"
+        },
+        "config.json": {
+          "sha256": "551d33ff33cd94d7191a736d6ed2247b21436d3adba7536952bdc5a46791356b",
+          "expected": "551d33ff33cd94d7191a736d6ed2247b21436d3adba7536952bdc5a46791356b"
+        },
+        "metrics.json": {
+          "sha256": "52f695aea5c3f40ceec0a937ed00dc7fd11558a5bebb5deb6d026db10202361f",
+          "expected": "52f695aea5c3f40ceec0a937ed00dc7fd11558a5bebb5deb6d026db10202361f"
+        },
+        "history.csv": {
+          "sha256": "6224f29970e27bcb24402810e50f3b8e96e5ffae85961477ad213ceb1d7cf8d2",
+          "expected": "6224f29970e27bcb24402810e50f3b8e96e5ffae85961477ad213ceb1d7cf8d2"
+        }
+      },
+      "job": {
+        "phase": "p1",
+        "dataset": "Shen",
+        "arm": "A1_mha",
+        "fold": 1,
+        "seed": 202
+      },
+      "data_seed": 3680940992,
+      "params": 133690,
+      "checkpoint_rule": "minimum_source_receiver_equal_ce"
+    },
+    {
+      "key": "H0_f1_s203",
+      "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s203",
+      "passed": true,
+      "artifacts": {
+        "model.pt": {
+          "sha256": "fec5bfade4d1d90faf89dc6f5b42dec243e3a7e3f2cb06b15cd255bd79f17314",
+          "expected": "fec5bfade4d1d90faf89dc6f5b42dec243e3a7e3f2cb06b15cd255bd79f17314"
+        },
+        "config.json": {
+          "sha256": "3ec97b0e80816abbe7963fcb0494ba5a18cd54c01a8db7899c8c3a3fd7fe4895",
+          "expected": "3ec97b0e80816abbe7963fcb0494ba5a18cd54c01a8db7899c8c3a3fd7fe4895"
+        },
+        "metrics.json": {
+          "sha256": "9e030a37ad1e89541fbf32465d48b7d3a93c0c3d7d5e763b386b986af1fb1e2a",
+          "expected": "9e030a37ad1e89541fbf32465d48b7d3a93c0c3d7d5e763b386b986af1fb1e2a"
+        },
+        "history.csv": {
+          "sha256": "07459679c9c8d2b7dd3ccf0a4af9ce8051dc52d23aee61be7415c11b6ffaf3b6",
+          "expected": "07459679c9c8d2b7dd3ccf0a4af9ce8051dc52d23aee61be7415c11b6ffaf3b6"
+        }
+      },
+      "job": {
+        "phase": "p1",
+        "dataset": "Shen",
+        "arm": "A1_mha",
+        "fold": 1,
+        "seed": 203
+      },
+      "data_seed": 1501995291,
+      "params": 133690,
+      "checkpoint_rule": "minimum_source_receiver_equal_ce"
+    }
+  ],
+  "passed": true,
+  "scope": "Compatibility and frozen artifact hashes only; no target logits, target metrics or new model inference."
+}

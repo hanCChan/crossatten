@@ -1,0 +1,234 @@
+{
+  "frontends": [
+    {
+      "method": "shen_tmc2024",
+      "view": "native",
+      "input_packets": 22,
+      "shape": [
+        22,
+        52,
+        126,
+        1
+      ],
+      "finite": true,
+      "output_sha256": "2a890779bdaabecf049b93eafaf765c0ea82608f5e4f4b5070fffeaa3af7aaa7",
+      "cpu_total_seconds": 1.0125008000031812,
+      "timing_scope": "single cold diagnostic call, not a latency benchmark"
+    },
+    {
+      "method": "shen_tmc2024",
+      "view": "strict_ib",
+      "input_packets": 22,
+      "shape": [
+        22,
+        52,
+        126,
+        1
+      ],
+      "finite": true,
+      "output_sha256": "e540257e0f4b7adea1bec46c569d5778d4847b82d5e4b1cc03e036964892ec06",
+      "cpu_total_seconds": 0.021402200000011362,
+      "timing_scope": "single cold diagnostic call, not a latency benchmark"
+    },
+    {
+      "method": "shen_tifs2022",
+      "view": "native",
+      "input_packets": 22,
+      "shape": [
+        22,
+        102,
+        62,
+        1
+      ],
+      "finite": true,
+      "output_sha256": "dddd485d264c69e189f4e27800715ec15e95b390f447d5346bc9791c99abd671",
+      "cpu_total_seconds": 0.01212620000296738,
+      "timing_scope": "single cold diagnostic call, not a latency benchmark"
+    },
+    {
+      "method": "shen_tifs2022",
+      "view": "strict_ib",
+      "input_packets": 22,
+      "shape": [
+        22,
+        102,
+        62,
+        1
+      ],
+      "finite": true,
+      "output_sha256": "f3f8c00b92b2599f6e366b8fb6eb188b507a2a32be3de40e918cd008d3e115c0",
+      "cpu_total_seconds": 0.021533999999519438,
+      "timing_scope": "single cold diagnostic call, not a latency benchmark"
+    },
+    {
+      "method": "asknet_lora",
+      "view": "native",
+      "input_packets": 22,
+      "shape": [
+        22,
+        2,
+        8192
+      ],
+      "finite": true,
+      "output_sha256": "98352096721a3cd435d9c1c7757009d1d1bcccd8e1257ca8cdc5a100dfb30903",
+      "cpu_total_seconds": 0.0032108999948832206,
+      "timing_scope": "single cold diagnostic call, not a latency benchmark"
+    },
+    {
+      "method": "asknet_lora",
+      "view": "strict_ib",
+      "input_packets": 22,
+      "shape": [
+        22,
+        2,
+        8192
+      ],
+      "finite": true,
+      "output_sha256": "3ec3ef5d764fc5a5ca253b63aa1d705d53f98970dfbecc99f75fb034b372508b",
+      "cpu_total_seconds": 0.010135200005606748,
+      "timing_scope": "single cold diagnostic call, not a latency benchmark"
+    },
+    {
+      "method": "shen_tifs2023",
+      "view": "native",
+      "input_packets": 22,
+      "shape": [
+        22,
+        254,
+        64
+      ],
+      "finite": true,
+      "output_sha256": "fcfc1536370c6d176c160581c92d7bf317dc75be3db1bc274e11a612958e6daf",
+      "cpu_total_seconds": 0.018949999997857958,
+      "timing_scope": "single cold diagnostic call, not a latency benchmark"
+    },
+    {
+      "method": "shen_tifs2023",
+      "view": "strict_ib",
+      "input_packets": 22,
+      "shape": [
+        22,
+        254,
+        64
+      ],
+      "finite": true,
+      "output_sha256": "d833db97adae8851b01dcfea88eff8407cc8f4da7dc20d2cadfa5fdfb0f6d290",
+      "cpu_total_seconds": 0.019392900001548696,
+      "timing_scope": "single cold diagnostic call, not a latency benchmark"
+    }
+  ],
+  "checks": [
+    {
+      "name": "forbidden_and_wrong_fold_rejected_before_io",
+      "passed": true,
+      "cases": 13
+    },
+    {
+      "name": "160_40_identity_disjoint",
+      "passed": true
+    },
+    {
+      "name": "duplicate_row_rejected",
+      "passed": true
+    },
+    {
+      "name": "shen_tmc2024_native_shape_finite",
+      "passed": true
+    },
+    {
+      "name": "shen_tmc2024_strict_ib_shape_finite",
+      "passed": true
+    },
+    {
+      "name": "shen_tifs2022_native_shape_finite",
+      "passed": true
+    },
+    {
+      "name": "shen_tifs2022_strict_ib_shape_finite",
+      "passed": true
+    },
+    {
+      "name": "asknet_lora_native_shape_finite",
+      "passed": true
+    },
+    {
+      "name": "asknet_lora_strict_ib_shape_finite",
+      "passed": true
+    },
+    {
+      "name": "shen_tifs2023_native_shape_finite",
+      "passed": true
+    },
+    {
+      "name": "shen_tifs2023_strict_ib_shape_finite",
+      "passed": true
+    },
+    {
+      "name": "shen_cis_original_scipy_vs_existing_torch_native",
+      "passed": true,
+      "max_abs": 1.1873171068543797e-07
+    },
+    {
+      "name": "shen_cis_original_scipy_vs_existing_torch_strict_ib",
+      "passed": true,
+      "max_abs": 1.1902344665415399e-07
+    },
+    {
+      "name": "strict_ib_discrete_support",
+      "passed": true,
+      "kept_bins": 1025,
+      "float32_residual_energy_ratio": 5.098393694410668e-16,
+      "numpy_vs_existing_torch_max_abs": 2.384185791015625e-07
+    },
+    {
+      "name": "official_ask_cis_8192",
+      "passed": true
+    },
+    {
+      "name": "official_ask_default_masks",
+      "passed": true,
+      "candidates": [
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096
+      ],
+      "bins_per_mask": [
+        255,
+        511,
+        1023,
+        2047,
+        4095,
+        8191
+      ]
+    },
+    {
+      "name": "official_koopman_toy_gradient_only",
+      "passed": true,
+      "n_modes": 7,
+      "scope": "unit operator check; default full-model GPU forward/backward remains unverified"
+    },
+    {
+      "name": "dann_gradient_sign",
+      "passed": true
+    },
+    {
+      "name": "dann_full_port_shape_and_backward",
+      "passed": true,
+      "params": 13509263,
+      "device": "cuda",
+      "tensorflow_weight_transfer_parity": false,
+      "optimizer_steps": 0
+    }
+  ],
+  "environment": {
+    "torch": "2.5.0+cu124",
+    "numpy": "1.26.4",
+    "tensorflow_installed": false
+  },
+  "passed": true,
+  "fits": 0,
+  "optimizer_steps": 0
+}

@@ -1,0 +1,268 @@
+{
+  "retrieved_on": "2026-11-14",
+  "mechanism": "GitHub connector pinned commit contents, byte-verified Git blob SHA1 and SHA256",
+  "repos": [
+    {
+      "repo": "gxhen/receiverAgnosticRFFI",
+      "commit": "8910103a3fe953a746f964459a37917c5ff1ce03",
+      "files": [
+        {
+          "path": "README.md",
+          "git_blob_sha1": "06ec56a418a2fe53c561f06c3a12f23f6d075ee7",
+          "sha256": "ed8cfa6f75fd9b305dcd0fba7037dad53fc1f10612c03f59b3793df65dbcdae4",
+          "bytes": 1105,
+          "raw_url": "https://raw.githubusercontent.com/gxhen/receiverAgnosticRFFI/8910103a3fe953a746f964459a37917c5ff1ce03/README.md",
+          "url": "https://github.com/gxhen/receiverAgnosticRFFI/blob/8910103a3fe953a746f964459a37917c5ff1ce03/README.md"
+        },
+        {
+          "path": "dataset_preparation.py",
+          "git_blob_sha1": "04d6d346c3ed5c3dc18b8b6b6a8979966e5625ed",
+          "sha256": "8455d90b82b12a35fc9e5f224a7e6c129c4a5043af07f522cf99fb086dc15ce6",
+          "bytes": 7809,
+          "raw_url": "https://raw.githubusercontent.com/gxhen/receiverAgnosticRFFI/8910103a3fe953a746f964459a37917c5ff1ce03/dataset_preparation.py",
+          "url": "https://github.com/gxhen/receiverAgnosticRFFI/blob/8910103a3fe953a746f964459a37917c5ff1ce03/dataset_preparation.py"
+        },
+        {
+          "path": "deep_learning_models.py",
+          "git_blob_sha1": "65fecc749d361dc801b70fa7af8a8c75894e8497",
+          "sha256": "f830f80dc53d9ac115265b43e45d273cb9a2486ec55a00480264cb71ea9183e4",
+          "bytes": 3254,
+          "raw_url": "https://raw.githubusercontent.com/gxhen/receiverAgnosticRFFI/8910103a3fe953a746f964459a37917c5ff1ce03/deep_learning_models.py",
+          "url": "https://github.com/gxhen/receiverAgnosticRFFI/blob/8910103a3fe953a746f964459a37917c5ff1ce03/deep_learning_models.py"
+        },
+        {
+          "path": "main.py",
+          "git_blob_sha1": "ae2429a6a102d049c75852987e7a270530ec5e8b",
+          "sha256": "660702f4f4aa90b55b1e34836397297eb4749eede0608738363e9bff4722ebc8",
+          "bytes": 18272,
+          "raw_url": "https://raw.githubusercontent.com/gxhen/receiverAgnosticRFFI/8910103a3fe953a746f964459a37917c5ff1ce03/main.py",
+          "url": "https://github.com/gxhen/receiverAgnosticRFFI/blob/8910103a3fe953a746f964459a37917c5ff1ce03/main.py"
+        },
+        {
+          "path": "main_sim.py",
+          "git_blob_sha1": "2d8e6624a0e959c9ae5e559d14a43e999ddc3d15",
+          "sha256": "cd711faabd4d3aea9a256acc6783f22b7ddf4412c49e305c0c8aace478b4c297",
+          "bytes": 8257,
+          "raw_url": "https://raw.githubusercontent.com/gxhen/receiverAgnosticRFFI/8910103a3fe953a746f964459a37917c5ff1ce03/main_sim.py",
+          "url": "https://github.com/gxhen/receiverAgnosticRFFI/blob/8910103a3fe953a746f964459a37917c5ff1ce03/main_sim.py"
+        }
+      ]
+    },
+    {
+      "repo": "BeechburgPieStar/ASKNet-RFF",
+      "commit": "f00846d68425315b68ae69b8c6b712e08559c2fe",
+      "files": [
+        {
+          "path": "README.md",
+          "git_blob_sha1": "54ce0a32b26b317c899b83895582bf20eb401937",
+          "sha256": "75d55dc5f064487248fb109ead19145cc0a6b013339d34a62480f938ff6b2fdc",
+          "bytes": 7778,
+          "raw_url": "https://raw.githubusercontent.com/BeechburgPieStar/ASKNet-RFF/f00846d68425315b68ae69b8c6b712e08559c2fe/README.md",
+          "url": "https://github.com/BeechburgPieStar/ASKNet-RFF/blob/f00846d68425315b68ae69b8c6b712e08559c2fe/README.md"
+        },
+        {
+          "path": "Lora/backbones/ResCISNet.py",
+          "git_blob_sha1": "35caeb01a88fc3c7034298b70a6ec03e197f8af7",
+          "sha256": "1de366c42881413dc8e4cc25d105e2c563b99f018ff31ffda9b2beb4ae21d29c",
+          "bytes": 8222,
+          "raw_url": "https://raw.githubusercontent.com/BeechburgPieStar/ASKNet-RFF/f00846d68425315b68ae69b8c6b712e08559c2fe/Lora/backbones/ResCISNet.py",
+          "url": "https://github.com/BeechburgPieStar/ASKNet-RFF/blob/f00846d68425315b68ae69b8c6b712e08559c2fe/Lora/backbones/ResCISNet.py"
+        },
+        {
+          "path": "Lora/run_CIS.py",
+          "git_blob_sha1": "cbb67fa9b3f0e13d1ffd78e70eb8dd119e05c20f",
+          "sha256": "5f09ca0a47d4b787ca071a3ccbd2c468cda4a598224c2904a1c30cdd71f61472",
+          "bytes": 16600,
+          "raw_url": "https://raw.githubusercontent.com/BeechburgPieStar/ASKNet-RFF/f00846d68425315b68ae69b8c6b712e08559c2fe/Lora/run_CIS.py",
+          "url": "https://github.com/BeechburgPieStar/ASKNet-RFF/blob/f00846d68425315b68ae69b8c6b712e08559c2fe/Lora/run_CIS.py"
+        },
+        {
+          "path": "Lora/utils/load_data_h5.py",
+          "git_blob_sha1": "cebe5aede1ad130a1f452dba71c789c3cd196e86",
+          "sha256": "c167497d52d22d019b6647f878bf99e954f1d19d1a48fe4adbabdda29d59e773",
+          "bytes": 5384,
+          "raw_url": "https://raw.githubusercontent.com/BeechburgPieStar/ASKNet-RFF/f00846d68425315b68ae69b8c6b712e08559c2fe/Lora/utils/load_data_h5.py",
+          "url": "https://github.com/BeechburgPieStar/ASKNet-RFF/blob/f00846d68425315b68ae69b8c6b712e08559c2fe/Lora/utils/load_data_h5.py"
+        }
+      ]
+    },
+    {
+      "repo": "BeechburgPieStar/IB-RFF",
+      "commit": "5a03a04da86c4bbf5cf90f41a55c268bf2152203",
+      "files": [
+        {
+          "path": "README.md",
+          "git_blob_sha1": "91ce06d0891b9eae453efbeac073532c148c435b",
+          "sha256": "dacdb36d57ffb58f4c0c7cac1005c1d90531def8e04fe906a869908b2a1d641b",
+          "bytes": 2635,
+          "raw_url": "https://raw.githubusercontent.com/BeechburgPieStar/IB-RFF/5a03a04da86c4bbf5cf90f41a55c268bf2152203/README.md",
+          "url": "https://github.com/BeechburgPieStar/IB-RFF/blob/5a03a04da86c4bbf5cf90f41a55c268bf2152203/README.md"
+        },
+        {
+          "path": "main.py",
+          "git_blob_sha1": "3b5a0867bd7d3e730c3558932b77de6aeebff48f",
+          "sha256": "604a6c2006bf0a3f729981f432b2bebb458df600e662457cbfc6f8ab7cdefff1",
+          "bytes": 11068,
+          "raw_url": "https://raw.githubusercontent.com/BeechburgPieStar/IB-RFF/5a03a04da86c4bbf5cf90f41a55c268bf2152203/main.py",
+          "url": "https://github.com/BeechburgPieStar/IB-RFF/blob/5a03a04da86c4bbf5cf90f41a55c268bf2152203/main.py"
+        },
+        {
+          "path": "run_all.sh",
+          "git_blob_sha1": "70a6c342df0df0d221461b9ac49dae066b7f5526",
+          "sha256": "58900343f74e420ff307821a3719ae89e6daab822945ea8e4bf596db8cd26215",
+          "bytes": 4271,
+          "raw_url": "https://raw.githubusercontent.com/BeechburgPieStar/IB-RFF/5a03a04da86c4bbf5cf90f41a55c268bf2152203/run_all.sh",
+          "url": "https://github.com/BeechburgPieStar/IB-RFF/blob/5a03a04da86c4bbf5cf90f41a55c268bf2152203/run_all.sh"
+        },
+        {
+          "path": "utils/load_data.py",
+          "git_blob_sha1": "7cf3651cb49602e13ec8d883d4f295f4a3fe955c",
+          "sha256": "039c2e52e0ae6ca6f0c5698c7f4a2b62cd48274b3e58dc14c2fcd35be132a24a",
+          "bytes": 2205,
+          "raw_url": "https://raw.githubusercontent.com/BeechburgPieStar/IB-RFF/5a03a04da86c4bbf5cf90f41a55c268bf2152203/utils/load_data.py",
+          "url": "https://github.com/BeechburgPieStar/IB-RFF/blob/5a03a04da86c4bbf5cf90f41a55c268bf2152203/utils/load_data.py"
+        },
+        {
+          "path": "utils/hsic.py",
+          "git_blob_sha1": "3325c8837e988a51819959ed28372ac67bf5903e",
+          "sha256": "2d7036f7794ae3d038735030e3c484ea240ae883b68d3b739bca5afa2ab45620",
+          "bytes": 4941,
+          "raw_url": "https://raw.githubusercontent.com/BeechburgPieStar/IB-RFF/5a03a04da86c4bbf5cf90f41a55c268bf2152203/utils/hsic.py",
+          "url": "https://github.com/BeechburgPieStar/IB-RFF/blob/5a03a04da86c4bbf5cf90f41a55c268bf2152203/utils/hsic.py"
+        },
+        {
+          "path": "backbones/FAN.py",
+          "git_blob_sha1": "133cd68164de53049f32622cda7c3570742e4731",
+          "sha256": "7c9ede78cf7061ce1964437f47062c2a1fe7c7926d34b8fbcfc2ed07cf37d25c",
+          "bytes": 2411,
+          "raw_url": "https://raw.githubusercontent.com/BeechburgPieStar/IB-RFF/5a03a04da86c4bbf5cf90f41a55c268bf2152203/backbones/FAN.py",
+          "url": "https://github.com/BeechburgPieStar/IB-RFF/blob/5a03a04da86c4bbf5cf90f41a55c268bf2152203/backbones/FAN.py"
+        },
+        {
+          "path": "backbones/Adaptive_Filter_Module.py",
+          "git_blob_sha1": "e2e592f8fb5754e36b84cad4836b49f5d740ba2b",
+          "sha256": "4b763ac74d655ba89b3070a6a35d73c4c4747ba2a96c63be5abaaee8a7e76674",
+          "bytes": 3802,
+          "raw_url": "https://raw.githubusercontent.com/BeechburgPieStar/IB-RFF/5a03a04da86c4bbf5cf90f41a55c268bf2152203/backbones/Adaptive_Filter_Module.py",
+          "url": "https://github.com/BeechburgPieStar/IB-RFF/blob/5a03a04da86c4bbf5cf90f41a55c268bf2152203/backbones/Adaptive_Filter_Module.py"
+        },
+        {
+          "path": "backbones/Embedding_Layer.py",
+          "git_blob_sha1": "f0e5d3c7565e705a2f2d875b73d6869bba8b1028",
+          "sha256": "20f51230fa8ed4e5919c460b121b6cf3989e53215d39ed3b43e8e76ffdb41c74",
+          "bytes": 1164,
+          "raw_url": "https://raw.githubusercontent.com/BeechburgPieStar/IB-RFF/5a03a04da86c4bbf5cf90f41a55c268bf2152203/backbones/Embedding_Layer.py",
+          "url": "https://github.com/BeechburgPieStar/IB-RFF/blob/5a03a04da86c4bbf5cf90f41a55c268bf2152203/backbones/Embedding_Layer.py"
+        },
+        {
+          "path": "backbones/Bottleneck_Layer/DSCNN.py",
+          "git_blob_sha1": "a43128b131f6238cc96de66e36ef3d3b54c6ce1b",
+          "sha256": "a3aef742de04d8220145a6dede307a6bdc2eca5321bdedcadccadad1dd5928c9",
+          "bytes": 1122,
+          "raw_url": "https://raw.githubusercontent.com/BeechburgPieStar/IB-RFF/5a03a04da86c4bbf5cf90f41a55c268bf2152203/backbones/Bottleneck_Layer/DSCNN.py",
+          "url": "https://github.com/BeechburgPieStar/IB-RFF/blob/5a03a04da86c4bbf5cf90f41a55c268bf2152203/backbones/Bottleneck_Layer/DSCNN.py"
+        },
+        {
+          "path": "backbones/Bottleneck_Layer/ICNN.py",
+          "git_blob_sha1": "87bc179b8bb12f3041c0565f0a831c36355dfa71",
+          "sha256": "3d55db583d7b9876442dd51f00942f03a33489ff83921f37c0ed992398bf4fc8",
+          "bytes": 927,
+          "raw_url": "https://raw.githubusercontent.com/BeechburgPieStar/IB-RFF/5a03a04da86c4bbf5cf90f41a55c268bf2152203/backbones/Bottleneck_Layer/ICNN.py",
+          "url": "https://github.com/BeechburgPieStar/IB-RFF/blob/5a03a04da86c4bbf5cf90f41a55c268bf2152203/backbones/Bottleneck_Layer/ICNN.py"
+        },
+        {
+          "path": "backbones/Bottleneck_Layer/MLP.py",
+          "git_blob_sha1": "e69ac5fce8fa2aac08f53ae84ad65228289356bf",
+          "sha256": "39656e69320c74580b9b8f8037f32a385b594f7613c849d472cc033880f656ff",
+          "bytes": 823,
+          "raw_url": "https://raw.githubusercontent.com/BeechburgPieStar/IB-RFF/5a03a04da86c4bbf5cf90f41a55c268bf2152203/backbones/Bottleneck_Layer/MLP.py",
+          "url": "https://github.com/BeechburgPieStar/IB-RFF/blob/5a03a04da86c4bbf5cf90f41a55c268bf2152203/backbones/Bottleneck_Layer/MLP.py"
+        }
+      ]
+    },
+    {
+      "repo": "gxhen/LoRa_RFFI",
+      "commit": "00948769c05487315b88b7edf40d903fcf8e5b7d",
+      "files": [
+        {
+          "path": "Openset_RFFI_TIFS/readme.md",
+          "git_blob_sha1": "c5bdf0206170343d9e09b22d39561b00a9675aa2",
+          "sha256": "5e7d00161af9057de713d2bf5b29422d038d66caa8d750d65aef24f63b876364",
+          "bytes": 12971,
+          "raw_url": "https://raw.githubusercontent.com/gxhen/LoRa_RFFI/00948769c05487315b88b7edf40d903fcf8e5b7d/Openset_RFFI_TIFS/readme.md",
+          "url": "https://github.com/gxhen/LoRa_RFFI/blob/00948769c05487315b88b7edf40d903fcf8e5b7d/Openset_RFFI_TIFS/readme.md"
+        },
+        {
+          "path": "Openset_RFFI_TIFS/dataset_preparation.py",
+          "git_blob_sha1": "35811a2ebc72ab7430ede09dbf8d0715dea33ffc",
+          "sha256": "921943747a3a0042326cad35d9b9553f288b34c677779845d22405df6afc4e47",
+          "bytes": 5761,
+          "raw_url": "https://raw.githubusercontent.com/gxhen/LoRa_RFFI/00948769c05487315b88b7edf40d903fcf8e5b7d/Openset_RFFI_TIFS/dataset_preparation.py",
+          "url": "https://github.com/gxhen/LoRa_RFFI/blob/00948769c05487315b88b7edf40d903fcf8e5b7d/Openset_RFFI_TIFS/dataset_preparation.py"
+        },
+        {
+          "path": "Openset_RFFI_TIFS/deep_learning_models.py",
+          "git_blob_sha1": "1494821f5f7a00819d8c2f82248d6f798baa0c32",
+          "sha256": "49c23d3ac195ebc816dcce08a1890d575c734729349bb806ead76ef5eba27065",
+          "bytes": 4570,
+          "raw_url": "https://raw.githubusercontent.com/gxhen/LoRa_RFFI/00948769c05487315b88b7edf40d903fcf8e5b7d/Openset_RFFI_TIFS/deep_learning_models.py",
+          "url": "https://github.com/gxhen/LoRa_RFFI/blob/00948769c05487315b88b7edf40d903fcf8e5b7d/Openset_RFFI_TIFS/deep_learning_models.py"
+        },
+        {
+          "path": "Openset_RFFI_TIFS/main.py",
+          "git_blob_sha1": "c9b891d79fb6a56b72d8438f531e1be0c1e3ec5d",
+          "sha256": "fa98b77846515b6a74a116d0c3a8386f35af4b0e7f02b99fea6c582aec8037be",
+          "bytes": 16144,
+          "raw_url": "https://raw.githubusercontent.com/gxhen/LoRa_RFFI/00948769c05487315b88b7edf40d903fcf8e5b7d/Openset_RFFI_TIFS/main.py",
+          "url": "https://github.com/gxhen/LoRa_RFFI/blob/00948769c05487315b88b7edf40d903fcf8e5b7d/Openset_RFFI_TIFS/main.py"
+        },
+        {
+          "path": "Openset_RFFI_TIFS/augmentation.m",
+          "git_blob_sha1": "dfc52051364b835001dedaa805f50ad4b94f87de",
+          "sha256": "d308da516fd19c2cebbaea2c076ae6b766b52346b1a57345f4293738e86b3152",
+          "bytes": 1285,
+          "raw_url": "https://raw.githubusercontent.com/gxhen/LoRa_RFFI/00948769c05487315b88b7edf40d903fcf8e5b7d/Openset_RFFI_TIFS/augmentation.m",
+          "url": "https://github.com/gxhen/LoRa_RFFI/blob/00948769c05487315b88b7edf40d903fcf8e5b7d/Openset_RFFI_TIFS/augmentation.m"
+        }
+      ]
+    },
+    {
+      "repo": "gxhen/lengthVersatileRFFI",
+      "commit": "8ed263ce895f2bed5e1a7349d995f7eb464982bb",
+      "files": [
+        {
+          "path": "README.md",
+          "git_blob_sha1": "4fe3213bb526cc191ef2c33ace6555f848803298",
+          "sha256": "9b1c642ea83bc7525af1bc9ca244eb9961abbc34a5541ec6abe5ba45a214ed9a",
+          "bytes": 2640,
+          "raw_url": "https://raw.githubusercontent.com/gxhen/lengthVersatileRFFI/8ed263ce895f2bed5e1a7349d995f7eb464982bb/README.md",
+          "url": "https://github.com/gxhen/lengthVersatileRFFI/blob/8ed263ce895f2bed5e1a7349d995f7eb464982bb/README.md"
+        },
+        {
+          "path": "deep_learning_models.py",
+          "git_blob_sha1": "864410ba2668b82b14e5ef65104b66ad3a54b4db",
+          "sha256": "2e5efe970121cb286f9b01b70ba0147d72042f3a49cd1d50ac879ad8d06feb2c",
+          "bytes": 12545,
+          "raw_url": "https://raw.githubusercontent.com/gxhen/lengthVersatileRFFI/8ed263ce895f2bed5e1a7349d995f7eb464982bb/deep_learning_models.py",
+          "url": "https://github.com/gxhen/lengthVersatileRFFI/blob/8ed263ce895f2bed5e1a7349d995f7eb464982bb/deep_learning_models.py"
+        },
+        {
+          "path": "main.py",
+          "git_blob_sha1": "6f8a3f8391d014acb87ad713a5251c529bf01d6c",
+          "sha256": "7f68218e55029c022e124054ce82fda9dc33f691cfea26920fdb91d620ad12e0",
+          "bytes": 8247,
+          "raw_url": "https://raw.githubusercontent.com/gxhen/lengthVersatileRFFI/8ed263ce895f2bed5e1a7349d995f7eb464982bb/main.py",
+          "url": "https://github.com/gxhen/lengthVersatileRFFI/blob/8ed263ce895f2bed5e1a7349d995f7eb464982bb/main.py"
+        },
+        {
+          "path": "utils.py",
+          "git_blob_sha1": "c2db143e4a0d241199dbce1e70c1bacd418e58fe",
+          "sha256": "736e8605305894d6e37b2b4a17418a9ad2c98f3622cd9b677a64a3fabe48d9a9",
+          "bytes": 4699,
+          "raw_url": "https://raw.githubusercontent.com/gxhen/lengthVersatileRFFI/8ed263ce895f2bed5e1a7349d995f7eb464982bb/utils.py",
+          "url": "https://github.com/gxhen/lengthVersatileRFFI/blob/8ed263ce895f2bed5e1a7349d995f7eb464982bb/utils.py"
+        }
+      ]
+    }
+  ]
+}
