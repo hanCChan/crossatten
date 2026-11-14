@@ -1,0 +1,48 @@
+{
+  "status": "COMPLETE",
+  "job": {
+    "id": "A1_S1_aux",
+    "arm": "A1",
+    "seed": 1,
+    "stage": "aux",
+    "epochs": 40,
+    "expected_updates": 4320,
+    "initial_state_sha256": "d2a243ee5c4d1a0121a82596f1dbb5d275444db0d90a74f37b49251ae7a220a5"
+  },
+  "updates": 4320,
+  "best_epoch": 27,
+  "best_aux_val_RX_CE": 0.8994978666305542,
+  "parameter_count": 86456,
+  "initial_state_sha256": "d2a243ee5c4d1a0121a82596f1dbb5d275444db0d90a74f37b49251ae7a220a5",
+  "lambda_used": 0.0,
+  "seconds": 82.75187539999752,
+  "costs": {
+    "gradient_seconds": 56.10906909999176,
+    "validation_seconds": 8.170529900002293,
+    "BN_calibration_seconds": 14.958115399997041,
+    "BN_samples": 829440,
+    "BN_passes": 40,
+    "EMA_updates": 4320
+  },
+  "selected_validation_bitwise_replay": true,
+  "selected_checkpoint": {
+    "path": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S1_aux\\selected.pt",
+    "sha256": "e1225843c2d55c9b4cc3a45140569d991cb836e88fad3e8feda551bbb06279e8",
+    "bytes": 364970
+  },
+  "selected_predictions": {
+    "path": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S1_aux\\selected_val.npz",
+    "sha256": "aec872d16d0ebd655a4934be8823e73150e0dcedea6367127d591b007444fffd",
+    "bytes": 1880935
+  },
+  "final_state": {
+    "path": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S1_aux\\final_state.pt",
+    "sha256": "bb06d144d28dcdf4bdc189e052f74272195d5935ddd1393238584572fbba568a",
+    "bytes": 1455834
+  },
+  "history": {
+    "path": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S1_aux\\HISTORY.json",
+    "sha256": "f8d5eed1afc720fac3d7fa49c2170d892c95ae3696a67d777ed30ce9560b7bab",
+    "bytes": 20220
+  }
+}

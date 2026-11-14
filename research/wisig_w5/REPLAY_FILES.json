@@ -1,0 +1,345 @@
+{
+  "status": "EXACT_REPLAY_INPUTS_AND_SELECTED_WEIGHTS",
+  "raw_IQ_included": false,
+  "optimizer_states_included": false,
+  "selected_weight_files": 9,
+  "files": [
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S0_aux\\COMPLETE.json",
+      "relative": "research/wisig_w5/artifacts/A1_S0_aux/COMPLETE.json",
+      "sha256": "837306744ee4523cedfd084c8ab5399f65cc25ad634fdd49c510f78c6da69d58",
+      "bytes": 1808
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S0_aux\\selected_val.npz",
+      "relative": "research/wisig_w5/artifacts/A1_S0_aux/selected_val.npz",
+      "sha256": "e7edbf9cf89b1a9b6c97b1fcd0f89349522459caac5e5feb196d8e4f51929522",
+      "bytes": 1881681
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S0_aux\\selected.pt",
+      "relative": "research/wisig_w5/artifacts/review_checkpoints/A1_S0_aux.pt",
+      "sha256": "0d68a7ed172525a3876981238070cdabac35ac0179c6e279b59fd93ae56f8587",
+      "bytes": 364970
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S0_aux\\HISTORY.json",
+      "relative": "research/wisig_w5/artifacts/A1_S0_aux/HISTORY.json",
+      "sha256": "7c985d4994840f3117f5b341f37b86b294b36e81dd38d15ad32545d033160a8b",
+      "bytes": 20263
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S0_aux\\INITIAL.json",
+      "relative": "research/wisig_w5/artifacts/A1_S0_aux/INITIAL.json",
+      "sha256": "71dea73cd0a813011c7c012b7a7c16a34b9f247ada4658c4beba0b862f04cd8b",
+      "bytes": 124
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S1_aux\\COMPLETE.json",
+      "relative": "research/wisig_w5/artifacts/A1_S1_aux/COMPLETE.json",
+      "sha256": "2d3409464b491796058b973d5b20bb0a181731d1bc715821408c1a5681b24c33",
+      "bytes": 1808
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S1_aux\\selected_val.npz",
+      "relative": "research/wisig_w5/artifacts/A1_S1_aux/selected_val.npz",
+      "sha256": "aec872d16d0ebd655a4934be8823e73150e0dcedea6367127d591b007444fffd",
+      "bytes": 1880935
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S1_aux\\selected.pt",
+      "relative": "research/wisig_w5/artifacts/review_checkpoints/A1_S1_aux.pt",
+      "sha256": "e1225843c2d55c9b4cc3a45140569d991cb836e88fad3e8feda551bbb06279e8",
+      "bytes": 364970
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S1_aux\\HISTORY.json",
+      "relative": "research/wisig_w5/artifacts/A1_S1_aux/HISTORY.json",
+      "sha256": "f8d5eed1afc720fac3d7fa49c2170d892c95ae3696a67d777ed30ce9560b7bab",
+      "bytes": 20220
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S1_aux\\INITIAL.json",
+      "relative": "research/wisig_w5/artifacts/A1_S1_aux/INITIAL.json",
+      "sha256": "68b00f6e4262820e28a31d35193dc44cdcf0d35c4282d2fafe9328bdff3f7336",
+      "bytes": 124
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S2_aux\\COMPLETE.json",
+      "relative": "research/wisig_w5/artifacts/A1_S2_aux/COMPLETE.json",
+      "sha256": "3d9f1c0d7c2276c73a4b2941106b211a0a957795d5bfde71daecb41a56171184",
+      "bytes": 1807
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S2_aux\\selected_val.npz",
+      "relative": "research/wisig_w5/artifacts/A1_S2_aux/selected_val.npz",
+      "sha256": "4512936ae43ef675ad67c176ae979a12d7e2484b2df50c069e3ecd5575413d87",
+      "bytes": 1882914
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S2_aux\\selected.pt",
+      "relative": "research/wisig_w5/artifacts/review_checkpoints/A1_S2_aux.pt",
+      "sha256": "adca67721b99980103fee90830fb766914216b4017e49a92c0014d2fabf9b8c3",
+      "bytes": 364970
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S2_aux\\HISTORY.json",
+      "relative": "research/wisig_w5/artifacts/A1_S2_aux/HISTORY.json",
+      "sha256": "95e32be3257cd02903aebc3c6d7ff3680a69b2dfd7583455fa21e64cf5b894bc",
+      "bytes": 20242
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S2_aux\\INITIAL.json",
+      "relative": "research/wisig_w5/artifacts/A1_S2_aux/INITIAL.json",
+      "sha256": "baaf6aa1fd4b3bf255bcb0f72e946e02d2057ebb313812149e32479610bf59c1",
+      "bytes": 124
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S0_downstream\\COMPLETE.json",
+      "relative": "research/wisig_w5/artifacts/A1_S0_downstream/COMPLETE.json",
+      "sha256": "9ff22310dd766d0b1a5ecc84b0764bc9e14160ce68751325997825551b654f5a",
+      "bytes": 3229
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S0_downstream\\C1_selected_val.npz",
+      "relative": "research/wisig_w5/artifacts/A1_S0_downstream/C1_selected_val.npz",
+      "sha256": "9e280feb3d9e119082b520b66c5bd4a33c554d726ad54ad13807334175c29f39",
+      "bytes": 419764
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S0_downstream\\C1_selected.pt",
+      "relative": "research/wisig_w5/artifacts/review_checkpoints/A1_S0_downstream.pt",
+      "sha256": "ed34c784fd569f95ca90f99a856149294bef5bdd9fce2cb42e84f4eeaf0db77a",
+      "bytes": 348702
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S0_downstream\\HISTORY.json",
+      "relative": "research/wisig_w5/artifacts/A1_S0_downstream/HISTORY.json",
+      "sha256": "64aa39a38a6dc8affcc07e036dacd82634cf1cd469b94cfa1098663792ca083d",
+      "bytes": 46786
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S0_downstream\\INITIAL.json",
+      "relative": "research/wisig_w5/artifacts/A1_S0_downstream/INITIAL.json",
+      "sha256": "3a03ec05e10ba350ce75037a1ed0cdd2d23565dc46d1b3e207b6c71a2d49d51b",
+      "bytes": 444
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S1_downstream\\COMPLETE.json",
+      "relative": "research/wisig_w5/artifacts/A1_S1_downstream/COMPLETE.json",
+      "sha256": "a68038210609a39917b6aebd0bc300b2d3103216f51c2b4914ae8e3aee59850a",
+      "bytes": 3227
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S1_downstream\\C1_selected_val.npz",
+      "relative": "research/wisig_w5/artifacts/A1_S1_downstream/C1_selected_val.npz",
+      "sha256": "cd51cc352dc79c05f374c83dd72c7be7ce82fbc0a3b1a2a3750fd46a398c3b86",
+      "bytes": 420384
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S1_downstream\\C1_selected.pt",
+      "relative": "research/wisig_w5/artifacts/review_checkpoints/A1_S1_downstream.pt",
+      "sha256": "71039b4c57a3ce2f21ed8594880712871c2cb22779028f32d8acb7b9cab99277",
+      "bytes": 348702
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S1_downstream\\HISTORY.json",
+      "relative": "research/wisig_w5/artifacts/A1_S1_downstream/HISTORY.json",
+      "sha256": "3970912a254b6a1e480e80a58766481f2991c490f1735b56cfa07f215c79ec50",
+      "bytes": 46794
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S1_downstream\\INITIAL.json",
+      "relative": "research/wisig_w5/artifacts/A1_S1_downstream/INITIAL.json",
+      "sha256": "02872876e372c1b21be3a5ee7727237cf70cb8c5eb566c928f553e2edb636070",
+      "bytes": 444
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S2_downstream\\COMPLETE.json",
+      "relative": "research/wisig_w5/artifacts/A1_S2_downstream/COMPLETE.json",
+      "sha256": "b8173ed112f4242d8ab69d926098fa40fab32d486ef26f654db64b94e55c704e",
+      "bytes": 3231
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S2_downstream\\C1_selected_val.npz",
+      "relative": "research/wisig_w5/artifacts/A1_S2_downstream/C1_selected_val.npz",
+      "sha256": "63ea9b2ce03af3e628170671514d342fac0da51716db27aa7a89c47b30aaeafe",
+      "bytes": 419064
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S2_downstream\\C1_selected.pt",
+      "relative": "research/wisig_w5/artifacts/review_checkpoints/A1_S2_downstream.pt",
+      "sha256": "4cdfeb21f1fc143ef908783f6aaa20ceebad604de8c036c59abf835555f7752a",
+      "bytes": 348702
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S2_downstream\\HISTORY.json",
+      "relative": "research/wisig_w5/artifacts/A1_S2_downstream/HISTORY.json",
+      "sha256": "e28b6ea69044778166d771b2eb691f0403bf026b2bbea32660c38c9cf688a90d",
+      "bytes": 46764
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\A1_S2_downstream\\INITIAL.json",
+      "relative": "research/wisig_w5/artifacts/A1_S2_downstream/INITIAL.json",
+      "sha256": "bc0a81e29f3f1147cb06f3d5fea3511858535224b951591705f5a1565a488446",
+      "bytes": 444
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S0_wd1e3_ERM_EMA\\C1_selected.pt",
+      "relative": "research/wisig_w5/artifacts/review_checkpoints/A0_S0.pt",
+      "sha256": "fcf4f9828f4c7f7fc456fa38876818351df04a2201d0f64142d8eb0191b1d657",
+      "bytes": 348702
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S0_wd1e3_ERM_EMA\\C1_selected_val.npz",
+      "relative": "research/wisig_w5/artifacts/review_metadata/c6f313c38808c08a52fcec74f94d5519c85a31a6cb2d1433d0aa55d328045d4b.npz",
+      "sha256": "c6f313c38808c08a52fcec74f94d5519c85a31a6cb2d1433d0aa55d328045d4b",
+      "bytes": 421045
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S0_wd1e3_ERM_EMA\\INITIAL.json",
+      "relative": "research/wisig_w5/artifacts/review_metadata/8bcafef33d4b8b405bc4e343eda57539fb7da2d67b284324f6aa5e144b2b7f88.json",
+      "sha256": "8bcafef33d4b8b405bc4e343eda57539fb7da2d67b284324f6aa5e144b2b7f88",
+      "bytes": 444
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S0_wd1e3_ERM_EMA\\SAMPLE_KEYS.npz",
+      "relative": "research/wisig_w5/artifacts/review_metadata/1e4be3bddca2621e3ffebcc297f68b7c2a1e4aa272b169ea9fefb2a8588c824e.npz",
+      "sha256": "1e4be3bddca2621e3ffebcc297f68b7c2a1e4aa272b169ea9fefb2a8588c824e",
+      "bytes": 481671
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S0_wd1e3_ERM_EMA\\C1_selected_selection.npz",
+      "relative": "research/wisig_w5/artifacts/P_A0_S0_selection.npz",
+      "sha256": "90c7edc6ab1dbeefb6b410f9beea61e86e6ccb4f88fc6b671e04316a5e461b9c",
+      "bytes": 488428
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S1_wd1e3_ERM_EMA\\C1_selected.pt",
+      "relative": "research/wisig_w5/artifacts/review_checkpoints/A0_S1.pt",
+      "sha256": "2f946b7769ada13b01d900e41e33e7933553e8ff97902a858b9b0a5c6cfb3401",
+      "bytes": 348702
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S1_wd1e3_ERM_EMA\\C1_selected_val.npz",
+      "relative": "research/wisig_w5/artifacts/review_metadata/b8f707a64e050cb0cb661498e44d2b4ceb4c456c1b1669192a95f9d23dd84fd6.npz",
+      "sha256": "b8f707a64e050cb0cb661498e44d2b4ceb4c456c1b1669192a95f9d23dd84fd6",
+      "bytes": 421525
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S1_wd1e3_ERM_EMA\\INITIAL.json",
+      "relative": "research/wisig_w5/artifacts/review_metadata/5b7800009e3a7f15123072019d2d8715dbf3aa24f4ce3ad98cc7168704c68dec.json",
+      "sha256": "5b7800009e3a7f15123072019d2d8715dbf3aa24f4ce3ad98cc7168704c68dec",
+      "bytes": 444
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S1_wd1e3_ERM_EMA\\SAMPLE_KEYS.npz",
+      "relative": "research/wisig_w5/artifacts/review_metadata/1e4be3bddca2621e3ffebcc297f68b7c2a1e4aa272b169ea9fefb2a8588c824e.npz",
+      "sha256": "1e4be3bddca2621e3ffebcc297f68b7c2a1e4aa272b169ea9fefb2a8588c824e",
+      "bytes": 481671
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S1_wd1e3_ERM_EMA\\C1_selected_selection.npz",
+      "relative": "research/wisig_w5/artifacts/P_A0_S1_selection.npz",
+      "sha256": "0faa781d37f6200fd30fcd8923d4933f2d4c77ee5c5ef84078c281e655096835",
+      "bytes": 488844
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S2_wd1e3_ERM_EMA\\C1_selected.pt",
+      "relative": "research/wisig_w5/artifacts/review_checkpoints/A0_S2.pt",
+      "sha256": "86bc21004e776b6fdf3a3d5a9286630c1f530c379ec7257b5f7d34d567f04147",
+      "bytes": 348702
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S2_wd1e3_ERM_EMA\\C1_selected_val.npz",
+      "relative": "research/wisig_w5/artifacts/review_metadata/feac1a3feb4177140e925f5ee526c485093755420769fdaddac906ab4ea73c86.npz",
+      "sha256": "feac1a3feb4177140e925f5ee526c485093755420769fdaddac906ab4ea73c86",
+      "bytes": 421348
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S2_wd1e3_ERM_EMA\\INITIAL.json",
+      "relative": "research/wisig_w5/artifacts/review_metadata/c916510a81208180d3340fd51423e13aed6ce4fe44e00a89f1ac4b1b1bff8a25.json",
+      "sha256": "c916510a81208180d3340fd51423e13aed6ce4fe44e00a89f1ac4b1b1bff8a25",
+      "bytes": 444
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S2_wd1e3_ERM_EMA\\SAMPLE_KEYS.npz",
+      "relative": "research/wisig_w5/artifacts/review_metadata/1e4be3bddca2621e3ffebcc297f68b7c2a1e4aa272b169ea9fefb2a8588c824e.npz",
+      "sha256": "1e4be3bddca2621e3ffebcc297f68b7c2a1e4aa272b169ea9fefb2a8588c824e",
+      "bytes": 481671
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\training-instance-attribution\\research\\standard_method_competition_c\\artifacts\\V1_S2_wd1e3_ERM_EMA\\C1_selected_selection.npz",
+      "relative": "research/wisig_w5/artifacts/P_A0_S2_selection.npz",
+      "sha256": "2bc1e91e4e193dde73f00d15006c13dc4b41bdf6954c099794df18a4decfaf5c",
+      "bytes": 488767
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\P_A0_S0_selection.npz",
+      "relative": "research/wisig_w5/artifacts/P_A0_S0_selection.npz",
+      "sha256": "90c7edc6ab1dbeefb6b410f9beea61e86e6ccb4f88fc6b671e04316a5e461b9c",
+      "bytes": 488428
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\P_A1_S0_selection.npz",
+      "relative": "research/wisig_w5/artifacts/P_A1_S0_selection.npz",
+      "sha256": "a158e24f59d337df19d22b7e5a82ac0b0d9c36397fa254dcb58cd9de91acbb6c",
+      "bytes": 488444
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\P_A1_S1_selection.npz",
+      "relative": "research/wisig_w5/artifacts/P_A1_S1_selection.npz",
+      "sha256": "3e45ff87280a8b9f6d5caa75d52180a79e38c48e6e725a36e2d8b351bfa622c3",
+      "bytes": 488939
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\P_A0_S1_selection.npz",
+      "relative": "research/wisig_w5/artifacts/P_A0_S1_selection.npz",
+      "sha256": "0faa781d37f6200fd30fcd8923d4933f2d4c77ee5c5ef84078c281e655096835",
+      "bytes": 488844
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\P_A0_S2_selection.npz",
+      "relative": "research/wisig_w5/artifacts/P_A0_S2_selection.npz",
+      "sha256": "2bc1e91e4e193dde73f00d15006c13dc4b41bdf6954c099794df18a4decfaf5c",
+      "bytes": 488767
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\P_A1_S2_selection.npz",
+      "relative": "research/wisig_w5/artifacts/P_A1_S2_selection.npz",
+      "sha256": "b105e78bc07a5d8b9887f2c3254df8a56bfbd9cb65517c7b701730ddd340700f",
+      "bytes": 487405
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\P_TRAINING_EVIDENCE.json",
+      "relative": "research/wisig_w5/artifacts/P_TRAINING_EVIDENCE.json",
+      "sha256": "c47c718571667847f3aab022e874787d81770909118d160eb78d280197cb3438",
+      "bytes": 393018
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\P_ROLE_METADATA.npz",
+      "relative": "research/wisig_w5/artifacts/P_ROLE_METADATA.npz",
+      "sha256": "fb8e75b2ef9a1c4ae02f3c1d6f0f01e18df37b3f52e0aace9becc80ac3d1c9ac",
+      "bytes": 664622
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\COUNT_METADATA.npz",
+      "relative": "research/wisig_w5/artifacts/COUNT_METADATA.npz",
+      "sha256": "acfef82d60ad2b8ddd9d220befccf43b393ff58a2b400b939c649625a5287c62",
+      "bytes": 50034
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w4\\DATA_PLAN.json",
+      "relative": "research/wisig_w4/DATA_PLAN.json",
+      "sha256": "5d9b21b6f49db7ec38090ae204e4582964b848f5b6f6a7e8e50d15f2f93b2eb2",
+      "bytes": 602834
+    },
+    {
+      "source": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w4\\P_RESULT.json",
+      "relative": "research/wisig_w4/P_RESULT.json",
+      "sha256": "405f40ab682f7bde1ded20a76efbf876cc1c05ab14b78ad7d9f309237b70454d",
+      "bytes": 5834
+    }
+  ],
+  "scope": "Predictions/features/training histories/role metadata plus 6 selected new checkpoints and 3 reused A0 checkpoints; no raw training replay."
+}

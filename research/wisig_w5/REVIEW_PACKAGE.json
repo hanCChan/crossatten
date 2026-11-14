@@ -1,0 +1,13 @@
+{
+  "status": "PASS_FRESH_DIRECTORY_PORTABLE_REPLAY",
+  "archive": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\output\\review\\wisig_w5_review.zip",
+  "bytes": 15308719,
+  "sha256": "491ce6815fb465fc8b0217c5f59c1b15d5bc57f83cbb7c9f80a541517aae3c78",
+  "entries": 203,
+  "portable_checks": 2139,
+  "selected_checkpoints": 9,
+  "raw_IQ_included": false,
+  "optimizer_states_included": false,
+  "reproduction_boundary": "Prediction/feature-to-result, role/history/hash audit; not retraining raw IQ",
+  "command": "python research/wisig_w5/audit_w5.py --portable"
+}

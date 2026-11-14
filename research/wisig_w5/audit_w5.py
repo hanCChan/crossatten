@@ -134,12 +134,24 @@ def main(portable=False):
     for row in overall:
         p=preds[f'{row["arm"]}/{row["seed"]}']
         for k,v in statistics(p['logits'],p['y']).items():near(v,float(row[k]),'packet '+k)
+    for arm in ('A0','A1'):
+        summary=result['summary'][arm]
+        seed_means=[np.mean([matrix[arm,s,r] for r in rx_order]) for s in range(3)]
+        near(seed_means,summary['per_seed_RX_equal_accuracy_pct'],'summary per-seed RX equal Accuracy')
+        near(np.mean(seed_means),summary['RX_equal_accuracy_pct'],'reported primary arm Accuracy')
+        rxmeans={r:np.mean([matrix[arm,s,r] for s in range(3)]) for r in rx_order}
+        for r in rx_order:near(rxmeans[r],summary['per_RX_seed_mean_accuracy_pct'][r],'reported seed-mean RX Accuracy')
+        near(min(rxmeans.values()),summary['worst_RX_seed_mean_accuracy_pct'],'reported worst absolute receiver Accuracy')
+        f1=np.mean([statistics(preds[f'{arm}/{s}']['logits'][preds[f'{arm}/{s}']['rx']==r],preds[f'{arm}/{s}']['y'][preds[f'{arm}/{s}']['rx']==r])['macro_F1_pct'] for s in range(3) for r in rx_order])
+        near(f1,summary['RX_equal_macro_F1_pct'],'reported RX-equal all-label macro F1')
     comp={}
     for a,b in (('A1','A0'),):
         ds=np.array([np.mean([matrix[a,s,r]-matrix[b,s,r] for r in rx_order]) for s in range(3)])
         dr=np.array([np.mean([matrix[a,s,r]-matrix[b,s,r] for s in range(3)]) for r in rx_order]);expected=result['comparisons'][a+'_minus_'+b]
         near(ds,expected['per_seed_gain_pp'],'paired seed Accuracy effects');near(ds.mean(),expected['mean_gain_pp'],'primary mean effect')
         near(dr.min(),expected['worst_RX_seed_mean_gain_pp'],'worst receiver effect')
+        near(min(matrix[a,s,r]-matrix[b,s,r] for s in range(3) for r in rx_order),expected['worst_seed_RX_gain_pp'],'worst single seed receiver effect')
+        require(int(np.sum(ds>0))==expected['positive_seeds'],'positive paired seed count')
         draw=np.random.default_rng(43101).integers(0,6,size=(10000,6));ci=np.quantile(dr[draw].mean(1),[.025,.975])
         near(ci,expected['conditional_RX_interval']['CI95_pp'],'conditional RX bootstrap')
         comp[a,b]=(ds,dr)

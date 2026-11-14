@@ -1,3 +1,6 @@
+<!-- W5_A_2026_11_14 -->
+2026-11-14 最新：[W5-A固定A1跨视图复现](research/wisig_w5/README.zh-CN.md)。V1源侧A0/A1的RX等权Accuracy为82.8748%/84.1043%，配对差+1.2295pp，3/3 seed正向；最差RX的seed均值差-0.7833pp。正式决策：W5A_PASS_CROSS_VIEW_SOURCE_REPLICATION。6次新拟合/28,200更新，复用3份A0；[机器状态](research/WISIG_W5_A_STATUS_2026_11_14.json)、[含9份所选权重的审阅包](output/review/wisig_w5_review.zip)。这是已开发内部源RX的跨视图复现，非历史新盲测或目标CRD。W5-B未启动，A2与旧STOP、LoRa均保持原结论。
+
 <!-- W4_2026_11_13 -->
 2026-11-13 最新：[W4完整结果](research/wisig_w4/README.zh-CN.md)。源侧V0三seed的A0/A1/A2 Accuracy为89.4873%/91.6902%/93.0480%；A2−A1平均+1.3578pp，但只有2/3seed正向，依预注册不晋级。12次新拟合/56,400更新；A0复用3次。E等权融合有平均+1.1083pp收益，但最差唯一RX−2.85pp。均为内部源域结果，非目标CRD/SOTA。独立复核及异目录复算通过；[机器状态](research/WISIG_W4_STATUS_2026_11_13.json)、[含15份所选权重的审阅包](output/review/wisig_w4_review.zip)。旧STOP与LoRa不变，第二视图未启动。
 

@@ -1,0 +1,108 @@
+{
+  "status": "W5A_PASS_CROSS_VIEW_SOURCE_REPLICATION",
+  "date_Asia_Shanghai": "2026-11-14",
+  "source_view": "V1",
+  "branch": "research/wisig-w5-a1-confirmation",
+  "baseline_commit": "cd597a5",
+  "new_neural_fits": 6,
+  "reused_A0": 3,
+  "new_gradient_updates": 28200,
+  "selected_weight_files": 9,
+  "source_selection_packets_per_model": 11500,
+  "summary": {
+    "A0": {
+      "RX_equal_accuracy_pct": 82.87482131254062,
+      "per_seed_RX_equal_accuracy_pct": [
+        83.75701754385966,
+        82.6470760233918,
+        82.22037037037036
+      ],
+      "per_RX_seed_mean_accuracy_pct": {
+        "13-14": 89.23333333333333,
+        "23-6": 94.05263157894736,
+        "13-7": 82.57407407407408,
+        "24-5": 77.22222222222223,
+        "24-13": 84.10000000000001,
+        "8-14": 70.06666666666666
+      },
+      "worst_RX_seed_mean_accuracy_pct": 70.06666666666666,
+      "RX_equal_macro_F1_pct": 79.53448136427707,
+      "packet_accuracy_pct": 82.88115942028985,
+      "packet_macro_F1_pct": 83.21468814049955
+    },
+    "A1": {
+      "RX_equal_accuracy_pct": 84.10427225471085,
+      "per_seed_RX_equal_accuracy_pct": [
+        85.34819688109162,
+        83.06666666666666,
+        83.89795321637428
+      ],
+      "per_RX_seed_mean_accuracy_pct": {
+        "13-14": 88.45,
+        "23-6": 95.10526315789474,
+        "13-7": 83.61111111111111,
+        "24-5": 79.25925925925925,
+        "24-13": 86.96666666666665,
+        "8-14": 71.23333333333333
+      },
+      "worst_RX_seed_mean_accuracy_pct": 71.23333333333333,
+      "RX_equal_macro_F1_pct": 80.69402864087675,
+      "packet_accuracy_pct": 84.10144927536233,
+      "packet_macro_F1_pct": 84.31474091236468
+    }
+  },
+  "comparison": {
+    "mean_gain_pp": 1.2294509421702458,
+    "per_seed_gain_pp": [
+      1.5911793372319636,
+      0.4195906432748586,
+      1.677582846003915
+    ],
+    "positive_seeds": 3,
+    "per_RX_seed_mean_gain_pp": {
+      "13-14": -0.7833333333333314,
+      "23-6": 1.0526315789473841,
+      "13-7": 1.037037037037038,
+      "24-5": 2.037037037037024,
+      "24-13": 2.866666666666646,
+      "8-14": 1.1666666666666714
+    },
+    "worst_RX_seed_mean_gain_pp": -0.7833333333333314,
+    "worst_seed_RX_gain_pp": -4.849999999999994,
+    "conditional_RX_interval": {
+      "mean_pp": 1.2294509421702386,
+      "CI95_pp": [
+        0.29611760883690863,
+        2.039074074074031
+      ],
+      "RX_clusters": 6,
+      "replicates": 10000,
+      "seed": 43101,
+      "condition": "Fixed three trained seeds and six repeatedly developed internal source RX; not independent target or fresh-RX uncertainty"
+    }
+  },
+  "gates": {
+    "A1_vs_A0_gain_ge_1pp": true,
+    "all_three_seed_gains_positive": true,
+    "worst_seed_averaged_RX_vs_A0_ge_minus2pp": true
+  },
+  "independent_checks": 2106,
+  "portable_checks": 2139,
+  "review_archive": {
+    "status": "PASS_FRESH_DIRECTORY_PORTABLE_REPLAY",
+    "archive": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\output\\review\\wisig_w5_review.zip",
+    "bytes": 15308719,
+    "sha256": "491ce6815fb465fc8b0217c5f59c1b15d5bc57f83cbb7c9f80a541517aae3c78",
+    "entries": 203,
+    "portable_checks": 2139,
+    "selected_checkpoints": 9,
+    "raw_IQ_included": false,
+    "optimizer_states_included": false,
+    "reproduction_boundary": "Prediction/feature-to-result, role/history/hash audit; not retraining raw IQ",
+    "command": "python research/wisig_w5/audit_w5.py --portable"
+  },
+  "W5_B_started": false,
+  "A2_started": false,
+  "actual_target_CRD_D3_D4_historical_held6_IQ_reads": 0,
+  "LoRa_modified": false
+}

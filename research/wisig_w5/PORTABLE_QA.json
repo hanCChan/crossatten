@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "checks_passed": 2139,
+  "portable_mode": true,
+  "own_code_sha256": "248d4eda2065cd319f2cb7d52729db4a65c17fcde7c3b27143953de45b106412",
+  "original_IQ_reads": 0,
+  "new_neural_fits": 0,
+  "classification_and_RX_intervals_recomputed": true,
+  "packet_identity_and_role_metadata_rechecked": true,
+  "formal_neural_fits": 6,
+  "formal_gradient_updates": 28200,
+  "scientific_decision": "W5A_PASS_CROSS_VIEW_SOURCE_REPLICATION",
+  "verification_scope": "Predictions, training histories, role metadata and exact checkpoint/file digests; not rerunning raw-IQ training."
+}
