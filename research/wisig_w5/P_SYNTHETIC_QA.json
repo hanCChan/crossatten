@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "CPU_geometry_and_sampler_tests": 7,
+  "GPU_synthetic_fits": 1,
+  "GPU_auxiliary_optimization_updates": 12,
+  "W4_A1_synthetic_state_and_full_epoch_history_bitwise_equal": true,
+  "official_IQ_reads": 0,
+  "scientific_fits": 0,
+  "engineering_results": {
+    "status": "COMPLETE",
+    "job": {
+      "id": "engineering_A1",
+      "stage": "aux",
+      "arm": "A1",
+      "seed": 0,
+      "epochs": 1,
+      "synthetic_only": true
+    },
+    "updates": 12,
+    "best_epoch": 1,
+    "best_aux_val_RX_CE": 4.050439834594727,
+    "parameter_count": 86456,
+    "initial_state_sha256": "8d7745e18c256eb6a5feb2ba0763eef6cb14ca46cbe0c2f1554683cd6f3797f9",
+    "lambda_used": 0.0,
+    "seconds": 1.1408804999955464,
+    "costs": {
+      "gradient_seconds": 0.9760023999988334,
+      "validation_seconds": 0.041224300002795644,
+      "BN_calibration_seconds": 0.04206690000137314,
+      "BN_samples": 2304,
+      "BN_passes": 1,
+      "EMA_updates": 12
+    },
+    "selected_validation_bitwise_replay": true,
+    "selected_checkpoint": {
+      "path": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\engineering_A1\\selected.pt",
+      "sha256": "edc138ff631f20580cdbd95bcddff05ef879e566587d99c640992bc2c4ac33b9",
+      "bytes": 364842
+    },
+    "selected_predictions": {
+      "path": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\engineering_A1\\selected_val.npz",
+      "sha256": "d57f78f9aa0dac539e1d889312a1b2ffdc4e5fccc3254368d8d16c703e0e2e85",
+      "bytes": 209704
+    },
+    "final_state": {
+      "path": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\engineering_A1\\final_state.pt",
+      "sha256": "db3acb660960467e876b323812004f1f97fa0bf7fcecaba2f550c83a1a211a24",
+      "bytes": 1455834
+    },
+    "history": {
+      "path": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\engineering_A1\\HISTORY.json",
+      "sha256": "39a856ba8e5a3c01ebb015fd055c00852c6bd63f577410b862ff329c3dc2a643",
+      "bytes": 500
+    }
+  }
+}

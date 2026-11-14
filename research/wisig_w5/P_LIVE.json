@@ -1,0 +1,17 @@
+{
+  "time": "2026-11-14T01:54:36.461558+00:00",
+  "job": "engineering_A1",
+  "stage": "aux_pretraining",
+  "epoch": 1,
+  "updates": 12,
+  "train_CE": 3.3139230012893677,
+  "train_relation": 0.11748389728988211,
+  "lambda_used": 0.0,
+  "minimum_relative_spread": 0.569074273109436,
+  "raw_val_RX_CE": 2.586967706680298,
+  "EMA_val_RX_CE": 4.050439834594727,
+  "best_epoch": 1,
+  "lr_next": 0.001,
+  "order_sha256": "0a4fd23d09785290028a1eb36761257e8a45eee5b4cd80e2a8ad411bd0bc505a",
+  "student_sha256": "9b96bdfdafd0bc0c9dc1ca3e80176516c8124fd55318ae7aa986a4f366e333ac"
+}
