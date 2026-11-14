@@ -33,6 +33,7 @@ def collect():
     add(read(HERE/'QUALIFICATION_EVIDENCE.json')['count_metadata'])
     # Historical W4 plan is metadata required by the unchanged-TX audit.
     q=ROOT/'research/wisig_w4/DATA_PLAN.json';add(dict(path=str(q),sha256=sha(q)))
+    q=ROOT/'research/wisig_w4/P_RESULT.json';add(dict(path=str(q),sha256=sha(q)))
     index=dict(status='EXACT_REPLAY_INPUTS_AND_SELECTED_WEIGHTS',raw_IQ_included=False,optimizer_states_included=False,
         selected_weight_files=9,files=list(records.values()),
         scope='Predictions/features/training histories/role metadata plus 6 selected new checkpoints and 3 reused A0 checkpoints; no raw training replay.')

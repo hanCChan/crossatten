@@ -1,0 +1,81 @@
+{
+  "status": "PASS_PRE_HELD_TRAINING_AND_TRANSFER_AUDIT",
+  "time": "2026-11-14T02:09:42.234765+00:00",
+  "own_code_sha256": "b40158b80b721575a96026e869c1e460275fd8757d20bd01050aafe82b3b884a",
+  "fits": [
+    {
+      "job": "A1_S0_aux",
+      "all_checkpoint_hashes_pass": true,
+      "fixed_40_epochs": true,
+      "selected_epoch_is_first_minimum": true
+    },
+    {
+      "job": "A1_S1_aux",
+      "all_checkpoint_hashes_pass": true,
+      "fixed_40_epochs": true,
+      "selected_epoch_is_first_minimum": true
+    },
+    {
+      "job": "A1_S2_aux",
+      "all_checkpoint_hashes_pass": true,
+      "fixed_40_epochs": true,
+      "selected_epoch_is_first_minimum": true
+    },
+    {
+      "job": "A1_S0_downstream",
+      "all_checkpoint_hashes_pass": true,
+      "fixed_40_epochs": true,
+      "selected_epoch_is_first_minimum": true
+    },
+    {
+      "job": "A1_S1_downstream",
+      "all_checkpoint_hashes_pass": true,
+      "fixed_40_epochs": true,
+      "selected_epoch_is_first_minimum": true
+    },
+    {
+      "job": "A1_S2_downstream",
+      "all_checkpoint_hashes_pass": true,
+      "fixed_40_epochs": true,
+      "selected_epoch_is_first_minimum": true
+    }
+  ],
+  "transfers": [
+    {
+      "model": "A1_S0_downstream",
+      "encoder_and_BN_equal_selected_auxiliary_EMA": true,
+      "ten_class_head_equal_A0_random_initialization": true,
+      "optimizer_and_scheduler_reset_equal_A0": true,
+      "all_40_training_orders_exactly_equal_A0": true
+    },
+    {
+      "model": "A1_S1_downstream",
+      "encoder_and_BN_equal_selected_auxiliary_EMA": true,
+      "ten_class_head_equal_A0_random_initialization": true,
+      "optimizer_and_scheduler_reset_equal_A0": true,
+      "all_40_training_orders_exactly_equal_A0": true
+    },
+    {
+      "model": "A1_S2_downstream",
+      "encoder_and_BN_equal_selected_auxiliary_EMA": true,
+      "ten_class_head_equal_A0_random_initialization": true,
+      "optimizer_and_scheduler_reset_equal_A0": true,
+      "all_40_training_orders_exactly_equal_A0": true
+    }
+  ],
+  "W4_A1_fixed_algorithm": true,
+  "A0_reuses": 3,
+  "new_fits": 6,
+  "total_new_updates": 28200,
+  "held_source_or_aux24_IQ_reads": 0,
+  "role_metadata": {
+    "path": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\P_ROLE_METADATA.npz",
+    "sha256": "fb8e75b2ef9a1c4ae02f3c1d6f0f01e18df37b3f52e0aace9becc80ac3d1c9ac",
+    "bytes": 664622
+  },
+  "history_evidence": {
+    "path": "D:\\crossatten\\worktrees\\wisig-w5-a1-confirmation\\research\\wisig_w5\\artifacts\\P_TRAINING_EVIDENCE.json",
+    "sha256": "c47c718571667847f3aab022e874787d81770909118d160eb78d280197cb3438",
+    "bytes": 393018
+  }
+}

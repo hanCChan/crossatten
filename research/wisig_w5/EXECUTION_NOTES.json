@@ -1,0 +1,24 @@
+{
+  "metadata_indexing": {
+    "initial_header_only_process_exceeded_tool_timeout": true,
+    "numeric_IQ_decoded": 0,
+    "restarted_as_background_header_only_index": true,
+    "final_receipt": "INDEX_QA.json"
+  },
+  "engineering": {
+    "synthetic_neural_fits": 1,
+    "synthetic_optimizer_updates": 12,
+    "formal_neural_retries": 0,
+    "gradient_scale_probe_updates": 0
+  },
+  "legacy_names": {
+    "P_INITIAL_GRADIENT_SCALES_json": "Stores only original random initialization SHA and fixed lambda=0; no gradient probing.",
+    "p_accept_stdout": "Legacy success label mentions gradient scales; JSON and code establish no gradient probe."
+  },
+  "scope": {
+    "V0_pretrained_encoder_used": false,
+    "W5_B_started": false,
+    "A2_started": false,
+    "actual_target_CRD_started": false
+  }
+}
