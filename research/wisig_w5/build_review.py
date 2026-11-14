@@ -44,7 +44,7 @@ def collect():
 def package():
     assert read(HERE/'INDEPENDENT_QA.json')['status']=='PASS'
     out=ROOT/'output/review';out.mkdir(parents=True,exist_ok=True);archive=out/'wisig_w5_review.zip'
-    files={p for p in HERE.iterdir() if p.is_file() and p.name not in ('REVIEW_PACKAGE.json','PACKAGE_STDOUT.log')}
+    files={p for p in HERE.iterdir() if p.is_file() and p.name not in ('REVIEW_PACKAGE.json','PACKAGE_STDOUT.log','GIT_CHECKOUT_QA.json')}
     for v in read(HERE/'REPLAY_FILES.json')['files']:files.add(ROOT/v['relative'])
     for name in ('ADMISSION_REGISTRATION.json','EXECUTION_REGISTRATION.json','P_EVALUATION_REGISTRATION.json'):
         files.update(ROOT/p for p in read(HERE/name)['files_sha256'])

@@ -1,0 +1,139 @@
+{
+  "status": "COMPLETE",
+  "records": {
+    "A0/0": {
+      "batch": {
+        "1": {
+          "mean_ms": 2.871648325920105,
+          "median_ms": 2.557520031929016,
+          "p95_ms": 4.977245020866394,
+          "iterations": 100,
+          "warmup": 20
+        },
+        "128": {
+          "mean_ms": 2.5060345566272737,
+          "median_ms": 2.2736799716949463,
+          "p95_ms": 4.070870471000671,
+          "iterations": 100,
+          "warmup": 20
+        }
+      },
+      "scope": "Entire frozen model incl. RF frontend; fixed synthetic CUDA-resident input; no host/disk copy",
+      "parameters": 82426,
+      "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "precision": "FP32; TF32 false"
+    },
+    "A1/0": {
+      "batch": {
+        "1": {
+          "mean_ms": 2.4471715199947357,
+          "median_ms": 2.2975680828094482,
+          "p95_ms": 3.3763296484947185,
+          "iterations": 100,
+          "warmup": 20
+        },
+        "128": {
+          "mean_ms": 2.652377287149429,
+          "median_ms": 2.2748159170150757,
+          "p95_ms": 4.31394724845886,
+          "iterations": 100,
+          "warmup": 20
+        }
+      },
+      "scope": "Entire frozen model incl. RF frontend; fixed synthetic CUDA-resident input; no host/disk copy",
+      "parameters": 82426,
+      "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "precision": "FP32; TF32 false"
+    },
+    "A1/1": {
+      "batch": {
+        "1": {
+          "mean_ms": 2.6768470430374145,
+          "median_ms": 2.618367910385132,
+          "p95_ms": 3.5290160655975322,
+          "iterations": 100,
+          "warmup": 20
+        },
+        "128": {
+          "mean_ms": 2.962051522731781,
+          "median_ms": 2.8067519664764404,
+          "p95_ms": 4.41650719642639,
+          "iterations": 100,
+          "warmup": 20
+        }
+      },
+      "scope": "Entire frozen model incl. RF frontend; fixed synthetic CUDA-resident input; no host/disk copy",
+      "parameters": 82426,
+      "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "precision": "FP32; TF32 false"
+    },
+    "A0/1": {
+      "batch": {
+        "1": {
+          "mean_ms": 2.6046294462680817,
+          "median_ms": 2.591231942176819,
+          "p95_ms": 3.1372432351112365,
+          "iterations": 100,
+          "warmup": 20
+        },
+        "128": {
+          "mean_ms": 2.77841952085495,
+          "median_ms": 2.6917120218276978,
+          "p95_ms": 3.861350440979004,
+          "iterations": 100,
+          "warmup": 20
+        }
+      },
+      "scope": "Entire frozen model incl. RF frontend; fixed synthetic CUDA-resident input; no host/disk copy",
+      "parameters": 82426,
+      "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "precision": "FP32; TF32 false"
+    },
+    "A0/2": {
+      "batch": {
+        "1": {
+          "mean_ms": 2.8913596725463866,
+          "median_ms": 2.5944639444351196,
+          "p95_ms": 4.918692922592163,
+          "iterations": 100,
+          "warmup": 20
+        },
+        "128": {
+          "mean_ms": 2.3907318472862245,
+          "median_ms": 2.384112000465393,
+          "p95_ms": 3.139124822616577,
+          "iterations": 100,
+          "warmup": 20
+        }
+      },
+      "scope": "Entire frozen model incl. RF frontend; fixed synthetic CUDA-resident input; no host/disk copy",
+      "parameters": 82426,
+      "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "precision": "FP32; TF32 false"
+    },
+    "A1/2": {
+      "batch": {
+        "1": {
+          "mean_ms": 2.579351373910904,
+          "median_ms": 2.36843204498291,
+          "p95_ms": 4.339222621917725,
+          "iterations": 100,
+          "warmup": 20
+        },
+        "128": {
+          "mean_ms": 2.5330534386634826,
+          "median_ms": 2.4002559185028076,
+          "p95_ms": 3.5140383124351495,
+          "iterations": 100,
+          "warmup": 20
+        }
+      },
+      "scope": "Entire frozen model incl. RF frontend; fixed synthetic CUDA-resident input; no host/disk copy",
+      "parameters": 82426,
+      "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "precision": "FP32; TF32 false"
+    }
+  },
+  "architecture_identical": true,
+  "latency_is_conditional_not_an_efficiency_claim": true
+}
