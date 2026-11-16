@@ -1,0 +1,41 @@
+{
+  "status": "FROZEN_AFTER_SOURCE_PILOT",
+  "registry_sha256": "93ab3280504fc5bc70ebcfaccc8e2e6d3f9139d3ace9322548f2ffa6192c3267",
+  "pilot_evidence": {
+    "runs/fan__native__f0__s201/metrics.json": "407623a6a96272acbc2afa7bc87ae1708831b8c0af445aec17a078af751bf4d6",
+    "runs/fan__native__f0__s201/config.json": "133121953664a3c35cf85ac50939cb402f58560e2a3cde2e9979296291c156de",
+    "runs/fan__native__f0__s201/best.pt": "42b82462480e04c620d08306c1a6a68f4feb7caedc77ab1a09e8e581b88acea0",
+    "runs/ib__native__f0__s201/metrics.json": "17d4a8aa6b60683984fb726a250b3f5608af084adc78ecab931a1c8c889b9f85",
+    "runs/ib__native__f0__s201/config.json": "65848dc0906a6d8cb29169c29472ebe20e66a6cd2dc94c544f7c0b57fb22ae3a",
+    "runs/ib__native__f0__s201/best.pt": "7b393711be90376e04411522df039c14aadb189c1500288c7a36f7b2aef525e9"
+  },
+  "allowed_jobs": [
+    "fan__native__f0__s201",
+    "fan__native__f0__s202",
+    "fan__native__f0__s203",
+    "fan__native__f1__s201",
+    "fan__native__f1__s202",
+    "fan__native__f1__s203",
+    "fan__strict_ib__f0__s201",
+    "fan__strict_ib__f0__s202",
+    "fan__strict_ib__f0__s203",
+    "fan__strict_ib__f1__s201",
+    "fan__strict_ib__f1__s202",
+    "fan__strict_ib__f1__s203",
+    "ib__native__f0__s201",
+    "ib__native__f0__s202",
+    "ib__native__f0__s203",
+    "ib__native__f1__s201",
+    "ib__native__f1__s202",
+    "ib__native__f1__s203",
+    "ib__strict_ib__f0__s201",
+    "ib__strict_ib__f0__s202",
+    "ib__strict_ib__f0__s203",
+    "ib__strict_ib__f1__s201",
+    "ib__strict_ib__f1__s202",
+    "ib__strict_ib__f1__s203"
+  ],
+  "pilot_reuse": "Promote native fold0 seed201 already preregistered weights; identical code/recipe, no target access, no score threshold",
+  "source_score_cannot_change_config": true,
+  "git": "ce92a3a496dad48868b9866bc59a8c202f539037"
+}
