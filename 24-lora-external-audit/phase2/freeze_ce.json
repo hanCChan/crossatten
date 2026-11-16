@@ -1,0 +1,26 @@
+{
+  "status": "FROZEN_AFTER_SOURCE_PILOT",
+  "registry_sha256": "93ab3280504fc5bc70ebcfaccc8e2e6d3f9139d3ace9322548f2ffa6192c3267",
+  "pilot_evidence": {
+    "runs/ce__native__f0__s201/metrics.json": "48242677f59a7273cd8c16ddee6b402d9d1edb9c48b474c42464181f8aef8c35",
+    "runs/ce__native__f0__s201/config.json": "80ceb1df09fc4b445694b3d0de6afbea8f7ce08d935049b1a10f797174c6488c",
+    "runs/ce__native__f0__s201/best.pt": "7eeec191a611843ef817626502b663cac083e5b85de8abb067d36f02b4d4b382"
+  },
+  "allowed_jobs": [
+    "ce__native__f0__s201",
+    "ce__native__f0__s202",
+    "ce__native__f0__s203",
+    "ce__native__f1__s201",
+    "ce__native__f1__s202",
+    "ce__native__f1__s203",
+    "ce__strict_ib__f0__s201",
+    "ce__strict_ib__f0__s202",
+    "ce__strict_ib__f0__s203",
+    "ce__strict_ib__f1__s201",
+    "ce__strict_ib__f1__s202",
+    "ce__strict_ib__f1__s203"
+  ],
+  "pilot_reuse": "Promote native fold0 seed201 already preregistered weights; identical code/recipe, no target access, no score threshold",
+  "source_score_cannot_change_config": true,
+  "git": "eef22331e4d2be7e702d70eda79080f1187141de"
+}
