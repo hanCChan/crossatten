@@ -24,3 +24,14 @@
  create mode 100644 24-lora-external-audit/phase2/freeze_ib.json
 [exp/s24-lora-external-audit 9119218] S24 publish frozen ib source-pilot registry
  2 files changed, 13 insertions(+), 1 deletion(-)
+[exp/s24-lora-external-audit eef2233] S24 archive completed source-only fit ce__native__f0__s201
+ 10 files changed, 2790 insertions(+), 1 deletion(-)
+ create mode 100644 24-lora-external-audit/phase2/runs/ce__native__f0__s201/attempt1_timing.json
+ create mode 100644 24-lora-external-audit/phase2/runs/ce__native__f0__s201/config.json
+ create mode 100644 24-lora-external-audit/phase2/runs/ce__native__f0__s201/history_attempt1.csv
+ create mode 100644 24-lora-external-audit/phase2/runs/ce__native__f0__s201/metrics.json
+ create mode 100644 24-lora-external-audit/phase2/runs/ce__native__f0__s201/progress.json
+ create mode 100644 24-lora-external-audit/phase2/runs/ce__native__f0__s201/stdout_attempt1.log
+[exp/s24-lora-external-audit 71cff6f] S24 freeze ce after source-only pilot; retain registered configuration
+ 1 file changed, 26 insertions(+)
+ create mode 100644 24-lora-external-audit/phase2/freeze_ce.json
