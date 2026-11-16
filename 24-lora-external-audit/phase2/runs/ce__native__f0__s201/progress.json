@@ -1,0 +1,47 @@
+{
+  "status": "COMPLETE",
+  "job": {
+    "method": "ce",
+    "view": "native",
+    "fold": 0,
+    "seed": 201,
+    "batch": 64,
+    "optimizer": "SGD",
+    "lr": 0.001,
+    "weight_decay": 0.0,
+    "momentum": 0.9,
+    "epochs": 500,
+    "early_stop": 20,
+    "scheduler_patience": 10,
+    "scheduler_factor": 0.2,
+    "min_lr": 1e-06,
+    "alpha": 0.0,
+    "awgn": [
+      0.0,
+      49.0
+    ],
+    "checkpoint": "minimum_source_RX_equal_TX_CE",
+    "validation_noise": "one fixed realization, separate seed stream",
+    "sampler": "one seeded no-replacement permutation per epoch, source train only",
+    "strict_order": "raw IQ -> source training AWGN (CE/DANN only) -> common IB projection if strict -> method original preprocessing",
+    "precision": "FP32, complex64 ASK/SAF, TF32 disabled; no AMP",
+    "last_checkpoint_every_epochs": 5
+  },
+  "best_epoch": 274,
+  "best_source_tx_ce": 0.6046429872512817,
+  "source_metrics": {
+    "tx_ce": 0.6046429872512817,
+    "tx_acc": 0.7609999775886536
+  },
+  "epochs": 294,
+  "optimizer_steps": 36750,
+  "wall_seconds": 1578.715986299998,
+  "attempt": 1,
+  "params": 13442954,
+  "real_degrees_of_freedom": 13442954,
+  "peak_bytes": 464867328,
+  "checkpoint_sha256": "7eeec191a611843ef817626502b663cac083e5b85de8abb067d36f02b4d4b382",
+  "registry_sha256": "93ab3280504fc5bc70ebcfaccc8e2e6d3f9139d3ace9322548f2ffa6192c3267",
+  "config_sha256": "80ceb1df09fc4b445694b3d0de6afbea8f7ce08d935049b1a10f797174c6488c",
+  "dev_evaluations": 0
+}
