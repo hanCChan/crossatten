@@ -1,0 +1,6 @@
+local/
+runs/**/checkpoint*.pt
+runs/**/best*.pt
+runs/**/last*.pt
+runs/**/predictions*.npz
+__pycache__/

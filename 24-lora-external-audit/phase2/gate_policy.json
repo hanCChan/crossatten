@@ -1,0 +1,7 @@
+{
+  "date": "2026-11-16",
+  "status": "PRE_EXECUTION_GATE_POLICY",
+  "parity": {"seed": 2401, "device": "CPU float32", "forward_atol": 0.00002, "forward_rtol": 0.0002, "gradient_atol": 0.00002, "gradient_rtol": 0.002, "compare": ["all convolution outputs", "pool", "flatten", "512-dimensional normalized feature", "TX probabilities", "RX probabilities", "TX-only parameter gradients", "RX-only parameter gradients", "joint parameter gradients", "CIS input gradients"]},
+  "asknet": {"candidates": [128,256,512,1024,2048,4096], "seq_len": 8192, "device": "cuda:0", "dtype": "float32/complex64", "minimum_batch": 1, "required": ["constructor", "forward", "backward", "Adam state allocation and technical step"], "maximum_wall_seconds": 900, "scientific_fits": 0, "shrink_model_on_failure": false},
+  "ib_adaptation": {"seq_len":8192,"patch_size":512,"stride":256,"num_tokens":31,"embed_dim":128,"mlp_ratio":2.0,"dropout":0.5,"bottleneck":"DSCNN","SAF":true,"FAF":true,"alpha":0.004,"sigma":5.0,"kernel_ridge":0.00001,"hsic_device":"cpu float32, original upstream function","source":"patch512 follows S06 full-window Shen adapter (06-1-register.py external); alpha .004 is the smallest nonzero S06 preregistered candidate, fixed identically for both views, no S24 alpha search. Historical development results were already exposed and this is not a new blind configuration selection.","alpha_search_fits":0}
+}

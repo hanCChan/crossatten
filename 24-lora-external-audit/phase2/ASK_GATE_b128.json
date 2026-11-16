@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "batch": 128,
+  "scientific_fits": 0,
+  "technical_optimizer_steps": 1,
+  "events": [
+    {
+      "name": "before_constructor",
+      "elapsed": 0.2730765999876894,
+      "allocated": 0,
+      "reserved": 0,
+      "peak": 0
+    },
+    {
+      "name": "QR",
+      "elapsed": 1.860275899991393,
+      "allocated": 1610842624,
+      "reserved": 1648361472,
+      "peak": 1645508096,
+      "seconds": 1.063178299984429,
+      "shape": [
+        8191,
+        8191
+      ]
+    },
+    {
+      "name": "constructed",
+      "elapsed": 1.867380099982256,
+      "allocated": 565318144,
+      "reserved": 1648361472,
+      "peak": 1645508096,
+      "params": 74153872
+    },
+    {
+      "name": "QR",
+      "elapsed": 4.025952399999369,
+      "allocated": 1689523200,
+      "reserved": 2185232384,
+      "peak": 1724188672,
+      "seconds": 0.9925978999817744,
+      "shape": [
+        8191,
+        8191
+      ]
+    },
+    {
+      "name": "forward",
+      "elapsed": 5.655822799977614,
+      "allocated": 3740741632,
+      "reserved": 4334813184,
+      "peak": 3837072384,
+      "seconds": 2.727928800013615
+    },
+    {
+      "name": "backward",
+      "elapsed": 9.906865299999481,
+      "allocated": 1155872768,
+      "reserved": 5408555008,
+      "peak": 4930779648,
+      "seconds": 4.211067099997308,
+      "finite": true
+    },
+    {
+      "name": "Adam_step",
+      "elapsed": 10.001386699994328,
+      "allocated": 2286114816,
+      "reserved": 5410652160,
+      "peak": 4930779648,
+      "seconds": 0.09223659997223876
+    }
+  ],
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "candidates": [
+    128,
+    256,
+    512,
+    1024,
+    2048,
+    4096
+  ],
+  "wall_seconds": 10.004477099981159,
+  "peak_bytes": 4930779648
+}

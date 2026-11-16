@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "params": 310481,
+  "input_shape": [
+    8,
+    2,
+    8192
+  ],
+  "hidden_shape": [
+    8,
+    31,
+    128
+  ],
+  "logits_shape": [
+    8,
+    10
+  ],
+  "position_embedding_shape": [
+    1,
+    31,
+    128
+  ],
+  "original_hsic": 6.503610610961914,
+  "original_vs_existing_hsic_max_gradient_error": 5.820766091346741e-11,
+  "finite_backward": true,
+  "original_hsic_preserved": true,
+  "optimizer_steps": 0,
+  "scientific_fits": 0
+}

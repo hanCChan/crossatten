@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "checks": [
+    "blind/confirm/wrong-fold source rejected before waveform IO",
+    "Dev denied without global seal",
+    "CE and DANN share exact encoder/TX initialization and forward",
+    "atomic model+momentum+dropout RNG restore gives bit-identical next update",
+    "strict pipeline retains only common input information budget"
+  ],
+  "scientific_fits": 0,
+  "sandbox_tiny_optimizer_steps": 3,
+  "strict_projection_residual_ratio": 5.0975262693656737e-14
+}
