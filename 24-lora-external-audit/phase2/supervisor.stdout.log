@@ -37,3 +37,14 @@
  create mode 100644 24-lora-external-audit/phase2/freeze_ce.json
 [exp/s24-lora-external-audit 74e699e] S24 publish frozen ce source-pilot registry
  2 files changed, 12 insertions(+), 1 deletion(-)
+[exp/s24-lora-external-audit 9ddf901] S24 archive completed source-only fit dann__native__f0__s201
+ 13 files changed, 3179 insertions(+), 6 deletions(-)
+ create mode 100644 24-lora-external-audit/phase2/runs/dann__native__f0__s201/attempt1_timing.json
+ create mode 100644 24-lora-external-audit/phase2/runs/dann__native__f0__s201/config.json
+ create mode 100644 24-lora-external-audit/phase2/runs/dann__native__f0__s201/history_attempt1.csv
+ create mode 100644 24-lora-external-audit/phase2/runs/dann__native__f0__s201/metrics.json
+ create mode 100644 24-lora-external-audit/phase2/runs/dann__native__f0__s201/progress.json
+ create mode 100644 24-lora-external-audit/phase2/runs/dann__native__f0__s201/stdout_attempt1.log
+[exp/s24-lora-external-audit e5ec12c] S24 freeze dann after source-only pilot; retain registered configuration
+ 1 file changed, 26 insertions(+)
+ create mode 100644 24-lora-external-audit/phase2/freeze_dann.json
