@@ -1,0 +1,26 @@
+{
+  "status": "FROZEN_AFTER_SOURCE_PILOT",
+  "registry_sha256": "93ab3280504fc5bc70ebcfaccc8e2e6d3f9139d3ace9322548f2ffa6192c3267",
+  "pilot_evidence": {
+    "runs/dann__native__f0__s201/metrics.json": "15922f0cb9a75da97f611101219a8af5853fca2143d788ec1f14cc9287d07dac",
+    "runs/dann__native__f0__s201/config.json": "e96e22e0bd063449b6335bc6681aafe3230c38fbabdce19094a987e55712957d",
+    "runs/dann__native__f0__s201/best.pt": "33f1154c2d015cb5db8f2aca1fe07fca8c1883d09356f4c8c9b58d03aac435e2"
+  },
+  "allowed_jobs": [
+    "dann__native__f0__s201",
+    "dann__native__f0__s202",
+    "dann__native__f0__s203",
+    "dann__native__f1__s201",
+    "dann__native__f1__s202",
+    "dann__native__f1__s203",
+    "dann__strict_ib__f0__s201",
+    "dann__strict_ib__f0__s202",
+    "dann__strict_ib__f0__s203",
+    "dann__strict_ib__f1__s201",
+    "dann__strict_ib__f1__s202",
+    "dann__strict_ib__f1__s203"
+  ],
+  "pilot_reuse": "Promote native fold0 seed201 already preregistered weights; identical code/recipe, no target access, no score threshold",
+  "source_score_cannot_change_config": true,
+  "git": "9ddf90128378dcdfeb14e77b964297125d94e717"
+}
