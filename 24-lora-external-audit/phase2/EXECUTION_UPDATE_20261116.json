@@ -1,0 +1,42 @@
+{
+  "client_date": "2026-11-16",
+  "status": "RUNNING_SOURCE_ONLY",
+  "completed_fits": 2,
+  "registered_fits": 60,
+  "scientific_initializations": 3,
+  "active_job": "ce__native__f0__s201",
+  "completed_evidence": [
+    {
+      "job": "fan__native__f0__s201",
+      "epochs": 33,
+      "optimizer_steps": 2079,
+      "wall_seconds": 69.1236139999819,
+      "checkpoint_sha256": "42b82462480e04c620d08306c1a6a68f4feb7caedc77ab1a09e8e581b88acea0"
+    },
+    {
+      "job": "ib__native__f0__s201",
+      "epochs": 28,
+      "optimizer_steps": 1764,
+      "wall_seconds": 58.83849250001367,
+      "checkpoint_sha256": "7b393711be90376e04411522df039c14aadb189c1500288c7a36f7b2aef525e9"
+    }
+  ],
+  "all_registered_code_and_artifact_hashes_verified": true,
+  "source_access_events": 15,
+  "dev_reads": 0,
+  "confirm_reads": 0,
+  "blind_reads": 0,
+  "gate_results": {
+    "DANN": "PASS:103 comparisons",
+    "IB": "PASS:8192/patch512/exact original HSIC",
+    "ASK": "PASS:full8191modes batch128"
+  },
+  "ASK_estimate": {
+    "seconds_per_epoch": 486.614508299157,
+    "hours_per_fit_at_200_epochs": 27.03413934995317,
+    "scope": "Approximate from one full technical batch plus 16 validation batches; actual early stopping/thermal/IO costs vary"
+  },
+  "first_startup_rejection_preserved": "startup_attempt001.stderr.log; before any scientific optimizer step",
+  "protocol_and_H0_unchanged": true,
+  "dev_unlock": "Only after all60 registered models/configurations globally sealed and committed"
+}
