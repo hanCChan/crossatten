@@ -1,20 +1,4 @@
-fatal: path '24-lora-external-audit/phase2/pilot_registry.json' exists on disk, but not in 'HEAD'
-Traceback (most recent call last):
-  File "D:\crossatten\worktrees\s24-lora-external-audit\24-lora-external-audit\phase2\supervisor.py", line 77, in <module>
-    if __name__=='__main__':main()
-                            ^^^^^^
-  File "D:\crossatten\worktrees\s24-lora-external-audit\24-lora-external-audit\phase2\supervisor.py", line 17, in main
-    registry=validate_registry();lock=HERE/'supervisor.lock'
-             ^^^^^^^^^^^^^^^^^^^
-  File "D:\crossatten\worktrees\s24-lora-external-audit\24-lora-external-audit\phase2\execution.py", line 39, in validate_registry
-    path=HERE/'pilot_registry.json';committed(path);r=read(path)
-                                    ^^^^^^^^^^^^^^^
-  File "D:\crossatten\worktrees\s24-lora-external-audit\24-lora-external-audit\phase2\execution.py", line 25, in committed
-    if subprocess.check_output(['git','-C',str(ROOT),'show','HEAD:'+rel])!=Path(p).read_bytes():raise ValueError('not committed: '+rel)
-       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\python\Lib\subprocess.py", line 466, in check_output
-    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\python\Lib\subprocess.py", line 571, in run
-    raise CalledProcessError(retcode, process.args,
-subprocess.CalledProcessError: Command '['git', '-C', 'D:\\crossatten\\worktrees\\s24-lora-external-audit', 'show', 'HEAD:24-lora-external-audit/phase2/pilot_registry.json']' returned non-zero exit status 128.
+warning: in the working copy of '24-lora-external-audit/phase2/supervisor.pid', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of '24-lora-external-audit/phase2/runs/fan__native__f0__s201/stdout_attempt1.log', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of '24-lora-external-audit/phase2/runs/fan__native__f0__s201/stdout_attempt1.log', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of '24-lora-external-audit/phase2/supervisor.pid', CRLF will be replaced by LF the next time Git touches it
