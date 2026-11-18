@@ -1,5 +1,7 @@
 # S24：LoRa 外部方法对照，第一阶段交付
 
+**当前执行入口（2026-11-18更新）**：第一阶段历史快照如下；第二阶段已启动真实训练。最新用户预算修订见 [phase2/budget_update/README.zh-CN.md](phase2/budget_update/README.zh-CN.md)：保留54项，ASK Native六项继续、Strict-IB六项延期；48个已完成基线与冻结H0先整体封存、统一报告。原60项草案和本页的fit=0描述不代表当前执行状态。实时进度见 [phase2/LIVE_STATUS.json](phase2/LIVE_STATUS.json)。
+
 2026-11-14；独立分支 `exp/s24-lora-external-audit`，基线 `e041f09`。
 执行范围来自用户附件：**第一阶段只做源码审计和数据适配，不启动训练**。
 本阶段 fit=0、optimizer step=0。没有新增准确率结果，没有改写 S15/S21/S22/S23 或旧论文。

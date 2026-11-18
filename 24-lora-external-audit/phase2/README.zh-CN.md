@@ -1,5 +1,7 @@
 # S24 第二阶段：方法级验证与真实拟合
 
+**2026-11-18预算修订优先于下文原60项执行安排**：[预算修订与恢复入口](budget_update/README.zh-CN.md)、[冻结修订](budget_update/AMENDMENT.json)。现保留54项，整个ASK Strict-IB六项延期，不自动启动；现有Native worker不中断。完成的CE/DANN/FAN/IB共48项与H0六模型，按已提交的整组seal先行报告；ASK Native六项完成后另行整组seal及报告。原科学代码、注册、种子与选模规则不变。`launch.ps1`自动选择修订后的控制器；不要直接启动旧`supervisor.py`。下文保留原始科学配置与历史安排。
+
 用户于2026-11-16授权推进训练，扩展Non-adv CE对照。本目录是独立第二阶段；父目录的DRAFT_PLAN与STATUS保留第一阶段历史快照，不能将其中的“授权0次”误读为当前执行状态。
 
 三项P0结果：
