@@ -1,0 +1,323 @@
+{
+  "status": "FROZEN_USER_BUDGET_AMENDMENT",
+  "time": "2026-11-18T18:40:59+08:00",
+  "authority": "User 2026-11-18 request: finish current ASK, retain Native two folds x three seeds, defer all six Strict-IB ASK jobs; prioritize complete CE/DANN/FAN/IB report-only evaluation.",
+  "reason": "Compute budget and research priority, not Dev accuracy; prior source validation outcomes were visible and are disclosed.",
+  "original_registry_sha256": "93ab3280504fc5bc70ebcfaccc8e2e6d3f9139d3ace9322548f2ffa6192c3267",
+  "original_registry_retained_unchanged": true,
+  "active_job_ids": [
+    "fan__native__f0__s201",
+    "fan__native__f0__s202",
+    "fan__native__f0__s203",
+    "fan__native__f1__s201",
+    "fan__native__f1__s202",
+    "fan__native__f1__s203",
+    "fan__strict_ib__f0__s201",
+    "fan__strict_ib__f0__s202",
+    "fan__strict_ib__f0__s203",
+    "fan__strict_ib__f1__s201",
+    "fan__strict_ib__f1__s202",
+    "fan__strict_ib__f1__s203",
+    "ib__native__f0__s201",
+    "ib__native__f0__s202",
+    "ib__native__f0__s203",
+    "ib__native__f1__s201",
+    "ib__native__f1__s202",
+    "ib__native__f1__s203",
+    "ib__strict_ib__f0__s201",
+    "ib__strict_ib__f0__s202",
+    "ib__strict_ib__f0__s203",
+    "ib__strict_ib__f1__s201",
+    "ib__strict_ib__f1__s202",
+    "ib__strict_ib__f1__s203",
+    "ce__native__f0__s201",
+    "ce__native__f0__s202",
+    "ce__native__f0__s203",
+    "ce__native__f1__s201",
+    "ce__native__f1__s202",
+    "ce__native__f1__s203",
+    "ce__strict_ib__f0__s201",
+    "ce__strict_ib__f0__s202",
+    "ce__strict_ib__f0__s203",
+    "ce__strict_ib__f1__s201",
+    "ce__strict_ib__f1__s202",
+    "ce__strict_ib__f1__s203",
+    "dann__native__f0__s201",
+    "dann__native__f0__s202",
+    "dann__native__f0__s203",
+    "dann__native__f1__s201",
+    "dann__native__f1__s202",
+    "dann__native__f1__s203",
+    "dann__strict_ib__f0__s201",
+    "dann__strict_ib__f0__s202",
+    "dann__strict_ib__f0__s203",
+    "dann__strict_ib__f1__s201",
+    "dann__strict_ib__f1__s202",
+    "dann__strict_ib__f1__s203",
+    "ask__native__f0__s201",
+    "ask__native__f0__s202",
+    "ask__native__f0__s203",
+    "ask__native__f1__s201",
+    "ask__native__f1__s202",
+    "ask__native__f1__s203"
+  ],
+  "deferred_job_ids": [
+    "ask__strict_ib__f0__s201",
+    "ask__strict_ib__f0__s202",
+    "ask__strict_ib__f0__s203",
+    "ask__strict_ib__f1__s201",
+    "ask__strict_ib__f1__s202",
+    "ask__strict_ib__f1__s203"
+  ],
+  "active_fit_budget": 54,
+  "original_fit_budget": 60,
+  "resume_deferred_only_after_explicit_user_authorization": true,
+  "keep_current_worker_uninterrupted": true,
+  "completed_metrics_at_amendment": [
+    {
+      "job": "fan__native__f0__s201",
+      "sha256": "407623a6a96272acbc2afa7bc87ae1708831b8c0af445aec17a078af751bf4d6"
+    },
+    {
+      "job": "fan__native__f0__s202",
+      "sha256": "f309741418a2ab7e671575ccad1985c12c0dc2d5bb04451af39cd5bad60abdd8"
+    },
+    {
+      "job": "fan__native__f0__s203",
+      "sha256": "d522f5eda97c2d9214ee64362d4755e2fcceafcd7618d4e35f98dcf75ca4bd09"
+    },
+    {
+      "job": "fan__native__f1__s201",
+      "sha256": "60f95405be1496b498c0df6a1fdea8a9b4bf53eb51185acd31e32620d5f1b929"
+    },
+    {
+      "job": "fan__native__f1__s202",
+      "sha256": "3afbd73c94b56f91e9176432067ccb26d692c6e82e0bf7c7aaa00c40918445d8"
+    },
+    {
+      "job": "fan__native__f1__s203",
+      "sha256": "8c9f4c87c1aec60498abecee7a27bb1bebacb30aa3aa6de1f1deea7317a48219"
+    },
+    {
+      "job": "fan__strict_ib__f0__s201",
+      "sha256": "1a6167cb444f418a9d438f527ce4b5f30c4936538f17fcf6275aea7fe4c57acf"
+    },
+    {
+      "job": "fan__strict_ib__f0__s202",
+      "sha256": "7a0631abc6fdc2be5ea15e3a67ef53f00a46f512a1c29b9118f06f2602bc3f72"
+    },
+    {
+      "job": "fan__strict_ib__f0__s203",
+      "sha256": "a3ea5e8c1762796643fb8340f36abf948a6cf54e6c5ee94e82ffd1d9bbe3ea65"
+    },
+    {
+      "job": "fan__strict_ib__f1__s201",
+      "sha256": "ddcfb89cf71cb4dc890005291bf65602b6c34bb2b075748d39e38cb7ca183d17"
+    },
+    {
+      "job": "fan__strict_ib__f1__s202",
+      "sha256": "b8936d74983a164634db2e366858cb153801872ab1a316348c7f32677660a665"
+    },
+    {
+      "job": "fan__strict_ib__f1__s203",
+      "sha256": "90a12783646471a49303a87a5b9c043cd36c05edc9e9b877607ae01fafb42e3e"
+    },
+    {
+      "job": "ib__native__f0__s201",
+      "sha256": "17d4a8aa6b60683984fb726a250b3f5608af084adc78ecab931a1c8c889b9f85"
+    },
+    {
+      "job": "ib__native__f0__s202",
+      "sha256": "aeaa6b9c38bfa48f34af54fdbf87b87e3ecaaea3d05d36a8489397f976f07227"
+    },
+    {
+      "job": "ib__native__f0__s203",
+      "sha256": "3860e304f19793692b2c10dc410537a9004d16fc1204e6a094e7ec88446f67da"
+    },
+    {
+      "job": "ib__native__f1__s201",
+      "sha256": "45cf28977aa5c4c2a46dbb4be696ab03565ecfb3bb01a139ae49768b369c7242"
+    },
+    {
+      "job": "ib__native__f1__s202",
+      "sha256": "fff913885584a8d3c42c378b7930d45fa00e880f379fd4eb8c1b7d50fcda7cae"
+    },
+    {
+      "job": "ib__native__f1__s203",
+      "sha256": "9f2c65b12f09dd493505bbc0f66da21d5984fb3ce93a071eb6f240de43add15a"
+    },
+    {
+      "job": "ib__strict_ib__f0__s201",
+      "sha256": "6dd31e75c6d1d4abce4f56da25dc9ea6970bdf6117c0c52f0bc8baa2672ff09e"
+    },
+    {
+      "job": "ib__strict_ib__f0__s202",
+      "sha256": "c6f0043e480c45129e4aac1c5728190fc0fbc6304b36efa09647fe43a1b1d71d"
+    },
+    {
+      "job": "ib__strict_ib__f0__s203",
+      "sha256": "8023a45d5dd60d425ad5309823bd7b9bee7819d1f15f5898479d62774e4b0c2b"
+    },
+    {
+      "job": "ib__strict_ib__f1__s201",
+      "sha256": "c9a953794fdaec81e7f5565f862e77bd648980e0694ca88a8387d4a6195762b4"
+    },
+    {
+      "job": "ib__strict_ib__f1__s202",
+      "sha256": "f36b4040d66267c5cca03b3787cf1ba6c21120125457e29095dd6c71f94b8bef"
+    },
+    {
+      "job": "ib__strict_ib__f1__s203",
+      "sha256": "2b01d324064ebedca8252f63c6a2140d4bd8706a57f19f5e7704505349577ff5"
+    },
+    {
+      "job": "ce__native__f0__s201",
+      "sha256": "48242677f59a7273cd8c16ddee6b402d9d1edb9c48b474c42464181f8aef8c35"
+    },
+    {
+      "job": "ce__native__f0__s202",
+      "sha256": "e52026e5411d724c98164f2048286b8e0d91c0411da13388009446dab46c3e05"
+    },
+    {
+      "job": "ce__native__f0__s203",
+      "sha256": "8ed27ff44f2ffda5806df43d51938d65456f359752fbd8098fd52903b541ce8f"
+    },
+    {
+      "job": "ce__native__f1__s201",
+      "sha256": "f5f9a8ba72d71f1b8f3e4f599bf1000299f919e8005b2165cda3f867d6766011"
+    },
+    {
+      "job": "ce__native__f1__s202",
+      "sha256": "7bbd2066b40a9d6426ade6ec24de4f67c96d49663a86c1e494f9a34190d2f048"
+    },
+    {
+      "job": "ce__native__f1__s203",
+      "sha256": "d9aebdcd424235cd8044718751709411dc447669a31909088bd9d52e9136c4e7"
+    },
+    {
+      "job": "ce__strict_ib__f0__s201",
+      "sha256": "c09e9606916c84a2f05b309fa6a52f6e6a1a5f3134e33efd39fa0101bd394bd3"
+    },
+    {
+      "job": "ce__strict_ib__f0__s202",
+      "sha256": "f688179120f4b6632c34cf4c2cf816e8e847bdfcdc45e500d388d9c2743c0d28"
+    },
+    {
+      "job": "ce__strict_ib__f0__s203",
+      "sha256": "ef2e7ae03bb9c1a49fd30630e8236d51764c030a59689770637f2819a6a413e8"
+    },
+    {
+      "job": "ce__strict_ib__f1__s201",
+      "sha256": "5ec3d5b5d126bae70035fd7f7f2dbf5893f3eda391879756347a7f90091cfcee"
+    },
+    {
+      "job": "ce__strict_ib__f1__s202",
+      "sha256": "29189c8c49da394a53242921b8c19a7ec15f879661756056706ed590ae5cb97b"
+    },
+    {
+      "job": "ce__strict_ib__f1__s203",
+      "sha256": "59cca19a3762fd18a7240e8413311d8195f3110935e882d38d52de87afbbadf0"
+    },
+    {
+      "job": "dann__native__f0__s201",
+      "sha256": "15922f0cb9a75da97f611101219a8af5853fca2143d788ec1f14cc9287d07dac"
+    },
+    {
+      "job": "dann__native__f0__s202",
+      "sha256": "404912ffecf82afe4f23e7eb54ff892e5fef0bfe8e1413e4ad17f74c82c63003"
+    },
+    {
+      "job": "dann__native__f0__s203",
+      "sha256": "7eb3f29a3f806f0847a42d62642161b3f6ab8b1899c0ebc892cd30b774d4d862"
+    },
+    {
+      "job": "dann__native__f1__s201",
+      "sha256": "c56085bf635e1024285180eba738f37763aa2b50e9474ea12944b122b648e5a0"
+    },
+    {
+      "job": "dann__native__f1__s202",
+      "sha256": "7ee7f6140ba5742003da2d0995e29d55d344e675d8007c9a37f6e47a7366bd4e"
+    },
+    {
+      "job": "dann__native__f1__s203",
+      "sha256": "f7ed33817751ed85e19ec62f318ae87d4b11d9da3537c11d88b139e9f166c85d"
+    },
+    {
+      "job": "dann__strict_ib__f0__s201",
+      "sha256": "2e6b197f0b46c6c845e9c35ac42559e6c527b781c8ce8bfcfb531299967d3648"
+    },
+    {
+      "job": "dann__strict_ib__f0__s202",
+      "sha256": "1e4270be930856f8a9dd09b38cae9558bf51aa0464dd2aa6d4f7a74f6cf06e68"
+    },
+    {
+      "job": "dann__strict_ib__f0__s203",
+      "sha256": "87ccfb36f69124e3f8be2cc22ea590b2bf81bdbec5a5c18fe10bde8e308ab0ae"
+    },
+    {
+      "job": "dann__strict_ib__f1__s201",
+      "sha256": "45a04b8a6b4956b95d793129ec0cfe5dfd3b2bfd6d9875225ed5c5623257b04a"
+    },
+    {
+      "job": "dann__strict_ib__f1__s202",
+      "sha256": "cd24a6cae032ebe2511a306ca50112b7ed07fa4760317672cde7b501ff2447b3"
+    },
+    {
+      "job": "dann__strict_ib__f1__s203",
+      "sha256": "241b3c40623a9d046e63386d8179fd98513397a54591ab5e2b9aa05cddd8d86f"
+    },
+    {
+      "job": "ask__native__f0__s201",
+      "sha256": "1c0fe5e11efb5fb21a7ad386810cfa0974a610370597a529ecf95274554dbdc2"
+    }
+  ],
+  "no_prior_new_dev_reads": true,
+  "prior_source_access_events": 250,
+  "evaluate_now": "All four methods, both views, both folds, all three seeds (48), plus frozen H0 six; committed cohort seal required before any Dev packet.",
+  "evaluate_later": "All six ASK Native checkpoints together after cohort seal; no partial seed reporting.",
+  "no_native_training_changes_after_seeing_baseline_dev": true,
+  "no_parameter_or_selector_changes": true,
+  "confirm_blind_always_forbidden": true,
+  "no_new_hstem_or_architecture_search": true,
+  "analysis": {
+    "primary": "RX-equal packet accuracy",
+    "secondary": [
+      "RX-equal macro-F1",
+      "worst RX seed mean",
+      "fit SD",
+      "seed SD",
+      "within-fold seed SD"
+    ],
+    "pairs": [
+      "H0-CE",
+      "H0-DANN",
+      "H0-FAN",
+      "H0-IB",
+      "H0-ASK Native",
+      "DANN-CE",
+      "IB-FAN"
+    ],
+    "cluster_unit": "Unique RX identity, average three seeds first",
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 24016,
+    "uncertainty": "Conditional on fixed seeds and historically developed RX, no multiplicity adjustment",
+    "devices": "CPU FP32 network for immediate baseline/H0 evaluation while preserved GPU training runs; original float64 frontends retained; ASK later GPU FP32",
+    "all_target_packets_clean": true,
+    "no_target_augmentation_adaptation_or_fusion": true
+  },
+  "tests_sha256": "c37110db57afb47df812b34b77727e22914ad9cd417afcaba85dc016e866b931",
+  "code_sha256": {
+    "24-lora-external-audit/phase2/budget_update/common.py": "f174e5e5d1efe4bcec339faddf9f4e18e83f53aa6e20f75666781101e167203b",
+    "24-lora-external-audit/phase2/budget_update/controller.py": "74dc6cc531b3a3bab72655053a278ba172185c9e20b5ba861b4b4704cd93e808",
+    "24-lora-external-audit/phase2/budget_update/costs.py": "ff14bab9fc6c8dd5db3018151160dc806886da467f04c09d1b767f5f1860eb19",
+    "24-lora-external-audit/phase2/budget_update/evaluate.py": "d54e49073faf3582c29e6c57ec0000132d99ab9d21fb6d823e8821dafca092c3",
+    "24-lora-external-audit/phase2/budget_update/freeze.py": "bf727d564ebcb282516ac6a4b106f666e3b3ef9b0b97320160723d121756d1a8",
+    "24-lora-external-audit/phase2/budget_update/inference.py": "810ff6f6f90227ccb8991dc39bd4b7e07b71e82a694867e3a7ca855017825efc",
+    "24-lora-external-audit/phase2/budget_update/summarize.py": "04432350d16fe38b05ddf2bf0d727d5eb65b87d4e9aa5c42e744c2cca31ee738",
+    "24-lora-external-audit/phase2/budget_update/test_budget.py": "e15ca61cd9fe74164399f2af8cc13104048438b30b90612ffd1006216603943f",
+    "24-lora-external-audit/phase2/budget_update/train_next.py": "9c2b113c3fc0d2605e8bbbabbef1ce075d4f7937f0b48010b0d9356f2ccc47b2",
+    "24-lora-external-audit/phase2/launch.ps1": "408ef93f9d765eae4225ae57ee0f24321a220752cb360cd4852d4f98399798d8",
+    "13-mixer-cfo-mechanisms/models.py": "606243ff9462358f53a86d2908130c47f69c5dd9d1cfee669cbaf10c7b76e5a1",
+    "13-mixer-cfo-mechanisms/core.py": "a9db92f80e8e1bf1579cab900fabf085f5c33e018dffe6e27f1af64ee94dc527"
+  }
+}

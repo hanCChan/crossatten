@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "checks": [
+    "cohort partitions48+6 retain both folds/all seeds; whole Strict ASK arm excluded",
+    "all six deferred Strict ASK jobs denied by amended training entrypoint",
+    "blind/confirm/source-role/deferred-job denied before waveform IO",
+    "legal Dev requires committed canonical cohort seal",
+    "10-class Accuracy/Macro-F1 hand examples and packet order invariance",
+    "frozen H0 CPU strict weight load and source-probe batch/single consistency"
+  ],
+  "source_probe_packets": 2,
+  "h0_batch_single_max_abs": 7.128715515136719e-05,
+  "dev_reads": 0,
+  "confirm_blind_reads": 0,
+  "optimizer_steps": 0
+}
