@@ -402,3 +402,17 @@
  create mode 100644 24-lora-external-audit/phase2/runs/dann__strict_ib__f1__s203/metrics.json
  create mode 100644 24-lora-external-audit/phase2/runs/dann__strict_ib__f1__s203/progress.json
  create mode 100644 24-lora-external-audit/phase2/runs/dann__strict_ib__f1__s203/stdout_attempt1.log
+[exp/s24-lora-external-audit dc30e9e] S24 archive completed source-only fit ask__native__f0__s201
+ 16 files changed, 1156 insertions(+), 6 deletions(-)
+ create mode 100644 24-lora-external-audit/phase2/runs/ask__native__f0__s201/attempt1_timing.json
+ create mode 100644 24-lora-external-audit/phase2/runs/ask__native__f0__s201/config.json
+ create mode 100644 24-lora-external-audit/phase2/runs/ask__native__f0__s201/history_attempt1.csv
+ create mode 100644 24-lora-external-audit/phase2/runs/ask__native__f0__s201/metrics.json
+ create mode 100644 24-lora-external-audit/phase2/runs/ask__native__f0__s201/progress.json
+ create mode 100644 24-lora-external-audit/phase2/runs/ask__native__f0__s201/stdout_attempt1.log
+ create mode 100644 24-lora-external-audit/phase2/runtime/KEEP_AWAKE_STATUS.json
+ create mode 100644 24-lora-external-audit/phase2/runtime/stderr.log
+ create mode 100644 24-lora-external-audit/phase2/runtime/stdout.log
+[exp/s24-lora-external-audit 95a713b] S24 freeze ask after source-only pilot; retain registered configuration
+ 1 file changed, 26 insertions(+)
+ create mode 100644 24-lora-external-audit/phase2/freeze_ask.json
