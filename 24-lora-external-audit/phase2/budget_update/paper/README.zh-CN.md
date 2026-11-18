@@ -4,8 +4,11 @@
 
 ```powershell
 & D:/crossatten/.venv/Scripts/python.exe 24-lora-external-audit/phase2/budget_update/paper/plot_comparison.py
+& D:/crossatten/.venv/Scripts/python.exe 24-lora-external-audit/phase2/budget_update/paper/verify_predictions.py
 ```
 
 Accuracy图中的空心点是六个fold/seed的各自RX等权准确率，菱形是完整均值；它们不是六台独立设备。差值图采用RESULTS中全部预登记Accuracy配对和RX条件区间，不作多重比较校正。Native ASK未齐时不显示单个seed；Strict-IB ASK为延期。
 
 图是生成时报告的快照。后续Native ASK完成并更新RESULTS后，须重新运行此脚本更新图片。稿件解释与边界见[../EVIDENCE_SCOPE.zh-CN.md](../EVIDENCE_SCOPE.zh-CN.md)，逐包预测核验见生成后的`../PREDICTION_INTEGRITY.json`。
+
+`verify_predictions.py`仅核验baseline48与H0共54个模型的已保存logits：270个RX单元、540000条预测、所有方法/视图/seed的标签和packet rows一致性，以及独立NumPy重算的混淆矩阵、Accuracy、Macro-F1、交叉熵和报告均值。需本地忽略目录的预测NPZ，不上传波形或预测二进制。此核验不访问源波形、Dev波形、confirm或blind，也不改变统计分析。
