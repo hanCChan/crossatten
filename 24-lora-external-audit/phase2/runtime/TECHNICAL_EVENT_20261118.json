@@ -1,0 +1,17 @@
+{
+  "client_date": "2026-11-18",
+  "type": "Runtime infrastructure correction, registered training code unchanged",
+  "finding": "Windows Kernel-Power event42 reports System Idle sleep; Power-Troubleshooter event1 reports resume. The two sleep intervals match ASK epochs38 and148 wall-clock outliers.",
+  "sleep_intervals_china": [
+    {"start":"2026-11-17T01:27:13+08:00","resume":"2026-11-17T10:23:42+08:00"},
+    {"start":"2026-11-18T00:02:08+08:00","resume":"2026-11-18T09:06:50+08:00"}
+  ],
+  "action": "A separate Windows helper holds ES_CONTINUOUS|ES_SYSTEM_REQUIRED for the lifetime of the existing supervisor process; the request releases on helper or supervisor exit.",
+  "display_required": false,
+  "persistent_power_plan_changes": false,
+  "scientific_code_changes": false,
+  "registry_changes": false,
+  "optimizer_or_checkpoint_selection_changes": false,
+  "additional_scientific_fits": 0,
+  "additional_data_access": false
+}
