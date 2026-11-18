@@ -1,5 +1,7 @@
 # S24 计算预算修订：54项保留、ASK Strict-IB六项暂缓
 
+**当前恢复入口**：使用`./24-lora-external-audit/phase2/budget_update/resume_001.ps1`。54模型推理完成后的原汇总发生NumPy整数JSON序列化错误，追加修复见[TECHNICAL_FIX_001.json](TECHNICAL_FIX_001.json)。原冻结训练、统计、控制器和launch.ps1均未改写；新入口只为原汇总输出转换标量类型，继续接管同一Native worker。`CONTROLLER_FAILURE.json`及attempt1日志是保留的历史失败，当前状态见LIVE_STATUS与RECOVERY_001.json。不要与旧入口同时启动。
+
 本修订来自2026-11-18用户指示：保留当前正在运行的完整ASKNet；继续Native两折×三种子；六次Strict-IB ASK不再自动启动；优先统一评估已完成CE/DANN/FAN/IB的48个模型。依据是计算预算和研究优先级，变更前未读取本轮Dev。此前已查看的源验证成绩和历史开发信息明确保留暴露记录，不称完全未知配置。
 
 原pilot_registry.json、科学训练脚本、所有模型超参/种子/源验证选择规则及H0六个冻结模型均保持原样。AMENDMENT.json作为追加预算政策：原60项中保留54项，整体暂缓ASK Strict-IB的6项。DEFERRED.json将其标为未运行/NA，而非失败或0分；后续需要用户明确授权才恢复。没有按某个Dev分数选择性停止种子，没有增加HStem拟合或新结构搜索。

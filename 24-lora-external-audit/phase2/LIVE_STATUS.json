@@ -1,9 +1,22 @@
 {
-  "status": "RUNNING_SOURCE_ONLY",
-  "pid": 29292,
-  "active_job": "ask__native__f0__s201",
-  "completed": 48,
-  "registered": 60,
-  "failed_methods": [],
-  "dev_reads": 0
+  "status": "PRESERVING_ATTACHED_NATIVE_WORKER",
+  "pid": 40612,
+  "active_job": "ask__native__f0__s202",
+  "completed": 49,
+  "registered": 54,
+  "original_registered": 60,
+  "deferred": 6,
+  "deferred_scope": "ASK Strict-IB all six jobs",
+  "dev_reads": 270,
+  "confirm_reads": 0,
+  "blind_reads": 0,
+  "baseline_evaluation": {
+    "status": "COMPLETE",
+    "completed": 54,
+    "total": 54,
+    "device": "cpu",
+    "wall_seconds": 1652.940008900012,
+    "all_target_inference_report_only": true
+  },
+  "amendment_sha256": "8a86aa7578fa6f1bd535a38fc00178a46bcac51037aa1a8a0d10cee7cc8cd983"
 }

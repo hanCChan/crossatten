@@ -1,0 +1,17 @@
+{
+  "status": "TRAINING_SOURCE_ONLY",
+  "epoch": 63,
+  "train_tx_ce": 0.9559228134155273,
+  "train_hsic": 0.0,
+  "source_tx_ce": 1.5621751546859741,
+  "source_tx_acc": 0.30149999260902405,
+  "source_rx_ce": null,
+  "lr": 1e-05,
+  "best_epoch": 63,
+  "optimizer_steps": 3969,
+  "epoch_seconds": 445.83596270001726,
+  "total_seconds": 28353.041425000003,
+  "ask_k": 128,
+  "ask_probabilities": "[0.1815868318080902, 0.1791011542081833, 0.16163387894630432, 0.1584366410970688, 0.1605909764766693, 0.1586504727602005]",
+  "peak_bytes": 6111093248
+}
