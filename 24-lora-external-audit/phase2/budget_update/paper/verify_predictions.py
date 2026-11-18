@@ -58,5 +58,5 @@ report = {'status': 'PASS', 'checked_models': 54, 'checked_rx_cells': 270, 'pack
           'results_sha256': hashlib.sha256((root / 'RESULTS.json').read_bytes()).hexdigest(),
           'baseline_seal_sha256': hashlib.sha256((root / 'seal_baseline48.json').read_bytes()).hexdigest(),
           'predictions': checked}
-(root / 'PREDICTION_INTEGRITY.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+(root / 'PREDICTION_INTEGRITY.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline='\n')
 print(json.dumps({k: v for k, v in report.items() if k != 'predictions'}, ensure_ascii=False))
