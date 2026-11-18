@@ -1,0 +1,46 @@
+Traceback (most recent call last):
+  File "D:\crossatten\worktrees\s24-lora-external-audit\24-lora-external-audit\phase2\budget_update\summarize.py", line 72, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\crossatten\worktrees\s24-lora-external-audit\24-lora-external-audit\phase2\budget_update\summarize.py", line 54, in main
+    atomic_json(HERE/'RESULTS.json',dict(summary=summary,paired_comparisons=pairs,amendment_sha256=digest(HERE/'AMENDMENT.json'),
+  File "D:\crossatten\worktrees\s24-lora-external-audit\24-lora-external-audit\phase2\execution.py", line 19, in atomic_json
+    write_json(tmp,obj);os.replace(tmp,p)
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\crossatten\worktrees\s24-lora-external-audit\24-lora-external-audit\s24_common.py", line 22, in write_json
+    path.write_text(json.dumps(obj, indent=2, ensure_ascii=False) + '\n', encoding='utf-8', newline='\n')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "D:\python\Lib\json\encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "D:\python\Lib\json\encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "D:\python\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "D:\python\Lib\json\encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "D:\python\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "D:\python\Lib\json\encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "D:\python\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type int32 is not JSON serializable
+Traceback (most recent call last):
+  File "D:\crossatten\worktrees\s24-lora-external-audit\24-lora-external-audit\phase2\budget_update\controller.py", line 123, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\crossatten\worktrees\s24-lora-external-audit\24-lora-external-audit\phase2\budget_update\controller.py", line 78, in main
+    state(attached_job,'PRESERVING_ATTACHED_NATIVE_WORKER');monitor_cpu();time.sleep(10)
+                                                            ^^^^^^^^^^^^^
+  File "D:\crossatten\worktrees\s24-lora-external-audit\24-lora-external-audit\phase2\budget_update\controller.py", line 60, in monitor_cpu
+    summarize();publish('S24 publish sealed CE/DANN/FAN/IB and frozen H0 Dev comparisons under user budget amendment')
+    ^^^^^^^^^^^
+  File "D:\crossatten\worktrees\s24-lora-external-audit\24-lora-external-audit\phase2\budget_update\controller.py", line 51, in summarize
+    if result.returncode:raise RuntimeError('cohort summary failed')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: cohort summary failed

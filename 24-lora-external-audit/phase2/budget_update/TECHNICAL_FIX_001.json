@@ -1,0 +1,26 @@
+{
+  "status": "FROZEN_ENGINEERING_REPAIR",
+  "time": "2026-11-18T19:14:12+08:00",
+  "reason": "Completed 54-model inference; original summary failed only when writing NumPy int32 positive-pair count to JSON.",
+  "amendment_sha256": "8a86aa7578fa6f1bd535a38fc00178a46bcac51037aa1a8a0d10cee7cc8cd983",
+  "baseline_seal_sha256": "a1b5696ab0909fa3c320c6179536e84301c055095f2e7981030c67ce31b0cb12",
+  "original_code_unchanged": true,
+  "original_scientific_training_and_analysis_unchanged": true,
+  "repair": "Wrap only original summarize.atomic_json to recursively convert NumPy scalars with item(); UTF-8 text output; controller substitutes only this summary subprocess.",
+  "model_or_hyperparameter_changes": false,
+  "checkpoint_or_seed_changes": false,
+  "statistical_definition_changes": false,
+  "new_training_steps": 0,
+  "new_waveform_reads": 0,
+  "prior_inference_complete": 54,
+  "native_worker_preserved_pid": 42996,
+  "failure_evidence": {
+    "CONTROLLER_FAILURE.json": "323fedc2781ad0cb1bd7ff4b3afd56c5855c4d320d6ee84db1f712ebc91c150f",
+    "controller_stderr_attempt1.log": "d17820b71759d7d80c7b9ea0fa97509a4c6726156ad30e1de38ba617637e4439"
+  },
+  "self_test": "PASS: NumPy int32/int64/float64/bool round trip preserves native values; no waveform or model IO.",
+  "repair_code_sha256": {
+    "24-lora-external-audit/phase2/budget_update/technical_001.py": "2adbb1581e28386234ef853c237ad1394b87c6c9b321ce263af9f365b5808b52",
+    "24-lora-external-audit/phase2/budget_update/resume_001.ps1": "0c19f5abdb69718fe666750da52b3a57e7693b42c2067d89b7fb87be1a335430"
+  }
+}

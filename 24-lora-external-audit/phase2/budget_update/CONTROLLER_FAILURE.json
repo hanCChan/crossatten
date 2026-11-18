@@ -1,0 +1,6 @@
+{
+  "time": "2026-11-18T19:11:14+08:00",
+  "exception": "RuntimeError('cohort summary failed')",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\crossatten\\worktrees\\s24-lora-external-audit\\24-lora-external-audit\\phase2\\budget_update\\controller.py\", line 78, in main\n    state(attached_job,'PRESERVING_ATTACHED_NATIVE_WORKER');monitor_cpu();time.sleep(10)\n                                                            ^^^^^^^^^^^^^\n  File \"D:\\crossatten\\worktrees\\s24-lora-external-audit\\24-lora-external-audit\\phase2\\budget_update\\controller.py\", line 60, in monitor_cpu\n    summarize();publish('S24 publish sealed CE/DANN/FAN/IB and frozen H0 Dev comparisons under user budget amendment')\n    ^^^^^^^^^^^\n  File \"D:\\crossatten\\worktrees\\s24-lora-external-audit\\24-lora-external-audit\\phase2\\budget_update\\controller.py\", line 51, in summarize\n    if result.returncode:raise RuntimeError('cohort summary failed')\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: cohort summary failed\n",
+  "completed": 49
+}
