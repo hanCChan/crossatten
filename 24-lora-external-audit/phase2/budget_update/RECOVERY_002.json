@@ -1,0 +1,20 @@
+{
+  "status": "RECOVERED_AND_OPTIMIZER_STEP_OBSERVED",
+  "time": "2026-11-20T12:13:19+08:00",
+  "controller_pid": 4144,
+  "worker_pid": 39220,
+  "current_job": "ask__native__f1__s201",
+  "completed_fit_count": 51,
+  "completed_native_ask": 3,
+  "original_worker_log_evidence": "epoch 1 batch 0 / 63 is printed after backward, optimizer.step and step increment in frozen runner.py",
+  "original_frozen_code_hashes_pass": true,
+  "prior_and_new_repair_code_hashes_pass": true,
+  "completed_models_retrained": false,
+  "training_configuration_changed": false,
+  "new_dev_reads_for_repair": 0,
+  "baseline_dev_events_unchanged": 270,
+  "confirm_reads": 0,
+  "blind_reads": 0,
+  "ask_strict_ib_deferred": 6,
+  "repair_sha256": "d122d475bae0c3761e4544415d389872f2162c28dd99b96e6f45c8eea5c7156d"
+}
