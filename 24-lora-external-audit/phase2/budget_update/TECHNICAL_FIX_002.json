@@ -1,0 +1,30 @@
+{
+  "status": "FROZEN_ENGINEERING_REPAIR",
+  "time": "2026-11-20T12:10:26+08:00",
+  "reason": "WinError 206 during git add after third Native ASK fit completed; long command prevented queue continuation.",
+  "failure_time": "2026-11-19T15:36:37+08:00",
+  "failure_evidence_sha256": "ebb87cf50a2d727bdfebd68a04de522727a0fa7653cc87c31f5951dfa4ce8eeb",
+  "closed_stderr_sha256": "7c9f0face852fd23cf0081f3b3d3ca34959d6489177abe46303927c73e45e435",
+  "prior_repair_sha256": "3c9d2de6d3dba50265dffc1d6ce819ff24d4dfc3f0ca341d25b8ff6c0d692768",
+  "amendment_sha256": "8a86aa7578fa6f1bd535a38fc00178a46bcac51037aa1a8a0d10cee7cc8cd983",
+  "repair": "Replace only commit helper with NUL-delimited literal pathspec manifest for Git add/commit; use short staged-name query and exact path intersection; preserve unrelated staged edits.",
+  "original_scientific_code_hashes_pass": true,
+  "prior_repair_code_hashes_pass": true,
+  "checkpoint_or_training_configuration_changes": false,
+  "statistical_definition_changes": false,
+  "new_waveform_reads": 0,
+  "new_training_steps": 0,
+  "completed_fit_count_at_recovery": 51,
+  "completed_native_ask": [
+    "ask__native__f0__s201",
+    "ask__native__f0__s202",
+    "ask__native__f0__s203"
+  ],
+  "next_registered_job": "ask__native__f1__s201",
+  "strict_ask_still_deferred": true,
+  "test_sha256": "4b7bc427937b2bef5be788d79bb3850a3d0edc8e188bcc5411f943fe72809642",
+  "repair_code_sha256": {
+    "24-lora-external-audit/phase2/budget_update/technical_002.py": "7be2974f57c4995abe78dfaa131dfa47503ffae25a1780d3bb47955dc7e5f897",
+    "24-lora-external-audit/phase2/budget_update/resume_002.ps1": "0eb2a17cd75762356b09c32ab023e5bdf612a72cf273c642cbeee7212f9560c8"
+  }
+}

@@ -1,1 +1,25 @@
 warning: in the working copy of '24-lora-external-audit/phase2/runs/ask__native__f0__s202/stdout_attempt1.log', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of '24-lora-external-audit/phase2/runs/ask__native__f0__s202/stdout_attempt1.log', CRLF will be replaced by LF the next time Git touches it
+Traceback (most recent call last):
+  File "D:\crossatten\worktrees\s24-lora-external-audit\24-lora-external-audit\phase2\budget_update\technical_001.py", line 80, in <module>
+    resume()
+  File "D:\crossatten\worktrees\s24-lora-external-audit\24-lora-external-audit\phase2\budget_update\technical_001.py", line 57, in resume
+    controller.main()
+  File "D:\crossatten\worktrees\s24-lora-external-audit\24-lora-external-audit\phase2\budget_update\controller.py", line 96, in main
+    publish(f'S24 archive retained Native fit {jid}; Strict-IB ASK remains deferred')
+  File "D:\crossatten\worktrees\s24-lora-external-audit\24-lora-external-audit\phase2\budget_update\controller.py", line 20, in publish
+    commit(files,message)
+  File "D:\crossatten\worktrees\s24-lora-external-audit\24-lora-external-audit\phase2\execution.py", line 29, in commit
+    subprocess.run(['git','-C',str(ROOT),'add','--',*rels],check=True)
+  File "D:\crossatten\worktrees\s24-lora-external-audit\24-lora-external-audit\phase2\budget_update\technical_001.py", line 55, in run
+    return original_run(command, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\subprocess.py", line 548, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "D:\python\Lib\subprocess.py", line 1538, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 206] 文件名或扩展名太长。

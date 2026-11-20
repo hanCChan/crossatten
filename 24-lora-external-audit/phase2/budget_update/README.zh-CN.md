@@ -1,5 +1,7 @@
 # S24 计算预算修订：54项保留、ASK Strict-IB六项暂缓
 
+**2026-11-20最新恢复入口**：使用`./24-lora-external-audit/phase2/budget_update/resume_002.ps1`。第三个ASK Native已完成，但归档路径列表触发Windows WinError 206；追加修复[TECHNICAL_FIX_002.json](TECHNICAL_FIX_002.json)将Git add/commit改用NUL路径清单。已通过522文件、37083字符原命令压力测试，保留其他已暂存修改。科学代码和全部注册配置不变；第四至六个Native继续，Strict-IB仍延期。以下001入口说明保留为历史，不作为当前启动入口。
+
 **当前恢复入口**：使用`./24-lora-external-audit/phase2/budget_update/resume_001.ps1`。54模型推理完成后的原汇总发生NumPy整数JSON序列化错误，追加修复见[TECHNICAL_FIX_001.json](TECHNICAL_FIX_001.json)。原冻结训练、统计、控制器和launch.ps1均未改写；新入口只为原汇总输出转换标量类型，继续接管同一Native worker。`CONTROLLER_FAILURE.json`及attempt1日志是保留的历史失败，当前状态见LIVE_STATUS与RECOVERY_001.json。不要与旧入口同时启动。
 
 本修订来自2026-11-18用户指示：保留当前正在运行的完整ASKNet；继续Native两折×三种子；六次Strict-IB ASK不再自动启动；优先统一评估已完成CE/DANN/FAN/IB的48个模型。依据是计算预算和研究优先级，变更前未读取本轮Dev。此前已查看的源验证成绩和历史开发信息明确保留暴露记录，不称完全未知配置。
