@@ -76,3 +76,68 @@ ASK Strict-IB六项由用户按计算预算整体暂缓；不能据此声称完�
  create mode 100644 24-lora-external-audit/phase2/runs/ask__native__f1__s202/metrics.json
  create mode 100644 24-lora-external-audit/phase2/runs/ask__native__f1__s202/progress.json
  create mode 100644 24-lora-external-audit/phase2/runs/ask__native__f1__s202/stdout_budget_attempt1.log
+[exp/s24-lora-external-audit 5d8dfd6] S24 archive retained Native fit ask__native__f1__s203; Strict-IB ASK remains deferred
+ 14 files changed, 285 insertions(+), 6 deletions(-)
+ create mode 100644 24-lora-external-audit/phase2/runs/ask__native__f1__s203/attempt1_timing.json
+ create mode 100644 24-lora-external-audit/phase2/runs/ask__native__f1__s203/budget_authorization.json
+ create mode 100644 24-lora-external-audit/phase2/runs/ask__native__f1__s203/config.json
+ create mode 100644 24-lora-external-audit/phase2/runs/ask__native__f1__s203/history_attempt1.csv
+ create mode 100644 24-lora-external-audit/phase2/runs/ask__native__f1__s203/metrics.json
+ create mode 100644 24-lora-external-audit/phase2/runs/ask__native__f1__s203/progress.json
+ create mode 100644 24-lora-external-audit/phase2/runs/ask__native__f1__s203/stdout_budget_attempt1.log
+[exp/s24-lora-external-audit 4f12c32] S24 budget amendment: seal native_ask6 before report-only Dev evaluation
+ 1 file changed, 74 insertions(+)
+ create mode 100644 24-lora-external-audit/phase2/budget_update/seal_native_ask6.json
+[exp/s24-lora-external-audit 97097e7] S24 budget amendment: seal retained54 before report-only Dev evaluation
+ 1 file changed, 368 insertions(+)
+ create mode 100644 24-lora-external-audit/phase2/budget_update/seal_retained54.json
+# S24 预算修订后的统一 Dev 对比
+
+CE、DANN、FAN、IB共48个checkpoint与六个冻结H0在读取Dev前已整体封存。全部Dev推断无加噪、无适应、逐包分类；Native保留方法原生前处理，Strict-IB先统一投影。此为历史开发RX上的报告，不是新独立盲测。
+
+已完成的48个基线和H0采用CPU FP32网络推断（原CIS/投影float64保留），以便与当前GPU训练并行；ASK Native六模型完成后采用GPU FP32评估。硬件耗时另按同机GPU测量。
+
+## Native完整方法
+
+| 方法 | fit | RX等权Acc% ± fit SD | Macro-F1% | 最差RX均值% | 状态 |
+|---|---:|---:|---:|---:|---|
+|h0|6|97.333 ± 0.551|97.325|93.683|完成|
+|ce|6|93.535 ± 1.011|93.347|85.817|完成|
+|dann|6|94.208 ± 1.028|94.047|88.417|完成|
+|fan|6|72.555 ± 2.683|71.309|62.250|完成|
+|ib|6|73.533 ± 2.873|72.427|63.450|完成|
+|ask|6|65.092 ± 31.936|62.995|58.900|完成|
+
+## Strict-IB信息预算控制
+
+| 方法 | fit | RX等权Acc% ± fit SD | Macro-F1% | 最差RX均值% | 状态 |
+|---|---:|---:|---:|---:|---|
+|h0|6|97.333 ± 0.551|97.325|93.683|完成|
+|ce|6|94.702 ± 3.111|94.283|72.150|完成|
+|dann|6|94.632 ± 3.064|94.258|72.900|完成|
+|fan|6|75.827 ± 2.351|75.136|71.783|完成|
+|ib|6|79.810 ± 2.731|79.291|75.683|完成|
+|ask|0|NA|NA|NA|DEFERRED_BY_USER_BUDGET|
+
+## 预登记配对差值
+
+下表为A−B的准确率差；按唯一RX聚类、先平均种子、10000次bootstrap；条件95%区间没有多重比较校正。F1配对差及区间同时保存在RESULTS.json。
+
+| 视图 | A−B | 差值pp | RX条件95%区间pp | 正向fold/seed对 |
+|---|---|---:|---|---:|
+|native|h0−ce|+3.798|[+1.535, +6.028]|6/6|
+|native|h0−dann|+3.125|[+1.075, +5.103]|6/6|
+|native|h0−fan|+24.778|[+19.788, +29.392]|6/6|
+|native|h0−ib|+23.800|[+18.548, +28.547]|6/6|
+|native|h0−ask|+32.242|[+29.045, +34.918]|6/6|
+|native|dann−ce|+0.673|[+0.208, +1.233]|5/6|
+|native|ib−fan|+0.978|[-0.037, +2.195]|4/6|
+|strict_ib|h0−ce|+2.632|[+0.287, +6.942]|5/6|
+|strict_ib|h0−dann|+2.702|[+0.448, +6.833]|6/6|
+|strict_ib|h0−fan|+21.507|[+19.532, +23.262]|6/6|
+|strict_ib|h0−ib|+17.523|[+15.080, +19.718]|6/6|
+|strict_ib|dann−ce|-0.070|[-0.247, +0.152]|2/6|
+|strict_ib|ib−fan|+3.983|[+3.373, +4.582]|6/6|
+
+ASK Strict-IB六项由用户按计算预算整体暂缓；不能据此声称完成ASK的同带内信息预算比较。没有根据Dev成绩改变Native六项的种子、epoch、模型、前处理或checkpoint选择。HStem历史机制消融、±4样点敏感性与独立泛化边界保持原证据。
+

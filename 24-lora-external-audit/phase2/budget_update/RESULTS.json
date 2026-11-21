@@ -103,8 +103,22 @@
     {
       "view": "native",
       "method": "ask",
-      "status": "PENDING_COMPLETE_NATIVE_COHORT",
-      "fits": 0
+      "status": "COMPLETE_REPORT_ONLY",
+      "fits": 6,
+      "acc": 0.6509166666666668,
+      "macro_f1": 0.629954194201623,
+      "fit_sd": 0.31935599832579736,
+      "seed_sd": 0.22035159026731202,
+      "worst_rx": "rtl_1",
+      "worst_rx_acc": 0.5890000000000001,
+      "per_fold_acc": {
+        "0": 0.6747000000000001,
+        "1": 0.6271333333333332
+      },
+      "within_fold_seed_sd": {
+        "0": 0.2406247077920304,
+        "1": 0.4420106823746835
+      }
     },
     {
       "view": "strict_ib",
@@ -435,6 +449,62 @@
         "rtl_6": 0.30815349521348323,
         "rtl_7": 0.36839531637155526,
         "rtl_9": 0.23567533709492813
+      },
+      "no_multiple_comparison_adjustment": true
+    },
+    {
+      "view": "native",
+      "a": "h0",
+      "b": "ask",
+      "metric": "acc",
+      "delta": 0.3224166666666667,
+      "conditional_rx_cluster_ci": [
+        0.2904483333333333,
+        0.34918333333333335
+      ],
+      "unique_rx": 10,
+      "positive_fold_seed_pairs": 6,
+      "total_fold_seed_pairs": 6,
+      "worst_rx_delta": 0.20566666666666664,
+      "per_rx_delta": {
+        "b200_mini_1": 0.32933333333333337,
+        "b210_1": 0.3176666666666667,
+        "pluto_1": 0.20566666666666664,
+        "rtl_1": 0.387,
+        "rtl_2": 0.32083333333333336,
+        "rtl_3": 0.37566666666666665,
+        "rtl_5": 0.3261666666666667,
+        "rtl_6": 0.3186666666666666,
+        "rtl_7": 0.29233333333333333,
+        "rtl_9": 0.35083333333333333
+      },
+      "no_multiple_comparison_adjustment": true
+    },
+    {
+      "view": "native",
+      "a": "h0",
+      "b": "ask",
+      "metric": "macro_f1",
+      "delta": 0.3432914835137264,
+      "conditional_rx_cluster_ci": [
+        0.3092238926225365,
+        0.37316460864593093
+      ],
+      "unique_rx": 10,
+      "positive_fold_seed_pairs": 6,
+      "total_fold_seed_pairs": 6,
+      "worst_rx_delta": 0.22143506295351512,
+      "per_rx_delta": {
+        "b200_mini_1": 0.3496377258074444,
+        "b210_1": 0.3433519619628503,
+        "pluto_1": 0.22143506295351512,
+        "rtl_1": 0.41406514962701974,
+        "rtl_2": 0.33192819142180924,
+        "rtl_3": 0.4055528181722667,
+        "rtl_5": 0.3390392743504334,
+        "rtl_6": 0.34490343327793793,
+        "rtl_7": 0.30469957533592856,
+        "rtl_9": 0.37830164222805873
       },
       "no_multiple_comparison_adjustment": true
     },
