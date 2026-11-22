@@ -2,6 +2,8 @@
 
 基于 S24 `dde0ef9`，本阶段完成只读机制分析和论文材料。**新增训练 0 次，未启动 ASK Strict-IB 或 Long-Patch；没有新的独立采集或盲测。**
 
+最终状态见 [STATUS.json](STATUS.json)。`SOURCE_PROGRESS.json` 仅保留最初 H0/P0 的 12 模型进度；扩展后的完整 24 模型见 `MECHANISM_EXTENSION.json`。
+
 - [英文工作稿 PDF](output/pdf/hstem_tifs_draft.pdf)、[LaTeX 源码](paper/main.tex)、[参考文献](paper/references.bib)
 - [中文 Introduction / Contributions、限制与十项审稿问答](RESEARCH_NOTES.zh-CN.txt)
 - [主张—定义—实验—结果—局限矩阵](EVIDENCE_MATRIX.json)、[GO / STOP](GO_STOP.json)
@@ -28,4 +30,4 @@ H0/P0/S1/H1 各六个冻结模型，使用每折合法 Source RX 的原有留出
 
 公开内容包含聚合 CSV、注册与哈希、代码、七张主图、六组完整配对 PCA 图、正式英文表格和工作稿。波形、权重、逐包特征不上传。历史 S15–S24 文件保持原样。最终完整性审计见 `FINAL_AUDIT.json`。
 
-Long-Patch 审计扫描固定 504 个无数据结构候选，暴露参数匹配与秩/BN 的冲突。结论为停止自动训练；如后续确需一个六次训练的控制臂，须另行明确研究问题、冻结设计与权限。
+Long-Patch 审计扫描固定 504 个无数据结构候选。1% 参数阈值内的候选有秩 8 瓶颈；但不能据此断言没有合理对照。保持组数 8、采用宽度 64 可得到 138,346 参数（比 H0 多 3.48%）、秩 64 能力、相同支持和 Token 几何。它是可选的单臂六次开发控制，但内部宽度、BN 和 MACs 仍不匹配，不能证明纯层级因果。本阶段停止自动训练；未来执行须另行冻结设计与权限，不能按候选准确率挑结构。

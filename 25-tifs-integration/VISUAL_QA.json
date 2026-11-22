@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "manuscript_sha256": "3dae3ce0b0d7e1e48c01f1d84fcee3875e8f83aa14e99700d799b6a473c04e66",
+  "manuscript_sha256": "c03d63f4d04c619fc95fc067040e6c458340d5e24302013e8c28e72935a7026f",
   "reviewed_manuscript_pages": [
     1,
     2,
@@ -29,5 +29,6 @@
     "supp_pca_f1_s202",
     "supp_pca_f1_s203"
   ],
-  "scope": "All nine final PDF page renders and all six complete-cohort PCA PNGs visually inspected. Corrected box text overflow, clipped labels, legend placement and reference layout; final pages have readable tables, labels and no visible overlaps or clipping."
+  "scope": "All nine final PDF page renders and all six complete-cohort PCA PNGs visually inspected. Corrected box text overflow, clipped labels, legend placement and reference layout; final pages have readable tables, labels and no visible overlaps or clipping.",
+  "revision_review": "Reviewed updated Long-Patch discussion and final-page flow after adding nearby rank64-capable candidates; other figures and earlier pages unchanged."
 }

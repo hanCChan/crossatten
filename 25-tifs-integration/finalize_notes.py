@@ -97,7 +97,7 @@ def main():
       ('是否只是四层CNN加Transformer？','一般卷积Token与层级结构已有先例；本文贡献限定为RF流水线中的具体设计、参数匹配效果与可复现控制。尚未建立独特RF物理机制。','EVIDENCE_MATRIX.json;paper/main.tex'),
       ('是否重复论文1？','TrueIB、五通道、局部CNN、token几何与数据源明确继承；新问题是同MHA下的token形成与参数预算。论文1的OOB融合、混合器和预算不同，不作跨论文因果差值。','OOB_OVERLAP.json'),
       ('是否只因参数更多或算力更高？','P0与H0参数相差约0.43%，H0仍高2.687pp；但H0相对P0的MAC/延迟更高，必须写parameter efficiency而非全面compute efficiency。','S15/S22;MATCHED_COSTS.json'),
-      ('层级效应与局部支持是否已分离？','S1/P0和H1/S1有增量证据，但参数化与频响仍混杂。Long-Patch审计无法同时匹配容量、BN和MAC；只报告方案，不启动训练。','LONG_PATCH_AUDIT.json'),
+      ('层级效应与局部支持是否已分离？','S1/P0和H1/S1有增量证据，但参数化与频响仍混杂。Long-Patch组数8/宽度64保留秩64能力，参数仅多3.48%，是可行的未来单臂控制；内部宽度、BN和MAC仍不匹配。本轮不训练，也不能作纯层级因果证明。','LONG_PATCH_AUDIT.json'),
       ('是否证明Tokenizer去除了RX信息？','没有。H0在Tokenizer端绝对RX离散更大，Pre-MHA均值比值也不领先；最终特征更有利，只支持联合系统的表征结果。','MECHANISM_EXTENSION.json'),
       ('BN是否等于接收机归一化？','不能。H0-S2只有4/6正向并未满足原稳定门槛，统计量和优化效应未唯一分离；数值折叠也不等价于从头去BN训练。','S22/S23;EVIDENCE_MATRIX.json'),
       ('为何Strict优势主要来自Pluto？','这是已保留的RX×TX异质性。CE投影后在TX32/34/35/39严重混淆；原因尚未识别。B200-mini-1、B210-1的Native负差同样展示，不删RX。','per_tx_rx.csv;confusion_pairs.csv'),
@@ -111,7 +111,7 @@ def main():
       '联合实证：固定源预算下与Shen CE/DANN、FAN/IB适配和完整ASK比较，同时报告RX等权精度、最差RX、全部种子和GPU成本；该项是实验贡献而非独立算法。']
     text='S25 科研材料与GO/STOP说明\n\n日期：'+now()+'\n新增训练：0；HStem及历史模型保持冻结；独立新采集：用户确认暂无。\n\n一、中文Introduction\n\n'+intro+'\n二、中文Contributions\n\n'
     text+='\n'.join(f'{i+1}. {v}' for i,v in enumerate(contributions))
-    text+='\n\n英文Introduction与Contributions：见paper/main.tex的Introduction。\n\n三、GO / STOP\n\nGO：以参数效率、同协议系统效果和有边界的表征证据完成英文工作稿。\nSTOP：不自动训练Long-Patch或ASK Strict-IB；不宣称新独立RX、完整认证、普遍低延迟或唯一物理机制。\nLong-Patch保留原组数/宽度时161146参数，较H0约多20.5%；1%内候选的秩8瓶颈不适合作为便利弱对照。\n\n四、十个审稿质疑与证据回答\n\n'
+    text+='\n\n英文Introduction与Contributions：见paper/main.tex的Introduction。\n\n三、GO / STOP\n\nGO：以参数效率、同协议系统效果和有边界的表征证据完成英文工作稿。\nSTOP：不自动训练Long-Patch或ASK Strict-IB；不宣称新独立RX、完整认证、普遍低延迟或唯一物理机制。\nLong-Patch保留原组数/宽度时161146参数，较H0约多20.5%；1%内候选有秩8瓶颈。但组数8/宽度64为138346参数（+3.48%）、秩64能力，是可行的单臂六次未来控制；不自动执行，且不能隔离纯层级效应。\n\n四、十个审稿质疑与证据回答\n\n'
     for i,(q,a,e) in enumerate(questions,1):text+=f'{i}. {q}\n回答：{a}\n证据：{e}\n\n'
     text+='五、复现与限制\n\n先恢复registration.json中同SHA的历史checkpoint和原始缓存到登记位置；这些路径是本机只读工件路径，不能在跨机器复现时静默改写科学注册。代码、源预算、随机种子、权限和校验值提供复现实验依据，但没有授权重新分发大波形或全部权重。PCA包含全部六组、四模型，不挑图，且每幅有独立坐标系。当前英文稿为内部匿名工作稿，不代表创新性已通过审稿或投稿准备充分。\n'
     (HERE/'RESEARCH_NOTES.zh-CN.txt').write_text(text,encoding='utf-8',newline='\n')

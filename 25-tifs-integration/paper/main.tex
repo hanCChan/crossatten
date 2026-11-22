@@ -274,9 +274,9 @@ Thus zero padding and magnitude roundoff alone do not explain failure, which is 
 \subsection{An Unfitted Long-Patch Audit}
 H1--S1 already provides support-related evidence, with its confounds disclosed. We further audited freely learned kernel 340/stride 256/padding 42 candidates without fitting or RF data. They match 350 local support, 32-token geometry, and center 127.5.
 
-Keeping P0's groups 8/width 80 gives 161,146 parameters, about 20.5\% more than H0, and two total BN modules versus five. In a fixed groups/width grid, the within-1\% parameter match has width 8, a rank-at-most-8 linear bottleneck. Using it as a conveniently weak control would not isolate hierarchy. Adding artificial normalizers or pointwise stages introduces further changes.
+Keeping P0's groups 8/width 80 gives 161,146 parameters, about 20.5\% more than H0, and two total BN modules versus five. In a fixed groups/width grid, the within-1\% parameter match has width 8, a rank-at-most-8 linear bottleneck. This threshold does not imply that useful controls are infeasible: groups 8/width 64 gives 138,346 parameters, only 3.48\% more, with a rank-64-capable output. Groups 16/width 112 is 2.32\% below H0 but changes grouping.
 
-No Long-Patch fit is launched. Any later single-arm six-fit developmental control needs an explicitly reviewed, frozen question. Its outcome still would not uniquely isolate hierarchy. We do not add modules or searches to obtain a preferred mechanism.
+The groups 8/width 64 candidate is a feasible optional single-arm, six-fit developmental control. It changes internal width relative to P0 and retains two BN modules versus H0's five, so its outcome would not isolate hierarchy alone. No fit is launched here. Any later execution needs its own frozen design and data permissions; model choice has not used candidate accuracy.
 
 \subsection{Independence and Security Scope}
 No new acquisition is available. Current source, Dev, and historical Confirm RXs have development use; the companion used the old six-RX blind set. Existing Location filenames or download timestamps do not prove new independence.
