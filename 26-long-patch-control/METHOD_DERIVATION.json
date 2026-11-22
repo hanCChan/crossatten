@@ -1,0 +1,115 @@
+{
+  "time": "2026-11-22T20:23:11+08:00",
+  "status": "COMPLETE_ANALYTIC_NO_FIT",
+  "recurrence": {
+    "length": "floor((N+2p-d(k-1)-1)/s)+1",
+    "support": "R_l=R_(l-1)+(k_l-1)d_l J_(l-1)",
+    "jump": "J_l=s_l J_(l-1)",
+    "center": "c_l=c_(l-1)+((k_l-1)d_l/2-p_l)J_(l-1)"
+  },
+  "hierarchical_stages": [
+    {
+      "kernel": 8,
+      "stride": 4,
+      "padding": 2,
+      "input_channels": 32,
+      "output_channels": 48,
+      "length": 2048,
+      "scalar_coordinates": 98304,
+      "local_support": 18,
+      "token_jump": 4,
+      "center": 1.5,
+      "conv_weights": 12288,
+      "conv_biases": 48,
+      "conv_macs": 25165824
+    },
+    {
+      "kernel": 8,
+      "stride": 4,
+      "padding": 2,
+      "input_channels": 48,
+      "output_channels": 64,
+      "length": 512,
+      "scalar_coordinates": 32768,
+      "local_support": 46,
+      "token_jump": 16,
+      "center": 7.5,
+      "conv_weights": 24576,
+      "conv_biases": 64,
+      "conv_macs": 12582912
+    },
+    {
+      "kernel": 8,
+      "stride": 4,
+      "padding": 2,
+      "input_channels": 64,
+      "output_channels": 64,
+      "length": 128,
+      "scalar_coordinates": 8192,
+      "local_support": 158,
+      "token_jump": 64,
+      "center": 31.5,
+      "conv_weights": 32768,
+      "conv_biases": 64,
+      "conv_macs": 4194304
+    },
+    {
+      "kernel": 4,
+      "stride": 4,
+      "padding": 0,
+      "input_channels": 64,
+      "output_channels": 64,
+      "length": 32,
+      "scalar_coordinates": 2048,
+      "local_support": 350,
+      "token_jump": 256,
+      "center": 127.5,
+      "conv_weights": 16384,
+      "conv_biases": 64,
+      "conv_macs": 524288
+    }
+  ],
+  "accounting": [
+    {
+      "arm": "P0",
+      "params": 134266,
+      "tokenizer_params": 87184,
+      "tokenizer_conv_macs": 2785280,
+      "scalar_coordinates_after_spatial_projection": 2560,
+      "tokenizer_rank_upper_bound": 64,
+      "shared_frontend_conv_macs": 51118080,
+      "dispatcher_total_partial_macs": 55345792.0,
+      "other_supported_partial_macs": 1442432.0
+    },
+    {
+      "arm": "LP",
+      "params": 138346,
+      "tokenizer_params": 91264,
+      "tokenizer_conv_macs": 2916352,
+      "scalar_coordinates_after_spatial_projection": 2048,
+      "tokenizer_rank_upper_bound": 64,
+      "shared_frontend_conv_macs": 51118080,
+      "dispatcher_total_partial_macs": 55476864.0,
+      "other_supported_partial_macs": 1442432.0
+    },
+    {
+      "arm": "H0",
+      "params": 133690,
+      "tokenizer_params": 86608,
+      "tokenizer_conv_macs": 42467328,
+      "shared_frontend_conv_macs": 51118080,
+      "dispatcher_total_partial_macs": 95027840.0,
+      "other_supported_partial_macs": 1442432.0
+    }
+  ],
+  "scope": [
+    "Local support describes the convolutional path with frozen BN; training BN uses batch/spatial statistics.",
+    "TrueIB/FFT have global RF dependencies; this is not a physical isolated sample interval.",
+    "Coordinate counts quantify representation dimensions, not mutual information or TX sufficiency.",
+    "LP tokenizer is affine in its shared frontend input; HStem interleaves BN/GELU and convolutions. The complete networks are both nonlinear.",
+    "Input-dependent Jacobians distinguish parameterizations but do not establish an RF-specific invariant or generalization theorem.",
+    "Partial MACs exclude FFT, nonlinear and unsupported operations; lower parameters need not imply less compute."
+  ],
+  "new_fits": 0,
+  "new_waveform_reads": 0
+}

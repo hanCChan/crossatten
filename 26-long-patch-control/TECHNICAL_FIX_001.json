@@ -1,0 +1,19 @@
+{
+  "time": "2026-11-22T20:47:50+08:00",
+  "status": "FROZEN_TECHNICAL_PARSE_FIX_BEFORE_DEV",
+  "original_file": "s26_evaluate.py",
+  "original_sha256": "c6f86c6c61f68896a0f6cfd608a9d9a6ded164bba77217ff375e36d78458030b",
+  "corrected_file": "technical_evaluate_001.py",
+  "corrected_sha256": "bdfba3675798f78aa2ff7fbac73c72a3a1865363f75ef22c47cad81c1e69a7fd",
+  "resume_code_sha256": "e8904dd11c6d0b9b764a766dedaa6a9e489fa3515fdc5c87de0d785032885bf8",
+  "difference": "Delete exactly one unmatched closing parenthesis in the COSTS JSON write; no other source bytes or scientific behavior changed.",
+  "original_files_changed": false,
+  "protocol_changes": false,
+  "model_or_hyperparameter_changes": false,
+  "data_permission_changes": false,
+  "maximum_new_scientific_fits": 6,
+  "extra_fits": 0,
+  "preseal_dev_reads": 0,
+  "ast_check": "All active entrypoints and corrected module parse. Original syntax failure retained.",
+  "launch_rule": "Wait for the original six source fits and source seal; reuse all completed models. Do not reset any seed or alter selection. A failed fit requires separate engineering review."
+}
