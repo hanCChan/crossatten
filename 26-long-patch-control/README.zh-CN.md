@@ -12,7 +12,7 @@
 
 主要比较为 H0−LP，次要比较为 LP−P0。十个 RX 内先平均三种子，再固定 10,000 次 RX bootstrap；只有条件性解释。未显著优于不能解释成等效，Long-Patch 表现接近时应收窄层级收益的主张。
 
-当前恢复入口：`D:/crossatten/.venv/Scripts/python.exe -u 26-long-patch-control/technical_resume_001.py`。原 `s26_execute.py` 保留训练与封存入口；原评估文件末尾有一个多余括号，纯语法修复及全部 SHA 见 [TECHNICAL_FIX_001.json](TECHNICAL_FIX_001.json)。原登记文件不改字节，修复模块不改模型、训练或数据权限。本次后台修复入口等待原六组训练完成后接手评估，不重复拟合。
+当前恢复入口：`D:/crossatten/.venv/Scripts/python.exe -u 26-long-patch-control/resume.py`。入口检测已运行进程及已完成结果，避免重复启动同一批训练/评估。原 `s26_execute.py` 保留训练与封存入口；原评估文件末尾有一个多余括号，纯语法修复及全部 SHA 见 [TECHNICAL_FIX_001.json](TECHNICAL_FIX_001.json)。原登记文件不改字节，修复模块不改模型、训练或数据权限。本次后台修复入口等待原六组训练完成后接手评估，不重复拟合。
 
 逐模型进度在 `runs/LP_f*/live.json`，总体在 `LIVE_STATUS.json`；GitHub 进度是提交时快照，本地日志为实时状态。大波形、checkpoint、恢复状态与逐包预测留在本地，不上传。
 

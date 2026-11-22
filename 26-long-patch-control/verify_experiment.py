@@ -113,7 +113,8 @@ def main():
     costs=read(HERE/'COSTS.json');assert len(costs['rows'])==3
     for row in costs['rows']:
         for batch in row['batches'].values():assert len(batch['samples'])==15 and min(batch['samples'])>0
-    write(HERE/'EXPERIMENT_INTEGRITY.json',dict(status='PASS',time=now(),new_fits=6,new_optimizer_steps=150000,
+    write(HERE/'EXPERIMENT_INTEGRITY.json',dict(status='PASS',time=now(),new_fits=6,scientific_optimizer_steps=150000,
+        engineering_synthetic_optimizer_steps=4,
         models_evaluated=18,target_packet_predictions=180000,target_cells=90,unique_held_rx=10,
         all_model_selection_source_only=True,all_six_sealed_before_dev=True,all_seeds_rx_retained=True,
         checkpoint_source_metrics_recovered=source_checks,confusion_accuracy_f1_ce_recomputed=True,

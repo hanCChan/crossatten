@@ -51,17 +51,17 @@ c_l&=c_{l-1}+\left((k_l-1)/2-p_l\right)J_{l-1}.
 \end{align}
 The common front-end gives $R_0=11,J_0=1,c_0=0$. HStem consequently has supports $18,46,158,350$, lengths $2048,512,128,32$, and final center 127.5. Its tokenizer alone spans 340 frontend positions; 350 includes the shared front-end. Both P0 and Long-Patch use jump 256; their supports are 266 and 350. Matching center and span does not match intermediate boundary operations.
 
-\begin{table}[t]\centering
-\caption{HStem coordinate reduction after the shared front-end. These counts are dimensions, not information estimates.}
-\label{tab:compression}
-\begin{tabular}{lrrr}\toprule
-Position & Length & Channels & Coordinates\\\midrule
-Shared input &8192&32&262144\\
-Stage 1&2048&48&98304\\
-Stage 2&512&64&32768\\
-Stage 3&128&64&8192\\
-Stage 4&32&64&2048\\\bottomrule
-\end{tabular}\end{table}
+\begin{table*}[t]\centering
+\caption{HStem after the shared front-end. $R$ is nominal frozen-BN convolution-path support; coordinate counts are dimensions, not information estimates.}
+\label{tab:compression}\label{tab:arch}
+\begin{tabular}{lrrrrrrr}\toprule
+Position & Kernel & Stride & Pad & Channels & Length & $R$ & Coordinates\\\midrule
+Shared input &--&--&--&32&8192&11&262144\\
+Stage 1&8&4&2&48&2048&18&98304\\
+Stage 2&8&4&2&64&512&46&32768\\
+Stage 3&8&4&2&64&128&158&8192\\
+Stage 4&4&4&0&64&32&350&2048\\\bottomrule
+\end{tabular}\end{table*}
 
 Support here describes the convolutional path with frozen BN. Training BN also uses batch/spatial statistics, and TrueIB/FFT have global raw-waveform dependencies. Table~\ref{tab:compression} describes progressive coordinate reduction; it does not show that an equal fraction of TX information survives each stage. Learned strided filters also have no established antialiasing guarantee.
 
@@ -172,10 +172,17 @@ How a fixed RF representation becomes a token sequence can affect cross-receiver
 \end{abstract}'''
     abstract=abstract.replace('@@LONG@@',f"Long-Patch reaches {s['LP']['accuracy_pct']:.3f}\\%; HStem minus Long-Patch is {delta:+.3f} percentage points.")
     text=(src/'main.tex').read_text(encoding='utf-8')
+    text=text.replace(r'standardized log FFT magnitude, log amplitude, and $\operatorname{atan 2}(Q,I)/\pi$',
+        r'standardized $\log(1+|\mathrm{FFT}|)$, $\log(1+\sqrt{I^2+Q^2+\epsilon})$, and $\operatorname{atan2}(Q,I)/\pi$')
+    text=text.replace('FFT magnitude uses per-window log-domain mean and standard deviation; code preserves the original epsilon and FFT ordering.',
+        r'FFT magnitude is fftshift ordered and standardized per window using sample standard deviation, clamped below by $\epsilon=10^{-6}$. The same epsilon is used by RMS and amplitude construction. These inherited definitions are fixed for every tokenizer control.')
     text=re.sub(r'\\begin\{abstract\}.*?\\end\{abstract\}',lambda _:abstract,text,flags=re.S)
     text=replacement(text,r'\section{Introduction}',r'\begin{figure*}[t]',INTRO)
     text=replacement(text,r'\subsection{Relation to Cross-Receiver and Tokenization Methods}',r'\section{Hierarchical RF Token Formation}',RELATED)
     text=text.replace(r'\section{Experimental Protocol and Reproducibility}',MATHEMATICS+'\n\n'+r'\section{Experimental Protocol and Reproducibility}')
+    # Combine duplicate architecture/compression tables; retain both labels.
+    pattern=r'\\begin\{table\}\[t\]\\centering\s*\\caption\{HStem after the shared 32-channel front-end, initial length 8192\.\}.*?\\end\{table\}'
+    text,count=re.subn(pattern,'',text,count=1,flags=re.S);assert count==1
     table=[r'\begin{tabular}{lrrrrrr}',r'\toprule Arm & Params & Support & BN & Acc. $\pm$ fit SD & F1 & Worst RX\\\midrule']
     for a,param,support,bn in [('P0',134266,266,2),('LP',138346,350,2),('H0',133690,350,5)]:
         row=s[a];name='Long-Patch' if a=='LP' else a
@@ -201,11 +208,22 @@ All six checkpoints/configurations/histories were committed before new Dev infer
 
 @@IMPLICATION@@
 
+@@SOURCE_RANGE@@
+
 The primary practical rule required at least 0.5\,pp mean gain, a positive conditional RX lower bound, at least five of six positive fit differences, and positive means in both folds. These are developmental descriptive checks. Historical target exposure, reused source selection, and residual structural differences remain limitations. The full per-fit source/Dev results, selected epochs, and frozen registration appear in the supplement.
 '''
     lptext=lptext.replace('@@PAIRED@@',f"H0--Long-Patch is {delta:+.3f}\\,pp, conditional RX 95\\% interval $[{ci[0]:.3f},{ci[1]:.3f}]$, with {pair['positive_fit_pairs']}/6 positive paired means. Long-Patch--P0 is {secondary['mean_delta_pp']:+.3f}\\,pp, interval $[{secondary['conditional_rx_ci95_pp'][0]:.3f},{secondary['conditional_rx_ci95_pp'][1]:.3f}]$. Figure~\\ref{{fig:long}} shows the complete cohorts.")
     lptext=lptext.replace('@@IMPLICATION@@',implication)
+    source_accuracies=[read(HERE/'evidence'/f'LP_f{f}_s{seed}'/'metrics.json')['source_validation']['summary']['acc_mean']*100
+                       for f in (0,1) for seed in (201,202,203)]
+    lptext=lptext.replace('@@SOURCE_RANGE@@',f"The six selected source accuracies span {min(source_accuracies):.3f}--{max(source_accuracies):.3f}\\%. Source learning quality is retained in the interpretation: a weak source fit would not establish an exclusively cross-receiver failure or a representational impossibility.")
     text=text.replace(r'\subsection{Frozen Feature Geometry}',lptext+'\n'+r'\subsection{Frozen Feature Geometry}')
+    for label in ['source','costs']:
+        expression=r'\\begin\{table\*\}\[t\]\\centering\s*\\caption\{[^\n]*\}\s*\\label\{tab:'+label+r'\}.*?\\end\{table\*\}'
+        match=re.search(expression,text,re.S)
+        assert match,label
+        table_text=match.group().replace(r'\begin{table*}',r'\begin{table}').replace(r'\end{table*}',r'\end{table}')
+        text=text[:match.start()]+table_text+text[match.end():]
     # Detailed kernel/equivalence and metadata diagnostics move to the supplement.
     kernel_start=text.index(r'\subsection{Kernel Evidence and Its Limits}')
     kernel_end=text.index(r'\section{External Results, RX Heterogeneity, and Cost}',kernel_start)
@@ -281,7 +299,7 @@ Fold&Seed&Epochs&Best epoch&Source acc.(\%)&Dev acc.(\%)&Fit wall(s)\\\midrule
     rows=[]
     for fold in (0,1):
         for seed in (201,202,203):
-            fit=read(HERE/'runs'/f'LP_f{fold}_s{seed}'/'metrics.json')
+            fit=read(HERE/'evidence'/f'LP_f{fold}_s{seed}'/'metrics.json')
             dev=next(r['fit_accuracies_pct'][fold*3+[201,202,203].index(seed)] for r in result['summary'] if r['arm']=='LP')
             rows.append(f"{fold}&{seed}&200&{fit['best_epoch']}&{fit['source_validation']['summary']['acc_mean']*100:.3f}&{dev:.3f}&{fit['wall_seconds']:.1f}\\\\")
     text=pre+'\n'.join(rows)+r'''

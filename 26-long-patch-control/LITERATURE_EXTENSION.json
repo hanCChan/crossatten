@@ -1,0 +1,29 @@
+{
+  "time": "2026-11-22T20:59:53+08:00",
+  "status": "PRIMARY_SOURCES_CHECKED_NO_NEW_METHOD_SCORE",
+  "ma2025": {
+    "paper": "https://arxiv.org/html/2512.12070v1",
+    "pdf": "https://arxiv.org/pdf/2512.12070",
+    "checked_fig5_pdf_page": 6,
+    "author_code_index": "https://junqing-zhang.github.io/research/dataset-code/",
+    "bounded_code_search": [
+      "Exact title",
+      "arXiv2512.12070",
+      "DOI3630316",
+      "LoRa/Siamese/JieMa combinations"
+    ],
+    "author_code": "Not located in checked sources; not a proof of global nonexistence.",
+    "corrected_scope": "Unpretrained Siamese can in principle use current legal Source RX. External pretraining is an optional separate permission/budget question.",
+    "current_decision": "No qualified frozen adapter or score added in this six-fit control stage; implementation choices remain to be audited."
+  },
+  "primary_bibliography_sources": [
+    "https://junqing-zhang.github.io/research/rffi/rffi-pub-topics/",
+    "https://arxiv.org/abs/2506.09807",
+    "https://arxiv.org/abs/2207.03001",
+    "https://proceedings.mlr.press/v119/chen20j.html",
+    "https://ieeexplore.ieee.org/document/11421903/",
+    "https://sites.google.com/ohtsuki.ics.keio.ac.jp/www/publications/journals"
+  ],
+  "new_method_fits": 0,
+  "new_method_scores": 0
+}
