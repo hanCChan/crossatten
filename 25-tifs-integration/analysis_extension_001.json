@@ -1,0 +1,176 @@
+{
+  "time": "2026-11-22T15:48:20+08:00",
+  "status": "FROZEN_USER_STEERING_EXTENSION",
+  "new_fits": 0,
+  "parent_registration_sha256": "cf5d23adfa1c43435ea42b02fcdcad3bfdb465bb6440886eed29d87a2b21c545",
+  "initial_source_result_sha256": "20020f8734ec82f782bb3f6c38f5ba627b0fd1af202a0d21499cbd66b5f2aa57",
+  "reason": "User confirms no new capture; requests A/B/C read-only mechanism evidence with H0/P0/S1/H1. No automatic Long-Patch or other training.",
+  "prior_exposure": "Initial H0/P0 source geometry already observed; expanded comparisons remain exploratory.",
+  "additional_models": [
+    {
+      "id": "S1_f0_s201",
+      "arm": "S1",
+      "fold": 0,
+      "seed": 201,
+      "data_seed": 2808879044,
+      "params": 134266,
+      "checkpoint": "D:\\crossatten\\worktrees\\s22-mechanism-closure\\22-mechanism-closure\\runs\\p1__Shen__S1__f0__all__s201\\model.pt",
+      "checkpoint_sha256": "dda89868c693eae8cab1dd73e34099a8d3a6e4d8b744a3e1080eaf29c7ab448a"
+    },
+    {
+      "id": "S1_f0_s202",
+      "arm": "S1",
+      "fold": 0,
+      "seed": 202,
+      "data_seed": 2602222937,
+      "params": 134266,
+      "checkpoint": "D:\\crossatten\\worktrees\\s22-mechanism-closure\\22-mechanism-closure\\runs\\p1__Shen__S1__f0__all__s202\\model.pt",
+      "checkpoint_sha256": "7d032a125b4008457ad6f4230c0adf04185da30d00bc8eededcb99fdeca44032"
+    },
+    {
+      "id": "S1_f0_s203",
+      "arm": "S1",
+      "fold": 0,
+      "seed": 203,
+      "data_seed": 1569434962,
+      "params": 134266,
+      "checkpoint": "D:\\crossatten\\worktrees\\s22-mechanism-closure\\22-mechanism-closure\\runs\\p1__Shen__S1__f0__all__s203\\model.pt",
+      "checkpoint_sha256": "a801af05b45f444f12dc041669bd302165b61f73eb55cd8411eebf282e7cb1d6"
+    },
+    {
+      "id": "S1_f1_s201",
+      "arm": "S1",
+      "fold": 1,
+      "seed": 201,
+      "data_seed": 3016222868,
+      "params": 134266,
+      "checkpoint": "D:\\crossatten\\worktrees\\s22-mechanism-closure\\22-mechanism-closure\\runs\\p1__Shen__S1__f1__all__s201\\model.pt",
+      "checkpoint_sha256": "90c4f22e2684d4e0715a988e0d01788191249ecc05a1b1df1fbb417c54f94e51"
+    },
+    {
+      "id": "S1_f1_s202",
+      "arm": "S1",
+      "fold": 1,
+      "seed": 202,
+      "data_seed": 3680940992,
+      "params": 134266,
+      "checkpoint": "D:\\crossatten\\worktrees\\s22-mechanism-closure\\22-mechanism-closure\\runs\\p1__Shen__S1__f1__all__s202\\model.pt",
+      "checkpoint_sha256": "9022574ee687622426aec8952776bf7afc3784c83b565d6d60691cf99375545e"
+    },
+    {
+      "id": "S1_f1_s203",
+      "arm": "S1",
+      "fold": 1,
+      "seed": 203,
+      "data_seed": 1501995291,
+      "params": 134266,
+      "checkpoint": "D:\\crossatten\\worktrees\\s22-mechanism-closure\\22-mechanism-closure\\runs\\p1__Shen__S1__f1__all__s203\\model.pt",
+      "checkpoint_sha256": "2cd0b3cd3984ad56c61e661e4cd2a05027319fe368c69df2e57eaada9e6e31e2"
+    },
+    {
+      "id": "H1_f0_s201",
+      "arm": "H1",
+      "fold": 0,
+      "seed": 201,
+      "data_seed": 2808879044,
+      "params": 134266,
+      "checkpoint": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H1__f0__all__s201\\model.pt",
+      "checkpoint_sha256": "b08ba03cd023bf0e9cc34dfe73d0f7614817b58f743a97716ef5520635253f9a"
+    },
+    {
+      "id": "H1_f0_s202",
+      "arm": "H1",
+      "fold": 0,
+      "seed": 202,
+      "data_seed": 2602222937,
+      "params": 134266,
+      "checkpoint": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H1__f0__all__s202\\model.pt",
+      "checkpoint_sha256": "1902746e85fe655598ef2500ce6d92a067c12fe266a7b0d9da5dbf9cb9cfada4"
+    },
+    {
+      "id": "H1_f0_s203",
+      "arm": "H1",
+      "fold": 0,
+      "seed": 203,
+      "data_seed": 1569434962,
+      "params": 134266,
+      "checkpoint": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H1__f0__all__s203\\model.pt",
+      "checkpoint_sha256": "20747ad6d7dc81d6d02be1667edd53846669c6f9c70b57143bc405b0ed642ee1"
+    },
+    {
+      "id": "H1_f1_s201",
+      "arm": "H1",
+      "fold": 1,
+      "seed": 201,
+      "data_seed": 3016222868,
+      "params": 134266,
+      "checkpoint": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H1__f1__all__s201\\model.pt",
+      "checkpoint_sha256": "4e5d1c08764fffc0e3228808f56cf0641ed0e9350f0901ecf197ab49d3e6ff12"
+    },
+    {
+      "id": "H1_f1_s202",
+      "arm": "H1",
+      "fold": 1,
+      "seed": 202,
+      "data_seed": 3680940992,
+      "params": 134266,
+      "checkpoint": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H1__f1__all__s202\\model.pt",
+      "checkpoint_sha256": "130687b5831a951127c13480e9045eae81cf847d545ea5896dd51949e10e36db"
+    },
+    {
+      "id": "H1_f1_s203",
+      "arm": "H1",
+      "fold": 1,
+      "seed": 203,
+      "data_seed": 1501995291,
+      "params": 134266,
+      "checkpoint": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H1__f1__all__s203\\model.pt",
+      "checkpoint_sha256": "1c2cd9539e55928de91f831e47d864b5897bb193a5f62c08130ae6bd91cde247"
+    }
+  ],
+  "source_rule": "Same original last40/TX/RX validation rows, all folds/seeds, all three registered layer taps, unchanged per-packet L2 geometry.",
+  "margins": [
+    "True logit minus maximum wrong logit, all samples",
+    "Cosine feature/weight margin, classifier bias omitted only for this explicitly separate diagnostic"
+  ],
+  "metadata": {
+    "fields": [
+      "CFO",
+      "SNR",
+      "label"
+    ],
+    "role": "source_val_only",
+    "selected_rows_only": true,
+    "waveform_data_field_forbidden": true,
+    "schema": {
+      "CFO": [
+        1,
+        8000
+      ],
+      "SNR": [
+        1,
+        8000
+      ],
+      "label": [
+        1,
+        8000
+      ]
+    },
+    "associations": "Raw Spearman and TXxRX-cell-centered Spearman with raw and cosine margin; no p-values; finite entries only; range<=1e-12 yields NA. CFO absolute; SNR as provided. Never model inputs."
+  },
+  "kernels": "Reuse S23 high-frequency effective-kernel energy for P0/S1/H1 only; descriptive association across18 fits, confounded by arm; no RF hardware interpretation.",
+  "legacy_geometry_audit": "S21 class_geometry has only Dev/Confirm pairwise class-distance correlation/RMSE; it does not contain the requested source-validation normalized scatter at all registered taps. Reuse existing margins/error CSVs; compute missing source features only.",
+  "new_data_status": "User confirms no new capture: independent validation not run.",
+  "long_patch_status": "Audit/proposal only; no new fit allowed in this stage.",
+  "code_sha256": {
+    "25-tifs-integration/mechanism_extension.py": "d3ee4d001b48cf695c6a0f08b2c274218dfffe754555c4745872e44fcbff4b84",
+    "25-tifs-integration/register_extension.py": "ec0ba7741f298f564fdf45d10e7e39cdc3885b6d41da6194656b8a5b8bedfa89",
+    "22-mechanism-closure/s22_models.py": "b322334b00c7f653358229ddd3537b02c681e712f8894547c933a24604e44cb0",
+    "22-mechanism-closure/s22_core.py": "a8fbe78b62b48754196dad1132e1d6b440a0ba4e574990ba62676da9c69febf1"
+  },
+  "evidence_sha256": {
+    "23-hstem-mechanism-evidence/kernel_bands.csv": "b3c121e976425122554c97a44ba29f040172dc873728670f24dca2ca75fbfab6",
+    "22-mechanism-closure/tx_rx_metrics.csv": "d7f91fa0da83eddcea2fb08fc993be9c24c1eeefb19f20c5742fb1427c70b67c",
+    "21-hstem-mechanisms/class_geometry.csv": "e87d4f1eee96acf1dd279b84b0b7f4b58c79237777b5d31c7f487aa593990acd"
+  }
+}
