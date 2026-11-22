@@ -176,6 +176,9 @@ How a fixed RF representation becomes a token sequence can affect cross-receiver
         r'standardized $\log(1+|\mathrm{FFT}|)$, $\log(1+\sqrt{I^2+Q^2+\epsilon})$, and $\operatorname{atan2}(Q,I)/\pi$')
     text=text.replace('FFT magnitude uses per-window log-domain mean and standard deviation; code preserves the original epsilon and FFT ordering.',
         r'FFT magnitude is fftshift ordered and standardized per window using sample standard deviation, clamped below by $\epsilon=10^{-6}$. The same epsilon is used by RMS and amplitude construction. These inherited definitions are fixed for every tokenizer control.')
+    old_shift='Thus zero padding and magnitude roundoff alone do not explain failure, which is not unique to HStem. Time-domain phase and mixed time/frequency coordinates remain possibilities, not identified causes.'
+    assert text.count(old_shift)==1
+    text=text.replace(old_shift,'Sample deletion from a zero-filled input shift and FFT magnitude roundoff do not by themselves explain failure, which is not unique to HStem. Internal CNN boundary operations, position-dependent phase interactions, and mixed time/frequency coordinates remain unseparated possibilities, not identified causes.')
     text=re.sub(r'\\begin\{abstract\}.*?\\end\{abstract\}',lambda _:abstract,text,flags=re.S)
     text=replacement(text,r'\section{Introduction}',r'\begin{figure*}[t]',INTRO)
     text=replacement(text,r'\subsection{Relation to Cross-Receiver and Tokenization Methods}',r'\section{Hierarchical RF Token Formation}',RELATED)
