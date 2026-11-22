@@ -1,0 +1,346 @@
+{
+  "stage": "S25_TIFS_INTEGRATION",
+  "time": "2026-11-22T15:34:30+08:00",
+  "base_git": "dde0ef925f2e67c6b4c78cb0a93f5a3e75b1c4c1",
+  "new_fit_budget": 0,
+  "models": [
+    {
+      "id": "H0_f0_s201",
+      "arm": "H0",
+      "fold": 0,
+      "seed": 201,
+      "data_seed": 2808879044,
+      "params": 133690,
+      "checkpoint": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s201\\model.pt",
+      "checkpoint_sha256": "be14533e73c5b83c3534e09a5837dc013f5e5b001b95396984c8f6d4e8ec6833"
+    },
+    {
+      "id": "H0_f0_s202",
+      "arm": "H0",
+      "fold": 0,
+      "seed": 202,
+      "data_seed": 2602222937,
+      "params": 133690,
+      "checkpoint": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s202\\model.pt",
+      "checkpoint_sha256": "abf47db65b28d02f51bde927ba9a0a5473f445df4cbb53a5f0f26938af7334ca"
+    },
+    {
+      "id": "H0_f0_s203",
+      "arm": "H0",
+      "fold": 0,
+      "seed": 203,
+      "data_seed": 1569434962,
+      "params": 133690,
+      "checkpoint": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s203\\model.pt",
+      "checkpoint_sha256": "8abe846f047a4b215aeb1f5c57baad2e25b21614cb329b27e12f1a4e9e11e7cb"
+    },
+    {
+      "id": "H0_f1_s201",
+      "arm": "H0",
+      "fold": 1,
+      "seed": 201,
+      "data_seed": 3016222868,
+      "params": 133690,
+      "checkpoint": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s201\\model.pt",
+      "checkpoint_sha256": "0996333761c13f30703acb0e3051ff676ea1f5dfa6fb1f0b04b4ccc3a7a48119"
+    },
+    {
+      "id": "H0_f1_s202",
+      "arm": "H0",
+      "fold": 1,
+      "seed": 202,
+      "data_seed": 3680940992,
+      "params": 133690,
+      "checkpoint": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s202\\model.pt",
+      "checkpoint_sha256": "75b252c7984d013eba842b0691b44a7f3af96bbb830aba3617823d4f0c4048c9"
+    },
+    {
+      "id": "H0_f1_s203",
+      "arm": "H0",
+      "fold": 1,
+      "seed": 203,
+      "data_seed": 1501995291,
+      "params": 133690,
+      "checkpoint": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s203\\model.pt",
+      "checkpoint_sha256": "fec5bfade4d1d90faf89dc6f5b42dec243e3a7e3f2cb06b15cd255bd79f17314"
+    },
+    {
+      "id": "P0_f0_s201",
+      "arm": "P0",
+      "fold": 0,
+      "seed": 201,
+      "data_seed": 2808879044,
+      "params": 134266,
+      "checkpoint": "D:\\crossatten\\worktrees\\s15-hstem-attribution\\15-hstem-attribution\\runs\\p1__Shen__C2_lite_mha__f0__all__s201\\model.pt",
+      "checkpoint_sha256": "855613f64f3f8b7de8ab1a6521c209f6cc406386362c297168dfadcc120da6bb"
+    },
+    {
+      "id": "P0_f0_s202",
+      "arm": "P0",
+      "fold": 0,
+      "seed": 202,
+      "data_seed": 2602222937,
+      "params": 134266,
+      "checkpoint": "D:\\crossatten\\worktrees\\s15-hstem-attribution\\15-hstem-attribution\\runs\\p1__Shen__C2_lite_mha__f0__all__s202\\model.pt",
+      "checkpoint_sha256": "65b0840e3020bdd7c8c005603e580e4fdbfbcedb510612a4201cb3b1b807d944"
+    },
+    {
+      "id": "P0_f0_s203",
+      "arm": "P0",
+      "fold": 0,
+      "seed": 203,
+      "data_seed": 1569434962,
+      "params": 134266,
+      "checkpoint": "D:\\crossatten\\worktrees\\s15-hstem-attribution\\15-hstem-attribution\\runs\\p1__Shen__C2_lite_mha__f0__all__s203\\model.pt",
+      "checkpoint_sha256": "2e84d128b9b6381296249ce20194da743bdd848aced13ba5216621f2f72c2467"
+    },
+    {
+      "id": "P0_f1_s201",
+      "arm": "P0",
+      "fold": 1,
+      "seed": 201,
+      "data_seed": 3016222868,
+      "params": 134266,
+      "checkpoint": "D:\\crossatten\\worktrees\\s15-hstem-attribution\\15-hstem-attribution\\runs\\p1__Shen__C2_lite_mha__f1__all__s201\\model.pt",
+      "checkpoint_sha256": "3454f0e2e0e21a4099abbe17b2af37311b9178f2611c6cf8609abf82d617f57f"
+    },
+    {
+      "id": "P0_f1_s202",
+      "arm": "P0",
+      "fold": 1,
+      "seed": 202,
+      "data_seed": 3680940992,
+      "params": 134266,
+      "checkpoint": "D:\\crossatten\\worktrees\\s15-hstem-attribution\\15-hstem-attribution\\runs\\p1__Shen__C2_lite_mha__f1__all__s202\\model.pt",
+      "checkpoint_sha256": "eeaa364efe07b3a1621b8813d0f42709cbac7d28a84858c4bafc51b87221a617"
+    },
+    {
+      "id": "P0_f1_s203",
+      "arm": "P0",
+      "fold": 1,
+      "seed": 203,
+      "data_seed": 1501995291,
+      "params": 134266,
+      "checkpoint": "D:\\crossatten\\worktrees\\s15-hstem-attribution\\15-hstem-attribution\\runs\\p1__Shen__C2_lite_mha__f1__all__s203\\model.pt",
+      "checkpoint_sha256": "452159cedef2ae6383ab99295b880130b049c0a423ae30c7d539f0ca9ff8ccda"
+    }
+  ],
+  "source_caches": {
+    "b210_1": {
+      "fold": 0,
+      "rx": "b210_1",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "0a92cefcfe90951dee5bd8dbc13a9dfdb13f81307ea40dc7a7e92f5e89be48be"
+    },
+    "rtl_1": {
+      "fold": 0,
+      "rx": "rtl_1",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "2ff59bff709381c738081cb1d1b8eac2908f17adb53707ee41ebd7fdb48b3531"
+    },
+    "rtl_3": {
+      "fold": 0,
+      "rx": "rtl_3",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "b5ff2424922f8bb1a506ecd078cca93fc23c3f5af8d691aa4cabfe70f6205887"
+    },
+    "rtl_6": {
+      "fold": 0,
+      "rx": "rtl_6",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "c2353b94971ac97445f10247e823e7a18152d21bf70c80fbd053f57c80ec3b87"
+    },
+    "rtl_9": {
+      "fold": 0,
+      "rx": "rtl_9",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "1595e96fbb97bd73f59df90dddf6a9cf6865b94625e1f2ac2125e3e38466bae5"
+    },
+    "b200_mini_1": {
+      "fold": 1,
+      "rx": "b200_mini_1",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "4171c447ddc8f1d3b4916a99905e964592147eabda8578bd90755e6cea6948f7"
+    },
+    "pluto_1": {
+      "fold": 1,
+      "rx": "pluto_1",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "81b791e6a0cad0946f4de3d95b79c4206e66c3c977f2d01d10c919e06ac7a80f"
+    },
+    "rtl_2": {
+      "fold": 1,
+      "rx": "rtl_2",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "2dbab8fdba1dadfda82e5d68de7deea593850cd04e7922814ad42286864a8cf9"
+    },
+    "rtl_5": {
+      "fold": 1,
+      "rx": "rtl_5",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "4465534293ebb620bb298ff0e408621f4745f966212112e9a8ca53b912c86ac6"
+    },
+    "rtl_7": {
+      "fold": 1,
+      "rx": "rtl_7",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "413bfb04ddfa1aecbb4c32278c16c0440ac84dc6e1642711a87bd1574b2bf06d"
+    }
+  },
+  "prior_exposure": "All S15-S24 Dev results and previous source-validation diagnostics already seen; this is exploratory, not independent preregistered confirmation.",
+  "source_rule": "Only original source-val last40/TX/RX; five source RX/fold; all 2fold x3seed xH0/P0; no noise, adaptation or optimization.",
+  "primary_geometry": "Final 64D classifier input, per-packet L2 normalized; balanced between-TX / TX-conditional RX centroid / within-cell scatter decomposition.",
+  "secondary_geometry": [
+    "Mean tokenizer output",
+    "Mean pre-MHA output"
+  ],
+  "epsilon": 1e-12,
+  "report": "All six paired differences, raw scatter terms and ratios; no hypothesis selection, p-values or new generalization claims.",
+  "per_rx": "Existing saved S24 confusion matrices only; all RX/TX/seed. Pluto contribution is a post-hoc descriptive decomposition, no exclusions or changes to primary tables.",
+  "costs": "H0/P0 f0seed201; 1/128 batch; FP32 TF32-off; 3 warmup15 samples; synthetic input seed25025; separate benchmark session.",
+  "independent_data": "No qualified new capture identified yet; metadata audit and closed evaluation gate only until provenance and enrolled-TX identity are available.",
+  "new_dev_waveform_reads": 0,
+  "confirm_blind_forbidden": true,
+  "ask_strict_ib_still_deferred": true,
+  "code_sha256": {
+    "25-tifs-integration/s25_common.py": "e224541b051b7674ae68f0c33bcd96d728c4ff23f94aad5772e35bde142fbc6d",
+    "25-tifs-integration/geometry_stats.py": "5f97cf3a53533b59ee2b86c433257d45952b41e484eb5608417e5cc503d64728",
+    "25-tifs-integration/source_geometry.py": "7c8b00f287f8cb2a1b5c290d9e37792eaa81fa791e8a55362f225a386eef2726",
+    "25-tifs-integration/register_analysis.py": "400718294fb1b88f47e879383ed769bb05c28956d1a33b8bf573e7477db3ef56",
+    "25-tifs-integration/test_source_geometry.py": "841aacb7bd49feb56beeee7023830a052cb0ee112ff1f57f859e0ece9f72f9a4",
+    "25-tifs-integration/per_rx_analysis.py": "e454f3aebbe5c9f9c00a45388b092520e09de5c9ca1ab9be1b11f97f9c466070",
+    "lib/legacy_rfhstu/cnn_stem.py": "b3a8944c96b354d295a96d84876693e95433f67616e23d2804219d0fa1c2762a",
+    "lib/legacy_rfhstu/features.py": "1e9e5aa828adbb382c604ebf7b1bd429c79893ea1169afddaa14596a6c0d5378",
+    "lib/legacy_rfhstu/losses.py": "a0ba7f42040203289593ba6a9363f27ea19d5152d8813979a7018cc152e78e28",
+    "lib/legacy_rfhstu/mixstyle.py": "687174caeff6f256b2661399ab70aede396d5ea51af4e312dcbacc01235b94a5",
+    "lib/legacy_rfhstu/models.py": "ebb638fac3392fec36bace7e2445ab6d27ef4e3b5adb2c06b35c8bc82f506666",
+    "lib/legacy_rfhstu/multiscale.py": "de51929e7917e793e814319a88b91ef0b17354e4c7614065172e082f16833e35",
+    "lib/legacy_rfhstu/oob_fusion.py": "030f2886c9a84282eb7e20ce5d318f528e8bfc20902c4b4a17315686ea290259",
+    "lib/legacy_rfhstu/__init__.py": "f78366d19d77282713f4944bc4e8fbdcbb138aac9849a0acf79459f4491dd9f5",
+    "lib/xa/aggregate.py": "8995baeff876f427338836ad0b2d53de01f95e95148b851067f498d35f592e38",
+    "lib/xa/bench.py": "3a94fe229e5b43f45b15ca2f1a06e179b0212f282ea58671e71c718161d20ba7",
+    "lib/xa/data.py": "ff861d46e508d807996a924d4439134416b16ba6507856a7335c65d9e4cfc3cb",
+    "lib/xa/evaluate.py": "365998cf59196e5ebbdad3b34132fe1dfb2a4a2b988c82d660715471167734aa",
+    "lib/xa/explore_models.py": "bcc1616b5fc6ea533183b4c3a9538748a663a1b321bd748a33870b4ef8116467",
+    "lib/xa/explore_train.py": "8e4361d2b21546f5f5b5ba26adccd57618680c720db734561802b8246a33babe",
+    "lib/xa/frontends.py": "967e28c05f168341b4710e4b2253d77b93d92bc9a3dd515fdddaa35e81c2013f",
+    "lib/xa/guard.py": "80562f5a0893be3a3e91cb80ef4636a6b24eb0c76bfa59d3566574633e5fff54",
+    "lib/xa/jobs.py": "ef8ac595d7a567c18d5e726b2fe70e9942628e709bf1453dfe0df5e9d07233f0",
+    "lib/xa/launch.py": "71ca1656dcccf4d26455de6b999de42b2482f73b738a37fca52f354ccec6d4a2",
+    "lib/xa/models.py": "322049d67d19d196dca8a722fda9de433d846fe1aa3d6d8439c49adeba6554bf",
+    "lib/xa/models2.py": "e9c3364868955e6996645a823187dadb553a2a95139e809d43055a93c53eaa23",
+    "lib/xa/models3.py": "bade67f8ad50b64c132197d21a86c1897a8c27976a7b8490d2e7131ff025cbba",
+    "lib/xa/paper_models.py": "7c09adc3b481e5b13eeccb93731a00573f16a98f5d35c490a1d5082707c550bd",
+    "lib/xa/paper_run.py": "4c1bcdf2e98c974c6e03677b69881ea378dc3406c0d9f8a7bbe471290389fec6",
+    "lib/xa/paper_train.py": "e59cab54045ef6cd27a168e937e7571456ad3d2405183efc605e8308e3ed80c8",
+    "lib/xa/run_job.py": "534b8f7aa2c8c54c12eb5881850897fa2a69280cde004c84ede19532b0cb576b",
+    "lib/xa/train.py": "906a7fd0a7bbb61fea86e03bcf9b52228a5b26851e53fa904d497be330daa96e",
+    "lib/xa/wisig.py": "b4127fba87f5603704c92d2221743c8dedf6898e45c8216b9ddb84b32f42ad67",
+    "lib/xa/__init__.py": "ca199705017e2d6d6b037d4d732f7caec7d7dff190c77a3d94c0cfaf515ab492",
+    "13-mixer-cfo-mechanisms/models.py": "606243ff9462358f53a86d2908130c47f69c5dd9d1cfee669cbaf10c7b76e5a1",
+    "13-mixer-cfo-mechanisms/core.py": "a9db92f80e8e1bf1579cab900fabf085f5c33e018dffe6e27f1af64ee94dc527",
+    "15-hstem-attribution/s15_models.py": "0d361cf9ac5ce2794975827e2b89a31615d4a1eaa171f5c073d1c7afffe810d4",
+    "15-hstem-attribution/s15_core.py": "e37958e21f579314680a6ac1d0b35302f6a5b1e2307fedf336af5c335002a195",
+    "21-hstem-mechanisms/s21_models.py": "5dea148df54a7db8c2aba1f5190340e913330f18b59610c1a7869fc07baea28a",
+    "21-hstem-mechanisms/s21_core.py": "7c15bb0a3e64444be6146627252897d2c0e0489352d5ac5a4f673a40d53acf0f"
+  },
+  "evidence_sha256": {
+    "configs/protocol.json": "913d38626d9bcaa285b0ba7816bd8e863a91778f1fc62e4dd7d27c70415a119a",
+    "15-hstem-attribution/architecture_search.json": "56a749bdf8fd346a55f9d900913acd76915055a6829e46f358031a04f55ef2ad",
+    "23-hstem-mechanism-evidence/registration.json": "5cdd52c1585043c0310d721b6d66ff2c1bdbac9ec32489c0907796691fba3dd6",
+    "23-hstem-mechanism-evidence/PAPER_OVERLAP_REVIEW.zh-CN.md": "3d63ba9adfd3cb31f5bc17686bccae3dca04261eb0dfeeaf8d59c426ba7e6725",
+    "24-lora-external-audit/phase2/budget_update/RESULTS.json": "495484244654ffb553cd70f962708721caa8ab7287b6c016fb4457d3373d5aca",
+    "24-lora-external-audit/phase2/budget_update/COSTS.json": "9b782f2cc825c38beb3eb684f5aa5b00362f1a91060286fbb0a7a2d134fcdfeb",
+    "24-lora-external-audit/DATA_AUDIT.json": "2f1d54ee3f7db6f3fe8ea8c8b34f5d51aa09394be1aad3161f442be29efa0e7e"
+  }
+}
