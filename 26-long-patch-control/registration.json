@@ -1,0 +1,430 @@
+{
+  "stage": "S26_LONG_PATCH_CONTROL",
+  "time": "2026-11-22T20:18:16+08:00",
+  "base_git": "657bdaa0aa13b5222dc68aeb698372ecc839c5fa",
+  "authority": "2026-11-22 user asks to execute the attached follow-up plan, including the single Long-Patch six-fit control. Prior S25 no-fit restriction remains historical, not changed retroactively.",
+  "maximum_new_fits": 6,
+  "jobs": [
+    {
+      "arm": "LP",
+      "fold": 0,
+      "seed": 201
+    },
+    {
+      "arm": "LP",
+      "fold": 0,
+      "seed": 202
+    },
+    {
+      "arm": "LP",
+      "fold": 0,
+      "seed": 203
+    },
+    {
+      "arm": "LP",
+      "fold": 1,
+      "seed": 201
+    },
+    {
+      "arm": "LP",
+      "fold": 1,
+      "seed": 202
+    },
+    {
+      "arm": "LP",
+      "fold": 1,
+      "seed": 203
+    }
+  ],
+  "architecture": {
+    "arm": "LP",
+    "groups": 8,
+    "mid": 64,
+    "kernel": 340,
+    "stride": 256,
+    "padding": 42,
+    "params": 138346,
+    "reference_h0_params": 133690,
+    "relative_parameter_increase": 0.034826838207794086,
+    "local_support": 350,
+    "token_shape": [
+      32,
+      64
+    ],
+    "bn_layers": 2,
+    "rank_upper_bound": 64
+  },
+  "prior_exposure": "All S15-S25 target results have been observed. This is a new developmental control, not an independent confirmatory experiment.",
+  "selection": "The single groups8/width64 candidate proposed in S25; no candidate accuracy search, extra arms or replacement seeds.",
+  "training": {
+    "epochs": 200,
+    "batch": 64,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0005,
+    "warmup_epochs": 5,
+    "schedule": "Original per-step cosine",
+    "augmentation": "Original AWGN0..50dB",
+    "checkpoint": "minimum clean source RX-equal CE",
+    "data_seed": "stable_seed(P-H5x160,fold,seed)",
+    "permutation_rng": "cuda seed=data_seed",
+    "noise_rng": "cuda seed=data_seed+1",
+    "tokenizer_rng": "CPU stable_seed(S26-LongPatch,data_seed); CPU/CUDA training RNG otherwise preserved",
+    "tf32_matmul": false,
+    "tf32_cudnn": true,
+    "recovery": "Atomic epoch model/AdamW/RNG/history snapshot; continue same seed/epoch, no restart search"
+  },
+  "permissions": {
+    "source": "Original200 packets/TX/RX,160train40val,5sourceRX/fold",
+    "dev": "Report only after all6 checkpoint/config/history hashes sealed and committed; LP/H0/P0 common GPU inference",
+    "confirm": false,
+    "old_blind": false,
+    "new_independent_capture": false,
+    "ask_strict_ib": false
+  },
+  "statistics": {
+    "primary": "H0 minus LP RX-equal Accuracy pp",
+    "secondary": "LP minus P0 Accuracy pp; F1, perRX/TX and costs descriptive",
+    "pairing": "Same fold/seed and10 unique held RX; average3seeds withinRX",
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 26026,
+    "uncertainty": "Conditional RX bootstrap only; no new acquisition/architecture-selection uncertainty or multiplicity correction",
+    "practical_rule": "For bounded consistent H0 advantage: mean>=0.5pp, conditional lowerCI>0, at least5/6 positive fit differences, both fold means positive. Otherwise report criterion not met; not proof of equality.",
+    "interpretation": "LP matching H0 narrows hierarchy attribution; H0 advantage limits support-only sufficiency within this arm. Width, grouping factorization, BN, nonlinear depth and compute remain confounded in either outcome."
+  },
+  "references": [
+    {
+      "id": "H0_f0_s201",
+      "arm": "H0",
+      "fold": 0,
+      "seed": 201,
+      "data_seed": 2808879044,
+      "params": 133690,
+      "checkpoint": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s201\\model.pt",
+      "checkpoint_sha256": "be14533e73c5b83c3534e09a5837dc013f5e5b001b95396984c8f6d4e8ec6833"
+    },
+    {
+      "id": "H0_f0_s202",
+      "arm": "H0",
+      "fold": 0,
+      "seed": 202,
+      "data_seed": 2602222937,
+      "params": 133690,
+      "checkpoint": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s202\\model.pt",
+      "checkpoint_sha256": "abf47db65b28d02f51bde927ba9a0a5473f445df4cbb53a5f0f26938af7334ca"
+    },
+    {
+      "id": "H0_f0_s203",
+      "arm": "H0",
+      "fold": 0,
+      "seed": 203,
+      "data_seed": 1569434962,
+      "params": 133690,
+      "checkpoint": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s203\\model.pt",
+      "checkpoint_sha256": "8abe846f047a4b215aeb1f5c57baad2e25b21614cb329b27e12f1a4e9e11e7cb"
+    },
+    {
+      "id": "H0_f1_s201",
+      "arm": "H0",
+      "fold": 1,
+      "seed": 201,
+      "data_seed": 3016222868,
+      "params": 133690,
+      "checkpoint": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s201\\model.pt",
+      "checkpoint_sha256": "0996333761c13f30703acb0e3051ff676ea1f5dfa6fb1f0b04b4ccc3a7a48119"
+    },
+    {
+      "id": "H0_f1_s202",
+      "arm": "H0",
+      "fold": 1,
+      "seed": 202,
+      "data_seed": 3680940992,
+      "params": 133690,
+      "checkpoint": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s202\\model.pt",
+      "checkpoint_sha256": "75b252c7984d013eba842b0691b44a7f3af96bbb830aba3617823d4f0c4048c9"
+    },
+    {
+      "id": "H0_f1_s203",
+      "arm": "H0",
+      "fold": 1,
+      "seed": 203,
+      "data_seed": 1501995291,
+      "params": 133690,
+      "checkpoint": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s203\\model.pt",
+      "checkpoint_sha256": "fec5bfade4d1d90faf89dc6f5b42dec243e3a7e3f2cb06b15cd255bd79f17314"
+    },
+    {
+      "id": "P0_f0_s201",
+      "arm": "P0",
+      "fold": 0,
+      "seed": 201,
+      "data_seed": 2808879044,
+      "params": 134266,
+      "checkpoint": "D:\\crossatten\\worktrees\\s15-hstem-attribution\\15-hstem-attribution\\runs\\p1__Shen__C2_lite_mha__f0__all__s201\\model.pt",
+      "checkpoint_sha256": "855613f64f3f8b7de8ab1a6521c209f6cc406386362c297168dfadcc120da6bb"
+    },
+    {
+      "id": "P0_f0_s202",
+      "arm": "P0",
+      "fold": 0,
+      "seed": 202,
+      "data_seed": 2602222937,
+      "params": 134266,
+      "checkpoint": "D:\\crossatten\\worktrees\\s15-hstem-attribution\\15-hstem-attribution\\runs\\p1__Shen__C2_lite_mha__f0__all__s202\\model.pt",
+      "checkpoint_sha256": "65b0840e3020bdd7c8c005603e580e4fdbfbcedb510612a4201cb3b1b807d944"
+    },
+    {
+      "id": "P0_f0_s203",
+      "arm": "P0",
+      "fold": 0,
+      "seed": 203,
+      "data_seed": 1569434962,
+      "params": 134266,
+      "checkpoint": "D:\\crossatten\\worktrees\\s15-hstem-attribution\\15-hstem-attribution\\runs\\p1__Shen__C2_lite_mha__f0__all__s203\\model.pt",
+      "checkpoint_sha256": "2e84d128b9b6381296249ce20194da743bdd848aced13ba5216621f2f72c2467"
+    },
+    {
+      "id": "P0_f1_s201",
+      "arm": "P0",
+      "fold": 1,
+      "seed": 201,
+      "data_seed": 3016222868,
+      "params": 134266,
+      "checkpoint": "D:\\crossatten\\worktrees\\s15-hstem-attribution\\15-hstem-attribution\\runs\\p1__Shen__C2_lite_mha__f1__all__s201\\model.pt",
+      "checkpoint_sha256": "3454f0e2e0e21a4099abbe17b2af37311b9178f2611c6cf8609abf82d617f57f"
+    },
+    {
+      "id": "P0_f1_s202",
+      "arm": "P0",
+      "fold": 1,
+      "seed": 202,
+      "data_seed": 3680940992,
+      "params": 134266,
+      "checkpoint": "D:\\crossatten\\worktrees\\s15-hstem-attribution\\15-hstem-attribution\\runs\\p1__Shen__C2_lite_mha__f1__all__s202\\model.pt",
+      "checkpoint_sha256": "eeaa364efe07b3a1621b8813d0f42709cbac7d28a84858c4bafc51b87221a617"
+    },
+    {
+      "id": "P0_f1_s203",
+      "arm": "P0",
+      "fold": 1,
+      "seed": 203,
+      "data_seed": 1501995291,
+      "params": 134266,
+      "checkpoint": "D:\\crossatten\\worktrees\\s15-hstem-attribution\\15-hstem-attribution\\runs\\p1__Shen__C2_lite_mha__f1__all__s203\\model.pt",
+      "checkpoint_sha256": "452159cedef2ae6383ab99295b880130b049c0a423ae30c7d539f0ca9ff8ccda"
+    }
+  ],
+  "source_caches": {
+    "b210_1": {
+      "fold": 0,
+      "rx": "b210_1",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "0a92cefcfe90951dee5bd8dbc13a9dfdb13f81307ea40dc7a7e92f5e89be48be"
+    },
+    "rtl_1": {
+      "fold": 0,
+      "rx": "rtl_1",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "2ff59bff709381c738081cb1d1b8eac2908f17adb53707ee41ebd7fdb48b3531"
+    },
+    "rtl_3": {
+      "fold": 0,
+      "rx": "rtl_3",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "b5ff2424922f8bb1a506ecd078cca93fc23c3f5af8d691aa4cabfe70f6205887"
+    },
+    "rtl_6": {
+      "fold": 0,
+      "rx": "rtl_6",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "c2353b94971ac97445f10247e823e7a18152d21bf70c80fbd053f57c80ec3b87"
+    },
+    "rtl_9": {
+      "fold": 0,
+      "rx": "rtl_9",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "1595e96fbb97bd73f59df90dddf6a9cf6865b94625e1f2ac2125e3e38466bae5"
+    },
+    "b200_mini_1": {
+      "fold": 1,
+      "rx": "b200_mini_1",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "4171c447ddc8f1d3b4916a99905e964592147eabda8578bd90755e6cea6948f7"
+    },
+    "pluto_1": {
+      "fold": 1,
+      "rx": "pluto_1",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "81b791e6a0cad0946f4de3d95b79c4206e66c3c977f2d01d10c919e06ac7a80f"
+    },
+    "rtl_2": {
+      "fold": 1,
+      "rx": "rtl_2",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "2dbab8fdba1dadfda82e5d68de7deea593850cd04e7922814ad42286864a8cf9"
+    },
+    "rtl_5": {
+      "fold": 1,
+      "rx": "rtl_5",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "4465534293ebb620bb298ff0e408621f4745f966212112e9a8ca53b912c86ac6"
+    },
+    "rtl_7": {
+      "fold": 1,
+      "rx": "rtl_7",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "413bfb04ddfa1aecbb4c32278c16c0440ac84dc6e1642711a87bd1574b2bf06d"
+    }
+  },
+  "canonical_training_sha256": "164b0eb9794c4494b34cf1d25f8dfb0c9a4ae8c54af3e03ef9f08b150a670a2a",
+  "gate_sha256": "fc422469466a0d857073f2e2810d8a3050f8c3c88696e999f5da060b2a110ae3",
+  "torch": "2.5.0+cu124",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "code_sha256": {
+    "26-long-patch-control/s26_common.py": "2387944637a0b9808276f0247fb0072cfc126f05457ba8d51652d988a9b9b58d",
+    "26-long-patch-control/s26_data.py": "ee7ed0e6983ea8d4b8c365f24cffcbe4a3c32eb7b239bec546d4b07e3ddaff6f",
+    "26-long-patch-control/s26_evaluate.py": "c6f86c6c61f68896a0f6cfd608a9d9a6ded164bba77217ff375e36d78458030b",
+    "26-long-patch-control/s26_execute.py": "01d19f2d0a58cd3a4af3b750fbfc3fb7412661bf40e9c0f31157d2dce1b77f3a",
+    "26-long-patch-control/s26_gate.py": "f6adc19f16528ed71b199c5ec68cb36c632b5f1b6911b50357af6fc99b83521e",
+    "26-long-patch-control/s26_models.py": "0169704cc80d03cbe04be1e68a6d76ae033aa38b0fb53549c9a687960b961cc7",
+    "26-long-patch-control/s26_register.py": "e12650a83f7639d4336d8762737ece9501e52f7dd3b0f3e19192a131220e7d5a",
+    "26-long-patch-control/s26_report.py": "c2d51a9ab80055496ed97f3f456ca1f9884caf4fe77d85eab06693171d75debf",
+    "26-long-patch-control/s26_source_check.py": "733dad2234e982aa6fb2b04a74cad8fb367bc50e785a1e19d4a39de154abcd36",
+    "26-long-patch-control/s26_training.py": "6cf912b572dfbd5a272bdfc20242bc36ced91b8d25aa2dbbb9289f29e6c61db3",
+    "lib/legacy_rfhstu/cnn_stem.py": "b3a8944c96b354d295a96d84876693e95433f67616e23d2804219d0fa1c2762a",
+    "lib/legacy_rfhstu/features.py": "1e9e5aa828adbb382c604ebf7b1bd429c79893ea1169afddaa14596a6c0d5378",
+    "lib/legacy_rfhstu/losses.py": "a0ba7f42040203289593ba6a9363f27ea19d5152d8813979a7018cc152e78e28",
+    "lib/legacy_rfhstu/mixstyle.py": "687174caeff6f256b2661399ab70aede396d5ea51af4e312dcbacc01235b94a5",
+    "lib/legacy_rfhstu/models.py": "ebb638fac3392fec36bace7e2445ab6d27ef4e3b5adb2c06b35c8bc82f506666",
+    "lib/legacy_rfhstu/multiscale.py": "de51929e7917e793e814319a88b91ef0b17354e4c7614065172e082f16833e35",
+    "lib/legacy_rfhstu/oob_fusion.py": "030f2886c9a84282eb7e20ce5d318f528e8bfc20902c4b4a17315686ea290259",
+    "lib/legacy_rfhstu/__init__.py": "f78366d19d77282713f4944bc4e8fbdcbb138aac9849a0acf79459f4491dd9f5",
+    "lib/xa/aggregate.py": "8995baeff876f427338836ad0b2d53de01f95e95148b851067f498d35f592e38",
+    "lib/xa/bench.py": "3a94fe229e5b43f45b15ca2f1a06e179b0212f282ea58671e71c718161d20ba7",
+    "lib/xa/data.py": "ff861d46e508d807996a924d4439134416b16ba6507856a7335c65d9e4cfc3cb",
+    "lib/xa/evaluate.py": "365998cf59196e5ebbdad3b34132fe1dfb2a4a2b988c82d660715471167734aa",
+    "lib/xa/explore_models.py": "bcc1616b5fc6ea533183b4c3a9538748a663a1b321bd748a33870b4ef8116467",
+    "lib/xa/explore_train.py": "8e4361d2b21546f5f5b5ba26adccd57618680c720db734561802b8246a33babe",
+    "lib/xa/frontends.py": "967e28c05f168341b4710e4b2253d77b93d92bc9a3dd515fdddaa35e81c2013f",
+    "lib/xa/guard.py": "80562f5a0893be3a3e91cb80ef4636a6b24eb0c76bfa59d3566574633e5fff54",
+    "lib/xa/jobs.py": "ef8ac595d7a567c18d5e726b2fe70e9942628e709bf1453dfe0df5e9d07233f0",
+    "lib/xa/launch.py": "71ca1656dcccf4d26455de6b999de42b2482f73b738a37fca52f354ccec6d4a2",
+    "lib/xa/models.py": "322049d67d19d196dca8a722fda9de433d846fe1aa3d6d8439c49adeba6554bf",
+    "lib/xa/models2.py": "e9c3364868955e6996645a823187dadb553a2a95139e809d43055a93c53eaa23",
+    "lib/xa/models3.py": "bade67f8ad50b64c132197d21a86c1897a8c27976a7b8490d2e7131ff025cbba",
+    "lib/xa/paper_models.py": "7c09adc3b481e5b13eeccb93731a00573f16a98f5d35c490a1d5082707c550bd",
+    "lib/xa/paper_run.py": "4c1bcdf2e98c974c6e03677b69881ea378dc3406c0d9f8a7bbe471290389fec6",
+    "lib/xa/paper_train.py": "e59cab54045ef6cd27a168e937e7571456ad3d2405183efc605e8308e3ed80c8",
+    "lib/xa/run_job.py": "534b8f7aa2c8c54c12eb5881850897fa2a69280cde004c84ede19532b0cb576b",
+    "lib/xa/train.py": "906a7fd0a7bbb61fea86e03bcf9b52228a5b26851e53fa904d497be330daa96e",
+    "lib/xa/wisig.py": "b4127fba87f5603704c92d2221743c8dedf6898e45c8216b9ddb84b32f42ad67",
+    "lib/xa/__init__.py": "ca199705017e2d6d6b037d4d732f7caec7d7dff190c77a3d94c0cfaf515ab492",
+    "13-mixer-cfo-mechanisms/train.py": "164b0eb9794c4494b34cf1d25f8dfb0c9a4ae8c54af3e03ef9f08b150a670a2a",
+    "13-mixer-cfo-mechanisms/models.py": "606243ff9462358f53a86d2908130c47f69c5dd9d1cfee669cbaf10c7b76e5a1",
+    "13-mixer-cfo-mechanisms/core.py": "a9db92f80e8e1bf1579cab900fabf085f5c33e018dffe6e27f1af64ee94dc527",
+    "13-mixer-cfo-mechanisms/data.py": "578fd207105e5375094bd22a12ec710fd259379c4b1c627d962251256bd71e9e",
+    "13-mixer-cfo-mechanisms/metrics.py": "a9773e0532552f012dc039c42206460d1a5b02001a2bbb44a388258825f85ed7",
+    "13-mixer-cfo-mechanisms/wifi.py": "3402847c350172b670aba40616f5b56ec5ecb2e7176cc199c26d0315d920db37",
+    "15-hstem-attribution/s15_models.py": "0d361cf9ac5ce2794975827e2b89a31615d4a1eaa171f5c073d1c7afffe810d4",
+    "15-hstem-attribution/s15_core.py": "e37958e21f579314680a6ac1d0b35302f6a5b1e2307fedf336af5c335002a195",
+    "21-hstem-mechanisms/s21_models.py": "5dea148df54a7db8c2aba1f5190340e913330f18b59610c1a7869fc07baea28a",
+    "21-hstem-mechanisms/s21_core.py": "7c15bb0a3e64444be6146627252897d2c0e0489352d5ac5a4f673a40d53acf0f"
+  },
+  "evidence_sha256": {
+    "configs/protocol.json": "913d38626d9bcaa285b0ba7816bd8e863a91778f1fc62e4dd7d27c70415a119a",
+    "15-hstem-attribution/architecture_search.json": "56a749bdf8fd346a55f9d900913acd76915055a6829e46f358031a04f55ef2ad",
+    "25-tifs-integration/registration.json": "cf5d23adfa1c43435ea42b02fcdcad3bfdb465bb6440886eed29d87a2b21c545",
+    "25-tifs-integration/LONG_PATCH_AUDIT.json": "68e824750624cf8432707db391af399e4c3f4f0e95fca25647c61ea0bd06e399",
+    "25-tifs-integration/FINAL_AUDIT.json": "aabd97e31ff279e026ea79610fbae9f6024d3e02c4abfa482f705e8716bd1fca"
+  }
+}
