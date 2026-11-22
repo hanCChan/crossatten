@@ -43,13 +43,13 @@ CvT, PVT, and Swin establish convolutional and hierarchical token precedents \ci
 
 MATHEMATICS=r'''
 \subsection{Support Growth and Coordinate Compression}
-Let $N_l,C_l$ denote length and channels after stage $l$, and $J_l,R_l,c_l$ denote its jump, convolution-path support, and first-center coordinate. With kernel $k_l$, stride $s_l$, dilation one, and padding $p_l$,
+Let $N_l,C_l$ denote length and channels after stage $l$, and $J_l,R_l,c_l$ denote its jump, nominal convolution-path support, and first-center coordinate. With kernel $k_l$, stride $s_l$, dilation one, and padding $p_l$,
 \begin{align}
 N_l&=\left\lfloor\frac{N_{l-1}+2p_l-k_l}{s_l}\right\rfloor+1,\\
 J_l&=s_lJ_{l-1},\quad R_l=R_{l-1}+(k_l-1)J_{l-1},\\
 c_l&=c_{l-1}+\left((k_l-1)/2-p_l\right)J_{l-1}.
 \end{align}
-The common front-end gives $R_0=11,J_0=1,c_0=0$. HStem consequently has supports $18,46,158,350$, lengths $2048,512,128,32$, and final center 127.5. Both P0 and Long-Patch use jump 256; their supports are 266 and 350. Center matching avoids a hidden token-grid shift.
+The common front-end gives $R_0=11,J_0=1,c_0=0$. HStem consequently has supports $18,46,158,350$, lengths $2048,512,128,32$, and final center 127.5. Its tokenizer alone spans 340 frontend positions; 350 includes the shared front-end. Both P0 and Long-Patch use jump 256; their supports are 266 and 350. Matching center and span does not match intermediate boundary operations.
 
 \begin{table}[t]\centering
 \caption{HStem coordinate reduction after the shared front-end. These counts are dimensions, not information estimates.}
@@ -102,7 +102,7 @@ NEW_REFS=r'''
  title={Federated Radio Frequency Fingerprint Identification Powered by Unsupervised Contrastive Learning},
  journal={IEEE Transactions on Information Forensics and Security},year={2024},volume={19},pages={9204--9215},doi={10.1109/TIFS.2024.3469820}}
 @article{wang2026fedalign,
- author={Yuteng Wang and Zhenxin Cai and Tiantian Tang and Tomoaki Ohtsuki and Guan Gui},
+ author={Y. Wang and Z. Cai and T. Tang and Tomoaki Ohtsuki and Guan Gui},
  title={Toward Robust Radio Frequency Fingerprint Identification: A Federated Learning Framework With Feature Alignment},
  journal={IEEE Transactions on Information Forensics and Security},year={2026},volume={21},pages={2641--2651},doi={10.1109/TIFS.2026.3671107}}
 @inproceedings{ma2025wcnc,
@@ -242,7 +242,7 @@ The evidence concerns this aligned-window developmental protocol. It does not id
     text=replacement(text,r'\section{Conclusion}',r'\appendices',conclusion)
     appendix=r'''\appendices
 \section{Reproduction and Scope}
-Repository \href{https://github.com/hanCChan/crossatten}{\texttt{hanCChan/crossatten}}, S26 branch \texttt{exp/s26-long-patch-control}, builds on S25 \texttt{657bdaa}. The initial S26 scientific code/registration commit is \texttt{0935eb8}. All six source-selected checkpoints were sealed before report-only target IO. The supplement supplies selected epochs, source/Dev pairs, numeric recovery, complete PCA cohorts, detailed equivalence/metadata checks, and the evidence map. Large waveforms, checkpoints, resume states, and sample predictions remain local; aggregate records and generation code are provided.
+Repository \href{https://github.com/hanCChan/crossatten}{\texttt{hanCChan/crossatten}}, S26 branch \texttt{exp/s26-long-patch-control}, builds on S25 \texttt{657bdaa}. The initial S26 scientific code/registration commit is \texttt{0935eb8}. A one-character evaluation parser repair was separately registered before Dev IO; original frozen files remain unchanged. All six source-selected checkpoints were sealed before report-only target IO. The supplement supplies selected epochs, source/Dev pairs, numeric recovery, complete PCA cohorts, detailed equivalence/metadata checks, and the evidence map. Large waveforms, checkpoints, resume states, and sample predictions remain local; aggregate records and generation code are provided.
 
 TrueIB, five views, kernel-7/kernel-5 frontend, token geometry, and data origin are inherited from the unpublished companion \cite{oobcompanion}. The new question concerns token formation under a different mixer/budget protocol. Former Confirm/blind RXs have historical use; no fresh independent capture is reported. Cross-paper accuracy subtraction is not architectural causal evidence. This remains an anonymous internal draft; submission readiness and novelty are not certified by experiment count.
 \balance

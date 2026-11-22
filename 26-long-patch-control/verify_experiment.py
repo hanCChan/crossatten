@@ -18,6 +18,10 @@ import train as canonical
 
 def main():
     registration=validate();seal=check_seal();evaluation=read(HERE/'EVALUATION.json')
+    fix=read(HERE/'TECHNICAL_FIX_001.json')
+    assert sha(HERE/fix['original_file'])==fix['original_sha256']
+    assert sha(HERE/fix['corrected_file'])==fix['corrected_sha256']
+    assert read(HERE/'TECHNICAL_FIX_001_RUNTIME.json')['status']=='COMPLETE'
     assert evaluation['status']=='COMPLETE_REPORT_ONLY' and len(evaluation['records'])==90
     assert evaluation['seal_sha256']==sha(HERE/'seal.json')
     assert evaluation['packet_predictions']==180000
@@ -118,6 +122,7 @@ def main():
         source_recovery=read(HERE/'SOURCE_RECOVERY.json')['all_metrics_exact'],
         baseline_logit_recovery_all=all(r['logits_bit_exact'] for r in evaluation['baseline_recovery']),
         results_sha256=sha(HERE/'RESULTS.json'),seal_sha256=sha(HERE/'seal.json'),verifier_sha256=sha(__file__),
+        registered_parser_repair_sha256=sha(HERE/'TECHNICAL_FIX_001.json'),original_scientific_code_unchanged=True,
         cost_scope='Common separate S26 session. Per-fit wall sums overlap under2 jobs; not exclusive GPU active time.'))
     print('PASS: all6 fits, 180000 target predictions, source selection/streams, conditional statistics and historical hashes.',flush=True)
 
