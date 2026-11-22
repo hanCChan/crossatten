@@ -1,0 +1,72 @@
+S25 科研材料与GO/STOP说明
+
+日期：2026-11-22T16:09:18+08:00
+新增训练：0；HStem及历史模型保持冻结；独立新采集：用户确认暂无。
+
+一、中文Introduction
+
+在跨接收机LoRa闭集识别中，接收端、信道与数字前处理共同影响接收到的波形。较高分类准确率并不自动证明模型提取了接收机不变的物理指纹。本研究把问题收窄为：在严格带内、已截取对齐的8192点输入、相同五通道表示与普通MHA后端下，Token形成过程的局部支持、训练参数化与归一化如何影响发射机身份可分性？
+
+卷积Token和层级网络已有成熟先例。我们不把它们、TrueIB、五通道或已有局部CNN重命名为新贡献，而是研究一个参数高效的四阶段RF Tokenizer实例。参数匹配的Patch-Lite、平滑与支持相关控制以及BN对照提供系统效果证据；已有开发接收机的长期使用、Source验证选模、同步失败和计算代价均限制其外推。
+
+本轮新增工作是对冻结H0/P0/S1/H1的只读源域诊断和既有RX×TX错误的完整整理。最终特征的分离比改善与分类效果一致，但中间层反例否定了“Tokenizer逐级消除RX信息”的简单解释；核谱相关性和源SNR/CFO诊断不能升级为硬件因果证明。
+
+二、中文Contributions
+
+1. 方法设计：在沿用的严格带内RF流水线上，研究四阶段、32×64输出的参数高效Tokenizer与普通MHA组合；不是宣称卷积Token或新Transformer首创。
+2. 结构与机制证据：用参数匹配、平滑/支持、BN和冻结表征分析约束解释，完整保留层间反例、未通过门槛与源验证偏差。
+3. 联合实证：固定源预算下与Shen CE/DANN、FAN/IB适配和完整ASK比较，同时报告RX等权精度、最差RX、全部种子和GPU成本；该项是实验贡献而非独立算法。
+
+英文Introduction与Contributions：见paper/main.tex的Introduction。
+
+三、GO / STOP
+
+GO：以参数效率、同协议系统效果和有边界的表征证据完成英文工作稿。
+STOP：不自动训练Long-Patch或ASK Strict-IB；不宣称新独立RX、完整认证、普遍低延迟或唯一物理机制。
+Long-Patch保留原组数/宽度时161146参数，较H0约多20.5%；1%内候选的秩8瓶颈不适合作为便利弱对照。
+
+四、十个审稿质疑与证据回答
+
+1. 是否只是四层CNN加Transformer？
+回答：一般卷积Token与层级结构已有先例；本文贡献限定为RF流水线中的具体设计、参数匹配效果与可复现控制。尚未建立独特RF物理机制。
+证据：EVIDENCE_MATRIX.json;paper/main.tex
+
+2. 是否重复论文1？
+回答：TrueIB、五通道、局部CNN、token几何与数据源明确继承；新问题是同MHA下的token形成与参数预算。论文1的OOB融合、混合器和预算不同，不作跨论文因果差值。
+证据：OOB_OVERLAP.json
+
+3. 是否只因参数更多或算力更高？
+回答：P0与H0参数相差约0.43%，H0仍高2.687pp；但H0相对P0的MAC/延迟更高，必须写parameter efficiency而非全面compute efficiency。
+证据：S15/S22;MATCHED_COSTS.json
+
+4. 层级效应与局部支持是否已分离？
+回答：S1/P0和H1/S1有增量证据，但参数化与频响仍混杂。Long-Patch审计无法同时匹配容量、BN和MAC；只报告方案，不启动训练。
+证据：LONG_PATCH_AUDIT.json
+
+5. 是否证明Tokenizer去除了RX信息？
+回答：没有。H0在Tokenizer端绝对RX离散更大，Pre-MHA均值比值也不领先；最终特征更有利，只支持联合系统的表征结果。
+证据：MECHANISM_EXTENSION.json
+
+6. BN是否等于接收机归一化？
+回答：不能。H0-S2只有4/6正向并未满足原稳定门槛，统计量和优化效应未唯一分离；数值折叠也不等价于从头去BN训练。
+证据：S22/S23;EVIDENCE_MATRIX.json
+
+7. 为何Strict优势主要来自Pluto？
+回答：这是已保留的RX×TX异质性。CE投影后在TX32/34/35/39严重混淆；原因尚未识别。B200-mini-1、B210-1的Native负差同样展示，不删RX。
+证据：per_tx_rx.csv;confusion_pairs.csv
+
+8. ASKNet低均值是否是不公平失败？
+回答：完整LoRa代码与六个种子均保留；部分源验证已弱拟合，不能全解释为未知RX泛化失败，不将+32pp当主要竞争证据。
+证据：S24RESULTS/INTERPRETATION
+
+9. SNR/CFO和同步实验支持什么？
+回答：源元数据的组内相关很小且无稳定方向，不能识别目标RX原因；循环±4点严重失败必须保留，不能宣传同步鲁棒或硬件不变。
+证据：metadata_correlations.csv;S23
+
+10. 是否已独立验证或形成认证系统？
+回答：没有新采集，旧Confirm/blind都有历史；同闭集新测试还需同一批物理TX。未知拒识、FAR/FRR和主动伪装未测，不由Accuracy推出认证保证。
+证据：INDEPENDENT_DATA_STATUS.json
+
+五、复现与限制
+
+先恢复registration.json中同SHA的历史checkpoint和原始缓存到登记位置；这些路径是本机只读工件路径，不能在跨机器复现时静默改写科学注册。代码、源预算、随机种子、权限和校验值提供复现实验依据，但没有授权重新分发大波形或全部权重。PCA包含全部六组、四模型，不挑图，且每幅有独立坐标系。当前英文稿为内部匿名工作稿，不代表创新性已通过审稿或投稿准备充分。

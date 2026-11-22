@@ -1,0 +1,176 @@
+{
+  "status": "COMPLETE",
+  "selection": "All six fold/seed cohorts, all four arms, all50 cell centroids; independent per-model PCA, no panel selection.",
+  "normalization": "Registered final per-packet L2 embeddings, mean-centered; top2 eigenvectors, deterministic signs.",
+  "scope": "Separate coordinate systems; 2D appearance is not quantitative cross-model evidence or new validation.",
+  "rows": [
+    {
+      "arm": "P0",
+      "fold": 0,
+      "seed": 201,
+      "pc12_explained_variance": 0.5083141135196254,
+      "feature_sha256": "efc8da7aaabe9ba74813057d6e3cedd23f60f850bbb5b06cf22ce2add8508299"
+    },
+    {
+      "arm": "S1",
+      "fold": 0,
+      "seed": 201,
+      "pc12_explained_variance": 0.5096464701121808,
+      "feature_sha256": "12835cb8a6a01cb3b0c5e84b5998a62802beb661d37e131c2cdb1eb776c1e2a3"
+    },
+    {
+      "arm": "H1",
+      "fold": 0,
+      "seed": 201,
+      "pc12_explained_variance": 0.4895506241136043,
+      "feature_sha256": "23d267665aea78e2bbc9a4e2cb2c11e2390db24d991737da6007881c5afc6b04"
+    },
+    {
+      "arm": "H0",
+      "fold": 0,
+      "seed": 201,
+      "pc12_explained_variance": 0.49365328111515644,
+      "feature_sha256": "c72f5c7ef99f8757c9b1769f956e8d4ad0461167fc853c62173e8c5294592c99"
+    },
+    {
+      "arm": "P0",
+      "fold": 0,
+      "seed": 202,
+      "pc12_explained_variance": 0.4501988543903652,
+      "feature_sha256": "ab5e812d33e09da696eaa606daf575b588609a9c3c467db6822268aa3dfa6217"
+    },
+    {
+      "arm": "S1",
+      "fold": 0,
+      "seed": 202,
+      "pc12_explained_variance": 0.4638750808785376,
+      "feature_sha256": "ebb66e809b9af5dd347c5e368ce2462cb43f550baa2641ad3671740c76fc6efb"
+    },
+    {
+      "arm": "H1",
+      "fold": 0,
+      "seed": 202,
+      "pc12_explained_variance": 0.5061564928329396,
+      "feature_sha256": "d3188da5054d8496c05462e18941ac42693951d3b5cec9d3ce03f6195b569e1c"
+    },
+    {
+      "arm": "H0",
+      "fold": 0,
+      "seed": 202,
+      "pc12_explained_variance": 0.4332551334304206,
+      "feature_sha256": "04fb6800e8ca4450bf757a3055f6718842c749043fd6ef027c745e2760631a09"
+    },
+    {
+      "arm": "P0",
+      "fold": 0,
+      "seed": 203,
+      "pc12_explained_variance": 0.429645892437461,
+      "feature_sha256": "302ca002ea2614c782ea2ec194a55f716e80d2550c13210cbff4f8885b22dfb1"
+    },
+    {
+      "arm": "S1",
+      "fold": 0,
+      "seed": 203,
+      "pc12_explained_variance": 0.434387230144213,
+      "feature_sha256": "759996826b0e2d7bae0a25afcf9135810313813da08fc574c4c66f1dfb4a0e4a"
+    },
+    {
+      "arm": "H1",
+      "fold": 0,
+      "seed": 203,
+      "pc12_explained_variance": 0.4774120010699289,
+      "feature_sha256": "bdde3982d639d33237be40be8f6dbe855240e6cbbfb4d8e1d868933ed100ef3b"
+    },
+    {
+      "arm": "H0",
+      "fold": 0,
+      "seed": 203,
+      "pc12_explained_variance": 0.4162435995650047,
+      "feature_sha256": "6d8c530fa9c7990ec53b09339b320b403f77de0df9d122052d5c8d78b022d259"
+    },
+    {
+      "arm": "P0",
+      "fold": 1,
+      "seed": 201,
+      "pc12_explained_variance": 0.4568502313532601,
+      "feature_sha256": "59eb7483de455e899758942adc26458ba7e07455975fe53d57fb398ff2e8c429"
+    },
+    {
+      "arm": "S1",
+      "fold": 1,
+      "seed": 201,
+      "pc12_explained_variance": 0.48073970715103764,
+      "feature_sha256": "12992bf1955c7d862197b4b42999506a9fb276bfc9466d126475cef92a8164bf"
+    },
+    {
+      "arm": "H1",
+      "fold": 1,
+      "seed": 201,
+      "pc12_explained_variance": 0.4348630992898187,
+      "feature_sha256": "f1dde5a3e6df18e459c2b9564fcb1dccedf80c8e5e92886c23505c1a1320815e"
+    },
+    {
+      "arm": "H0",
+      "fold": 1,
+      "seed": 201,
+      "pc12_explained_variance": 0.4023606259703734,
+      "feature_sha256": "1ba45467f033e512a787daf376df4edb60ddb06728e85adda5b8eb5198baf441"
+    },
+    {
+      "arm": "P0",
+      "fold": 1,
+      "seed": 202,
+      "pc12_explained_variance": 0.4446669669262428,
+      "feature_sha256": "28c16c88144c672b896dd6fece9b4bf44c5c431c2b53284d71eeaff74d6acf30"
+    },
+    {
+      "arm": "S1",
+      "fold": 1,
+      "seed": 202,
+      "pc12_explained_variance": 0.4548924755286158,
+      "feature_sha256": "d5e67fb545ed448bf8276613b1ef29f1da627ce91aba850ed436b6962c47dac7"
+    },
+    {
+      "arm": "H1",
+      "fold": 1,
+      "seed": 202,
+      "pc12_explained_variance": 0.4491423450998314,
+      "feature_sha256": "6d180000b0224de6317d94edfc403ef293ff8a30d5e5a23696ab14cbe42b7ff1"
+    },
+    {
+      "arm": "H0",
+      "fold": 1,
+      "seed": 202,
+      "pc12_explained_variance": 0.4972019331599181,
+      "feature_sha256": "d8f542a7d99600ad332b75f3da1794366df93d58374ecd36e3979e1ae38b9433"
+    },
+    {
+      "arm": "P0",
+      "fold": 1,
+      "seed": 203,
+      "pc12_explained_variance": 0.4692722122615288,
+      "feature_sha256": "0ad8e455a10d17614d84180b72713a97b6c0de0ef867d49070cb2d2f84f80504"
+    },
+    {
+      "arm": "S1",
+      "fold": 1,
+      "seed": 203,
+      "pc12_explained_variance": 0.4775857677316985,
+      "feature_sha256": "70f88686f26ccc91c04eb82afae0f767264d51e3d990f5dfd4a927291297fb1a"
+    },
+    {
+      "arm": "H1",
+      "fold": 1,
+      "seed": 203,
+      "pc12_explained_variance": 0.4874392582189905,
+      "feature_sha256": "d210692f8d02683eb2045b30db6c3a7f47a6acaea94105fcc0a0468b6204805d"
+    },
+    {
+      "arm": "H0",
+      "fold": 1,
+      "seed": 203,
+      "pc12_explained_variance": 0.43499355839700077,
+      "feature_sha256": "a9adca90ac5c69a259766b04b0109fe55adf2ff588150e0e7f43882e2f894245"
+    }
+  ]
+}

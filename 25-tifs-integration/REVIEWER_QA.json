@@ -1,0 +1,54 @@
+{
+  "questions": [
+    {
+      "question": "是否只是四层CNN加Transformer？",
+      "answer": "一般卷积Token与层级结构已有先例；本文贡献限定为RF流水线中的具体设计、参数匹配效果与可复现控制。尚未建立独特RF物理机制。",
+      "evidence": "EVIDENCE_MATRIX.json;paper/main.tex"
+    },
+    {
+      "question": "是否重复论文1？",
+      "answer": "TrueIB、五通道、局部CNN、token几何与数据源明确继承；新问题是同MHA下的token形成与参数预算。论文1的OOB融合、混合器和预算不同，不作跨论文因果差值。",
+      "evidence": "OOB_OVERLAP.json"
+    },
+    {
+      "question": "是否只因参数更多或算力更高？",
+      "answer": "P0与H0参数相差约0.43%，H0仍高2.687pp；但H0相对P0的MAC/延迟更高，必须写parameter efficiency而非全面compute efficiency。",
+      "evidence": "S15/S22;MATCHED_COSTS.json"
+    },
+    {
+      "question": "层级效应与局部支持是否已分离？",
+      "answer": "S1/P0和H1/S1有增量证据，但参数化与频响仍混杂。Long-Patch审计无法同时匹配容量、BN和MAC；只报告方案，不启动训练。",
+      "evidence": "LONG_PATCH_AUDIT.json"
+    },
+    {
+      "question": "是否证明Tokenizer去除了RX信息？",
+      "answer": "没有。H0在Tokenizer端绝对RX离散更大，Pre-MHA均值比值也不领先；最终特征更有利，只支持联合系统的表征结果。",
+      "evidence": "MECHANISM_EXTENSION.json"
+    },
+    {
+      "question": "BN是否等于接收机归一化？",
+      "answer": "不能。H0-S2只有4/6正向并未满足原稳定门槛，统计量和优化效应未唯一分离；数值折叠也不等价于从头去BN训练。",
+      "evidence": "S22/S23;EVIDENCE_MATRIX.json"
+    },
+    {
+      "question": "为何Strict优势主要来自Pluto？",
+      "answer": "这是已保留的RX×TX异质性。CE投影后在TX32/34/35/39严重混淆；原因尚未识别。B200-mini-1、B210-1的Native负差同样展示，不删RX。",
+      "evidence": "per_tx_rx.csv;confusion_pairs.csv"
+    },
+    {
+      "question": "ASKNet低均值是否是不公平失败？",
+      "answer": "完整LoRa代码与六个种子均保留；部分源验证已弱拟合，不能全解释为未知RX泛化失败，不将+32pp当主要竞争证据。",
+      "evidence": "S24RESULTS/INTERPRETATION"
+    },
+    {
+      "question": "SNR/CFO和同步实验支持什么？",
+      "answer": "源元数据的组内相关很小且无稳定方向，不能识别目标RX原因；循环±4点严重失败必须保留，不能宣传同步鲁棒或硬件不变。",
+      "evidence": "metadata_correlations.csv;S23"
+    },
+    {
+      "question": "是否已独立验证或形成认证系统？",
+      "answer": "没有新采集，旧Confirm/blind都有历史；同闭集新测试还需同一批物理TX。未知拒识、FAR/FRR和主动伪装未测，不由Accuracy推出认证保证。",
+      "evidence": "INDEPENDENT_DATA_STATUS.json"
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "status": "AUDIT_COMPLETE_NO_TRAINING",
+  "time": "2026-11-22T15:50:43+08:00",
+  "new_fits": 0,
+  "new_optimizer_steps": 0,
+  "new_waveform_reads": 0,
+  "closed_data_free_candidate_count": 504,
+  "one_percent_matches": [
+    {
+      "groups": 1,
+      "mid": 8,
+      "kernel": 340,
+      "stride": 256,
+      "padding": 42,
+      "params": 134706,
+      "relative_parameter_error": 0.0075996708803949264,
+      "linear_output_rank_upper_bound": 8
+    }
+  ],
+  "best_parameter_match": {
+    "groups": 1,
+    "mid": 8,
+    "kernel": 340,
+    "stride": 256,
+    "padding": 42,
+    "params": 134706,
+    "relative_parameter_error": 0.0075996708803949264,
+    "linear_output_rank_upper_bound": 8
+  },
+  "actual_architecture_checks": {
+    "H0": {
+      "params": 133690,
+      "cnn_receptive_field": 350,
+      "token_stride": 256,
+      "overlap": 94,
+      "first_token_center": 127.5,
+      "tokens": 32,
+      "bn_layers": 5,
+      "layers": [
+        {
+          "name": "0",
+          "kernel": 7,
+          "padding": 3,
+          "stride": 1,
+          "output_length": 8192
+        },
+        {
+          "name": "3",
+          "kernel": 5,
+          "padding": 2,
+          "stride": 1,
+          "output_length": 8192
+        },
+        {
+          "name": "tokenize.0",
+          "kernel": 8,
+          "padding": 2,
+          "stride": 4,
+          "output_length": 2048
+        },
+        {
+          "name": "tokenize.3",
+          "kernel": 8,
+          "padding": 2,
+          "stride": 4,
+          "output_length": 512
+        },
+        {
+          "name": "tokenize.6",
+          "kernel": 8,
+          "padding": 2,
+          "stride": 4,
+          "output_length": 128
+        },
+        {
+          "name": "tokenize.9",
+          "kernel": 4,
+          "padding": 0,
+          "stride": 4,
+          "output_length": 32
+        }
+      ],
+      "scope": "Local CNN coordinates only; global FFT and TrueIB prevent an end-to-end physical support interpretation",
+      "partial_dispatcher_macs": 0.0
+    },
+    "P0": {
+      "params": 134266,
+      "cnn_receptive_field": 266,
+      "token_stride": 256,
+      "overlap": 10,
+      "first_token_center": 127.5,
+      "tokens": 32,
+      "bn_layers": 2,
+      "layers": [
+        {
+          "name": "0",
+          "kernel": 7,
+          "padding": 3,
+          "stride": 1,
+          "output_length": 8192
+        },
+        {
+          "name": "3",
+          "kernel": 5,
+          "padding": 2,
+          "stride": 1,
+          "output_length": 8192
+        },
+        {
+          "name": "tokenize.0",
+          "kernel": 256,
+          "padding": 0,
+          "stride": 256,
+          "output_length": 32
+        },
+        {
+          "name": "tokenize.1",
+          "kernel": 1,
+          "padding": 0,
+          "stride": 1,
+          "output_length": 32
+        }
+      ],
+      "scope": "Local CNN coordinates only; global FFT and TrueIB prevent an end-to-end physical support interpretation",
+      "partial_dispatcher_macs": 0.0
+    },
+    "LongPatch_same_groups_width": {
+      "params": 161146,
+      "cnn_receptive_field": 350,
+      "token_stride": 256,
+      "overlap": 94,
+      "first_token_center": 127.5,
+      "tokens": 32,
+      "bn_layers": 2,
+      "layers": [
+        {
+          "name": "0",
+          "kernel": 7,
+          "padding": 3,
+          "stride": 1,
+          "output_length": 8192
+        },
+        {
+          "name": "3",
+          "kernel": 5,
+          "padding": 2,
+          "stride": 1,
+          "output_length": 8192
+        },
+        {
+          "name": "tokenize.0",
+          "kernel": 340,
+          "padding": 42,
+          "stride": 256,
+          "output_length": 32
+        },
+        {
+          "name": "tokenize.1",
+          "kernel": 1,
+          "padding": 0,
+          "stride": 1,
+          "output_length": 32
+        }
+      ],
+      "scope": "Local CNN coordinates only; global FFT and TrueIB prevent an end-to-end physical support interpretation",
+      "partial_dispatcher_macs": 0.0
+    }
+  },
+  "decision": "STOP automatic new fitting. Existing H1/S1 already provide a controlled support-related contrast. A freely learned long patch could be a later development control, but cannot uniquely isolate hierarchy.",
+  "reasons": [
+    "The within1% candidate has a rank8 bottleneck, unlike the rank64-capable matched baseline; do not use it as a conveniently weak control.",
+    "Preserving groups8 and mid80 gives the correct350 support but161146 parameters (about20.5% more), two total BN versus five in H0, and different MACs.",
+    "Artificially adding normalization/pointwise layers to match counts changes optimization and function class; no strict single-factor match established."
+  ],
+  "proposed_future_budget_only": "At most one reviewed arm x2fold x3seed; no HStem retraining, no automatic execution; requires a separately frozen design and user instruction.",
+  "counter_scope": "Partial dispatcher MACs include supported dense/conv/matmul operations; exclude FFT and unsupported elementwise work.",
+  "audit_code_sha256": "f26c1d95565d2dcdefb105b952acfd0d6f9da4ead925b1db0bc80ba5b7d2ab16"
+}

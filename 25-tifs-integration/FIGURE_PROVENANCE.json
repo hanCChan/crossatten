@@ -1,0 +1,26 @@
+{
+  "status": "COMPLETE",
+  "main_figures": 7,
+  "pca_cohorts": 6,
+  "new_fits": 0,
+  "new_waveform_reads": 0,
+  "plot_code_sha256": "9f2d85a8e7cc87f6992508f49adc761f37276f974e9339f6e84192227aecb607",
+  "evidence": [
+    {
+      "path": "25-tifs-integration\\MECHANISM_EXTENSION.json",
+      "sha256": "1e2bb836975752a8ccfd874e1c21b7c09aab32b616995bf8acbb25ff5263a450"
+    },
+    {
+      "path": "25-tifs-integration\\PER_RX_ANALYSIS.json",
+      "sha256": "a4255d4d922b58c8378e4b72d159884f77f95bbb81092c6dfc4e5825c7ee2f6d"
+    },
+    {
+      "path": "24-lora-external-audit\\phase2\\budget_update\\RESULTS.json",
+      "sha256": "495484244654ffb553cd70f962708721caa8ab7287b6c016fb4457d3373d5aca"
+    },
+    {
+      "path": "23-hstem-mechanism-evidence\\kernel_bands.csv",
+      "sha256": "b3c121e976425122554c97a44ba29f040172dc873728670f24dca2ca75fbfab6"
+    }
+  ]
+}

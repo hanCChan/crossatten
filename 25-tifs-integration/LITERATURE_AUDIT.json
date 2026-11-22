@@ -1,0 +1,48 @@
+{
+  "time": "2026-11-22T16:09:18+08:00",
+  "status": "AUDIT_COMPLETE_NO_NEW_BASELINE_SCORE",
+  "ma2025": {
+    "title": "Towards Channel-Robust and Receiver-Independent Radio Frequency Fingerprint Identification",
+    "doi": "10.1109/TIFS.2025.3630316",
+    "paper": "https://arxiv.org/html/2512.12070v1",
+    "checked_author_code_index": "https://junqing-zhang.github.io/research/dataset-code/",
+    "checked_publication_index": "https://gxhen.github.io/publications/",
+    "author_implementation": "Not located in checked paper, author indexes andexact-title public searches;not a proof of globalnonexistence.",
+    "reproducible_method_facts": {
+      "stages": [
+        "contrastivepretrain",
+        "Siameseclassifier",
+        "inference"
+      ],
+      "embedding_dim": 256,
+      "temperature": 0.05,
+      "batch_pairs": 32,
+      "views": 64
+    },
+    "budget_mismatch": "Original pretraining usesadditionalpublicdata;originalfine-tuningRXB200-1 isConfirm undercurrentprotocol.",
+    "qualification": "Source-only closed-set adaptation andpretrainingpermissions wouldneedseparateregistration;no inferred originalscores.",
+    "new_fits": 0
+  },
+  "verified_primary_citations": [
+    {
+      "title": "Shen receiver-agnosticRFFI",
+      "doi": "10.1109/TMC.2023.3340039",
+      "url": "https://livrepository.liverpool.ac.uk/3176924/"
+    },
+    {
+      "title": "IB-RFF",
+      "doi": "10.1109/TIFS.2026.3723081",
+      "url": "https://github.com/BeechburgPieStar/IB-RFF/blob/main/README.md"
+    },
+    {
+      "title": "ASKNet",
+      "doi": "10.1109/LCOMM.2026.3718894",
+      "url": "https://github.com/BeechburgPieStar/ASKNet-RFF/blob/main/README.md"
+    },
+    {
+      "title": "CvT",
+      "url": "https://openaccess.thecvf.com/content/ICCV2021/html/Wu_CvT_Introducing_Convolutions_to_Vision_Transformers_ICCV_2021_paper.html"
+    }
+  ],
+  "code_policy": "S24 pinnedimplementations unchanged;current authorREADMEs usedforcitationmetadata,notforretroactivecode/recipechanges."
+}

@@ -1,0 +1,48 @@
+{
+  "status": "AUDITED",
+  "source_pdf": "refs/OOB_IOTJ.pdf",
+  "source_pdf_sha256": "cdbdfbdaa1d40108ee58353ad346566e855c23d96da46fbcdcd356c7694ab442",
+  "prior_review_sha256": "3d63ba9adfd3cb31f5bc17686bccae3dca04261eb0dfeeaf8d59c426ba7e6725",
+  "columns": [
+    "component",
+    "relationship",
+    "claim_boundary"
+  ],
+  "rows": [
+    [
+      "TrueIB andfiveviews",
+      "Inherited fromcompanion",
+      "Notanew contribution"
+    ],
+    [
+      "Kernel7/kernel5 localCNN",
+      "Inherited fromcompanion",
+      "Reuse explicitlycited"
+    ],
+    [
+      "32x64token geometry",
+      "Shared interface",
+      "Not new"
+    ],
+    [
+      "Four-stage tokenizer withordinaryMHA",
+      "Current controlled design",
+      "Specificdesign/evidence,notconvolutional tokenization first"
+    ],
+    [
+      "Source160/40,twofold3seed budget",
+      "Current protocol",
+      "Different fromcompanion;cross-paperaccuracy subtractionnot causal"
+    ],
+    [
+      "Same20RX/10TXcorpus",
+      "Shared data origin",
+      "Oldsixblind notfresh independent"
+    ],
+    [
+      "S21-S23mechanism controls",
+      "Current archived evidence",
+      "Do notrename asnewS25 experiments"
+    ]
+  ]
+}
