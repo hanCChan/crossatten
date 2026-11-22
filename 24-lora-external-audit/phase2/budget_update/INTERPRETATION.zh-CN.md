@@ -1,6 +1,6 @@
-# S24 第一批完整外部比较的解释
+# S24 完整保留矩阵的解释（54项）
 
-2026-11-18。依据RESULTS.json、全部270个RX单元及独立预测核验。48个新基线和六个冻结H0已统一评估；ASK尚未完成整组六模型，不能据此宣布S24全部结束。
+2026-11-22更新。54项新训练全部完成，六个ASK Native已整体封存并统一评估，同机GPU成本测量完成。最终核验覆盖54个新模型加六个冻结H0、300个RX单元和600000条预测；所有封存哈希、包身份、指标及26个配对指标区间均通过。ASK Strict-IB六项仍按预算延期，不计为已完成实验。
 
 ## 主要结果
 
@@ -20,10 +20,33 @@ Native DANN−CE为+0.673pp，条件区间[+0.208,+1.233]pp，5/6配对为正；
 
 IB Stage2−FAN Stage1在Native下为+0.978pp，区间[−0.037,+2.195]pp；Strict-IB下为+3.983pp，区间[+3.373,+4.582]pp。Stage2在Strict-IB下的增益更清楚，但两者总体都弱于Shen与H0。FAN/IB分数只刻画已冻结的低数据预算Shen/LoRa适配，不能推广为原论文在所有数据与配置中的能力；不根据本批Dev分数重新搜索alpha、patch或模型。
 
-## 剩余工作和稿件边界
+## ASK Native必须完整报告训练不稳定性
 
-保留ASK Native六项：第一项已完成，第二项继续，另四项排队；整组完成后统一封存和评估。Strict-IB ASK六项全部延期，NA不是0分或资源失败。统一同机GPU成本测量待Native训练结束后执行，当前CPU推断时间不作为部署速度对比。
+六个Native模型在(fold,seed)顺序(0,201)/(0,202)/(0,203)/(1,201)/(1,202)/(1,203)下，Dev Accuracy分别为87.220%/40.670%/74.520%/87.130%/89.320%/11.690%。主表均值65.092%，fit SD为31.936pp，Macro-F1为62.995%。没有剔除、替换或补训任何seed。
+
+对应源验证Accuracy为90.650%/40.050%/77.350%/90.550%/91.250%/11.500%。最后一个模型源验证最佳epoch为1，按原注册patience20在21轮停止；其余分别为166/132/97/163/156轮。21轮停止是预登记源验证早停，不是看到Dev成绩后提前终止。流程正常结束不代表优化成功：部分单元明显弱拟合，具体原因尚未唯一定位。
+
+这组结果支持报告当前低数据预算适配下的不稳定性，不能据此宣称ASKNet原论文普遍无效。H0−ASK的RX条件区间仅条件于这六个已训练模型，不能替代种子不确定性；不应以+32.242pp作为代表性领先幅度，竞争力论述仍以更稳定的Shen比较为主要依据。ASK Strict-IB六项为延期/NA，不是0分或资源失败。
+
+## 同机GPU成本与参数效率的边界
+
+以下为RTX4060 Laptop、FP32网络、TF32关闭、GPU驻留原始IQ到logits完整路径的p50，3次warmup、15次测量；不包含主机传输。模型原生前端及ASK每次QR保留。DANN按当前完整双头实现计数和执行。
+
+| Native方法 | 参数元素 | batch1毫秒 | batch128毫秒 |
+|---|---:|---:|---:|
+| HStem | 133690 | 2.142 | 15.956 |
+| Shen CE | 13442954 | 1.170 | 22.853 |
+| Shen DANN | 13509263 | 1.108 | 22.961 |
+| FAN | 310481 | 1.405 | 1.706 |
+| IB-RFF | 310481 | 1.372 | 1.661 |
+| ASKNet | 74153872 | 2229.082 | 2260.086 |
+
+ASK的参数元素含复数，实自由度为141246353，不能把元素数直接当实参数存储成本。HStem相对Shen参数明显更少、batch128推理更快，但单包延迟较慢；FAN/IB也比HStem快，不能宣传HStem对所有方法、所有batch普遍更快。ASK完整8191模态QR是实际巨大成本，不能用裁剪版算力或不含QR的MACs替代。本轮MACs仅为计数器覆盖部分，未覆盖FFT/QR/部分复数运算，不是完整FLOPs。
+
+所有fit累计wall约120.019小时，包含fit内部的暂停，不等于GPU活跃时间；队列空闲及Dev评估另计。全部成本原值及Strict-IB前端开销见COSTS.json。
+
+## 稿件边界
 
 本批支持当前固定协议下的外部竞争力。同步敏感性、非全新Dev、缺少独立新RX、IB移植边界及参数化归因限制，仍按[EVIDENCE_SCOPE.zh-CN.md](EVIDENCE_SCOPE.zh-CN.md)保留。此次输出错误的修复只将NumPy标量转换为JSON原生类型，未重跑推断、改动统计定义或增加优化步。
 
-对比图见[Accuracy](paper/accuracy_comparison.png)与[配对差值](paper/paired_differences.png)；逐RX表见[PER_RX.csv](PER_RX.csv)，核验见[PREDICTION_INTEGRITY.json](PREDICTION_INTEGRITY.json)。
+对比图见[Accuracy](paper/accuracy_comparison.png)与[配对差值](paper/paired_differences.png)；逐RX表见[PER_RX.csv](PER_RX.csv)，最终核验见[FINAL_INTEGRITY.json](FINAL_INTEGRITY.json)。原baseline核验[PREDICTION_INTEGRITY.json](PREDICTION_INTEGRITY.json)保留。

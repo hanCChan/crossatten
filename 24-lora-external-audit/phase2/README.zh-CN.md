@@ -1,5 +1,7 @@
 # S24 第二阶段：方法级验证与真实拟合
 
+**2026-11-22已完成保留矩阵54/54**：ASK Native 6/6、全部统一评估及GPU成本测量完成，最终600000条预测独立核验通过。结果见[RESULTS](budget_update/RESULTS.zh-CN.md)、[解释](budget_update/INTERPRETATION.zh-CN.md)、[FINAL_INTEGRITY](budget_update/FINAL_INTEGRITY.json)。暂无待训练任务；ASK Strict-IB六项仍延期。以下恢复入口及启动记录保留供审计，无需重新启动。
+
 **2026-11-20最新恢复入口**：`./24-lora-external-audit/phase2/budget_update/resume_002.ps1`。修复自动归档路径列表超过Windows命令长度上限的问题；[TECHNICAL_FIX_002.json](budget_update/TECHNICAL_FIX_002.json)。第三个ASK Native已完成，已完成fit不得重复初始化。下方001与原启动入口为历史说明。
 
 **当前启动/恢复入口**：`./24-lora-external-audit/phase2/budget_update/resume_001.ps1`，追加JSON输出修复见[TECHNICAL_FIX_001.json](budget_update/TECHNICAL_FIX_001.json)。以下旧启动说明保留为历史；原统计计算与训练代码未变。

@@ -50,7 +50,7 @@ def main():
         axis.grid(axis='x', color='#e2e5e8', linewidth=0.6)
         axis.set_yticks(range(6), [NAMES[m] for m in METHODS])
     figure.suptitle('LoRa cross-RX comparison on historically developed Dev receivers', y=0.98)
-    figure.text(0.02, 0.04, 'Open circles: six fold/seed fits; diamond: mean. All complete baseline/HStem results use CPU FP32.', fontsize=9)
+    figure.text(0.02, 0.04, 'Open circles: six fold/seed fits; diamond: mean. HStem/CE/DANN/FAN/IB: CPU FP32; ASKNet: GPU FP32.', fontsize=9)
     figure.text(0.02, 0.01, 'FAN checkpoints are reused stage 1. ASK Native appears only after all six models are evaluated; Strict-IB ASK is deferred.', fontsize=8)
     figure.subplots_adjust(left=0.17, right=0.94, bottom=0.17, top=0.87, wspace=0.28)
     save(figure, 'accuracy_comparison')

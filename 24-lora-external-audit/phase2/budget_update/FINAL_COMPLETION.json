@@ -1,0 +1,23 @@
+{
+  "status": "COMPLETE_RETAINED54_STRICT_ASK_DEFERRED",
+  "verified_time": "2026-11-22T12:43:49+08:00",
+  "controller_completion_commit": "c4640af",
+  "completed_new_fits": 54,
+  "completed_native_ask_fits": 6,
+  "frozen_h0_models_unchanged": 6,
+  "final_evaluated_models": 60,
+  "checked_predictions": 600000,
+  "final_prediction_integrity": "PASS",
+  "same_gpu_cost_measurement": "COMPLETE",
+  "deferred_strict_ask_fits": 6,
+  "source_training_configurations_changed_after_dev": false,
+  "new_scientific_fits_in_final_audit": 0,
+  "confirm_reads": 0,
+  "blind_reads": 0,
+  "temporary_keep_awake_released": true,
+  "final_integrity_sha256": "b1c63ed610a1cf87a32afbb4541ad863ae24e5c9d6bee2b6a54aee22e6401af0",
+  "results_sha256": "495484244654ffb553cd70f962708721caa8ab7287b6c016fb4457d3373d5aca",
+  "costs_sha256": "9b782f2cc825c38beb3eb684f5aa5b00362f1a91060286fbb0a7a2d134fcdfeb",
+  "ask_weak_source_fit_reported_without_retraining": true,
+  "remaining_authorized_training_jobs": 0
+}

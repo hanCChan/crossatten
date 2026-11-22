@@ -1,5 +1,7 @@
 # S24：LoRa 外部方法对照，第一阶段交付
 
+**2026-11-22完成状态**：本轮保留的54项训练、ASK Native六模型统一评估和同机GPU成本测量全部完成。最终结果见[RESULTS](phase2/budget_update/RESULTS.zh-CN.md)、[解释与成本](phase2/budget_update/INTERPRETATION.zh-CN.md)、[60万条预测核验](phase2/budget_update/FINAL_INTEGRITY.json)。ASK Strict-IB六项按预算延期，未自动启动；以下第一阶段及后续预算说明为历史记录。
+
 **当前执行入口（2026-11-18更新）**：第一阶段历史快照如下；第二阶段已启动真实训练。最新用户预算修订见 [phase2/budget_update/README.zh-CN.md](phase2/budget_update/README.zh-CN.md)：保留54项，ASK Native六项继续、Strict-IB六项延期；48个已完成基线与冻结H0先整体封存、统一报告。原60项草案和本页的fit=0描述不代表当前执行状态。实时进度见 [phase2/LIVE_STATUS.json](phase2/LIVE_STATUS.json)。
 
 2026-11-14；独立分支 `exp/s24-lora-external-audit`，基线 `e041f09`。

@@ -1,5 +1,7 @@
 # S24 计算预算修订：54项保留、ASK Strict-IB六项暂缓
 
+**2026-11-22完成**：54/54项训练已完成，ASK Native 6/6已统一评估，同机GPU成本测量完成；控制器结束并释放临时防休眠请求。见[RESULTS.zh-CN.md](RESULTS.zh-CN.md)、[INTERPRETATION.zh-CN.md](INTERPRETATION.zh-CN.md)、[COSTS.json](COSTS.json)、[FINAL_INTEGRITY.json](FINAL_INTEGRITY.json)。最终核验覆盖60模型、300个RX单元、600000条预测及26个配对指标区间。六个ASK种子全部计入，包括弱拟合单元；没有再训练或Dev调参。Strict-IB ASK六项为延期/NA。下方恢复说明为历史。
+
 **2026-11-20最新恢复入口**：使用`./24-lora-external-audit/phase2/budget_update/resume_002.ps1`。第三个ASK Native已完成，但归档路径列表触发Windows WinError 206；追加修复[TECHNICAL_FIX_002.json](TECHNICAL_FIX_002.json)将Git add/commit改用NUL路径清单。已通过522文件、37083字符原命令压力测试，保留其他已暂存修改。科学代码和全部注册配置不变；第四至六个Native继续，Strict-IB仍延期。以下001入口说明保留为历史，不作为当前启动入口。
 
 **当前恢复入口**：使用`./24-lora-external-audit/phase2/budget_update/resume_001.ps1`。54模型推理完成后的原汇总发生NumPy整数JSON序列化错误，追加修复见[TECHNICAL_FIX_001.json](TECHNICAL_FIX_001.json)。原冻结训练、统计、控制器和launch.ps1均未改写；新入口只为原汇总输出转换标量类型，继续接管同一Native worker。`CONTROLLER_FAILURE.json`及attempt1日志是保留的历史失败，当前状态见LIVE_STATUS与RECOVERY_001.json。不要与旧入口同时启动。
