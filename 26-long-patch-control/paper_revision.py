@@ -179,6 +179,9 @@ How a fixed RF representation becomes a token sequence can affect cross-receiver
     old_shift='Thus zero padding and magnitude roundoff alone do not explain failure, which is not unique to HStem. Time-domain phase and mixed time/frequency coordinates remain possibilities, not identified causes.'
     assert text.count(old_shift)==1
     text=text.replace(old_shift,'Sample deletion from a zero-filled input shift and FFT magnitude roundoff do not by themselves explain failure, which is not unique to HStem. Internal CNN boundary operations, position-dependent phase interactions, and mixed time/frequency coordinates remain unseparated possibilities, not identified causes.')
+    old_bootstrap='For paired contrasts, the three seed differences are averaged at each of ten unique RXs, then RX identities are bootstrapped 10,000 times with seed 24016.'
+    assert text.count(old_bootstrap)==1
+    text=text.replace(old_bootstrap,'For historical paired contrasts, the three seed differences are averaged at each of ten unique RXs, then RX identities are bootstrapped 10,000 times with seed 24016. The separately registered S26 Long-Patch comparisons use seed 26026 with the same RX resampling unit.')
     text=re.sub(r'\\begin\{abstract\}.*?\\end\{abstract\}',lambda _:abstract,text,flags=re.S)
     text=replacement(text,r'\section{Introduction}',r'\begin{figure*}[t]',INTRO)
     text=replacement(text,r'\subsection{Relation to Cross-Receiver and Tokenization Methods}',r'\section{Hierarchical RF Token Formation}',RELATED)
@@ -328,9 +331,8 @@ The S25 TF32-off source analysis retained two net one-packet accuracy changes an
 
 Ma's unpretrained Siamese variant is source-compatible in principle \cite{ma2025robust}; the optional externally pretrained variant requires a separate budget. A checked author implementation and a frozen source-only adapter were not qualified here. No simplified network or paper score substitutes for it. This is a remaining coverage limitation, not proof that the method cannot be adapted.
 
-The eight-claim evidence matrix and ten reviewer answers are updated in the repository. They separate measured system effects, exploratory associations, architectural identities, and unresolved mechanisms. Full negative shift and weak-fit results are retained.
+The ten-claim evidence matrix and ten reviewer answers are updated in the repository. They separate measured system effects, exploratory associations, architectural identities, and unresolved mechanisms. Full negative shift and weak-fit results are retained.
 \clearpage
-\balance
 \bibliographystyle{IEEEtran}
 \bibliography{references}
 \end{document}

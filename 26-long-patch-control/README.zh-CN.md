@@ -1,5 +1,15 @@
 # S26：Long-Patch 六模型开发性控制与方法论证
 
+<!-- completion -->
+**本阶段已完成：6/6 新训练、18 模型统一评估、180000 条 Dev 预测独立核验。**
+
+H0 97.335%，Long-Patch 94.500%，P0 94.648%；H0−LP +2.835 pp。全部六模型和十个 RX 保留，条件性解释见 [RESULTS](RESULTS.json) 与 [GO/STOP](GO_STOP.json)。
+
+[修订英文稿](output/pdf/hstem_tifs_revised.pdf) · [补充材料](output/pdf/hstem_tifs_supplement.pdf) · [中英文贡献与十项问答](RESEARCH_NOTES.zh-CN.txt) · [科研完整性核验](EXPERIMENT_INTEGRITY.json) · [最终交付审计](FINAL_AUDIT.json)
+
+仅重建文档：运行 `paper_revision.py`、`research_notes.py`、`build_documents.py`，不需要波形或权重；只用已提交聚合证据和图表。不要重新启动已完成训练或重复 Dev 评价。
+<!-- /completion -->
+
 基线为 S25 `657bdaa`。用户于 2026-11-22 要求执行附件中的后续方案，本阶段新增且仅新增一个 Long-Patch 控制臂、两折三种子，共六次训练。S25 的零训练登记保留原样，不追溯修改。
 
 固定结构：组数 8、宽度 64、核长 340、步长 256、padding 42，随后 64→64 点投影；138,346 参数，比 HStem 多 3.48%；相同 32×64 Token、350 局部支持及普通 MHA 后端。内部宽度、BN、非线性深度与 MACs 仍不同，不能作为纯层级因果消融。

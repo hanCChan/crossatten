@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "D:\crossatten\worktrees\s26-long-patch-control\26-long-patch-control\s26_execute.py", line 81, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\crossatten\worktrees\s26-long-patch-control\26-long-patch-control\s26_execute.py", line 70, in main
+    from s26_evaluate import evaluate,costs
+  File "D:\crossatten\worktrees\s26-long-patch-control\26-long-patch-control\s26_evaluate.py", line 62
+    scope='Separate common S26 session; synthetic GPU-resident IQ-to-logits, three warmups15 samples, no host transfer. Not pooled with older costs.')))
+                                                                                                                                                       ^
+SyntaxError: unmatched ')'

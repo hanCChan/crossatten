@@ -1,12 +1,11 @@
 {
-  "status": "TRAINING",
-  "updated_at": "2026-11-22T22:07:15+08:00",
-  "completed_fits": 5,
+  "status": "COMPLETE_S26_CONTROL_AND_REVISED_DRAFTS",
+  "updated_at": "2026-11-22T22:21:10+08:00",
+  "completed_fits": 6,
   "total_fits": 6,
-  "active_model": "LP_f1_s203",
-  "active_epoch": 200,
-  "active_budget": 200,
-  "remaining_fit_seconds_estimate": 0.0,
-  "estimate_scope": "Fits only; excludes final evaluation, analysis and manuscript work.",
-  "new_dev_reads": 0
+  "active_model": null,
+  "remaining_fit_seconds_estimate": 0,
+  "report_only_evaluation": "COMPLETE",
+  "documents": "COMPLETE",
+  "remaining_authorized_new_fits": 0
 }

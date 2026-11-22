@@ -1,9 +1,90 @@
 {
-  "status": "TRAINING_AND_UNIFIED_EVALUATION_COMPLETE",
-  "time": "2026-11-22T22:08:21+08:00",
+  "status": "COMPLETE_S26_CONTROL_AND_REVISED_DRAFTS",
+  "time": "2026-11-22T22:21:10+08:00",
   "completed_new_fits": 6,
+  "remaining_authorized_new_fits": 0,
   "reused_models": 12,
-  "evaluated_predictions": 180000,
-  "confirm_blind_reads": 0,
-  "manuscript_revision": "PENDING"
+  "target_packet_predictions": 180000,
+  "integrity_audit": "PASS",
+  "visual_review": "PASS",
+  "documents": [
+    {
+      "path": "output/pdf/hstem_tifs_revised.pdf",
+      "pages": 10,
+      "sha256": "636325801bba00e7556c7dd31bd36d816ce25770f9c7d45711193243dd521d5c",
+      "renders": [
+        {
+          "page": 1,
+          "sha256": "ba538e17e7560ecffb0c1c754b758678d6eb8a167f7a9d4280d731bd12a27b88"
+        },
+        {
+          "page": 2,
+          "sha256": "1d184ddf3c10ff064db33f03977d6842a010444281d7b2560126baa9c1d28720"
+        },
+        {
+          "page": 3,
+          "sha256": "792dc2948e014883939c0152d47ad5e698b3be1196f10d14eec99d1e9fdb8bf7"
+        },
+        {
+          "page": 4,
+          "sha256": "ad5020b2f3d2a7bf348ee8a8bd72b8c263f1e2e4a4e9ee65f869cea645095cae"
+        },
+        {
+          "page": 5,
+          "sha256": "afc8ec4d350473f9ecf58e67d2687620f94f4da8f0bced8753c635505be43a42"
+        },
+        {
+          "page": 6,
+          "sha256": "b18c75fbdba441b91d1477c45a9ef33f252090e2eb5db3fd671f4b7aff965c8f"
+        },
+        {
+          "page": 7,
+          "sha256": "ec07e0a0464ba9376cb048c06c7a4c714da5e1d5fc0793074dcabbc62cf41dc6"
+        },
+        {
+          "page": 8,
+          "sha256": "39d94eae7afe60a9475fc82cd08d8b660bdc45995d436bff5626262498976f9e"
+        },
+        {
+          "page": 9,
+          "sha256": "953fe3502e44d5d4c778867080b27904437cefa0905d52f3bd1cc26d3228a349"
+        },
+        {
+          "page": 10,
+          "sha256": "d95803738459eb66af07a662013d2f01ef919682392bc83a6702648a948706c7"
+        }
+      ]
+    },
+    {
+      "path": "output/pdf/hstem_tifs_supplement.pdf",
+      "pages": 5,
+      "sha256": "0f6b2f23a110f0d2601ceb7c78350ebcfeebbfaeae74af162c8c09bc4a9513f5",
+      "renders": [
+        {
+          "page": 1,
+          "sha256": "d056124280bdf53525f35ef5942f2bfa999df703fe8b96af54ef228590adbc14"
+        },
+        {
+          "page": 2,
+          "sha256": "a85a370ac568277d650df491f7fc3369833f5200c18fb9e91ec14c4db8dea044"
+        },
+        {
+          "page": 3,
+          "sha256": "32f00ee6e8a75061190270047553274d0da557fea754676d414855fafc8d179e"
+        },
+        {
+          "page": 4,
+          "sha256": "cccd82e68310a82054320d482931c567f049db1e550d69e15da0f600cb7c9c59"
+        },
+        {
+          "page": 5,
+          "sha256": "d0701aff12be9788748e8a4c50c152fc2cecc0cc8e75d27e56bac6783e898125"
+        }
+      ]
+    }
+  ],
+  "independent_acquisition": "NOT_AVAILABLE_NOT_RUN",
+  "ma2025": "NO_QUALIFIED_ADAPTER_OR_SCORE",
+  "original_scientific_code_unchanged": true,
+  "technical_parser_repair": "TECHNICAL_FIX_001.json"
 }

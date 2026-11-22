@@ -1,0 +1,13 @@
+{
+  "time": "2026-11-22T22:12:55.389320+08:00",
+  "scope": "Unfrozen verification/presentation code only; no model or registered statistics change.",
+  "verifier_correction": "Canonical evaluator does not archive target CE. Verifier now derives CE from saved logits and cross-checks NumPy against Torch, rather than accessing a nonexistent field. CM/accuracy/F1 and bootstrap checks unchanged.",
+  "manuscript_corrections": [
+    "Distinguish S26 bootstrap RNG seed26026 from archived seed24016.",
+    "Circular shifts rule out sample deletion from zero-filled input shift, not internal CNN boundary effects.",
+    "Remove last-page supplement column balancing to clear its1.39pt TeX vertical overflow; PCA figure scale retained.",
+    "Current evidence matrix has10 claims, including8 reused S25 claims."
+  ],
+  "extra_fits": 0,
+  "extra_target_reads": 0
+}

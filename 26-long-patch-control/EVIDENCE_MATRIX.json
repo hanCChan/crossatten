@@ -1,0 +1,117 @@
+{
+  "time": "2026-11-22T22:12:57+08:00",
+  "rows": [
+    {
+      "claim": "The complete HStem tokenizer improves this parameter-matched system.",
+      "definition": "Four spatial stages, same input/32x64/MHA;133690 vs134266 parameters.",
+      "evidence": [
+        "15-hstem-attribution",
+        "22-mechanism-closure/summary.json"
+      ],
+      "result": "H0-P0 +2.687pp;6/6 paired means positive.",
+      "status": "SUPPORTED_WITHIN_PROTOCOL",
+      "limit": "Support, normalization, groups, nonlinearities and compute remain different; not a pure hierarchy effect."
+    },
+    {
+      "claim": "Support-related design and training parameterization matter.",
+      "definition": "P0/S1 share266 local feature-coordinate support;H1 has350;all134266 parameters.",
+      "evidence": [
+        "22-mechanism-closure/summary.json",
+        "23-hstem-mechanism-evidence/kernel_bands.csv",
+        "25-tifs-integration/kernel_geometry_join.csv"
+      ],
+      "result": "S1-P0 +0.878pp;H1-S1 +0.818pp;effective-kernel high-energy21.808/7.692/4.043%.",
+      "status": "INCREMENTAL_EFFECTS_AND_ASSOCIATION",
+      "limit": "Smoothing/support/frequency response/optimization are not causally separated; not hardware spectra."
+    },
+    {
+      "claim": "Final source representations show better TX separation.",
+      "definition": "Per-packet L2 final64D embedding;balanced scatter andall6pairs;all3taps retained.",
+      "evidence": [
+        "25-tifs-integration/MECHANISM_EXTENSION.json",
+        "25-tifs-integration/source_tx_rx_margins.csv"
+      ],
+      "result": "Final Jw P0/S1/H1/H0=4.270/4.435/4.925/5.449;H0-P0 positive6/6.",
+      "status": "SUPPORTED_SOURCE_DIAGNOSTIC",
+      "limit": "Source validation was used for checkpoint selection; not new held-RX confirmation or identified cause."
+    },
+    {
+      "claim": "The tokenizer itself removes RX information monotonically.",
+      "definition": "Would require consistent layer-level RX reduction, not only final classification.",
+      "evidence": [
+        "25-tifs-integration/mechanism_geometry.csv"
+      ],
+      "result": "Counterexample: tokenizer absolute conditional RX scatter larger for H0 in6/6;pre-MHA meanJc H0=33.983 vsP0=41.241.",
+      "status": "NOT_ESTABLISHED_COUNTEREXAMPLES",
+      "limit": "Pooled centroid scatter is not mutual information."
+    },
+    {
+      "claim": "BN affects this training/design, beyond only affine parameter count.",
+      "definition": "H2 deletes3BN;S2 keeps352 affine parameters without statistics.",
+      "evidence": [
+        "22-mechanism-closure/summary.json",
+        "23-hstem-mechanism-evidence/RESEARCH_INTERPRETATION.zh-CN.md"
+      ],
+      "result": "H0-H2 +1.190pp;H0-S2 +.918pp butonly4/6 positive;S2-H2 +.272pp.",
+      "status": "BOUNDED_NORMALIZATION_OPTIMIZATION_EVIDENCE",
+      "limit": "Registered stability criterion fails forH0-S2;no independent separation of statistics/optimization."
+    },
+    {
+      "claim": "Competitive cross-RX identification and parameter efficiency.",
+      "definition": "S24 same source packet permissions;Native andStrict-IB separated;all seeds retained.",
+      "evidence": [
+        "24-lora-external-audit/phase2/budget_update/RESULTS.json",
+        "24-lora-external-audit/phase2/budget_update/COSTS.json"
+      ],
+      "result": "97.333%;Native H0-DANN+3.125pp;Strict H0-CE+2.632pp;about1/101 DANN parameter elements.",
+      "status": "SUPPORTED_SYSTEM_EFFECT",
+      "limit": "Native loses toShen onsomeRX;Strict mean gain concentrated atPluto;batch1 slower;historicalDev only."
+    },
+    {
+      "claim": "A causal CFO/SNR or hardware explanation for Pluto errors.",
+      "definition": "Only legal source metadata diagnostics are permitted;target fields not loaded.",
+      "evidence": [
+        "25-tifs-integration/metadata_correlations.csv",
+        "25-tifs-integration/per_tx_rx.csv"
+      ],
+      "result": "Small within-cell source correlations andclass-dependent target errors;no unique cause identified.",
+      "status": "NOT_ESTABLISHED",
+      "limit": "Group confounding, metadata meaning andsource/target mismatch prevent causal attribution."
+    },
+    {
+      "claim": "New-independent-RX, sync robustness or full authentication.",
+      "definition": "Needs new physical RX/acquisition provenance, same enrolledTX identities andsecurity-specific evaluation.",
+      "evidence": [
+        "23-hstem-mechanism-evidence/PAPER_OVERLAP_REVIEW.zh-CN.md",
+        "25-tifs-integration/INDEPENDENT_DATA_STATUS.json"
+      ],
+      "result": "User confirms no new capture;source circular4-sample shifts cause severe failures.",
+      "status": "NOT_CLAIMED",
+      "limit": "No unknownTX rejection,FAR/FRR,active spoofing orreal synchronization-offset evaluation."
+    },
+    {
+      "claim": "A same-support direct long projection is sufficient to recover HStem.",
+      "definition": "Registered groups8/width64/k340/stride256/pad42;138346 params, same nominal350 support and32x64 tokens.",
+      "evidence": [
+        "26-long-patch-control/registration.json",
+        "26-long-patch-control/RESULTS.json",
+        "26-long-patch-control/EXPERIMENT_INTEGRITY.json"
+      ],
+      "result": "H0−LP +2.835 pp，条件 RX 95% CI [2.253, 3.530]，6/6 配对正向；LP−P0 -0.148 pp。",
+      "status": "H0_CONSISTENCY_RULE_MET",
+      "limit": "通过预先冻结的一致性门槛；在这个候选上，单个自由长核投影未恢复完整HStem结果。但宽度、BN、非线性深度、边界参数化和MAC仍混杂，不能归因为纯层级性。"
+    },
+    {
+      "claim": "The architectural accounting is a novel RF generalization theorem.",
+      "definition": "Support/center/coordinate-count/parameter/MAC identities and frozen-BN Jacobian factorization.",
+      "evidence": [
+        "26-long-patch-control/METHOD_DERIVATION.json"
+      ],
+      "result": "Accounting verified against actual models.",
+      "status": "ARCHITECTURAL_IDENTITIES_NOT_A_NEW_THEOREM",
+      "limit": "No TX-information preservation, antialiasing, physical locality or receiver-invariance guarantee follows."
+    }
+  ],
+  "prior_rows_retained": true,
+  "new_fits": 6
+}

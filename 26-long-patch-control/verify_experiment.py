@@ -25,7 +25,7 @@ def main():
     assert evaluation['status']=='COMPLETE_REPORT_ONLY' and len(evaluation['records'])==90
     assert evaluation['seal_sha256']==sha(HERE/'seal.json')
     assert evaluation['packet_predictions']==180000
-    cohort={};all_rows=[];prediction_hashes=[]
+    cohort={};all_rows=[];prediction_hashes=[];recomputed_cells=[]
     for row in evaluation['records']:
         path=HERE/'predictions'/f"{row['arm']}_f{row['fold']}_s{row['seed']}"/(row['rx']+'.npz')
         assert row['rx'] in P['folds'][row['fold']]['dev_val']
@@ -42,7 +42,14 @@ def main():
         np.testing.assert_array_equal(cm,row['confusion'])
         accuracy=float(np.mean(predictions==y));f1=float(np.mean(2*cm.diagonal()/np.maximum(cm.sum(0)+cm.sum(1),1)))
         maxima=logits.max(1);ce=float(np.mean(maxima+np.log(np.exp(logits-maxima[:,None]).sum(1))-logits[np.arange(2000),y]))
-        assert abs(accuracy-row['acc'])<1e-12 and abs(f1-row['macro_f1'])<1e-12 and abs(ce-row['ce'])<3e-6
+        assert abs(accuracy-row['acc'])<1e-12 and abs(f1-row['macro_f1'])<1e-12
+        # The frozen evaluator archives CM/accuracy/F1/recall, not target CE.
+        # Compute CE from saved logits here and cross-check a separate Torch
+        # implementation; never invent an original evaluator CE field.
+        torch_ce=float(F.cross_entropy(torch.from_numpy(logits),torch.from_numpy(y).long()))
+        assert abs(ce-torch_ce)<1e-12
+        recomputed_cells.append(dict(arm=row['arm'],fold=row['fold'],seed=row['seed'],rx=row['rx'],
+            accuracy=accuracy,macro_f1=f1,ce_from_saved_logits=ce))
         all_rows.append(dict(arm=row['arm'],fold=row['fold'],seed=row['seed'],rx=row['rx'],acc=accuracy,macro_f1=f1))
         prediction_hashes.append(dict(path=path.relative_to(HERE).as_posix(),sha256=sha(path)))
     assert len(cohort)==10
@@ -118,6 +125,8 @@ def main():
         models_evaluated=18,target_packet_predictions=180000,target_cells=90,unique_held_rx=10,
         all_model_selection_source_only=True,all_six_sealed_before_dev=True,all_seeds_rx_retained=True,
         checkpoint_source_metrics_recovered=source_checks,confusion_accuracy_f1_ce_recomputed=True,
+        target_ce_scope='Derived from saved logits during this audit; not a metric field in the original frozen evaluator.',
+        recomputed_cells=recomputed_cells,
         paired_conditional_intervals_recomputed=True,source_roles_checked=True,new_confirm_blind_reads=0,
         historical_reference_models_unchanged=historical,fits=fits,prediction_hashes=prediction_hashes,
         source_recovery=read(HERE/'SOURCE_RECOVERY.json')['all_metrics_exact'],

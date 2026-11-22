@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "time": "2026-11-22T22:21:09.296878+08:00",
+  "review_method": "Visual inspection of every final115dpi page PNG using view_image, after final build; all10 main and5 supplement pages.",
+  "checks": [
+    "All tables, formulas, captions and references legible.",
+    "No clipping, overlaps, unresolved references or missing glyphs.",
+    "All six paired fits and ten RX displayed in new comparison.",
+    "All six reused PCA cohorts retained with full legends.",
+    "TeX logs clear after removing supplement last-page balancing."
+  ],
+  "documents": [
+    {
+      "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\output\\pdf\\hstem_tifs_revised.pdf",
+      "sha256": "636325801bba00e7556c7dd31bd36d816ce25770f9c7d45711193243dd521d5c",
+      "reviewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\output\\pdf\\hstem_tifs_supplement.pdf",
+      "sha256": "0f6b2f23a110f0d2601ceb7c78350ebcfeebbfaeae74af162c8c09bc4a9513f5",
+      "reviewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  ]
+}
