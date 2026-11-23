@@ -1,0 +1,11 @@
+{
+  "reference": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\runs\\LP_f0_s202\\model.pt",
+  "reference_config_sha256": "0444da035701505973536479a930cbbdea9ec4bb0f72a696818d51b55cb0e450",
+  "initial_shared_sha256": "36d7b9f23f2c875b8d7a724802ef63592f22c232f7f46caa08d4f69d6b62ea1e",
+  "initial_full_sha256": "6ba7da5d57a2cdccd63f0518d5af2262376631e229f1f07b5f57eeea3f9c8cd9",
+  "same_source_packets": true,
+  "same_data_seed": true,
+  "same_permutation_and_noise_generators": true,
+  "tokenizer_initialization": "Exact corresponding tokenizer/frontend/input_proj/position/LNs/classifier initialization; fixed shared S27B-Readout CPU stream for newMLP head",
+  "source_selection": "Original last40/TX/RX; minimum RX-equal clean CE, no target score"
+}

@@ -1,0 +1,11 @@
+{
+  "reference": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s203\\model.pt",
+  "reference_config_sha256": "3ec97b0e80816abbe7963fcb0494ba5a18cd54c01a8db7899c8c3a3fd7fe4895",
+  "initial_shared_sha256": "bd16002f72e1f759110e5bb5a8c88bef578699ede8a462cc70ec538bb78b41ab",
+  "initial_full_sha256": "f8c6be43c35046f99b46c49ead73d7d086f94c8f2055e445a831f48f894f24be",
+  "same_source_packets": true,
+  "same_data_seed": true,
+  "same_permutation_and_noise_generators": true,
+  "tokenizer_initialization": "Exact corresponding tokenizer/frontend/input_proj/position/LNs/classifier initialization; fixed shared S27B-Readout CPU stream for newMLP head",
+  "source_selection": "Original last40/TX/RX; minimum RX-equal clean CE, no target score"
+}
