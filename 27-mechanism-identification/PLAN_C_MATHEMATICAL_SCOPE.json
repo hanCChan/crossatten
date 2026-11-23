@@ -1,0 +1,15 @@
+{
+  "time": "2026-11-23T10:57:29.500388+08:00",
+  "scope": "Mathematical-domain clarification of future nonexecuting C plan, before anyA Dev inference; no receiver/architecture/packet/statistical-selection changes.",
+  "original_plan_preserved": true,
+  "held_single_RX": "DRXgivenTX acrossreceivers is undefined as a dispersion comparison with just1RX. Do not report held-onlyJc or infer invariance from its zero denominator.",
+  "fixed_feature_diagnostics": {
+    "source_only": "S25centroid statistics over4fitRX,40fixedsourcevalpackets/TX/RX.",
+    "combined": "Balanced5RX diagnostic:4source+1held,40fixedlastrows/TX/RX; all taps/allseeds. Descriptive, not model selection.",
+    "transfer": "For eachTX compare heldcentroid to equal4sourceRXcentroid; report mean squared centroidshift,source andheld betweenTXscatter,source andheld withinTXRXscatter.",
+    "held_only": "WithinTXscatter,TXcentroid separation andmargin valid; acrossRXJc is NA.",
+    "accuracy": "Heldaccuracy usesall2000packets, diagnostic featurebalancedsubset uses400fixedlastrows."
+  },
+  "extra_current_fits": 0,
+  "extra_current_target_reads": 0
+}

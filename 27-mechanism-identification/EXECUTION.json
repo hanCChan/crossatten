@@ -1,0 +1,6 @@
+{
+  "time": "2026-11-23T10:55:37+08:00",
+  "workers": 2,
+  "gate_peak_gpu_gib": 0.49760913848876953,
+  "rule": "Max2 independent jobs; each retains batch64 and its own generators. Memory gate only. No target-score scheduling."
+}
