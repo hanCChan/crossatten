@@ -58,9 +58,12 @@ Accuracy/F1 are percentages, fit SD is over six fold/seed means in pp, and worst
 \section{Source Learning, Historical Dev, and Scope}
 '''
     body+=f"Source interaction is {result['source_interaction']['mean_delta_pp']:+.3f}pp, compared with {primary['mean_delta_pp']:+.3f}pp on Dev. Source-minus-Dev interaction is {result['source_minus_dev_interaction']['mean_pp']:+.3f}pp. All six paired values are archived.\n"
+    backend=result['secondary_contrasts'][2]
+    body+=f"Both chosen backends preserve positive HStem-minus-LP differences in all six fit pairs and all ten RX means. This secondary observation does not meet the primary MHA-amplification criterion or establish equivalence. The HStem MHA-minus-MLP difference is {backend['mean_delta_pp']:+.3f}pp; Pluto's {backend['per_rx_delta_pp']['pluto_1']:+.3f}pp contributes {backend['per_rx_delta_pp']['pluto_1']/10:+.3f}pp to the unchanged ten-RX mean. RTL5 and RTL6 favor MLP. No RX is removed from the primary estimate.\n"
     body+=r'''Source validation uses40 selected packets/TX/RX and already selects checkpoints; Dev uses200 and has a development history. Source/Dev differences do not replace a freshly fitted four-source/one-held-source study. Poor source learning by an MLP control also limits assigning its errors entirely to receiver transfer. A positive interaction cannot alone establish receiver-specific robustness.
 \begin{figure}[htbp]\centering\includegraphics[width=.98\linewidth]{fig02_fourcells.pdf}
 \caption{Complete source and Dev accuracies of all24 frozen models; no weak fit is excluded.}\end{figure}
+\clearpage
 \section{Fixed-Layer Source Geometry}
 All24 models use the same2,000 legal source-validation packets/fold. The taps are mean tokenizer output, mean after input projection/position/pre-LN and final classifier input, each64D. Pooling precedes per-packet L2 normalization. Balanced40-packet TX-by-RX cells use the original S25 between-TX scatter $B$, conditional RX scatter $D$, within-cell scatter $W$, $J_c=B/(D+10^{-12})$ and $J_w=B/(D+W+10^{-12})$ definitions. The table averages six per-fit statistics, not pooled features or a ratio of overall means. If any fit is invalid, its entire arm/layer aggregate is NA; no replacement normalization is chosen.
 \begin{center}\small\begin{tabular}{llrrrrr}\toprule
@@ -73,6 +76,9 @@ Cell&Tap&$B$&$D$&$W$&$J_c$&$J_w$\\\midrule
 \begin{figure}[htbp]\centering\includegraphics[width=.98\linewidth]{fig03_source_geometry.pdf}
 \caption{All three fixed taps and all four cells. Error bars are fit SD. Mean64D diagnostics do not summarize all information in the full token sequence.}\end{figure}
 The models are trained end to end; changing the backend also changes the learned tokenizer. Thus these comparisons are descriptive representations of different trained systems, not causal information flow through a fixed representation. Source-selected geometry, scatter and ratios do not establish mutual information, receiver removal or RF hardware invariance. This source execution preserves the original FP32/TF32 flags and is not numerically pooled with old TF32-off diagnostics.
+
+The complete table contains counterexamples to a single-geometry explanation. MHA's pre-backend $J_w$ is lower for HStem than LP. For both tokenizers, the MLP final-source $J_w$ is higher than MHA's, while Dev accuracy is lower. Under MLP, final conditional RX scatter is higher for HStem than LP despite HStem's accuracy advantage. These fixed diagnostics therefore do not monotonically rank Dev accuracy or show that HStem removes RX information at every layer. The mean64D taps do not characterize all information in the full token sequence.
+\clearpage
 \section{Every New Fit and Same-Session Cost}
 \begin{center}\small\begin{tabular}{lrrrrrrr}\toprule
 Cell&Fold&Seed&Best ep.&Source CE&Source acc.&Dev acc.&Fit wall(s)\\\midrule
@@ -94,13 +100,13 @@ Cell&Partial MACs(M)&B1 p50(ms)&B128 p50(ms)\\\midrule
     body+=r'''\bottomrule\end{tabular}\end{center}
 This is one common GPU-resident IQ-to-logits timing session, batch1/128, three warmups and15 repetitions, original FP32 tensors with matmul TF32 off/cuDNN TF32 on. B128 is whole-batch latency. The latency includes FFT/frontend work and excludes host transfer. Partial MACs omit FFT and unsupported operations. Parameters, compute, latency and throughput are distinct axes; no old timing session is pooled here.
 \section{Mechanism Judgment and Unexecuted C}
-A positive registered interaction supports the relative advantage under these chosen architectures/readouts. Failure to meet the rule does not establish equality; a negative interaction narrows the MHA-amplification story. Tokenwise MLPs also introduce different nonlinear forms, capacity and optimization paths. Low scores alone cannot establish that attention is uniquely necessary, and architecture-specific evidence is not a new RF physical theory.
+The registered positive interaction is not established. The current evidence supports a HStem-relative accuracy advantage under both selected backends; it does not support MHA amplification as an established explanation. An interval crossing zero does not demonstrate backend equivalence. Tokenwise MLPs also introduce different nonlinear forms, capacity and optimization paths. The source-geometry counterexamples prevent a single pooled scatter ratio from serving as a sufficient mechanism explanation.
 
 If a receiver-specific gap claim is pursued, C remains necessary: B's five-source factorial training does not fit the predeclared four-source/one-held-source split. The fixed b210\_1/rtl\_5 pilot has only two held RX units and no population-RX guarantee. Current C, IQ-only and ASK Strict-IB fit counts are zero; no automatic expansion or new readout search follows these results. The existing innovation evidence matrix is updated without renaming old experiments. The formal TIFS manuscript is not rewritten in this stage.
 \section{Integrity and Reproduction}
 The engineering gate uses no RF data and separately records eight synthetic optimizer updates. It checks model shape/capacity, matching surviving initial states and MLP heads, finite gradients, exact optimizer/model/all-RNG recovery for both arms, forbidden data roles, batch64/128 resources, bit-exact feature-hook forward results and four-cell interaction arithmetic. Unique-process JSON temporary files, bounded Windows rename retry and shared-delete progress reads preserve scientific update order.
 
-Independent verification recomputes240,000 Dev predictions,48,000 source predictions and72 geometry records, including balanced row/label identities, confusion matrices, accuracy/F1/CE, conditional interaction intervals, all200-epoch minimum-source-CE histories, the original paired permutation/AWGN streams and historical model/config/history hashes. All24 models and all RXs remain reported. No Confirm or old-blind packet, new target adaptation or fresh capture is introduced. Larger waveforms, checkpoints, resume states and per-packet predictions/features remain local; aggregate evidence, code and real logs are committed.
+Independent verification recomputes240,000 Dev predictions,48,000 source predictions and72 geometry records, including balanced row/label identities, confusion matrices, accuracy/F1/CE, conditional interaction intervals, all200-epoch minimum-source-CE histories, the original paired permutation and AWGN streams and historical model, configuration and history hashes. All24 models and all RXs remain reported. No Confirm or old-blind packet, new target adaptation or fresh capture is introduced. Larger waveforms, checkpoints, resume states and per-packet predictions/features remain local; aggregate evidence, code and real logs are committed.
 
 \href{https://github.com/hanCChan/crossatten/tree/exp/s27b-backend-interaction/27b-tokenizer-backend-interaction}{Repository evidence and Chinese mechanism report} accompanies this execution record. It supplies bounded architecture evidence, not submission-readiness or independent-generalization certification.
 \end{document}
@@ -110,6 +116,7 @@ Independent verification recomputes240,000 Dev predictions,48,000 source predict
         'seed27028':'seed 27028','uses40':'uses 40','uses200':'uses 200','all24':'all 24','All24':'All 24','same2,000':'same 2,000','each64D':'each 64D',
         'Balanced40':'Balanced 40','Mean64D':'Mean 64D','completes200epochs':'completes 200 epochs','and25,000':'and 25,000','total300,000':'total 300,000',
         'all200epochs':'all 200 epochs','batch1/128':'batch 1/128','and15':'and 15','recomputes240,000':'recomputes 240,000',
+        'fold0 seed202':'fold 0 seed 202','fold0 seed203':'fold 0 seed 203','epochs180 and3':'epochs 180 and 3','so300,000':'so 300,000','mean64D':'mean 64D',
         'predictions,48,000':'predictions, 48,000','and72':'and 72','all200-epoch':'all 200-epoch'}.items():body=body.replace(old,new)
     folder=HERE/'paper';folder.mkdir(exist_ok=True);tex=folder/'s27b_report.tex';tex.write_text(body,encoding='utf-8',newline='\n')
     temp=HERE/'tmp/pdfs/report';temp.mkdir(parents=True,exist_ok=True)

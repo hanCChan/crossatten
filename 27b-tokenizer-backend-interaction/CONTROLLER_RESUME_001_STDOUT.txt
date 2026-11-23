@@ -1,0 +1,145 @@
+Started LP_P_f0_s202 PID 21284
+Started H0_P_f0_s203 PID 32192
+[exp/s27b-backend-interaction b10f086] S27B completed source-only fit LP_P_f0_s202; no Dev evaluation
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Completed LP_P_f0_s202
+Started LP_P_f0_s203 PID 31332
+[exp/s27b-backend-interaction ed60696] S27B completed source-only fit H0_P_f0_s203; no Dev evaluation
+ 5 files changed, 15 insertions(+), 8 deletions(-)
+Completed H0_P_f0_s203
+Started H0_P_f1_s201 PID 28228
+[exp/s27b-backend-interaction 4f6f137] S27B completed source-only fit LP_P_f0_s203; no Dev evaluation
+ 2 files changed, 10 insertions(+), 5 deletions(-)
+Completed LP_P_f0_s203
+Started LP_P_f1_s201 PID 36036
+[exp/s27b-backend-interaction 44e8543] S27B completed source-only fit H0_P_f1_s201; no Dev evaluation
+ 2 files changed, 10 insertions(+), 5 deletions(-)
+Completed H0_P_f1_s201
+Started H0_P_f1_s202 PID 33492
+[exp/s27b-backend-interaction 3667836] S27B completed source-only fit LP_P_f1_s201; no Dev evaluation
+ 3 files changed, 12 insertions(+), 5 deletions(-)
+Completed LP_P_f1_s201
+Started LP_P_f1_s202 PID 21080
+[exp/s27b-backend-interaction 39799de] S27B completed source-only fit H0_P_f1_s202; no Dev evaluation
+ 3 files changed, 26 insertions(+), 9 deletions(-)
+Completed H0_P_f1_s202
+Started H0_P_f1_s203 PID 11112
+[exp/s27b-backend-interaction 58d5c5e] S27B completed source-only fit LP_P_f1_s202; no Dev evaluation
+ 2 files changed, 10 insertions(+), 5 deletions(-)
+Completed LP_P_f1_s202
+Started LP_P_f1_s203 PID 34748
+[exp/s27b-backend-interaction aba4ae8] S27B completed source-only fit H0_P_f1_s203; no Dev evaluation
+ 2 files changed, 10 insertions(+), 5 deletions(-)
+Completed H0_P_f1_s203
+[exp/s27b-backend-interaction d0541f6] S27B completed source-only fit LP_P_f1_s203; no Dev evaluation
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Completed LP_P_f1_s203
+[exp/s27b-backend-interaction 544c020] S27B seal all twelve source-selected TokenMLP checkpoints before Dev inference
+ 61 files changed, 11791 insertions(+)
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f0_s201/config.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f0_s201/history.csv
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f0_s201/metrics.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f0_s201/pairing.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f0_s201/streams.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f0_s202/config.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f0_s202/history.csv
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f0_s202/metrics.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f0_s202/pairing.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f0_s202/streams.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f0_s203/config.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f0_s203/history.csv
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f0_s203/metrics.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f0_s203/pairing.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f0_s203/streams.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f1_s201/config.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f1_s201/history.csv
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f1_s201/metrics.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f1_s201/pairing.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f1_s201/streams.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f1_s202/config.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f1_s202/history.csv
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f1_s202/metrics.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f1_s202/pairing.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f1_s202/streams.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f1_s203/config.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f1_s203/history.csv
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f1_s203/metrics.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f1_s203/pairing.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/H0_P_f1_s203/streams.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f0_s201/config.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f0_s201/history.csv
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f0_s201/metrics.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f0_s201/pairing.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f0_s201/streams.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f0_s202/config.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f0_s202/history.csv
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f0_s202/metrics.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f0_s202/pairing.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f0_s202/streams.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f0_s203/config.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f0_s203/history.csv
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f0_s203/metrics.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f0_s203/pairing.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f0_s203/streams.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f1_s201/config.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f1_s201/history.csv
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f1_s201/metrics.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f1_s201/pairing.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f1_s201/streams.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f1_s202/config.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f1_s202/history.csv
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f1_s202/metrics.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f1_s202/pairing.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f1_s202/streams.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f1_s203/config.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f1_s203/history.csv
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f1_s203/metrics.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f1_s203/pairing.json
+ create mode 100644 27b-tokenizer-backend-interaction/evidence/LP_P_f1_s203/streams.json
+ create mode 100644 27b-tokenizer-backend-interaction/seal.json
+Report-only Dev 0 b200_mini_1 all12models
+Report-only Dev 0 pluto_1 all12models
+Report-only Dev 0 rtl_2 all12models
+Report-only Dev 0 rtl_5 all12models
+Report-only Dev 0 rtl_7 all12models
+Report-only Dev 1 b210_1 all12models
+Report-only Dev 1 rtl_1 all12models
+Report-only Dev 1 rtl_3 all12models
+Report-only Dev 1 rtl_6 all12models
+Report-only Dev 1 rtl_9 all12models
+Source frozen taps H0_f0_s201 all3layers
+Source frozen taps H0_f0_s202 all3layers
+Source frozen taps H0_f0_s203 all3layers
+Source frozen taps LP_f0_s201 all3layers
+Source frozen taps LP_f0_s202 all3layers
+Source frozen taps LP_f0_s203 all3layers
+Source frozen taps H0_P_f0_s201 all3layers
+Source frozen taps H0_P_f0_s202 all3layers
+Source frozen taps H0_P_f0_s203 all3layers
+Source frozen taps LP_P_f0_s201 all3layers
+Source frozen taps LP_P_f0_s202 all3layers
+Source frozen taps LP_P_f0_s203 all3layers
+Source frozen taps H0_f1_s201 all3layers
+Source frozen taps H0_f1_s202 all3layers
+Source frozen taps H0_f1_s203 all3layers
+Source frozen taps LP_f1_s201 all3layers
+Source frozen taps LP_f1_s202 all3layers
+Source frozen taps LP_f1_s203 all3layers
+Source frozen taps H0_P_f1_s201 all3layers
+Source frozen taps H0_P_f1_s202 all3layers
+Source frozen taps H0_P_f1_s203 all3layers
+Source frozen taps LP_P_f1_s201 all3layers
+Source frozen taps LP_P_f1_s202 all3layers
+Source frozen taps LP_P_f1_s203 all3layers
+Complete fourcell report. Primary interaction: {'weights': {'H0': 1, 'LP': -1, 'H0_P': -1, 'LP_P': 1}, 'mean_delta_pp': -0.21166666666666628, 'conditional_rx_ci95_pp': [-0.8449999999999999, 0.6000000000000006], 'per_rx_delta_pp': {'b200_mini_1': -0.86666666666666, 'b210_1': -1.4499999999999993, 'pluto_1': 2.8166666666666678, 'rtl_1': 0.43333333333333374, 'rtl_2': 0.216666666666665, 'rtl_3': -0.7000000000000006, 'rtl_5': -1.200000000000001, 'rtl_6': -1.1000000000000048, 'rtl_7': 0.2666666666666706, 'rtl_9': -0.5333333333333338}, 'fit_deltas_pp': [2.4500000000000033, -0.27000000000000135, -1.439999999999997, 0.13999999999999568, -1.5999999999999992, -0.5499999999999994], 'fold_deltas_pp': [0.24666666666666837, -0.670000000000001], 'positive_fit_pairs': 2, 'practical_rule_met': False}
+[exp/s27b-backend-interaction 4a72a40] S27B report all twelve TokenMLP controls and common GPU paired results
+ 10 files changed, 38606 insertions(+), 9 deletions(-)
+ create mode 100644 27b-tokenizer-backend-interaction/COSTS.json
+ create mode 100644 27b-tokenizer-backend-interaction/EVALUATION.json
+ create mode 100644 27b-tokenizer-backend-interaction/RESULTS.json
+ create mode 100644 27b-tokenizer-backend-interaction/SOURCE_EVALUATION.json
+ create mode 100644 27b-tokenizer-backend-interaction/STATUS.json
+ create mode 100644 27b-tokenizer-backend-interaction/per_rx.csv
+ create mode 100644 27b-tokenizer-backend-interaction/source_geometry.csv
+ create mode 100644 27b-tokenizer-backend-interaction/tx_rx.csv
+All12 fits and unified evaluation complete.

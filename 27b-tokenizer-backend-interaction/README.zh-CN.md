@@ -1,5 +1,15 @@
 # S27-B：Tokenizer × 后端交互
 
+<!-- completion -->
+**S27-B 已完成：12/12 新拟合，每组 200 轮；24 模型、240000 条 Dev 及 48000 条 Source 预测独立核验。**
+
+主交互 -0.212 pp；正交互门槛是否满足：False。C/IQ-only/ASK Strict-IB 均未启动。
+
+[中文科研报告](RESEARCH_REPORT.zh-CN.md) · [英文 PDF](output/pdf/s27b_mechanism_report.pdf) · [四格结果](RESULTS.json) · [创新证据矩阵](EVIDENCE_MATRIX.json) · [科学核验](EXPERIMENT_INTEGRITY.json) · [最终审计](FINAL_AUDIT.json)
+
+Rebuild reports with research_materials.py and build_report.py from saved aggregates; do not rerun fits or Dev inference.
+<!-- /completion -->
+
 以 S27-A `636da47` 为基线，执行用户当前明确授权的 B：12 次新拟合。历史 `PLAN_B.json` 的零自动预算记录保持原样；本目录独立激活 B，不启动 C、IQ-only、ASK Strict-IB 或架构搜索。
 
 冻结方案原件见 [PLAN_B.original.json](PLAN_B.original.json)，与 S27 原文件 SHA 相同。四组为 HStem+MHA、Long-Patch+MHA（各复用六个冻结模型），以及 HStem+TokenMLP、Long-Patch+TokenMLP（各新增六次训练）。参数分别为 133690、138346、133562、138218。新后端直接调用 S27 已定义的两层逐 Token 残差 MLP，宽度 128，保留输入投影、位置项、pre-LN、final-LN、mean pooling 和分类器。

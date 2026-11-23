@@ -1,0 +1,40 @@
+{
+  "time": "2026-11-23T21:35:23+08:00",
+  "status": "B_COMPLETE_STOP_AUTOMATIC_FITTING",
+  "new_fits": 12,
+  "positive_interaction_rule_met": false,
+  "primary_interaction_pp": -0.21166666666666628,
+  "conditional_rx_ci95_pp": [
+    -0.8449999999999999,
+    0.6000000000000006
+  ],
+  "judgment": "未达到预登记的正交互门槛：本次没有建立稳定的 MHA 放大作用；小差值或区间含零也不等于证明等效或注意力无用。",
+  "positive_fit_pairs": 2,
+  "positive_rx_means": 4,
+  "negative_rx": {
+    "b200_mini_1": -0.86666666666666,
+    "b210_1": -1.4499999999999993,
+    "rtl_3": -0.7000000000000006,
+    "rtl_5": -1.200000000000001,
+    "rtl_6": -1.1000000000000048,
+    "rtl_9": -0.5333333333333338
+  },
+  "C_needed_for_receiver_specific_claim": true,
+  "C_fits": 0,
+  "IQ_only_fits": 0,
+  "ASK_strict_fits": 0,
+  "remaining_authorized_automatic_fits": 0,
+  "C_reason": "B changes a backend in historicallydeveloped5SourceRX fits. Source/Dev interaction differences do not replace the frozen4fitRX/1heldSourceRX pilot. C remains needed to investigate a receiver-specific gap claim; only2heldRX, not independent newcapture.",
+  "observed_tokenizer_gaps_pp": {
+    "tokenizer_MHA": 2.835000000000001,
+    "tokenizer_MLP": 3.0466666666666677
+  },
+  "source_geometry_final_jw": {
+    "H0": 5.448690511626939,
+    "LP": 4.60296706877267,
+    "H0_P": 6.843867429859283,
+    "LP_P": 5.860903741418537
+  },
+  "source_geometry_does_not_monotonically_rank_dev": true,
+  "limit": "Nonlinear form, expressivity and compute differ. Mean source geometry of different end-to-end trained models is descriptive, not causal information flow or mutual information."
+}

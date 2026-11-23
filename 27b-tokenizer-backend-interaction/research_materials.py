@@ -50,11 +50,17 @@ def main():
     else:
         judgment='未达到预登记的正交互门槛：本次没有建立稳定的 MHA 放大作用；小差值或区间含零也不等于证明等效或注意力无用。'
     negative={k:v for k,v in primary['per_rx_delta_pp'].items() if v<0};positive=sum(v>0 for v in primary['per_rx_delta_pp'].values())
+    g={(q['arm'],q['layer']):q for q in geometry}
+    backend=result['secondary_contrasts'][2]
+    pluto_gain=backend['per_rx_delta_pp']['pluto_1']
     write(HERE/'MECHANISM_DECISION.json',dict(time=now(),status='B_COMPLETE_STOP_AUTOMATIC_FITTING',new_fits=12,
         positive_interaction_rule_met=met,primary_interaction_pp=value,conditional_rx_ci95_pp=ci,judgment=judgment,
         positive_fit_pairs=primary['positive_fit_pairs'],positive_rx_means=positive,negative_rx=negative,
         C_needed_for_receiver_specific_claim=True,C_fits=0,IQ_only_fits=0,ASK_strict_fits=0,remaining_authorized_automatic_fits=0,
         C_reason='B changes a backend in historicallydeveloped5SourceRX fits. Source/Dev interaction differences do not replace the frozen4fitRX/1heldSourceRX pilot. C remains needed to investigate a receiver-specific gap claim; only2heldRX, not independent newcapture.',
+        observed_tokenizer_gaps_pp={q['name']:q['mean_delta_pp'] for q in result['secondary_contrasts'][:2]},
+        source_geometry_final_jw={a:g[a,'final']['tx_to_within_class_ratio'] for a in ARMS},
+        source_geometry_does_not_monotonically_rank_dev=True,
         limit='Nonlinear form, expressivity and compute differ. Mean source geometry of different end-to-end trained models is descriptive, not causal information flow or mutual information.'))
     previous=read(ROOT/'26-long-patch-control/EVIDENCE_MATRIX.json')['rows']
     a=read(ROOT/'27-mechanism-identification/RESULTS.json')['paired_comparisons'][0]
@@ -64,7 +70,7 @@ def main():
         evidence=['27b-tokenizer-backend-interaction/RESULTS.json'],result=f"{value:+.3f}pp, conditional95%CI{ci}, {primary['positive_fit_pairs']}/6positive.",
         status='REGISTERED_POSITIVE_RULE_MET' if met else 'REGISTERED_POSITIVE_RULE_NOT_MET',limit=judgment),
         dict(claim='Pooled sourcefeature geometry uniquely explains the backend interaction.',definition='All4arms/all6fits/3fixed64Dtaps, unitL2,S25scatter definitions.',
-        evidence=['27b-tokenizer-backend-interaction/SOURCE_EVALUATION.json'],result='72sourcegeometryrecords and all48k sourcepredictions archived.',
+        evidence=['27b-tokenizer-backend-interaction/SOURCE_EVALUATION.json'],result='72sourcegeometryrecords and all48k sourcepredictions archived. Final source Jw is higher with MLP in both tokenizers while Dev accuracy is lower; MHA pre-backend HStem Jw is below LP. These diagnostics do not monotonically rank Dev performance.',
         status='DESCRIPTIVE_NOT_CAUSAL',limit='Sourceval already selectedcheckpoints; differentmodels jointlytrained; ratios are notMI.'),
         dict(claim='B establishes independentRX robustness or completes C.',definition='Independentacquisition/sourceLOSO permissions distinct.',
         evidence=['27b-tokenizer-backend-interaction/registration.json'],result='C0fits; newindependentcapture0; historicaldevelopmentRX only.',
@@ -93,6 +99,10 @@ def main():
 
 逐 RX 主交互正向 {positive}/10，反向为 {negative}；所有接收机和全部配对种子均在图表、CSV中保留。不能只比较两个后端绝对 Accuracy 就宣称协同，更不能因未得到正交互而更换MLP或种子。
 
+HStem 相对 LP 的差值在 MHA 与 MLP 下分别为 {result['secondary_contrasts'][0]['mean_delta_pp']:+.3f} 与 {result['secondary_contrasts'][1]['mean_delta_pp']:+.3f} pp；两种后端各自的六组差值及十台 RX 均值均为正。这项次要描述说明优势在本次两个固定后端中保留，不能升级为所有后端普遍有效。主交互的两折方向不同且仅2/6配对正向，因而不支持把特定 MHA 协同作为已证实机制，也不证明两个后端等效。
+
+HStem 的 MHA−MLP 平均差为 {backend['mean_delta_pp']:+.3f} pp，其中 pluto_1 的差为 {pluto_gain:+.3f} pp，对十RX等权平均的算术贡献为 {pluto_gain/10:+.3f} pp；rtl_5、rtl_6 则为反向。这里完整保留十台RX，不移除 pluto_1 重算主指标。这说明后端收益具有条件差异，不能仅凭总体均值宣称一致改善。
+
 ## Source、Dev 与泛化差距
 
 源域交互为 {result['source_interaction']['mean_delta_pp']:+.3f} pp，Dev 交互为 {value:+.3f} pp；二者之差为 {result['source_minus_dev_interaction']['mean_pp']:+.3f} pp，六组值为 {result['source_minus_dev_interaction']['fit_deltas_pp']}。Source CE、逐模型 Source/Dev 与全部12组完整训练记录见聚合JSON和 all_fit_source_dev.csv。
@@ -104,6 +114,8 @@ Source Validation 每TX×RX40包且已用于选模；Dev 每TX×RX200包且有�
 全部24模型在同一合法Source验证包上提取三个64维特征：Tokenizer32Token均值、输入投影/位置项/pre-LN后的均值、最终分类器输入。先池化，再逐包L2；按TX×RX平衡分解 B_TX、D_RX|TX、W，并报告 Jc、Jw。每模型2000包、每TX×RX40包；共72组层统计、144000个64维特征向量。定义与S25一致，保持本轮原始推理精度，不与旧TF32-off数值直接拼接。
 
 所有层、归一化和种子固定。若任一组有未定义特征，整组六拟合聚合指标标为NA，不改归一化或排除失败样本。不同已训练网络的前后层差异不能解释为因果信息流，更不能视为互信息或物理RX不变性。全指标与反例见 SOURCE_EVALUATION.json、GEOMETRY_SUMMARY.json、source_geometry.csv。
+
+本次完整结果存在明确反例：MHA 下，后端前的 HStem/LP 平均 Jw 为 {g['H0','pre_backend']['tx_to_within_class_ratio']:.3f}/{g['LP','pre_backend']['tx_to_within_class_ratio']:.3f}，HStem 在该固定层并不占优。最终层中，HStem 的 MHA/MLP Jw 为 {g['H0','final']['tx_to_within_class_ratio']:.3f}/{g['H0_P','final']['tx_to_within_class_ratio']:.3f}，LP 对应为 {g['LP','final']['tx_to_within_class_ratio']:.3f}/{g['LP_P','final']['tx_to_within_class_ratio']:.3f}；两种 Tokenizer 的 MLP 最终 Jw 均更高，但 Dev Accuracy 均更低。MLP 最终 D_RX|TX 在 HStem/LP 中为 {g['H0_P','final']['conditional_rx']:.5f}/{g['LP_P','final']['conditional_rx']:.5f}，HStem 的绝对接收机散度也非更小。因此，不能用单一源域池化几何指标解释跨RX准确率，或声称HStem逐层单调去除RX信息。这些反例与支持性结果一同报告。
 
 ## 参数与计算成本
 
@@ -157,7 +169,7 @@ def plots(result,source):
             ys=[np.mean([q[metric] for q in g]) if all(q['status']=='VALID' for q in g) else np.nan for g in groups]
             sd=[np.std([q[metric] for q in g],ddof=1) if all(q['status']=='VALID' for q in g) else 0 for g in groups]
             ax[j].errorbar(range(3),ys,yerr=sd,marker='o',ms=3,lw=.8,capsize=2,color=COLOR[arm],label=LABEL[arm])
-        ax[j].set(xticks=range(3),xticklabels=['Tokenizer','Pre-backend','Final'],title='Final TX separation' if j==0 else 'RX-conditional scatter',ylabel='Jw (mean +/- fit SD)' if j==0 else 'D_RX|TX (unit features)')
+        ax[j].set(xticks=range(3),xticklabels=['Tokenizer','Pre-backend','Final'],title='TX separation at fixed taps' if j==0 else 'RX-conditional scatter',ylabel='Jw (mean +/- fit SD)' if j==0 else 'D_RX|TX (unit features)')
         ax[j].legend(frameon=False,fontsize=6)
     fig.tight_layout();save(fig,folder/'fig03_source_geometry')
     fig,ax=plt.subplots(2,2,figsize=(8,4.8))
