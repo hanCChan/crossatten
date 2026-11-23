@@ -83,7 +83,7 @@ Cell&Fold&Seed&Best ep.&Source CE&Source acc.&Dev acc.&Fit wall(s)\\\midrule
         body+=' & '.join([LABEL[q['arm']],q['fold'],q['seed'],q['best_epoch'],f"{float(q['source_ce']):.5f}",
             f"{float(q['source_accuracy_pct']):.3f}",f"{float(q['dev_accuracy_pct']):.3f}",f"{float(q['fit_wall_seconds']):.1f}"])+r'\\'+'\n'
     body+=r'''\bottomrule\end{tabular}\end{center}
-Every new fit completes200epochs and25,000 updates, without early stopping or target-driven reseeding. Twelve independent fits total300,000 scientific updates. Summed wall times overlap under at most two CUDA jobs and are not exclusive GPU hours.
+Every new fit completes200epochs and25,000 retained updates, without early stopping or target-driven reseeding. The twelve final trajectories total300,000 scientific updates. After a user-requested pause, continuation was explicitly authorized on 23 November 2026. Three fits were complete; LP/MLP fold0 seed202 and HS/MLP fold0 seed203 resumed their saved complete-epoch states at epochs180 and3. Model, optimizer, RNG, registration and best-source-checkpoint consistency were verified before resuming; snapshot hashes and recovery receipts are archived. Work within an unsealed partial epoch may have been discarded, so300,000 counts retained updates rather than all physical executions. Original and resumed controller logs are preserved separately. Summed fit wall times cover active execution segments, overlap under at most two CUDA jobs and are not exclusive GPU hours.
 \begin{figure}[htbp]\centering\includegraphics[width=.98\linewidth]{fig04_all_training.pdf}
 \caption{All twelve source CE histories, all200epochs, no seed removed.}\end{figure}
 \begin{center}\small\begin{tabular}{lrrr}\toprule

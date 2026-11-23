@@ -61,7 +61,7 @@ def main():
     path.write_text(text,encoding='utf-8',newline='\n')
     write(HERE/'STATUS.json',dict(time=now(),status='COMPLETE_S27_B_AND_MECHANISM_REPORT',completed_new_fits=12,
         reused_models=12,packet_predictions=240000,scientific_optimizer_steps=300000,
-        engineering_synthetic_optimizer_steps=8,C_fits=0,IQ_only_fits=0,ask_strict_fits=0,
+        engineering_synthetic_optimizer_steps=8,optimizer_step_scope='Retained final trajectories; discarded partial epochs after user pause are not counted.',C_fits=0,IQ_only_fits=0,ask_strict_fits=0,
         remaining_authorized_automatic_fits=0,independent_acquisition='NOT_AVAILABLE_NOT_RUN',
         integrity='PASS',visual='PASS',documents=documents,C_required_for_receiver_specific_claim=True))
     write(HERE/'LIVE_STATUS.json',dict(updated_at=now(),status='COMPLETE_S27_B_AND_MECHANISM_REPORT',completed_fits=12,total_fits=12,
@@ -72,7 +72,7 @@ def main():
         if not p.is_file() or any(t in {'local','runs','predictions','tmp','__pycache__'} for t in rel.parts) or rel.as_posix()=='FINAL_AUDIT.json':continue
         artifacts.append(dict(path=rel.as_posix(),bytes=p.stat().st_size,sha256=sha(p)))
     write(HERE/'FINAL_AUDIT.json',dict(time=now(),status='PASS',new_fits=12,scientific_optimizer_steps=300000,
-        engineering_synthetic_optimizer_steps=8,packet_predictions_checked=240000,all_fits_rx_retained=True,
+        engineering_synthetic_optimizer_steps=8,optimizer_step_scope='Retained final trajectories; discarded partial epochs after user pause are not counted.',packet_predictions_checked=240000,all_fits_rx_retained=True,
         original_scientific_code_unchanged=True,historical_reference_models_unchanged=science['historical_reference_models_unchanged'],
         confirm_blind_reads=0,C_fits=0,IQ_only_fits=0,ask_strict_fits=0,
         scientific_audit_sha256=sha(HERE/'EXPERIMENT_INTEGRITY.json'),active_python_sources_parsed=parsed,

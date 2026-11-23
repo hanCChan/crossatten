@@ -117,7 +117,9 @@ Source Validation 每TX×RX40包且已用于选模；Dev 每TX×RX200包且有�
 
 ## 科研完整性
 
-科学代码与B激活登记在首次RF读取/拟合前提交。12个新checkpoint/config/history封存后才进行10RX的统一Dev推理，共24模型、120模型×RX单元、240000条预测。另保存48000条Source预测和72组层统计。独立核验混淆矩阵、Accuracy/F1/CE、交互条件区间、行标签身份、源域选模、完整初始化、首个排列/AWGN流、历史模型哈希与全部200轮/25000步记录。8次合成Gate更新与300000次科学优化更新分开计数。大波形、权重、恢复状态及逐包特征留在本地；代码、聚合表、真实stdout与审计提交GitHub。
+科学代码与B激活登记在首次RF读取/拟合前提交。12个新checkpoint/config/history封存后才进行10RX的统一Dev推理，共24模型、120模型×RX单元、240000条预测。另保存48000条Source预测和72组层统计。独立核验混淆矩阵、Accuracy/F1/CE、交互条件区间、行标签身份、源域选模、完整初始化、首个排列/AWGN流、历史模型哈希与全部200轮/25000步记录。8次合成Gate更新与最终保留轨迹中的300000次科学优化更新分开计数。大波形、权重、恢复状态及逐包特征留在本地；代码、聚合表、真实stdout与审计提交GitHub。
+
+用户暂停后，于2026年11月23日明确授权继续训练。恢复前，3个模型已完成，LP_P_f0_s202和H0_P_f0_s203分别保存至epoch 180和3；核验模型、优化器、随机状态、登记哈希、最优Source checkpoint一致性后，从相应完整轮快照恢复。RESUME_AUDIT_001.json与recovery_epoch181/4记录保留对应快照哈希。暂停时尚未封存的部分轮计算可能被丢弃，因此300000表示最终保留的12条完整训练轨迹更新数，不是所有物理执行的优化步骤总数；没有替换种子或新增拟合。原始与恢复控制器日志分别归档。
 '''
     (HERE/'RESEARCH_REPORT.zh-CN.md').write_text(text,encoding='utf-8',newline='\n')
     write(HERE/'REPORT_PROVENANCE.json',dict(time=now(),status='FULL_COMPLETED_AND_INDEPENDENTLY_VERIFIED_COHORT',
