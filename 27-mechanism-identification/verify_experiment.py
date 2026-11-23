@@ -18,6 +18,13 @@ import train as canonical
 
 def main():
     registration=validate();seal=check_seal();evaluation=read(HERE/'EVALUATION.json')
+    fix=read(HERE/'TECHNICAL_FIX_001.json')
+    assert read(HERE/'TECHNICAL_FIX_001_RUNTIME.json')['status']=='COMPLETE'
+    assert sha(HERE/'technical_runtime_001.py')==fix['runtime_sha256']
+    recovery=read(HERE/'runs/LA_f0_s203/recovery_epoch7.json')
+    assert recovery['from_completed_epoch']==fix['completed_resume_epoch']==6
+    assert recovery['resume_sha256']==fix['resume_snapshot_sha256']
+    assert sha(HERE/'runs/LA_f0_s203/failure.json')==fix['original_fit_failure_sha256']
     assert evaluation['status']=='COMPLETE_REPORT_ONLY' and len(evaluation['records'])==90
     assert evaluation['seal_sha256']==sha(HERE/'seal.json')
     assert evaluation['packet_predictions']==180000
@@ -136,6 +143,7 @@ def main():
         baseline_logit_recovery_all=all(r['logits_bit_exact'] for r in evaluation['baseline_recovery']),
         results_sha256=sha(HERE/'RESULTS.json'),seal_sha256=sha(HERE/'seal.json'),verifier_sha256=sha(__file__),
         original_scientific_code_unchanged=True,
+        exact_epoch6_recovery_record=recovery,io_repair_added_scientific_steps=0,
         cost_scope='Common separate S27 session. Per-fit wall sums overlap under2 jobs; not exclusive GPU active time.'))
     print('PASS: all6 fits, 180000 target predictions, source selection/streams, conditional statistics and historical hashes.',flush=True)
 

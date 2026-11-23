@@ -9,6 +9,14 @@ from pypdf import PdfReader
 from s27_common import HERE,read,write,sha,now,validate
 
 
+def decode_log(path):
+    raw=path.read_bytes()
+    for encoding in ['utf-8','gb18030']:
+        try:return raw.decode(encoding).replace('\r\n','\n'),encoding
+        except UnicodeDecodeError:pass
+    raise UnicodeError('Cannot losslessly decode original log: '+str(path))
+
+
 def main():
     validate();science=read(HERE/'EXPERIMENT_INTEGRITY.json');assert science['status']=='PASS'
     decision=read(HERE/'MECHANISM_DECISION.json');assert decision['new_fits']==6
@@ -35,14 +43,19 @@ def main():
     logs=[]
     for j in read(HERE/'registration.json')['jobs']:
         name=f"LA_f{j['fold']}_s{j['seed']}";source=HERE/'local'/(name+'.log');target=HERE/'evidence'/name/'training_stdout.txt'
-        target.write_text(source.read_text(encoding='utf-8'),encoding='utf-8',newline='\n')
-        logs.append(dict(id=name,raw_sha256=sha(source),published_lf_sha256=sha(target)))
+        text,encoding=decode_log(source);target.write_text(text,encoding='utf-8',newline='\n')
+        logs.append(dict(id=name,raw_sha256=sha(source),raw_encoding=encoding,published_utf8_lf_sha256=sha(target)))
     for raw,target in [('controller.stdout.log','CONTROLLER_STDOUT.txt'),('controller.stderr.log','CONTROLLER_STDERR.txt')]:
-        (HERE/target).write_text((HERE/'local'/raw).read_text(encoding='utf-8'),encoding='utf-8',newline='\n')
+        (HERE/target).write_text(decode_log(HERE/'local'/raw)[0],encoding='utf-8',newline='\n')
+    for raw,target in [('technical_001.stdout.log','TECHNICAL_001_STDOUT.txt'),('technical_001.stderr.log','TECHNICAL_001_STDERR.txt')]:
+        (HERE/target).write_text(decode_log(HERE/'local'/raw)[0],encoding='utf-8',newline='\n')
+    for filename in ['failure.json','recovery_epoch7.json']:
+        (HERE/'evidence/LA_f0_s203'/filename).write_bytes((HERE/'runs/LA_f0_s203'/filename).read_bytes())
     result=read(HERE/'RESULTS.json');s={q['arm']:q for q in result['summary']}
     block=(f"<!-- completion -->\n**S27-A 已完成：6/6 新拟合，每组 200 轮；18 模型、180,000 条 Dev 预测通过独立核验。**\n\n"
         f"HStem {s['H0']['accuracy_pct']:.3f}%，No-GELU {s['LA']['accuracy_pct']:.3f}%，Long-Patch {s['LP']['accuracy_pct']:.3f}%；"
         f"H0−LA {decision['primary_delta_pp']:+.3f} pp。B/C/IQ-only/ASK Strict-IB 均未启动。\n\n"
+        '一次 Windows 进度文件占用错误已按登记从完整 epoch6 恢复；原错误与恢复日志保留，未重置种子或增加科学更新。见 [IO 修复](TECHNICAL_FIX_001.json)。\n\n'
         '[中文科研报告](RESEARCH_REPORT.zh-CN.md) · [英文 PDF](output/pdf/s27_mechanism_report.pdf) · '
         '[机制判断](MECHANISM_DECISION.json) · [科学核验](EXPERIMENT_INTEGRITY.json) · [最终审计](FINAL_AUDIT.json)\n\n'
         '重建图文只需运行 `research_materials.py`、`build_report.py`，使用已提交聚合记录，不需要训练数据或权重。'

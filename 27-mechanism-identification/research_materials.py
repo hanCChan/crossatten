@@ -108,7 +108,9 @@ B/C 的结构、种子、包身份规则、初始化、正/负/不确定结果�
 
 ## 可复现性
 
-科学初始登记提交 ff79743 先于本轮 Source 波形访问和训练；完整六模型 seal 提交先于新 Dev 推理。独立核验 90 个模型×RX 单元、180,000 条预测的标签/行身份、混淆矩阵、Accuracy、F1、保存 logits 的 CE、配对区间、源域选模、恢复流和历史模型哈希。全部种子和接收机保留，无结果驱动的修改或补跑。逐 RX、逐 TX、Source/Dev、完整训练曲线、成本及实际 stdout 均归档；大波形、checkpoint 与逐包预测留在本地。推理成本为单独同会话 GPU-resident 测量，不能与旧会话拼接；并行拟合的 wall time 之和不是独占 GPU 小时。
+科学初始登记提交 ff79743 先于本轮 Source 波形访问和训练；完整六模型 seal 提交先于新 Dev 推理。一次 Windows 进度文件原子替换的 WinError5 在已保存 epoch6（750 步）后中断了 LA_f0_s203；单独登记的 IO 重试包装保留全部冻结源代码，从 epoch7 恢复模型、优化器和全部 RNG，不重新执行已完成的更新。六个独立拟合共七次训练进程调用，科学更新总数仍是 150,000。原错误、快照 SHA 与恢复记录保留。
+
+独立核验 90 个模型×RX 单元、180,000 条预测的标签/行身份、混淆矩阵、Accuracy、F1、保存 logits 的 CE、配对区间、源域选模、恢复流和历史模型哈希。全部种子和接收机保留，无结果驱动的修改或补跑。逐 RX、逐 TX、Source/Dev、完整训练曲线、成本及实际 stdout 均归档；大波形、checkpoint 与逐包预测留在本地。推理成本为单独同会话 GPU-resident 测量，不能与旧会话拼接；并行拟合的 wall time 之和不是独占 GPU 小时。
 '''
     (HERE/'RESEARCH_REPORT.zh-CN.md').write_text(text,encoding='utf-8',newline='\n')
     write(HERE/'REPORT_PROVENANCE.json',dict(time=now(),status='GENERATED_FROM_FULL_RECOMPUTED_EVIDENCE',
