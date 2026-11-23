@@ -1,0 +1,11 @@
+{
+  "time": "2026-11-23T10:53:27.745249+08:00",
+  "stage": "Before preregistration/scientificfitting",
+  "issue": "Data-free gate reused localvariable expected for both affinity residuals and tensor checkpoint; final JSONserialization rejectedtensor.",
+  "correction": "Separate affine_expected residuallist from optimizer-resume expectedstatedict. All structural/numerical checks had passed before failedserialization.",
+  "scientific_fits": 0,
+  "RF_reads": 0,
+  "failed_attempt_synthetic_optimizer_steps": 4,
+  "successful_gate_synthetic_optimizer_steps": 4,
+  "total_synthetic_optimizer_steps": 8
+}
