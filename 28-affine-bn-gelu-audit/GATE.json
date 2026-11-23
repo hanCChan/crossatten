@@ -1,0 +1,368 @@
+{
+  "time": "2026-11-23T22:49:19+08:00",
+  "status": "PASS",
+  "scope": "Synthetic architecture/math/RNG/resource checks; no RF or scientific fitting.",
+  "architecture": {
+    "H0": {
+      "params": 133690,
+      "cnn_receptive_field": 350,
+      "token_stride": 256,
+      "overlap": 94,
+      "first_token_center": 127.5,
+      "tokens": 32,
+      "bn_layers": 5,
+      "layers": [
+        {
+          "name": "0",
+          "kernel": 7,
+          "padding": 3,
+          "stride": 1,
+          "output_length": 8192
+        },
+        {
+          "name": "3",
+          "kernel": 5,
+          "padding": 2,
+          "stride": 1,
+          "output_length": 8192
+        },
+        {
+          "name": "tokenize.0",
+          "kernel": 8,
+          "padding": 2,
+          "stride": 4,
+          "output_length": 2048
+        },
+        {
+          "name": "tokenize.3",
+          "kernel": 8,
+          "padding": 2,
+          "stride": 4,
+          "output_length": 512
+        },
+        {
+          "name": "tokenize.6",
+          "kernel": 8,
+          "padding": 2,
+          "stride": 4,
+          "output_length": 128
+        },
+        {
+          "name": "tokenize.9",
+          "kernel": 4,
+          "padding": 0,
+          "stride": 4,
+          "output_length": 32
+        }
+      ],
+      "scope": "Local CNN coordinates only; global FFT and TrueIB prevent an end-to-end physical support interpretation",
+      "partial_macs_per_packet": 95027840.0
+    },
+    "LA": {
+      "params": 133690,
+      "cnn_receptive_field": 350,
+      "token_stride": 256,
+      "overlap": 94,
+      "first_token_center": 127.5,
+      "tokens": 32,
+      "bn_layers": 5,
+      "layers": [
+        {
+          "name": "0",
+          "kernel": 7,
+          "padding": 3,
+          "stride": 1,
+          "output_length": 8192
+        },
+        {
+          "name": "3",
+          "kernel": 5,
+          "padding": 2,
+          "stride": 1,
+          "output_length": 8192
+        },
+        {
+          "name": "tokenize.0",
+          "kernel": 8,
+          "padding": 2,
+          "stride": 4,
+          "output_length": 2048
+        },
+        {
+          "name": "tokenize.3",
+          "kernel": 8,
+          "padding": 2,
+          "stride": 4,
+          "output_length": 512
+        },
+        {
+          "name": "tokenize.6",
+          "kernel": 8,
+          "padding": 2,
+          "stride": 4,
+          "output_length": 128
+        },
+        {
+          "name": "tokenize.9",
+          "kernel": 4,
+          "padding": 0,
+          "stride": 4,
+          "output_length": 32
+        }
+      ],
+      "scope": "Local CNN coordinates only; global FFT and TrueIB prevent an end-to-end physical support interpretation",
+      "partial_macs_per_packet": 95027840.0
+    },
+    "H2": {
+      "params": 133338,
+      "cnn_receptive_field": 350,
+      "token_stride": 256,
+      "overlap": 94,
+      "first_token_center": 127.5,
+      "tokens": 32,
+      "bn_layers": 2,
+      "layers": [
+        {
+          "name": "0",
+          "kernel": 7,
+          "padding": 3,
+          "stride": 1,
+          "output_length": 8192
+        },
+        {
+          "name": "3",
+          "kernel": 5,
+          "padding": 2,
+          "stride": 1,
+          "output_length": 8192
+        },
+        {
+          "name": "tokenize.0",
+          "kernel": 8,
+          "padding": 2,
+          "stride": 4,
+          "output_length": 2048
+        },
+        {
+          "name": "tokenize.3",
+          "kernel": 8,
+          "padding": 2,
+          "stride": 4,
+          "output_length": 512
+        },
+        {
+          "name": "tokenize.6",
+          "kernel": 8,
+          "padding": 2,
+          "stride": 4,
+          "output_length": 128
+        },
+        {
+          "name": "tokenize.9",
+          "kernel": 4,
+          "padding": 0,
+          "stride": 4,
+          "output_length": 32
+        }
+      ],
+      "scope": "Local CNN coordinates only; global FFT and TrueIB prevent an end-to-end physical support interpretation",
+      "partial_macs_per_packet": 95027840.0
+    },
+    "H2_LA": {
+      "params": 133338,
+      "cnn_receptive_field": 350,
+      "token_stride": 256,
+      "overlap": 94,
+      "first_token_center": 127.5,
+      "tokens": 32,
+      "bn_layers": 2,
+      "layers": [
+        {
+          "name": "0",
+          "kernel": 7,
+          "padding": 3,
+          "stride": 1,
+          "output_length": 8192
+        },
+        {
+          "name": "3",
+          "kernel": 5,
+          "padding": 2,
+          "stride": 1,
+          "output_length": 8192
+        },
+        {
+          "name": "tokenize.0",
+          "kernel": 8,
+          "padding": 2,
+          "stride": 4,
+          "output_length": 2048
+        },
+        {
+          "name": "tokenize.3",
+          "kernel": 8,
+          "padding": 2,
+          "stride": 4,
+          "output_length": 512
+        },
+        {
+          "name": "tokenize.6",
+          "kernel": 8,
+          "padding": 2,
+          "stride": 4,
+          "output_length": 128
+        },
+        {
+          "name": "tokenize.9",
+          "kernel": 4,
+          "padding": 0,
+          "stride": 4,
+          "output_length": 32
+        }
+      ],
+      "scope": "Local CNN coordinates only; global FFT and TrueIB prevent an end-to-end physical support interpretation",
+      "partial_macs_per_packet": 95027840.0
+    },
+    "LP": {
+      "params": 138346,
+      "cnn_receptive_field": 350,
+      "token_stride": 256,
+      "overlap": 94,
+      "first_token_center": 127.5,
+      "tokens": 32,
+      "bn_layers": 2,
+      "layers": [
+        {
+          "name": "0",
+          "kernel": 7,
+          "padding": 3,
+          "stride": 1,
+          "output_length": 8192
+        },
+        {
+          "name": "3",
+          "kernel": 5,
+          "padding": 2,
+          "stride": 1,
+          "output_length": 8192
+        },
+        {
+          "name": "tokenize.0",
+          "kernel": 340,
+          "padding": 42,
+          "stride": 256,
+          "output_length": 32
+        },
+        {
+          "name": "tokenize.1",
+          "kernel": 1,
+          "padding": 0,
+          "stride": 1,
+          "output_length": 32
+        }
+      ],
+      "scope": "Local CNN coordinates only; global FFT and TrueIB prevent an end-to-end physical support interpretation",
+      "partial_macs_per_packet": 55476864.0
+    }
+  },
+  "pairing": [
+    {
+      "fold": 0,
+      "seed": 201,
+      "A_data_seed": 2808879044,
+      "C_data_seed": 1391879696,
+      "H0_LA_full_initial_state_equal": true,
+      "H2_H2LA_full_initial_state_equal": true,
+      "all_surviving_initial_parameters_equal": true
+    },
+    {
+      "fold": 0,
+      "seed": 202,
+      "A_data_seed": 2602222937,
+      "C_data_seed": 2904200593,
+      "H0_LA_full_initial_state_equal": true,
+      "H2_H2LA_full_initial_state_equal": true,
+      "all_surviving_initial_parameters_equal": true
+    },
+    {
+      "fold": 0,
+      "seed": 203,
+      "A_data_seed": 1569434962,
+      "C_data_seed": 338846288,
+      "H0_LA_full_initial_state_equal": true,
+      "H2_H2LA_full_initial_state_equal": true,
+      "all_surviving_initial_parameters_equal": true
+    },
+    {
+      "fold": 1,
+      "seed": 201,
+      "A_data_seed": 3016222868,
+      "C_data_seed": 2790989561,
+      "H0_LA_full_initial_state_equal": true,
+      "H2_H2LA_full_initial_state_equal": true,
+      "all_surviving_initial_parameters_equal": true
+    },
+    {
+      "fold": 1,
+      "seed": 202,
+      "A_data_seed": 3680940992,
+      "C_data_seed": 1252626928,
+      "H0_LA_full_initial_state_equal": true,
+      "H2_H2LA_full_initial_state_equal": true,
+      "all_surviving_initial_parameters_equal": true
+    },
+    {
+      "fold": 1,
+      "seed": 203,
+      "A_data_seed": 1501995291,
+      "C_data_seed": 1740421862,
+      "H0_LA_full_initial_state_equal": true,
+      "H2_H2LA_full_initial_state_equal": true,
+      "all_surviving_initial_parameters_equal": true
+    }
+  ],
+  "affine_corrected": {
+    "max_abs": 6.394884621840902e-14,
+    "max_relative": 3.916707893808296e-11,
+    "rms": 5.740462700151438e-15,
+    "allclose": true,
+    "atol": 1e-09,
+    "rtol": 1e-09,
+    "failing_elements": 0,
+    "elements": 12288
+  },
+  "naive_shared_conv": {
+    "max_abs": 2.7527123670389235,
+    "max_relative": 52.341317952300024,
+    "rms": 0.09920943279246676,
+    "allclose": false,
+    "atol": 1e-09,
+    "rtol": 1e-09,
+    "failing_elements": 768,
+    "elements": 12288
+  },
+  "naive_interior": {
+    "max_abs": 6.394884621840902e-14,
+    "max_relative": 3.916707893808296e-11,
+    "rms": 5.792868311191765e-15,
+    "allclose": true,
+    "atol": 1e-09,
+    "rtol": 1e-09,
+    "failing_elements": 0,
+    "elements": 11520
+  },
+  "optimizer_model_all_rng_resume_exact": true,
+  "optimizer_state_values_exact": true,
+  "optimizer_step_scalar_device_may_differ": true,
+  "synthetic_optimizer_updates": 7,
+  "scientific_fits": 0,
+  "batch64_backward": true,
+  "batch128_forward": true,
+  "peak_gpu_gib": 0.49711036682128906,
+  "denied_audit_roles": 4,
+  "C_held_never_fit_or_select": true,
+  "C_learning_rate_100_steps": true,
+  "A_learning_rate_125_steps": true,
+  "factorial_arithmetic": true,
+  "RF_reads": 0
+}

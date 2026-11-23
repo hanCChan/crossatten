@@ -1,0 +1,177 @@
+{
+  "time": "2026-11-23T10:52:11+08:00",
+  "execution_status": "PLANNED_NOT_STARTED",
+  "automatic_fit_budget": 0,
+  "seeds": [
+    201,
+    202,
+    203
+  ],
+  "checkpoint": "minimum clean permitted training-RX equal validation CE",
+  "training": {
+    "epochs": 200,
+    "batch": 64,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0005,
+    "warmup_epochs": 5,
+    "augmentation": "AWGN0..50dB",
+    "precision": "original FP32 network; matmulTF32off/cuDNN TF32on"
+  },
+  "forbidden": [
+    "Confirm",
+    "old blind",
+    "new target adaptation",
+    "replacement seeds",
+    "target-score-driven design changes"
+  ],
+  "history": "All RXs have research history; none becomes a fresh independent acquisition.",
+  "launch_condition": "A complete evidence report first; no automatic execution in this turn. Any later launch must retain this plan, validate checkpoints/streams and commit its execution authorization before source fitting.",
+  "stage": "S27_C_SOURCE_LOSO_PILOT",
+  "planned_new_fits": 12,
+  "jobs": [
+    {
+      "arm": "H0",
+      "fold": 0,
+      "seed": 201
+    },
+    {
+      "arm": "LP",
+      "fold": 0,
+      "seed": 201
+    },
+    {
+      "arm": "H0",
+      "fold": 0,
+      "seed": 202
+    },
+    {
+      "arm": "LP",
+      "fold": 0,
+      "seed": 202
+    },
+    {
+      "arm": "H0",
+      "fold": 0,
+      "seed": 203
+    },
+    {
+      "arm": "LP",
+      "fold": 0,
+      "seed": 203
+    },
+    {
+      "arm": "H0",
+      "fold": 1,
+      "seed": 201
+    },
+    {
+      "arm": "LP",
+      "fold": 1,
+      "seed": 201
+    },
+    {
+      "arm": "H0",
+      "fold": 1,
+      "seed": 202
+    },
+    {
+      "arm": "LP",
+      "fold": 1,
+      "seed": 202
+    },
+    {
+      "arm": "H0",
+      "fold": 1,
+      "seed": 203
+    },
+    {
+      "arm": "LP",
+      "fold": 1,
+      "seed": 203
+    }
+  ],
+  "splits": [
+    {
+      "fold": 0,
+      "training_receivers": [
+        "rtl_1",
+        "rtl_3",
+        "rtl_6",
+        "rtl_9"
+      ],
+      "held_source_receiver": "b210_1",
+      "deterministic_ranking": [
+        "b210_1",
+        "rtl_3",
+        "rtl_9",
+        "rtl_1",
+        "rtl_6"
+      ],
+      "held_selection": "Minimum SHA256(S27C-HeldRX-v1|fold|rx); receiver names only, no performance or waveform selection."
+    },
+    {
+      "fold": 1,
+      "training_receivers": [
+        "b200_mini_1",
+        "pluto_1",
+        "rtl_2",
+        "rtl_7"
+      ],
+      "held_source_receiver": "rtl_5",
+      "deterministic_ranking": [
+        "rtl_5",
+        "rtl_7",
+        "b200_mini_1",
+        "pluto_1",
+        "rtl_2"
+      ],
+      "held_selection": "Minimum SHA256(S27C-HeldRX-v1|fold|rx); receiver names only, no performance or waveform selection."
+    }
+  ],
+  "source_packets": "FourfitRX: first160of fixed200rows/TXtrain and last40val;6400train1600sourceval. HeldRX all200/TX=2000packets only after all12 models/configs sealed.",
+  "steps_per_epoch": 100,
+  "total_steps_per_fit": 20000,
+  "selection": "HeldRX unavailable to optimizer, normalization updates, scheduler and checkpoint selection.",
+  "source_seed": "stable_seed(S27C-H4x160,fold,seed); paired data/order/noise withinH0/LP; no reuse of5RX-trained weights.",
+  "checkpoint_initialization": "Fresh H0/LP at paired data_seed, preserving original shared initialization; no pretrained5RX checkpoint.",
+  "primary": "G=Acc(source_validation)-Acc(held_source); deltaG=G(H0)-G(LP). Report paired held accuracy difference and both source/held accuracies together.",
+  "secondary": [
+    "macroF1",
+    "perTXrecall",
+    "sourceRX-equalCE",
+    "heldCE",
+    "perfit and perheldRX accuracies"
+  ],
+  "fixed_features": {
+    "layers": [
+      "mean tokenizer output",
+      "mean preMHA",
+      "finalclassifier input"
+    ],
+    "packets": "last40fixedrows/TX/RX for both source-val and held diagnostic400packets; heldaccuracy stillall2000",
+    "normalization": "perpacketL2epsilon1e-12",
+    "metrics": [
+      "TXcentroidscatter",
+      "sameTXacrossRXscatter",
+      "withinTXRXscatter",
+      "Jc",
+      "Jw",
+      "trueclass logitmargin"
+    ],
+    "scope": "All layers/allTX/allseeds; source and held distributions separately; ratios are geometry, not mutual information or invariance."
+  },
+  "statistics": {
+    "receiver_units": 2,
+    "bootstrap_or_population_significance": false,
+    "report": "All6pairedfit differences,3seedmeans perheldRX,fitSD; seeds are not6independent receivers.",
+    "consistent_pilot_signal": "HeldH0-LP>=0.5pp anddeltaG<=-0.5pp in both receiver/fold means,>=5/6fit differences have both favorable signs.",
+    "ceiling_caveat": "Source accuracy ceilings can distort gaps; a smaller gap alone does not show better held identification. Report fourcell accuracies and class-error patterns."
+  },
+  "outcomes": {
+    "positive": "Limited evidence of smaller conditional known-to-held degradation for these2RX, with improved held accuracy; not general population proof.",
+    "negative": "If source and held improve similarly without smallergap, describe stronger overall discrimination rather than RX-specific suppression.",
+    "uncertain": "TwoRX or conflictingseeds/folds cannot support population claims; no automatic heldRX substitution or expansion."
+  },
+  "expansion": "No automatic extraRX/fits. Any later expansion needs a new frozen execution budget and retains allPilot results; cannot depend on selecting favorable RX."
+}

@@ -1,0 +1,36 @@
+{
+  "updates": 7,
+  "events": [
+    {
+      "kind": "initial_gate_before_comparator_device_error",
+      "updates": 3,
+      "RF": false,
+      "scientific_fit": false,
+      "reason": "The test compared an AdamW step scalar on CPU to a restored scalar on CUDA using torch.equal. Model state already matched. The comparator now compares exact dtype/values on CPU; optimizer execution and recovery code are unchanged."
+    },
+    {
+      "time": "2026-11-23T22:49:19+08:00",
+      "kind": "resume_equivalence",
+      "RF": false,
+      "scientific_fit": false
+    },
+    {
+      "time": "2026-11-23T22:49:19+08:00",
+      "kind": "resume_equivalence",
+      "RF": false,
+      "scientific_fit": false
+    },
+    {
+      "time": "2026-11-23T22:49:19+08:00",
+      "kind": "resume_equivalence",
+      "RF": false,
+      "scientific_fit": false
+    },
+    {
+      "time": "2026-11-23T22:49:19+08:00",
+      "kind": "batch64_resource",
+      "RF": false,
+      "scientific_fit": false
+    }
+  ]
+}

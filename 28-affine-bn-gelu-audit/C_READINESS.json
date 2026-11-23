@@ -1,0 +1,60 @@
+{
+  "time": "2026-11-23T22:50:00+08:00",
+  "status": "ORIGINAL_PLAN_PRESERVED_NOT_ACTIVATED",
+  "original_plan_sha256": "3a07348742937584bfdbca24c6e88fb1b44a472b454c5ac53ccc966f71fb9507",
+  "planned_fits": 12,
+  "automatic_fit_budget": 0,
+  "splits": [
+    {
+      "fold": 0,
+      "training_receivers": [
+        "rtl_1",
+        "rtl_3",
+        "rtl_6",
+        "rtl_9"
+      ],
+      "held_source_receiver": "b210_1",
+      "deterministic_ranking": [
+        "b210_1",
+        "rtl_3",
+        "rtl_9",
+        "rtl_1",
+        "rtl_6"
+      ],
+      "held_selection": "Minimum SHA256(S27C-HeldRX-v1|fold|rx); receiver names only, no performance or waveform selection."
+    },
+    {
+      "fold": 1,
+      "training_receivers": [
+        "b200_mini_1",
+        "pluto_1",
+        "rtl_2",
+        "rtl_7"
+      ],
+      "held_source_receiver": "rtl_5",
+      "deterministic_ranking": [
+        "rtl_5",
+        "rtl_7",
+        "b200_mini_1",
+        "pluto_1",
+        "rtl_2"
+      ],
+      "held_selection": "Minimum SHA256(S27C-HeldRX-v1|fold|rx); receiver names only, no performance or waveform selection."
+    }
+  ],
+  "C_fits": 0,
+  "training_packets": 6400,
+  "source_validation_packets": 1600,
+  "held_evaluation_packets": 2000,
+  "steps_per_epoch": 100,
+  "total_steps_per_fit": 20000,
+  "source_seed": "stable_seed(S27C-H4x160,fold,seed); paired data/order/noise withinH0/LP; no reuse of5RX-trained weights.",
+  "source_only_selection": true,
+  "all_twelve_sealed_before_held": true,
+  "fresh_initialization_required": true,
+  "receiver_units": 2,
+  "population_bootstrap": false,
+  "original_consistent_pilot_signal": "HeldH0-LP>=0.5pp anddeltaG<=-0.5pp in both receiver/fold means,>=5/6fit differences have both favorable signs.",
+  "held_only_geometry_caveat": "One held RX has no across-RX scatter degrees of freedom. Held-only D=0 by construction and Jc cannot identify RX invariance; mark this diagnostic not identifiable rather than interpreting a large epsilon ratio. Jw and TX discrimination remain descriptive.",
+  "activation": "Separate explicit user authorization and frozen execution adapter required; Gate validates architecture, seeds, roles and100-step schedule, not an executed C cohort."
+}
