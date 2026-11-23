@@ -1,12 +1,8 @@
 {
-  "status": "TRAINING",
-  "updated_at": "2026-11-23T12:32:34+08:00",
-  "completed_fits": 5,
+  "status": "TRAINING_AND_UNIFIED_EVALUATION_COMPLETE",
+  "updated_at": "2026-11-23T12:33:22+08:00",
+  "completed_fits": 6,
   "total_fits": 6,
-  "active_model": "LA_f1_s203",
-  "active_epoch": 200,
-  "active_budget": 200,
-  "remaining_fit_seconds_estimate": 0.0,
-  "estimate_scope": "Fits only; excludes final evaluation, analysis and manuscript work.",
-  "new_dev_reads": 0
+  "remaining_fit_seconds_estimate": 0,
+  "new_dev_reads": 10
 }
