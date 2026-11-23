@@ -46,6 +46,9 @@ Accuracy/F1 are percentages, fit SD is in percentage points (pp) over six fold/s
     body+=f"The primary H0--LA contrast is {p['mean_delta_pp']:+.3f} pp, conditional RX 95\\% interval [{ci[0]:.3f}, {ci[1]:.3f}], with {p['positive_fit_pairs']}/6 positive paired fit means. The two fold means are {p['fold_deltas_pp'][0]:+.3f} and {p['fold_deltas_pp'][1]:+.3f} pp.\n"
     body+=('The registered consistency rule is met. Retaining the three GELUs benefits this complete architecture/training procedure.\n' if d['A_rule_met'] else
         'The registered consistency rule is not met. This does not establish equivalence or prove that activations are irrelevant.\n')
+    secondary=r['paired_comparisons'][1]
+    body+=f"LA still exceeds LP by {secondary['mean_delta_pp']:+.3f} pp after the three GELUs are removed. These activations therefore do not account for the entire H0--LP difference. The telescoping accuracy differences are not causal contribution percentages; grouping, normalization, factorization and optimization remain confounded. "
+    body+=f"The f0/seed201 H0--LA contrast is -0.200pp; RTL-5 favors LA by0.417pp and RTL-2 is tied. All are retained.\n"
     body+=r'''The rule requires a mean gain of at least .5pp, a positive conditional lower bound, at least five positive fit pairs and positive means in both folds. Three seed differences are first averaged within each of ten unique RXs, then RX identities are resampled 10,000 times with seed27027. These intervals omit fresh-seed, acquisition and architecture-selection uncertainty. They are developmental conditional summaries, not confirmatory population guarantees; no multiplicity-adjusted claim is made.
 \begin{figure}[htbp]\centering
 \includegraphics[width=.98\linewidth]{fig01_complete_comparison.pdf}
@@ -56,6 +59,7 @@ Accuracy/F1 are percentages, fit SD is in percentage points (pp) over six fold/s
 Define $G=\operatorname{Acc}_{SourceVal}-\operatorname{Acc}_{Dev}$. Report the two accuracies alongside the difference; a smaller gap alone is not evidence of better held identification.
 '''
     body+=f"H0--LA source change is {d['source_delta_pp']:+.3f} pp, Dev change {d['dev_delta_pp']:+.3f} pp, and $G_{{H0}}-G_{{LA}}$ is {d['gap_delta_pp']:+.3f} pp. Source mean CE is {a['means']['H0']['source_ce']:.6f} (H0), {a['means']['LA']['source_ce']:.6f} (LA), and {a['means']['LP']['source_ce']:.6f} (LP).\n"
+    body+=f"Only {d['gap_negative_fit_pairs']}/6 paired gap differences are negative, so the mean does not establish stable gap contraction.\n"
     body+=r'''Source validation has 40 selected packets per TX/RX, compared with 200 for Dev, and was used for selection. Every current RX also has a research history and is source in the reverse fold. Therefore this difference cannot replace the independently fitted four-source/one-held C Pilot or establish a receiver-specific suppression mechanism. Accuracy ceilings and source-fitting changes remain relevant.
 \begin{figure}[htbp]\centering
 \includegraphics[width=.99\linewidth]{fig02_source_dev.pdf}
@@ -117,7 +121,9 @@ The gate checks active-source syntax/imports, capacity, exact initial states, fo
         'has16,704':'has 16,704','by128':'by 128','width128':'width 128','with6400train/1600validation':'with 6,400 training / 1,600 validation',
         'packets,200epochs':'packets, 200 epochs','and100updates':'and 100 updates','all2000':'all 2,000',
         'complete12-model':'complete 12-model','use40last':'use 40 last','checks180,000':'checks 180,000',
-        'across90model/RX':'across 90 model/RX','complete150,000':'complete 150,000'}.items():body=body.replace(old,new)
+        'across90model/RX':'across 90 model/RX','complete150,000':'complete 150,000','versus16,768':'versus 16,768',
+        'epoch6':'epoch 6','epoch7':'epoch 7','fold0':'fold 0','fold1':'fold 1','f0/seed201':'fold 0 / seed 201',
+        '0.200pp':'0.200 pp','0.417pp':'0.417 pp','.5pp':'0.5 pp'}.items():body=body.replace(old,new)
     source=folder/'s27_report.tex';source.write_text(body,encoding='utf-8',newline='\n')
     temp=HERE/'tmp/pdfs/report';temp.mkdir(parents=True,exist_ok=True)
     command=['D:/bianyiqi/texlive/2026/bin/windows/latexmk.exe','-pdf','-interaction=nonstopmode','-halt-on-error','-outdir='+temp.as_posix(),source.name]

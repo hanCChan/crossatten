@@ -1,0 +1,5 @@
+{
+  "time": "2026-11-23T11:29:51+08:00",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\s27_training.py\", line 123, in fit\n    write(out/'live.json',dict(status='RUNNING',updated_at=now(),job=job,epochs_budget=200,**row))\n  File \"D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\s27_common.py\", line 39, in write\n    os.replace(temporary,p)\nPermissionError: [WinError 5] 拒绝访问。: 'D:\\\\crossatten\\\\worktrees\\\\s27-mechanism-identification\\\\27-mechanism-identification\\\\runs\\\\LA_f0_s203\\\\live.json.tmp' -> 'D:\\\\crossatten\\\\worktrees\\\\s27-mechanism-identification\\\\27-mechanism-identification\\\\runs\\\\LA_f0_s203\\\\live.json'\n",
+  "resume_from_completed_epoch_only": true
+}

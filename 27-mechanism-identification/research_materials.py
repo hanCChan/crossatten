@@ -55,6 +55,11 @@ def main():
         '未达到预先登记的 GELU 正收益一致性门槛；不能据此证明等效或断言激活无用。')
     inference='该干预同时改变非线性函数族、梯度路径、训练中 BN 轨迹和最终权重，不能把差值唯一归给推理非线性，更不能解释为 RF 硬件不变性。'
     ds=float(np.mean([r['source_delta_pp'] for r in rows]));dd=float(np.mean([r['dev_delta_pp'] for r in rows]));dg=float(np.mean([r['gap_delta_pp'] for r in rows]))
+    gap_negative=sum(q['gap_delta_pp']<0 for q in rows)
+    negative_rx={k:v for k,v in primary['per_rx_delta_pp'].items() if v<0}
+    tied_rx=[k for k,v in primary['per_rx_delta_pp'].items() if v==0]
+    negative_description='、'.join(f'{k}（{v:+.3f} pp）' for k,v in negative_rx.items()) or '无'
+    tied_description='、'.join(tied_rx) or '无'
     # Rank research questions without launching or redesigning either frozen arm.
     next_step='C' if positive and abs(dd-ds)>=.5 else 'B'
     reason=('A 的 Source 与 Dev 变化并不同幅。优先用已冻结的四源 RX/一留出 RX Pilot 检查性能损失，才能进一步区分整体分类能力与条件性接收机迁移收益。两台留出 RX 仍只提供 Pilot 证据。' if next_step=='C' else
@@ -62,6 +67,8 @@ def main():
     write(HERE/'MECHANISM_DECISION.json',dict(time=now(),status='A_COMPLETE_STOP_AUTOMATIC_FITTING',new_fits=6,
         A_rule_met=positive,primary_delta_pp=delta,conditional_rx_ci95_pp=[lo,hi],source_delta_pp=ds,dev_delta_pp=dd,gap_delta_pp=dg,
         judgment=judgment,limitations=inference,next_highest_identification_value=next_step,next_reason=reason,
+        gap_negative_fit_pairs=gap_negative,negative_rx=negative_rx,tied_rx=tied_rx,
+        residual_LA_minus_LP_pp=result['paired_comparisons'][1]['mean_delta_pp'],
         next_rank_scope='Research-priority judgment from disclosedA outcomes; B/C designs and RXs unchanged. Neither launched.',
         B_fits=0,C_fits=0,IQ_only_fits=0,ask_strict_fits=0,remaining_authorized_automatic_fits=0))
     text=f'''# S27-A：GELU 干预的科研结果与机制边界
@@ -81,7 +88,9 @@ def main():
 
 {judgment}{inference}
 
-LA−LP：{result['paired_comparisons'][1]['mean_delta_pp']:+.3f} pp。该比较仍混杂分组、宽度、BN、参数化和计算量，不作等效或纯层级因果检验。
+LA−LP：{result['paired_comparisons'][1]['mean_delta_pp']:+.3f} pp。去除三处 GELU 后，四阶段结构仍未退化到所选 Long-Patch 的水平；因此不能把全部 HStem−LP 差距解释为这三处 GELU。差值可做算术加和，但不能把两项差值除以总差值解释成因果贡献百分比。该比较仍混杂分组、宽度、BN、参数化和计算量，不作等效或纯层级因果检验。
+
+主比较并非所有 RX 均正向：反向 RX 为 {negative_description}，持平 RX 为 {tied_description}。f0/seed201 的 H0−LA 为 −0.200 pp，均保留在图和表内。
 
 ## 哪些解释受到约束
 
@@ -92,7 +101,7 @@ LA−LP：{result['paired_comparisons'][1]['mean_delta_pp']:+.3f} pp。该比较
 
 ## Source 与历史 Dev：必须同时看
 
-H0−LA 的 Source Accuracy 变化均值为 {ds:+.3f} pp，Dev 变化为 {dd:+.3f} pp；两者性能损失差 ΔG（H0−LA）为 {dg:+.3f} pp。每组完整值见 source_dev_contrasts.csv。
+H0−LA 的 Source Accuracy 变化均值为 {ds:+.3f} pp，Dev 变化为 {dd:+.3f} pp；两者性能损失差 ΔG（H0−LA）为 {dg:+.3f} pp，但只有 {gap_negative}/6 组 ΔG 为负。平均 gap 变化不能写成稳定的跨 RX 损失缩小。每组完整值见 source_dev_contrasts.csv。
 
 这些是已用来选 checkpoint 的 Source Validation 与有开发历史的 Dev；包预算为每 TX×RX 40 与 200。它们不能替代 C 的重新训练、四源 RX/一留出 RX 验证，也不能证明接收机变化被特别抑制。不能只报告较小 gap 而隐去源域拟合差异或准确率天花板。
 
@@ -151,7 +160,7 @@ def plots(result,cells,contrasts):
             ce=[float(r['source_val_ce']) for r in history];epochs=[int(r['epoch']) for r in history]
             ax[f].plot(epochs,ce,lw=.8,label=str(seed));m=read(HERE/'evidence'/name/'metrics.json')
             ax[f].scatter(m['best_epoch'],ce[m['best_epoch']-1],s=14)
-        ax[f].set(yscale='log',xlabel='Epoch',ylabel='Clean source RX-equal CE',title=f'No-GELU fold {f}: all200 epochs');ax[f].legend(frameon=False,title='Seed',fontsize=7)
+        ax[f].set(yscale='log',xlabel='Epoch',ylabel='Clean source RX-equal CE',title=f'No-GELU fold {f}: all 200 epochs');ax[f].legend(frameon=False,title='Seed',fontsize=7)
     fig.tight_layout();savefig(fig,folder/'fig03_complete_training')
 
 

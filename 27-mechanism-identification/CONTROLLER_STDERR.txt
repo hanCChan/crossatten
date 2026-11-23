@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "D:\crossatten\worktrees\s27-mechanism-identification\27-mechanism-identification\resume.py", line 50, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\crossatten\worktrees\s27-mechanism-identification\27-mechanism-identification\resume.py", line 44, in main
+    s27_execute.main()
+  File "D:\crossatten\worktrees\s27-mechanism-identification\27-mechanism-identification\s27_execute.py", line 65, in main
+    raise RuntimeError('Fit failed; see preserved local log: '+name)
+RuntimeError: Fit failed; see preserved local log: LA_f0_s203

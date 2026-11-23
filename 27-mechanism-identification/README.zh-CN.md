@@ -1,5 +1,17 @@
 # S27：HStem 机制识别
 
+<!-- completion -->
+**S27-A 已完成：6/6 新拟合，每组 200 轮；18 模型、180,000 条 Dev 预测通过独立核验。**
+
+HStem 97.335%，No-GELU 96.583%，Long-Patch 94.500%；H0−LA +0.752 pp。B/C/IQ-only/ASK Strict-IB 均未启动。
+
+一次 Windows 进度文件占用错误已按登记从完整 epoch6 恢复；原错误与恢复日志保留，未重置种子或增加科学更新。见 [IO 修复](TECHNICAL_FIX_001.json)。
+
+[中文科研报告](RESEARCH_REPORT.zh-CN.md) · [英文 PDF](output/pdf/s27_mechanism_report.pdf) · [机制判断](MECHANISM_DECISION.json) · [科学核验](EXPERIMENT_INTEGRITY.json) · [最终审计](FINAL_AUDIT.json)
+
+重建图文只需运行 `research_materials.py`、`build_report.py`，使用已提交聚合记录，不需要训练数据或权重。不重复启动已完成的训练或 Dev 推理。
+<!-- /completion -->
+
 以 S26 `ad5443e` 为基线。本轮于 2026-11-23 仅执行 A：HStem-LinearActivation（LA）六次训练；B/C 完成独立预注册，自动训练预算为零。历史 S15–S26 文件和结果保持不变。
 
 A 复用 S21 已定义但未训练的 H3：仅将 Tokenizer 的 `2/5/8` 三处 GELU 换为 Identity，卷积、BN、初始化、TrueIB 五视图、位置处理和 MHA 不变。H0/LA 均为 133,690 参数、95.028M 部分 MACs、350 点名义卷积路径支持及 32×64 Token。保留训练 BN，不能把 LA 整网称为线性系统。

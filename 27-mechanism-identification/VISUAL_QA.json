@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "time": "2026-11-23T12:45:57.037399+08:00",
+  "method": "Every final115dpi page inspected with view_image after final build; all4 pages.",
+  "checks": [
+    "Tables/figures/formulas/captions legible, no clipping/overlaps/missing glyphs.",
+    "All6fit cohorts,10RX includingRTL5negative andRTL2tie retained.",
+    "Source/dev/gap and all200epoch curves display full evidence.",
+    "UnexecutedB/C and IOrecovery explicitly distinguished.",
+    "FinalTeXlog clear."
+  ],
+  "documents": [
+    {
+      "sha256": "bc11f6a6dd68cfb086fb2ba0c7a31e52d5ef91e96e134c4f7f4e73431f487e60",
+      "reviewed_pages": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ]
+}

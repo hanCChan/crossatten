@@ -1,0 +1,71 @@
+{
+  "time": "2026-11-23T12:43:58+08:00",
+  "means": {
+    "H0": {
+      "source_accuracy_pct": 98.175,
+      "source_ce": 0.05902150832116604,
+      "source_minus_dev_pp": 0.839999999999994
+    },
+    "LA": {
+      "source_accuracy_pct": 97.74166666666666,
+      "source_ce": 0.07693370928366979,
+      "source_minus_dev_pp": 1.1583333333333385
+    },
+    "LP": {
+      "source_accuracy_pct": 96.35833333333333,
+      "source_ce": 0.10702445482214291,
+      "source_minus_dev_pp": 1.8583333333333343
+    }
+  },
+  "paired_fit_contrasts": [
+    {
+      "fold": 0,
+      "seed": 201,
+      "source_delta_pp": 0.6999999999999886,
+      "dev_delta_pp": -0.20000000000000284,
+      "gap_delta_pp": 0.8999999999999915,
+      "source_ce_delta": -0.03463821858167648
+    },
+    {
+      "fold": 0,
+      "seed": 202,
+      "source_delta_pp": 0.2499999999999858,
+      "dev_delta_pp": 1.0100000000000051,
+      "gap_delta_pp": -0.7600000000000193,
+      "source_ce_delta": -0.016480281949043274
+    },
+    {
+      "fold": 0,
+      "seed": 203,
+      "source_delta_pp": 1.4210854715202004e-14,
+      "dev_delta_pp": 2.0799999999999983,
+      "gap_delta_pp": -2.079999999999984,
+      "source_ce_delta": -0.00999855250120163
+    },
+    {
+      "fold": 1,
+      "seed": 201,
+      "source_delta_pp": 0.6499999999999773,
+      "dev_delta_pp": 0.36000000000001364,
+      "gap_delta_pp": 0.2899999999999636,
+      "source_ce_delta": -0.020749814808368683
+    },
+    {
+      "fold": 1,
+      "seed": 202,
+      "source_delta_pp": 0.19999999999998863,
+      "dev_delta_pp": 0.5400000000000063,
+      "gap_delta_pp": -0.3400000000000176,
+      "source_ce_delta": -0.006350278854370117
+    },
+    {
+      "fold": 1,
+      "seed": 203,
+      "source_delta_pp": 0.8000000000000114,
+      "dev_delta_pp": 0.7200000000000131,
+      "gap_delta_pp": 0.0799999999999983,
+      "source_ce_delta": -0.01925605908036232
+    }
+  ],
+  "scope": "Descriptive historicalDev gap; sourceval already used for checkpoint selection,40vs200packets/TX/RX. Not the independently trained4RX/1heldRX C Pilot. No gapbootstrap or causalRXsuppression claim."
+}

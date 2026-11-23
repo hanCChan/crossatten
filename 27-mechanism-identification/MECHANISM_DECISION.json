@@ -1,0 +1,32 @@
+{
+  "time": "2026-11-23T12:43:59+08:00",
+  "status": "A_COMPLETE_STOP_AUTOMATIC_FITTING",
+  "new_fits": 6,
+  "A_rule_met": true,
+  "primary_delta_pp": 0.7516666666666675,
+  "conditional_rx_ci95_pp": [
+    0.21166666666666814,
+    1.4383333333333332
+  ],
+  "source_delta_pp": 0.43333333333332763,
+  "dev_delta_pp": 0.7516666666666723,
+  "gap_delta_pp": -0.3183333333333446,
+  "judgment": "三处 GELU 对当前 HStem 与固定训练流程的组合有一致正收益。",
+  "limitations": "该干预同时改变非线性函数族、梯度路径、训练中 BN 轨迹和最终权重，不能把差值唯一归给推理非线性，更不能解释为 RF 硬件不变性。",
+  "next_highest_identification_value": "B",
+  "next_reason": "当前结果没有充分分离 Tokenizer 自身与后端的作用。已冻结的 2×2 后端对照直接检验收益是否依赖所选 MHA，保持同一 Token 接口和近似参数预算；不能推广到所有读出头。",
+  "gap_negative_fit_pairs": 3,
+  "negative_rx": {
+    "rtl_5": -0.4166666666666652
+  },
+  "tied_rx": [
+    "rtl_2"
+  ],
+  "residual_LA_minus_LP_pp": 2.0833333333333335,
+  "next_rank_scope": "Research-priority judgment from disclosedA outcomes; B/C designs and RXs unchanged. Neither launched.",
+  "B_fits": 0,
+  "C_fits": 0,
+  "IQ_only_fits": 0,
+  "ask_strict_fits": 0,
+  "remaining_authorized_automatic_fits": 0
+}

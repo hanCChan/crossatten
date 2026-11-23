@@ -1,0 +1,33 @@
+LA_f0_s203 epoch=1/200 sourceCE=2.308227 elapsed=10.0s
+Traceback (most recent call last):
+  File "D:\crossatten\worktrees\s27-mechanism-identification\27-mechanism-identification\s27_execute.py", line 85, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\crossatten\worktrees\s27-mechanism-identification\27-mechanism-identification\s27_execute.py", line 34, in main
+    fit(r['jobs'][args.fit_index]);return
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\crossatten\worktrees\s27-mechanism-identification\27-mechanism-identification\s27_training.py", line 123, in fit
+    write(out/'live.json',dict(status='RUNNING',updated_at=now(),job=job,epochs_budget=200,**row))
+  File "D:\crossatten\worktrees\s27-mechanism-identification\27-mechanism-identification\s27_common.py", line 39, in write
+    os.replace(temporary,p)
+PermissionError: [WinError 5] 拒绝访问。: 'D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\runs\\LA_f0_s203\\live.json.tmp' -> 'D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\runs\\LA_f0_s203\\live.json'
+LA_f0_s203 epoch=10/200 sourceCE=1.000287 elapsed=100.6s
+LA_f0_s203 epoch=20/200 sourceCE=0.723824 elapsed=205.0s
+LA_f0_s203 epoch=30/200 sourceCE=0.407323 elapsed=309.3s
+LA_f0_s203 epoch=40/200 sourceCE=0.280001 elapsed=413.6s
+LA_f0_s203 epoch=50/200 sourceCE=0.331745 elapsed=518.3s
+LA_f0_s203 epoch=60/200 sourceCE=0.246111 elapsed=623.1s
+LA_f0_s203 epoch=70/200 sourceCE=0.225623 elapsed=724.3s
+LA_f0_s203 epoch=80/200 sourceCE=0.142446 elapsed=772.4s
+LA_f0_s203 epoch=90/200 sourceCE=0.140602 elapsed=820.3s
+LA_f0_s203 epoch=100/200 sourceCE=0.228431 elapsed=868.4s
+LA_f0_s203 epoch=110/200 sourceCE=0.176425 elapsed=916.4s
+LA_f0_s203 epoch=120/200 sourceCE=0.259305 elapsed=964.1s
+LA_f0_s203 epoch=130/200 sourceCE=0.129783 elapsed=1012.1s
+LA_f0_s203 epoch=140/200 sourceCE=0.132881 elapsed=1059.1s
+LA_f0_s203 epoch=150/200 sourceCE=0.123685 elapsed=1106.3s
+LA_f0_s203 epoch=160/200 sourceCE=0.094345 elapsed=1153.4s
+LA_f0_s203 epoch=170/200 sourceCE=0.082020 elapsed=1201.0s
+LA_f0_s203 epoch=180/200 sourceCE=0.074754 elapsed=1248.3s
+LA_f0_s203 epoch=190/200 sourceCE=0.074362 elapsed=1295.3s
+LA_f0_s203 epoch=200/200 sourceCE=0.074397 elapsed=1342.5s

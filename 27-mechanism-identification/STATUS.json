@@ -1,9 +1,43 @@
 {
-  "status": "TRAINING_AND_UNIFIED_EVALUATION_COMPLETE",
-  "time": "2026-11-23T12:33:22+08:00",
+  "time": "2026-11-23T12:45:57+08:00",
+  "status": "COMPLETE_S27_A_AND_MECHANISM_REPORT",
   "completed_new_fits": 6,
   "reused_models": 12,
-  "evaluated_predictions": 180000,
-  "confirm_blind_reads": 0,
-  "mechanism_report": "PENDING"
+  "packet_predictions": 180000,
+  "scientific_optimizer_steps": 150000,
+  "engineering_synthetic_optimizer_steps": 8,
+  "B_fits": 0,
+  "C_fits": 0,
+  "IQ_only_fits": 0,
+  "ask_strict_fits": 0,
+  "remaining_authorized_automatic_fits": 0,
+  "independent_acquisition": "NOT_AVAILABLE_NOT_RUN",
+  "integrity": "PASS",
+  "visual": "PASS",
+  "documents": [
+    {
+      "path": "output/pdf/s27_mechanism_report.pdf",
+      "sha256": "bc11f6a6dd68cfb086fb2ba0c7a31e52d5ef91e96e134c4f7f4e73431f487e60",
+      "pages": 4,
+      "renders": [
+        {
+          "page": 1,
+          "sha256": "648afbdf6f4572e798f1660404a680eef8551ef3d6258db0da4a0d756e50ada4"
+        },
+        {
+          "page": 2,
+          "sha256": "5c639e819161ce12165436e6ae77051aabe10f3d66108b48e67216ebb1286532"
+        },
+        {
+          "page": 3,
+          "sha256": "057a142a03d24905a1c5791f0e926bbcca54756874fabfd9d477cfb493cd624b"
+        },
+        {
+          "page": 4,
+          "sha256": "4f766bceceee5eb2231e4fd1faac0e11557657723b241a8cf9ece07adceea580"
+        }
+      ]
+    }
+  ],
+  "next_highest_value": "B"
 }
