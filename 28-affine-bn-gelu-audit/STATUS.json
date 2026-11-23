@@ -1,0 +1,46 @@
+{
+  "time": "2026-11-23T23:09:16+08:00",
+  "status": "COMPLETE_READ_ONLY_AUDIT_WITH_NATIVE_PRECISION_FAILURE",
+  "scientific_fits": 0,
+  "source_models_recovered": 24,
+  "source_predictions": 48000,
+  "affine_models": 6,
+  "native_FP32_contract": "FAILED_PRESERVED_ALL_SIX",
+  "FP64_contract": "PASS_ALL_SIX",
+  "TF32_off_probe": "PASS_ALL_SIX_50_PACKETS_EACH",
+  "A_completed": 0,
+  "A_planned": 6,
+  "C_completed": 0,
+  "C_planned": 12,
+  "S28B_fits": 0,
+  "synthetic_engineering_updates": 7,
+  "Dev_Confirm_blind_reads": 0,
+  "remaining_automatic_fit_budget": 0,
+  "user_training_authorization": "REQUIRED_BY_USER_ATTACHMENT_NOT_YET_GIVEN",
+  "visual": "PASS",
+  "documents": [
+    {
+      "path": "output/pdf/s28_affine_audit.pdf",
+      "sha256": "605b1e80da439ef31bd70566c593f2b9e58cfecfc01732100af5c7c9e46e33bd",
+      "pages": 4,
+      "renders": [
+        {
+          "page": 1,
+          "sha256": "137afd40627c1cfce5cf130897cced6f91c4ee6d003adaaf4edf7d9f5fde7ddc"
+        },
+        {
+          "page": 2,
+          "sha256": "0226caf2207b749081cdef28ec321355889876e462652d7a2a1f3da6c2d80dbe"
+        },
+        {
+          "page": 3,
+          "sha256": "ced4b28fbbb25fb01900bd7ec026483e021c9895f0be102b584520225972afec"
+        },
+        {
+          "page": 4,
+          "sha256": "203519e5be24ef13bc29805b76be391c8771e267fe8b53615dfe8a063afcd399"
+        }
+      ]
+    }
+  ]
+}

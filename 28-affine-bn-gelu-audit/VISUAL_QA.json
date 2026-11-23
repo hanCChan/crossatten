@@ -1,0 +1,21 @@
+{
+  "time": "2026-11-23T23:09:14+08:00",
+  "status": "PASS",
+  "documents": [
+    {
+      "sha256": "605b1e80da439ef31bd70566c593f2b9e58cfecfc01732100af5c7c9e46e33bd",
+      "reviewed_pages": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "checks": [
+    "All four final rendered pages visually inspected",
+    "Tables, formulas, figures and legends legible and within margins",
+    "Native failures, missing factorial cell and zero scientific fits clearly retained",
+    "No overflow, missing glyphs or LaTeX warnings"
+  ]
+}

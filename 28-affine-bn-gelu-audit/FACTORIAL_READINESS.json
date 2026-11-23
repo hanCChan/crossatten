@@ -1,0 +1,38 @@
+{
+  "time": "2026-11-23T23:06:42+08:00",
+  "status": "THREE_HISTORICAL_CELLS_VERIFIED_FOURTH_NOT_RUN",
+  "rows": [
+    {
+      "arm": "H0",
+      "source_accuracy_pct": 98.175,
+      "historical_dev_accuracy_pct": 97.33500000000002,
+      "new_fits": 0
+    },
+    {
+      "arm": "LA",
+      "source_accuracy_pct": 97.74166666666667,
+      "historical_dev_accuracy_pct": 96.58333333333334,
+      "new_fits": 0
+    },
+    {
+      "arm": "H2",
+      "source_accuracy_pct": 97.14166666666667,
+      "historical_dev_accuracy_pct": 96.145,
+      "new_fits": 0
+    },
+    {
+      "arm": "LP",
+      "source_accuracy_pct": 96.35833333333333,
+      "historical_dev_accuracy_pct": 94.5,
+      "new_fits": 0
+    }
+  ],
+  "H2_LA": {
+    "planned_fits": 6,
+    "completed_fits": 0,
+    "source_accuracy": null,
+    "dev_accuracy": null
+  },
+  "interaction": null,
+  "reason": "The missing cell has no scientific fit; do not invent a factorial interaction or infer a unique optimization cause."
+}
