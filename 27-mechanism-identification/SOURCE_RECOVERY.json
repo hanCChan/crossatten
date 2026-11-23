@@ -1,0 +1,116 @@
+{
+  "status": "COMPLETE_READ_ONLY",
+  "time": "2026-11-23T10:55:36+08:00",
+  "rows": [
+    {
+      "id": "H0_f0_s201",
+      "source_ce": 0.04263255000114441,
+      "archived_ce": 0.04263255000114441,
+      "ce_delta": 0.0,
+      "source_accuracy": 0.985,
+      "archived_accuracy": 0.985,
+      "source_metrics_exact": true
+    },
+    {
+      "id": "H0_f0_s202",
+      "source_ce": 0.055064328014850616,
+      "archived_ce": 0.055064328014850616,
+      "ce_delta": 0.0,
+      "source_accuracy": 0.985,
+      "archived_accuracy": 0.985,
+      "source_metrics_exact": true
+    },
+    {
+      "id": "H0_f0_s203",
+      "source_ce": 0.06202102452516556,
+      "archived_ce": 0.06202102452516556,
+      "ce_delta": 0.0,
+      "source_accuracy": 0.9790000000000001,
+      "archived_accuracy": 0.9790000000000001,
+      "source_metrics_exact": true
+    },
+    {
+      "id": "LP_f0_s201",
+      "source_ce": 0.1394047737121582,
+      "archived_ce": 0.1394047737121582,
+      "ce_delta": 0.0,
+      "source_accuracy": 0.9525,
+      "archived_accuracy": 0.9525,
+      "source_metrics_exact": true
+    },
+    {
+      "id": "LP_f0_s202",
+      "source_ce": 0.09993356466293335,
+      "archived_ce": 0.09993356466293335,
+      "ce_delta": 0.0,
+      "source_accuracy": 0.9655000000000001,
+      "archived_accuracy": 0.9655000000000001,
+      "source_metrics_exact": true
+    },
+    {
+      "id": "LP_f0_s203",
+      "source_ce": 0.09527581930160522,
+      "archived_ce": 0.09527581930160522,
+      "ce_delta": 0.0,
+      "source_accuracy": 0.967,
+      "archived_accuracy": 0.967,
+      "source_metrics_exact": true
+    },
+    {
+      "id": "H0_f1_s201",
+      "source_ce": 0.06361857801675797,
+      "archived_ce": 0.06361857801675797,
+      "ce_delta": 0.0,
+      "source_accuracy": 0.9789999999999999,
+      "archived_accuracy": 0.9789999999999999,
+      "source_metrics_exact": true
+    },
+    {
+      "id": "H0_f1_s202",
+      "source_ce": 0.07295726984739304,
+      "archived_ce": 0.07295726984739304,
+      "ce_delta": 0.0,
+      "source_accuracy": 0.9789999999999999,
+      "archived_accuracy": 0.9789999999999999,
+      "source_metrics_exact": true
+    },
+    {
+      "id": "H0_f1_s203",
+      "source_ce": 0.05783529952168465,
+      "archived_ce": 0.05783529952168465,
+      "ce_delta": 0.0,
+      "source_accuracy": 0.9835,
+      "archived_accuracy": 0.9835,
+      "source_metrics_exact": true
+    },
+    {
+      "id": "LP_f1_s201",
+      "source_ce": 0.1156577616930008,
+      "archived_ce": 0.1156577616930008,
+      "ce_delta": 0.0,
+      "source_accuracy": 0.9610000000000001,
+      "archived_accuracy": 0.9610000000000001,
+      "source_metrics_exact": true
+    },
+    {
+      "id": "LP_f1_s202",
+      "source_ce": 0.09068365395069122,
+      "archived_ce": 0.09068365395069122,
+      "ce_delta": 0.0,
+      "source_accuracy": 0.969,
+      "archived_accuracy": 0.969,
+      "source_metrics_exact": true
+    },
+    {
+      "id": "LP_f1_s203",
+      "source_ce": 0.10119115561246872,
+      "archived_ce": 0.10119115561246872,
+      "ce_delta": 0.0,
+      "source_accuracy": 0.9664999999999999,
+      "archived_accuracy": 0.9664999999999999,
+      "source_metrics_exact": true
+    }
+  ],
+  "all_metrics_exact": true,
+  "interpretation": "Numeric recovery is reported; frozen historical values are never overwritten. S27 primary pairing uses common fresh inference of all arms. No target packet read or parameter choice."
+}
