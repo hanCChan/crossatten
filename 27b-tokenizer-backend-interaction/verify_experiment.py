@@ -106,6 +106,12 @@ def main():
             geometry_checks.append(dict(id=name,layer=layer,status=q['status']))
         hashes.append(dict(path=path.relative_to(HERE).as_posix(),sha256=sha(path)))
     source_groups={arm:{(q['fold'],q['seed'],q['rx']):q['acc'] for q in src['records'] if q['arm']==arm} for arm in ARMS}
+    for item in results['source_summary']:
+        selected=[q for q in src['records'] if q['arm']==item['arm']]
+        sf=[np.mean([q['acc'] for q in selected if q['fold']==f and q['seed']==s])*100 for f in (0,1) for s in (201,202,203)]
+        np.testing.assert_allclose(sf,item['fit_accuracies_pct'],atol=1e-12,rtol=0)
+        assert abs(np.mean(sf)-item['accuracy_pct'])<1e-12
+        assert abs(np.mean([q['macro_f1'] for q in selected])*100-item['macro_f1_pct'])<1e-12
     source_interactions={k:((source_groups['H0'][k]-source_groups['LP'][k])-(source_groups['H0_P'][k]-source_groups['LP_P'][k]))*100 for k in source_groups['H0']}
     source_fits=[np.mean([v for k,v in source_interactions.items() if k[:2]==(f,s)]) for f in (0,1) for s in (201,202,203)]
     np.testing.assert_allclose(source_fits,results['source_interaction']['fit_deltas_pp'],atol=1e-10,rtol=0)
@@ -154,6 +160,13 @@ def main():
             for filename,h in files.items():assert sha(folder/name/filename)==h
             historical.add(str(folder/name))
     changed=subprocess.check_output(['git','diff',registration['base_git'],'--name-only'],cwd=ROOT,text=True).splitlines();assert all(p.startswith(HERE.name+'/') for p in changed)
+    costs=read(HERE/'COSTS.json')['rows'];gate=read(HERE/'GATE.json')['architecture']
+    assert len(costs)==4 and {q['arm'] for q in costs}==set(ARMS)
+    for q in costs:
+        assert q['params']==gate[q['arm']]['params'] and set(q['batches'])=={'1','128'}
+        for values in q['batches'].values():
+            samples=np.array(values['samples']);assert len(samples)==15 and np.isfinite(samples).all() and samples.min()>0
+            assert abs(np.median(samples)-values['p50_ms'])<1e-10
     write(HERE/'EXPERIMENT_INTEGRITY.json',dict(status='PASS',time=now(),new_fits=12,scientific_optimizer_steps=300000,
         engineering_synthetic_optimizer_steps=8,models_evaluated=24,target_packet_predictions=240000,source_packet_predictions=48000,
         geometry_vectors=144000,geometry_records_checked=geometry_checks,source_recovery=read(HERE/'SOURCE_RECOVERY.json')['all_metrics_exact'],
