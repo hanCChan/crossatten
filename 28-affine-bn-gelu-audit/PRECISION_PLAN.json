@@ -1,0 +1,16 @@
+{
+  "time": "2026-11-23T22:56:36+08:00",
+  "scientific_fits": 0,
+  "optimizer_updates": 0,
+  "original_audit_sha256": "140f3000a01eaf23b683de12bba0e0976002d1cb00a0271df7b6ce52791f1c06",
+  "script_sha256": "6a097cd7aa51c9813a8d356f11c861a40934ee13224b9e743d7564f18e5fd4d2",
+  "source": "Same first Source-validation packet perTXxRXcell:50/fold,6frozenLA models,all32tokens,batch10",
+  "flags": [
+    true,
+    false
+  ],
+  "matmul_TF32": false,
+  "atol": 0.0001,
+  "rtol": 0.0001,
+  "scope": "Post-native-contract-failure precision diagnostic; keep all original six failures, their12000-source-packet results and the one native prediction change. No tolerance relaxation, metric replacement, target read or model selection. TF32-off results qualify numerical export only, not the historical training/evaluation recipe. S23 already found a related precision issue for its distinct conversions."
+}

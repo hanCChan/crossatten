@@ -1,0 +1,1328 @@
+{
+  "time": "2026-11-23T22:54:13+08:00",
+  "status": "NUMERICAL_CONTRACT_NOT_MET",
+  "models": [
+    {
+      "id": "LA_f0_s201",
+      "fold": 0,
+      "seed": 201,
+      "operator": {
+        "input": [
+          32,
+          8192
+        ],
+        "output": [
+          64,
+          32
+        ],
+        "kernel": 340,
+        "stride": 256,
+        "padding": 42,
+        "boundary_positions": [
+          0,
+          31
+        ],
+        "stored_coefficients": 2091008,
+        "trainable_parameters": 0,
+        "scope": "Affine conditional on shared nonlinear stem output; eval-frozen BN only. All 32 positions retained."
+      },
+      "converted_sha256": "e64535df231634eda793ee1fe5d147da96175e26e9e73db6ec9910f86579eb81",
+      "synthetic_FP64": {
+        "max_abs": 9.094947017729282e-13,
+        "max_relative": 2.465078773769026e-12,
+        "rms": 6.357000541120956e-14,
+        "allclose": true,
+        "atol": 1e-09,
+        "rtol": 1e-09,
+        "failing_elements": 0,
+        "elements": 12288
+      },
+      "source_FP64": {
+        "errors": {
+          "tokens": {
+            "max_abs": 1.3145040611561853e-13,
+            "max_relative": 8.762592005052158e-11,
+            "failing_elements": 0,
+            "elements": 102400,
+            "rms": 1.0103232330014559e-14,
+            "allclose": true,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          },
+          "logits": {
+            "max_abs": 5.417888360170764e-14,
+            "max_relative": 1.779362191963421e-11,
+            "failing_elements": 0,
+            "elements": 500,
+            "rms": 1.48234634228495e-14,
+            "allclose": true,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          },
+          "naive": {
+            "max_abs": 3.2498365237057474,
+            "max_relative": 3782.926328280591,
+            "failing_elements": 6400,
+            "elements": 102400,
+            "rms": 0.22314447453622357,
+            "allclose": false,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          },
+          "naive_interior": {
+            "max_abs": 1.3145040611561853e-13,
+            "max_relative": 8.762592005052158e-11,
+            "failing_elements": 0,
+            "elements": 96000,
+            "rms": 1.041941134113476e-14,
+            "allclose": true,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          },
+          "shared_kernel_with_position_bias": {
+            "max_abs": 4.090490623225897,
+            "max_relative": 2658.8217684997467,
+            "failing_elements": 6400,
+            "elements": 102400,
+            "rms": 0.24627382365637554,
+            "allclose": false,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          }
+        },
+        "corrected_per_position_max_abs": [
+          1.0436096431476471e-14,
+          4.6629367034256575e-14,
+          4.085620730620576e-14,
+          6.483702463810914e-14,
+          4.3076653355456074e-14,
+          4.707345624410664e-14,
+          5.595524044110789e-14,
+          6.483702463810914e-14,
+          5.595524044110789e-14,
+          6.128431095930864e-14,
+          4.884981308350689e-14,
+          6.261657858885883e-14,
+          4.3520742565306136e-14,
+          4.3520742565306136e-14,
+          1.3145040611561853e-13,
+          1.2256862191861728e-13,
+          1.0658141036401503e-13,
+          1.0835776720341528e-13,
+          4.707345624410664e-14,
+          6.483702463810914e-14,
+          5.3290705182007514e-14,
+          5.062616992290714e-14,
+          4.529709940470639e-14,
+          5.773159728050814e-14,
+          4.5075054799781356e-14,
+          7.016609515630989e-14,
+          4.3520742565306136e-14,
+          6.661338147750939e-14,
+          5.5067062021407764e-14,
+          5.240252676230739e-14,
+          4.3520742565306136e-14,
+          8.881784197001252e-15
+        ],
+        "packets": 50,
+        "changed_predictions": 0,
+        "naive_changed_predictions_on_balanced_probe": 9
+      },
+      "source_FP32": {
+        "errors": {
+          "tokens": {
+            "max_abs": 0.007366657257080078,
+            "max_relative": 332.6243591308594,
+            "failing_elements": 2386333,
+            "elements": 4096000,
+            "rms": 0.000580679878434812,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          },
+          "logits": {
+            "max_abs": 0.01809382438659668,
+            "max_relative": 850.5834350585938,
+            "failing_elements": 15717,
+            "elements": 20000,
+            "rms": 0.002610487144973571,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          },
+          "naive": {
+            "max_abs": 4.570180416107178,
+            "max_relative": 116798.0234375,
+            "failing_elements": 2511002,
+            "elements": 4096000,
+            "rms": 0.2214094520047247,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          },
+          "naive_interior": {
+            "max_abs": 0.007366657257080078,
+            "max_relative": 332.6243591308594,
+            "failing_elements": 2255120,
+            "elements": 3840000,
+            "rms": 0.00059114951718064,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          },
+          "shared_kernel_with_position_bias": {
+            "max_abs": 4.707022666931152,
+            "max_relative": 135257.046875,
+            "failing_elements": 2510973,
+            "elements": 4096000,
+            "rms": 0.243386720533991,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          }
+        },
+        "corrected_per_position_max_abs": [
+          0.0029855966567993164,
+          0.0038695335388183594,
+          0.004144906997680664,
+          0.0024641752243041992,
+          0.004527568817138672,
+          0.0037157535552978516,
+          0.003127574920654297,
+          0.002318143844604492,
+          0.0055114030838012695,
+          0.002750873565673828,
+          0.002107560634613037,
+          0.002840280532836914,
+          0.003634333610534668,
+          0.0031403303146362305,
+          0.005511283874511719,
+          0.005355358123779297,
+          0.005299091339111328,
+          0.004725456237792969,
+          0.0023185014724731445,
+          0.003209352493286133,
+          0.004276752471923828,
+          0.0027184486389160156,
+          0.0019752532243728638,
+          0.0025565624237060547,
+          0.005406737327575684,
+          0.0041027069091796875,
+          0.0029117614030838013,
+          0.0036320388317108154,
+          0.005524873733520508,
+          0.004631519317626953,
+          0.007366657257080078,
+          0.0036935806274414062
+        ],
+        "packets": 2000,
+        "changed_predictions": 0,
+        "naive_changed_predictions_on_balanced_probe": null
+      },
+      "source_probe_rows_sha256": "cd0d302f3645adb587af33459df9127ec93621e63f942e9eb2fea00804d2b5b1"
+    },
+    {
+      "id": "LA_f0_s202",
+      "fold": 0,
+      "seed": 202,
+      "operator": {
+        "input": [
+          32,
+          8192
+        ],
+        "output": [
+          64,
+          32
+        ],
+        "kernel": 340,
+        "stride": 256,
+        "padding": 42,
+        "boundary_positions": [
+          0,
+          31
+        ],
+        "stored_coefficients": 2091008,
+        "trainable_parameters": 0,
+        "scope": "Affine conditional on shared nonlinear stem output; eval-frozen BN only. All 32 positions retained."
+      },
+      "converted_sha256": "abb6b5f4f16c568c61dc83643cc7bf65fdc77547a2f0ccbbaeac031234b8a789",
+      "synthetic_FP64": {
+        "max_abs": 7.958078640513122e-13,
+        "max_relative": 4.681860427760874e-11,
+        "rms": 7.000780450191549e-14,
+        "allclose": true,
+        "atol": 1e-09,
+        "rtol": 1e-09,
+        "failing_elements": 0,
+        "elements": 12288
+      },
+      "source_FP64": {
+        "errors": {
+          "tokens": {
+            "max_abs": 9.059419880941277e-14,
+            "max_relative": 4.5719983842430556e-10,
+            "failing_elements": 0,
+            "elements": 102400,
+            "rms": 7.241316279395448e-15,
+            "allclose": true,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          },
+          "logits": {
+            "max_abs": 4.618527782440651e-14,
+            "max_relative": 5.184954995907765e-12,
+            "failing_elements": 0,
+            "elements": 500,
+            "rms": 1.1505043314876938e-14,
+            "allclose": true,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          },
+          "naive": {
+            "max_abs": 4.527855788185729,
+            "max_relative": 4029.919068322689,
+            "failing_elements": 6400,
+            "elements": 102400,
+            "rms": 0.227549873492103,
+            "allclose": false,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          },
+          "naive_interior": {
+            "max_abs": 9.059419880941277e-14,
+            "max_relative": 4.5719983842430556e-10,
+            "failing_elements": 0,
+            "elements": 96000,
+            "rms": 7.463270685687847e-15,
+            "allclose": true,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          },
+          "shared_kernel_with_position_bias": {
+            "max_abs": 3.8685548426840093,
+            "max_relative": 6801.761169875617,
+            "failing_elements": 6400,
+            "elements": 102400,
+            "rms": 0.24259191336577748,
+            "allclose": false,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          }
+        },
+        "corrected_per_position_max_abs": [
+          1.1324274851176597e-14,
+          4.884981308350689e-14,
+          3.730349362740526e-14,
+          5.773159728050814e-14,
+          4.3520742565306136e-14,
+          4.3520742565306136e-14,
+          5.861977570020827e-14,
+          4.973799150320701e-14,
+          4.3520742565306136e-14,
+          4.973799150320701e-14,
+          4.418687638008123e-14,
+          7.638334409421077e-14,
+          4.707345624410664e-14,
+          4.1744385725905886e-14,
+          7.016609515630989e-14,
+          9.059419880941277e-14,
+          7.105427357601002e-14,
+          7.460698725481052e-14,
+          4.218847493575595e-14,
+          5.240252676230739e-14,
+          3.375077994860476e-14,
+          4.263256414560601e-14,
+          3.730349362740526e-14,
+          4.6407322429331543e-14,
+          4.1744385725905886e-14,
+          4.085620730620576e-14,
+          3.730349362740526e-14,
+          4.529709940470639e-14,
+          5.284661597215745e-14,
+          4.529709940470639e-14,
+          5.240252676230739e-14,
+          7.993605777301127e-15
+        ],
+        "packets": 50,
+        "changed_predictions": 0,
+        "naive_changed_predictions_on_balanced_probe": 19
+      },
+      "source_FP32": {
+        "errors": {
+          "tokens": {
+            "max_abs": 0.0060634613037109375,
+            "max_relative": 476.11474609375,
+            "failing_elements": 2537701,
+            "elements": 4096000,
+            "rms": 0.0006336630476394415,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          },
+          "logits": {
+            "max_abs": 0.017925739288330078,
+            "max_relative": 5.632309913635254,
+            "failing_elements": 15308,
+            "elements": 20000,
+            "rms": 0.0023664610937948636,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          },
+          "naive": {
+            "max_abs": 7.111076831817627,
+            "max_relative": 52193.03125,
+            "failing_elements": 2657628,
+            "elements": 4096000,
+            "rms": 0.22721435092433004,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          },
+          "naive_interior": {
+            "max_abs": 0.0060634613037109375,
+            "max_relative": 476.11474609375,
+            "failing_elements": 2401767,
+            "elements": 3840000,
+            "rms": 0.0006451049560674071,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          },
+          "shared_kernel_with_position_bias": {
+            "max_abs": 6.451775550842285,
+            "max_relative": 83308.2265625,
+            "failing_elements": 2657672,
+            "elements": 4096000,
+            "rms": 0.2426251513153479,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          }
+        },
+        "corrected_per_position_max_abs": [
+          0.0039098262786865234,
+          0.00451350212097168,
+          0.003367900848388672,
+          0.00327986478805542,
+          0.004447579383850098,
+          0.004084274172782898,
+          0.002826690673828125,
+          0.0023743510246276855,
+          0.004129648208618164,
+          0.0024116039276123047,
+          0.00179290771484375,
+          0.00217437744140625,
+          0.0038805007934570312,
+          0.0029206275939941406,
+          0.0053501129150390625,
+          0.005955219268798828,
+          0.0060634613037109375,
+          0.005452394485473633,
+          0.0024595260620117188,
+          0.0024728775024414062,
+          0.004505902528762817,
+          0.00283128023147583,
+          0.0021805763244628906,
+          0.0025053024291992188,
+          0.0039653778076171875,
+          0.004075288772583008,
+          0.0035309791564941406,
+          0.00400233268737793,
+          0.004280567169189453,
+          0.005361318588256836,
+          0.005057334899902344,
+          0.003692626953125
+        ],
+        "packets": 2000,
+        "changed_predictions": 0,
+        "naive_changed_predictions_on_balanced_probe": null
+      },
+      "source_probe_rows_sha256": "cd0d302f3645adb587af33459df9127ec93621e63f942e9eb2fea00804d2b5b1"
+    },
+    {
+      "id": "LA_f0_s203",
+      "fold": 0,
+      "seed": 203,
+      "operator": {
+        "input": [
+          32,
+          8192
+        ],
+        "output": [
+          64,
+          32
+        ],
+        "kernel": 340,
+        "stride": 256,
+        "padding": 42,
+        "boundary_positions": [
+          0,
+          31
+        ],
+        "stored_coefficients": 2091008,
+        "trainable_parameters": 0,
+        "scope": "Affine conditional on shared nonlinear stem output; eval-frozen BN only. All 32 positions retained."
+      },
+      "converted_sha256": "786bb2aafd919cc370f6f37c0aab2c5b0d910d4c0840e2572d2f33d067d7855f",
+      "synthetic_FP64": {
+        "max_abs": 1.2505552149377763e-12,
+        "max_relative": 9.608557419597467e-13,
+        "rms": 8.183625511238223e-14,
+        "allclose": true,
+        "atol": 1e-09,
+        "rtol": 1e-09,
+        "failing_elements": 0,
+        "elements": 12288
+      },
+      "source_FP64": {
+        "errors": {
+          "tokens": {
+            "max_abs": 1.4566126083082054e-13,
+            "max_relative": 8.327065970345836e-08,
+            "failing_elements": 0,
+            "elements": 102400,
+            "rms": 1.0704487347018222e-14,
+            "allclose": true,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          },
+          "logits": {
+            "max_abs": 1.0236256287043943e-13,
+            "max_relative": 2.3257161246647864e-12,
+            "failing_elements": 0,
+            "elements": 500,
+            "rms": 1.4564242807938607e-14,
+            "allclose": true,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          },
+          "naive": {
+            "max_abs": 5.050809639049545,
+            "max_relative": 2091.2997532922273,
+            "failing_elements": 6400,
+            "elements": 102400,
+            "rms": 0.2504936181337926,
+            "allclose": false,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          },
+          "naive_interior": {
+            "max_abs": 1.4566126083082054e-13,
+            "max_relative": 8.327065970345836e-08,
+            "failing_elements": 0,
+            "elements": 96000,
+            "rms": 1.1036841938737143e-14,
+            "allclose": true,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          },
+          "shared_kernel_with_position_bias": {
+            "max_abs": 3.6508880852280576,
+            "max_relative": 8405.396442132273,
+            "failing_elements": 6400,
+            "elements": 102400,
+            "rms": 0.22721712359825139,
+            "allclose": false,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          }
+        },
+        "corrected_per_position_max_abs": [
+          1.4210854715202004e-14,
+          6.261657858885883e-14,
+          6.394884621840902e-14,
+          8.348877145181177e-14,
+          5.861977570020827e-14,
+          7.283063041541027e-14,
+          7.194245199571014e-14,
+          7.283063041541027e-14,
+          5.3290705182007514e-14,
+          7.105427357601002e-14,
+          8.08242361927114e-14,
+          9.592326932761353e-14,
+          5.284661597215745e-14,
+          8.171241461241152e-14,
+          1.0658141036401503e-13,
+          1.4566126083082054e-13,
+          9.592326932761353e-14,
+          1.0835776720341528e-13,
+          7.72715225139109e-14,
+          7.638334409421077e-14,
+          6.439293542825908e-14,
+          7.460698725481052e-14,
+          8.348877145181177e-14,
+          8.43769498715119e-14,
+          8.126832540256146e-14,
+          7.194245199571014e-14,
+          1.056932319443149e-13,
+          9.769962616701378e-14,
+          5.3290705182007514e-14,
+          8.304468224196171e-14,
+          6.927791673660977e-14,
+          1.0658141036401503e-14
+        ],
+        "packets": 50,
+        "changed_predictions": 0,
+        "naive_changed_predictions_on_balanced_probe": 13
+      },
+      "source_FP32": {
+        "errors": {
+          "tokens": {
+            "max_abs": 0.0058841705322265625,
+            "max_relative": 443.9216003417969,
+            "failing_elements": 2638401,
+            "elements": 4096000,
+            "rms": 0.000639707316742498,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          },
+          "logits": {
+            "max_abs": 0.018687725067138672,
+            "max_relative": 1.6700167655944824,
+            "failing_elements": 15401,
+            "elements": 20000,
+            "rms": 0.002390589395864826,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          },
+          "naive": {
+            "max_abs": 6.850489139556885,
+            "max_relative": 520297.34375,
+            "failing_elements": 2763974,
+            "elements": 4096000,
+            "rms": 0.2531349131360338,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          },
+          "naive_interior": {
+            "max_abs": 0.0058841705322265625,
+            "max_relative": 443.9216003417969,
+            "failing_elements": 2508053,
+            "elements": 3840000,
+            "rms": 0.0006516390471006893,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          },
+          "shared_kernel_with_position_bias": {
+            "max_abs": 5.642637252807617,
+            "max_relative": 38446.515625,
+            "failing_elements": 2763978,
+            "elements": 4096000,
+            "rms": 0.2282534446772349,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          }
+        },
+        "corrected_per_position_max_abs": [
+          0.0034570693969726562,
+          0.005487918853759766,
+          0.0040795207023620605,
+          0.0027527809143066406,
+          0.004950821399688721,
+          0.003782212734222412,
+          0.0032535791397094727,
+          0.0026650428771972656,
+          0.004890918731689453,
+          0.0039108991622924805,
+          0.003004312515258789,
+          0.0023651123046875,
+          0.0040934085845947266,
+          0.0034034252166748047,
+          0.004419803619384766,
+          0.004752159118652344,
+          0.0051097869873046875,
+          0.004839777946472168,
+          0.003414630889892578,
+          0.002628147602081299,
+          0.003592967987060547,
+          0.0034350156784057617,
+          0.003107786178588867,
+          0.002653837203979492,
+          0.004307150840759277,
+          0.0035916119813919067,
+          0.003194093704223633,
+          0.003530561923980713,
+          0.005615711212158203,
+          0.0058841705322265625,
+          0.004774570465087891,
+          0.003704547882080078
+        ],
+        "packets": 2000,
+        "changed_predictions": 0,
+        "naive_changed_predictions_on_balanced_probe": null
+      },
+      "source_probe_rows_sha256": "cd0d302f3645adb587af33459df9127ec93621e63f942e9eb2fea00804d2b5b1"
+    },
+    {
+      "id": "LA_f1_s201",
+      "fold": 1,
+      "seed": 201,
+      "operator": {
+        "input": [
+          32,
+          8192
+        ],
+        "output": [
+          64,
+          32
+        ],
+        "kernel": 340,
+        "stride": 256,
+        "padding": 42,
+        "boundary_positions": [
+          0,
+          31
+        ],
+        "stored_coefficients": 2091008,
+        "trainable_parameters": 0,
+        "scope": "Affine conditional on shared nonlinear stem output; eval-frozen BN only. All 32 positions retained."
+      },
+      "converted_sha256": "b3fef7789109f05973564c52ab1dcfbafc95675469bd614c581383749452b350",
+      "synthetic_FP64": {
+        "max_abs": 5.684341886080801e-13,
+        "max_relative": 3.007906615272079e-10,
+        "rms": 5.5142128507531966e-14,
+        "allclose": true,
+        "atol": 1e-09,
+        "rtol": 1e-09,
+        "failing_elements": 0,
+        "elements": 12288
+      },
+      "source_FP64": {
+        "errors": {
+          "tokens": {
+            "max_abs": 1.829647544582258e-13,
+            "max_relative": 4.487692650588247e-11,
+            "failing_elements": 0,
+            "elements": 102400,
+            "rms": 8.114272824533283e-15,
+            "allclose": true,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          },
+          "logits": {
+            "max_abs": 5.861977570020827e-14,
+            "max_relative": 9.91284683224069e-12,
+            "failing_elements": 0,
+            "elements": 500,
+            "rms": 1.4700801118118485e-14,
+            "allclose": true,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          },
+          "naive": {
+            "max_abs": 2.782510106889191,
+            "max_relative": 36139.77232874621,
+            "failing_elements": 6400,
+            "elements": 102400,
+            "rms": 0.16011585366627248,
+            "allclose": false,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          },
+          "naive_interior": {
+            "max_abs": 1.829647544582258e-13,
+            "max_relative": 3.366850582816911e-11,
+            "failing_elements": 0,
+            "elements": 96000,
+            "rms": 8.369347797338165e-15,
+            "allclose": true,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          },
+          "shared_kernel_with_position_bias": {
+            "max_abs": 2.098166794203233,
+            "max_relative": 22089.592827118533,
+            "failing_elements": 6400,
+            "elements": 102400,
+            "rms": 0.10508640232846422,
+            "allclose": false,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          }
+        },
+        "corrected_per_position_max_abs": [
+          7.105427357601002e-15,
+          1.6653345369377348e-14,
+          1.3322676295501878e-14,
+          3.68594044175552e-14,
+          4.1300296516055823e-14,
+          1.687538997430238e-14,
+          1.1102230246251565e-14,
+          3.4638958368304884e-14,
+          4.2521541843143495e-14,
+          1.887379141862766e-14,
+          1.1102230246251565e-14,
+          3.8191672047105385e-14,
+          3.552713678800501e-14,
+          2.055300374337321e-14,
+          1.3500311979441904e-13,
+          1.2967404927621828e-13,
+          1.2789769243681803e-13,
+          1.829647544582258e-13,
+          5.3290705182007514e-14,
+          4.75175454539567e-14,
+          2.842170943040401e-14,
+          1.4765966227514582e-14,
+          1.587618925213974e-14,
+          4.440892098500626e-14,
+          3.419486915845482e-14,
+          1.4654943925052066e-14,
+          1.176836406102666e-14,
+          3.9968028886505635e-14,
+          4.263256414560601e-14,
+          1.6431300764452317e-14,
+          1.7763568394002505e-14,
+          6.217248937900877e-15
+        ],
+        "packets": 50,
+        "changed_predictions": 0,
+        "naive_changed_predictions_on_balanced_probe": 14
+      },
+      "source_FP32": {
+        "errors": {
+          "tokens": {
+            "max_abs": 0.0061187744140625,
+            "max_relative": 2658.5556640625,
+            "failing_elements": 2299067,
+            "elements": 4096000,
+            "rms": 0.0005188489301344932,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          },
+          "logits": {
+            "max_abs": 0.024470806121826172,
+            "max_relative": 7.139582633972168,
+            "failing_elements": 16660,
+            "elements": 20000,
+            "rms": 0.0032970361522556713,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          },
+          "naive": {
+            "max_abs": 3.6719279289245605,
+            "max_relative": 55799.94921875,
+            "failing_elements": 2425546,
+            "elements": 4096000,
+            "rms": 0.1573187613983533,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          },
+          "naive_interior": {
+            "max_abs": 0.0061187744140625,
+            "max_relative": 2658.5556640625,
+            "failing_elements": 2169759,
+            "elements": 3840000,
+            "rms": 0.0005289880585287607,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          },
+          "shared_kernel_with_position_bias": {
+            "max_abs": 2.8974523544311523,
+            "max_relative": 27155.951171875,
+            "failing_elements": 2425515,
+            "elements": 4096000,
+            "rms": 0.10160487611937388,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          }
+        },
+        "corrected_per_position_max_abs": [
+          0.002824842929840088,
+          0.0030072927474975586,
+          0.0022268593311309814,
+          0.0021944046020507812,
+          0.002970099449157715,
+          0.0023016929626464844,
+          0.0032262802124023438,
+          0.0024900436401367188,
+          0.0036902427673339844,
+          0.0020707547664642334,
+          0.0021820068359375,
+          0.0037691891193389893,
+          0.003210783004760742,
+          0.002002030611038208,
+          0.005156993865966797,
+          0.005015373229980469,
+          0.005707740783691406,
+          0.0061187744140625,
+          0.002857208251953125,
+          0.0020082294940948486,
+          0.0028206706047058105,
+          0.003406524658203125,
+          0.0024280548095703125,
+          0.0027561187744140625,
+          0.0030357837677001953,
+          0.0020853281021118164,
+          0.002887725830078125,
+          0.0030384063720703125,
+          0.0032303333282470703,
+          0.0023103803396224976,
+          0.0023794174194335938,
+          0.0037546157836914062
+        ],
+        "packets": 2000,
+        "changed_predictions": 0,
+        "naive_changed_predictions_on_balanced_probe": null
+      },
+      "source_probe_rows_sha256": "cd0d302f3645adb587af33459df9127ec93621e63f942e9eb2fea00804d2b5b1"
+    },
+    {
+      "id": "LA_f1_s202",
+      "fold": 1,
+      "seed": 202,
+      "operator": {
+        "input": [
+          32,
+          8192
+        ],
+        "output": [
+          64,
+          32
+        ],
+        "kernel": 340,
+        "stride": 256,
+        "padding": 42,
+        "boundary_positions": [
+          0,
+          31
+        ],
+        "stored_coefficients": 2091008,
+        "trainable_parameters": 0,
+        "scope": "Affine conditional on shared nonlinear stem output; eval-frozen BN only. All 32 positions retained."
+      },
+      "converted_sha256": "ab6d9d9677b8c8f15329018febe23e2146f8e915aeb71dc02afb87e661f4c0ea",
+      "synthetic_FP64": {
+        "max_abs": 5.115907697472721e-13,
+        "max_relative": 1.016764681565358e-12,
+        "rms": 4.219590509074774e-14,
+        "allclose": true,
+        "atol": 1e-09,
+        "rtol": 1e-09,
+        "failing_elements": 0,
+        "elements": 12288
+      },
+      "source_FP64": {
+        "errors": {
+          "tokens": {
+            "max_abs": 1.7763568394002505e-13,
+            "max_relative": 5.08039868225121e-10,
+            "failing_elements": 0,
+            "elements": 102400,
+            "rms": 8.302948162246508e-15,
+            "allclose": true,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          },
+          "logits": {
+            "max_abs": 5.972999872483342e-14,
+            "max_relative": 5.865304049872343e-13,
+            "failing_elements": 0,
+            "elements": 500,
+            "rms": 1.2057241206024607e-14,
+            "allclose": true,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          },
+          "naive": {
+            "max_abs": 4.334888474457339,
+            "max_relative": 1575.7110664004824,
+            "failing_elements": 6400,
+            "elements": 102400,
+            "rms": 0.29207788241717336,
+            "allclose": false,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          },
+          "naive_interior": {
+            "max_abs": 1.7763568394002505e-13,
+            "max_relative": 5.08039868225121e-10,
+            "failing_elements": 0,
+            "elements": 96000,
+            "rms": 8.565799308066812e-15,
+            "allclose": true,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          },
+          "shared_kernel_with_position_bias": {
+            "max_abs": 4.775360293648335,
+            "max_relative": 1558.9141727263302,
+            "failing_elements": 6400,
+            "elements": 102400,
+            "rms": 0.2692267157193479,
+            "allclose": false,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          }
+        },
+        "corrected_per_position_max_abs": [
+          8.1601392309949e-15,
+          4.04121180963557e-14,
+          4.6629367034256575e-14,
+          3.730349362740526e-14,
+          4.263256414560601e-14,
+          3.6415315207705135e-14,
+          4.884981308350689e-14,
+          4.1300296516055823e-14,
+          4.085620730620576e-14,
+          3.108624468950438e-14,
+          3.6415315207705135e-14,
+          4.973799150320701e-14,
+          3.574918139293004e-14,
+          3.8191672047105385e-14,
+          1.7763568394002505e-13,
+          1.5276668818842154e-13,
+          1.6697754290362354e-13,
+          1.7408297026122455e-13,
+          5.1514348342607263e-14,
+          3.907985046680551e-14,
+          4.529709940470639e-14,
+          3.4638958368304884e-14,
+          3.6415315207705135e-14,
+          4.440892098500626e-14,
+          4.04121180963557e-14,
+          4.4853010194856324e-14,
+          2.708944180085382e-14,
+          3.9968028886505635e-14,
+          3.4638958368304884e-14,
+          3.197442310920451e-14,
+          3.197442310920451e-14,
+          8.881784197001252e-15
+        ],
+        "packets": 50,
+        "changed_predictions": 0,
+        "naive_changed_predictions_on_balanced_probe": 22
+      },
+      "source_FP32": {
+        "errors": {
+          "tokens": {
+            "max_abs": 0.007227897644042969,
+            "max_relative": 293.6878967285156,
+            "failing_elements": 2177854,
+            "elements": 4096000,
+            "rms": 0.000462218811680728,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          },
+          "logits": {
+            "max_abs": 0.018288731575012207,
+            "max_relative": 6.933970928192139,
+            "failing_elements": 15128,
+            "elements": 20000,
+            "rms": 0.002420456445504179,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          },
+          "naive": {
+            "max_abs": 4.693195343017578,
+            "max_relative": 123256.109375,
+            "failing_elements": 2307825,
+            "elements": 4096000,
+            "rms": 0.29374436301641815,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          },
+          "naive_interior": {
+            "max_abs": 0.007227897644042969,
+            "max_relative": 293.6878967285156,
+            "failing_elements": 2051884,
+            "elements": 3840000,
+            "rms": 0.0004688555640344082,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          },
+          "shared_kernel_with_position_bias": {
+            "max_abs": 4.956259727478027,
+            "max_relative": 43794.90234375,
+            "failing_elements": 2307742,
+            "elements": 4096000,
+            "rms": 0.2703266578216999,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          }
+        },
+        "corrected_per_position_max_abs": [
+          0.003334522247314453,
+          0.0030717849731445312,
+          0.0027451515197753906,
+          0.00270235538482666,
+          0.0035424232482910156,
+          0.003451704978942871,
+          0.003299713134765625,
+          0.0023488998413085938,
+          0.0024181604385375977,
+          0.0025185346603393555,
+          0.0037200450897216797,
+          0.003709077835083008,
+          0.0025263428688049316,
+          0.0017560720443725586,
+          0.004315376281738281,
+          0.004669189453125,
+          0.005719184875488281,
+          0.007227897644042969,
+          0.002741098403930664,
+          0.002612471580505371,
+          0.004355669021606445,
+          0.004998683929443359,
+          0.0027713775634765625,
+          0.0025669336318969727,
+          0.002250194549560547,
+          0.0024074316024780273,
+          0.002982020378112793,
+          0.0029206275939941406,
+          0.0025287270545959473,
+          0.002720475196838379,
+          0.00453639030456543,
+          0.0030548274517059326
+        ],
+        "packets": 2000,
+        "changed_predictions": 1,
+        "naive_changed_predictions_on_balanced_probe": null
+      },
+      "source_probe_rows_sha256": "cd0d302f3645adb587af33459df9127ec93621e63f942e9eb2fea00804d2b5b1"
+    },
+    {
+      "id": "LA_f1_s203",
+      "fold": 1,
+      "seed": 203,
+      "operator": {
+        "input": [
+          32,
+          8192
+        ],
+        "output": [
+          64,
+          32
+        ],
+        "kernel": 340,
+        "stride": 256,
+        "padding": 42,
+        "boundary_positions": [
+          0,
+          31
+        ],
+        "stored_coefficients": 2091008,
+        "trainable_parameters": 0,
+        "scope": "Affine conditional on shared nonlinear stem output; eval-frozen BN only. All 32 positions retained."
+      },
+      "converted_sha256": "0fda7b0a41bc04304b0054e6bd2d208677f74a534f5667ace4609ecda26b6594",
+      "synthetic_FP64": {
+        "max_abs": 4.973799150320701e-13,
+        "max_relative": 7.602682399829268e-13,
+        "rms": 5.0022735986535145e-14,
+        "allclose": true,
+        "atol": 1e-09,
+        "rtol": 1e-09,
+        "failing_elements": 0,
+        "elements": 12288
+      },
+      "source_FP64": {
+        "errors": {
+          "tokens": {
+            "max_abs": 9.059419880941277e-14,
+            "max_relative": 3.8943437552228997e-10,
+            "failing_elements": 0,
+            "elements": 102400,
+            "rms": 7.701268935456617e-15,
+            "allclose": true,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          },
+          "logits": {
+            "max_abs": 4.529709940470639e-14,
+            "max_relative": 9.439162234903325e-13,
+            "failing_elements": 0,
+            "elements": 500,
+            "rms": 1.1216184226009133e-14,
+            "allclose": true,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          },
+          "naive": {
+            "max_abs": 7.837835774552092,
+            "max_relative": 2031.3539145214318,
+            "failing_elements": 6400,
+            "elements": 102400,
+            "rms": 0.5039725696366449,
+            "allclose": false,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          },
+          "naive_interior": {
+            "max_abs": 9.059419880941277e-14,
+            "max_relative": 3.8943437552228997e-10,
+            "failing_elements": 0,
+            "elements": 96000,
+            "rms": 7.939398962029966e-15,
+            "allclose": true,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          },
+          "shared_kernel_with_position_bias": {
+            "max_abs": 7.460040545091031,
+            "max_relative": 4994.345486297244,
+            "failing_elements": 6400,
+            "elements": 102400,
+            "rms": 0.47639050493169366,
+            "allclose": false,
+            "atol": 1e-09,
+            "rtol": 1e-09
+          }
+        },
+        "corrected_per_position_max_abs": [
+          1.2434497875801753e-14,
+          4.263256414560601e-14,
+          3.552713678800501e-14,
+          6.483702463810914e-14,
+          5.684341886080802e-14,
+          4.1744385725905886e-14,
+          3.952393967665557e-14,
+          7.105427357601002e-14,
+          5.5067062021407764e-14,
+          3.6415315207705135e-14,
+          3.774758283725532e-14,
+          6.927791673660977e-14,
+          6.927791673660977e-14,
+          3.064215547965432e-14,
+          8.260059303211165e-14,
+          6.838973831690964e-14,
+          6.128431095930864e-14,
+          9.059419880941277e-14,
+          4.3076653355456074e-14,
+          6.217248937900877e-14,
+          7.993605777301127e-14,
+          4.618527782440651e-14,
+          3.375077994860476e-14,
+          5.3290705182007514e-14,
+          6.128431095930864e-14,
+          3.2862601528904634e-14,
+          4.973799150320701e-14,
+          7.904787935331115e-14,
+          4.263256414560601e-14,
+          3.6193270602780103e-14,
+          3.8191672047105385e-14,
+          1.2434497875801753e-14
+        ],
+        "packets": 50,
+        "changed_predictions": 0,
+        "naive_changed_predictions_on_balanced_probe": 22
+      },
+      "source_FP32": {
+        "errors": {
+          "tokens": {
+            "max_abs": 0.009080171585083008,
+            "max_relative": 214.85365295410156,
+            "failing_elements": 2161100,
+            "elements": 4096000,
+            "rms": 0.00043513268230935297,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          },
+          "logits": {
+            "max_abs": 0.017959117889404297,
+            "max_relative": 38.55368423461914,
+            "failing_elements": 15512,
+            "elements": 20000,
+            "rms": 0.002391135457389061,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          },
+          "naive": {
+            "max_abs": 8.362030029296875,
+            "max_relative": 1323778.375,
+            "failing_elements": 2293425,
+            "elements": 4096000,
+            "rms": 0.5012511384030093,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          },
+          "naive_interior": {
+            "max_abs": 0.009080171585083008,
+            "max_relative": 214.85365295410156,
+            "failing_elements": 2037465,
+            "elements": 3840000,
+            "rms": 0.00043894195434287424,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          },
+          "shared_kernel_with_position_bias": {
+            "max_abs": 7.93239688873291,
+            "max_relative": 2833220.75,
+            "failing_elements": 2293416,
+            "elements": 4096000,
+            "rms": 0.47368401791436116,
+            "allclose": false,
+            "atol": 0.0001,
+            "rtol": 0.0001
+          }
+        },
+        "corrected_per_position_max_abs": [
+          0.004548788070678711,
+          0.004647970199584961,
+          0.004527091979980469,
+          0.003665447235107422,
+          0.0034322738647460938,
+          0.00383150577545166,
+          0.0033464431762695312,
+          0.003222942352294922,
+          0.0034787654876708984,
+          0.004205226898193359,
+          0.004637718200683594,
+          0.004770636558532715,
+          0.004471123218536377,
+          0.0020971298217773438,
+          0.003568805754184723,
+          0.004039764404296875,
+          0.004202842712402344,
+          0.004076078534126282,
+          0.0026564598083496094,
+          0.002410411834716797,
+          0.004209041595458984,
+          0.009080171585083008,
+          0.004655361175537109,
+          0.00372314453125,
+          0.0028937896713614464,
+          0.0028810501098632812,
+          0.0030442476272583008,
+          0.0040662288665771484,
+          0.004082918167114258,
+          0.0036134719848632812,
+          0.0036864280700683594,
+          0.0051081180572509766
+        ],
+        "packets": 2000,
+        "changed_predictions": 0,
+        "naive_changed_predictions_on_balanced_probe": null
+      },
+      "source_probe_rows_sha256": "cd0d302f3645adb587af33459df9127ec93621e63f942e9eb2fea00804d2b5b1"
+    }
+  ],
+  "independent_frozen_models": 6,
+  "all_token_positions_included": true,
+  "original_models_changed": false,
+  "RF_roles": [
+    "audit_source_val"
+  ],
+  "scientific_fits": 0,
+  "scope": "Conditional affine tokenizer, fixed eval BN. This establishes a representation equivalence, not that direct optimization learns the same function."
+}
