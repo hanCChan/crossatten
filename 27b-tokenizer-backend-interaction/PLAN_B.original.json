@@ -1,0 +1,134 @@
+{
+  "time": "2026-11-23T10:52:11+08:00",
+  "execution_status": "PLANNED_NOT_STARTED",
+  "automatic_fit_budget": 0,
+  "seeds": [
+    201,
+    202,
+    203
+  ],
+  "checkpoint": "minimum clean permitted training-RX equal validation CE",
+  "training": {
+    "epochs": 200,
+    "batch": 64,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0005,
+    "warmup_epochs": 5,
+    "augmentation": "AWGN0..50dB",
+    "precision": "original FP32 network; matmulTF32off/cuDNN TF32on"
+  },
+  "forbidden": [
+    "Confirm",
+    "old blind",
+    "new target adaptation",
+    "replacement seeds",
+    "target-score-driven design changes"
+  ],
+  "history": "All RXs have research history; none becomes a fresh independent acquisition.",
+  "launch_condition": "A complete evidence report first; no automatic execution in this turn. Any later launch must retain this plan, validate checkpoints/streams and commit its execution authorization before source fitting.",
+  "stage": "S27_B_TOKENIZER_BACKEND_INTERACTION",
+  "planned_new_fits": 12,
+  "jobs": [
+    {
+      "arm": "H0_P",
+      "fold": 0,
+      "seed": 201
+    },
+    {
+      "arm": "LP_P",
+      "fold": 0,
+      "seed": 201
+    },
+    {
+      "arm": "H0_P",
+      "fold": 0,
+      "seed": 202
+    },
+    {
+      "arm": "LP_P",
+      "fold": 0,
+      "seed": 202
+    },
+    {
+      "arm": "H0_P",
+      "fold": 0,
+      "seed": 203
+    },
+    {
+      "arm": "LP_P",
+      "fold": 0,
+      "seed": 203
+    },
+    {
+      "arm": "H0_P",
+      "fold": 1,
+      "seed": 201
+    },
+    {
+      "arm": "LP_P",
+      "fold": 1,
+      "seed": 201
+    },
+    {
+      "arm": "H0_P",
+      "fold": 1,
+      "seed": 202
+    },
+    {
+      "arm": "LP_P",
+      "fold": 1,
+      "seed": 202
+    },
+    {
+      "arm": "H0_P",
+      "fold": 1,
+      "seed": 203
+    },
+    {
+      "arm": "LP_P",
+      "fold": 1,
+      "seed": 203
+    }
+  ],
+  "factors": {
+    "tokenizer": [
+      "H0",
+      "LP"
+    ],
+    "backend": [
+      "original2xPlainMHA",
+      "2xTokenMLP then unchanged finalLN/mean/classifier"
+    ]
+  },
+  "new_readout": {
+    "block": "LN(x+Linear128to64(GELU(Linear64to128(x))))",
+    "depth": 2,
+    "mha_params_per_block": 16768,
+    "mlp_params_per_block": 16704,
+    "whole_model_parameter_delta": -128,
+    "width_rule": "Hidden width128 is nearest integer matching 16768 to129*h+192; chosen without data.",
+    "token_shape": [
+      32,
+      64
+    ],
+    "input_projection_position_preLN_finalLN_classifier": "unchanged",
+    "limits": "No token interaction until pooling; MLP nonlinear depth differs; capacity and compute are not identical. Interaction is a backend-specific accuracy contrast, not identification of encoded information."
+  },
+  "initialization": "Surviving frontend/tokenizer/input_proj/position/LNs/classifier match each corresponding original initialization. Identical new MLP heads acrossH0/LP use CPU stable_seed(S27B-Readout,data_seed), preserve other RNG.",
+  "source_packets": "Original5RX/fold,8000train2000sourceval. Same frozen selected rows/labels and source order asS26.",
+  "reuse": "SixH0 and sixS26LP MHA checkpoints are legal only after exact checkpoint/config/source-stream/precision recovery; no MHA refitting.",
+  "primary": "(Acc(H0_M)-Acc(LP_M))-(Acc(H0_P)-Acc(LP_P)) inpp",
+  "statistics": {
+    "pairing": "samefold/seed/RX in all4 cells; first average3seeds within each of10uniqueRX",
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 27028,
+    "positive_signal": "interaction mean>=0.5pp,conditional lowerCI>0,>=5/6positive fit interactions,both fold means positive",
+    "uncertainty": "Conditional on historical models, chosen nonattention readout and current10RX; no fresh acquisition or architecture search uncertainty."
+  },
+  "outcomes": {
+    "positive": "H0 relative benefit is larger for this MHA backend than this MLP backend; not universal attention necessity.",
+    "negative": "No stable positive interaction; tokenizer gain may persist without attention or depend on another factor.",
+    "uncertain": "Mixedfit/fold signs or small effects: report all4 cells and intervals; no alternativehead search."
+  }
+}
