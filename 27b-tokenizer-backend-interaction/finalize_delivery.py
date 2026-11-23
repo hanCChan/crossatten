@@ -44,6 +44,8 @@ def main():
         name=f"{j['arm']}_f{j['fold']}_s{j['seed']}";source=HERE/'local'/(name+'.log');target=HERE/'evidence'/name/'training_stdout.txt'
         text,encoding=decode_log(source);target.write_text(text,encoding='utf-8',newline='\n')
         logs.append(dict(id=name,raw_sha256=sha(source),raw_encoding=encoding,published_utf8_lf_sha256=sha(target)))
+        for recovery in sorted((HERE/'runs'/name).glob('recovery_epoch*.json')):
+            (HERE/'evidence'/name/recovery.name).write_bytes(recovery.read_bytes())
     for raw,target in [('controller.stdout.log','CONTROLLER_STDOUT.txt'),('controller.stderr.log','CONTROLLER_STDERR.txt')]:
         (HERE/target).write_text(decode_log(HERE/'local'/raw)[0],encoding='utf-8',newline='\n')
     for source in sorted((HERE/'local').glob('controller.resume_*.log')):
