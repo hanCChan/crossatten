@@ -1,0 +1,43 @@
+{
+  "time": "2026-11-23T12:32:38+08:00",
+  "registration_sha256": "e5187bbe5665f521b10cc108771f2649bcae27fa7b282775bb65160be06078a1",
+  "models": {
+    "LA_f0_s201": {
+      "model.pt": "6e89cce7aa93ed3c6a5cb858f095c44e2a899e2046a12e3ac06ae66e20e10d28",
+      "config.json": "d76c020d9b2f0c955625948ea7c2b877ec7d5a1f7bd00434132eb71cd88758b6",
+      "metrics.json": "a83c4a33a84216508a5015c72f52d636fb2d8608aec92d6accd031fc59b2aa43",
+      "history.csv": "833f81d5302ce92f0e7866f252590270dfeba626608e3e6d70eacc0328b42fdb"
+    },
+    "LA_f0_s202": {
+      "model.pt": "fa6f880681716bcb13563a064a11162ee89b18327be63ae7baea4efc63d506f0",
+      "config.json": "fca4343fd1498902a691726d2c97f8432c8da748140bb84a8d13dcfd1e1cb284",
+      "metrics.json": "05c5af6a68d10f0874304f46535219cb4450e60a8a088e97b38b5fc2cc3657ec",
+      "history.csv": "f63ef678154417f88315f576fa34df0a504e90f9c86ca89418de6c7a4abe367e"
+    },
+    "LA_f0_s203": {
+      "model.pt": "574c9ab5d3f604af57907d8d6b62c847c4474ced693154605aef130172a58b9d",
+      "config.json": "b9e2ac224752d1aaba500d77de571d0e63f6b149623a14fa0bcec880f4440e16",
+      "metrics.json": "6540db6c03732b5049cd66a2bb5e86c6a986044284a159a56dd35cba68dec1de",
+      "history.csv": "b53ca42efa75ffc0b5208a7ff8731b12df5b607cab2cf63e020ee6e15783a8cb"
+    },
+    "LA_f1_s201": {
+      "model.pt": "18bc8444bede87f0328c24bfaa1912ee55691c2f0afe214c59e4e23aa74ae613",
+      "config.json": "f991371ee71cc1647574d2654c2cb38e80f342d3344df01edcbe8dcfc0335556",
+      "metrics.json": "17e33ab4609fe7487c54a56482f709ac6be29a1f4c2bb52758a79ac3263f3e01",
+      "history.csv": "1e5771cb468a623f0cbe77e8aa9610c9ab7208bdc53869dde95cf005755dbea4"
+    },
+    "LA_f1_s202": {
+      "model.pt": "06a3cd4797f63d9f9eaa576ae661e321a7b2d9307ba17b2f2cbf5721c6cc022e",
+      "config.json": "383b9e0aee6a5f96de170a1660eae197104edadadd8dda0d18bd6b31d37d20b2",
+      "metrics.json": "5be3d74f529203c5f436c9a8ac81f8a712729e9296131a32267d7be56a25fbf0",
+      "history.csv": "66af1d62eff0fee33ea5987257410dac377edeb1ee8b57f3a644ab52a64e526d"
+    },
+    "LA_f1_s203": {
+      "model.pt": "4f0c25adf5f597ad9c41881809fd4d63e848c7b7423868182d426f0953c3c5fc",
+      "config.json": "6702ff4147d0fbe394b7447a34be29500d12703d1fe90190fb1bf5c8e667a8d8",
+      "metrics.json": "4c7d95dde5cff56b8ebecec2bdddb1092c2cb0167a8822773da1674b6134ec6d",
+      "history.csv": "3284ccf6783bd9a1e19e956f1716b48b88607c2a2251125f31e78dd0a88431d1"
+    }
+  },
+  "rule": "All six source-CE-selected models and complete configurations frozen before any S27 Dev read."
+}

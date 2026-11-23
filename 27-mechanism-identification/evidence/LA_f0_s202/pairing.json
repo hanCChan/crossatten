@@ -1,0 +1,11 @@
+{
+  "reference": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s202\\model.pt",
+  "reference_config_sha256": "9f3e573b8ab50e238d6c4fac55d23138720ebcf7db733a74873c280faa8b3dc5",
+  "initial_shared_sha256": "55e516de0dc2f2011831e2a23c7379122236ff9ae136aa8e66e1f57d00a6bcf3",
+  "initial_full_sha256": "c799a937366a805a7ba225e8f83e26d178522ca52fc39fca12d351a44479d902",
+  "same_source_packets": true,
+  "same_data_seed": true,
+  "same_permutation_and_noise_generators": true,
+  "tokenizer_initialization": "Exact full H0 initial state; only3 GELU modules changed to Identity; no RNG draw",
+  "source_selection": "Original last40/TX/RX; minimum RX-equal clean CE, no target score"
+}
