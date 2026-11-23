@@ -1,0 +1,18 @@
+{
+  "time": "2026-11-23T11:37:14+08:00",
+  "scope": "IO-only recovery after WindowsWinError5 onprogressrename; preserve all frozen scientific code and registration.",
+  "runtime_sha256": "981fef1f9785022097a1e8344d903b246d83c11ab79c4c4ebb0d8159f849fa76",
+  "original_fit_failure_sha256": "cd41144b3565b7968be27b37d94ebb5b308140a48a199c49e4c990d2edd43e06",
+  "original_controller_failure_sha256": "06e14fedab142f5b52d99ef0f9424578caefe063a8140b4693d2b8963e5f5df6",
+  "failed_job": "LA_f0_s203",
+  "completed_resume_epoch": 6,
+  "resume_optimizer_step": 750,
+  "resume_snapshot_sha256": "e8627b3fbe2956e43b2171397ddc07c9fa3f148cee0c16a01f0d0a211886df91",
+  "recovery": "Continue at next completedepoch with saved optimizer/model/allRNG and existing bestcheckpoint; no seedrestart or extra fit.",
+  "change": "Unique process/counter JSONtemporary filenames; bounded2s retry on Winerrors5/32/33; original Torcharchivebasename unchanged. Same original queue/jobs routed through IOwrapper.",
+  "synthetic_io_retry_test": "PASS first2 sharingerrors then successful atomicreplace",
+  "synthetic_optimizer_updates_added": 0,
+  "new_scientific_fits_added": 0,
+  "new_target_reads_before_fix": 0,
+  "original_scientific_code_unchanged": true
+}
