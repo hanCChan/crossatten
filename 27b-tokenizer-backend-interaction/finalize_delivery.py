@@ -46,6 +46,9 @@ def main():
         logs.append(dict(id=name,raw_sha256=sha(source),raw_encoding=encoding,published_utf8_lf_sha256=sha(target)))
     for raw,target in [('controller.stdout.log','CONTROLLER_STDOUT.txt'),('controller.stderr.log','CONTROLLER_STDERR.txt')]:
         (HERE/target).write_text(decode_log(HERE/'local'/raw)[0],encoding='utf-8',newline='\n')
+    for source in sorted((HERE/'local').glob('controller.resume_*.log')):
+        target=HERE/(source.stem.upper().replace('.','_')+'.txt')
+        target.write_text(decode_log(source)[0],encoding='utf-8',newline='\n')
     result=read(HERE/'RESULTS.json');s={q['arm']:q for q in result['summary']}
     block=(f"<!-- completion -->\n**S27-B 已完成：12/12 新拟合，每组 200 轮；24 模型、240000 条 Dev 及 48000 条 Source 预测独立核验。**\n\n"
         f"主交互 {decision['primary_interaction_pp']:+.3f} pp；正交互门槛是否满足：{decision['positive_interaction_rule_met']}。C/IQ-only/ASK Strict-IB 均未启动。\n\n"

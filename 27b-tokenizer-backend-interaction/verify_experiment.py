@@ -42,6 +42,14 @@ def geometry_independent(x,y,rx):
 
 def main():
     registration=validate();seal=check_seal();dev=read(HERE/'EVALUATION.json');src=read(HERE/'SOURCE_EVALUATION.json')
+    resume_checks=[]
+    for receipt in sorted(HERE.glob('RESUME_AUDIT_*.json')):
+        audit=read(receipt);assert audit['frozen_scientific_hashes']=='PASS' and audit['best_checkpoint_source_consistency']=='PASS'
+        for record in audit['records']:
+            if record['status']!='RESUMABLE':continue
+            recovery=read(HERE/'runs'/record['id']/f"recovery_epoch{record['epoch']+1}.json")
+            assert recovery['resume_sha256']==record['resume_sha256'] and recovery['from_completed_epoch']==record['epoch']
+            resume_checks.append(dict(id=record['id'],from_completed_epoch=record['epoch'],snapshot_sha256=record['resume_sha256']))
     assert len(dev['records'])==120 and dev['packet_predictions']==240000
     assert len(src['records'])==120 and len(src['geometry'])==72 and src['packet_predictions']==48000
     assert dev['seal_sha256']==sha(HERE/'seal.json')
@@ -174,7 +182,7 @@ def main():
         all_model_selection_source_only=True,all_twelve_sealed_before_dev=True,all_fits_rx_retained=True,
         interaction_conditional_interval_independently_recomputed=True,target_CE_from_saved_logits=ce_rows,
         original_scientific_code_unchanged=True,historical_reference_models_unchanged=len(historical),new_confirm_blind_reads=0,
-        fits=fit_records,prediction_hashes=hashes,results_sha256=sha(HERE/'RESULTS.json'),seal_sha256=sha(HERE/'seal.json'),
+        fits=fit_records,resume_snapshots_checked=resume_checks,prediction_hashes=hashes,results_sha256=sha(HERE/'RESULTS.json'),seal_sha256=sha(HERE/'seal.json'),
         verifier_sha256=sha(__file__),C_fits=0,IQ_only_fits=0,ASK_strict_fits=0))
     print('PASS: all12fits,240000Dev/48000Sourcepredictions,72geometryrecords,interaction,sourceRNG andhistoricalhashes.',flush=True)
 

@@ -36,7 +36,7 @@ def main():
             elif (folder/'live.json').exists():active.append([folder.name,read(folder/'live.json')['epoch']])
             if (folder/'failure.json').exists():failure=True
     stage=read(HERE/'STATUS.json').get('status') if (HERE/'STATUS.json').exists() else None
-    stderr=read_text(HERE/'local/controller.stderr.log') if (HERE/'local/controller.stderr.log').exists() else ''
+    stderr='\n'.join(read_text(p) for p in sorted((HERE/'local').glob('controller*.stderr.log')))
     failure=failure or 'Traceback (most recent call last):' in stderr
     eta=live.get('remaining_fit_seconds_estimate')
     if len(durations)>=2 and completed<12:

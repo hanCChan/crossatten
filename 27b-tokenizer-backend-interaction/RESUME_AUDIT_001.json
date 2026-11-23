@@ -1,0 +1,72 @@
+{
+  "time": "2026-11-23T19:10:38.626194+08:00",
+  "authorization": "User23Nov2026 explicitly says continue training after pause request.",
+  "frozen_scientific_hashes": "PASS",
+  "records": [
+    {
+      "id": "H0_P_f0_s201",
+      "status": "COMPLETE",
+      "epoch": 200
+    },
+    {
+      "id": "LP_P_f0_s201",
+      "status": "COMPLETE",
+      "epoch": 200
+    },
+    {
+      "id": "H0_P_f0_s202",
+      "status": "COMPLETE",
+      "epoch": 200
+    },
+    {
+      "id": "LP_P_f0_s202",
+      "status": "RESUMABLE",
+      "epoch": 180,
+      "optimizer_steps": 22500,
+      "resume_sha256": "6dbb526fb09241f05c633343ee2e300065f6f00d668ce8c51ed855e0e7311a21",
+      "best_checkpoint_consistent": true,
+      "best_epoch": 171,
+      "best_model_sha256": "968a314f2b72e3ce6d1b59dbc3a6c47d526f01dc623db4203f330d5f2565da4b"
+    },
+    {
+      "id": "H0_P_f0_s203",
+      "status": "RESUMABLE",
+      "epoch": 3,
+      "optimizer_steps": 375,
+      "resume_sha256": "cea0f4a3d62e9c43a7ae2d9da435d0709079e3e12e6063dbd385a6e5201c708c",
+      "best_checkpoint_consistent": true,
+      "best_epoch": 3,
+      "best_model_sha256": "ef30b7bd4541045d45baf30c9cc9060d8c65d6e334d3fa971e098c03f7d252f8"
+    },
+    {
+      "id": "LP_P_f0_s203",
+      "status": "NOT_STARTED"
+    },
+    {
+      "id": "H0_P_f1_s201",
+      "status": "NOT_STARTED"
+    },
+    {
+      "id": "LP_P_f1_s201",
+      "status": "NOT_STARTED"
+    },
+    {
+      "id": "H0_P_f1_s202",
+      "status": "NOT_STARTED"
+    },
+    {
+      "id": "LP_P_f1_s202",
+      "status": "NOT_STARTED"
+    },
+    {
+      "id": "H0_P_f1_s203",
+      "status": "NOT_STARTED"
+    },
+    {
+      "id": "LP_P_f1_s203",
+      "status": "NOT_STARTED"
+    }
+  ],
+  "action": "Resume same twelve jobs from completed epoch snapshots, no seed or hyperparameter changes.",
+  "best_checkpoint_source_consistency": "PASS"
+}
