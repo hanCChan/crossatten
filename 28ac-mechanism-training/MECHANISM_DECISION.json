@@ -1,0 +1,56 @@
+{
+  "time": "2026-11-24T14:42:35+08:00",
+  "status": "COMPLETE_STOP_NO_AUTOMATIC_EXTRA_FITS",
+  "scientific_fits": 18,
+  "A": {
+    "judgment": "达到预登记的正向交互规则：所选训练程序中，保留中间BN时GELU收益更大。",
+    "interaction_pp": 1.3500000000000028,
+    "conditional_rx_ci95_pp": [
+      0.9300000000000027,
+      1.7500000000000036
+    ],
+    "registered_rule_met": true
+  },
+  "C": {
+    "judgment": "未达到原C的共同Pilot规则，不能声称已经证明跨接收机退化专门减小。应分别查看留出绝对收益、Source收益及每台RX的退化方向。",
+    "pilot_rule_met": false,
+    "two_held_RX": [
+      {
+        "fold": 0,
+        "held_rx": "b210_1",
+        "held_delta_pp": 4.583333333333329,
+        "source_delta_pp": 2.1458333333333335,
+        "delta_gap_pp": -2.437499999999995
+      },
+      {
+        "fold": 1,
+        "held_rx": "rtl_5",
+        "held_delta_pp": 1.3833333333333304,
+        "source_delta_pp": 1.0416666666666667,
+        "delta_gap_pp": -0.34166666666666384
+      }
+    ],
+    "receiver_judgments": [
+      "b210_1：Held差+4.583pp、Source差+2.146pp、ΔG-2.437pp；达到原单RX均值双门槛。",
+      "rtl_5：Held差+1.383pp、Source差+1.042pp、ΔG-0.342pp；未达到原单RX均值双门槛。"
+    ],
+    "counterexamples": [
+      {
+        "fold": 0,
+        "seed": 202,
+        "held_delta_pp": 1.1499999999999915,
+        "delta_gap_pp": 0.8500000000000085
+      }
+    ]
+  },
+  "remaining_authorized_fits": 0,
+  "S28B_fits": 0,
+  "IQ_only_fits": 0,
+  "ASK_strict_fits": 0,
+  "limitations": [
+    "BN/GELU effects concern a joint training procedure, not a unique factorization cause.",
+    "TwohistoricalheldRX, not fresh acquisition orpopulationRX inference.",
+    "NativeS28-0 precisionfailures retained.",
+    "No automatic favorable-result rewrite of TIFS claims."
+  ]
+}

@@ -1,0 +1,170 @@
+Started A_H2_LA_f0_s201 PID 15000
+Started A_H2_LA_f0_s202 PID 35052
+[exp/s28ac-mechanism-training b8eaca2] S28AC complete source-only fit A_H2_LA_f0_s201; no target evaluation
+ 5 files changed, 975 insertions(+)
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f0_s201/config.json
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f0_s201/history.csv
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f0_s201/metrics.json
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f0_s201/pairing.json
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f0_s201/streams.json
+Completed A_H2_LA_f0_s201
+Started A_H2_LA_f0_s203 PID 37856
+[exp/s28ac-mechanism-training 1c602a5] S28AC complete source-only fit A_H2_LA_f0_s202; no target evaluation
+ 5 files changed, 975 insertions(+)
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f0_s202/config.json
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f0_s202/history.csv
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f0_s202/metrics.json
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f0_s202/pairing.json
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f0_s202/streams.json
+Completed A_H2_LA_f0_s202
+Started A_H2_LA_f1_s201 PID 34924
+[exp/s28ac-mechanism-training 62862a3] S28AC complete source-only fit A_H2_LA_f1_s201; no target evaluation
+ 6 files changed, 985 insertions(+)
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f1_s201/config.json
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f1_s201/history.csv
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f1_s201/metrics.json
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f1_s201/pairing.json
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f1_s201/streams.json
+Completed A_H2_LA_f1_s201
+Started A_H2_LA_f1_s202 PID 34944
+[exp/s28ac-mechanism-training 2ab5c5d] S28AC complete source-only fit A_H2_LA_f0_s203; no target evaluation
+ 5 files changed, 975 insertions(+)
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f0_s203/config.json
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f0_s203/history.csv
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f0_s203/metrics.json
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f0_s203/pairing.json
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f0_s203/streams.json
+Completed A_H2_LA_f0_s203
+Started A_H2_LA_f1_s203 PID 36980
+[exp/s28ac-mechanism-training fd53a6a] S28AC complete source-only fit A_H2_LA_f1_s202; no target evaluation
+ 6 files changed, 985 insertions(+)
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f1_s202/config.json
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f1_s202/history.csv
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f1_s202/metrics.json
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f1_s202/pairing.json
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f1_s202/streams.json
+Completed A_H2_LA_f1_s202
+[exp/s28ac-mechanism-training 0863433] S28AC complete source-only fit A_H2_LA_f1_s203; no target evaluation
+ 5 files changed, 975 insertions(+)
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f1_s203/config.json
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f1_s203/history.csv
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f1_s203/metrics.json
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f1_s203/pairing.json
+ create mode 100644 28ac-mechanism-training/evidence/A_H2_LA_f1_s203/streams.json
+Completed A_H2_LA_f1_s203
+[exp/s28ac-mechanism-training 85a6a38] S28AC seal full A source-selected cohort before target inference
+ 1 file changed, 43 insertions(+)
+ create mode 100644 28ac-mechanism-training/seal_A.json
+Sealed A ; no A result used to decide C execution.
+Started C_H0_f0_s201 PID 19124
+Started C_LP_f0_s201 PID 36388
+[exp/s28ac-mechanism-training 4b50b78] S28AC complete source-only fit C_H0_f0_s201; no target evaluation
+ 6 files changed, 843 insertions(+)
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f0_s201/config.json
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f0_s201/history.csv
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f0_s201/metrics.json
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f0_s201/pairing.json
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f0_s201/streams.json
+Completed C_H0_f0_s201
+Started C_H0_f0_s202 PID 2024
+[exp/s28ac-mechanism-training 7cfd58a] S28AC complete source-only fit C_LP_f0_s201; no target evaluation
+ 6 files changed, 839 insertions(+)
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f0_s201/config.json
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f0_s201/history.csv
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f0_s201/metrics.json
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f0_s201/pairing.json
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f0_s201/streams.json
+Completed C_LP_f0_s201
+Started C_LP_f0_s202 PID 24876
+[exp/s28ac-mechanism-training c9f5a4f] S28AC complete source-only fit C_H0_f0_s202; no target evaluation
+ 6 files changed, 839 insertions(+)
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f0_s202/config.json
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f0_s202/history.csv
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f0_s202/metrics.json
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f0_s202/pairing.json
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f0_s202/streams.json
+Completed C_H0_f0_s202
+Started C_H0_f0_s203 PID 28772
+[exp/s28ac-mechanism-training 541e70a] S28AC complete source-only fit C_LP_f0_s202; no target evaluation
+ 6 files changed, 839 insertions(+)
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f0_s202/config.json
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f0_s202/history.csv
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f0_s202/metrics.json
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f0_s202/pairing.json
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f0_s202/streams.json
+Completed C_LP_f0_s202
+Started C_LP_f0_s203 PID 17568
+[exp/s28ac-mechanism-training 86b89c4] S28AC complete source-only fit C_H0_f0_s203; no target evaluation
+ 6 files changed, 839 insertions(+)
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f0_s203/config.json
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f0_s203/history.csv
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f0_s203/metrics.json
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f0_s203/pairing.json
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f0_s203/streams.json
+Completed C_H0_f0_s203
+Started C_H0_f1_s201 PID 6640
+[exp/s28ac-mechanism-training f254f30] S28AC complete source-only fit C_LP_f0_s203; no target evaluation
+ 6 files changed, 839 insertions(+)
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f0_s203/config.json
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f0_s203/history.csv
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f0_s203/metrics.json
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f0_s203/pairing.json
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f0_s203/streams.json
+Completed C_LP_f0_s203
+Started C_LP_f1_s201 PID 34356
+[exp/s28ac-mechanism-training 88b527f] S28AC complete source-only fit C_H0_f1_s201; no target evaluation
+ 6 files changed, 839 insertions(+)
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f1_s201/config.json
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f1_s201/history.csv
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f1_s201/metrics.json
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f1_s201/pairing.json
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f1_s201/streams.json
+Completed C_H0_f1_s201
+Started C_H0_f1_s202 PID 36356
+[exp/s28ac-mechanism-training caffe13] S28AC complete source-only fit C_LP_f1_s201; no target evaluation
+ 6 files changed, 839 insertions(+)
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f1_s201/config.json
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f1_s201/history.csv
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f1_s201/metrics.json
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f1_s201/pairing.json
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f1_s201/streams.json
+Completed C_LP_f1_s201
+Started C_LP_f1_s202 PID 31352
+[exp/s28ac-mechanism-training 686ba35] S28AC complete source-only fit C_H0_f1_s202; no target evaluation
+ 6 files changed, 839 insertions(+)
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f1_s202/config.json
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f1_s202/history.csv
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f1_s202/metrics.json
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f1_s202/pairing.json
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f1_s202/streams.json
+Completed C_H0_f1_s202
+Started C_H0_f1_s203 PID 27752
+[exp/s28ac-mechanism-training 8192ddd] S28AC complete source-only fit C_LP_f1_s202; no target evaluation
+ 6 files changed, 839 insertions(+)
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f1_s202/config.json
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f1_s202/history.csv
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f1_s202/metrics.json
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f1_s202/pairing.json
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f1_s202/streams.json
+Completed C_LP_f1_s202
+Started C_LP_f1_s203 PID 21340
+[exp/s28ac-mechanism-training 09933e9] S28AC complete source-only fit C_H0_f1_s203; no target evaluation
+ 6 files changed, 839 insertions(+)
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f1_s203/config.json
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f1_s203/history.csv
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f1_s203/metrics.json
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f1_s203/pairing.json
+ create mode 100644 28ac-mechanism-training/evidence/C_H0_f1_s203/streams.json
+Completed C_H0_f1_s203
+[exp/s28ac-mechanism-training 7d9cda6] S28AC complete source-only fit C_LP_f1_s203; no target evaluation
+ 5 files changed, 835 insertions(+)
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f1_s203/config.json
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f1_s203/history.csv
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f1_s203/metrics.json
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f1_s203/pairing.json
+ create mode 100644 28ac-mechanism-training/evidence/C_LP_f1_s203/streams.json
+Completed C_LP_f1_s203
+[exp/s28ac-mechanism-training d85c74d] S28AC seal full C source-selected cohort before target inference
+ 1 file changed, 79 insertions(+)
+ create mode 100644 28ac-mechanism-training/seal_C.json
+Sealed C ; no A result used to decide C execution.

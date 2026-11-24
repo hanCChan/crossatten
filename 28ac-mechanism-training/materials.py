@@ -21,9 +21,14 @@ def main():
     else:aj='未达到预登记的双向实用交互规则；本轮没有建立稳定的大幅BN×GELU交互，也不证明两因素无作用或等效。'
     if pilot['consistent_pilot_signal']:cj='两台固定留出RX均满足较高留出准确率和较小退化的预登记Pilot规则；只支持这两台历史RX的条件性结果。'
     else:cj='未达到原C的共同Pilot规则，不能声称已经证明跨接收机退化专门减小。应分别查看留出绝对收益、Source收益及每台RX的退化方向。'
+    c_detail=[]
+    for q in pilot['fold_means']:
+        c_detail.append(f"{q['held_rx']}：Held差{q['held_delta_pp']:+.3f}pp、Source差{q['source_delta_pp']:+.3f}pp、ΔG{q['delta_gap_pp']:+.3f}pp；"+
+            ('达到' if q['held_delta_pp']>=.5 and q['delta_gap_pp']<=-.5 else '未达到')+'原单RX均值双门槛。')
+    c_failures=[dict(fold=q['fold'],seed=q['seed'],held_delta_pp=q['held_delta_pp'],delta_gap_pp=q['delta_gap_pp']) for q in pilot['pairs'] if not (q['held_delta_pp']>0 and q['delta_gap_pp']<0)]
     write(HERE/'MECHANISM_DECISION.json',dict(time=now(),status='COMPLETE_STOP_NO_AUTOMATIC_EXTRA_FITS',scientific_fits=18,
         A=dict(judgment=aj,interaction_pp=value,conditional_rx_ci95_pp=ci,registered_rule_met=supported),
-        C=dict(judgment=cj,pilot_rule_met=pilot['consistent_pilot_signal'],two_held_RX=pilot['fold_means']),
+        C=dict(judgment=cj,pilot_rule_met=pilot['consistent_pilot_signal'],two_held_RX=pilot['fold_means'],receiver_judgments=c_detail,counterexamples=c_failures),
         remaining_authorized_fits=0,S28B_fits=0,IQ_only_fits=0,ASK_strict_fits=0,
         limitations=['BN/GELU effects concern a joint training procedure, not a unique factorization cause.',
             'TwohistoricalheldRX, not fresh acquisition orpopulationRX inference.','NativeS28-0 precisionfailures retained.','No automatic favorable-result rewrite of TIFS claims.']))
@@ -36,9 +41,11 @@ def main():
             row['evidence']=['28ac-mechanism-training/RESULTS.json','28ac-mechanism-training/EXPERIMENT_INTEGRITY.json']
         if row['claim']=='HStem specifically reduces source-to-heldRX degradation.':
             row['previous_status']=row['status'];row['status']='TWO_RX_PILOT_RULE_MET' if pilot['consistent_pilot_signal'] else 'TWO_RX_PILOT_RULE_NOT_MET'
-            row['result']=cj;row['evidence']=['28ac-mechanism-training/RESULTS.json','28ac-mechanism-training/c_all_paired_gaps.csv']
+            row['result']=cj+' '.join(c_detail);row['evidence']=['28ac-mechanism-training/RESULTS.json','28ac-mechanism-training/c_all_paired_gaps.csv']
     write(HERE/'EVIDENCE_MATRIX.json',dict(time=now(),rows=rows,prior_snapshot_sha256=sha(ROOT/'28-affine-bn-gelu-audit/EVIDENCE_MATRIX.json'),
-        completed_A_C_rows_updated=True,other_historical_rows_retained=True,unique_optimization_orphysical_invariance_not_established=True))
+        completed_A_C_rows_updated=True,other_historical_rows_retained=True,
+        historical_row_scope='Unchanged historical rows describe their original stage, including the B-stage C0 record; current C12 is in the updated C row.',
+        unique_optimization_orphysical_invariance_not_established=True))
     plots(result)
     text=f'''# S28-A 与原 S27-C：18次科学训练完整报告
 
@@ -63,6 +70,8 @@ Source主交互为 {a['source_interaction']['mean_delta_pp']:+.3f} pp。Source�
 
 仅Tokenizer中的三个中间BN与三个GELU被干预，前端两BN、两LeakyReLU和MHA保留。移除BN同时移除了352个仿射参数，并改变训练批统计、运行统计及优化；即使交互成立，也不是纯层级参数化的唯一因果证明。LP的分组、自由参数、初始化和算力仍不同。次要比较不能替代主交互，也不能把未达门槛解释成等效。
 
+**具体解释：** 保留中间BN时，GELU的平均收益为+0.752pp；移除中间BN时为−0.598pp，但后者的条件区间包含0，不能单独声称GELU有害。双移除模型仍达到96.743%，比Long-Patch高2.243pp，六组差值均为正。这说明BN/GELU的联合影响值得保留，但它们不能完整解释当前HStem与Long-Patch之间的差异；仍不能把剩余差异唯一归因于层级参数化。四格结果不能被改写为不依赖训练条件的单一模块收益。
+
 ![A全部配对和逐RX交互](figures/A_interaction.png)
 
 ## 2. C：整体判别改善与接收机退化分开判断
@@ -82,6 +91,8 @@ Source主交互为 {a['source_interaction']['mean_delta_pp']:+.3f} pp。Source�
 '''
     for q in pilot['pairs']:
         text+=f"|{q['fold']}|{q['seed']}|{q['H0']['source_accuracy_pct']:.3f}|{q['H0']['held_accuracy_pct']:.3f}|{q['LP']['source_accuracy_pct']:.3f}|{q['LP']['held_accuracy_pct']:.3f}|{q['held_delta_pp']:+.3f}|{q['delta_gap_pp']:+.3f}|\n"
+    text+='\n**逐RX判决：** '+' '.join(c_detail)+'\n\n'
+    text+='**保留的反例：** fold0/seed202的Held准确率仍提高1.150pp，但Source提高2.000pp，因而ΔG为+0.850pp，泛化损失反而扩大。rtl_5三种子均为有利方向，但均值缩减0.342pp不足预设0.5pp；不能在看到结果后降低门槛，也不把未达门槛解释成完全没有改善。两台RX的Held均值分别为HStem/LP 89.367/84.783%和95.167/93.783%，绝对难度差异也应保留。\n'
     text+='''
 Source Accuracy接近上限可能扭曲差距，Source与Held样本数也不同；两者及逐TX混淆均完整报告。两台固定历史RX不能变成六台独立RX，六组SD只描述训练重复，不做RX总体显著性或bootstrap。若Held更好而差距没有稳定变小，结论应收窄为整体TX判别更强；若两RX方向相反，须报告接收条件异质性。
 
@@ -95,13 +106,23 @@ C固定提取Tokenizer均值、后端前均值和最终分类器输入三种64�
 
 完整B_TX、D_RX|TX、W、Jw和Source Jc见C_geometry.csv。Held-only仅一台RX，D按构造为0，Jc不识别接收机不变性，显示NA并保留代数正则化比值；不把epsilon产生的大比值当作机制证据。Source已经用于选模，且Source/Held的RX数不同，几何只作描述。最终Jw不能作为跨RX性能的充分解释，S27-B反例仍有效。
 
+这里B_TX是TX中心相对全局中心的均方散布，D_RX|TX是TX×RX中心相对同TX中心的均方散布，W是包相对所在TX×RX中心的均方散布，均按固定平衡单元取平均。沿用S25定义：`Jc=B_TX/(D_RX|TX+1e-12)`；`Jw=B_TX/(D_RX|TX+W+1e-12)`，Jw分母包含接收机中心差和单元内散布，不能误写成仅W。
+
 逐RX/TX召回、混淆矩阵、CE与真实类margin见A_rx_tx.csv、C_rx_tx.csv及原始聚合JSON。所有困难TX、接收机和种子均保留；不通过删接收机或失败重复获得更好均值。
 
+'''
+    text+='三种子均值如下，六个层×折组合全部展示；Jc只在四SourceRX上定义，Held仅展示Jw。\n\n|折|层|Source Jc HStem|Source Jc LP|Source Jw HStem|Source Jw LP|Held Jw HStem|Held Jw LP|\n|---:|---|---:|---:|---:|---:|---:|---:|\n'
+    for q in geometry_means():
+        text+=f"|{q['fold']}|{q['layer']}|{q['source_Jc_H0']:.3f}|{q['source_Jc_LP']:.3f}|{q['source_Jw_H0']:.3f}|{q['source_Jw_LP']:.3f}|{q['held_Jw_H0']:.3f}|{q['held_Jw_LP']:.3f}|\n"
+    text+='\n**层级反例：** fold1的pre_backend层，HStem的Source Jc、Source Jw和Held Jw均低于LP，尽管其Held准确率均值更高；同折Tokenizer的Source Jc也略低。最终Jw均值在两折均较高，也不能抹去前端反例或单独充当跨RX机制的充分解释。上述比值仅描述固定坐标及样本的几何，不是互信息或物理不变性。\n'
+    text+='''
 ## 4. 训练配对、成本与完整性
 
 基线de7d010；执行激活及科学适配器在首次RF读取前提交并推送。A沿用P-H5x160种子、8000/2000包、125更新/轮；C使用S27C-H4x160新种子、6400/1600包、100更新/轮，从头初始化H0/LP。所有组200轮、batch64、原AdamW/warmup/cosine/AWGN及Source RX等权CE选模。初始化、首个排列与噪声流、checkpoint选择和完整轨迹均经独立核验。
 
 全部42模型统一产生324000条目标预测、79200条Source预测。24个旧模型的A Dev logits逐元素恢复；全部新模型的Source指标及最优CE恢复，旧权重/config/history哈希不变。C没有加载五RX权重；Source角色从缓存打开前就排除其留出RX。两个阶段的设计不互相适应，但它们共享数据研发历史，不声称是统计独立的数据集。
+
+18个新模型均已封存后，首次统一评价的保存函数发生参数重名：文件名参数rx与待保存的接收机数组rx冲突。错误发生在首个Source预测后、任何Dev/Held读取之前。原错误日志和全部冻结代码、模型保持原样；独立提交的IO-only包装器只更正保存参数名，通过合成保存检查后继续同一已封存队列。没有重训、增加优化步骤或改变评价公式；TECHNICAL_REPAIR_001.json与REPAIR_RESULT_001.json保留完整证据。
 
 每轮原子断点含当前/最优权重、优化器、所有随机状态和历史；如有暂停或工程恢复，其原始日志和快照记录保留，390000指最终保留的完整轨迹，不代表可能被丢弃的部分轮物理执行。多进程wall时间会重叠，不能把拟合wall之和称作独占GPU小时。18次全部最佳轮次、Source CE、耗时与参数见all_new_fits.csv。
 
@@ -122,6 +143,20 @@ A回答BN/GELU对完整训练程序的联合影响，C回答两台固定历史�
     (HERE/'RESEARCH_REPORT.zh-CN.md').write_text(text,encoding='utf-8',newline='\n')
     write(HERE/'REPORT_PROVENANCE.json',dict(time=now(),generator_sha256=sha(__file__),results_sha256=sha(HERE/'RESULTS.json'),integrity_sha256=sha(HERE/'EXPERIMENT_INTEGRITY.json')))
     print('Complete A/C mechanisms, all paired tables, figures and bounded decisions generated.',flush=True)
+
+def geometry_means():
+    records=read(HERE/'EVALUATION_C.json')['geometry'];rows=[]
+    for f in (0,1):
+        for layer in ['tokens','pre_backend','final']:
+            row=dict(fold=f,layer=layer)
+            for arm in ['H0','LP']:
+                for role,prefix in [('SOURCE','source'),('HELD','held')]:
+                    selected=[q for q in records if q['fold']==f and q['layer']==layer and q['arm']==arm and q['role']==role]
+                    assert len(selected)==3
+                    row[prefix+'_Jw_'+arm]=float(np.mean([q['tx_to_within_class_ratio'] for q in selected]))
+                    if role=='SOURCE':row['source_Jc_'+arm]=float(np.mean([q['tx_to_rx_centroid_ratio'] for q in selected]))
+            rows.append(row)
+    return rows
 
 def table(file,rows):
     with (HERE/file).open('w',encoding='utf-8',newline='') as f:
@@ -164,6 +199,7 @@ def write_tables(result):
     geometry=read(HERE/'EVALUATION_C.json')['geometry']
     keys=['arm','fold','seed','role','layer','status','between_tx','conditional_rx','within_tx_rx','tx_to_rx_centroid_ratio','tx_to_within_class_ratio']
     table('C_geometry.csv',[{k:q.get(k) for k in keys} for q in geometry])
+    table('C_geometry_all_layer_means.csv',geometry_means())
     margins=[]
     for j in [j for j in read(HERE/'registration.json')['jobs'] if j['stage']=='C']:
         for role in ['SOURCE','HELD']:
@@ -205,7 +241,9 @@ def plots(result):
     for f,marker,color in [(0,'o','#176b8a'),(1,'s','#a64b46')]:
         rows=[q for q in c['pairs'] if q['fold']==f]
         ax.scatter([q['held_delta_pp'] for q in rows],[-q['delta_gap_pp'] for q in rows],s=28,marker=marker,color=color,label=c['fold_means'][f]['held_rx'])
-        for q in rows:ax.annotate(str(q['seed']),(q['held_delta_pp'],-q['delta_gap_pp']),xytext=(4,3),textcoords='offset points',fontsize=6)
+        for q in rows:
+            offset={201:(5,5),202:(-18,9),203:(7,-10)}[q['seed']] if f==1 else (4,3)
+            ax.annotate(str(q['seed']),(q['held_delta_pp'],-q['delta_gap_pp']),xytext=offset,textcoords='offset points',fontsize=6)
         m=c['fold_means'][f];ax.scatter([m['held_delta_pp']],[-m['delta_gap_pp']],s=90,marker=marker,facecolors='none',edgecolors=color,linewidths=1.3)
     ax.axhline(0,color='#777',lw=.6);ax.axvline(0,color='#777',lw=.6);ax.axhline(.5,color='#999',ls=':',lw=.6);ax.axvline(.5,color='#999',ls=':',lw=.6)
     ax.set(xlabel='Held HStem - LP (pp)',ylabel='Gap reduction: -delta G (pp)',title='Six repeats of two RXs; outlined markers are RX means');ax.legend(frameon=False,fontsize=7)

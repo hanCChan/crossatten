@@ -1,0 +1,61 @@
+{
+  "time": "2026-11-24T14:44:33+08:00",
+  "status": "COMPLETE_18_FITS_A_C_MECHANISM_REPORT_STOP",
+  "completed_fits": 18,
+  "A_completed": 6,
+  "C_completed": 12,
+  "reused_models": 24,
+  "retained_optimizer_steps": 390000,
+  "synthetic_engineering_updates": 12,
+  "target_predictions": 324000,
+  "source_predictions": 79200,
+  "C_held_RX_units": 2,
+  "C_geometry_vectors": 72000,
+  "scientific_integrity": "PASS",
+  "visual_QA": "PASS",
+  "documents": [
+    {
+      "path": "output/pdf/s28_ac_mechanism_results.pdf",
+      "sha256": "d9d9365313b04129ae4d6a15e3f528d48e5b514117c15c972ba2f13972bb39b2",
+      "pages": 7,
+      "renders": [
+        {
+          "page": 1,
+          "sha256": "b30da29c65af78047f9f270191dbae2ae6588ae18ae5aadd359bc0c4361d1114"
+        },
+        {
+          "page": 2,
+          "sha256": "85067d2d0e490c57abd25b4384bad5a8e9fbd0d9d06cde0bc6fb9e2e1f98e1d1"
+        },
+        {
+          "page": 3,
+          "sha256": "7797cb3e1fec4381ef53be32b5a91c135e778495fa64548dfe2f5f560b0fb668"
+        },
+        {
+          "page": 4,
+          "sha256": "773958a5e5f93a699979cc5bd0fd4f198d16a82ca80bcafd296163982dc42019"
+        },
+        {
+          "page": 5,
+          "sha256": "135bd9b4a059c7d54d11561d0eb577efd473e7e1019f56e63b3298c7acd7ef78"
+        },
+        {
+          "page": 6,
+          "sha256": "f9477c77bcc51f72937acd3c0e5bb1805de1975fab097a17f9f6930f283ffa0d"
+        },
+        {
+          "page": 7,
+          "sha256": "c4232cde03b75b48ddffae06d0d43ee1ae74879c814e51f07dbde3227787a95c"
+        }
+      ]
+    }
+  ],
+  "remaining_authorized_fits": 0,
+  "S28B_fits": 0,
+  "IQ_only_fits": 0,
+  "ASK_strict_fits": 0,
+  "new_Confirm_blind_reads": 0,
+  "independent_acquisition": "NOT_AVAILABLE_NOT_RUN",
+  "old_native_S28_precision_failure": "PRESERVED",
+  "interpretation": "A joint training procedure; C two historicalheldRXpilot, no population or unique physical/optimization proof."
+}

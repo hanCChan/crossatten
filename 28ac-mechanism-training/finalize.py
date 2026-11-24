@@ -67,7 +67,8 @@ def main():
         synthetic_engineering_updates=read(HERE/'GATE.json')['synthetic_optimizer_updates'],original_scientific_files_unchanged=True,
         original_plans_byte_exact=True,historical_models_unchanged=24,all_seeds_RX_counterexamples_retained=True,
         target_predictions_verified=324000,source_predictions_verified=79200,C_receiver_units=2,new_Confirm_blind_reads=0,
-        remaining_fits=0,scientific_audit_sha256=sha(HERE/'EXPERIMENT_INTEGRITY.json'),logs=logs,documents=documents,artifacts=artifacts))
+        remaining_fits=0,IO_only_repair_scientific_fits=0,IO_only_repair_receipt_sha256=sha(HERE/'TECHNICAL_REPAIR_001.json'),
+        scientific_audit_sha256=sha(HERE/'EXPERIMENT_INTEGRITY.json'),logs=logs,documents=documents,artifacts=artifacts))
     print('Final A/C delivery seal PASS:',len(artifacts),'artifacts; no extra training.',flush=True)
 
 if __name__=='__main__':main()

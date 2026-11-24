@@ -7,7 +7,7 @@ import subprocess
 import numpy as np
 import torch
 import torch.nn.functional as F
-from ac_common import HERE,ROOT,CACHE,P,C,read,write,sha,now,validate,identity
+from ac_common import HERE,ROOT,CACHE,P,C,read,write,sha,now,validate,identity,committed
 from ac_data import check_seal,source
 from s28_models import build,state_hash,shared_hash
 from s27b_training import setup,learning_rate
@@ -46,6 +46,12 @@ def geom(x,y,rx):
 
 def main():
     reg=validate();seals={s:check_seal(s) for s in ['A','C']}
+    repair=None
+    if (HERE/'TECHNICAL_REPAIR_001.json').exists():
+        repair=read(HERE/'TECHNICAL_REPAIR_001.json');committed(HERE/'TECHNICAL_REPAIR_001.json');committed(HERE/'repair_io_001.py')
+        assert sha(HERE/'repair_io_001.py')==repair['repair_script_sha256'] and sha(HERE/'ac_evaluate.py')==repair['original_evaluator_sha256']
+        assert read(HERE/'REPAIR_RESULT_001.json')['scientific_fits']==read(HERE/'REPAIR_RESULT_001.json')['scientific_optimizer_steps']==0
+        assert all(sha(HERE/f'seal_{s}.json')==h for s,h in repair['sealed_cohort_sha256'].items())
     a=read(HERE/'EVALUATION_A.json');c=read(HERE/'EVALUATION_C.json');results=read(HERE/'RESULTS.json')
     assert len(a['dev_records'])==150 and len(a['source_records'])==150
     assert len(c['source_records'])==48 and len(c['held_records'])==12 and len(c['geometry'])==72
@@ -183,7 +189,8 @@ def main():
         target_predictions=324000,source_predictions=79200,C_geometry_vectors=72000,A_RX_units=10,C_held_RX_units=2,
         all_model_selection_source_only=True,all_targets_after_both_seals=True,C_no_pretrained_weights=True,
         A_interaction_independently_recomputed=True,C_gap_rule_independently_recomputed=True,no_new_Confirm_blind=True,
-        original_S28_numeric_failure_preserved=True,fits=verified,prediction_hashes=hashes,results_sha256=sha(HERE/'RESULTS.json'),verifier_sha256=sha(__file__)))
+        original_S28_numeric_failure_preserved=True,IO_only_repair_preserved=repair,IO_repair_scientific_fits=0,
+        fits=verified,prediction_hashes=hashes,results_sha256=sha(HERE/'RESULTS.json'),verifier_sha256=sha(__file__)))
     print('PASS:18fits,390000updates,324000target/79200Source predictions,72geometryrecords,streams,statistics andoldhashes.',flush=True)
 
 if __name__=='__main__':main()

@@ -1,5 +1,15 @@
 # S28-A + 原 S27-C：18 次明确授权训练
 
+<!-- completion -->
+**已完成 A6+C12，共18次200轮训练，独立核验通过，自动训练停止。**
+
+A主交互 +1.350 pp，双向规则满足：True；C两RX共同Pilot规则满足：False。
+
+[中文机制报告](RESEARCH_REPORT.zh-CN.md) · [英文PDF](output/pdf/s28_ac_mechanism_results.pdf) · [完整结果](RESULTS.json) · [独立核验](EXPERIMENT_INTEGRITY.json) · [证据矩阵](EVIDENCE_MATRIX.json) · [最终审计](FINAL_AUDIT.json)
+
+Rebuild materials and PDF from saved aggregates; do not rerun scientific fits or target evaluation.
+<!-- /completion -->
+
 基于 S28-0 `de7d010`，按用户2026年11月24日授权激活。A六次H2_LA先训练，C十二次H0/LP随后重新初始化训练。原两份计划逐字节保存，没有根据新成绩更改。A与C全部封存后才统一Dev/Held报告，完成后不增加训练。
 
 执行入口：`D:/crossatten/.venv/Scripts/python.exe -u 28ac-mechanism-training/resume.py`。

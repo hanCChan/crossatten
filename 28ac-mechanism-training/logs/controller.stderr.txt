@@ -1,0 +1,23 @@
+D:/crossatten/.venv/Scripts/python.exe : Traceback (most recent call last):
+所在位置 行:2 字符: 1
++ D:/crossatten/.venv/Scripts/python.exe -u 28ac-mechanism-training/res ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "D:\crossatten\worktrees\s28ac-mechanism-training\28ac-mechanism-training\resume.py", line 26, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\crossatten\worktrees\s28ac-mechanism-training\28ac-mechanism-training\resume.py", line 21, in main
+    execute()
+  File "D:\crossatten\worktrees\s28ac-mechanism-training\28ac-mechanism-training\ac_execute.py", line 72, in main
+    evaluate();write(HERE/'STATUS.json',dict(time=now(),status='TRAINING_AND_REGISTERED_EVALUATION_COMPLETE',new_fits=1
+8,report='PENDING_INDEPENDENT_AUDIT'))
+    ^^^^^^^^^^
+  File "D:\crossatten\worktrees\s28ac-mechanism-training\28ac-mechanism-training\ac_evaluate.py", line 119, in main
+    if not (HERE/'EVALUATION_A.json').exists():a_evaluate(reg)
+                                               ^^^^^^^^^^^^^^^
+  File "D:\crossatten\worktrees\s28ac-mechanism-training\28ac-mechanism-training\ac_evaluate.py", line 44, in a_evaluat
+e
+    save_predictions('A',arm,f,s,'SOURCE',logits=lg,y=va['y'],rx=va['rx'],rows=va['rows'])
+TypeError: save_predictions() got multiple values for argument 'rx'
