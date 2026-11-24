@@ -1,0 +1,82 @@
+[
+  {
+    "view": "V0",
+    "representation": "raw",
+    "factor": 0.0001,
+    "validation_accuracy": [
+      0.6790345468093856,
+      0.7019723457952671,
+      0.7031648956652133
+    ]
+  },
+  {
+    "view": "V0",
+    "representation": "shared",
+    "factor": 0.0001,
+    "validation_accuracy": [
+      0.6692873952875352,
+      0.7047680871543577,
+      0.7174239874586598
+    ]
+  },
+  {
+    "view": "V0",
+    "representation": "residual",
+    "factor": 0.01,
+    "validation_accuracy": [
+      0.40155256453779753,
+      0.4072374852387431,
+      0.4068764975320696
+    ]
+  },
+  {
+    "view": "V0",
+    "representation": "joint",
+    "factor": 0.0001,
+    "validation_accuracy": [
+      0.6312339528720236,
+      0.6471245703630244,
+      0.6481489377899474
+    ]
+  },
+  {
+    "view": "V1",
+    "representation": "raw",
+    "factor": 0.0001,
+    "validation_accuracy": [
+      0.7420110780024923,
+      0.7686431104236084,
+      0.7700412161216272
+    ]
+  },
+  {
+    "view": "V1",
+    "representation": "shared",
+    "factor": 0.0001,
+    "validation_accuracy": [
+      0.7317448555985576,
+      0.7605308225724542,
+      0.7761819620891893
+    ]
+  },
+  {
+    "view": "V1",
+    "representation": "residual",
+    "factor": 0.0001,
+    "validation_accuracy": [
+      0.442773034443625,
+      0.44764417271982365,
+      0.44818217004797617
+    ]
+  },
+  {
+    "view": "V1",
+    "representation": "joint",
+    "factor": 0.01,
+    "validation_accuracy": [
+      0.6669848297688064,
+      0.6826179214421549,
+      0.681960492465619
+    ]
+  }
+]

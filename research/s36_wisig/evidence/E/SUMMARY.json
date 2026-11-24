@@ -1,0 +1,111 @@
+{
+  "readout": {
+    "raw": {
+      "tx_linear": 53.04117072809312,
+      "tx_prototype": 26.216516032825343,
+      "day_bal_acc": 50.79208754208754,
+      "rx_bal_acc_cross_tx_parities": 20.407919492595003
+    },
+    "shared": {
+      "tx_linear": 53.4765976474615,
+      "tx_prototype": 25.982516299969525,
+      "day_bal_acc": 49.727506121824305,
+      "rx_bal_acc_cross_tx_parities": 17.753806545772342
+    },
+    "residual": {
+      "tx_linear": 35.68173417275045,
+      "tx_prototype": 30.354003145205386,
+      "day_bal_acc": 50.317837465564736,
+      "rx_bal_acc_cross_tx_parities": 26.048913533618897
+    },
+    "joint": {
+      "tx_linear": 48.5534940059523,
+      "tx_prototype": 32.86377112630494,
+      "day_bal_acc": 50.31467324762779,
+      "rx_bal_acc_cross_tx_parities": 27.095233389422113
+    },
+    "shared_or_residual_oracle": 64.60394987289781
+  },
+  "by_view": {
+    "V0": {
+      "raw": {
+        "rx_bal_acc_cross_tx_parities": [
+          17.808385914890003,
+          24.600429943384526
+        ],
+        "tx_linear": 52.561922352872415,
+        "tx_prototype": 21.100527192356335,
+        "day_bal_acc": 50.815656565656575
+      },
+      "shared": {
+        "rx_bal_acc_cross_tx_parities": [
+          17.562862141181856,
+          19.328253838255137
+        ],
+        "tx_linear": 55.18097307270079,
+        "tx_prototype": 19.678775289997535,
+        "day_bal_acc": 48.26704928068565
+      },
+      "residual": {
+        "rx_bal_acc_cross_tx_parities": [
+          29.093739248546463,
+          28.373437656933376
+        ],
+        "tx_linear": 35.63315645466271,
+        "tx_prototype": 29.780813307954634,
+        "day_bal_acc": 49.39771196816651
+      },
+      "joint": {
+        "rx_bal_acc_cross_tx_parities": [
+          29.94755000827361,
+          31.59995850583735
+        ],
+        "tx_linear": 47.817904191241844,
+        "tx_prototype": 29.238019835455876,
+        "day_bal_acc": 50.09138353229262
+      },
+      "shared_or_residual_oracle": 65.42846504793987
+    },
+    "V1": {
+      "raw": {
+        "rx_bal_acc_cross_tx_parities": [
+          17.383999839482346,
+          21.83886227262313
+        ],
+        "tx_linear": 53.520419103313834,
+        "tx_prototype": 31.33250487329435,
+        "day_bal_acc": 50.76851851851851
+      },
+      "shared": {
+        "rx_bal_acc_cross_tx_parities": [
+          16.570157696428215,
+          17.553952507224167
+        ],
+        "tx_linear": 51.77222222222222,
+        "tx_prototype": 32.28625730994152,
+        "day_bal_acc": 51.18796296296296
+      },
+      "residual": {
+        "rx_bal_acc_cross_tx_parities": [
+          23.27154441249765,
+          23.456932816498092
+        ],
+        "tx_linear": 35.7303118908382,
+        "tx_prototype": 30.927192982456138,
+        "day_bal_acc": 51.23796296296296
+      },
+      "joint": {
+        "rx_bal_acc_cross_tx_parities": [
+          21.974950031270467,
+          24.858475012307032
+        ],
+        "tx_linear": 49.28908382066277,
+        "tx_prototype": 36.489522417154,
+        "day_bal_acc": 50.53796296296296
+      },
+      "shared_or_residual_oracle": 63.779434697855756
+    }
+  },
+  "role_checks": 6,
+  "raw_eq": "STOP_NO_VERIFIABLE_LOCAL_PAIRING"
+}

@@ -1,0 +1,26 @@
+{
+  "protocol": "77fc64cabcb7f5d57e176b418159488e83b55caad818d7060bc191360159a0ed",
+  "engine": "c803fbd616c4da425d8ef12eac1c676843104e96d2dfcde5a17898c22a0d8aa8",
+  "probes": "aba2526ab1074d12ba2e32fe8a712454a00d7632920307e1f61720de030f362b",
+  "s33_receipt": "15a24a8456173738c3b2e08b55a3690776164b442fcd917116a6deaa73df29c0",
+  "s34_receipt": "a8ee07c26b0adc1a666466c6cac756c0293ea0d58f0ca2ac287990b029f4385d",
+  "backbone_training_fits": 0,
+  "backbone_updates": 0,
+  "tapes": [
+    "token",
+    "prepared",
+    "pre_ln",
+    "q",
+    "k",
+    "v",
+    "attention",
+    "residual",
+    "mix1",
+    "pooled"
+  ],
+  "views": [
+    "V0",
+    "V1"
+  ],
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+}
