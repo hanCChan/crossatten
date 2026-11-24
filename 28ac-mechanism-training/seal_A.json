@@ -1,0 +1,43 @@
+{
+  "time": "2026-11-24T12:00:03+08:00",
+  "stage": "A",
+  "models": {
+    "A_H2_LA_f0_s201": {
+      "model.pt": "9c548bc092ace269259a02b01e72e8059c3132b67e58d80db9866d466ac0ce35",
+      "config.json": "b016e62d3fa4f287f03a683714ef15df822056c29136766f00bf8dc07b5ebf0c",
+      "metrics.json": "d87c4427ae1cd6947ea61b0bbc431191c5f57215838bbdcef8d04ca8d3d6a20f",
+      "history.csv": "cbb2a505b7d519b1a2c314aca7c345f202842f8f86ec5d2f254b421add590800"
+    },
+    "A_H2_LA_f0_s202": {
+      "model.pt": "81f688a62ca6ff28754e81d0ad26510334d6ae6e58b5e72adfdc0fa70fe44619",
+      "config.json": "012e1d294ec5106af0585f058de1ba9de12799dfbf1f9fcf6da781299383faf9",
+      "metrics.json": "543b2fa7a8d90265fc78d888669ecf0fff558a53da013789d715f40b46e9a323",
+      "history.csv": "6cd4bb2be379ac3033dc3e2b08ce155a2a32b0ae79e8ee65bb13d4c691ec1d73"
+    },
+    "A_H2_LA_f0_s203": {
+      "model.pt": "6296a7f98e960b06800fe3f967d167e77f2fc82e66db75d776af8c86af3aaa49",
+      "config.json": "ee3ce605f3f37f8f0e9ff0fc66c622ee80c34001860534e45977d235d750c33b",
+      "metrics.json": "6723ef4d152902bc4e33c4774fbb898bf1f3dfdf558cbb235e680f9a3fa761bc",
+      "history.csv": "db28c0f436631ae04c849a4084f65c0d1a42db47b7973546d2659c4331e3e283"
+    },
+    "A_H2_LA_f1_s201": {
+      "model.pt": "3ac0331a7b69513e988792bedf0d4f274f8f402da21f37366505e02add1c4d85",
+      "config.json": "382dd90b1df61d20f5c670cdaa03d693dc2a1e6980bc19779e1363a226cbd1f8",
+      "metrics.json": "5342a65d2d12b04f2c7f4227a2f309d907d1af98e2d931c389b1bc6c0a8b33ef",
+      "history.csv": "06d466db54b29d388af381cbc661e9f8f1fd829c33dfe797a41d958f76577486"
+    },
+    "A_H2_LA_f1_s202": {
+      "model.pt": "716fce839b0e5f56060e1730a40f8f8ec24035945a4171044b61e076dbfd8c60",
+      "config.json": "ba425f642241b2d83b2581f187a1b0dd5d0bf5aa09606ca086fd058a2a962a58",
+      "metrics.json": "95c94f19f913ed4be3243f57c1ed174b4f3b2c5fa150bec1af6bda1442ba79f8",
+      "history.csv": "3643198d53ba2685fd5aef92408c9f29df2d331da8e3527a5cdb702a89def357"
+    },
+    "A_H2_LA_f1_s203": {
+      "model.pt": "76d516008ff1b934243fc89d6be08c8ba8c03ab1fc6dabd63a67ebee04011bdc",
+      "config.json": "9a2a5fd72dd20a1066db2dfa549c2edd0782220a2f4439674ccaf83d84a10906",
+      "metrics.json": "a0a91acf59cf651f61c73854bb16ee37ae65165cce480318bae342121c00a368",
+      "history.csv": "2d203ff1df9aae28c4b24f3747249dfabef815c9f57fb402e1a4cb5038cf1c04"
+    }
+  },
+  "registration_sha256": "f4cb68fa91eb80ebd14d64973cbb3d444b0a80a185a48d726a54682b6ba0f3ca"
+}
