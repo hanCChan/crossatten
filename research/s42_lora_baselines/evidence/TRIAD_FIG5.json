@@ -1,0 +1,35 @@
+{
+  "source_pdf_sha256": "f8df6663cc5c9a432e1d6d88393717ede42a239f7826eec0c680bb494fe439db",
+  "figure": "5a/5b, PDF page 5",
+  "method": {
+    "homogeneous": {
+      "author_baseline": {
+        "unseen_rx_n": 15,
+        "unseen_rx_mean_pct": 70.03,
+        "unseen_rx_worst_pct": 47.9,
+        "all_20_mean_pct": 76.66
+      },
+      "triad_gan": {
+        "unseen_rx_n": 15,
+        "unseen_rx_mean_pct": 84.43,
+        "unseen_rx_worst_pct": 68.2,
+        "all_20_mean_pct": 88.11
+      }
+    },
+    "heterogeneous": {
+      "author_baseline": {
+        "unseen_rx_n": 15,
+        "unseen_rx_mean_pct": 90.01,
+        "unseen_rx_worst_pct": 75.1,
+        "all_20_mean_pct": 92.06
+      },
+      "triad_gan": {
+        "unseen_rx_n": 15,
+        "unseen_rx_mean_pct": 95.76,
+        "unseen_rx_worst_pct": 85.2,
+        "all_20_mean_pct": 96.79
+      }
+    }
+  },
+  "scope": "Vector-derived estimates from the authors' protocol; not P-H5x160 scores"
+}
