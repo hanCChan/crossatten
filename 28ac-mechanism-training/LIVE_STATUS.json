@@ -1,25 +1,25 @@
 {
-  "completed": 12,
+  "completed": 15,
   "total": 18,
   "A_completed": 6,
-  "C_completed": 6,
+  "C_completed": 9,
   "active": [
     {
-      "id": "C_H0_f1_s201",
-      "stage": "C",
-      "arm": "H0",
-      "epoch": 191
-    },
-    {
-      "id": "C_LP_f1_s201",
+      "id": "C_LP_f1_s202",
       "stage": "C",
       "arm": "LP",
-      "epoch": 150
+      "epoch": 183
+    },
+    {
+      "id": "C_H0_f1_s203",
+      "stage": "C",
+      "arm": "H0",
+      "epoch": 26
     }
   ],
-  "eta_minutes": 54.9,
+  "eta_minutes": 26.2,
   "status": null,
   "failure": false,
   "scope": "Fits only; final common evaluation, independent verification and report extra.",
-  "updated_at": "2026-11-24T13:33:14+08:00"
+  "updated_at": "2026-11-24T14:00:35+08:00"
 }
