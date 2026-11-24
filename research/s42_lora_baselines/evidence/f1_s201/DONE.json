@@ -1,0 +1,24 @@
+{
+  "fold": 1,
+  "seed": 201,
+  "binding": {
+    "PROTOCOL.zh-CN.md": "39dd6cf2b04cc5f69fbc21610e648810a2d03c14c3355581ab74d03057624c26",
+    "fit.py": "ff65c8299614bd63555546cfe039f50149c90c38259a6e425ad1a3bd1bbd12ac",
+    "siamese.py": "4c455cdc5c777e1f4e4b7aa87a2af14ef7605dd2f5066bb75185d408ed28ca37",
+    "configs/protocol.json": "913d38626d9bcaa285b0ba7816bd8e863a91778f1fc62e4dd7d27c70415a119a",
+    "26-long-patch-control/registration.json": "51477d37d2df63f1ddfb9f665bc1d8b3e8f6ff3d5ff19bd5847a2115691608e0",
+    "lib/xa/data.py": "ff861d46e508d807996a924d4439134416b16ba6507856a7335c65d9e4cfc3cb",
+    "lib/xa/models.py": "322049d67d19d196dca8a722fda9de433d846fe1aa3d6d8439c49adeba6554bf"
+  },
+  "status": "COMPLETE",
+  "epochs": 160,
+  "updates": 40000,
+  "selected_epoch": 157,
+  "source_ce": 0.029491201043128967,
+  "source_accuracy": 0.9930000305175781,
+  "fit_seconds": 686.9007118000009,
+  "params": 13935882,
+  "peak_gpu_allocated": 1120023040,
+  "weights": "e316a8b6309efe3c52c6c8c97b9a456edcafde577822dcdf414d4d5f8af3890f",
+  "history": "c39de307e8319ca03e239a0bdc6e4a170cc9e35bf77d56b930a3beeb9e874dfc"
+}
