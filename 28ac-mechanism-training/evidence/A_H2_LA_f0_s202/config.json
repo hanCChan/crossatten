@@ -1,0 +1,29 @@
+{
+  "job": {
+    "stage": "A",
+    "arm": "H2_LA",
+    "fold": 0,
+    "seed": 202
+  },
+  "data_seed": 2602222937,
+  "batch": 64,
+  "epochs_budget": 200,
+  "train_packets": 8000,
+  "val_packets": 2000,
+  "steps_per_epoch": 125,
+  "params": 133338,
+  "checkpoint": "minimum_source_receiver_equal_ce",
+  "optimizer": "AdamW",
+  "lr": 0.001,
+  "weight_decay": 0.0005,
+  "warmup_epochs": 5,
+  "augmentation": "Original AWGN0..50dB",
+  "initial_full_sha256": "1a97c092c5a81c8939b77cdaba663dab313ae04b205040934c2cd52f02d4fc63",
+  "initial_shared_sha256": "55e516de0dc2f2011831e2a23c7379122236ff9ae136aa8e66e1f57d00a6bcf3",
+  "pretrained_checkpoint_loaded": false,
+  "registration_sha256": "f4cb68fa91eb80ebd14d64973cbb3d444b0a80a185a48d726a54682b6ba0f3ca",
+  "tf32_matmul": false,
+  "tf32_cudnn": true,
+  "torch": "2.5.0+cu124",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+}
