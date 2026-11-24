@@ -50,7 +50,7 @@ def raw_schema(path):
                 source_counts=records, raw_offsets_present=False, packet_id_present=False,
                 decision="STOP_COMPACT_IDENTITY_UNAVAILABLE",
                 reason="No identity fields in the actual local pickle; source and EQ arrays are independently indexed.",
-                source_manifest_sha256=sha(path))
+                compact_file_sha256=sha(path))
 
 
 def assets(view, seed):
@@ -99,6 +99,6 @@ if __name__ == "__main__":
     parser.add_argument("payload",type=Path)
     parser.add_argument("output",type=Path)
     args = parser.parse_args()
-    args.output.mkdir(parents=True,exists_ok=True)
+    args.output.mkdir(parents=True,exist_ok=True)
     write(args.output/"A.json",raw_schema(args.payload))
     write(args.output/"C.json",a1_audit())
