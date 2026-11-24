@@ -1,0 +1,65 @@
+{
+  "protocol": "25fc09997f4620532d3bf076d0296645cb89d249dd5d8ca9fd2f1b2b52d66931",
+  "engine": "3d6d7c869b5104edaec1b899efac32b40bb351cf12f7aa0cb4ed1ba349f2fa36",
+  "common": "1a11b0b073ecc2ff3daa91b00af5981b371a3e7e9c221ed9a55c71daddb9d6af",
+  "physical_dose": 0.12,
+  "equipment": "cuda",
+  "backbone_trainings": 0,
+  "optimizer_updates": 0,
+  "raw_eq": {
+    "decision": "STOP_NO_VERIFIABLE_LOCAL_PAIRING",
+    "previous_sha": "aebd93bf98ede037173719acdd6853b23507d85b8eda33f03aec19a46346d9d0"
+  },
+  "engineering": {
+    "native": {
+      "rank1_residual": 0.0,
+      "phase_residual_rad": 1.153777564652091e-15,
+      "repeat_loss": 5.960464477539063e-08,
+      "spectral_distance": 0.43554890155792236,
+      "early_loss": 1.7881393432617188e-07,
+      "middle_loss": 1.7881393432617188e-07,
+      "late_loss": 1.7881393432617188e-07,
+      "tail_loss": 1.7881393432617188e-07
+    },
+    "white": {
+      "rank1_residual": 0.013026714324951172,
+      "phase_residual_rad": 0.03154236823320389,
+      "repeat_loss": 0.022139549255371094,
+      "spectral_distance": 0.42354816198349,
+      "early_loss": 0.01815474033355713,
+      "middle_loss": 0.01780301332473755,
+      "late_loss": 0.014993607997894287,
+      "tail_loss": 0.018524527549743652
+    },
+    "phase_walk": {
+      "rank1_residual": 0.009854555130004883,
+      "phase_residual_rad": 0.10774727165699005,
+      "repeat_loss": 0.03902578353881836,
+      "spectral_distance": 0.43134281039237976,
+      "early_loss": 0.023681819438934326,
+      "middle_loss": 0.018378078937530518,
+      "late_loss": 0.026074349880218506,
+      "tail_loss": 0.03314715623855591
+    },
+    "frequency_shape": {
+      "rank1_residual": 0.0,
+      "phase_residual_rad": 1.2883690882675497e-15,
+      "repeat_loss": 5.960464477539063e-08,
+      "spectral_distance": 0.446207731962204,
+      "early_loss": 0.00012564659118652344,
+      "middle_loss": 1.1920928955078125e-07,
+      "late_loss": 1.1920928955078125e-07,
+      "tail_loss": 1.1920928955078125e-07
+    },
+    "constant_cfo": {
+      "rank1_residual": 5.960464477539063e-08,
+      "phase_residual_rad": 1.2678763816609262e-08,
+      "repeat_loss": 1.1920928955078125e-07,
+      "spectral_distance": 0.432157963514328,
+      "early_loss": 1.1920928955078125e-07,
+      "middle_loss": 1.1920928955078125e-07,
+      "late_loss": 1.1920928955078125e-07,
+      "tail_loss": 1.1920928955078125e-07
+    }
+  }
+}

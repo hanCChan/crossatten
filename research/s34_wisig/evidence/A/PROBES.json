@@ -1,0 +1,3876 @@
+[
+  {
+    "view": "V0",
+    "seed": null,
+    "arch": null,
+    "layer": "input",
+    "readout": "input",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.5951477483842259,
+      0.5996040968897011,
+      0.6003551043295048
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "mean",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8745397801783016,
+      0.8754189130450465,
+      0.8742517944656575
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "mean_std",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8725056479156968,
+      0.8731715982561195,
+      0.8725394842402391
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "region2",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8691765051369478,
+      0.873132837856855,
+      0.8728947473747618
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8678131990469505,
+      0.8672813119026154,
+      0.8669420055856841
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "flat",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8367816090578789,
+      0.8360712881033655,
+      0.8347473323468163
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8726596847129798,
+      0.8711802327500089,
+      0.8713500550391243
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "random4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8450098040591811,
+      0.8467749055064554,
+      0.8463404865628372
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "shuffle_region4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.7728347351960898,
+      0.7728944727418944,
+      0.7730367471456548
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "shuffle_dct4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.7746791110066983,
+      0.7765954016148106,
+      0.7779021172832365
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "mean",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9053843314170699,
+      0.905029987357862,
+      0.9036044299650463
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "mean_std",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.9043860032706393,
+      0.904035967071588,
+      0.9051490305908247
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "region2",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9036487071756456,
+      0.9032971536182353,
+      0.9031434342779847
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "region4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.902066264418814,
+      0.9017056066288243,
+      0.9022119220445668
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "flat",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8921534244718893,
+      0.8909783249424952,
+      0.8911034932189947
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "dct4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9024371319493437,
+      0.903051913569536,
+      0.9026189703991553
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "random4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.901898894751476,
+      0.9026513728210964,
+      0.901918886970102
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "shuffle_region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9008967069531701,
+      0.900240600118455,
+      0.8997610048378304
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "shuffle_dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9023380814943779,
+      0.9012284851180827,
+      0.9010690452960303
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "mean",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.9062339894461965,
+      0.905067065276488,
+      0.906248415502081
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "mean_std",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.9065515166959063,
+      0.9072245902857956,
+      0.9076256058238936
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "region2",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.9059812953181994,
+      0.905784309181922,
+      0.9067679577141536
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "region4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.9057520640421876,
+      0.90538169163655,
+      0.9058109974228513
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "flat",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.903353907160248,
+      0.9014944695262258,
+      0.9016438518537372
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9064674398819754,
+      0.9049972503107102,
+      0.9054334374211418
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "random4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9048649337160657,
+      0.9054182816592372,
+      0.9051425747303696
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "shuffle_region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9050218684405203,
+      0.904815692835518,
+      0.9039441689204724
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "shuffle_dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.904870650161997,
+      0.9047972115649835,
+      0.904330576753115
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "mean",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.9062527841280127,
+      0.9051896836503798,
+      0.906545009514408
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "mean_std",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.9068053653952228,
+      0.9076487040100346,
+      0.9083415567180436
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "region2",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.9059498711105576,
+      0.9055430545941366,
+      0.9070663878168541
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "region4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.905896604450836,
+      0.9053917539579192,
+      0.9063969667096045
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "flat",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9023470109304199,
+      0.9011897490962072,
+      0.9014909593028891
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9064800533007661,
+      0.9052979314780011,
+      0.905225531181641
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "random4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9053055049599966,
+      0.9054307707113871,
+      0.904969461696895
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "shuffle_region4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9047185792711554,
+      0.9047577691515524,
+      0.9036272938867485
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "shuffle_dct4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9041186517980112,
+      0.9047590437272274,
+      0.9039164230331637
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "pooled",
+    "readout": "pooled",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.9062527841280127,
+      0.9051896836503798,
+      0.906545009514408
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "mean",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.7101092982642218,
+      0.7179776319848034,
+      0.7199671901024614
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "mean_std",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.6872895448938051,
+      0.6953273661489557,
+      0.6968044013826072
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "region2",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.7016418114265349,
+      0.7127064920655252,
+      0.7130575870246109
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "region4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.6829193340893295,
+      0.6901145043217155,
+      0.6889535771943911
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "flat",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.6669669308487208,
+      0.6701225871594123,
+      0.670837917447736
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "dct4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.6834489364166391,
+      0.6900177501520482,
+      0.6900423542145354
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "random4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.6813897874174683,
+      0.6853041323633242,
+      0.6869961135943279
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "shuffle_region4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.4776427307045224,
+      0.48096044815071165,
+      0.48094614084772996
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "shuffle_dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.47853183767224744,
+      0.4764742224656863,
+      0.4774663184128065
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "mean",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8846700268675646,
+      0.8865619148677063,
+      0.8858205813834088
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "mean_std",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8844620974468714,
+      0.8833863649971169,
+      0.8829739725023895
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "region2",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.8848976956047007,
+      0.884418023801579,
+      0.8858310458600331
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.882911706601741,
+      0.8815233947779931,
+      0.8810150327308857
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "flat",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8776304045509916,
+      0.8762422646446727,
+      0.8758097539961017
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8839004540212604,
+      0.8835518603305159,
+      0.8831369638308502
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "random4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.8839458154132608,
+      0.8860577686085617,
+      0.8866598340424666
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "shuffle_region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8815442221509101,
+      0.8796413539385113,
+      0.8787537682669683
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "shuffle_dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8805617486235159,
+      0.8799215000632722,
+      0.8797306036270949
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "mean",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8920481507426179,
+      0.89244533589767,
+      0.8919243456156557
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "mean_std",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.8924489150593663,
+      0.8927034552491317,
+      0.8929176683284955
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "region2",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.892367706256172,
+      0.8924796202788187,
+      0.8919117933172944
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "region4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8895752380575589,
+      0.8899398619051743,
+      0.8890339003057165
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "flat",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.8897143705244434,
+      0.8899843914639591,
+      0.8905954319064521
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "dct4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.88982461827805,
+      0.8909464478284018,
+      0.891145603138139
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "random4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.8915224098242654,
+      0.8911125362529638,
+      0.8916854429312396
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "shuffle_region4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8907578867519184,
+      0.8910819397500056,
+      0.8896239579929007
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "shuffle_dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8921247606925968,
+      0.8914687852823814,
+      0.8897718120120333
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "mean",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8920216821565837,
+      0.8924392012011122,
+      0.890936600932022
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "mean_std",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8915608760999773,
+      0.8927072799749373,
+      0.8924794961241878
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "region2",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8916141159349683,
+      0.892763922991136,
+      0.890715521190755
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "region4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8892279956547738,
+      0.8899243823259665,
+      0.8891828178281616
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "flat",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8904392071940134,
+      0.888238826350526,
+      0.8893228840112534
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "dct4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8895397580679066,
+      0.8903817079723023,
+      0.8903099602216021
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "random4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8919811950827438,
+      0.8914243669721894,
+      0.891151253000861
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "shuffle_region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8916314015072899,
+      0.8903289300032369,
+      0.8899311371656041
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "shuffle_dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8912140484032883,
+      0.8904802528352563,
+      0.8894734868758807
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "pooled",
+    "readout": "pooled",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8920216821565837,
+      0.8924392012011122,
+      0.890936600932022
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "mean",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8606935354657178,
+      0.8630880030045868,
+      0.8621929418018998
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "mean_std",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8690170968365215,
+      0.8715046682820421,
+      0.8708102156166545
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "region2",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.8598872691461802,
+      0.8623912881624011,
+      0.8629036586166734
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "region4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.8544326188620092,
+      0.8564035747853027,
+      0.8565262464611668
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "flat",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8405554489562012,
+      0.8387263761755221,
+      0.8388708013632749
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "dct4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8669372327603839,
+      0.8669450748463916,
+      0.8658355968592909
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "random4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.8341440517982538,
+      0.8365570992014887,
+      0.8371236896904451
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "shuffle_region4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.7428726274023788,
+      0.7434152003846415,
+      0.7428419765013617
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "shuffle_dct4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.7420149238801451,
+      0.7432981082133502,
+      0.7443963205544456
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "mean",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9020526550467508,
+      0.9031312913003114,
+      0.9019619025862721
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "mean_std",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9028811468408087,
+      0.9038081973966469,
+      0.9035479572713467
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "region2",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.9018491377078709,
+      0.9020421516250129,
+      0.9021095620001217
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "region4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.9007284790755801,
+      0.9000413762635816,
+      0.9015917198268076
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "flat",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.890778330336321,
+      0.890231421996272,
+      0.8903758471840248
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "dct4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9016069756302848,
+      0.9028036849815056,
+      0.9008088490996502
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "random4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.8989129659504217,
+      0.8988790657083708,
+      0.8993831772130454
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "shuffle_region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8980345677953642,
+      0.8976648383055185,
+      0.8969640199470121
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "shuffle_dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8970781091727112,
+      0.8966539684348155,
+      0.8961902052021932
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "mean",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9024443629705048,
+      0.903129341549226,
+      0.9029797938336014
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "mean_std",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.9031147529946879,
+      0.904772206072861,
+      0.9047889095187426
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "region2",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9036796745607413,
+      0.902000303508955,
+      0.9035868876227909
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "region4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.9039193500011926,
+      0.9043183333141581,
+      0.9060756860622757
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "flat",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8987847128498866,
+      0.8986363757668668,
+      0.8983357509321142
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "dct4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9037285145594645,
+      0.9051396127512278,
+      0.9040031132989012
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "random4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9017956835442763,
+      0.9033442007952192,
+      0.902542515818399
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "shuffle_region4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.901050998582256,
+      0.9012475871728256,
+      0.9019959042330306
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "shuffle_dct4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.9006646499783267,
+      0.901961317322587,
+      0.902216397888025
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "mean",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9027752835962665,
+      0.9032789387766794,
+      0.9028499171256273
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "mean_std",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9028157294728895,
+      0.9044785534003825,
+      0.9042293461819306
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "region2",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9033714128727498,
+      0.9021472011632555,
+      0.9030268186686093
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "region4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.9039022022725546,
+      0.904790940576785,
+      0.9051997989789835
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "flat",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8991052856060554,
+      0.8987487308021763,
+      0.898731778350319
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "dct4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9034635352710434,
+      0.904461836340765,
+      0.9040551282472943
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "random4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9013329354046413,
+      0.9034967052552947,
+      0.902551251302949
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "shuffle_region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9011799225858138,
+      0.9011441446636425,
+      0.9011412172369505
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "shuffle_dct4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9014906138566984,
+      0.9018388861968983,
+      0.9016670088284053
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "pooled",
+    "readout": "pooled",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9027752835962665,
+      0.9032789387766794,
+      0.9028499171256273
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "mean",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.6984426445760482,
+      0.70593233594793,
+      0.7064148994490896
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "mean_std",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.6988683134624992,
+      0.6994494199286375,
+      0.7001456772160606
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "region2",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.6945850737315663,
+      0.7055748759331423,
+      0.7052842931064301
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "region4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.7041701000845274,
+      0.7077636616813033,
+      0.7072958187791616
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "flat",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.664967036672501,
+      0.6652657948149235,
+      0.6654027206536517
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "dct4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.6997911398440707,
+      0.7043232305243722,
+      0.705513880642305
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "random4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.69439338144138,
+      0.6944807172077868,
+      0.6949119115560708
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "shuffle_region4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.4883918312390963,
+      0.49069773188360916,
+      0.4902586578755466
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "shuffle_dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.4891974993260968,
+      0.48695681499292043,
+      0.4873276075224117
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "mean",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8856701021368671,
+      0.8852313120039351,
+      0.8835871532256213
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "mean_std",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.884717426357369,
+      0.8830093758569673,
+      0.8819869650672035
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "region2",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8874264891504152,
+      0.8861646875394943,
+      0.8850652289337052
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.887324263090482,
+      0.8830034715466296,
+      0.8821408473682962
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "flat",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8807123754768087,
+      0.8806625898363659,
+      0.8795203904949802
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8861153966353124,
+      0.8844384523494963,
+      0.883030556711312
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "random4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.886539473812893,
+      0.8851688414024904,
+      0.8821395771447302
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "shuffle_region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8839753938566018,
+      0.8823674346025413,
+      0.8810915194003898
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "shuffle_dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8851504802828435,
+      0.8819157255823996,
+      0.8818036802069531
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "mean",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8904133340741862,
+      0.8907905479916677,
+      0.8884721042961173
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "mean_std",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8904910123961515,
+      0.8895968782799528,
+      0.8901535771444138
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "region2",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.8887548287888857,
+      0.8890567227798253,
+      0.8896486794577191
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "region4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8909428600820001,
+      0.8912497932719887,
+      0.8897356832416881
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "flat",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.888850772594007,
+      0.8874964742381639,
+      0.8871430306198467
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "dct4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.890647492562389,
+      0.8903074942654773,
+      0.8907941648047678
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "random4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8901975530327051,
+      0.8910767322080287,
+      0.8904797363921427
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "shuffle_region4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8903711825743238,
+      0.8909551373709338,
+      0.8894362572982198
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "shuffle_dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8911209795158651,
+      0.8908099708404591,
+      0.8903507172986488
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "mean",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8905645553665847,
+      0.890972818144791,
+      0.8890465687971602
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "mean_std",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.890774420691895,
+      0.8909405545598869,
+      0.8902886321956444
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "region2",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.8886083468005425,
+      0.8887853482930814,
+      0.8901072283582203
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "region4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8911083066985142,
+      0.8911338931798459,
+      0.8900436263535457
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "flat",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8892004433374651,
+      0.8882061165669208,
+      0.8874490675849295
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "dct4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.890994992915025,
+      0.8911911895916739,
+      0.8909656701361133
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "random4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8909721923388663,
+      0.8915142396553394,
+      0.8901797166780523
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "shuffle_region4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8902739102521138,
+      0.8906810504679822,
+      0.8894739261645376
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "shuffle_dct4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8899898758345436,
+      0.8908404492882628,
+      0.8903940829713469
+    ]
+  },
+  {
+    "view": "V0",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "pooled",
+    "readout": "pooled",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8905645553665847,
+      0.890972818144791,
+      0.8890465687971602
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": null,
+    "arch": null,
+    "layer": "input",
+    "readout": "input",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.6339335602623843,
+      0.6443952484706746,
+      0.6448674435688319
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "mean",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9094592125692548,
+      0.9132716796052075,
+      0.9105438666618918
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "mean_std",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9110309353809347,
+      0.9080425530573367,
+      0.907606367314456
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "region2",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.9003928648731577,
+      0.9031730176216001,
+      0.9035984451226713
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8988858321546259,
+      0.8979507736105297,
+      0.8971425753971715
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "flat",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8919230401046687,
+      0.891798456121572,
+      0.8918004109264825
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9086025726087139,
+      0.9058386443407634,
+      0.9045738012011225
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "random4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8876761634326935,
+      0.8898674993262232,
+      0.8892985143006381
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "shuffle_region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8145475455009065,
+      0.8115378926458329,
+      0.8105580362169224
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "shuffle_dct4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.817610184465797,
+      0.8171756878875701,
+      0.8178947990841752
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "mean",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9409925555394355,
+      0.9406014221695228,
+      0.9383005536573422
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "mean_std",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9391667595140322,
+      0.9379562748726812,
+      0.9373719618508652
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "region2",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9418749293500793,
+      0.9401862644098201,
+      0.9389790487883286
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9391551734462592,
+      0.9391326658940428,
+      0.9373581937293745
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "flat",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9304372903393813,
+      0.9290415851098607,
+      0.9287536498005649
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "dct4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9393666081199011,
+      0.9397359604213262,
+      0.9389974311232784
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "random4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9397370540537757,
+      0.9375762231802284,
+      0.936037466014915
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "shuffle_region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9389582076521451,
+      0.9370327361982088,
+      0.9356159813677628
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "shuffle_dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.939147538074507,
+      0.937850106303737,
+      0.9362937886685317
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "mean",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9411713659508503,
+      0.9410473193790895,
+      0.9379904916726903
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "mean_std",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9404598315474241,
+      0.9404418595921854,
+      0.9384109653499128
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "region2",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9401631168352923,
+      0.9409866631186471,
+      0.9395384858693756
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "region4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9403635228351601,
+      0.9407525820169028,
+      0.9380011139592459
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "flat",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9361278094805486,
+      0.9335905901716263,
+      0.9331614365780033
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9405176937077259,
+      0.940122904906306,
+      0.9388878195624871
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "random4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9408553206756384,
+      0.939772824713997,
+      0.9361710167565885
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "shuffle_region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9396640139953037,
+      0.9391620012931358,
+      0.9384498901928895
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "shuffle_dct4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.9386743606850766,
+      0.9391728911887737,
+      0.9394758504990418
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "mean",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9414699489925558,
+      0.9406570634717236,
+      0.9384206701369999
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "mean_std",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.940353208806211,
+      0.9407164053155724,
+      0.9382805216309902
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "region2",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9404319340395934,
+      0.9406883338102072,
+      0.939211985194042
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9406506420868399,
+      0.9404972557826691,
+      0.9378341201199089
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "flat",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9359980409732591,
+      0.9336054471798841,
+      0.9330238487297589
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9406404682674113,
+      0.9398067260657942,
+      0.938773494833553
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "random4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9414034511757431,
+      0.939207026322716,
+      0.9365660640742465
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "shuffle_region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9400043340418834,
+      0.9392883682031314,
+      0.937451265668324
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "shuffle_dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9391309842730785,
+      0.9388900551229858,
+      0.9388972970059579
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "HStem",
+    "layer": "pooled",
+    "readout": "pooled",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9414699489925558,
+      0.9406570634717236,
+      0.9384206701369999
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "mean",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.7589712448787104,
+      0.7728982187797054,
+      0.7733618654966344
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "mean_std",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.7387878243793246,
+      0.7514576008312522,
+      0.7529768274271204
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "region2",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.7755653745561517,
+      0.7806549336154465,
+      0.7815918998465029
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "region4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.7702857474625762,
+      0.7767162076708596,
+      0.776026518182085
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "flat",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.7351519884044263,
+      0.7406098861570031,
+      0.7409007400770703
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "dct4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.7468766303160771,
+      0.7543540289151373,
+      0.7549296144084714
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "random4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.7465112701120457,
+      0.7538299811839707,
+      0.7545693333216975
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "shuffle_region4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.5458660026043152,
+      0.5462413160349081,
+      0.5467852403266821
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "shuffle_dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.5481498584337572,
+      0.5471457909852615,
+      0.5468870339310657
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "mean",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9222306698943009,
+      0.9210457798556465,
+      0.9217271174534013
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "mean_std",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9222055164281046,
+      0.9212183768614511,
+      0.9206854568850028
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "region2",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9238812334700444,
+      0.922423335015087,
+      0.9231269100740738
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9230468305408229,
+      0.922210593696159,
+      0.9223031907603927
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "flat",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9201658895551574,
+      0.9187421609080149,
+      0.9186154190289959
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9225800449143885,
+      0.922465540568624,
+      0.9221981139086127
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "random4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9225403135937337,
+      0.9219380881131864,
+      0.9220040707262847
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "shuffle_region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9202225381764708,
+      0.9178064370134918,
+      0.9170837329650906
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "shuffle_dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.91979663228235,
+      0.9174596844505324,
+      0.9175612375842594
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "mean",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9271566681174527,
+      0.9260884823964894,
+      0.9271484239281321
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "mean_std",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9266126176267783,
+      0.9260171565055906,
+      0.9261759817850962
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "region2",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9273524827814468,
+      0.9275556742032034,
+      0.9269711589543493
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9264817628497495,
+      0.9263361274640937,
+      0.9259770793075096
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "flat",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9281235513420615,
+      0.9276004594000486,
+      0.9274426495070115
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "dct4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9270668974589333,
+      0.9271252909530571,
+      0.926717811846124
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "random4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9277802047079481,
+      0.9263425043354485,
+      0.9268393539525022
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "shuffle_region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9284379080689246,
+      0.9269445841511521,
+      0.9268093491652613
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "shuffle_dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9280417899311669,
+      0.9258155908791251,
+      0.9262803416507754
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "mean",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.927875162936744,
+      0.926364614354649,
+      0.9265691148997646
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "mean_std",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9267745640887481,
+      0.9253367034395076,
+      0.9262140381718639
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "region2",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9274687317216815,
+      0.9275627483401586,
+      0.9269900773042673
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "region4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9263355460158383,
+      0.9266008112521803,
+      0.9256402355261365
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "flat",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9279813264567468,
+      0.9278644475506993,
+      0.9273066908515731
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.92707572655759,
+      0.9265478579375687,
+      0.9268331293338736
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "random4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9274888046474102,
+      0.9262625789272109,
+      0.9268687211675877
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "shuffle_region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9283022881419529,
+      0.9269359859755354,
+      0.9269422350626311
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "shuffle_dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9280319231152423,
+      0.9260873414199522,
+      0.9268211500128066
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 0,
+    "arch": "LongPatch",
+    "layer": "pooled",
+    "readout": "pooled",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.927875162936744,
+      0.926364614354649,
+      0.9265691148997646
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "mean",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.9063318080575967,
+      0.9112580722494875,
+      0.9115978362730349
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "mean_std",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9089654717178495,
+      0.9093283434926286,
+      0.9092045633258877
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "region2",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.8982786579755734,
+      0.8980176539825862,
+      0.8962305578437967
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "region4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8947953348336665,
+      0.8966645499918932,
+      0.8963760253032665
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "flat",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.8810892216794878,
+      0.8817247006223233,
+      0.8818565571624077
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "dct4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9040552871461013,
+      0.9043207237352759,
+      0.9042200073110914
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "random4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8816682065536581,
+      0.8843427484998551,
+      0.8837235873836535
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "shuffle_region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.7974135717774877,
+      0.7944361292157573,
+      0.7939038159172779
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "token",
+    "readout": "shuffle_dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.7956746032697936,
+      0.7952190713038715,
+      0.7942289568180007
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "mean",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.9348083660353232,
+      0.9347492634896146,
+      0.9352173678828021
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "mean_std",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9339760335560623,
+      0.9334955321569068,
+      0.9324101276377911
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "region2",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.9345736831970067,
+      0.9345516512737326,
+      0.9354930434881842
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9352745881410315,
+      0.9338931350199696,
+      0.9344629710996152
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "flat",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9294734664453149,
+      0.9293502210538859,
+      0.9293575358077445
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9351377132106465,
+      0.9347057607874433,
+      0.9346356609420104
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "random4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9361661660683054,
+      0.9347155385905429,
+      0.9349038708322351
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "shuffle_region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9349918582742768,
+      0.9335581630563635,
+      0.9328653039364885
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix1",
+    "readout": "shuffle_dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9354024716255392,
+      0.933839022355739,
+      0.9335512960045729
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "mean",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9355447197838537,
+      0.9345672466968756,
+      0.9349645655319457
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "mean_std",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9352306787904293,
+      0.933199856294692,
+      0.9332906509256057
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "region2",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9359439585223335,
+      0.9349774221084828,
+      0.9356311698098833
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.936694733592355,
+      0.935307189141644,
+      0.9355308783069405
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "flat",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9346227557317609,
+      0.9344969191577032,
+      0.9339340509502297
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9372607309723907,
+      0.9355971438924843,
+      0.9356561812123291
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "random4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9384019967150442,
+      0.9360391613672313,
+      0.9349762681025936
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "shuffle_region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9355744122874746,
+      0.9354111674071302,
+      0.9352627588376765
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "mix2",
+    "readout": "shuffle_dct4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9356911875564743,
+      0.9364157932058844,
+      0.9362394216031819
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "mean",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9358251166582062,
+      0.934711667004004,
+      0.9348118548824167
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "mean_std",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9353772191448945,
+      0.933471984249061,
+      0.9337064404991015
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "region2",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9360716165080829,
+      0.934711156966248,
+      0.9357781421790778
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.936552039528428,
+      0.9351654657856349,
+      0.9355362262006942
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "flat",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9346270057979548,
+      0.9333134137802305,
+      0.9332805012030335
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9372607309723907,
+      0.9360186717463147,
+      0.9359456204176223
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "random4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9383824963158833,
+      0.935597531311414,
+      0.9346503209519454
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "shuffle_region4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.935992997692658,
+      0.936108390323766,
+      0.9351132344064159
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "pre_pool",
+    "readout": "shuffle_dct4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.9358298744638925,
+      0.9359404534725052,
+      0.9360984825009563
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "HStem",
+    "layer": "pooled",
+    "readout": "pooled",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9358251166582062,
+      0.934711667004004,
+      0.9348118548824167
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "mean",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.7562186893030093,
+      0.765338067473636,
+      0.7650979255043677
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "mean_std",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.761826412917893,
+      0.7689842397083541,
+      0.7678451110483899
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "region2",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.7361542002782628,
+      0.7529523622520768,
+      0.754725754307807
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "region4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.7480420566753138,
+      0.7497012621721825,
+      0.7500064493179758
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "flat",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.7283603275839621,
+      0.7300458525910121,
+      0.7315038795937175
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "dct4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.7602293114384563,
+      0.7616438967631297,
+      0.7622017122675145
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "random4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.7278837801663073,
+      0.7318963635815153,
+      0.732347054211966
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "shuffle_region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.5440817325105293,
+      0.5425466333936274,
+      0.5414074932911301
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "token",
+    "readout": "shuffle_dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.5407188352828051,
+      0.5366926521165031,
+      0.5361744352034109
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "mean",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9057683561422977,
+      0.9143781596367568,
+      0.9118891819826667
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "mean_std",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.919294797870008,
+      0.9209023085037217,
+      0.920049013532826
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "region2",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.906735338623679,
+      0.912237517868308,
+      0.9140667454311524
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "region4",
+    "factor": 0.0001,
+    "checkpoint_val_scores": [
+      0.9118481257748954,
+      0.9172873729519947,
+      0.9180080823125557
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "flat",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9118449999481032,
+      0.9103014276808947,
+      0.9098384689494283
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "dct4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9126197500657444,
+      0.9189897792105709,
+      0.9167207039472288
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "random4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.9069453869757925,
+      0.9088634727200943,
+      0.906485608029331
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "shuffle_region4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8980457351583758,
+      0.8988180257009528,
+      0.898349839792394
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix1",
+    "readout": "shuffle_dct4",
+    "factor": 0.01,
+    "checkpoint_val_scores": [
+      0.8979490212732765,
+      0.8985360138723791,
+      0.8972820719839736
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "mean",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9299520232459972,
+      0.9280389104396259,
+      0.9267997828939071
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "mean_std",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9292461704938068,
+      0.9277677330072583,
+      0.9292122807628292
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "region2",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9299698122501053,
+      0.9283041165624072,
+      0.927900854430198
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.929423157711596,
+      0.9261766654636839,
+      0.925998815082613
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "flat",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9280697944427571,
+      0.9274726262632291,
+      0.9269267910244076
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9299960089055475,
+      0.9268245502782735,
+      0.9269616739046177
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "random4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9284253030375965,
+      0.927336716092125,
+      0.9272299852053876
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "shuffle_region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9291178968239495,
+      0.9270962010221084,
+      0.9261883664986326
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "mix2",
+    "readout": "shuffle_dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9287143027160769,
+      0.9262019523629917,
+      0.9251857503745932
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "mean",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9303709990377613,
+      0.9281791818539106,
+      0.9270733627900006
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "mean_std",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9293994748537476,
+      0.927461692405778,
+      0.9288001433717415
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "region2",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9298365037682967,
+      0.9288898008588058,
+      0.9279250974326144
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9291208212466474,
+      0.9258667564851927,
+      0.9263083777638429
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "flat",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9285975081424467,
+      0.9280491260117625,
+      0.9270799520443521
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.929699563971233,
+      0.9269780177969666,
+      0.9269720843574226
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "random4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9289706182666045,
+      0.9273508643660358,
+      0.9271762459914975
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "shuffle_region4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.929127523022971,
+      0.9263558074713153,
+      0.925759764507847
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "pre_pool",
+    "readout": "shuffle_dct4",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9285464713568133,
+      0.9263045189353326,
+      0.925192029720832
+    ]
+  },
+  {
+    "view": "V1",
+    "seed": 1,
+    "arch": "LongPatch",
+    "layer": "pooled",
+    "readout": "pooled",
+    "factor": 0.1,
+    "checkpoint_val_scores": [
+      0.9303709990377613,
+      0.9281791818539106,
+      0.9270733627900006
+    ]
+  }
+]
