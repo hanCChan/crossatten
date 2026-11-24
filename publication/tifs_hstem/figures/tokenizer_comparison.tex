@@ -1,0 +1,32 @@
+\resizebox{.98\textwidth}{!}{%
+\begin{tikzpicture}[
+    font=\small, >={Latex[length=2.2mm]},
+    box/.style={draw=black!55, rounded corners=2pt, align=center, inner sep=5pt, minimum height=12mm},
+    shared/.style={box, text width=34mm, fill=black!4},
+    arm/.style={box, text width=72mm},
+    edge/.style={draw=black!65, line width=.65pt}]
+\node[shared] (input) at (0,0) {\textbf{Shared RF front-end}\\TrueIB and five views\\Kernel-7/5 CNN\\$8192\times32$ features};
+\node[arm,fill=blue!5,draw=blue!60!black] (h0) at (7.0,1.6)
+  {\textbf{HStem}\quad 133,690 parameters\\
+  Four convolution stages, strides $4,4,4,4$\\
+  Three intermediate BN/GELU stages; support $350$};
+\node[arm,fill=teal!5,draw=teal!55!black] (lp) at (7.0,0)
+  {\textbf{Long-Patch}\quad 138,346 parameters\\
+  Grouped kernel 340, stride 256, then pointwise mixing\\
+  Support $350$; same nominal center as HStem};
+\node[arm,fill=black!4] (p0) at (7.0,-1.6)
+  {\textbf{Patch-Lite}\quad 134,266 parameters\\
+  Grouped kernel 256, stride 256, then pointwise mixing\\
+  Support $266$; closer parameter control};
+\node[shared] (output) at (14.0,0) {\textbf{Shared backend}\\$32\times64$ tokens\\Two ordinary MHA blocks\\Pooling and TX head};
+\coordinate (split) at ($(input.east)+(8mm,0)$);
+\coordinate (join) at ($(output.west)-(8mm,0)$);
+\draw[edge] (input.east) -- (split);
+\draw[edge,->] (split) |- (h0.west);
+\draw[edge,->] (split) -- (lp.west);
+\draw[edge,->] (split) |- (p0.west);
+\draw[edge] (h0.east) -| (join);
+\draw[edge] (lp.east) -- (join);
+\draw[edge] (p0.east) -| (join);
+\draw[edge,->] (join) -- (output.west);
+\end{tikzpicture}}

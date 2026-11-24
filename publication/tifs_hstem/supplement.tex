@@ -1,0 +1,121 @@
+\documentclass[journal]{IEEEtran}
+\usepackage{amsmath,amssymb,booktabs,array,graphicx,cite,xurl}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Supplementary Evidence and Reproduction Records: Hierarchical RF Tokenization},pdfauthor={Anonymous working draft}}
+\graphicspath{{figures/}}
+\begin{document}
+\title{Supplementary Evidence and Reproduction Records}
+\author{Anonymous working draft}\maketitle
+\section{All New Fits and Common Inference}
+Only Long-Patch is newly trained. Every fit uses 200 epochs and minimum source RX-equal CE selection. The six source/Dev pairs below are complete, without deleting a weak seed. Target inference occurs after the full source seal. H0/P0 are reused weights; the primary comparison re-evaluates all three arms with identical current GPU precision flags. Historical CPU/GPU values remain separately archived.
+\begin{table*}[t]\centering\caption{All six Long-Patch fits; no replacement seeds.}\label{tab:allfits}
+\begin{tabular}{rrrrrrr}\toprule
+Fold&Seed&Epochs&Best epoch&Source acc.(\%)&Dev acc.(\%)&Fit wall(s)\\\midrule
+0&201&200&156&95.250&91.070&2167.7\\
+0&202&200&171&96.550&95.330&2162.8\\
+0&203&200&171&96.700&95.780&2158.1\\
+1&201&200&129&96.100&94.280&2155.4\\
+1&202&200&159&96.900&96.120&2123.6\\
+1&203&200&153&96.650&94.420&2125.7\\
+\bottomrule\end{tabular}\end{table*}
+The original S26 registration, data-free resource/recovery gate, source recovery, checkpoint/configuration/history seal, access log, saved predictions, and final recomputation audit provide the evidence chain. Summed per-fit wall times overlap under concurrent jobs and are not active GPU time. Atomic recovery restores optimizer, global and data-stream RNG states at a completed epoch; it does not reset a seed after observing a score.
+
+\section{Intermediate BN and GELU}
+The factorial comparison removes the three intermediate tokenizer BN layers (only 352 affine parameters) and/or the three GELUs. The inherited front-end, MHA, nominal support, and source fitting budget are shared. Six fits train the two GELU-deletion arms across both folds and all three seeds, with frozen HStem and No-mid-BN anchors. The paired interaction is $(\mathrm{HStem}-\mathrm{NoGELU})-(\mathrm{NoBN}-\mathrm{NoBNNoGELU})=+1.350$ pp, conditional 95\% RX interval $[0.930,1.750]$. GELU adds $0.752$ pp with BN ($[0.197,1.432]$) and has a mean effect of $-0.598$ pp without BN ($[-1.150,0.168]$). The latter interval includes zero.
+
+\begin{table}[t]\centering
+\caption{Four tokenizer BN--GELU configurations on the historical LoRa development cohort. Accuracy and macro-F1 are RX-equal percentages.}
+\label{tab:factorial}\input{tables/bn_gelu.tex}
+\end{table}
+
+The separately registered held-source pilot of the tokenizers used two receiver units. HStem improved absolute held accuracy by 4.583 pp and 1.383 pp, respectively. Its source-to-held gap changed by $-2.437$ pp and $-0.342$ pp. The second receiver missed the pre-specified gap reduction of 0.5 pp. The pilot limits a claim of receiver-specific degradation reduction even when the average held accuracy increases.
+
+\section{Kernel, Equivalence, and Metadata Evidence}
+\subsection{Kernel Evidence and Its Limits}
+Existing S23 effective-kernel spectra are reused. High-frequency energy over 0.25--0.5 cycles per frontend position averages 21.808/7.692/4.043\% for P0/S1/H1. Across the 18-model descriptive join, energy has Spearman correlation $-.556$ with final $J_w$ and $+.410$ with final conditional RX scatter. Arm, cohort, parameterization, and optimization confound the association (Fig.~\ref{fig:kernels}).
+
+\begin{figure*}[t]\centering
+\includegraphics[width=.96\textwidth]{fig04_mechanism_B.pdf}
+\caption{Mechanism B. Existing effective-kernel spectra and support (left) joined to new frozen source features (right). These filters act on frontend coordinates, not physical transmitter spectra. All 18 applicable fits are retained.}
+\label{fig:kernels}
+\end{figure*}
+
+S23 materialized six S1 models as ordinary 256-tap convolutions with bit-identical logits on 12,000 source predictions. For effective kernel $v=Tw$, $T$ has rank 256: the inference function class need not shrink, while optimization coordinates change. A $TT^\top$ interpretation for idealized SGD is not the exact update of AdamW.
+
+Frozen BN can be absorbed into preceding convolutions, but numerical execution matters. Default TF32-enabled execution failed the fixed logit tolerance in all six H0 checks (maximum difference about .01957), although classifications agreed. Disabling TF32 passed the same $10^{-4}$ tolerance (maximum $5.39\times 10^{-5}$). These failures distinguish training effects from removable inference structure.
+
+\subsection{Source Metadata Diagnostics}
+Only selected legal source-validation rows of supplied CFO/SNR fields were read. That loader does not read the waveform dataset, the fields never enter a network, and no target CFO/SNR was opened. Raw Spearman correlations with true-class margin are accompanied by fixed TX-by-RX-cell centering; constant residuals are NA.
+
+Across 24 models, raw SNR--margin correlations are negative, but centered correlations range approximately $-.028$ to $.058$. Centered absolute-CFO correlations range approximately $-.057$ to $.032$. This does not establish absence of RF effects: metadata, identity, acquisition, and margin scale are intertwined. It illustrates why raw associations cannot explain held-RX errors. Raw and cosine-weight margins include misclassified samples and every fit.
+
+
+\section{Complete External RX Attribution}
+These are the original S24 external and S22 matched archival GPU cohorts. The heatmap retains the two receivers where H0 loses to Native Shen-DANN and the concentration at Pluto-1. Its H0/P0 archival cohort is explicitly distinct from the new S26 common inference.
+\begin{figure*}[t]\centering
+\includegraphics[width=.97\textwidth]{fig05_mechanism_C.pdf}
+\caption{Mechanism C: all ten RXs. S24 H0--DANN uses the common new evaluation; H0--P0 is explicitly the matched archival GPU cohort. Positive favors H0. Neither is a newly independent test.}
+\label{fig:rx}
+\end{figure*}
+
+\section{LoRa Synchronization and TX-Specific Errors}
+The left panel of Fig.~\ref{fig:limits} summarizes the archived source-validation stress test. The right panel retains all ten TXs for Pluto-1 from the frozen external comparison. The panels report separate cohorts.
+\begin{figure*}[t]\centering
+\includegraphics[width=.96\textwidth]{fig07_limits.pdf}
+\caption{Source circular-shift sensitivity (left) and per-TX accuracy at Pluto-1 on the separately evaluated S24 external cohort (right).}
+\label{fig:limits}
+\end{figure*}
+
+\section{Timing and Throughput}
+The separate S26 timing session used an RTX 4060 Laptop GPU, synthetic resident IQ, FP32 tensors, TF32 off for matmul and on for cuDNN, three warmups, and 15 samples. Timings cover IQ-to-logits with GPU-resident inputs. Table~\ref{tab:timing} reports p50 and p95 batch times and the batch-128 rate at p50. The S24 Native timing table in the main paper was measured in a separate session with TF32 off. The two sessions yield within-session comparisons.
+\begin{table*}[t]\centering
+\caption{S26 common timing session. B1 and B128 times are p50/p95 in ms, and throughput is at batch 128.}
+\label{tab:timing}\input{tables/structure_timing.tex}
+\end{table*}
+
+Table~\ref{tab:strict-timing} reports the S24 common-band external timings from the same measurement protocol as S24 Native. The S24 HStem timing in the main paper already uses its in-band path. The Strict-IB ASKNet arm was deferred.
+\begin{table*}[t]\centering
+\caption{S24 measured Strict-IB comparator timings. B1/B128 show p50/p95 in ms.}
+\label{tab:strict-timing}\input{tables/strict_timing.tex}
+\end{table*}
+
+\section{Audit Boundaries and Companion Overlap}
+The existing source validation packets already selected checkpoints; feature diagnostics are exploratory. TrueIB, five views, local frontend, token geometry, and data origin are inherited from the companion OOB manuscript \cite{oobcompanion}. The old six-RX blind set and Confirm RXs have research history and are not newly independent. No new capture is available. Unknown-TX rejection, FAR/FRR, active spoofing, and calibrated real synchronization-offset robustness are untested.
+
+The S25 TF32-off source analysis retained two net one-packet accuracy changes and one additional changed confusion pattern despite identical weights. Its final ratios are computed from that single analysis execution. S26's separate original-precision source recovery and common target-inference comparisons are recorded without overwriting these historical files. Numeric recovery is an execution observation, not permission to select a better result.
+
+Ma's unpretrained Siamese variant is source-compatible in principle \cite{ma2025robust}; the optional externally pretrained variant requires a separate budget. A checked author implementation and a frozen source-only adapter were not qualified here. No simplified network or paper score substitutes for it. This is a remaining coverage limitation, not proof that the method cannot be adapted.
+
+The ten-claim evidence matrix and ten reviewer answers are updated in the repository. They separate measured system effects, exploratory associations, architectural identities, and unresolved mechanisms. Full negative shift and weak-fit results are retained.
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+\clearpage
+\onecolumn
+\section{Frozen-Source PCA Cohorts}
+Each arm uses its own deterministic top-two PCA components of final per-packet L2 features. Every panel shows 50 TX-by-RX source cell centroids. Colors identify TX31--40 and shape identifies source RX. Each model has a separate coordinate system. The main paper reports the quantitative scatter measures.
+\begin{center}
+\includegraphics[width=.94\textwidth]{supp_pca_f0_s201.pdf}\\[2pt]
+\small Fold 0, seed 201. P0, S1, H1, and H0 in separate coordinate systems.
+\end{center}
+\begin{center}
+\includegraphics[width=.94\textwidth]{supp_pca_f0_s202.pdf}\\[2pt]
+\small Fold 0, seed 202. P0, S1, H1, and H0 in separate coordinate systems.
+\end{center}
+\begin{center}
+\includegraphics[width=.94\textwidth]{supp_pca_f0_s203.pdf}\\[2pt]
+\small Fold 0, seed 203. P0, S1, H1, and H0 in separate coordinate systems.
+\end{center}
+\newpage
+\begin{center}
+\includegraphics[width=.94\textwidth]{supp_pca_f1_s201.pdf}\\[2pt]
+\small Fold 1, seed 201. P0, S1, H1, and H0 in separate coordinate systems.
+\end{center}
+\begin{center}
+\includegraphics[width=.94\textwidth]{supp_pca_f1_s202.pdf}\\[2pt]
+\small Fold 1, seed 202. P0, S1, H1, and H0 in separate coordinate systems.
+\end{center}
+\begin{center}
+\includegraphics[width=.94\textwidth]{supp_pca_f1_s203.pdf}\\[2pt]
+\small Fold 1, seed 203. P0, S1, H1, and H0 in separate coordinate systems.
+\end{center}
+\end{document}
