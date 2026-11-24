@@ -1,0 +1,19 @@
+{
+  "time": "2026-11-24T14:26:17+08:00",
+  "kind": "IO_ONLY_POST_COHORT_RECOVERY",
+  "reason": "save_predictions positional filename parameter was named rx and conflicted with the saved rx-array payload. Rename only the storage parameter through a separate committed wrapper; do not change frozen scientific files.",
+  "authorized_scope": "Routine engineering recovery within the already authorized18-fit task; no new scientific training.",
+  "repair_script_sha256": "e1abd610cdeed67d7766477c6d1812b57c2b787d8cab7bb741dfecae9279fce5",
+  "original_evaluator_sha256": "5d84df8ecc75c53ddeb9c73e2f716cc629a3c388eeea06f2ffff042c9522a34c",
+  "original_controller_stderr_sha256": "cd7f39b3dcfe2881593ef0bbf006278259bac98460b1909151dedf60e7862d36",
+  "sealed_cohort_sha256": {
+    "A": "346611f95e128dfd87d101dfad520906ec73056150958e916c6d6f5656fa5c92",
+    "C": "1993936447984bd881781f14ca49f591d810770a640d50542556318855e599eb"
+  },
+  "prior_target_reads": 0,
+  "scientific_fits": 0,
+  "optimizer_steps": 0,
+  "source_prediction_before_failure": "First A frozen baseline Source prediction passed; failed before saving or any Dev/Held read.",
+  "original_error_log_preserved": true,
+  "plan_metric_model_changes": false
+}

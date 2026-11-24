@@ -37,7 +37,13 @@ def main():
                     speed=median([float(b['seconds'])-float(a['seconds']) for a,b in zip(rows[-11:-1],rows[-10:])])/steps
                     per_step.append(speed);specific.setdefault((j['stage'],j['arm']),[]).append(speed)
         failure|=(p/'failure.json').exists()
-    errors='\n'.join(read_text(p) for p in (HERE/'local').glob('controller*.stderr.log'))
+    repair=read(HERE/'TECHNICAL_REPAIR_001.json') if (HERE/'TECHNICAL_REPAIR_001.json').exists() else None
+    import hashlib
+    logs=[]
+    for p in (HERE/'local').glob('controller*.stderr.log'):
+        if repair and p.name=='controller.stderr.log' and hashlib.sha256(p.read_bytes()).hexdigest()==repair['original_controller_stderr_sha256']:continue
+        logs.append(read_text(p))
+    errors='\n'.join(logs)
     failure|='Traceback (most recent call last):' in errors or (HERE/'CONTROLLER_FAILURE.json').exists()
     eta=None
     if per_step:
