@@ -1,2 +1,5 @@
 *.py text eol=lf
 *.md text eol=lf
+
+# Preserve the output bytes bound by the execution and packet ledger hashes.
+evidence/* -text

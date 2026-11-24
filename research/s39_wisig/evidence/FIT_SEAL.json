@@ -1,0 +1,514 @@
+{
+  "records": [
+    {
+      "view": "V0",
+      "seed": 0,
+      "first": {
+        "view": "V0",
+        "seed": 0,
+        "updates": 4320,
+        "observations": 829440,
+        "batch": 192,
+        "epochs": 40,
+        "unique_fit_packets": 16246,
+        "val_rows": 6912,
+        "selected_epoch": 15,
+        "selected_sha": "826da6f638a834c7c2bf270738726532a794a406f899f8423dd8e8c0c9144156",
+        "seconds": 68.24726519999967,
+        "replicated_validation": true
+      },
+      "down": {
+        "status": "COMPLETE",
+        "job": {
+          "id": "TargetExtra_V0_0_downstream",
+          "view": "V0",
+          "stream": "S0",
+          "family": "ERM_EMA",
+          "readouts": [
+            "C0",
+            "C1"
+          ],
+          "weight_decay": 0.001,
+          "initialization_seed": 24101,
+          "order_seed": 24201,
+          "stochastic_seed": 24301,
+          "epochs": 40,
+          "batch": 128,
+          "updates_per_epoch": 127,
+          "max_gradient_updates": 5080
+        },
+        "epochs": 40,
+        "updates": 5080,
+        "best_epochs": {
+          "C0": 1,
+          "C1": 11
+        },
+        "best_val_rx_ce": {
+          "C0": 0.36731570959091187,
+          "C1": 0.3445671498775482
+        },
+        "active_parameters": 82426,
+        "costs": {
+          "training_with_ema_seconds": 42.88740449998295,
+          "raw_validation_seconds": 5.43570369995723,
+          "ema_update_host_seconds": 9.823390600809944,
+          "ema_update_cuda_seconds": 2.212940480977297,
+          "ema_calibration_seconds": 14.259708600031445,
+          "ema_validation_seconds": 4.912522299942793,
+          "BN_calibration_samples": 649840,
+          "BN_calibration_passes": 40,
+          "EMA_updates": 5080,
+          "total_fit_loop_seconds": 70.38662800000748
+        },
+        "val_inference_replay": {
+          "C0_selected": {
+            "exact": true,
+            "max_abs_numeric_difference": 0.0,
+            "differing_paths": [],
+            "differing_path_count": 0
+          },
+          "C0_epoch10": {
+            "exact": true,
+            "max_abs_numeric_difference": 0.0,
+            "differing_paths": [],
+            "differing_path_count": 0
+          },
+          "C0_final40": {
+            "exact": true,
+            "max_abs_numeric_difference": 0.0,
+            "differing_paths": [],
+            "differing_path_count": 0
+          },
+          "C1_selected": {
+            "exact": true,
+            "max_abs_numeric_difference": 0.0,
+            "differing_paths": [],
+            "differing_path_count": 0
+          },
+          "C1_epoch10": {
+            "exact": true,
+            "max_abs_numeric_difference": 0.0,
+            "differing_paths": [],
+            "differing_path_count": 0
+          },
+          "C1_final40": {
+            "exact": true,
+            "max_abs_numeric_difference": 0.0,
+            "differing_paths": [],
+            "differing_path_count": 0
+          }
+        },
+        "group_names": [
+          "13-14",
+          "13-7",
+          "14-7",
+          "18-19",
+          "18-2",
+          "23-5",
+          "23-6",
+          "23-7",
+          "24-13",
+          "24-5",
+          "8-14",
+          "8-7"
+        ],
+        "checkpoints": {
+          "C0_selected.pt": "c0ee6ca526529935839d331a9885b0f71fb16358495cdc11f840428b72a30a38",
+          "C0_epoch10.pt": "2d842185e21aec35b3042be4169844d756d0b7676f9e080794c743da063606d0",
+          "C0_final40.pt": "497c6be3de44977c67124ad2953024a1abf4cab48e2f0f715baa11adc5d459f8",
+          "C1_selected.pt": "0b084cd511fcccd588bdd11fd23663672bdcb7a12a7a2d68efb825d284a3d953",
+          "C1_epoch10.pt": "ecf7e7435118b017b107e60af9cdaae76a2358023f6c7b6f799520c9dee9c3c6",
+          "C1_final40.pt": "2d8d2e4d7a376de21c54225fbf9aa2041bac6931b1b123325f6aeb7a23988bb8"
+        },
+        "view": "V0",
+        "seed": 0,
+        "identical_downstream_order_to_a1": true,
+        "pretrain_sha256": "826da6f638a834c7c2bf270738726532a794a406f899f8423dd8e8c0c9144156"
+      },
+      "weights_sha": "0b084cd511fcccd588bdd11fd23663672bdcb7a12a7a2d68efb825d284a3d953"
+    },
+    {
+      "view": "V0",
+      "seed": 1,
+      "first": {
+        "view": "V0",
+        "seed": 1,
+        "updates": 4320,
+        "observations": 829440,
+        "batch": 192,
+        "epochs": 40,
+        "unique_fit_packets": 16246,
+        "val_rows": 6912,
+        "selected_epoch": 16,
+        "selected_sha": "f5a7cb05a15b45092faa778e31e12e7398d3a572f070e4bb70e796e63c37222f",
+        "seconds": 57.56378989999939,
+        "replicated_validation": true
+      },
+      "down": {
+        "status": "COMPLETE",
+        "job": {
+          "id": "TargetExtra_V0_1_downstream",
+          "view": "V0",
+          "stream": "S1",
+          "family": "ERM_EMA",
+          "readouts": [
+            "C0",
+            "C1"
+          ],
+          "weight_decay": 0.001,
+          "initialization_seed": 24102,
+          "order_seed": 24202,
+          "stochastic_seed": 24301,
+          "epochs": 40,
+          "batch": 128,
+          "updates_per_epoch": 127,
+          "max_gradient_updates": 5080
+        },
+        "epochs": 40,
+        "updates": 5080,
+        "best_epochs": {
+          "C0": 2,
+          "C1": 10
+        },
+        "best_val_rx_ce": {
+          "C0": 0.37291282415390015,
+          "C1": 0.33590036630630493
+        },
+        "active_parameters": 82426,
+        "costs": {
+          "training_with_ema_seconds": 43.329607299980125,
+          "raw_validation_seconds": 5.211608399942634,
+          "ema_update_host_seconds": 9.443371000015759,
+          "ema_update_cuda_seconds": 2.3031537910997866,
+          "ema_calibration_seconds": 14.31067329995858,
+          "ema_validation_seconds": 4.967577800038271,
+          "BN_calibration_samples": 649840,
+          "BN_calibration_passes": 40,
+          "EMA_updates": 5080,
+          "total_fit_loop_seconds": 70.72267519999878
+        },
+        "val_inference_replay": {
+          "C0_selected": {
+            "exact": true,
+            "max_abs_numeric_difference": 0.0,
+            "differing_paths": [],
+            "differing_path_count": 0
+          },
+          "C0_epoch10": {
+            "exact": true,
+            "max_abs_numeric_difference": 0.0,
+            "differing_paths": [],
+            "differing_path_count": 0
+          },
+          "C0_final40": {
+            "exact": true,
+            "max_abs_numeric_difference": 0.0,
+            "differing_paths": [],
+            "differing_path_count": 0
+          },
+          "C1_selected": {
+            "exact": true,
+            "max_abs_numeric_difference": 0.0,
+            "differing_paths": [],
+            "differing_path_count": 0
+          },
+          "C1_epoch10": {
+            "exact": true,
+            "max_abs_numeric_difference": 0.0,
+            "differing_paths": [],
+            "differing_path_count": 0
+          },
+          "C1_final40": {
+            "exact": true,
+            "max_abs_numeric_difference": 0.0,
+            "differing_paths": [],
+            "differing_path_count": 0
+          }
+        },
+        "group_names": [
+          "13-14",
+          "13-7",
+          "14-7",
+          "18-19",
+          "18-2",
+          "23-5",
+          "23-6",
+          "23-7",
+          "24-13",
+          "24-5",
+          "8-14",
+          "8-7"
+        ],
+        "checkpoints": {
+          "C0_selected.pt": "33e37ea30585c44dbb44ca13e33dd015d31bf6264e2f6269c3599d86e2e7074d",
+          "C0_epoch10.pt": "7854256de0a6574fa04dff35e89f907f059ab17737a142abf4d8b164ea728087",
+          "C0_final40.pt": "1f2136da39d7310ab00b1e868ff8fd6cfd2662451ed145171706b236cc7717bf",
+          "C1_selected.pt": "f6d2fb36dd7aea9cb159a47c5c5ecf62f3dfc8fd3bf17925f83030bf900a77a1",
+          "C1_epoch10.pt": "5cce6d7dfc5568dc7ed4b52f2792db8e016735b469ebd3f1c8e0cf761fe1a5c2",
+          "C1_final40.pt": "47febef9ad4f518c0f84871843675b908dfb0eb1ba33c3fafcd76cb32213d8d9"
+        },
+        "view": "V0",
+        "seed": 1,
+        "identical_downstream_order_to_a1": true,
+        "pretrain_sha256": "f5a7cb05a15b45092faa778e31e12e7398d3a572f070e4bb70e796e63c37222f"
+      },
+      "weights_sha": "f6d2fb36dd7aea9cb159a47c5c5ecf62f3dfc8fd3bf17925f83030bf900a77a1"
+    },
+    {
+      "view": "V1",
+      "seed": 0,
+      "first": {
+        "view": "V1",
+        "seed": 0,
+        "updates": 4320,
+        "observations": 829440,
+        "batch": 192,
+        "epochs": 40,
+        "unique_fit_packets": 16173,
+        "val_rows": 6912,
+        "selected_epoch": 16,
+        "selected_sha": "340db1105577d6753fff53304c6712c242bfe604e3f50492f2678c8d2623021c",
+        "seconds": 57.97466859999986,
+        "replicated_validation": true
+      },
+      "down": {
+        "status": "COMPLETE",
+        "job": {
+          "id": "TargetExtra_V1_0_downstream",
+          "view": "V1",
+          "stream": "S0",
+          "family": "ERM_EMA",
+          "readouts": [
+            "C0",
+            "C1"
+          ],
+          "weight_decay": 0.001,
+          "initialization_seed": 24101,
+          "order_seed": 24201,
+          "stochastic_seed": 24301,
+          "epochs": 40,
+          "batch": 128,
+          "updates_per_epoch": 127,
+          "max_gradient_updates": 5080
+        },
+        "epochs": 40,
+        "updates": 5080,
+        "best_epochs": {
+          "C0": 1,
+          "C1": 12
+        },
+        "best_val_rx_ce": {
+          "C0": 0.24549299478530884,
+          "C1": 0.21890848875045776
+        },
+        "active_parameters": 82426,
+        "costs": {
+          "training_with_ema_seconds": 43.39078240003437,
+          "raw_validation_seconds": 5.427169499991578,
+          "ema_update_host_seconds": 9.092233599731117,
+          "ema_update_cuda_seconds": 2.344276159733534,
+          "ema_calibration_seconds": 14.402890499972273,
+          "ema_validation_seconds": 5.195716000031098,
+          "BN_calibration_samples": 646920,
+          "BN_calibration_passes": 40,
+          "EMA_updates": 5080,
+          "total_fit_loop_seconds": 71.45350220000546
+        },
+        "val_inference_replay": {
+          "C0_selected": {
+            "exact": true,
+            "max_abs_numeric_difference": 0.0,
+            "differing_paths": [],
+            "differing_path_count": 0
+          },
+          "C0_epoch10": {
+            "exact": true,
+            "max_abs_numeric_difference": 0.0,
+            "differing_paths": [],
+            "differing_path_count": 0
+          },
+          "C0_final40": {
+            "exact": true,
+            "max_abs_numeric_difference": 0.0,
+            "differing_paths": [],
+            "differing_path_count": 0
+          },
+          "C1_selected": {
+            "exact": true,
+            "max_abs_numeric_difference": 0.0,
+            "differing_paths": [],
+            "differing_path_count": 0
+          },
+          "C1_epoch10": {
+            "exact": true,
+            "max_abs_numeric_difference": 0.0,
+            "differing_paths": [],
+            "differing_path_count": 0
+          },
+          "C1_final40": {
+            "exact": true,
+            "max_abs_numeric_difference": 0.0,
+            "differing_paths": [],
+            "differing_path_count": 0
+          }
+        },
+        "group_names": [
+          "14-7",
+          "18-19",
+          "18-2",
+          "23-3",
+          "23-5",
+          "23-7",
+          "24-16",
+          "24-6",
+          "7-14",
+          "7-7",
+          "8-7",
+          "8-8"
+        ],
+        "checkpoints": {
+          "C0_selected.pt": "a039497b7210c01d3abebd885871895ba54f2a1376cc57988a7926e558738aac",
+          "C0_epoch10.pt": "bef19238e3c12f47d20ed19fb54aad69387da903320219f5be29b2d2345a28a2",
+          "C0_final40.pt": "4655c6cfbb2634f3e21c547ec0a6f4a825504a2b78101992259146a4e749be96",
+          "C1_selected.pt": "ce640b0948c0c75de856af7b160ab1213b84a6abf451094984eefbaaaaf2330a",
+          "C1_epoch10.pt": "bb455171a942497aa3e16fde1d77759dada192cc3dd1418cc612c8bd36bb4ca8",
+          "C1_final40.pt": "9e21f6352825b4cc8b3fe59831e9dcd3c1d98e3d8869fe2406c58e2202ff6cdf"
+        },
+        "view": "V1",
+        "seed": 0,
+        "identical_downstream_order_to_a1": true,
+        "pretrain_sha256": "340db1105577d6753fff53304c6712c242bfe604e3f50492f2678c8d2623021c"
+      },
+      "weights_sha": "ce640b0948c0c75de856af7b160ab1213b84a6abf451094984eefbaaaaf2330a"
+    },
+    {
+      "view": "V1",
+      "seed": 1,
+      "first": {
+        "view": "V1",
+        "seed": 1,
+        "updates": 4320,
+        "observations": 829440,
+        "batch": 192,
+        "epochs": 40,
+        "unique_fit_packets": 16173,
+        "val_rows": 6912,
+        "selected_epoch": 17,
+        "selected_sha": "d42c38aed3bfde2320b3ee4a75ead9d6d61b70929f7c524d17b828f6019afbb7",
+        "seconds": 57.386774600003264,
+        "replicated_validation": true
+      },
+      "down": {
+        "status": "COMPLETE",
+        "job": {
+          "id": "TargetExtra_V1_1_downstream",
+          "view": "V1",
+          "stream": "S1",
+          "family": "ERM_EMA",
+          "readouts": [
+            "C0",
+            "C1"
+          ],
+          "weight_decay": 0.001,
+          "initialization_seed": 24102,
+          "order_seed": 24202,
+          "stochastic_seed": 24301,
+          "epochs": 40,
+          "batch": 128,
+          "updates_per_epoch": 127,
+          "max_gradient_updates": 5080
+        },
+        "epochs": 40,
+        "updates": 5080,
+        "best_epochs": {
+          "C0": 3,
+          "C1": 12
+        },
+        "best_val_rx_ce": {
+          "C0": 0.2502794861793518,
+          "C1": 0.22230613231658936
+        },
+        "active_parameters": 82426,
+        "costs": {
+          "training_with_ema_seconds": 40.705925999965984,
+          "raw_validation_seconds": 5.15621159998409,
+          "ema_update_host_seconds": 9.462492000413476,
+          "ema_update_cuda_seconds": 2.107330047190189,
+          "ema_calibration_seconds": 14.16688400003477,
+          "ema_validation_seconds": 4.772635999994236,
+          "BN_calibration_samples": 646920,
+          "BN_calibration_passes": 40,
+          "EMA_updates": 5080,
+          "total_fit_loop_seconds": 67.74986320000608
+        },
+        "val_inference_replay": {
+          "C0_selected": {
+            "exact": true,
+            "max_abs_numeric_difference": 0.0,
+            "differing_paths": [],
+            "differing_path_count": 0
+          },
+          "C0_epoch10": {
+            "exact": true,
+            "max_abs_numeric_difference": 0.0,
+            "differing_paths": [],
+            "differing_path_count": 0
+          },
+          "C0_final40": {
+            "exact": true,
+            "max_abs_numeric_difference": 0.0,
+            "differing_paths": [],
+            "differing_path_count": 0
+          },
+          "C1_selected": {
+            "exact": true,
+            "max_abs_numeric_difference": 0.0,
+            "differing_paths": [],
+            "differing_path_count": 0
+          },
+          "C1_epoch10": {
+            "exact": true,
+            "max_abs_numeric_difference": 0.0,
+            "differing_paths": [],
+            "differing_path_count": 0
+          },
+          "C1_final40": {
+            "exact": true,
+            "max_abs_numeric_difference": 0.0,
+            "differing_paths": [],
+            "differing_path_count": 0
+          }
+        },
+        "group_names": [
+          "14-7",
+          "18-19",
+          "18-2",
+          "23-3",
+          "23-5",
+          "23-7",
+          "24-16",
+          "24-6",
+          "7-14",
+          "7-7",
+          "8-7",
+          "8-8"
+        ],
+        "checkpoints": {
+          "C0_selected.pt": "a2373c1fd836f409a981ad6f6c7a33cf68cc178b2f7e6e1e8b5ed6adebb4a71d",
+          "C0_epoch10.pt": "694e76c4d93f66dba4fb3cc0a58aa00238a374a88493b75dc490b841b8e90a0e",
+          "C0_final40.pt": "a2edd60cb819c01ac0e9dfe9d41149b27470c8c55e07c032545d3f585fc6cdb8",
+          "C1_selected.pt": "8fbd85abd7b22a15abcb1e235b9d7f60e5a369ac61f122ff99ded6cd9a73453d",
+          "C1_epoch10.pt": "3abb26de0c89de9109d4f150fa53b9ec4ece96e23f9664d97ecb42479e1f4eb4",
+          "C1_final40.pt": "003ad86e626819e1926aa9e5deee66d11e2dbfd9446fb06989a053c646739026"
+        },
+        "view": "V1",
+        "seed": 1,
+        "identical_downstream_order_to_a1": true,
+        "pretrain_sha256": "d42c38aed3bfde2320b3ee4a75ead9d6d61b70929f7c524d17b828f6019afbb7"
+      },
+      "weights_sha": "8fbd85abd7b22a15abcb1e235b9d7f60e5a369ac61f122ff99ded6cd9a73453d"
+    }
+  ],
+  "fits": 8,
+  "updates": 37600
+}
