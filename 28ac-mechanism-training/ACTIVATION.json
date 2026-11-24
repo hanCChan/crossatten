@@ -1,0 +1,19 @@
+{
+  "time": "2026-11-24T10:24:09+08:00",
+  "base_git": "de7d0100c5bcce4a389f756bc8fe46c73aa9787e",
+  "authorized_scientific_fits": 18,
+  "A_fits": 6,
+  "C_fits": 12,
+  "user_authority": "2026-11-24 user explicitly authorizes A+C,18scientific fits,fromde7d010; A6 then C12 regardless of A outcome.",
+  "A_plan_sha256": "91b27b11dd40ad227489c5e877b2a4a667dd0c958518c8db3270a61433fce7d0",
+  "C_plan_sha256": "3a07348742937584bfdbca24c6e88fb1b44a472b454c5ac53ccc966f71fb9507",
+  "initial_S28_zero_fit_record_preserved": true,
+  "delay_all_target_inference_until_both_cohorts_seal": true,
+  "no_result_adaptive_C_modification": true,
+  "other_scientific_fits": 0,
+  "stop_after_18": true,
+  "initialization_interpretation": "A uses PLAN_A top-level invariant: fullstate equalsH2, survivingstate equalsH0; removedBNstate is absent. C freshly initialized from S27C-H4x160.",
+  "C_Jc_scope": "Held-only singleRX acrossRXscatter is not identifiable; preserve algebraic regularized ratio separately without treating it as invariance.",
+  "decisions": "A and C designs do not adapt to each other. Shared data/history mean no claim of statistically independent datasets.",
+  "resume": "Complete epoch current/bestmodel,optimizer,allRNG,history atomic snapshot; PAUSE_REQUESTED saves and stops at epoch boundaries. No replacement seeds."
+}

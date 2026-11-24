@@ -1,0 +1,1491 @@
+{
+  "time": "2026-11-24T10:24:10+08:00",
+  "stage": "S28_A_PLUS_ORIGINAL_S27_C_EXECUTION",
+  "base_git": "de7d0100c5bcce4a389f756bc8fe46c73aa9787e",
+  "maximum_new_fits": 18,
+  "jobs": [
+    {
+      "stage": "A",
+      "arm": "H2_LA",
+      "fold": 0,
+      "seed": 201
+    },
+    {
+      "stage": "A",
+      "arm": "H2_LA",
+      "fold": 0,
+      "seed": 202
+    },
+    {
+      "stage": "A",
+      "arm": "H2_LA",
+      "fold": 0,
+      "seed": 203
+    },
+    {
+      "stage": "A",
+      "arm": "H2_LA",
+      "fold": 1,
+      "seed": 201
+    },
+    {
+      "stage": "A",
+      "arm": "H2_LA",
+      "fold": 1,
+      "seed": 202
+    },
+    {
+      "stage": "A",
+      "arm": "H2_LA",
+      "fold": 1,
+      "seed": 203
+    },
+    {
+      "stage": "C",
+      "arm": "H0",
+      "fold": 0,
+      "seed": 201
+    },
+    {
+      "stage": "C",
+      "arm": "LP",
+      "fold": 0,
+      "seed": 201
+    },
+    {
+      "stage": "C",
+      "arm": "H0",
+      "fold": 0,
+      "seed": 202
+    },
+    {
+      "stage": "C",
+      "arm": "LP",
+      "fold": 0,
+      "seed": 202
+    },
+    {
+      "stage": "C",
+      "arm": "H0",
+      "fold": 0,
+      "seed": 203
+    },
+    {
+      "stage": "C",
+      "arm": "LP",
+      "fold": 0,
+      "seed": 203
+    },
+    {
+      "stage": "C",
+      "arm": "H0",
+      "fold": 1,
+      "seed": 201
+    },
+    {
+      "stage": "C",
+      "arm": "LP",
+      "fold": 1,
+      "seed": 201
+    },
+    {
+      "stage": "C",
+      "arm": "H0",
+      "fold": 1,
+      "seed": 202
+    },
+    {
+      "stage": "C",
+      "arm": "LP",
+      "fold": 1,
+      "seed": 202
+    },
+    {
+      "stage": "C",
+      "arm": "H0",
+      "fold": 1,
+      "seed": 203
+    },
+    {
+      "stage": "C",
+      "arm": "LP",
+      "fold": 1,
+      "seed": 203
+    }
+  ],
+  "stages": {
+    "A": 6,
+    "C": 12
+  },
+  "reference_models": 24,
+  "references": [
+    {
+      "id": "H0_f0_s201",
+      "arm": "H0",
+      "fold": 0,
+      "seed": 201,
+      "checkpoint": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s201\\model.pt",
+      "sha256": {
+        "model.pt": "be14533e73c5b83c3534e09a5837dc013f5e5b001b95396984c8f6d4e8ec6833",
+        "config.json": "6a1c50c769db70664cc71215841a206d675b28dc1df49f4a3690be26285b0955",
+        "metrics.json": "ec24bfc09e8eb22eace0e3fbcc6a7965586bdfcaf6a5281a24a6e631d53649cc",
+        "history.csv": "ebc36cb7967194cb424d4255a5f34d714f6b6049f7930e992415f66a0b0422ae"
+      },
+      "predictions": {
+        "b200_mini_1": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s201\\preds_dev_val.npz",
+          "sha256": "59a996b4412c078f4c6a708d8b0246cb6bbde713cfff09e8e735031a03f6aef2",
+          "y_key": "y_b200_mini_1",
+          "logits_key": "b200_mini_1"
+        },
+        "pluto_1": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s201\\preds_dev_val.npz",
+          "sha256": "59a996b4412c078f4c6a708d8b0246cb6bbde713cfff09e8e735031a03f6aef2",
+          "y_key": "y_pluto_1",
+          "logits_key": "pluto_1"
+        },
+        "rtl_2": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s201\\preds_dev_val.npz",
+          "sha256": "59a996b4412c078f4c6a708d8b0246cb6bbde713cfff09e8e735031a03f6aef2",
+          "y_key": "y_rtl_2",
+          "logits_key": "rtl_2"
+        },
+        "rtl_5": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s201\\preds_dev_val.npz",
+          "sha256": "59a996b4412c078f4c6a708d8b0246cb6bbde713cfff09e8e735031a03f6aef2",
+          "y_key": "y_rtl_5",
+          "logits_key": "rtl_5"
+        },
+        "rtl_7": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s201\\preds_dev_val.npz",
+          "sha256": "59a996b4412c078f4c6a708d8b0246cb6bbde713cfff09e8e735031a03f6aef2",
+          "y_key": "y_rtl_7",
+          "logits_key": "rtl_7"
+        }
+      }
+    },
+    {
+      "id": "H0_f0_s202",
+      "arm": "H0",
+      "fold": 0,
+      "seed": 202,
+      "checkpoint": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s202\\model.pt",
+      "sha256": {
+        "model.pt": "abf47db65b28d02f51bde927ba9a0a5473f445df4cbb53a5f0f26938af7334ca",
+        "config.json": "9f3e573b8ab50e238d6c4fac55d23138720ebcf7db733a74873c280faa8b3dc5",
+        "metrics.json": "4226548e1f6e42df614c2c01ebb4efec33066fe39b078916adb9131b647ef5d2",
+        "history.csv": "c4201741eeea5c8141498ce27159222bddf09eaf68b0f6c77a9279fc71034280"
+      },
+      "predictions": {
+        "b200_mini_1": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s202\\preds_dev_val.npz",
+          "sha256": "79a2eaad7636c7feb222e45165c34c9eebb1f433c3a81b575ace3cfe17182655",
+          "y_key": "y_b200_mini_1",
+          "logits_key": "b200_mini_1"
+        },
+        "pluto_1": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s202\\preds_dev_val.npz",
+          "sha256": "79a2eaad7636c7feb222e45165c34c9eebb1f433c3a81b575ace3cfe17182655",
+          "y_key": "y_pluto_1",
+          "logits_key": "pluto_1"
+        },
+        "rtl_2": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s202\\preds_dev_val.npz",
+          "sha256": "79a2eaad7636c7feb222e45165c34c9eebb1f433c3a81b575ace3cfe17182655",
+          "y_key": "y_rtl_2",
+          "logits_key": "rtl_2"
+        },
+        "rtl_5": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s202\\preds_dev_val.npz",
+          "sha256": "79a2eaad7636c7feb222e45165c34c9eebb1f433c3a81b575ace3cfe17182655",
+          "y_key": "y_rtl_5",
+          "logits_key": "rtl_5"
+        },
+        "rtl_7": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s202\\preds_dev_val.npz",
+          "sha256": "79a2eaad7636c7feb222e45165c34c9eebb1f433c3a81b575ace3cfe17182655",
+          "y_key": "y_rtl_7",
+          "logits_key": "rtl_7"
+        }
+      }
+    },
+    {
+      "id": "H0_f0_s203",
+      "arm": "H0",
+      "fold": 0,
+      "seed": 203,
+      "checkpoint": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s203\\model.pt",
+      "sha256": {
+        "model.pt": "8abe846f047a4b215aeb1f5c57baad2e25b21614cb329b27e12f1a4e9e11e7cb",
+        "config.json": "c1745e1fe10ee5603e0e4ca054700e0369e6c6d1862c8023f1b4327cd442524a",
+        "metrics.json": "9f0cf4a6891c1dbd244596c5003a77e9dd56edd99720761a0fa96b22c830ac73",
+        "history.csv": "cf2937730ae72e32d769e5030faa352f0c1d23fee1b0cb04446fd644aec679b7"
+      },
+      "predictions": {
+        "b200_mini_1": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s203\\preds_dev_val.npz",
+          "sha256": "2e2084275287419c8b75ba8a05f5e29ad8686b23bda3f8181a5d3bae15b275ab",
+          "y_key": "y_b200_mini_1",
+          "logits_key": "b200_mini_1"
+        },
+        "pluto_1": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s203\\preds_dev_val.npz",
+          "sha256": "2e2084275287419c8b75ba8a05f5e29ad8686b23bda3f8181a5d3bae15b275ab",
+          "y_key": "y_pluto_1",
+          "logits_key": "pluto_1"
+        },
+        "rtl_2": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s203\\preds_dev_val.npz",
+          "sha256": "2e2084275287419c8b75ba8a05f5e29ad8686b23bda3f8181a5d3bae15b275ab",
+          "y_key": "y_rtl_2",
+          "logits_key": "rtl_2"
+        },
+        "rtl_5": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s203\\preds_dev_val.npz",
+          "sha256": "2e2084275287419c8b75ba8a05f5e29ad8686b23bda3f8181a5d3bae15b275ab",
+          "y_key": "y_rtl_5",
+          "logits_key": "rtl_5"
+        },
+        "rtl_7": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f0__all__s203\\preds_dev_val.npz",
+          "sha256": "2e2084275287419c8b75ba8a05f5e29ad8686b23bda3f8181a5d3bae15b275ab",
+          "y_key": "y_rtl_7",
+          "logits_key": "rtl_7"
+        }
+      }
+    },
+    {
+      "id": "H0_f1_s201",
+      "arm": "H0",
+      "fold": 1,
+      "seed": 201,
+      "checkpoint": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s201\\model.pt",
+      "sha256": {
+        "model.pt": "0996333761c13f30703acb0e3051ff676ea1f5dfa6fb1f0b04b4ccc3a7a48119",
+        "config.json": "b591db1b8c418c7f66a9da39a7064b57c33bc7cd9dd3f0f0d263a4f8cc35071a",
+        "metrics.json": "72a345d4293e175e9636ebc49950672e60766f072577164eb902874b1cfbe4e7",
+        "history.csv": "0f61ce80888ec74e2801f900c57f49011e0b93f817728ba862ab0a5963ffca5d"
+      },
+      "predictions": {
+        "b210_1": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s201\\preds_dev_val.npz",
+          "sha256": "cae8b0f5cd999522d3617854b66231b7aa7698124534cdd6045978706ddca394",
+          "y_key": "y_b210_1",
+          "logits_key": "b210_1"
+        },
+        "rtl_1": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s201\\preds_dev_val.npz",
+          "sha256": "cae8b0f5cd999522d3617854b66231b7aa7698124534cdd6045978706ddca394",
+          "y_key": "y_rtl_1",
+          "logits_key": "rtl_1"
+        },
+        "rtl_3": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s201\\preds_dev_val.npz",
+          "sha256": "cae8b0f5cd999522d3617854b66231b7aa7698124534cdd6045978706ddca394",
+          "y_key": "y_rtl_3",
+          "logits_key": "rtl_3"
+        },
+        "rtl_6": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s201\\preds_dev_val.npz",
+          "sha256": "cae8b0f5cd999522d3617854b66231b7aa7698124534cdd6045978706ddca394",
+          "y_key": "y_rtl_6",
+          "logits_key": "rtl_6"
+        },
+        "rtl_9": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s201\\preds_dev_val.npz",
+          "sha256": "cae8b0f5cd999522d3617854b66231b7aa7698124534cdd6045978706ddca394",
+          "y_key": "y_rtl_9",
+          "logits_key": "rtl_9"
+        }
+      }
+    },
+    {
+      "id": "H0_f1_s202",
+      "arm": "H0",
+      "fold": 1,
+      "seed": 202,
+      "checkpoint": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s202\\model.pt",
+      "sha256": {
+        "model.pt": "75b252c7984d013eba842b0691b44a7f3af96bbb830aba3617823d4f0c4048c9",
+        "config.json": "551d33ff33cd94d7191a736d6ed2247b21436d3adba7536952bdc5a46791356b",
+        "metrics.json": "52f695aea5c3f40ceec0a937ed00dc7fd11558a5bebb5deb6d026db10202361f",
+        "history.csv": "6224f29970e27bcb24402810e50f3b8e96e5ffae85961477ad213ceb1d7cf8d2"
+      },
+      "predictions": {
+        "b210_1": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s202\\preds_dev_val.npz",
+          "sha256": "2842622370cdb057d2f75df61edf9e0b8e2a790b96b0bbae4b8845b50d97f976",
+          "y_key": "y_b210_1",
+          "logits_key": "b210_1"
+        },
+        "rtl_1": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s202\\preds_dev_val.npz",
+          "sha256": "2842622370cdb057d2f75df61edf9e0b8e2a790b96b0bbae4b8845b50d97f976",
+          "y_key": "y_rtl_1",
+          "logits_key": "rtl_1"
+        },
+        "rtl_3": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s202\\preds_dev_val.npz",
+          "sha256": "2842622370cdb057d2f75df61edf9e0b8e2a790b96b0bbae4b8845b50d97f976",
+          "y_key": "y_rtl_3",
+          "logits_key": "rtl_3"
+        },
+        "rtl_6": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s202\\preds_dev_val.npz",
+          "sha256": "2842622370cdb057d2f75df61edf9e0b8e2a790b96b0bbae4b8845b50d97f976",
+          "y_key": "y_rtl_6",
+          "logits_key": "rtl_6"
+        },
+        "rtl_9": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s202\\preds_dev_val.npz",
+          "sha256": "2842622370cdb057d2f75df61edf9e0b8e2a790b96b0bbae4b8845b50d97f976",
+          "y_key": "y_rtl_9",
+          "logits_key": "rtl_9"
+        }
+      }
+    },
+    {
+      "id": "H0_f1_s203",
+      "arm": "H0",
+      "fold": 1,
+      "seed": 203,
+      "checkpoint": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s203\\model.pt",
+      "sha256": {
+        "model.pt": "fec5bfade4d1d90faf89dc6f5b42dec243e3a7e3f2cb06b15cd255bd79f17314",
+        "config.json": "3ec97b0e80816abbe7963fcb0494ba5a18cd54c01a8db7899c8c3a3fd7fe4895",
+        "metrics.json": "9e030a37ad1e89541fbf32465d48b7d3a93c0c3d7d5e763b386b986af1fb1e2a",
+        "history.csv": "07459679c9c8d2b7dd3ccf0a4af9ce8051dc52d23aee61be7415c11b6ffaf3b6"
+      },
+      "predictions": {
+        "b210_1": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s203\\preds_dev_val.npz",
+          "sha256": "ffdd7d02cfef31f8a381294930f0e9442d7a09f3f7aa2729e620954f09d2d6a3",
+          "y_key": "y_b210_1",
+          "logits_key": "b210_1"
+        },
+        "rtl_1": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s203\\preds_dev_val.npz",
+          "sha256": "ffdd7d02cfef31f8a381294930f0e9442d7a09f3f7aa2729e620954f09d2d6a3",
+          "y_key": "y_rtl_1",
+          "logits_key": "rtl_1"
+        },
+        "rtl_3": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s203\\preds_dev_val.npz",
+          "sha256": "ffdd7d02cfef31f8a381294930f0e9442d7a09f3f7aa2729e620954f09d2d6a3",
+          "y_key": "y_rtl_3",
+          "logits_key": "rtl_3"
+        },
+        "rtl_6": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s203\\preds_dev_val.npz",
+          "sha256": "ffdd7d02cfef31f8a381294930f0e9442d7a09f3f7aa2729e620954f09d2d6a3",
+          "y_key": "y_rtl_6",
+          "logits_key": "rtl_6"
+        },
+        "rtl_9": {
+          "path": "D:\\crossatten\\stage_1\\13-mixer-cfo-mechanisms\\runs\\p1__Shen__A1_mha__f1__all__s203\\preds_dev_val.npz",
+          "sha256": "ffdd7d02cfef31f8a381294930f0e9442d7a09f3f7aa2729e620954f09d2d6a3",
+          "y_key": "y_rtl_9",
+          "logits_key": "rtl_9"
+        }
+      }
+    },
+    {
+      "id": "LP_f0_s201",
+      "arm": "LP",
+      "fold": 0,
+      "seed": 201,
+      "checkpoint": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\runs\\LP_f0_s201\\model.pt",
+      "sha256": {
+        "model.pt": "ecd905c876fe47de8bdd8387602c421db3c0a6533909f53dc2696a4c93903f3a",
+        "config.json": "bd3da75ecdc9f1a94b146ab9e80a81fe874a560bc5fa2ec4e1ad50299e8c7802",
+        "metrics.json": "69e70cc7a527c72dc486dbb50423c8783d0bacadbfc8259c47baf83b1db88158",
+        "history.csv": "4d5b24a77dc9d1201fc573fa8865d0a883690832fb535d2b083a54f4896763e3"
+      },
+      "predictions": {
+        "b200_mini_1": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f0_s201\\b200_mini_1.npz",
+          "sha256": "4ebc70ea5ae731359adee5f419daabb8ecbd9c7615dd5e314db4df41cd5f4a58",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "pluto_1": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f0_s201\\pluto_1.npz",
+          "sha256": "bd9b709eefd37ee84168cf8622c1ad31add088f7582e5cbacddb5fb3a8e1139e",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_2": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f0_s201\\rtl_2.npz",
+          "sha256": "a31554e29459615cd79cb3fe191d31b11cfcfe256377288152db56f667e91399",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_5": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f0_s201\\rtl_5.npz",
+          "sha256": "c4cbf9e409ee22af07bbbe0bb9ddf2b5f774ac518d82b10e7a9cbf20a19ccc97",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_7": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f0_s201\\rtl_7.npz",
+          "sha256": "0d7e600ae5b2ea9eaf085fa0bde7d142c29b94ae6eb101699bfcdb35d351e77f",
+          "y_key": "y",
+          "logits_key": "logits"
+        }
+      }
+    },
+    {
+      "id": "LP_f0_s202",
+      "arm": "LP",
+      "fold": 0,
+      "seed": 202,
+      "checkpoint": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\runs\\LP_f0_s202\\model.pt",
+      "sha256": {
+        "model.pt": "bde91e8e6f4fdb9ef8adb19c5cf5c2077b113b0232ec4d0ce1db40f266ac0eb7",
+        "config.json": "0444da035701505973536479a930cbbdea9ec4bb0f72a696818d51b55cb0e450",
+        "metrics.json": "dad1c07f118e0aad89a03daac4cf72a94af67f87c65fa369f1a74b18c2d5b7ef",
+        "history.csv": "525990205bbcedb6843b46b330a581b97d85a79ec12f2b454b185db0fe9939b6"
+      },
+      "predictions": {
+        "b200_mini_1": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f0_s202\\b200_mini_1.npz",
+          "sha256": "045beafd20c35808d27cfdd2c6c68ba54672775557332fb01078bb9aed37e327",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "pluto_1": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f0_s202\\pluto_1.npz",
+          "sha256": "fd40443f6e294af58dc7a43ec349ea099fc1f88f06758cca4526e9ccada29528",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_2": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f0_s202\\rtl_2.npz",
+          "sha256": "a9bf1411f419418135948a7549bba36b5dc67d901fbbb364143cb689c820947d",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_5": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f0_s202\\rtl_5.npz",
+          "sha256": "447e533d18194d009d4386bcddbde6728d7f3b0a06fd071070e7e2adf9fa2058",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_7": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f0_s202\\rtl_7.npz",
+          "sha256": "d3a5599b60c3f499c89afc107f8df7a38c5eb4037f879f7ca02ce6529b428892",
+          "y_key": "y",
+          "logits_key": "logits"
+        }
+      }
+    },
+    {
+      "id": "LP_f0_s203",
+      "arm": "LP",
+      "fold": 0,
+      "seed": 203,
+      "checkpoint": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\runs\\LP_f0_s203\\model.pt",
+      "sha256": {
+        "model.pt": "5b5738a2b82f7c13a33bb51d9fb8a4f8462f8e9ad6deaa793dd94cf185ea48a5",
+        "config.json": "384dd1d108af5213fefe6bf4de00f6cf3919d6c14e0ccd7167185acf0b2a1488",
+        "metrics.json": "048890f608ee5db9393c196fcd3aec773dda80c5315dfedac83bdbbe1ab48442",
+        "history.csv": "1f010733307dbf53e9e51dd2ed73a6f98242ef02a45eedabbee230b47bba05bf"
+      },
+      "predictions": {
+        "b200_mini_1": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f0_s203\\b200_mini_1.npz",
+          "sha256": "cae8d245bb964698e7d3c0c2b40eb9c4065a190dcfda1c041ee5b7928106183a",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "pluto_1": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f0_s203\\pluto_1.npz",
+          "sha256": "2c16236724f4ab2bfb238dd2e53af0b357e5c77a7d76391b4126f57337380c65",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_2": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f0_s203\\rtl_2.npz",
+          "sha256": "60149960146810fe8a1469b38aaa2647219a04076e9283228c99aef1c5c093b9",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_5": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f0_s203\\rtl_5.npz",
+          "sha256": "7d8ff52bcf9af20871630e5826fe674877883df43a4e733fb934731337612b1a",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_7": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f0_s203\\rtl_7.npz",
+          "sha256": "b666b54f3bd182858fde06fd21185c8649745e0cbaaa1b8c9449e7fea5c465dd",
+          "y_key": "y",
+          "logits_key": "logits"
+        }
+      }
+    },
+    {
+      "id": "LP_f1_s201",
+      "arm": "LP",
+      "fold": 1,
+      "seed": 201,
+      "checkpoint": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\runs\\LP_f1_s201\\model.pt",
+      "sha256": {
+        "model.pt": "125aa9f5da31ffe07e7fd4d0ea5a606d389f1fa16c234081505566c005f3624c",
+        "config.json": "b3d156cc4001ec57a600d25252328aa5853db07975d05389b840a87e6123ffae",
+        "metrics.json": "f25e835403ff0ba6b104386fa21d77e8da8d96461c288173c4682e72a3886e66",
+        "history.csv": "3ff7074cace0514d881075a69243da6d489ffcad292275c7ab9c80d136f30ce6"
+      },
+      "predictions": {
+        "b210_1": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f1_s201\\b210_1.npz",
+          "sha256": "2c4b1151c3fc27659b45aaccc7cd407a4e6c825940cc262270c0c131512f1007",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_1": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f1_s201\\rtl_1.npz",
+          "sha256": "96cc263070e99b67086bbe37ff83da095800e6801a4fbda8e207cdd6979bd999",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_3": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f1_s201\\rtl_3.npz",
+          "sha256": "bb9d3009d55df99a96a636b399b8387ec9bd702ee40f988fe93aced2a085ce38",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_6": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f1_s201\\rtl_6.npz",
+          "sha256": "1c1df39e53d45eb927bfee752940476e1527d3476beda9c5f6f5cbe28a211ef7",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_9": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f1_s201\\rtl_9.npz",
+          "sha256": "3feba5d22798601c67891a15369cf5c48bc6b1d6f8f4cfe12b91087ec7522ea2",
+          "y_key": "y",
+          "logits_key": "logits"
+        }
+      }
+    },
+    {
+      "id": "LP_f1_s202",
+      "arm": "LP",
+      "fold": 1,
+      "seed": 202,
+      "checkpoint": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\runs\\LP_f1_s202\\model.pt",
+      "sha256": {
+        "model.pt": "ba7fbe36a8bef069d260d9a7f4cd69738af2dc56f70326dfcca37725323f36e7",
+        "config.json": "90faf6df648da049e14f98a7a1d25300aa076f7bc2067ec6cf63c4d9993f0e68",
+        "metrics.json": "27ab31c9c4316e98d1bf8711b63b4de7bdbb2860fb94919aa08422cceaf2d51b",
+        "history.csv": "eaf76b75bb34ed10d465710577f4d481704a3ef00f23204aa2b683cf0559f2e6"
+      },
+      "predictions": {
+        "b210_1": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f1_s202\\b210_1.npz",
+          "sha256": "16825ffd8c79ab4c87c86f66225cf609bea2def86f97c2055db1fd16907513a8",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_1": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f1_s202\\rtl_1.npz",
+          "sha256": "a7155e24fbfe2e31110f6458c4bc80bd95308089f85d494d95686111814be6e9",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_3": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f1_s202\\rtl_3.npz",
+          "sha256": "125831cf9871c62d36a0f6624c75d1a4da8b74f4bd19683419f3bf0c814975d2",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_6": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f1_s202\\rtl_6.npz",
+          "sha256": "035dc86f6d47ce01eef8cbaf70c3c094ba4400faee37d52682f0d410a63dffd6",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_9": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f1_s202\\rtl_9.npz",
+          "sha256": "a64398d58613dd004d53039a0414a44cbca4670edcfdf5c5f4ee97d9929004f4",
+          "y_key": "y",
+          "logits_key": "logits"
+        }
+      }
+    },
+    {
+      "id": "LP_f1_s203",
+      "arm": "LP",
+      "fold": 1,
+      "seed": 203,
+      "checkpoint": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\runs\\LP_f1_s203\\model.pt",
+      "sha256": {
+        "model.pt": "98aa938db889da416342f1035cadeca781908a9c75b56fd5327f50ec2138a485",
+        "config.json": "4484afcddfd68777c62cce52240fa6b644cf02cf743cf64d5b742b36cca76908",
+        "metrics.json": "9b8630f6aa7618b98fb2369066e229f497a09c194a7673b0a77532128fbdb0f0",
+        "history.csv": "5f9b90cff090e423a40eedc3ab756b87791cda28d41f962df27045a7bb29c34a"
+      },
+      "predictions": {
+        "b210_1": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f1_s203\\b210_1.npz",
+          "sha256": "b9cfc0e729db3a74ca08e9a5a89b9e203e1f32a7b0687a82becae11ec2056249",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_1": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f1_s203\\rtl_1.npz",
+          "sha256": "9bc384afce251a206cb6922fa1942fb0bb0c37b0d9d9c390e527c2a3253b83dd",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_3": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f1_s203\\rtl_3.npz",
+          "sha256": "690a660a603d50a4178fe3684fce3810f00a7869735baba94c4e08ccefa81d19",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_6": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f1_s203\\rtl_6.npz",
+          "sha256": "a1c8e269af709eda4c525ddea5341d68c26084b395f1668700577ee2a653c44b",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_9": {
+          "path": "D:\\crossatten\\worktrees\\s26-long-patch-control\\26-long-patch-control\\predictions\\LP_f1_s203\\rtl_9.npz",
+          "sha256": "723ceb6679bac619e21b71053dc3d3391d000aec805639de2832c387a1ad72e0",
+          "y_key": "y",
+          "logits_key": "logits"
+        }
+      }
+    },
+    {
+      "id": "H2_f0_s201",
+      "arm": "H2",
+      "fold": 0,
+      "seed": 201,
+      "checkpoint": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f0__all__s201\\model.pt",
+      "sha256": {
+        "model.pt": "8ce8292c77f44d2d0719ecb2080fba68c1e346504779b2e4dff242f701343400",
+        "config.json": "a347395e354718210658d95c23e9f656a2628cd792915c0dc292b7e6403a8c82",
+        "metrics.json": "6c3121dc525eea8da74f33157723c416d7293903b91f7c251da67eab1bec78c9",
+        "history.csv": "650dbed00d81aad11784f96e154d9b660466841e8bf51bc15089f00d070208ee"
+      },
+      "predictions": {
+        "b200_mini_1": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f0__all__s201\\diagnostics_dev_val.npz",
+          "sha256": "025cac96fcdac0b2e6f255d6be49263eb77876cac547d67ce909f045f0044c07",
+          "y_key": "y_b200_mini_1",
+          "logits_key": "b200_mini_1"
+        },
+        "pluto_1": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f0__all__s201\\diagnostics_dev_val.npz",
+          "sha256": "025cac96fcdac0b2e6f255d6be49263eb77876cac547d67ce909f045f0044c07",
+          "y_key": "y_pluto_1",
+          "logits_key": "pluto_1"
+        },
+        "rtl_2": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f0__all__s201\\diagnostics_dev_val.npz",
+          "sha256": "025cac96fcdac0b2e6f255d6be49263eb77876cac547d67ce909f045f0044c07",
+          "y_key": "y_rtl_2",
+          "logits_key": "rtl_2"
+        },
+        "rtl_5": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f0__all__s201\\diagnostics_dev_val.npz",
+          "sha256": "025cac96fcdac0b2e6f255d6be49263eb77876cac547d67ce909f045f0044c07",
+          "y_key": "y_rtl_5",
+          "logits_key": "rtl_5"
+        },
+        "rtl_7": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f0__all__s201\\diagnostics_dev_val.npz",
+          "sha256": "025cac96fcdac0b2e6f255d6be49263eb77876cac547d67ce909f045f0044c07",
+          "y_key": "y_rtl_7",
+          "logits_key": "rtl_7"
+        }
+      }
+    },
+    {
+      "id": "LA_f0_s201",
+      "arm": "LA",
+      "fold": 0,
+      "seed": 201,
+      "checkpoint": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\runs\\LA_f0_s201\\model.pt",
+      "sha256": {
+        "model.pt": "6e89cce7aa93ed3c6a5cb858f095c44e2a899e2046a12e3ac06ae66e20e10d28",
+        "config.json": "d76c020d9b2f0c955625948ea7c2b877ec7d5a1f7bd00434132eb71cd88758b6",
+        "metrics.json": "a83c4a33a84216508a5015c72f52d636fb2d8608aec92d6accd031fc59b2aa43",
+        "history.csv": "833f81d5302ce92f0e7866f252590270dfeba626608e3e6d70eacc0328b42fdb"
+      },
+      "predictions": {
+        "b200_mini_1": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f0_s201\\b200_mini_1.npz",
+          "sha256": "bf01e9a673178a95032f95a08f4d0dd04e087d5f5487c36402da1bf26e5487d7",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "pluto_1": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f0_s201\\pluto_1.npz",
+          "sha256": "3f0dba69d876be17256b667db85f6fa2449e143d89882ef74c2730ee44b208e6",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_2": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f0_s201\\rtl_2.npz",
+          "sha256": "1fa7c6368d59648c14859b8790ed041b7213bfcd4bfb9305eec01a03035eaeb7",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_5": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f0_s201\\rtl_5.npz",
+          "sha256": "ff1a33cb9ba7f7028328de1ee4da34092f36fd26a84671ea834d50b2e6c71ee8",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_7": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f0_s201\\rtl_7.npz",
+          "sha256": "2b501c6359b3b4ac5523ad5ee2da0022c2f274a3be63a58d4f140beca6441c59",
+          "y_key": "y",
+          "logits_key": "logits"
+        }
+      }
+    },
+    {
+      "id": "H2_f0_s202",
+      "arm": "H2",
+      "fold": 0,
+      "seed": 202,
+      "checkpoint": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f0__all__s202\\model.pt",
+      "sha256": {
+        "model.pt": "e3ef079c906abc43a7bb8519d94f1c92a035cc6d43bfc72f025cc0073a544612",
+        "config.json": "9aa89e41ad9958c3c22328796913106207ff166a854eed67066f82d8f1acc843",
+        "metrics.json": "ddaaafdc9318e028399ef22e6d5d11a185d7c65f84d24a94f1db9c4e071fa719",
+        "history.csv": "f43eb91cbf638a6b6c3c1bee14ae5b2506f629b4fea7aa8e51bd89664f827371"
+      },
+      "predictions": {
+        "b200_mini_1": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f0__all__s202\\diagnostics_dev_val.npz",
+          "sha256": "caf2a80ac9d59127286f16f55188a099257309cd032359411486a3d0452f20cb",
+          "y_key": "y_b200_mini_1",
+          "logits_key": "b200_mini_1"
+        },
+        "pluto_1": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f0__all__s202\\diagnostics_dev_val.npz",
+          "sha256": "caf2a80ac9d59127286f16f55188a099257309cd032359411486a3d0452f20cb",
+          "y_key": "y_pluto_1",
+          "logits_key": "pluto_1"
+        },
+        "rtl_2": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f0__all__s202\\diagnostics_dev_val.npz",
+          "sha256": "caf2a80ac9d59127286f16f55188a099257309cd032359411486a3d0452f20cb",
+          "y_key": "y_rtl_2",
+          "logits_key": "rtl_2"
+        },
+        "rtl_5": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f0__all__s202\\diagnostics_dev_val.npz",
+          "sha256": "caf2a80ac9d59127286f16f55188a099257309cd032359411486a3d0452f20cb",
+          "y_key": "y_rtl_5",
+          "logits_key": "rtl_5"
+        },
+        "rtl_7": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f0__all__s202\\diagnostics_dev_val.npz",
+          "sha256": "caf2a80ac9d59127286f16f55188a099257309cd032359411486a3d0452f20cb",
+          "y_key": "y_rtl_7",
+          "logits_key": "rtl_7"
+        }
+      }
+    },
+    {
+      "id": "LA_f0_s202",
+      "arm": "LA",
+      "fold": 0,
+      "seed": 202,
+      "checkpoint": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\runs\\LA_f0_s202\\model.pt",
+      "sha256": {
+        "model.pt": "fa6f880681716bcb13563a064a11162ee89b18327be63ae7baea4efc63d506f0",
+        "config.json": "fca4343fd1498902a691726d2c97f8432c8da748140bb84a8d13dcfd1e1cb284",
+        "metrics.json": "05c5af6a68d10f0874304f46535219cb4450e60a8a088e97b38b5fc2cc3657ec",
+        "history.csv": "f63ef678154417f88315f576fa34df0a504e90f9c86ca89418de6c7a4abe367e"
+      },
+      "predictions": {
+        "b200_mini_1": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f0_s202\\b200_mini_1.npz",
+          "sha256": "687b0cb0fed65da8cc5a6d0861f2e5a63f2b06240f62cfb61d4432156adce8d8",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "pluto_1": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f0_s202\\pluto_1.npz",
+          "sha256": "23e63ec76f52ceac5fb09cc390a3bc144a42afe3758ddf66dba7e74e1ced83e9",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_2": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f0_s202\\rtl_2.npz",
+          "sha256": "b9b7ca0d9e0096830151d136fd4f4fb4d3130e91d3b87f39200226a7428cee28",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_5": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f0_s202\\rtl_5.npz",
+          "sha256": "3bbfec70c5a75c0971c52329a54b78f0c03d2a3ef430054b71f88565368f40d1",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_7": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f0_s202\\rtl_7.npz",
+          "sha256": "44bc0e8db274aa996c01dd2a5ee21717fba07490facf67d63ea8c9b88acea317",
+          "y_key": "y",
+          "logits_key": "logits"
+        }
+      }
+    },
+    {
+      "id": "H2_f0_s203",
+      "arm": "H2",
+      "fold": 0,
+      "seed": 203,
+      "checkpoint": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f0__all__s203\\model.pt",
+      "sha256": {
+        "model.pt": "ff90e8a7e3719493ac1df85c29532362808eaa9ccee4304aaba69694d473f31e",
+        "config.json": "68ef78fcefc1c552ed75fce77aeae8caf3b465a78987fc3b5c6a3dfaa4d57eb7",
+        "metrics.json": "d0f6d67c3507193d476f18a8ec3b9dea018e30d991b853d405f7fc52b62fe35c",
+        "history.csv": "351fa97cf71d786bcc30a4f37edd1c4c2c994bbb0e6d6b17e585680dcd21e8e5"
+      },
+      "predictions": {
+        "b200_mini_1": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f0__all__s203\\diagnostics_dev_val.npz",
+          "sha256": "bc14331d5b17bfab8956d37e7b41719dc03fca6076905ff7df4d55a20466208e",
+          "y_key": "y_b200_mini_1",
+          "logits_key": "b200_mini_1"
+        },
+        "pluto_1": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f0__all__s203\\diagnostics_dev_val.npz",
+          "sha256": "bc14331d5b17bfab8956d37e7b41719dc03fca6076905ff7df4d55a20466208e",
+          "y_key": "y_pluto_1",
+          "logits_key": "pluto_1"
+        },
+        "rtl_2": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f0__all__s203\\diagnostics_dev_val.npz",
+          "sha256": "bc14331d5b17bfab8956d37e7b41719dc03fca6076905ff7df4d55a20466208e",
+          "y_key": "y_rtl_2",
+          "logits_key": "rtl_2"
+        },
+        "rtl_5": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f0__all__s203\\diagnostics_dev_val.npz",
+          "sha256": "bc14331d5b17bfab8956d37e7b41719dc03fca6076905ff7df4d55a20466208e",
+          "y_key": "y_rtl_5",
+          "logits_key": "rtl_5"
+        },
+        "rtl_7": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f0__all__s203\\diagnostics_dev_val.npz",
+          "sha256": "bc14331d5b17bfab8956d37e7b41719dc03fca6076905ff7df4d55a20466208e",
+          "y_key": "y_rtl_7",
+          "logits_key": "rtl_7"
+        }
+      }
+    },
+    {
+      "id": "LA_f0_s203",
+      "arm": "LA",
+      "fold": 0,
+      "seed": 203,
+      "checkpoint": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\runs\\LA_f0_s203\\model.pt",
+      "sha256": {
+        "model.pt": "574c9ab5d3f604af57907d8d6b62c847c4474ced693154605aef130172a58b9d",
+        "config.json": "b9e2ac224752d1aaba500d77de571d0e63f6b149623a14fa0bcec880f4440e16",
+        "metrics.json": "6540db6c03732b5049cd66a2bb5e86c6a986044284a159a56dd35cba68dec1de",
+        "history.csv": "b53ca42efa75ffc0b5208a7ff8731b12df5b607cab2cf63e020ee6e15783a8cb"
+      },
+      "predictions": {
+        "b200_mini_1": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f0_s203\\b200_mini_1.npz",
+          "sha256": "3a0ff69ff0f4e1f726d5040b6b3653d63a147559572e961a29cb27762c50d822",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "pluto_1": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f0_s203\\pluto_1.npz",
+          "sha256": "e0bc58d536b60b7354b24818a37ba186fbd978874b89aeba8028cd8795c5cf1c",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_2": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f0_s203\\rtl_2.npz",
+          "sha256": "0defd36d804a39507e901cba78496632d5905ffd5818474fe335f3b599d170c2",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_5": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f0_s203\\rtl_5.npz",
+          "sha256": "b2eb9ddbb0e8216d8af7222fca0c83393d8f05912b3076805a6f25eaf07e07f1",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_7": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f0_s203\\rtl_7.npz",
+          "sha256": "e9c974a924971bc0a8c7324afcefe1b90a5aec1a00d52256b8257040fd5d84a9",
+          "y_key": "y",
+          "logits_key": "logits"
+        }
+      }
+    },
+    {
+      "id": "H2_f1_s201",
+      "arm": "H2",
+      "fold": 1,
+      "seed": 201,
+      "checkpoint": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f1__all__s201\\model.pt",
+      "sha256": {
+        "model.pt": "73c078f29d988155078044070b858203d3b94d4c2c0e186749661f35e6c2fb34",
+        "config.json": "66258ac401a46adeb1588a7c55266bc90ec201f1272db9c53837133d2310f037",
+        "metrics.json": "3ab764b1304ee889963f03cf90b6bda3adb2ffb1c0c8df9c50b22d48d23d8f6c",
+        "history.csv": "9435394f55cd883db37388e7b6e68cca03d73e538682cfb0af59fdb98db6ce4d"
+      },
+      "predictions": {
+        "b210_1": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f1__all__s201\\diagnostics_dev_val.npz",
+          "sha256": "e7548ee0898d4761907babba94b150e9adeee8f291936be4f37a3877ffed017a",
+          "y_key": "y_b210_1",
+          "logits_key": "b210_1"
+        },
+        "rtl_1": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f1__all__s201\\diagnostics_dev_val.npz",
+          "sha256": "e7548ee0898d4761907babba94b150e9adeee8f291936be4f37a3877ffed017a",
+          "y_key": "y_rtl_1",
+          "logits_key": "rtl_1"
+        },
+        "rtl_3": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f1__all__s201\\diagnostics_dev_val.npz",
+          "sha256": "e7548ee0898d4761907babba94b150e9adeee8f291936be4f37a3877ffed017a",
+          "y_key": "y_rtl_3",
+          "logits_key": "rtl_3"
+        },
+        "rtl_6": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f1__all__s201\\diagnostics_dev_val.npz",
+          "sha256": "e7548ee0898d4761907babba94b150e9adeee8f291936be4f37a3877ffed017a",
+          "y_key": "y_rtl_6",
+          "logits_key": "rtl_6"
+        },
+        "rtl_9": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f1__all__s201\\diagnostics_dev_val.npz",
+          "sha256": "e7548ee0898d4761907babba94b150e9adeee8f291936be4f37a3877ffed017a",
+          "y_key": "y_rtl_9",
+          "logits_key": "rtl_9"
+        }
+      }
+    },
+    {
+      "id": "LA_f1_s201",
+      "arm": "LA",
+      "fold": 1,
+      "seed": 201,
+      "checkpoint": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\runs\\LA_f1_s201\\model.pt",
+      "sha256": {
+        "model.pt": "18bc8444bede87f0328c24bfaa1912ee55691c2f0afe214c59e4e23aa74ae613",
+        "config.json": "f991371ee71cc1647574d2654c2cb38e80f342d3344df01edcbe8dcfc0335556",
+        "metrics.json": "17e33ab4609fe7487c54a56482f709ac6be29a1f4c2bb52758a79ac3263f3e01",
+        "history.csv": "1e5771cb468a623f0cbe77e8aa9610c9ab7208bdc53869dde95cf005755dbea4"
+      },
+      "predictions": {
+        "b210_1": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f1_s201\\b210_1.npz",
+          "sha256": "b9699c835d00c813aacd4150d1acdf8548a5fc326b5299d4225c6b2668d269d2",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_1": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f1_s201\\rtl_1.npz",
+          "sha256": "038e1cf2756c3c69a4d147396320085bea0f6acec2ef9bf9a574e95831e48455",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_3": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f1_s201\\rtl_3.npz",
+          "sha256": "348193b7e9d2098d33374110c10b5994285cafc5f8d1b3642b5780ebf86626f5",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_6": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f1_s201\\rtl_6.npz",
+          "sha256": "23bbe2fed8e3ff3a2e38668b68c49b4cc26d5ab76182fc094be09115833d3fc4",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_9": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f1_s201\\rtl_9.npz",
+          "sha256": "1e627b7c3656a2ea8998990995449a99c5b627622c13d3ef1cff0c12bf3c9c7f",
+          "y_key": "y",
+          "logits_key": "logits"
+        }
+      }
+    },
+    {
+      "id": "H2_f1_s202",
+      "arm": "H2",
+      "fold": 1,
+      "seed": 202,
+      "checkpoint": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f1__all__s202\\model.pt",
+      "sha256": {
+        "model.pt": "7bd7c4ba77e1a5b59498209423e01e71500accbc2680ebd47a335ca9cf99ffee",
+        "config.json": "c320d8b82dc2855a9ee208e87cd355e0d2d6014e557a33f0649af08e9d83ecf4",
+        "metrics.json": "46595ea2bb6012806174e900c73ccb1c041105159a1413d9ae45566e9b5f6cbd",
+        "history.csv": "7fa954876f8d0ed2da4644be260d1b2f19e20e7e7d9691d654189a9dd2b02e1d"
+      },
+      "predictions": {
+        "b210_1": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f1__all__s202\\diagnostics_dev_val.npz",
+          "sha256": "97a6bdbf8fad1792688f2c8a2f0a42eca32fc5c01a9dd75f2e4b331c76f5bebc",
+          "y_key": "y_b210_1",
+          "logits_key": "b210_1"
+        },
+        "rtl_1": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f1__all__s202\\diagnostics_dev_val.npz",
+          "sha256": "97a6bdbf8fad1792688f2c8a2f0a42eca32fc5c01a9dd75f2e4b331c76f5bebc",
+          "y_key": "y_rtl_1",
+          "logits_key": "rtl_1"
+        },
+        "rtl_3": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f1__all__s202\\diagnostics_dev_val.npz",
+          "sha256": "97a6bdbf8fad1792688f2c8a2f0a42eca32fc5c01a9dd75f2e4b331c76f5bebc",
+          "y_key": "y_rtl_3",
+          "logits_key": "rtl_3"
+        },
+        "rtl_6": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f1__all__s202\\diagnostics_dev_val.npz",
+          "sha256": "97a6bdbf8fad1792688f2c8a2f0a42eca32fc5c01a9dd75f2e4b331c76f5bebc",
+          "y_key": "y_rtl_6",
+          "logits_key": "rtl_6"
+        },
+        "rtl_9": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f1__all__s202\\diagnostics_dev_val.npz",
+          "sha256": "97a6bdbf8fad1792688f2c8a2f0a42eca32fc5c01a9dd75f2e4b331c76f5bebc",
+          "y_key": "y_rtl_9",
+          "logits_key": "rtl_9"
+        }
+      }
+    },
+    {
+      "id": "LA_f1_s202",
+      "arm": "LA",
+      "fold": 1,
+      "seed": 202,
+      "checkpoint": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\runs\\LA_f1_s202\\model.pt",
+      "sha256": {
+        "model.pt": "06a3cd4797f63d9f9eaa576ae661e321a7b2d9307ba17b2f2cbf5721c6cc022e",
+        "config.json": "383b9e0aee6a5f96de170a1660eae197104edadadd8dda0d18bd6b31d37d20b2",
+        "metrics.json": "5be3d74f529203c5f436c9a8ac81f8a712729e9296131a32267d7be56a25fbf0",
+        "history.csv": "66af1d62eff0fee33ea5987257410dac377edeb1ee8b57f3a644ab52a64e526d"
+      },
+      "predictions": {
+        "b210_1": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f1_s202\\b210_1.npz",
+          "sha256": "8a8425da7d4ca1066f45d01e9353362ab8eb7629283b967dbc9521dcd9221290",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_1": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f1_s202\\rtl_1.npz",
+          "sha256": "f24d1e910ddf9979dd14abd6378dd8acda9c5cbb3e8a1a7db63fc603c21bf72d",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_3": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f1_s202\\rtl_3.npz",
+          "sha256": "90251f9507eb0cc6762cedc98259b91de760ad30f262f7f147f704d622187a1a",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_6": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f1_s202\\rtl_6.npz",
+          "sha256": "cbcb6b69c6b206956505400ec7dccddb05b3f7372a28bde8d3a76b5e900dff87",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_9": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f1_s202\\rtl_9.npz",
+          "sha256": "cc2072ef3a1816558a0e85b74650564e3a495a86b4b4002250cc5fcb2f5523cc",
+          "y_key": "y",
+          "logits_key": "logits"
+        }
+      }
+    },
+    {
+      "id": "H2_f1_s203",
+      "arm": "H2",
+      "fold": 1,
+      "seed": 203,
+      "checkpoint": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f1__all__s203\\model.pt",
+      "sha256": {
+        "model.pt": "9af87036916d441f1ca0ff5647d0c88d39925a256abeca2a6673a6f575e37fce",
+        "config.json": "365a4875c5b9d551254c94eaf09de0d69d2659cbd6b1834b231908b33a245d01",
+        "metrics.json": "ad7412e59eb8b8a2b445fe6daea057f025438d17c1b42a2e933e6465001fa073",
+        "history.csv": "4fe8ac49cdeba4edfe54fb3b11710cdf34502fb4323ca7a4648f1348c3b85b1f"
+      },
+      "predictions": {
+        "b210_1": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f1__all__s203\\diagnostics_dev_val.npz",
+          "sha256": "326c284da3e54fe221ad54a60b11ff14491bc84a20af0723dbbe1e2b015e3876",
+          "y_key": "y_b210_1",
+          "logits_key": "b210_1"
+        },
+        "rtl_1": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f1__all__s203\\diagnostics_dev_val.npz",
+          "sha256": "326c284da3e54fe221ad54a60b11ff14491bc84a20af0723dbbe1e2b015e3876",
+          "y_key": "y_rtl_1",
+          "logits_key": "rtl_1"
+        },
+        "rtl_3": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f1__all__s203\\diagnostics_dev_val.npz",
+          "sha256": "326c284da3e54fe221ad54a60b11ff14491bc84a20af0723dbbe1e2b015e3876",
+          "y_key": "y_rtl_3",
+          "logits_key": "rtl_3"
+        },
+        "rtl_6": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f1__all__s203\\diagnostics_dev_val.npz",
+          "sha256": "326c284da3e54fe221ad54a60b11ff14491bc84a20af0723dbbe1e2b015e3876",
+          "y_key": "y_rtl_6",
+          "logits_key": "rtl_6"
+        },
+        "rtl_9": {
+          "path": "D:\\crossatten\\worktrees\\s21-hstem-mechanisms\\21-hstem-mechanisms\\runs\\p1__Shen__H2__f1__all__s203\\diagnostics_dev_val.npz",
+          "sha256": "326c284da3e54fe221ad54a60b11ff14491bc84a20af0723dbbe1e2b015e3876",
+          "y_key": "y_rtl_9",
+          "logits_key": "rtl_9"
+        }
+      }
+    },
+    {
+      "id": "LA_f1_s203",
+      "arm": "LA",
+      "fold": 1,
+      "seed": 203,
+      "checkpoint": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\runs\\LA_f1_s203\\model.pt",
+      "sha256": {
+        "model.pt": "4f0c25adf5f597ad9c41881809fd4d63e848c7b7423868182d426f0953c3c5fc",
+        "config.json": "6702ff4147d0fbe394b7447a34be29500d12703d1fe90190fb1bf5c8e667a8d8",
+        "metrics.json": "4c7d95dde5cff56b8ebecec2bdddb1092c2cb0167a8822773da1674b6134ec6d",
+        "history.csv": "3284ccf6783bd9a1e19e956f1716b48b88607c2a2251125f31e78dd0a88431d1"
+      },
+      "predictions": {
+        "b210_1": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f1_s203\\b210_1.npz",
+          "sha256": "1b7e49a510cd9a2393a34e0e63eb3a1850623629ca61749f38dd02a7724a4af3",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_1": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f1_s203\\rtl_1.npz",
+          "sha256": "19137be1c39a99721af73b536f6e1f6da828df6abfe0580723e70d37f965c4a2",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_3": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f1_s203\\rtl_3.npz",
+          "sha256": "30eb59609cc70fe7772838f9816093ee3be1c9346a6db34bb2d99cf46078d1fd",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_6": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f1_s203\\rtl_6.npz",
+          "sha256": "4d847783f61363eef51f16f163d23153d3d1dff8eb45aa8b187568f25efc50d0",
+          "y_key": "y",
+          "logits_key": "logits"
+        },
+        "rtl_9": {
+          "path": "D:\\crossatten\\worktrees\\s27-mechanism-identification\\27-mechanism-identification\\predictions\\LA_f1_s203\\rtl_9.npz",
+          "sha256": "68993d8d2c64cd6860bc5adc4e57abdc9066d135c8b8d78a946fad3688509cc7",
+          "y_key": "y",
+          "logits_key": "logits"
+        }
+      }
+    }
+  ],
+  "source_caches": {
+    "b210_1": {
+      "fold": 0,
+      "rx": "b210_1",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "0a92cefcfe90951dee5bd8dbc13a9dfdb13f81307ea40dc7a7e92f5e89be48be"
+    },
+    "rtl_1": {
+      "fold": 0,
+      "rx": "rtl_1",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "2ff59bff709381c738081cb1d1b8eac2908f17adb53707ee41ebd7fdb48b3531"
+    },
+    "rtl_3": {
+      "fold": 0,
+      "rx": "rtl_3",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "b5ff2424922f8bb1a506ecd078cca93fc23c3f5af8d691aa4cabfe70f6205887"
+    },
+    "rtl_6": {
+      "fold": 0,
+      "rx": "rtl_6",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "c2353b94971ac97445f10247e823e7a18152d21bf70c80fbd053f57c80ec3b87"
+    },
+    "rtl_9": {
+      "fold": 0,
+      "rx": "rtl_9",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "1595e96fbb97bd73f59df90dddf6a9cf6865b94625e1f2ac2125e3e38466bae5"
+    },
+    "b200_mini_1": {
+      "fold": 1,
+      "rx": "b200_mini_1",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "4171c447ddc8f1d3b4916a99905e964592147eabda8578bd90755e6cea6948f7"
+    },
+    "pluto_1": {
+      "fold": 1,
+      "rx": "pluto_1",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "81b791e6a0cad0946f4de3d95b79c4206e66c3c977f2d01d10c919e06ac7a80f"
+    },
+    "rtl_2": {
+      "fold": 1,
+      "rx": "rtl_2",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "2dbab8fdba1dadfda82e5d68de7deea593850cd04e7922814ad42286864a8cf9"
+    },
+    "rtl_5": {
+      "fold": 1,
+      "rx": "rtl_5",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "4465534293ebb620bb298ff0e408621f4745f966212112e9a8ca53b912c86ac6"
+    },
+    "rtl_7": {
+      "fold": 1,
+      "rx": "rtl_7",
+      "selected": 2000,
+      "train": 1600,
+      "source_val": 400,
+      "raw_shape": [
+        8000,
+        16384
+      ],
+      "raw_file_bytes": 1048770112,
+      "selected_rows_sha256": "5baa4ee53fffdc64db765e519cafca6cf001e80efc7a05b541a84e9d274eaf7c",
+      "selected_labels_sha256": "4e64a02568003d897e7b68ba22d98a34f324c87f72edef91cddc23d3c5cfeb56",
+      "selected_iq_float32_sha256": "413bfb04ddfa1aecbb4c32278c16c0440ac84dc6e1642711a87bd1574b2bf06d"
+    }
+  },
+  "reference_streams_A": [
+    {
+      "fold": 0,
+      "seed": 201,
+      "permutation_sha256": "69896d15d38f0fb8c06e890cc8cb120ccfd5ed7718adbc5faf03e4c08eae367d",
+      "first_augmented_batch_sha256": "1bd77d5c834e35e76e8c30fb0cc57908ecce0a51dc3745ce3926ebcd46beb687",
+      "data_seed": 2808879044
+    },
+    {
+      "fold": 0,
+      "seed": 202,
+      "permutation_sha256": "56acf33b251019fd6a2aecd41c7f1a80efaafd90ac82932fb26a50ebb38c5fd6",
+      "first_augmented_batch_sha256": "22eb63642b7cf9ef7878b7c5306952dc0780f0762ba1731511cffab00853b314",
+      "data_seed": 2602222937
+    },
+    {
+      "fold": 0,
+      "seed": 203,
+      "permutation_sha256": "fbf48882614eebab2abd71e90faf1d7fb3dc70ad84f8bf8d0eaa220b3990370c",
+      "first_augmented_batch_sha256": "eff4d96acda71cf69e79fb07bfb7687aca4a82d5478ede7107bcd9a1804214da",
+      "data_seed": 1569434962
+    },
+    {
+      "fold": 1,
+      "seed": 201,
+      "permutation_sha256": "875e76007ad0b8e7eec969d020ffa354e7679fc4fd027b02bea673fd15c81cce",
+      "first_augmented_batch_sha256": "a5077318c96b1ccdf15e3fcfa88a3084154cbcf5bf031c12e06a9c0b0b4e3656",
+      "data_seed": 3016222868
+    },
+    {
+      "fold": 1,
+      "seed": 202,
+      "permutation_sha256": "75cc85792a674ec6507df03aa4f5f13aa100bf70fac8a3d8bd34e2a962662b96",
+      "first_augmented_batch_sha256": "e3146158a3f81bdeb649cff662f3ea92c909e52719ac61f2bc2daffc2773b2ea",
+      "data_seed": 3680940992
+    },
+    {
+      "fold": 1,
+      "seed": 203,
+      "permutation_sha256": "09f4dbe0d74fbc0dff96feca6229b920e1cfb3125b82e1738609b21a275e3a42",
+      "first_augmented_batch_sha256": "7b0130f0248e844eddf4b633f9608850ad38d15eada5424ba26f4742fba35976",
+      "data_seed": 1501995291
+    }
+  ],
+  "training_steps": {
+    "A": 25000,
+    "C": 20000
+  },
+  "total_retained_optimizer_steps": 390000,
+  "selection": "Source RX-equal clean CE only",
+  "permissions": "A5SourceRX/C4SourceRX; no Dev or heldC until all18 models sealed. Confirm/blind forbidden.",
+  "target_predictions": {
+    "A": 300000,
+    "C_held": 24000
+  },
+  "source_predictions": {
+    "A": 60000,
+    "C": 19200
+  },
+  "C_geometry_vectors": 72000,
+  "code_sha256": {
+    "28ac-mechanism-training/ac_common.py": "e1f3a0c16e40cda4537205e1b6996d5c796105d58202b318d8c1eff8d74de4a3",
+    "28ac-mechanism-training/ac_data.py": "d33b97f43b01590c58f57dfbc4c77a0126cc70e49bef99121dcf700f6ffbc200",
+    "28ac-mechanism-training/ac_evaluate.py": "5d84df8ecc75c53ddeb9c73e2f716cc629a3c388eeea06f2ffff042c9522a34c",
+    "28ac-mechanism-training/ac_execute.py": "d2b5f3663d789196056cc7ec4f272bb984b1565618517d9034e18d404a135ada",
+    "28ac-mechanism-training/ac_gate.py": "e0036e6573245d6c3d3bbeee8a6e93784959912d5145955fb6b74843e53ac6ee",
+    "28ac-mechanism-training/ac_register.py": "f77bd800d71e01538daf44470f0f12f40cdabb89aa3bbaa06fdc1599745adcf5",
+    "28ac-mechanism-training/ac_stats.py": "25f706a25e61658108ebad14fefabff56c60d3e4389b81cf5fdb5f115410f510",
+    "28ac-mechanism-training/ac_train.py": "c66420389b3282e4db03c86ebd4147063f7bfc304941b29b366c18751563e8c9",
+    "28ac-mechanism-training/resume.py": "ea7009f149d16f6bd317fe207803354ea85e9a396a635c864d9326b033266dfa",
+    "lib/legacy_rfhstu/cnn_stem.py": "b3a8944c96b354d295a96d84876693e95433f67616e23d2804219d0fa1c2762a",
+    "lib/legacy_rfhstu/features.py": "1e9e5aa828adbb382c604ebf7b1bd429c79893ea1169afddaa14596a6c0d5378",
+    "lib/legacy_rfhstu/losses.py": "a0ba7f42040203289593ba6a9363f27ea19d5152d8813979a7018cc152e78e28",
+    "lib/legacy_rfhstu/mixstyle.py": "687174caeff6f256b2661399ab70aede396d5ea51af4e312dcbacc01235b94a5",
+    "lib/legacy_rfhstu/models.py": "ebb638fac3392fec36bace7e2445ab6d27ef4e3b5adb2c06b35c8bc82f506666",
+    "lib/legacy_rfhstu/multiscale.py": "de51929e7917e793e814319a88b91ef0b17354e4c7614065172e082f16833e35",
+    "lib/legacy_rfhstu/oob_fusion.py": "030f2886c9a84282eb7e20ce5d318f528e8bfc20902c4b4a17315686ea290259",
+    "lib/legacy_rfhstu/__init__.py": "f78366d19d77282713f4944bc4e8fbdcbb138aac9849a0acf79459f4491dd9f5",
+    "lib/xa/aggregate.py": "8995baeff876f427338836ad0b2d53de01f95e95148b851067f498d35f592e38",
+    "lib/xa/bench.py": "3a94fe229e5b43f45b15ca2f1a06e179b0212f282ea58671e71c718161d20ba7",
+    "lib/xa/data.py": "ff861d46e508d807996a924d4439134416b16ba6507856a7335c65d9e4cfc3cb",
+    "lib/xa/evaluate.py": "365998cf59196e5ebbdad3b34132fe1dfb2a4a2b988c82d660715471167734aa",
+    "lib/xa/explore_models.py": "bcc1616b5fc6ea533183b4c3a9538748a663a1b321bd748a33870b4ef8116467",
+    "lib/xa/explore_train.py": "8e4361d2b21546f5f5b5ba26adccd57618680c720db734561802b8246a33babe",
+    "lib/xa/frontends.py": "967e28c05f168341b4710e4b2253d77b93d92bc9a3dd515fdddaa35e81c2013f",
+    "lib/xa/guard.py": "80562f5a0893be3a3e91cb80ef4636a6b24eb0c76bfa59d3566574633e5fff54",
+    "lib/xa/jobs.py": "ef8ac595d7a567c18d5e726b2fe70e9942628e709bf1453dfe0df5e9d07233f0",
+    "lib/xa/launch.py": "71ca1656dcccf4d26455de6b999de42b2482f73b738a37fca52f354ccec6d4a2",
+    "lib/xa/models.py": "322049d67d19d196dca8a722fda9de433d846fe1aa3d6d8439c49adeba6554bf",
+    "lib/xa/models2.py": "e9c3364868955e6996645a823187dadb553a2a95139e809d43055a93c53eaa23",
+    "lib/xa/models3.py": "bade67f8ad50b64c132197d21a86c1897a8c27976a7b8490d2e7131ff025cbba",
+    "lib/xa/paper_models.py": "7c09adc3b481e5b13eeccb93731a00573f16a98f5d35c490a1d5082707c550bd",
+    "lib/xa/paper_run.py": "4c1bcdf2e98c974c6e03677b69881ea378dc3406c0d9f8a7bbe471290389fec6",
+    "lib/xa/paper_train.py": "e59cab54045ef6cd27a168e937e7571456ad3d2405183efc605e8308e3ed80c8",
+    "lib/xa/run_job.py": "534b8f7aa2c8c54c12eb5881850897fa2a69280cde004c84ede19532b0cb576b",
+    "lib/xa/train.py": "906a7fd0a7bbb61fea86e03bcf9b52228a5b26851e53fa904d497be330daa96e",
+    "lib/xa/wisig.py": "b4127fba87f5603704c92d2221743c8dedf6898e45c8216b9ddb84b32f42ad67",
+    "lib/xa/__init__.py": "ca199705017e2d6d6b037d4d732f7caec7d7dff190c77a3d94c0cfaf515ab492",
+    "13-mixer-cfo-mechanisms/train.py": "164b0eb9794c4494b34cf1d25f8dfb0c9a4ae8c54af3e03ef9f08b150a670a2a",
+    "13-mixer-cfo-mechanisms/models.py": "606243ff9462358f53a86d2908130c47f69c5dd9d1cfee669cbaf10c7b76e5a1",
+    "13-mixer-cfo-mechanisms/core.py": "a9db92f80e8e1bf1579cab900fabf085f5c33e018dffe6e27f1af64ee94dc527",
+    "13-mixer-cfo-mechanisms/data.py": "578fd207105e5375094bd22a12ec710fd259379c4b1c627d962251256bd71e9e",
+    "13-mixer-cfo-mechanisms/metrics.py": "a9773e0532552f012dc039c42206460d1a5b02001a2bbb44a388258825f85ed7",
+    "13-mixer-cfo-mechanisms/wifi.py": "3402847c350172b670aba40616f5b56ec5ecb2e7176cc199c26d0315d920db37",
+    "15-hstem-attribution/s15_models.py": "0d361cf9ac5ce2794975827e2b89a31615d4a1eaa171f5c073d1c7afffe810d4",
+    "15-hstem-attribution/s15_core.py": "e37958e21f579314680a6ac1d0b35302f6a5b1e2307fedf336af5c335002a195",
+    "21-hstem-mechanisms/s21_models.py": "5dea148df54a7db8c2aba1f5190340e913330f18b59610c1a7869fc07baea28a",
+    "21-hstem-mechanisms/s21_core.py": "7c15bb0a3e64444be6146627252897d2c0e0489352d5ac5a4f673a40d53acf0f",
+    "25-tifs-integration/geometry_stats.py": "5f97cf3a53533b59ee2b86c433257d45952b41e484eb5608417e5cc503d64728",
+    "26-long-patch-control/s26_models.py": "0169704cc80d03cbe04be1e68a6d76ae033aa38b0fb53549c9a687960b961cc7",
+    "26-long-patch-control/s26_common.py": "2387944637a0b9808276f0247fb0072cfc126f05457ba8d51652d988a9b9b58d",
+    "27-mechanism-identification/s27_models.py": "d9d340276f0808b0fa97efeb4f6c23a2c5215ab5fbc40b48b722ec82fe17ac4e",
+    "27-mechanism-identification/s27_common.py": "72f1cb3d421c7d6fc68a20e2fa3025e52ce0a0184c933b5b06f41d9ee4afb16c",
+    "27b-tokenizer-backend-interaction/s27b_training.py": "e3a7b5415cbe9727c21f454326c6db90526fed100cd5c2ca5be0b1ef811d8d2b",
+    "27b-tokenizer-backend-interaction/s27b_common.py": "0daaa1ab8d902c3f055f70420fbe10e4e7f72567e847128c63da02ca9603eb8c",
+    "27b-tokenizer-backend-interaction/s27b_models.py": "b2ffd72cd114752054635828c3c756a2b519b0c5df198b3e27d2819ff60b93c7",
+    "27b-tokenizer-backend-interaction/s27b_data.py": "f2d92dce086c9c5adf136828fb230eb1d0ba2fbe94a17d69f8bbb7b69dad3a2f",
+    "27b-tokenizer-backend-interaction/s27b_features.py": "d15ecb9b2c62cc2f0d81fda19514b49c65817460438361bc5ebc4938b719bbce",
+    "28-affine-bn-gelu-audit/s28_models.py": "7cfde62fc4ab991a9e0a60688d0533789f0ad438ac515582cf4abb073cc57658",
+    "28-affine-bn-gelu-audit/s28_core.py": "5dc172f2ea460545dfd90beb41c8894cef8dfbe3c444015f2ef6e6aeec3d8810"
+  },
+  "evidence_sha256": {
+    "28ac-mechanism-training/ACTIVATION.json": "794454cff8e1120dc62f80725cac5988395c606970fdc4e3ab5c35d01379695f",
+    "28ac-mechanism-training/PLAN_A.original.json": "91b27b11dd40ad227489c5e877b2a4a667dd0c958518c8db3270a61433fce7d0",
+    "28ac-mechanism-training/PLAN_C.original.json": "3a07348742937584bfdbca24c6e88fb1b44a472b454c5ac53ccc966f71fb9507",
+    "28ac-mechanism-training/GATE.json": "a0409fc78645d1d4a2164e624ac9e53427a96e0866beb8a1fc4d875487e7f704",
+    "28ac-mechanism-training/ENGINEERING_UPDATES.json": "3e09f157a183ac2121825677ac3dd4b228dee75a1a74f3b164a44c369aa4a232",
+    "28ac-mechanism-training/AUTHORIZATION.zh-CN.md": "b72c4c0592564e13f9679e0f36411bbabfd7260a375255b27408099fc17f6c0f",
+    "configs/protocol.json": "913d38626d9bcaa285b0ba7816bd8e863a91778f1fc62e4dd7d27c70415a119a",
+    "15-hstem-attribution/architecture_search.json": "56a749bdf8fd346a55f9d900913acd76915055a6829e46f358031a04f55ef2ad",
+    "28-affine-bn-gelu-audit/SUMMARY.json": "127a7fffa54952565843fdb846999bd1ada6802a6b69d7c215c3efb36ad49df2",
+    "28-affine-bn-gelu-audit/AFFINE_AUDIT.json": "140f3000a01eaf23b683de12bba0e0976002d1cb00a0271df7b6ce52791f1c06",
+    "28-affine-bn-gelu-audit/FINAL_AUDIT.json": "e7438315f2391779e13473ceae79ca7bd72738626a2567e05d775c0073357b5b",
+    "28-affine-bn-gelu-audit/registration.json": "ddf11226a73931487267a01bbc53c53be294531e0dc3c13d4f75ea48290dc721",
+    "27b-tokenizer-backend-interaction/registration.json": "c33642bd1c4dcc5dd6b2f978d7d4b9d8aa1da6036d276fd13dc57d3ca0a19ba0"
+  }
+}

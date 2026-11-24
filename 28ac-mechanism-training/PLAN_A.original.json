@@ -1,0 +1,150 @@
+{
+  "time": "2026-11-23T22:50:00+08:00",
+  "stage": "S28_A_BN_BY_GELU",
+  "status": "REGISTERED_NOT_ACTIVATED",
+  "exploratory_after_observing_S27B": true,
+  "planned_new_fits": 6,
+  "automatic_fit_budget": 0,
+  "activation_required": true,
+  "jobs": [
+    {
+      "arm": "H2_LA",
+      "fold": 0,
+      "seed": 201
+    },
+    {
+      "arm": "H2_LA",
+      "fold": 0,
+      "seed": 202
+    },
+    {
+      "arm": "H2_LA",
+      "fold": 0,
+      "seed": 203
+    },
+    {
+      "arm": "H2_LA",
+      "fold": 1,
+      "seed": 201
+    },
+    {
+      "arm": "H2_LA",
+      "fold": 1,
+      "seed": 202
+    },
+    {
+      "arm": "H2_LA",
+      "fold": 1,
+      "seed": 203
+    }
+  ],
+  "cells": {
+    "BN_GELU": "H0: six frozen models",
+    "BN_noGELU": "LA: six frozen S27-A models",
+    "noBN_GELU": "H2: six frozen S21 models",
+    "noBN_noGELU": "H2_LA: six planned new fits, none started"
+  },
+  "architecture": {
+    "params": 133338,
+    "cnn_receptive_field": 350,
+    "token_stride": 256,
+    "overlap": 94,
+    "first_token_center": 127.5,
+    "tokens": 32,
+    "bn_layers": 2,
+    "layers": [
+      {
+        "name": "0",
+        "kernel": 7,
+        "padding": 3,
+        "stride": 1,
+        "output_length": 8192
+      },
+      {
+        "name": "3",
+        "kernel": 5,
+        "padding": 2,
+        "stride": 1,
+        "output_length": 8192
+      },
+      {
+        "name": "tokenize.0",
+        "kernel": 8,
+        "padding": 2,
+        "stride": 4,
+        "output_length": 2048
+      },
+      {
+        "name": "tokenize.3",
+        "kernel": 8,
+        "padding": 2,
+        "stride": 4,
+        "output_length": 512
+      },
+      {
+        "name": "tokenize.6",
+        "kernel": 8,
+        "padding": 2,
+        "stride": 4,
+        "output_length": 128
+      },
+      {
+        "name": "tokenize.9",
+        "kernel": 4,
+        "padding": 0,
+        "stride": 4,
+        "output_length": 32
+      }
+    ],
+    "scope": "Local CNN coordinates only; global FFT and TrueIB prevent an end-to-end physical support interpretation",
+    "partial_macs_per_packet": 95027840.0
+  },
+  "intervention": "Only tokenizer indices1/4/7 BN and2/5/8 GELU become Identity; original convolutions, shared-stem BN/LeakyReLU and MHA are retained.",
+  "initialization": "Same full state as H2 at each paired data_seed; all surviving state equals H0; no RNG draw on Identity replacement.",
+  "training": {
+    "epochs": 200,
+    "batch": 64,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0005,
+    "warmup_epochs": 5,
+    "schedule": "Original per-step cosine",
+    "augmentation": "Original AWGN0..50dB",
+    "checkpoint": "minimum clean source RX-equal CE",
+    "data_seed": "stable_seed(P-H5x160,fold,seed)",
+    "permutation_rng": "cuda data_seed",
+    "noise_rng": "cuda data_seed+1",
+    "initialization": "Bit-identical entire initial H0 state_dict for each paired seed, no randomdraw onGELU replacement",
+    "tf32_matmul": false,
+    "tf32_cudnn": true,
+    "recovery": "Atomic full-epoch model/optimizer/allRNG recovery only; no replacement seeds"
+  },
+  "permissions": {
+    "source": "Original5RX/fold; first160/last40 fixedselectedrows/TX;8000train2000val",
+    "dev": "Report only after all6 new models/config/history sealed and committed; same24-model cohort, no model or hyperparameter choices.",
+    "confirm": false,
+    "blind": false,
+    "C": false,
+    "ASK_strict": false,
+    "IQ_only": false
+  },
+  "primary": {
+    "formula": "(H0-LA)-(H2-H2_LA)",
+    "unit": "accuracy percentage points",
+    "pairing": "Same fold,seed,RX",
+    "receiver_units": 10,
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 28028,
+    "aggregation": "Average3seeds peruniqueRX before RX resampling",
+    "directional_rule": "Two-sided exploratory: abs(mean)>=0.5pp; conditional95%CI excludes0;>=5/6pairs and bothfoldmeans have the same direction as the mean.",
+    "caveat": "No multiplicity-corrected confirmatory pvalue; intervals condition on existing seed/sample/architecture choices. Non-significance is not equivalence."
+  },
+  "secondary": [
+    "Allfourcell source/dev accuracy,CE,macroF1,worstRX,perTXrecall",
+    "All6fit and10RX interactions",
+    "H2_LA versus LP, LA versus LP and H0 versus LP; descriptive only",
+    "Source learning and source-minus-Dev gaps, not a replacement for C"
+  ],
+  "interpretation": "BN includes learned affine parameters, batch statistics, running statistics and optimization. Removing BN changes352 parameters; this is a factorial procedure comparison, not a unique normalization cause.",
+  "stop": "Exactly6 newfits only after separate explicit authorization and committed execution activation. No retuning, extra seeds, C/IQ-only/ASKStrict/S28-B expansion."
+}
