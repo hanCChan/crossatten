@@ -1,0 +1,25 @@
+{
+  "protocol_sha256": "244681f4a79d7c689c02f69d648ffcac3b9f56145a2b6a225c6f16b4fad48a24",
+  "scripts": {
+    "experiment.py": "2e517e190802e0c3dc4bb12a83ce87938ea737963dcf94cb3fa766c2498cd010",
+    "physics.py": "2df3e8ad28a1dbda526ff45b7afdfba524c7f58eccf1ee1c3bca5e71b72e3100",
+    "source.py": "70d9d78c0688c261f4307e81db6cd70d6095e91364767639e22def4405a4002c"
+  },
+  "parameters": {
+    "HStem": 82426,
+    "LongPatch": 82364
+  },
+  "torch": "2.5.0+cu124",
+  "numpy": "1.26.4",
+  "cuda": "12.4",
+  "cudnn": 90100,
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "epochs": 40,
+  "batch": 128,
+  "seeds": [
+    0,
+    1
+  ],
+  "original_source_plan_sha256": "b56432678787a3bfcceb71604f7ace0303cd55b3fc8ee0c7fa88af17a7f4a205",
+  "original_source_registration_sha256": "ae5ac330020e20e1ac6e3bdaf1367edbd1078e84ed41e2ab446773e2ecf2168e"
+}
