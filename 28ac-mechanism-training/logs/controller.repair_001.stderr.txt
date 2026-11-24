@@ -9,5 +9,5 @@ ls\tensor_numpy.cpp:212.)
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : NotSpecified: (D:\crossatten\w...numpy.cpp:212.):String) [], RemoteException
     + FullyQualifiedErrorId : NativeCommandError
- 
+
   batch=torch.as_tensor(np.ascontiguousarray(x[start:start+128]),device='cuda')

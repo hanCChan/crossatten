@@ -28,8 +28,11 @@ def main():
             except UnicodeError:continue
         else:raise UnicodeError(str(p))
         target=HERE/'logs'/(p.stem+'.txt');target.parent.mkdir(exist_ok=True)
-        target.write_text(text.replace('\r\n','\n'),encoding='utf-8',newline='\n')
-        logs.append(dict(original=p.name,original_sha256=sha(p),encoding=encoding,published=target.relative_to(HERE).as_posix(),sha256=sha(target)))
+        normalized='\n'.join(line.rstrip(' \t') for line in text.replace('\r\n','\n').split('\n'))
+        target.write_text(normalized,encoding='utf-8',newline='\n')
+        logs.append(dict(original=p.name,original_sha256=sha(p),encoding=encoding,
+            publication_normalization='UTF8, LF, trailing spaces/tabs removed; original local bytes untouched.',
+            published=target.relative_to(HERE).as_posix(),sha256=sha(target)))
     for j in reg['jobs']:
         p=HERE/'runs'/identity(j);out=HERE/'evidence'/identity(j)
         for f in list(p.glob('recovery_epoch*.json'))+list(p.glob('paused.json')):(out/f.name).write_bytes(f.read_bytes())
