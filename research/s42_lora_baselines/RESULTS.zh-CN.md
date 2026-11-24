@@ -1,6 +1,6 @@
 # S42 Shen 强基线补充结果
 
-**Spec+Siamese 在与 HStem 完全相同的 P-H5×160 Native 包与 RX 划分上达到 95.89%。** 它是目前外部重实现中点估计最高的一项，强于原 Native Shen-DANN 的 94.21%。HStem 为 97.33%，两者配对区间跨零。HStem 参数约为其 0.96%。相对表现随 RX 改变。
+**Spec+Siamese 在与 HStem 完全相同的 P-H5×160 Native 包与 RX 划分上达到 95.89%。** 它是目前外部重实现中点估计最高的一项，高于原 Native Shen-DANN 的 94.21%。HStem 为 97.33%，两者配对区间跨零。HStem 参数约为其 0.96%。相对表现随 RX 改变。
 
 ## Native 主结果
 

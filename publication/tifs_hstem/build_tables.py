@@ -19,6 +19,7 @@ INPUTS = {
     "factorial": ("bebf7d6", "28ac-mechanism-training/RESULTS.json"),
     "stress": ("b170624", "research/s29_wisig/evidence/SUMMARY.json"),
     "cfo_augmentation": ("f9698e4", "research/s31_wisig/evidence/SUMMARY.json"),
+    "ma": ("607efa3", "research/s42_lora_baselines/evidence/RESULTS.json"),
 }
 METHODS = (
     ("h0", "HStem"), ("ce", "Shen CE"), ("dann", "Shen DANN"),
@@ -53,7 +54,7 @@ def table(columns, headings, rows):
     ])
 
 
-def external(data):
+def external(data, ma):
     indexed = {(row["view"], row["method"]): row for row in data["summary"]}
     for method, name in METHODS:
         native, strict = (indexed[view, method] for view in ("native", "strict_ib"))
@@ -68,6 +69,9 @@ def external(data):
                 f1[view] = f'{100 * row["macro_f1"]:.3f}'
                 worst[view] = f'{100 * row["worst_rx_acc"]:.3f}'
         yield [name, *acc.values(), *f1.values(), *worst.values()]
+        if method == "h0":
+            yield ["Spec+Siamese", f'{100*ma["acc"]:.3f} $\\pm$ {100*ma["fit_sd"]:.3f}',
+                   "--", f'{100*ma["macro_f1"]:.3f}', "--", f'{100*ma["worst_rx_acc"]:.3f}', "--"]
 
 
 def structure(data, costs):
@@ -106,7 +110,7 @@ def generate():
     result = {}
     result["external.tex"] = table(
         "lrrrrrr", ["Method", "Native Acc.", "Strict-IB Acc.", "Native F1", "Strict F1",
-                    "Native Worst", "Strict Worst"], external(inputs["external"]))
+                    "Native Worst", "Strict Worst"], external(inputs["external"], inputs["ma"]["methods"]["ma"]))
     result["long_patch.tex"] = table(
         "lrrrrrr", ["Tokenizer", "Params", "Support", "BN", r"Acc. $\pm$ fit SD", "F1", "Worst RX"],
         structure(inputs["structure"], inputs["structure_cost"]))
@@ -123,6 +127,11 @@ def generate():
     result["structure_timing.tex"] = table("lrrrr", cost_headers, [
         timing(name, structure_cost[key], structure_cost[key]["params"])
         for key, name, _, _ in STRUCTURE
+    ])
+    ma = inputs["ma"]
+    assert len(ma["selected_source"]) == 6
+    result["siamese_timing.tex"] = table("lrrrr", cost_headers, [
+        timing("Spec+Siamese", ma["cost"], ma["selected_source"][0]["params"])
     ])
     result["wisig.tex"] = table("lrr", ["Endpoint", "Diff.", "95\\% interval"], stress_rows(inputs["stress"]))
     arms = {x["arm"]: x for x in inputs["factorial"]["A"]["dev_summary"]}

@@ -79,12 +79,28 @@ Table~\ref{tab:strict-timing} reports the S24 common-band external timings from 
 \label{tab:strict-timing}\input{tables/strict_timing.tex}
 \end{table*}
 
+\section{Spec+Siamese Reimplementation}
+Ma et al.\ \cite{ma2025robust} train the from-scratch comparison with a shared nine-convolution residual extractor, one pooling layer, 512- and 256-unit dense layers, and a linear TX head. Their Shen evaluation uses two source receivers. We apply that objective to the registered P-H5$\times$160 source data and six fold/seed pairs. Each epoch visits every source training packet as an anchor and samples a partner with the same TX from a different source RX. Independent channel and noise draws yield 32 pairs per step. For each of the 64 anchors the denominator in NT-Xent includes all other views. The contrastive temperature is 0.05. Classification and contrastive example means are summed.
+
+The paper specifies log-magnitude STFT without complete numerical front-end and channel parameters. The reimplementation uses the Shen STFT window and crop convention (128 rectangular samples, hop 64, centered 52 bins), producing a $52\times127$ log-magnitude input before the residual layers. SAME padding and $2\times2$ average pooling yield a $13\times32\times64$ feature map before the dense layers. This reproduces the published parameter scale. The implementation uses an exponential five-tap profile with fractional delays, an eight-tone low-Doppler Jakes approximation, and additive noise. It uses the paper's $5$--$300$ ns, $0$--$5$ Hz, and $10$--$40$ dB draw ranges.
+
+The Adam schedule starts at $3\times10^{-4}$, halves on a 10-epoch source CE plateau, stops after 30 epochs without improvement, and has a 160-epoch cap. Network training uses CUDA BF16 autocast, with FP32 signal processing, CE, and contrastive similarities. Source validation and report inference use FP32. All six source-selected weights enter the paired report. Their source accuracy spans 99.05--99.45\%. One fit stops at epoch 156. The remaining five reach 160 epochs. The cohort uses 239,000 updates and produces 60,000 held packet predictions on 10 RXs.
+
+\begin{table*}[t]\centering
+\caption{S42 Native timing in a separate RTX 4060 Laptop GPU session. Times are p50/p95 in ms. Throughput uses the B128 median. Timing includes the spectrogram and the network on GPU-resident IQ.}
+\label{tab:ma-timing}\input{tables/siamese_timing.tex}
+\end{table*}
+
+Table~\ref{tab:ma-timing} uses FP32 with TF32 off, three warmups, and 15 measured repeats. This session provides the Spec+Siamese operating point. Matching the entire timing session with S24 comparators would require new timings for those methods.
+
+For recent context, the source receivers listed for Fig.~5 in Triad-GAN \cite{wang2026triad} can be excluded from its vector bars. The resulting approximate means over 15 unseen RXs are 84.4\% for homogeneous training and 95.8\% for heterogeneous training. They describe the authors' receiver and training protocol. The available publication leaves key update details open for a same-protocol implementation.
+
 \section{Audit Boundaries and Companion Overlap}
 The existing source validation packets already selected checkpoints; feature diagnostics are exploratory. TrueIB, five views, local frontend, token geometry, and data origin are inherited from the companion OOB manuscript \cite{oobcompanion}. The old six-RX blind set and Confirm RXs have research history and are not newly independent. No new capture is available. Unknown-TX rejection, FAR/FRR, active spoofing, and calibrated real synchronization-offset robustness are untested.
 
 The S25 TF32-off source analysis retained two net one-packet accuracy changes and one additional changed confusion pattern despite identical weights. Its final ratios are computed from that single analysis execution. S26's separate original-precision source recovery and common target-inference comparisons are recorded without overwriting these historical files. Numeric recovery is an execution observation, not permission to select a better result.
 
-Ma's unpretrained Siamese variant is source-compatible in principle \cite{ma2025robust}; the optional externally pretrained variant requires a separate budget. A checked author implementation and a frozen source-only adapter were not qualified here. No simplified network or paper score substitutes for it. This is a remaining coverage limitation, not proof that the method cannot be adapted.
+The Spec+Siamese row uses the independent paper-derived implementation specified above. The published external-pretraining variant has a separate data budget. Neither the original two-source-RX test cohort nor a released author checkpoint enters the score.
 
 The ten-claim evidence matrix and ten reviewer answers are updated in the repository. They separate measured system effects, exploratory associations, architectural identities, and unresolved mechanisms. Full negative shift and weak-fit results are retained.
 \bibliographystyle{IEEEtran}
