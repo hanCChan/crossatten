@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from ac_common import HERE,ROOT,read,write,sha,now,identity
+from ac_common import HERE,ROOT,P,C,read,write,sha,now,identity
 
 ARMS=['H0','LA','H2','H2_LA','LP']
 LABEL={'H0':'HStem','LA':'No-GELU','H2':'NoMidBN','H2_LA':'NoBN-NoGELU','LP':'Long-Patch'}
@@ -146,11 +146,41 @@ def write_tables(result):
         roles=[('Source',d['source_records']),('Dev',d['dev_records'])] if stage=='A' else [('Source',d['source_records']),('Held',d['held_records'])]
         for role,records in roles:
             for q in records:
-                for tx,recall in enumerate(q['per_tx_recall']):rows.append(dict(role=role,arm=q['arm'],fold=q['fold'],seed=q['seed'],rx=q['rx'],TX=tx+31,recall=recall,accuracy=q['acc'],CE=q['ce'],macroF1=q['macro_f1'],mean_trueclass_margin=q['true_margin_mean']))
+                name=identity(dict(stage=stage,arm=q['arm'],fold=q['fold'],seed=q['seed']))
+                file='SOURCE' if role=='Source' else q['rx'] if stage=='A' else 'HELD'
+                with np.load(HERE/'predictions'/name/(file+'.npz'),allow_pickle=False) as z:
+                    logits=z['logits'].astype(np.float64);y=z['y']
+                    if role=='Source':
+                        receivers=P['folds'][q['fold']]['source'] if stage=='A' else C['splits'][q['fold']]['training_receivers']
+                        mask=z['rx']==receivers.index(q['rx']);logits=logits[mask];y=y[mask]
+                ce,margin=packet_diagnostics(logits,y);cm=np.asarray(q['confusion'])
+                for tx,recall in enumerate(q['per_tx_recall']):
+                    mask=y==tx
+                    rows.append(dict(role=role,arm=q['arm'],fold=q['fold'],seed=q['seed'],rx=q['rx'],TX=tx+31,packets=int(mask.sum()),
+                        recall=recall,precision=float(cm[tx,tx]/max(cm[:,tx].sum(),1)),F1=float(2*cm[tx,tx]/max(cm[tx].sum()+cm[:,tx].sum(),1)),
+                        TX_CE=float(ce[mask].mean()),TX_mean_trueclass_margin=float(margin[mask].mean()),
+                        RX_accuracy=q['acc'],RX_CE=q['ce'],RX_macroF1=q['macro_f1']))
         table(stage+'_rx_tx.csv',rows)
     geometry=read(HERE/'EVALUATION_C.json')['geometry']
     keys=['arm','fold','seed','role','layer','status','between_tx','conditional_rx','within_tx_rx','tx_to_rx_centroid_ratio','tx_to_within_class_ratio']
     table('C_geometry.csv',[{k:q.get(k) for k in keys} for q in geometry])
+    margins=[]
+    for j in [j for j in read(HERE/'registration.json')['jobs'] if j['stage']=='C']:
+        for role in ['SOURCE','HELD']:
+            with np.load(HERE/'predictions'/identity(j)/(role+'_features.npz'),allow_pickle=False) as z:
+                ce,margin=packet_diagnostics(z['logits'].astype(np.float64),z['y'])
+                for ri in np.unique(z['rx']):
+                    for tx in range(10):
+                        mask=(z['rx']==ri)&(z['y']==tx);assert mask.sum()==40
+                        rx=C['splits'][j['fold']]['training_receivers'][int(ri)] if role=='SOURCE' else C['splits'][j['fold']]['held_source_receiver']
+                        margins.append(dict(role=role,arm=j['arm'],fold=j['fold'],seed=j['seed'],rx=rx,TX=tx+31,packets=40,
+                            mean_trueclass_margin=float(margin[mask].mean()),CE=float(ce[mask].mean())))
+    table('C_fixed40_margin.csv',margins)
+
+def packet_diagnostics(logits,y):
+    maximum=logits.max(1);ce=maximum+np.log(np.exp(logits-maximum[:,None]).sum(1))-logits[np.arange(len(y)),y]
+    alternatives=logits.copy();alternatives[np.arange(len(y)),y]=-np.inf
+    return ce,logits[np.arange(len(y)),y]-alternatives.max(1)
 
 def plots(result):
     folder=HERE/'figures';folder.mkdir(exist_ok=True)
