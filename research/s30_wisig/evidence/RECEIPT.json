@@ -1,0 +1,149 @@
+{
+  "hashes": {
+    "V0": "e819b3a31dc63a87ce72ff911ceee726856ba94fe3550760167e619fac13ceb1",
+    "V1": "8b1f3c0861e065bda4d1cd2fa2488f822f31437982fce1d2670e2243c157ef26"
+  },
+  "layer_sha256": "85ecd495518351f87ac32952e561dce1e1d1f7f6c8a922178818c0dbec9b2cf3",
+  "verification": {
+    "V0": {
+      "iq": {
+        "-1000": {
+          "decomposition_error": 2.384185791015625e-07,
+          "reversible_error": 7.152557373046875e-07
+        },
+        "1000": {
+          "decomposition_error": 2.384185791015625e-07,
+          "reversible_error": 7.152557373046875e-07
+        },
+        "-2000": {
+          "decomposition_error": 2.384185791015625e-07,
+          "reversible_error": 7.152557373046875e-07
+        },
+        "2000": {
+          "decomposition_error": 2.384185791015625e-07,
+          "reversible_error": 7.152557373046875e-07
+        },
+        "-2500": {
+          "decomposition_error": 4.76837158203125e-07,
+          "reversible_error": 7.152557373046875e-07
+        },
+        "2500": {
+          "decomposition_error": 2.384185791015625e-07,
+          "reversible_error": 7.152557373046875e-07
+        },
+        "-5000": {
+          "decomposition_error": 4.76837158203125e-07,
+          "reversible_error": 7.152557373046875e-07
+        },
+        "5000": {
+          "decomposition_error": 4.76837158203125e-07,
+          "reversible_error": 9.5367431640625e-07
+        },
+        "-10000": {
+          "decomposition_error": 2.384185791015625e-07,
+          "reversible_error": 7.152557373046875e-07
+        },
+        "10000": {
+          "decomposition_error": 3.5762786865234375e-07,
+          "reversible_error": 7.152557373046875e-07
+        },
+        "-15000": {
+          "decomposition_error": 4.76837158203125e-07,
+          "reversible_error": 7.152557373046875e-07
+        },
+        "15000": {
+          "decomposition_error": 4.76837158203125e-07,
+          "reversible_error": 7.152557373046875e-07
+        },
+        "-20000": {
+          "decomposition_error": 4.76837158203125e-07,
+          "reversible_error": 7.152557373046875e-07
+        },
+        "20000": {
+          "decomposition_error": 4.76837158203125e-07,
+          "reversible_error": 7.152557373046875e-07
+        }
+      },
+      "prediction_disagreements": {
+        "0_HStem_recover_-10000_0": 0,
+        "0_LongPatch_recover_-10000_0": 0,
+        "1_HStem_recover_-10000_0": 0,
+        "1_LongPatch_recover_-10000_0": 1,
+        "0_HStem_recover_10000_0": 0,
+        "0_LongPatch_recover_10000_0": 0,
+        "1_HStem_recover_10000_0": 0,
+        "1_LongPatch_recover_10000_0": 1
+      }
+    },
+    "V1": {
+      "iq": {
+        "-1000": {
+          "decomposition_error": 4.76837158203125e-07,
+          "reversible_error": 9.5367431640625e-07
+        },
+        "1000": {
+          "decomposition_error": 4.76837158203125e-07,
+          "reversible_error": 7.152557373046875e-07
+        },
+        "-2000": {
+          "decomposition_error": 4.76837158203125e-07,
+          "reversible_error": 9.5367431640625e-07
+        },
+        "2000": {
+          "decomposition_error": 2.384185791015625e-07,
+          "reversible_error": 7.152557373046875e-07
+        },
+        "-2500": {
+          "decomposition_error": 4.76837158203125e-07,
+          "reversible_error": 7.152557373046875e-07
+        },
+        "2500": {
+          "decomposition_error": 4.76837158203125e-07,
+          "reversible_error": 7.152557373046875e-07
+        },
+        "-5000": {
+          "decomposition_error": 4.76837158203125e-07,
+          "reversible_error": 7.152557373046875e-07
+        },
+        "5000": {
+          "decomposition_error": 4.76837158203125e-07,
+          "reversible_error": 7.152557373046875e-07
+        },
+        "-10000": {
+          "decomposition_error": 4.76837158203125e-07,
+          "reversible_error": 7.152557373046875e-07
+        },
+        "10000": {
+          "decomposition_error": 4.76837158203125e-07,
+          "reversible_error": 7.152557373046875e-07
+        },
+        "-15000": {
+          "decomposition_error": 4.76837158203125e-07,
+          "reversible_error": 7.152557373046875e-07
+        },
+        "15000": {
+          "decomposition_error": 4.76837158203125e-07,
+          "reversible_error": 7.152557373046875e-07
+        },
+        "-20000": {
+          "decomposition_error": 4.76837158203125e-07,
+          "reversible_error": 4.76837158203125e-07
+        },
+        "20000": {
+          "decomposition_error": 4.76837158203125e-07,
+          "reversible_error": 4.76837158203125e-07
+        }
+      },
+      "prediction_disagreements": {
+        "0_HStem_recover_-10000_0": 0,
+        "0_LongPatch_recover_-10000_0": 0,
+        "1_HStem_recover_-10000_0": 0,
+        "1_LongPatch_recover_-10000_0": 0,
+        "0_HStem_recover_10000_0": 0,
+        "0_LongPatch_recover_10000_0": 0,
+        "1_HStem_recover_10000_0": 0,
+        "1_LongPatch_recover_10000_0": 0
+      }
+    }
+  }
+}

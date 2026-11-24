@@ -1,0 +1,3035 @@
+{
+  "unique_training_packets": 24267,
+  "duplicate_packets_removed": 8152,
+  "coverage": 0.5077677504429884,
+  "supported_cells": 272,
+  "cells": [
+    {
+      "tx": 0,
+      "rx": 3,
+      "day": 1,
+      "packets": 73,
+      "reliable": 25
+    },
+    {
+      "tx": 0,
+      "rx": 3,
+      "day": 2,
+      "packets": 70,
+      "reliable": 20
+    },
+    {
+      "tx": 0,
+      "rx": 4,
+      "day": 1,
+      "packets": 70,
+      "reliable": 23
+    },
+    {
+      "tx": 0,
+      "rx": 4,
+      "day": 2,
+      "packets": 74,
+      "reliable": 10
+    },
+    {
+      "tx": 0,
+      "rx": 5,
+      "day": 1,
+      "packets": 56,
+      "reliable": 44
+    },
+    {
+      "tx": 0,
+      "rx": 5,
+      "day": 2,
+      "packets": 65,
+      "reliable": 50
+    },
+    {
+      "tx": 0,
+      "rx": 6,
+      "day": 1,
+      "packets": 79,
+      "reliable": 6
+    },
+    {
+      "tx": 0,
+      "rx": 6,
+      "day": 2,
+      "packets": 68,
+      "reliable": 4
+    },
+    {
+      "tx": 0,
+      "rx": 7,
+      "day": 1,
+      "packets": 65,
+      "reliable": 0
+    },
+    {
+      "tx": 0,
+      "rx": 7,
+      "day": 2,
+      "packets": 66,
+      "reliable": 4
+    },
+    {
+      "tx": 0,
+      "rx": 10,
+      "day": 1,
+      "packets": 71,
+      "reliable": 60
+    },
+    {
+      "tx": 0,
+      "rx": 10,
+      "day": 2,
+      "packets": 74,
+      "reliable": 65
+    },
+    {
+      "tx": 0,
+      "rx": 11,
+      "day": 1,
+      "packets": 74,
+      "reliable": 47
+    },
+    {
+      "tx": 0,
+      "rx": 11,
+      "day": 2,
+      "packets": 72,
+      "reliable": 21
+    },
+    {
+      "tx": 0,
+      "rx": 12,
+      "day": 1,
+      "packets": 68,
+      "reliable": 58
+    },
+    {
+      "tx": 0,
+      "rx": 12,
+      "day": 2,
+      "packets": 70,
+      "reliable": 54
+    },
+    {
+      "tx": 0,
+      "rx": 13,
+      "day": 1,
+      "packets": 67,
+      "reliable": 63
+    },
+    {
+      "tx": 0,
+      "rx": 13,
+      "day": 2,
+      "packets": 71,
+      "reliable": 62
+    },
+    {
+      "tx": 0,
+      "rx": 14,
+      "day": 1,
+      "packets": 73,
+      "reliable": 0
+    },
+    {
+      "tx": 0,
+      "rx": 14,
+      "day": 2,
+      "packets": 67,
+      "reliable": 11
+    },
+    {
+      "tx": 0,
+      "rx": 15,
+      "day": 2,
+      "packets": 74,
+      "reliable": 0
+    },
+    {
+      "tx": 0,
+      "rx": 16,
+      "day": 1,
+      "packets": 76,
+      "reliable": 55
+    },
+    {
+      "tx": 0,
+      "rx": 16,
+      "day": 2,
+      "packets": 72,
+      "reliable": 40
+    },
+    {
+      "tx": 0,
+      "rx": 17,
+      "day": 2,
+      "packets": 49,
+      "reliable": 3
+    },
+    {
+      "tx": 0,
+      "rx": 19,
+      "day": 1,
+      "packets": 74,
+      "reliable": 47
+    },
+    {
+      "tx": 0,
+      "rx": 19,
+      "day": 2,
+      "packets": 71,
+      "reliable": 20
+    },
+    {
+      "tx": 0,
+      "rx": 20,
+      "day": 1,
+      "packets": 76,
+      "reliable": 65
+    },
+    {
+      "tx": 0,
+      "rx": 20,
+      "day": 2,
+      "packets": 71,
+      "reliable": 56
+    },
+    {
+      "tx": 0,
+      "rx": 21,
+      "day": 1,
+      "packets": 75,
+      "reliable": 12
+    },
+    {
+      "tx": 0,
+      "rx": 21,
+      "day": 2,
+      "packets": 70,
+      "reliable": 10
+    },
+    {
+      "tx": 0,
+      "rx": 22,
+      "day": 1,
+      "packets": 74,
+      "reliable": 42
+    },
+    {
+      "tx": 0,
+      "rx": 22,
+      "day": 2,
+      "packets": 67,
+      "reliable": 26
+    },
+    {
+      "tx": 0,
+      "rx": 23,
+      "day": 1,
+      "packets": 70,
+      "reliable": 58
+    },
+    {
+      "tx": 0,
+      "rx": 23,
+      "day": 2,
+      "packets": 73,
+      "reliable": 68
+    },
+    {
+      "tx": 1,
+      "rx": 3,
+      "day": 1,
+      "packets": 75,
+      "reliable": 31
+    },
+    {
+      "tx": 1,
+      "rx": 3,
+      "day": 2,
+      "packets": 69,
+      "reliable": 24
+    },
+    {
+      "tx": 1,
+      "rx": 4,
+      "day": 1,
+      "packets": 72,
+      "reliable": 44
+    },
+    {
+      "tx": 1,
+      "rx": 4,
+      "day": 2,
+      "packets": 61,
+      "reliable": 36
+    },
+    {
+      "tx": 1,
+      "rx": 5,
+      "day": 1,
+      "packets": 68,
+      "reliable": 53
+    },
+    {
+      "tx": 1,
+      "rx": 5,
+      "day": 2,
+      "packets": 71,
+      "reliable": 51
+    },
+    {
+      "tx": 1,
+      "rx": 6,
+      "day": 1,
+      "packets": 72,
+      "reliable": 22
+    },
+    {
+      "tx": 1,
+      "rx": 6,
+      "day": 2,
+      "packets": 68,
+      "reliable": 28
+    },
+    {
+      "tx": 1,
+      "rx": 7,
+      "day": 1,
+      "packets": 64,
+      "reliable": 33
+    },
+    {
+      "tx": 1,
+      "rx": 7,
+      "day": 2,
+      "packets": 66,
+      "reliable": 13
+    },
+    {
+      "tx": 1,
+      "rx": 10,
+      "day": 1,
+      "packets": 71,
+      "reliable": 62
+    },
+    {
+      "tx": 1,
+      "rx": 10,
+      "day": 2,
+      "packets": 68,
+      "reliable": 62
+    },
+    {
+      "tx": 1,
+      "rx": 11,
+      "day": 1,
+      "packets": 68,
+      "reliable": 53
+    },
+    {
+      "tx": 1,
+      "rx": 11,
+      "day": 2,
+      "packets": 68,
+      "reliable": 46
+    },
+    {
+      "tx": 1,
+      "rx": 12,
+      "day": 1,
+      "packets": 73,
+      "reliable": 54
+    },
+    {
+      "tx": 1,
+      "rx": 12,
+      "day": 2,
+      "packets": 72,
+      "reliable": 55
+    },
+    {
+      "tx": 1,
+      "rx": 13,
+      "day": 1,
+      "packets": 57,
+      "reliable": 55
+    },
+    {
+      "tx": 1,
+      "rx": 13,
+      "day": 2,
+      "packets": 64,
+      "reliable": 35
+    },
+    {
+      "tx": 1,
+      "rx": 14,
+      "day": 1,
+      "packets": 70,
+      "reliable": 26
+    },
+    {
+      "tx": 1,
+      "rx": 14,
+      "day": 2,
+      "packets": 72,
+      "reliable": 12
+    },
+    {
+      "tx": 1,
+      "rx": 15,
+      "day": 1,
+      "packets": 67,
+      "reliable": 32
+    },
+    {
+      "tx": 1,
+      "rx": 15,
+      "day": 2,
+      "packets": 72,
+      "reliable": 50
+    },
+    {
+      "tx": 1,
+      "rx": 16,
+      "day": 1,
+      "packets": 72,
+      "reliable": 54
+    },
+    {
+      "tx": 1,
+      "rx": 16,
+      "day": 2,
+      "packets": 73,
+      "reliable": 56
+    },
+    {
+      "tx": 1,
+      "rx": 17,
+      "day": 1,
+      "packets": 76,
+      "reliable": 64
+    },
+    {
+      "tx": 1,
+      "rx": 17,
+      "day": 2,
+      "packets": 66,
+      "reliable": 36
+    },
+    {
+      "tx": 1,
+      "rx": 19,
+      "day": 1,
+      "packets": 64,
+      "reliable": 38
+    },
+    {
+      "tx": 1,
+      "rx": 19,
+      "day": 2,
+      "packets": 74,
+      "reliable": 32
+    },
+    {
+      "tx": 1,
+      "rx": 20,
+      "day": 1,
+      "packets": 77,
+      "reliable": 47
+    },
+    {
+      "tx": 1,
+      "rx": 20,
+      "day": 2,
+      "packets": 64,
+      "reliable": 34
+    },
+    {
+      "tx": 1,
+      "rx": 21,
+      "day": 1,
+      "packets": 68,
+      "reliable": 18
+    },
+    {
+      "tx": 1,
+      "rx": 21,
+      "day": 2,
+      "packets": 75,
+      "reliable": 17
+    },
+    {
+      "tx": 1,
+      "rx": 22,
+      "day": 1,
+      "packets": 60,
+      "reliable": 33
+    },
+    {
+      "tx": 1,
+      "rx": 22,
+      "day": 2,
+      "packets": 70,
+      "reliable": 26
+    },
+    {
+      "tx": 1,
+      "rx": 23,
+      "day": 1,
+      "packets": 61,
+      "reliable": 45
+    },
+    {
+      "tx": 1,
+      "rx": 23,
+      "day": 2,
+      "packets": 69,
+      "reliable": 48
+    },
+    {
+      "tx": 2,
+      "rx": 3,
+      "day": 1,
+      "packets": 76,
+      "reliable": 15
+    },
+    {
+      "tx": 2,
+      "rx": 3,
+      "day": 2,
+      "packets": 67,
+      "reliable": 20
+    },
+    {
+      "tx": 2,
+      "rx": 4,
+      "day": 1,
+      "packets": 67,
+      "reliable": 54
+    },
+    {
+      "tx": 2,
+      "rx": 4,
+      "day": 2,
+      "packets": 66,
+      "reliable": 40
+    },
+    {
+      "tx": 2,
+      "rx": 5,
+      "day": 1,
+      "packets": 68,
+      "reliable": 67
+    },
+    {
+      "tx": 2,
+      "rx": 5,
+      "day": 2,
+      "packets": 66,
+      "reliable": 63
+    },
+    {
+      "tx": 2,
+      "rx": 6,
+      "day": 1,
+      "packets": 76,
+      "reliable": 24
+    },
+    {
+      "tx": 2,
+      "rx": 6,
+      "day": 2,
+      "packets": 72,
+      "reliable": 37
+    },
+    {
+      "tx": 2,
+      "rx": 7,
+      "day": 1,
+      "packets": 60,
+      "reliable": 21
+    },
+    {
+      "tx": 2,
+      "rx": 7,
+      "day": 2,
+      "packets": 67,
+      "reliable": 29
+    },
+    {
+      "tx": 2,
+      "rx": 10,
+      "day": 1,
+      "packets": 69,
+      "reliable": 3
+    },
+    {
+      "tx": 2,
+      "rx": 12,
+      "day": 1,
+      "packets": 73,
+      "reliable": 0
+    },
+    {
+      "tx": 2,
+      "rx": 13,
+      "day": 2,
+      "packets": 75,
+      "reliable": 58
+    },
+    {
+      "tx": 2,
+      "rx": 14,
+      "day": 1,
+      "packets": 74,
+      "reliable": 65
+    },
+    {
+      "tx": 2,
+      "rx": 14,
+      "day": 2,
+      "packets": 75,
+      "reliable": 61
+    },
+    {
+      "tx": 2,
+      "rx": 15,
+      "day": 1,
+      "packets": 61,
+      "reliable": 33
+    },
+    {
+      "tx": 2,
+      "rx": 15,
+      "day": 2,
+      "packets": 71,
+      "reliable": 55
+    },
+    {
+      "tx": 2,
+      "rx": 16,
+      "day": 1,
+      "packets": 71,
+      "reliable": 56
+    },
+    {
+      "tx": 2,
+      "rx": 16,
+      "day": 2,
+      "packets": 68,
+      "reliable": 45
+    },
+    {
+      "tx": 2,
+      "rx": 17,
+      "day": 1,
+      "packets": 77,
+      "reliable": 63
+    },
+    {
+      "tx": 2,
+      "rx": 17,
+      "day": 2,
+      "packets": 66,
+      "reliable": 57
+    },
+    {
+      "tx": 2,
+      "rx": 19,
+      "day": 1,
+      "packets": 71,
+      "reliable": 66
+    },
+    {
+      "tx": 2,
+      "rx": 19,
+      "day": 2,
+      "packets": 69,
+      "reliable": 66
+    },
+    {
+      "tx": 2,
+      "rx": 20,
+      "day": 1,
+      "packets": 78,
+      "reliable": 58
+    },
+    {
+      "tx": 2,
+      "rx": 20,
+      "day": 2,
+      "packets": 70,
+      "reliable": 53
+    },
+    {
+      "tx": 2,
+      "rx": 21,
+      "day": 1,
+      "packets": 73,
+      "reliable": 43
+    },
+    {
+      "tx": 2,
+      "rx": 21,
+      "day": 2,
+      "packets": 79,
+      "reliable": 50
+    },
+    {
+      "tx": 2,
+      "rx": 22,
+      "day": 1,
+      "packets": 67,
+      "reliable": 15
+    },
+    {
+      "tx": 2,
+      "rx": 22,
+      "day": 2,
+      "packets": 70,
+      "reliable": 10
+    },
+    {
+      "tx": 2,
+      "rx": 23,
+      "day": 1,
+      "packets": 73,
+      "reliable": 63
+    },
+    {
+      "tx": 2,
+      "rx": 23,
+      "day": 2,
+      "packets": 77,
+      "reliable": 59
+    },
+    {
+      "tx": 3,
+      "rx": 3,
+      "day": 1,
+      "packets": 72,
+      "reliable": 52
+    },
+    {
+      "tx": 3,
+      "rx": 3,
+      "day": 2,
+      "packets": 72,
+      "reliable": 45
+    },
+    {
+      "tx": 3,
+      "rx": 5,
+      "day": 1,
+      "packets": 74,
+      "reliable": 71
+    },
+    {
+      "tx": 3,
+      "rx": 5,
+      "day": 2,
+      "packets": 78,
+      "reliable": 78
+    },
+    {
+      "tx": 3,
+      "rx": 6,
+      "day": 1,
+      "packets": 75,
+      "reliable": 7
+    },
+    {
+      "tx": 3,
+      "rx": 6,
+      "day": 2,
+      "packets": 72,
+      "reliable": 12
+    },
+    {
+      "tx": 3,
+      "rx": 7,
+      "day": 1,
+      "packets": 75,
+      "reliable": 40
+    },
+    {
+      "tx": 3,
+      "rx": 7,
+      "day": 2,
+      "packets": 57,
+      "reliable": 36
+    },
+    {
+      "tx": 3,
+      "rx": 10,
+      "day": 1,
+      "packets": 68,
+      "reliable": 64
+    },
+    {
+      "tx": 3,
+      "rx": 10,
+      "day": 2,
+      "packets": 70,
+      "reliable": 42
+    },
+    {
+      "tx": 3,
+      "rx": 11,
+      "day": 1,
+      "packets": 71,
+      "reliable": 65
+    },
+    {
+      "tx": 3,
+      "rx": 11,
+      "day": 2,
+      "packets": 74,
+      "reliable": 40
+    },
+    {
+      "tx": 3,
+      "rx": 12,
+      "day": 1,
+      "packets": 75,
+      "reliable": 71
+    },
+    {
+      "tx": 3,
+      "rx": 12,
+      "day": 2,
+      "packets": 71,
+      "reliable": 55
+    },
+    {
+      "tx": 3,
+      "rx": 13,
+      "day": 1,
+      "packets": 70,
+      "reliable": 60
+    },
+    {
+      "tx": 3,
+      "rx": 13,
+      "day": 2,
+      "packets": 68,
+      "reliable": 57
+    },
+    {
+      "tx": 3,
+      "rx": 14,
+      "day": 1,
+      "packets": 59,
+      "reliable": 55
+    },
+    {
+      "tx": 3,
+      "rx": 14,
+      "day": 2,
+      "packets": 71,
+      "reliable": 66
+    },
+    {
+      "tx": 3,
+      "rx": 15,
+      "day": 1,
+      "packets": 70,
+      "reliable": 41
+    },
+    {
+      "tx": 3,
+      "rx": 15,
+      "day": 2,
+      "packets": 64,
+      "reliable": 46
+    },
+    {
+      "tx": 3,
+      "rx": 16,
+      "day": 1,
+      "packets": 66,
+      "reliable": 38
+    },
+    {
+      "tx": 3,
+      "rx": 16,
+      "day": 2,
+      "packets": 75,
+      "reliable": 34
+    },
+    {
+      "tx": 3,
+      "rx": 17,
+      "day": 1,
+      "packets": 73,
+      "reliable": 72
+    },
+    {
+      "tx": 3,
+      "rx": 17,
+      "day": 2,
+      "packets": 71,
+      "reliable": 66
+    },
+    {
+      "tx": 3,
+      "rx": 19,
+      "day": 1,
+      "packets": 65,
+      "reliable": 53
+    },
+    {
+      "tx": 3,
+      "rx": 19,
+      "day": 2,
+      "packets": 76,
+      "reliable": 70
+    },
+    {
+      "tx": 3,
+      "rx": 20,
+      "day": 1,
+      "packets": 74,
+      "reliable": 64
+    },
+    {
+      "tx": 3,
+      "rx": 20,
+      "day": 2,
+      "packets": 70,
+      "reliable": 63
+    },
+    {
+      "tx": 3,
+      "rx": 21,
+      "day": 1,
+      "packets": 74,
+      "reliable": 55
+    },
+    {
+      "tx": 3,
+      "rx": 21,
+      "day": 2,
+      "packets": 73,
+      "reliable": 42
+    },
+    {
+      "tx": 3,
+      "rx": 22,
+      "day": 1,
+      "packets": 68,
+      "reliable": 19
+    },
+    {
+      "tx": 3,
+      "rx": 22,
+      "day": 2,
+      "packets": 68,
+      "reliable": 23
+    },
+    {
+      "tx": 3,
+      "rx": 23,
+      "day": 1,
+      "packets": 61,
+      "reliable": 58
+    },
+    {
+      "tx": 3,
+      "rx": 23,
+      "day": 2,
+      "packets": 68,
+      "reliable": 66
+    },
+    {
+      "tx": 4,
+      "rx": 3,
+      "day": 1,
+      "packets": 75,
+      "reliable": 14
+    },
+    {
+      "tx": 4,
+      "rx": 3,
+      "day": 2,
+      "packets": 69,
+      "reliable": 21
+    },
+    {
+      "tx": 4,
+      "rx": 4,
+      "day": 1,
+      "packets": 66,
+      "reliable": 54
+    },
+    {
+      "tx": 4,
+      "rx": 4,
+      "day": 2,
+      "packets": 61,
+      "reliable": 44
+    },
+    {
+      "tx": 4,
+      "rx": 5,
+      "day": 1,
+      "packets": 69,
+      "reliable": 67
+    },
+    {
+      "tx": 4,
+      "rx": 5,
+      "day": 2,
+      "packets": 68,
+      "reliable": 65
+    },
+    {
+      "tx": 4,
+      "rx": 6,
+      "day": 1,
+      "packets": 65,
+      "reliable": 4
+    },
+    {
+      "tx": 4,
+      "rx": 6,
+      "day": 2,
+      "packets": 79,
+      "reliable": 42
+    },
+    {
+      "tx": 4,
+      "rx": 7,
+      "day": 1,
+      "packets": 71,
+      "reliable": 3
+    },
+    {
+      "tx": 4,
+      "rx": 7,
+      "day": 2,
+      "packets": 66,
+      "reliable": 1
+    },
+    {
+      "tx": 4,
+      "rx": 10,
+      "day": 1,
+      "packets": 71,
+      "reliable": 2
+    },
+    {
+      "tx": 4,
+      "rx": 10,
+      "day": 2,
+      "packets": 67,
+      "reliable": 21
+    },
+    {
+      "tx": 4,
+      "rx": 11,
+      "day": 1,
+      "packets": 73,
+      "reliable": 37
+    },
+    {
+      "tx": 4,
+      "rx": 11,
+      "day": 2,
+      "packets": 67,
+      "reliable": 3
+    },
+    {
+      "tx": 4,
+      "rx": 12,
+      "day": 1,
+      "packets": 62,
+      "reliable": 48
+    },
+    {
+      "tx": 4,
+      "rx": 12,
+      "day": 2,
+      "packets": 67,
+      "reliable": 42
+    },
+    {
+      "tx": 4,
+      "rx": 13,
+      "day": 1,
+      "packets": 65,
+      "reliable": 5
+    },
+    {
+      "tx": 4,
+      "rx": 13,
+      "day": 2,
+      "packets": 76,
+      "reliable": 4
+    },
+    {
+      "tx": 4,
+      "rx": 14,
+      "day": 1,
+      "packets": 67,
+      "reliable": 0
+    },
+    {
+      "tx": 4,
+      "rx": 14,
+      "day": 2,
+      "packets": 74,
+      "reliable": 2
+    },
+    {
+      "tx": 4,
+      "rx": 15,
+      "day": 1,
+      "packets": 64,
+      "reliable": 64
+    },
+    {
+      "tx": 4,
+      "rx": 15,
+      "day": 2,
+      "packets": 67,
+      "reliable": 67
+    },
+    {
+      "tx": 4,
+      "rx": 16,
+      "day": 1,
+      "packets": 70,
+      "reliable": 56
+    },
+    {
+      "tx": 4,
+      "rx": 16,
+      "day": 2,
+      "packets": 74,
+      "reliable": 57
+    },
+    {
+      "tx": 4,
+      "rx": 17,
+      "day": 1,
+      "packets": 73,
+      "reliable": 3
+    },
+    {
+      "tx": 4,
+      "rx": 17,
+      "day": 2,
+      "packets": 67,
+      "reliable": 1
+    },
+    {
+      "tx": 4,
+      "rx": 19,
+      "day": 1,
+      "packets": 67,
+      "reliable": 0
+    },
+    {
+      "tx": 4,
+      "rx": 19,
+      "day": 2,
+      "packets": 78,
+      "reliable": 0
+    },
+    {
+      "tx": 4,
+      "rx": 20,
+      "day": 1,
+      "packets": 75,
+      "reliable": 73
+    },
+    {
+      "tx": 4,
+      "rx": 20,
+      "day": 2,
+      "packets": 57,
+      "reliable": 57
+    },
+    {
+      "tx": 4,
+      "rx": 21,
+      "day": 1,
+      "packets": 72,
+      "reliable": 43
+    },
+    {
+      "tx": 4,
+      "rx": 21,
+      "day": 2,
+      "packets": 74,
+      "reliable": 51
+    },
+    {
+      "tx": 4,
+      "rx": 22,
+      "day": 1,
+      "packets": 73,
+      "reliable": 8
+    },
+    {
+      "tx": 4,
+      "rx": 22,
+      "day": 2,
+      "packets": 65,
+      "reliable": 12
+    },
+    {
+      "tx": 4,
+      "rx": 23,
+      "day": 1,
+      "packets": 70,
+      "reliable": 2
+    },
+    {
+      "tx": 4,
+      "rx": 23,
+      "day": 2,
+      "packets": 74,
+      "reliable": 5
+    },
+    {
+      "tx": 5,
+      "rx": 3,
+      "day": 1,
+      "packets": 70,
+      "reliable": 33
+    },
+    {
+      "tx": 5,
+      "rx": 3,
+      "day": 2,
+      "packets": 76,
+      "reliable": 29
+    },
+    {
+      "tx": 5,
+      "rx": 4,
+      "day": 1,
+      "packets": 69,
+      "reliable": 7
+    },
+    {
+      "tx": 5,
+      "rx": 4,
+      "day": 2,
+      "packets": 76,
+      "reliable": 2
+    },
+    {
+      "tx": 5,
+      "rx": 5,
+      "day": 1,
+      "packets": 69,
+      "reliable": 13
+    },
+    {
+      "tx": 5,
+      "rx": 5,
+      "day": 2,
+      "packets": 67,
+      "reliable": 5
+    },
+    {
+      "tx": 5,
+      "rx": 6,
+      "day": 1,
+      "packets": 68,
+      "reliable": 12
+    },
+    {
+      "tx": 5,
+      "rx": 6,
+      "day": 2,
+      "packets": 64,
+      "reliable": 9
+    },
+    {
+      "tx": 5,
+      "rx": 7,
+      "day": 1,
+      "packets": 78,
+      "reliable": 0
+    },
+    {
+      "tx": 5,
+      "rx": 7,
+      "day": 2,
+      "packets": 76,
+      "reliable": 2
+    },
+    {
+      "tx": 5,
+      "rx": 10,
+      "day": 1,
+      "packets": 71,
+      "reliable": 6
+    },
+    {
+      "tx": 5,
+      "rx": 10,
+      "day": 2,
+      "packets": 76,
+      "reliable": 13
+    },
+    {
+      "tx": 5,
+      "rx": 11,
+      "day": 1,
+      "packets": 60,
+      "reliable": 10
+    },
+    {
+      "tx": 5,
+      "rx": 11,
+      "day": 2,
+      "packets": 79,
+      "reliable": 8
+    },
+    {
+      "tx": 5,
+      "rx": 12,
+      "day": 1,
+      "packets": 63,
+      "reliable": 26
+    },
+    {
+      "tx": 5,
+      "rx": 12,
+      "day": 2,
+      "packets": 75,
+      "reliable": 24
+    },
+    {
+      "tx": 5,
+      "rx": 13,
+      "day": 1,
+      "packets": 80,
+      "reliable": 8
+    },
+    {
+      "tx": 5,
+      "rx": 13,
+      "day": 2,
+      "packets": 70,
+      "reliable": 10
+    },
+    {
+      "tx": 5,
+      "rx": 14,
+      "day": 1,
+      "packets": 67,
+      "reliable": 30
+    },
+    {
+      "tx": 5,
+      "rx": 14,
+      "day": 2,
+      "packets": 69,
+      "reliable": 19
+    },
+    {
+      "tx": 5,
+      "rx": 15,
+      "day": 1,
+      "packets": 70,
+      "reliable": 2
+    },
+    {
+      "tx": 5,
+      "rx": 15,
+      "day": 2,
+      "packets": 67,
+      "reliable": 5
+    },
+    {
+      "tx": 5,
+      "rx": 16,
+      "day": 1,
+      "packets": 71,
+      "reliable": 20
+    },
+    {
+      "tx": 5,
+      "rx": 16,
+      "day": 2,
+      "packets": 67,
+      "reliable": 21
+    },
+    {
+      "tx": 5,
+      "rx": 17,
+      "day": 1,
+      "packets": 65,
+      "reliable": 15
+    },
+    {
+      "tx": 5,
+      "rx": 17,
+      "day": 2,
+      "packets": 67,
+      "reliable": 23
+    },
+    {
+      "tx": 5,
+      "rx": 19,
+      "day": 1,
+      "packets": 67,
+      "reliable": 2
+    },
+    {
+      "tx": 5,
+      "rx": 19,
+      "day": 2,
+      "packets": 71,
+      "reliable": 2
+    },
+    {
+      "tx": 5,
+      "rx": 20,
+      "day": 1,
+      "packets": 72,
+      "reliable": 0
+    },
+    {
+      "tx": 5,
+      "rx": 20,
+      "day": 2,
+      "packets": 64,
+      "reliable": 2
+    },
+    {
+      "tx": 5,
+      "rx": 21,
+      "day": 1,
+      "packets": 77,
+      "reliable": 12
+    },
+    {
+      "tx": 5,
+      "rx": 21,
+      "day": 2,
+      "packets": 67,
+      "reliable": 17
+    },
+    {
+      "tx": 5,
+      "rx": 22,
+      "day": 1,
+      "packets": 60,
+      "reliable": 24
+    },
+    {
+      "tx": 5,
+      "rx": 22,
+      "day": 2,
+      "packets": 69,
+      "reliable": 20
+    },
+    {
+      "tx": 5,
+      "rx": 23,
+      "day": 1,
+      "packets": 74,
+      "reliable": 36
+    },
+    {
+      "tx": 5,
+      "rx": 23,
+      "day": 2,
+      "packets": 72,
+      "reliable": 28
+    },
+    {
+      "tx": 6,
+      "rx": 3,
+      "day": 1,
+      "packets": 61,
+      "reliable": 50
+    },
+    {
+      "tx": 6,
+      "rx": 3,
+      "day": 2,
+      "packets": 73,
+      "reliable": 66
+    },
+    {
+      "tx": 6,
+      "rx": 4,
+      "day": 1,
+      "packets": 75,
+      "reliable": 48
+    },
+    {
+      "tx": 6,
+      "rx": 4,
+      "day": 2,
+      "packets": 65,
+      "reliable": 45
+    },
+    {
+      "tx": 6,
+      "rx": 5,
+      "day": 1,
+      "packets": 75,
+      "reliable": 70
+    },
+    {
+      "tx": 6,
+      "rx": 5,
+      "day": 2,
+      "packets": 69,
+      "reliable": 69
+    },
+    {
+      "tx": 6,
+      "rx": 6,
+      "day": 1,
+      "packets": 65,
+      "reliable": 48
+    },
+    {
+      "tx": 6,
+      "rx": 6,
+      "day": 2,
+      "packets": 73,
+      "reliable": 60
+    },
+    {
+      "tx": 6,
+      "rx": 7,
+      "day": 1,
+      "packets": 66,
+      "reliable": 21
+    },
+    {
+      "tx": 6,
+      "rx": 7,
+      "day": 2,
+      "packets": 75,
+      "reliable": 23
+    },
+    {
+      "tx": 6,
+      "rx": 10,
+      "day": 1,
+      "packets": 69,
+      "reliable": 66
+    },
+    {
+      "tx": 6,
+      "rx": 10,
+      "day": 2,
+      "packets": 68,
+      "reliable": 33
+    },
+    {
+      "tx": 6,
+      "rx": 11,
+      "day": 1,
+      "packets": 77,
+      "reliable": 50
+    },
+    {
+      "tx": 6,
+      "rx": 11,
+      "day": 2,
+      "packets": 73,
+      "reliable": 56
+    },
+    {
+      "tx": 6,
+      "rx": 12,
+      "day": 1,
+      "packets": 72,
+      "reliable": 62
+    },
+    {
+      "tx": 6,
+      "rx": 12,
+      "day": 2,
+      "packets": 74,
+      "reliable": 58
+    },
+    {
+      "tx": 6,
+      "rx": 13,
+      "day": 1,
+      "packets": 73,
+      "reliable": 66
+    },
+    {
+      "tx": 6,
+      "rx": 13,
+      "day": 2,
+      "packets": 69,
+      "reliable": 50
+    },
+    {
+      "tx": 6,
+      "rx": 14,
+      "day": 1,
+      "packets": 68,
+      "reliable": 65
+    },
+    {
+      "tx": 6,
+      "rx": 14,
+      "day": 2,
+      "packets": 67,
+      "reliable": 64
+    },
+    {
+      "tx": 6,
+      "rx": 15,
+      "day": 1,
+      "packets": 66,
+      "reliable": 63
+    },
+    {
+      "tx": 6,
+      "rx": 15,
+      "day": 2,
+      "packets": 72,
+      "reliable": 72
+    },
+    {
+      "tx": 6,
+      "rx": 16,
+      "day": 1,
+      "packets": 72,
+      "reliable": 26
+    },
+    {
+      "tx": 6,
+      "rx": 16,
+      "day": 2,
+      "packets": 71,
+      "reliable": 35
+    },
+    {
+      "tx": 6,
+      "rx": 17,
+      "day": 1,
+      "packets": 71,
+      "reliable": 38
+    },
+    {
+      "tx": 6,
+      "rx": 17,
+      "day": 2,
+      "packets": 69,
+      "reliable": 51
+    },
+    {
+      "tx": 6,
+      "rx": 19,
+      "day": 1,
+      "packets": 70,
+      "reliable": 65
+    },
+    {
+      "tx": 6,
+      "rx": 19,
+      "day": 2,
+      "packets": 72,
+      "reliable": 68
+    },
+    {
+      "tx": 6,
+      "rx": 20,
+      "day": 1,
+      "packets": 76,
+      "reliable": 61
+    },
+    {
+      "tx": 6,
+      "rx": 20,
+      "day": 2,
+      "packets": 68,
+      "reliable": 52
+    },
+    {
+      "tx": 6,
+      "rx": 21,
+      "day": 1,
+      "packets": 70,
+      "reliable": 22
+    },
+    {
+      "tx": 6,
+      "rx": 21,
+      "day": 2,
+      "packets": 63,
+      "reliable": 26
+    },
+    {
+      "tx": 6,
+      "rx": 22,
+      "day": 1,
+      "packets": 68,
+      "reliable": 12
+    },
+    {
+      "tx": 6,
+      "rx": 22,
+      "day": 2,
+      "packets": 69,
+      "reliable": 9
+    },
+    {
+      "tx": 6,
+      "rx": 23,
+      "day": 1,
+      "packets": 78,
+      "reliable": 76
+    },
+    {
+      "tx": 6,
+      "rx": 23,
+      "day": 2,
+      "packets": 78,
+      "reliable": 75
+    },
+    {
+      "tx": 7,
+      "rx": 3,
+      "day": 1,
+      "packets": 71,
+      "reliable": 6
+    },
+    {
+      "tx": 7,
+      "rx": 3,
+      "day": 2,
+      "packets": 72,
+      "reliable": 5
+    },
+    {
+      "tx": 7,
+      "rx": 4,
+      "day": 1,
+      "packets": 67,
+      "reliable": 39
+    },
+    {
+      "tx": 7,
+      "rx": 4,
+      "day": 2,
+      "packets": 66,
+      "reliable": 43
+    },
+    {
+      "tx": 7,
+      "rx": 5,
+      "day": 1,
+      "packets": 74,
+      "reliable": 63
+    },
+    {
+      "tx": 7,
+      "rx": 5,
+      "day": 2,
+      "packets": 68,
+      "reliable": 56
+    },
+    {
+      "tx": 7,
+      "rx": 6,
+      "day": 1,
+      "packets": 70,
+      "reliable": 15
+    },
+    {
+      "tx": 7,
+      "rx": 6,
+      "day": 2,
+      "packets": 72,
+      "reliable": 16
+    },
+    {
+      "tx": 7,
+      "rx": 7,
+      "day": 1,
+      "packets": 65,
+      "reliable": 0
+    },
+    {
+      "tx": 7,
+      "rx": 7,
+      "day": 2,
+      "packets": 75,
+      "reliable": 2
+    },
+    {
+      "tx": 7,
+      "rx": 10,
+      "day": 1,
+      "packets": 67,
+      "reliable": 14
+    },
+    {
+      "tx": 7,
+      "rx": 10,
+      "day": 2,
+      "packets": 68,
+      "reliable": 50
+    },
+    {
+      "tx": 7,
+      "rx": 11,
+      "day": 1,
+      "packets": 78,
+      "reliable": 71
+    },
+    {
+      "tx": 7,
+      "rx": 11,
+      "day": 2,
+      "packets": 68,
+      "reliable": 47
+    },
+    {
+      "tx": 7,
+      "rx": 12,
+      "day": 1,
+      "packets": 75,
+      "reliable": 41
+    },
+    {
+      "tx": 7,
+      "rx": 12,
+      "day": 2,
+      "packets": 71,
+      "reliable": 66
+    },
+    {
+      "tx": 7,
+      "rx": 13,
+      "day": 1,
+      "packets": 74,
+      "reliable": 71
+    },
+    {
+      "tx": 7,
+      "rx": 13,
+      "day": 2,
+      "packets": 72,
+      "reliable": 61
+    },
+    {
+      "tx": 7,
+      "rx": 14,
+      "day": 1,
+      "packets": 57,
+      "reliable": 53
+    },
+    {
+      "tx": 7,
+      "rx": 14,
+      "day": 2,
+      "packets": 69,
+      "reliable": 60
+    },
+    {
+      "tx": 7,
+      "rx": 15,
+      "day": 1,
+      "packets": 72,
+      "reliable": 57
+    },
+    {
+      "tx": 7,
+      "rx": 15,
+      "day": 2,
+      "packets": 72,
+      "reliable": 53
+    },
+    {
+      "tx": 7,
+      "rx": 17,
+      "day": 1,
+      "packets": 63,
+      "reliable": 51
+    },
+    {
+      "tx": 7,
+      "rx": 17,
+      "day": 2,
+      "packets": 73,
+      "reliable": 66
+    },
+    {
+      "tx": 7,
+      "rx": 19,
+      "day": 1,
+      "packets": 68,
+      "reliable": 57
+    },
+    {
+      "tx": 7,
+      "rx": 19,
+      "day": 2,
+      "packets": 70,
+      "reliable": 63
+    },
+    {
+      "tx": 7,
+      "rx": 20,
+      "day": 1,
+      "packets": 68,
+      "reliable": 64
+    },
+    {
+      "tx": 7,
+      "rx": 20,
+      "day": 2,
+      "packets": 76,
+      "reliable": 73
+    },
+    {
+      "tx": 7,
+      "rx": 21,
+      "day": 1,
+      "packets": 63,
+      "reliable": 43
+    },
+    {
+      "tx": 7,
+      "rx": 21,
+      "day": 2,
+      "packets": 76,
+      "reliable": 53
+    },
+    {
+      "tx": 7,
+      "rx": 22,
+      "day": 1,
+      "packets": 70,
+      "reliable": 55
+    },
+    {
+      "tx": 7,
+      "rx": 22,
+      "day": 2,
+      "packets": 71,
+      "reliable": 55
+    },
+    {
+      "tx": 7,
+      "rx": 23,
+      "day": 1,
+      "packets": 71,
+      "reliable": 67
+    },
+    {
+      "tx": 7,
+      "rx": 23,
+      "day": 2,
+      "packets": 69,
+      "reliable": 66
+    },
+    {
+      "tx": 8,
+      "rx": 3,
+      "day": 1,
+      "packets": 77,
+      "reliable": 55
+    },
+    {
+      "tx": 8,
+      "rx": 3,
+      "day": 2,
+      "packets": 72,
+      "reliable": 46
+    },
+    {
+      "tx": 8,
+      "rx": 4,
+      "day": 1,
+      "packets": 65,
+      "reliable": 35
+    },
+    {
+      "tx": 8,
+      "rx": 4,
+      "day": 2,
+      "packets": 78,
+      "reliable": 49
+    },
+    {
+      "tx": 8,
+      "rx": 5,
+      "day": 1,
+      "packets": 75,
+      "reliable": 65
+    },
+    {
+      "tx": 8,
+      "rx": 5,
+      "day": 2,
+      "packets": 73,
+      "reliable": 70
+    },
+    {
+      "tx": 8,
+      "rx": 6,
+      "day": 1,
+      "packets": 70,
+      "reliable": 28
+    },
+    {
+      "tx": 8,
+      "rx": 6,
+      "day": 2,
+      "packets": 72,
+      "reliable": 14
+    },
+    {
+      "tx": 8,
+      "rx": 7,
+      "day": 1,
+      "packets": 61,
+      "reliable": 11
+    },
+    {
+      "tx": 8,
+      "rx": 7,
+      "day": 2,
+      "packets": 70,
+      "reliable": 19
+    },
+    {
+      "tx": 8,
+      "rx": 10,
+      "day": 1,
+      "packets": 70,
+      "reliable": 68
+    },
+    {
+      "tx": 8,
+      "rx": 10,
+      "day": 2,
+      "packets": 60,
+      "reliable": 54
+    },
+    {
+      "tx": 8,
+      "rx": 11,
+      "day": 1,
+      "packets": 67,
+      "reliable": 65
+    },
+    {
+      "tx": 8,
+      "rx": 11,
+      "day": 2,
+      "packets": 71,
+      "reliable": 63
+    },
+    {
+      "tx": 8,
+      "rx": 12,
+      "day": 1,
+      "packets": 69,
+      "reliable": 60
+    },
+    {
+      "tx": 8,
+      "rx": 12,
+      "day": 2,
+      "packets": 69,
+      "reliable": 66
+    },
+    {
+      "tx": 8,
+      "rx": 13,
+      "day": 1,
+      "packets": 70,
+      "reliable": 66
+    },
+    {
+      "tx": 8,
+      "rx": 13,
+      "day": 2,
+      "packets": 66,
+      "reliable": 61
+    },
+    {
+      "tx": 8,
+      "rx": 14,
+      "day": 1,
+      "packets": 72,
+      "reliable": 48
+    },
+    {
+      "tx": 8,
+      "rx": 14,
+      "day": 2,
+      "packets": 73,
+      "reliable": 64
+    },
+    {
+      "tx": 8,
+      "rx": 15,
+      "day": 1,
+      "packets": 69,
+      "reliable": 60
+    },
+    {
+      "tx": 8,
+      "rx": 15,
+      "day": 2,
+      "packets": 76,
+      "reliable": 62
+    },
+    {
+      "tx": 8,
+      "rx": 16,
+      "day": 1,
+      "packets": 59,
+      "reliable": 23
+    },
+    {
+      "tx": 8,
+      "rx": 16,
+      "day": 2,
+      "packets": 69,
+      "reliable": 12
+    },
+    {
+      "tx": 8,
+      "rx": 17,
+      "day": 1,
+      "packets": 73,
+      "reliable": 71
+    },
+    {
+      "tx": 8,
+      "rx": 17,
+      "day": 2,
+      "packets": 74,
+      "reliable": 68
+    },
+    {
+      "tx": 8,
+      "rx": 20,
+      "day": 1,
+      "packets": 67,
+      "reliable": 61
+    },
+    {
+      "tx": 8,
+      "rx": 20,
+      "day": 2,
+      "packets": 67,
+      "reliable": 62
+    },
+    {
+      "tx": 8,
+      "rx": 21,
+      "day": 1,
+      "packets": 63,
+      "reliable": 44
+    },
+    {
+      "tx": 8,
+      "rx": 21,
+      "day": 2,
+      "packets": 72,
+      "reliable": 50
+    },
+    {
+      "tx": 8,
+      "rx": 22,
+      "day": 1,
+      "packets": 72,
+      "reliable": 49
+    },
+    {
+      "tx": 8,
+      "rx": 22,
+      "day": 2,
+      "packets": 73,
+      "reliable": 42
+    },
+    {
+      "tx": 8,
+      "rx": 23,
+      "day": 1,
+      "packets": 63,
+      "reliable": 62
+    },
+    {
+      "tx": 8,
+      "rx": 23,
+      "day": 2,
+      "packets": 67,
+      "reliable": 66
+    },
+    {
+      "tx": 9,
+      "rx": 3,
+      "day": 1,
+      "packets": 76,
+      "reliable": 0
+    },
+    {
+      "tx": 9,
+      "rx": 3,
+      "day": 2,
+      "packets": 72,
+      "reliable": 0
+    },
+    {
+      "tx": 9,
+      "rx": 4,
+      "day": 1,
+      "packets": 63,
+      "reliable": 0
+    },
+    {
+      "tx": 9,
+      "rx": 4,
+      "day": 2,
+      "packets": 68,
+      "reliable": 3
+    },
+    {
+      "tx": 9,
+      "rx": 5,
+      "day": 1,
+      "packets": 79,
+      "reliable": 0
+    },
+    {
+      "tx": 9,
+      "rx": 5,
+      "day": 2,
+      "packets": 55,
+      "reliable": 0
+    },
+    {
+      "tx": 9,
+      "rx": 6,
+      "day": 1,
+      "packets": 66,
+      "reliable": 4
+    },
+    {
+      "tx": 9,
+      "rx": 6,
+      "day": 2,
+      "packets": 70,
+      "reliable": 1
+    },
+    {
+      "tx": 9,
+      "rx": 7,
+      "day": 1,
+      "packets": 68,
+      "reliable": 0
+    },
+    {
+      "tx": 9,
+      "rx": 7,
+      "day": 2,
+      "packets": 77,
+      "reliable": 0
+    },
+    {
+      "tx": 9,
+      "rx": 10,
+      "day": 1,
+      "packets": 67,
+      "reliable": 0
+    },
+    {
+      "tx": 9,
+      "rx": 10,
+      "day": 2,
+      "packets": 66,
+      "reliable": 0
+    },
+    {
+      "tx": 9,
+      "rx": 11,
+      "day": 1,
+      "packets": 66,
+      "reliable": 3
+    },
+    {
+      "tx": 9,
+      "rx": 11,
+      "day": 2,
+      "packets": 72,
+      "reliable": 1
+    },
+    {
+      "tx": 9,
+      "rx": 12,
+      "day": 1,
+      "packets": 74,
+      "reliable": 0
+    },
+    {
+      "tx": 9,
+      "rx": 12,
+      "day": 2,
+      "packets": 72,
+      "reliable": 0
+    },
+    {
+      "tx": 9,
+      "rx": 13,
+      "day": 1,
+      "packets": 70,
+      "reliable": 4
+    },
+    {
+      "tx": 9,
+      "rx": 13,
+      "day": 2,
+      "packets": 66,
+      "reliable": 0
+    },
+    {
+      "tx": 9,
+      "rx": 14,
+      "day": 1,
+      "packets": 69,
+      "reliable": 0
+    },
+    {
+      "tx": 9,
+      "rx": 14,
+      "day": 2,
+      "packets": 76,
+      "reliable": 0
+    },
+    {
+      "tx": 9,
+      "rx": 15,
+      "day": 1,
+      "packets": 70,
+      "reliable": 0
+    },
+    {
+      "tx": 9,
+      "rx": 15,
+      "day": 2,
+      "packets": 68,
+      "reliable": 0
+    },
+    {
+      "tx": 9,
+      "rx": 16,
+      "day": 1,
+      "packets": 66,
+      "reliable": 0
+    },
+    {
+      "tx": 9,
+      "rx": 16,
+      "day": 2,
+      "packets": 71,
+      "reliable": 1
+    },
+    {
+      "tx": 9,
+      "rx": 17,
+      "day": 1,
+      "packets": 67,
+      "reliable": 0
+    },
+    {
+      "tx": 9,
+      "rx": 17,
+      "day": 2,
+      "packets": 61,
+      "reliable": 0
+    },
+    {
+      "tx": 9,
+      "rx": 19,
+      "day": 1,
+      "packets": 80,
+      "reliable": 0
+    },
+    {
+      "tx": 9,
+      "rx": 19,
+      "day": 2,
+      "packets": 59,
+      "reliable": 0
+    },
+    {
+      "tx": 9,
+      "rx": 20,
+      "day": 1,
+      "packets": 70,
+      "reliable": 0
+    },
+    {
+      "tx": 9,
+      "rx": 20,
+      "day": 2,
+      "packets": 71,
+      "reliable": 0
+    },
+    {
+      "tx": 9,
+      "rx": 21,
+      "day": 1,
+      "packets": 73,
+      "reliable": 18
+    },
+    {
+      "tx": 9,
+      "rx": 21,
+      "day": 2,
+      "packets": 73,
+      "reliable": 13
+    },
+    {
+      "tx": 9,
+      "rx": 22,
+      "day": 1,
+      "packets": 73,
+      "reliable": 6
+    },
+    {
+      "tx": 9,
+      "rx": 22,
+      "day": 2,
+      "packets": 73,
+      "reliable": 4
+    },
+    {
+      "tx": 9,
+      "rx": 23,
+      "day": 1,
+      "packets": 72,
+      "reliable": 0
+    },
+    {
+      "tx": 9,
+      "rx": 23,
+      "day": 2,
+      "packets": 80,
+      "reliable": 0
+    }
+  ],
+  "model_comparison": {
+    "additive_comparison": {
+      "cells": 272,
+      "mae_khz": {
+        "tx_day": 1.5432594323252973,
+        "add_rx": 0.9479304583068959
+      },
+      "mae_reduction": 0.38576078755688725
+    },
+    "full_common_comparison": {
+      "cells": 264,
+      "mae_khz": {
+        "tx_day": 1.540163221068709,
+        "add_rx": 0.925813106602512,
+        "tx_rx": 0.4325844249720936,
+        "rx_day": 1.0182916714154358
+      }
+    },
+    "individually_estimable": {
+      "tx_day": 272,
+      "add_rx": 272,
+      "tx_rx": 264,
+      "rx_day": 272
+    }
+  },
+  "cross_rx": [
+    {
+      "day1_parity": 0,
+      "day2_parity": 1,
+      "n": 18,
+      "receivers": [
+        "13-14",
+        "13-7",
+        "14-7",
+        "18-19",
+        "18-2",
+        "23-3",
+        "23-5",
+        "23-6",
+        "23-7",
+        "24-13",
+        "24-16",
+        "24-5",
+        "24-6",
+        "7-14",
+        "7-7",
+        "8-14",
+        "8-7",
+        "8-8"
+      ],
+      "pearson_r": 0.9819924198127364,
+      "mae_khz": 0.22549754842122446,
+      "zero_mae_khz": 1.1357332492404517,
+      "reverse_zero_mae_khz": 1.0175056254069015,
+      "same_sign": 14,
+      "median_abs_rx_khz": 0.9989581604003908,
+      "p90_abs_rx_khz": 2.2679956665039076
+    },
+    {
+      "day1_parity": 1,
+      "day2_parity": 0,
+      "n": 18,
+      "receivers": [
+        "13-14",
+        "13-7",
+        "14-7",
+        "18-19",
+        "18-2",
+        "23-3",
+        "23-5",
+        "23-6",
+        "23-7",
+        "24-13",
+        "24-16",
+        "24-5",
+        "24-6",
+        "7-14",
+        "7-7",
+        "8-14",
+        "8-7",
+        "8-8"
+      ],
+      "pearson_r": 0.9858528686132407,
+      "mae_khz": 0.19620684814453077,
+      "zero_mae_khz": 1.0570603298611108,
+      "reverse_zero_mae_khz": 1.0753368055555559,
+      "same_sign": 16,
+      "median_abs_rx_khz": 0.8950709838867192,
+      "p90_abs_rx_khz": 2.4629025878906257
+    }
+  ],
+  "effects": [
+    {
+      "rx": "13-14",
+      "day": 1,
+      "parity": 0,
+      "supported_tx": 5,
+      "receiver_associated_khz": -0.6615703125000003
+    },
+    {
+      "rx": "13-14",
+      "day": 1,
+      "parity": 1,
+      "supported_tx": 3,
+      "receiver_associated_khz": -0.8720898437500004
+    },
+    {
+      "rx": "13-14",
+      "day": 2,
+      "parity": 0,
+      "supported_tx": 5,
+      "receiver_associated_khz": -0.3084199218750001
+    },
+    {
+      "rx": "13-14",
+      "day": 2,
+      "parity": 1,
+      "supported_tx": 3,
+      "receiver_associated_khz": -1.2131250000000016
+    },
+    {
+      "rx": "13-7",
+      "day": 1,
+      "parity": 0,
+      "supported_tx": 5,
+      "receiver_associated_khz": 1.1017022705078126
+    },
+    {
+      "rx": "13-7",
+      "day": 1,
+      "parity": 1,
+      "supported_tx": 2,
+      "receiver_associated_khz": 1.5241561279296878
+    },
+    {
+      "rx": "13-7",
+      "day": 2,
+      "parity": 0,
+      "supported_tx": 5,
+      "receiver_associated_khz": 1.0961275634765633
+    },
+    {
+      "rx": "13-7",
+      "day": 2,
+      "parity": 1,
+      "supported_tx": 2,
+      "receiver_associated_khz": 1.3356531982421873
+    },
+    {
+      "rx": "14-7",
+      "day": 1,
+      "parity": 0,
+      "supported_tx": 5,
+      "receiver_associated_khz": 0.045570068359374716
+    },
+    {
+      "rx": "14-7",
+      "day": 1,
+      "parity": 1,
+      "supported_tx": 4,
+      "receiver_associated_khz": -0.006667358398438239
+    },
+    {
+      "rx": "14-7",
+      "day": 2,
+      "parity": 0,
+      "supported_tx": 5,
+      "receiver_associated_khz": -0.14150585937499827
+    },
+    {
+      "rx": "14-7",
+      "day": 2,
+      "parity": 1,
+      "supported_tx": 3,
+      "receiver_associated_khz": -0.15932519531249945
+    },
+    {
+      "rx": "18-19",
+      "day": 1,
+      "parity": 0,
+      "supported_tx": 3,
+      "receiver_associated_khz": 2.6930820312500003
+    },
+    {
+      "rx": "18-19",
+      "day": 1,
+      "parity": 1,
+      "supported_tx": 3,
+      "receiver_associated_khz": 2.7197900390625005
+    },
+    {
+      "rx": "18-19",
+      "day": 2,
+      "parity": 0,
+      "supported_tx": 4,
+      "receiver_associated_khz": 2.5592299804687517
+    },
+    {
+      "rx": "18-19",
+      "day": 2,
+      "parity": 1,
+      "supported_tx": 4,
+      "receiver_associated_khz": 2.355555786132812
+    },
+    {
+      "rx": "18-2",
+      "day": 1,
+      "parity": 0,
+      "supported_tx": 3,
+      "receiver_associated_khz": 0.7216152343749975
+    },
+    {
+      "rx": "18-2",
+      "day": 1,
+      "parity": 1,
+      "supported_tx": 2,
+      "receiver_associated_khz": 1.004041992187501
+    },
+    {
+      "rx": "18-2",
+      "day": 2,
+      "parity": 0,
+      "supported_tx": 3,
+      "receiver_associated_khz": 1.3155833740234382
+    },
+    {
+      "rx": "18-2",
+      "day": 2,
+      "parity": 1,
+      "supported_tx": 2,
+      "receiver_associated_khz": 1.0571313476562505
+    },
+    {
+      "rx": "23-3",
+      "day": 1,
+      "parity": 0,
+      "supported_tx": 3,
+      "receiver_associated_khz": -0.17406701660156276
+    },
+    {
+      "rx": "23-3",
+      "day": 1,
+      "parity": 1,
+      "supported_tx": 3,
+      "receiver_associated_khz": 0.054159912109375874
+    },
+    {
+      "rx": "23-3",
+      "day": 2,
+      "parity": 0,
+      "supported_tx": 4,
+      "receiver_associated_khz": -0.14293481445312484
+    },
+    {
+      "rx": "23-3",
+      "day": 2,
+      "parity": 1,
+      "supported_tx": 4,
+      "receiver_associated_khz": -0.2299345703125013
+    },
+    {
+      "rx": "23-5",
+      "day": 1,
+      "parity": 0,
+      "supported_tx": 4,
+      "receiver_associated_khz": 0.940784973144531
+    },
+    {
+      "rx": "23-5",
+      "day": 1,
+      "parity": 1,
+      "supported_tx": 4,
+      "receiver_associated_khz": 1.004599609375001
+    },
+    {
+      "rx": "23-5",
+      "day": 2,
+      "parity": 0,
+      "supported_tx": 3,
+      "receiver_associated_khz": 0.918052124023438
+    },
+    {
+      "rx": "23-5",
+      "day": 2,
+      "parity": 1,
+      "supported_tx": 4,
+      "receiver_associated_khz": 1.2369824218750018
+    },
+    {
+      "rx": "23-6",
+      "day": 1,
+      "parity": 0,
+      "supported_tx": 4,
+      "receiver_associated_khz": 0.21792852783203087
+    },
+    {
+      "rx": "23-6",
+      "day": 1,
+      "parity": 1,
+      "supported_tx": 4,
+      "receiver_associated_khz": 0.23248242187500168
+    },
+    {
+      "rx": "23-6",
+      "day": 2,
+      "parity": 0,
+      "supported_tx": 4,
+      "receiver_associated_khz": 0.13116802978515674
+    },
+    {
+      "rx": "23-6",
+      "day": 2,
+      "parity": 1,
+      "supported_tx": 4,
+      "receiver_associated_khz": 0.20864794921875074
+    },
+    {
+      "rx": "23-7",
+      "day": 1,
+      "parity": 0,
+      "supported_tx": 3,
+      "receiver_associated_khz": -0.06803332519531224
+    },
+    {
+      "rx": "23-7",
+      "day": 1,
+      "parity": 1,
+      "supported_tx": 4,
+      "receiver_associated_khz": -0.0872236328125009
+    },
+    {
+      "rx": "23-7",
+      "day": 2,
+      "parity": 0,
+      "supported_tx": 4,
+      "receiver_associated_khz": -0.01430944824218816
+    },
+    {
+      "rx": "23-7",
+      "day": 2,
+      "parity": 1,
+      "supported_tx": 4,
+      "receiver_associated_khz": 0.07386816406249963
+    },
+    {
+      "rx": "24-13",
+      "day": 1,
+      "parity": 0,
+      "supported_tx": 3,
+      "receiver_associated_khz": -0.0711640624999994
+    },
+    {
+      "rx": "24-13",
+      "day": 1,
+      "parity": 1,
+      "supported_tx": 4,
+      "receiver_associated_khz": -0.12185900878906253
+    },
+    {
+      "rx": "24-13",
+      "day": 2,
+      "parity": 0,
+      "supported_tx": 4,
+      "receiver_associated_khz": 0.28994842529296894
+    },
+    {
+      "rx": "24-13",
+      "day": 2,
+      "parity": 1,
+      "supported_tx": 4,
+      "receiver_associated_khz": 0.0702615966796869
+    },
+    {
+      "rx": "24-16",
+      "day": 1,
+      "parity": 0,
+      "supported_tx": 4,
+      "receiver_associated_khz": -1.4855254516601577
+    },
+    {
+      "rx": "24-16",
+      "day": 1,
+      "parity": 1,
+      "supported_tx": 3,
+      "receiver_associated_khz": -1.370144531250002
+    },
+    {
+      "rx": "24-16",
+      "day": 2,
+      "parity": 0,
+      "supported_tx": 4,
+      "receiver_associated_khz": -1.4335263671874987
+    },
+    {
+      "rx": "24-16",
+      "day": 2,
+      "parity": 1,
+      "supported_tx": 3,
+      "receiver_associated_khz": -1.4595229492187496
+    },
+    {
+      "rx": "24-5",
+      "day": 1,
+      "parity": 0,
+      "supported_tx": 5,
+      "receiver_associated_khz": -2.180435546875003
+    },
+    {
+      "rx": "24-5",
+      "day": 1,
+      "parity": 1,
+      "supported_tx": 3,
+      "receiver_associated_khz": -2.0134609374999997
+    },
+    {
+      "rx": "24-5",
+      "day": 2,
+      "parity": 0,
+      "supported_tx": 5,
+      "receiver_associated_khz": -2.3665751953124996
+    },
+    {
+      "rx": "24-5",
+      "day": 2,
+      "parity": 1,
+      "supported_tx": 3,
+      "receiver_associated_khz": -2.072314453125003
+    },
+    {
+      "rx": "24-6",
+      "day": 1,
+      "parity": 0,
+      "supported_tx": 3,
+      "receiver_associated_khz": -1.6869960937500004
+    },
+    {
+      "rx": "24-6",
+      "day": 1,
+      "parity": 1,
+      "supported_tx": 4,
+      "receiver_associated_khz": -1.5138271484374997
+    },
+    {
+      "rx": "24-6",
+      "day": 2,
+      "parity": 0,
+      "supported_tx": 3,
+      "receiver_associated_khz": -1.5966660156249972
+    },
+    {
+      "rx": "24-6",
+      "day": 2,
+      "parity": 1,
+      "supported_tx": 4,
+      "receiver_associated_khz": -1.5888747558593748
+    },
+    {
+      "rx": "7-14",
+      "day": 1,
+      "parity": 0,
+      "supported_tx": 3,
+      "receiver_associated_khz": -0.6091113281250031
+    },
+    {
+      "rx": "7-14",
+      "day": 1,
+      "parity": 1,
+      "supported_tx": 3,
+      "receiver_associated_khz": -0.482234863281251
+    },
+    {
+      "rx": "7-14",
+      "day": 2,
+      "parity": 0,
+      "supported_tx": 3,
+      "receiver_associated_khz": -0.4578691406249966
+    },
+    {
+      "rx": "7-14",
+      "day": 2,
+      "parity": 1,
+      "supported_tx": 3,
+      "receiver_associated_khz": -0.7052900390625005
+    },
+    {
+      "rx": "7-7",
+      "day": 1,
+      "parity": 0,
+      "supported_tx": 5,
+      "receiver_associated_khz": -3.548823364257813
+    },
+    {
+      "rx": "7-7",
+      "day": 1,
+      "parity": 1,
+      "supported_tx": 3,
+      "receiver_associated_khz": -3.7143925781250005
+    },
+    {
+      "rx": "7-7",
+      "day": 2,
+      "parity": 0,
+      "supported_tx": 5,
+      "receiver_associated_khz": -3.6498945312499993
+    },
+    {
+      "rx": "7-7",
+      "day": 2,
+      "parity": 1,
+      "supported_tx": 3,
+      "receiver_associated_khz": -3.423940429687498
+    },
+    {
+      "rx": "8-14",
+      "day": 1,
+      "parity": 0,
+      "supported_tx": 5,
+      "receiver_associated_khz": 0.5398582763671875
+    },
+    {
+      "rx": "8-14",
+      "day": 1,
+      "parity": 1,
+      "supported_tx": 4,
+      "receiver_associated_khz": 0.6284482421874991
+    },
+    {
+      "rx": "8-14",
+      "day": 2,
+      "parity": 0,
+      "supported_tx": 5,
+      "receiver_associated_khz": 0.37601562500000085
+    },
+    {
+      "rx": "8-14",
+      "day": 2,
+      "parity": 1,
+      "supported_tx": 4,
+      "receiver_associated_khz": 1.092848144531251
+    },
+    {
+      "rx": "8-7",
+      "day": 1,
+      "parity": 0,
+      "supported_tx": 5,
+      "receiver_associated_khz": 1.4921062011718744
+    },
+    {
+      "rx": "8-7",
+      "day": 1,
+      "parity": 1,
+      "supported_tx": 4,
+      "receiver_associated_khz": 1.950064086914064
+    },
+    {
+      "rx": "8-7",
+      "day": 2,
+      "parity": 0,
+      "supported_tx": 5,
+      "receiver_associated_khz": 2.103122070312498
+    },
+    {
+      "rx": "8-7",
+      "day": 2,
+      "parity": 1,
+      "supported_tx": 4,
+      "receiver_associated_khz": 2.124921875
+    },
+    {
+      "rx": "8-8",
+      "day": 1,
+      "parity": 0,
+      "supported_tx": 4,
+      "receiver_associated_khz": -0.07672717285156261
+    },
+    {
+      "rx": "8-8",
+      "day": 1,
+      "parity": 1,
+      "supported_tx": 4,
+      "receiver_associated_khz": -0.056420166015625384
+    },
+    {
+      "rx": "8-8",
+      "day": 2,
+      "parity": 0,
+      "supported_tx": 4,
+      "receiver_associated_khz": -0.12613745117187403
+    },
+    {
+      "rx": "8-8",
+      "day": 2,
+      "parity": 1,
+      "supported_tx": 4,
+      "receiver_associated_khz": 0.035000610351562766
+    }
+  ],
+  "stable_rx_gate": true
+}
