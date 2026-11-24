@@ -1,0 +1,27 @@
+{
+  "protocol_sha256": "627aa9bd0ac1d5e1260b5d7827172d1ecb6183674d7fbed803cb770405c55d89",
+  "script_sha256": "ac9846bdc2bf2a48fe4dcaebd6f9d4da6dee169b23e777a8255a7eed7df6d746",
+  "parent_fit_sha256": "4022b5ece47ab6dbe08dd6c538828afa2c8ab7f11fd55847bd536784f748e541",
+  "base_prediction_hashes": {
+    "V0": "38a933434e2c112d2576b6bb77bbf8d0f72c86284363c51150317f9706458b6a",
+    "V1": "77ca54986660647f581d7774fc2df57e80e758847578a71d6722279babfe61ce"
+  },
+  "dose_prediction_hashes": {
+    "V0": "e819b3a31dc63a87ce72ff911ceee726856ba94fe3550760167e619fac13ceb1",
+    "V1": "8b1f3c0861e065bda4d1cd2fa2488f822f31437982fce1d2670e2243c157ef26"
+  },
+  "s30_summary_sha256": "9d643c40f4675eb72fbb4a6be0500d2ebc96ac618289d86b09acb611838d1b2f",
+  "engineering": {
+    "complex128_max_abs": 2.800615217462244e-07,
+    "inverse_max_abs": 4.76837158203125e-07,
+    "power_max_abs": 1.9073486328125e-06,
+    "untreated_features_exact": true,
+    "paired_draws_exact": true
+  },
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "torch": "2.5.0+cu124",
+  "batch": 128,
+  "epochs": 40,
+  "probability": 0.5,
+  "limit_hz": 2500
+}
