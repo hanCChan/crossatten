@@ -16,7 +16,7 @@
 \markboth{Hierarchical RF Tokenization for Cross-Receiver LoRa Identification}{Hierarchical RF Tokenization for Cross-Receiver LoRa Identification}
 \maketitle
 \begin{abstract}
-Radio-frequency fingerprint identification (RFFI) must distinguish transmitters when observations come from receivers different from those used for training. We propose HStem, a four-stage convolutional tokenizer that progressively combines local RF features before global attention. With matched input views, token geometry, nominal convolutional support, and attention backend, HStem improves cross-receiver LoRa accuracy by 2.835 percentage points over a direct Long-Patch projection at a comparable parameter budget. On aligned LoRa windows with five training receivers per fold and 160 training packets per transmitter--receiver pair, HStem achieves 97.333\% receiver-equal accuracy and 93.683\% worst-receiver accuracy with 133,690 parameters. The strongest external comparator, a Spec+Siamese reimplementation, reaches 95.890\% under the same protocol. HStem uses 0.96\% of its parameters and delivers 1.96 times its batch-128 throughput in a shared GPU session. A matched test on WiFi preambles further shows reduced accuracy losses under controlled frequency and timing perturbations.
+The tokenizer determines how local radio-frequency (RF) features are compressed before global attention. We study how this step affects cross-receiver fingerprint identification and develop HStem, a four-stage convolutional tokenizer that progressively combines local features. In a LoRa comparison with matched input views, token geometry, nominal convolutional support, and attention architecture, HStem improves accuracy over a direct Long-Patch projection by 2.835 percentage points and leads in all six paired fits. In the Native baseline comparison with five training receivers per fold and 160 training packets per transmitter--receiver pair, HStem achieves 97.333\% receiver-equal accuracy and 93.683\% worst-receiver accuracy with 133,690 parameters. The strongest external comparator, a Spec+Siamese reimplementation, reaches 95.890\% under the same packet and receiver protocol. HStem uses 0.96\% of its parameters and delivers 1.96 times its batch-128 throughput in a shared GPU session. A matched WiFi stress test also shows smaller accuracy losses under controlled frequency and timing perturbations.
 \end{abstract}
 \begin{IEEEkeywords}
 Radio-frequency fingerprint identification, LoRa, cross-receiver identification, tokenization, parameter efficiency, representation analysis.
@@ -26,9 +26,9 @@ Radio-frequency fingerprint identification, LoRa, cross-receiver identification,
 \section{Introduction}
 \IEEEPARstart{R}{adio-frequency} fingerprint identification (RFFI) uses hardware-dependent waveform signatures to distinguish enrolled transmitters. A classifier trained with one set of receivers must recover those signatures from observations distorted by different receiver chains and propagation conditions \cite{zhang2025survey}. For an attention-based classifier, the tokenizer determines which combinations of local RF features reach the attention blocks. This makes token formation a practical design choice for both identification accuracy and inference cost.
 
-Channel-independent representations, domain-adversarial training, and cross-receiver contrastive learning improve the signal or objective used by the classifier \cite{shen2022scalable,shen2024receiver,ma2025robust}. We ask whether tokenizers with comparable parameter counts and matching output geometry can deliver different cross-receiver accuracy when their local supports and attention backend also match. A direct long projection compresses its entire support in one step. A staged tokenizer progressively combines and transforms features before the final compression, giving each token an input-dependent mapping over that support.
+Prior LoRa methods address receiver variation through channel-independent signal representations, receiver-adversarial training, and cross-receiver contrastive learning \cite{shen2022scalable,shen2024receiver,ma2025robust}. We study the intervening step that converts the output of the RF front-end, an \(8192\times32\) feature array, into a \(32\times64\) token sequence. How much can token construction change identification accuracy when the input representation, nominal local support, output geometry, and attention architecture are matched? A direct long projection aggregates a token's neighborhood in one spatial step. Progressive tokenization transforms features at intermediate resolutions before the final compression.
 
-HStem realizes this mapping with four strided local convolutional stages (Fig.~\ref{fig:architecture}). Each of the first three stages mixes and transforms features at progressively coarser resolution. The last stage produces 32 tokens of width 64 for a standard two-block attention backend. We compare HStem with a freely learned Long-Patch projection that matches the overall convolution-path support, token stride, and first-token center, and has 3.48\% more parameters. Holding the shared representation and attention blocks fixed makes the test directly relevant to choosing a tokenizer for an RF classifier.
+HStem realizes progressive tokenization with four strided local convolutional stages (Fig.~\ref{fig:architecture}). The first three combine overlapping neighborhoods, with batch normalization (BN) and a Gaussian error linear unit (GELU) at each resolution. The last forms the sequence for two standard multihead attention (MHA) blocks. We construct a freely learned Long-Patch projection with matched nominal span, stride, and first-token center and 3.48\% more model parameters. The paired models train end to end with transmitter cross-entropy and matched initial states for the shared front-end and backend.
 
 \begin{figure*}[t]\centering
 \input{figures/identification_pipeline.tex}
@@ -37,9 +37,9 @@ HStem realizes this mapping with four strided local convolutional stages (Fig.~\
 \end{figure*}
 
 \begin{enumerate}
-\item We introduce HStem, a four-stage RF tokenizer that progressively transforms local features into 32 tokens before global attention.
-\item We match the signal views, token geometry, convolutional support, and attention backend to measure the effect of token construction. HStem improves LoRa accuracy by 2.835 percentage points over Long-Patch across six paired fits. Additional controls quantify the roles of parameterization and normalization.
-\item Under a common LoRa packet and receiver split, HStem reaches 97.333\% accuracy and 97.325\% macro-F1 with 133,690 parameters. It delivers 1.96 times the batch-128 throughput of Spec+Siamese in the same GPU session. A WiSig stress test measures robustness beyond LoRa.
+\item We introduce HStem, which combines overlapping local RF neighborhoods at successive resolutions to form 32 tokens for global attention.
+\item We measure the effect of replacing the tokenizer at matched nominal support and interface. HStem gains 2.835\,pp over Long-Patch, with a conditional 95\% receiver interval of \([2.253,3.530]\) pp. Kernel parameterization, the BN--GELU interaction, and layerwise geometry provide complementary evidence about the sources of the gain.
+\item On a common LoRa packet and receiver split, HStem reaches 97.333\% accuracy and 97.325\% macro-F1 with 133,690 parameters. It reduces the parameter count by 99.04\% relative to Spec+Siamese and delivers 1.96 times its batch-128 throughput in the shared GPU session.
 \end{enumerate}
 
 \section{Related Work}
@@ -47,17 +47,17 @@ Channel-independent signal representations provide an important LoRa baseline \c
 
 Ma et al.\ use spectrograms and contrastive training on same-transmitter pairs from different receivers \cite{chen2020simclr,ma2025wcnc,ma2025robust}. Triad-GAN augments the embedding learner with a transmitter-conditioned generator and discriminator \cite{wang2026triad}. RIFLE combines a residual encoder with receiver-adversarial training for deployments with partial transmitter--receiver coverage \cite{zhang2026rifle}. Table~\ref{tab:protocol-context} summarizes these studies' evaluation contexts.
 
-FAN/IB-RFF and ASKNet represent complementary frequency-aware, bottleneck, and spectral-dynamics approaches \cite{wang2026ib,liu2026ask}. Federated contrastive learning, feature alignment, and domain-adversarial aggregation address training across distributed receivers \cite{shen2024federated,wang2026fedalign,gul2026federated}. These methods change how models learn from receivers. Our primary comparison studies how a fixed classifier pipeline builds its input tokens.
+FAN/IB-RFF and ASKNet use frequency-aware features, information bottlenecks, and spectral dynamics \cite{wang2026ib,liu2026ask}. Federated contrastive learning, feature alignment, and domain-adversarial aggregation address distributed receiver data \cite{shen2024federated,wang2026fedalign,gul2026federated}.
 
-CvT learns overlapping convolutional embeddings and convolutional attention projections, PVT changes the attention operating scale in a pyramid, and Swin uses shifted-window attention \cite{wu2021cvt,wang2021pvt,liu2021swin}. RF Transformer work addresses variable-length LoRa inputs \cite{shen2023length}, GFSK classification \cite{herrera2026transformer}, and segmented or multiscale WiFi features \cite{hui2025cross,yang2026sinformer}. Here we match the overall convolution-path support and evaluate how local RF features are converted into tokens at a fixed MHA interface. HStem combines standard attention, BN, and LN \cite{vaswani2017attention,ioffe2015batch,ba2016layer}; shift-stability work \cite{zhang2019shift} motivates our alignment stress tests.
+CvT combines convolutional token embeddings with convolutional attention projections, PVT forms a spatial pyramid, and Swin links shifted attention windows \cite{wu2021cvt,wang2021pvt,liu2021swin}. RF Transformer work addresses variable-length LoRa inputs \cite{shen2023length}, GFSK classification \cite{herrera2026transformer}, and segmented or multiscale WiFi features \cite{hui2025cross,yang2026sinformer}. Our RF study varies the tokenizer before two standard MHA blocks and evaluates it against a projection with the same local convolution-path support. The design uses established attention and normalization operators \cite{vaswani2017attention,ioffe2015batch,ba2016layer}. Shift-stability work \cite{zhang2019shift} motivates our alignment stress tests.
 
 \section{Signal Model and Identification Task}
 Let $y\in\{1,\ldots,10\}$ identify an enrolled physical transmitter and $r$ denote the receiver. We model a received window as
 \begin{equation}
- x=\mathcal{R}_{r}\!\left(\mathcal{C}_{h}
+ x=\mathcal{R}_{r}\!\left(\mathcal{C}_{\eta}
        \left(\mathcal{T}_{y}(s)\right)\right)+n ,
 \end{equation}
-where $\mathcal{T}_{y}$, $\mathcal{C}_{h}$, and $\mathcal{R}_{r}$ describe the transmitter, channel, and receiver, respectively, and $n$ denotes noise. We train $f_\theta(x)$ on labeled recordings from source receivers and predict the same transmitter identities at held receivers with no adaptation. HStem uses TX supervision. Domain-adversarial comparators also use source-RX labels.
+where $\mathcal{T}_{y}$, $\mathcal{C}_{\eta}$, and $\mathcal{R}_{r}$ describe the transmitter, channel, and receiver, respectively, and $n$ denotes noise. We train $f_\theta(x)$ on labeled recordings from source receivers and apply the resulting classifier directly to the same enrolled transmitter identities at held receivers. HStem uses transmitter supervision.
 
 The companion study diagnoses out-of-band dependence with frozen pathway interventions \cite{oobcompanion}. HStem inherits its TrueIB reconstruction, five views, local front-end, and $32\times64$ token interface. We train paired architectures within that common in-band path to measure the effect of token construction.
 
@@ -73,10 +73,10 @@ For $N=8192$, RMS normalization and the discrete in-band projection are
 \end{align}
 The mask retains 1025 bins, including DC and the edge bins. Views are I, Q, standardized $\log(1+|\mathrm{FFT}|)$, $\log(1+\sqrt{I^2+Q^2+\epsilon})$, and $\operatorname{atan2}(Q,I)/\pi$. FFT magnitude is fftshift ordered and standardized per window using sample standard deviation, clamped below by $\epsilon=10^{-6}$. The same epsilon is used by RMS and amplitude construction. These inherited definitions are fixed for every tokenizer control.
 
-The spectral view is indexed by frequency, whereas I/Q and amplitude/phase are indexed by sample position. Concatenating them at the same numerical index is an inherited construction. A receptive field in this shared coordinate system is not a physically isolated RF interval: TrueIB and the FFT view have global dependencies.
+The inherited representation concatenates frequency-indexed FFT magnitudes with sample-indexed I/Q, amplitude, and phase at the same numerical indices. We measure support in this feature coordinate system. TrueIB and the FFT view depend on the full acquired window.
 
 \subsection{Shared Front-End and Tokenizer}
-The shared front-end has stride-one kernel-7 and kernel-5 convolutions, each with 32 channels, BN, and LeakyReLU. HStem then applies four strided convolutions (Table~\ref{tab:arch}). BN and GELU follow the first three stages, and the last stage is linear.
+The shared front-end has stride-one kernel-7 and kernel-5 convolutions, each with 32 channels, BN, and LeakyReLU. HStem maps the resulting \(8192\times32\) feature array to \(32\times64\) tokens with four strided convolutions (Table~\ref{tab:arch}). BN and GELU follow the first three stages, and the last stage is an affine convolution.
 
 Figure~\ref{fig:architecture} follows the signal from aligned IQ to transmitter prediction. The backend adds learned position terms after input projection and applies pre-normalization followed by two four-head MHA blocks. Each block uses scaled dot-product attention, output projection, and a normalized residual. Final layer normalization and mean pooling give a 64-dimensional embedding for the linear TX head. The full model has 133,690 parameters.
 
@@ -85,7 +85,7 @@ Long-Patch uses a grouped kernel-340/stride-256 projection from 32 to 64 channel
 
 \begin{figure*}[t]\centering
 \input{figures/matched_tokenizers.tex}
-\caption{Token construction at matched support. (a) HStem progressively reduces sequence length, while Long-Patch projects one long neighborhood and mixes channels pointwise. Both receive the same features and feed the same attention backend. (b) For both paths, consecutive interior tokens have a nominal convolution-path span of 350 positions and overlap over 94 positions after including the shared CNN.}
+\caption{Token construction at matched support. (a) HStem builds tokens progressively, and Long-Patch uses a grouped long projection with pointwise channel mixing. Labels inside the blocks give kernel width and stride. The paths use the same front-end and attention architectures. Parameter counts describe the full models, and accuracies are receiver-equal means from the matched GPU evaluation across two folds and three seeds. (b) With the front-end included, both paths span 350 feature positions per interior token and share 94 positions between adjacent tokens.}
 \label{fig:matched-tokenizers}
 \end{figure*}
 
@@ -115,14 +115,25 @@ Stage 3&8&4&2&64&128&158&8192\\
 Stage 4&4&4&0&64&32&350&2048\\\bottomrule
 \end{tabular}\end{table*}
 
-The coordinate count falls from 262,144 after the shared front-end to 2,048 at the token interface. The first three stages mix overlapping neighborhoods before reducing their resolution. The last stage groups four adjacent stage-3 positions. Adjacent output tokens consequently share 94 positions of nominal support ($350-256$) in the upstream coordinate system. Frozen BN is pointwise for this calculation. The front-end's Fourier operations depend on the complete acquired window.
+The token interface reduces the coordinate count by a factor of 128, from 262,144 after the shared CNN to 2,048. The first three stages mix overlapping neighborhoods as they downsample, and the last groups four adjacent stage-3 positions. Adjacent output tokens consequently share 94 positions of nominal support (\(350-256\)) in the upstream feature coordinates. Frozen BN is pointwise for this calculation.
 
 \subsection{Long Projection, Nonlinearity, and Budget}
-For fixed frontend features $h$, the two-convolution P0/Long-Patch tokenizer is affine: its effective kernel is a product of the grouped projection and pointwise mixing. HStem interleaves three BN/GELU stages before its final convolution. With frozen BN, its Jacobian can be written
+Treat the front-end feature array \(h\) and token array \(z\) as vectors in the following equations. The grouped and pointwise convolutions of Long-Patch compose into an affine map,
 \begin{equation}
- J_H(h)=C_4D_3(h)B_3C_3D_2(h)B_2C_2D_1(h)B_1C_1,
+ z_{\rm LP}=W_{\rm LP}h+b_{\rm LP},\qquad J_{\rm LP}=W_{\rm LP}.
 \end{equation}
-where $D_l$ contains GELU derivatives and $B_l$ contains frozen BN scales. The Jacobian of the staged tokenizer therefore changes with $h$, allowing each intermediate stage to emphasize different local features as a function of its input. The matched long projection has one input-independent linear operator between the same nonlinear front-end and backend.
+Let \(K_l\) denote the linear part of HStem's stage-\(l\) convolution and \(b_l\) its bias. Beginning with \(h_0=h\), the first three stages compute
+\begin{equation}
+ \begin{aligned}
+ a_l&=\mathrm{BN}_l(K_lh_{l-1}+b_l),\\
+ h_l&=\mathrm{GELU}(a_l),\qquad l=1,2,3 .
+ \end{aligned}
+\end{equation}
+The final convolution gives \(z_H=K_4h_3+b_4\). With frozen BN, the tokenizer Jacobian is
+\begin{equation}
+ J_H(h)=K_4D_3(h)B_3K_3D_2(h)B_2K_2D_1(h)B_1K_1 ,
+\end{equation}
+where \(B_l\) holds the frozen BN scales and \(D_l(h)=\mathrm{diag}(\mathrm{GELU}'(a_l))\). The stage derivatives depend on \(h\), so HStem can adapt the local feature transformation to the input before producing each token. This analysis describes the tokenizer mapping. Both complete classifiers include nonlinear front-ends and backends.
 
 A grouped long projection with intermediate width $m$ and $g$ groups has
 \begin{equation}
@@ -130,7 +141,7 @@ A grouped long projection with intermediate width $m$ and $g$ groups has
 \end{equation}
 with $P_{\rm shared}=47,082$. P0 uses $m=80,g=8,k=256$. Long-Patch uses $m=64,g=8,k=340$, yielding 138,346 parameters, 3.48\% above HStem. The pointwise layer combines groups so that the long projection can attain output rank 64.
 
-Convolution MACs are $\sum_lN_lk_lC_{l-1}C_l/g_l$. The two tokenizers share 51.118M front-end convolution MACs. HStem uses 42.467M tokenizer MACs compared with 2.916M for Long-Patch. Staged processing applies small, shared filters across more intermediate positions, reducing weight storage while increasing local arithmetic. The deployment comparison measures the combined preprocessing and model costs.
+Convolution MACs are \(\sum_lN_lk_lC_{l-1}C_l/g_l\). The shared front-end costs 51.118M convolution MACs. HStem spends 42.467M tokenizer convolution MACs compared with 2.916M for Long-Patch because it operates over more intermediate positions. Its small local kernels keep the parameter count close to Long-Patch's. End-to-end latency and throughput are measured separately.
 
 \section{Dataset and Evaluation Protocol}
 \subsection{Shen LoRa Splits}
@@ -152,7 +163,7 @@ We average accuracy and macro-F1 with equal receiver weights across the three se
 
 \section{Identification Accuracy and Efficiency}
 \subsection{LoRa Baseline Comparisons}
-HStem has the highest observed Native accuracy (97.333\%) and macro-F1 (97.325\%) under the common protocol in Table~\ref{tab:external}. The strongest external comparator, Spec+Siamese, reaches 95.890\%, followed by Shen-DANN at 94.208\% and Shen-CE at 93.535\%. The observed HStem--Spec+Siamese gap is 1.443\,pp (conditional 95\% interval $[-0.565,3.353]$). With a common in-band restriction, the closest comparator is Shen-CE, with a 2.632\,pp gap to HStem. Table~\ref{tab:paired} reports the paired receiver estimates.
+HStem has the highest observed Native accuracy (97.333\%) and macro-F1 (97.325\%) in Table~\ref{tab:external}, using transmitter cross-entropy. Spec+Siamese reaches 95.890\%, followed by Shen-DANN at 94.208\% and Shen-CE at 93.535\%. The observed HStem--Spec+Siamese gap is 1.443\,pp (conditional 95\% interval \([-0.565,3.353]\) pp). With the common in-band restriction, the closest comparator is Shen-CE, with a 2.632\,pp gap to HStem. Table~\ref{tab:paired} reports the paired receiver estimates.
 
 \begin{table*}[t]\centering
 \caption{Primary LoRa comparisons on P-H5$\times$160. Accuracy and macro-F1 are RX-equal percentages. Fit SD is over six fold--seed means. Worst RX is the lowest per-receiver seed mean. All models share the evaluation packets. Spec+Siamese is evaluated in Native.}
@@ -193,7 +204,7 @@ The timing covers each method's complete native front-end and TX classifier unde
 
 \section{Tokenizer Ablations and Representation Analysis}
 \subsection{Same-Support and Matched-Budget Comparisons}
-In the common GPU evaluation across six paired fits, HStem reaches 97.335\% versus 94.500\% for Long-Patch and 94.648\% for Patch-Lite. The 2.835\,pp gain over Long-Patch appears in all six pairs. The direct projection has the same output geometry and nominal support and 3.48\% more parameters. Patch-Lite supplies the closer size control, with smaller support and a 2.687\,pp accuracy difference. Extending the directly learned patch from the shorter to the matched span changes the mean by $-0.148$\,pp. These contrasts isolate the tokenizer configurations within the shared pipeline.
+In the matched GPU evaluation, HStem reaches 97.335\% versus 94.500\% for Long-Patch and 94.648\% for Patch-Lite. The 2.835\,pp HStem--Long-Patch gap has a conditional 95\% interval of \([2.253,3.530]\) pp, and all six paired fits favor HStem. Patch-Lite gives the closest parameter match and a 2.687\,pp gap. The change from Patch-Lite to the wider-support Long-Patch yields \(-0.148\)\,pp with a conditional interval of \([-0.765,0.312]\) pp. Together these comparisons support the staged tokenizer configuration at matched coordinate support and output geometry.
 
 \begin{table*}[t]\centering
 \caption{Matched LoRa tokenizer comparison. The three methods share the test packets and GPU inference session. Accuracy, F1, and worst RX are percentages.}
@@ -207,7 +218,9 @@ In the common GPU evaluation across six paired fits, HStem reaches 97.335\% vers
 \end{figure*}
 
 \subsection{Parameterization and Normalization}
-The smooth round-trip parameterization improves Patch-Lite by $0.878$\,pp at unchanged support, and the expanded-kernel configuration adds $0.818$\,pp. Removing intermediate BN from HStem reduces accuracy by $1.190$\,pp. Restoring affine parameters recovers $0.272$\,pp. The factorial experiment shows a $+1.350$\,pp interaction between BN and GELU with a conditional 95\% interval of $[0.930,1.750]$ (Fig.~\ref{fig:ablations}). With both components removed, the staged tokenizer exceeds Long-Patch by $2.243$\,pp. Together these results show how support, training parameterization, and normalization contribute to the accuracy of the tokenizer configuration. The supplement gives the component contrasts and all per-fit and per-RX results.
+The full-rank round-trip parameterization improves Patch-Lite by \(0.878\)\,pp at unchanged support and folds back into a standard convolution at inference. The expanded-kernel configuration adds \(0.818\)\,pp. Removing intermediate BN reduces HStem accuracy by \(1.190\)\,pp, and restoring its affine parameters recovers \(0.272\)\,pp.
+
+Adding intermediate GELU changes accuracy by \(+0.752\)\,pp with BN and \(-0.598\)\,pp without BN. The paired interaction is \(+1.350\)\,pp (conditional 95\% interval \([0.930,1.750]\) pp, Fig.~\ref{fig:ablations}). Removing intermediate BN and GELU leaves a staged affine tokenizer with a \(2.243\)\,pp higher observed mean than Long-Patch. The affine result is consistent with a role for factorized parameterization and its optimization. The supplement reports each contrast and its evaluation setting.
 
 
 \subsection{Frozen Feature Geometry}
@@ -236,10 +249,7 @@ At fixed group counts, $J_c$ is proportional to the ratio of between-TX centroid
 \label{fig:geometry}
 \end{figure*}
 
-Final mean $J_w$ is 4.270/4.435/4.925/5.449 for P0/S1/H1/H0; H0--P0 is positive in all six pairs. Final $J_c$ is 27.585/27.818/31.225/35.577, with five positive H0--P0 pairs. These support improved final source discrimination in the trained system.
-
-
-The ordering changes across the network. HStem has larger conditional RX scatter than Patch-Lite at the tokenizer output (0.003004 versus 0.000185), and the pre-MHA $J_c$ means are 33.983 versus 41.241. The final ordering thus reflects how staged tokens and attention jointly shape the classifier embedding. The supplement reports the matched per-fit geometry, effective kernels, and PCA views.
+HStem's final mean \(J_w\) is \(5.449\), up \(27.6\%\) from Patch-Lite's \(4.270\), with a positive difference in all six source-validation pairs. Final \(J_c\) increases from \(27.585\) to \(35.577\), with five positive pairs. The intermediate ordering differs. HStem has larger conditional RX scatter at the tokenizer output (0.003004 versus 0.000185), and the pre-MHA \(J_c\) means are 33.983 for HStem and 41.241 for Patch-Lite. The final separation therefore reflects the representation formed by the staged tokenizer and attention together. Table~\ref{tab:source} and the supplement give the intermediate configurations and per-fit evidence.
 
 
 \section{Cross-Waveform Evaluation}
@@ -253,7 +263,7 @@ The 8192-sample LoRa windows contain repeated chirps from chirp spread spectrum 
 HStem reduces the accuracy loss by 5.05\,pp under $\pm$10 kHz offsets and by 3.51\,pp under $\pm$9-sample shifts compared with Long-Patch (Table~\ref{tab:wisig}). The shift comparison matches retained content and padding. The same table gives the natural-input difference and its conditional interval.
 
 \section{Discussion and Conclusion}
-HStem improves cross-receiver LoRa identification by staging local RF token construction before attention. It gains 2.835\,pp over Long-Patch at matched nominal support and output geometry. The parameterization, normalization, and representation results explain how local token construction and the shared attention backend shape the trained system. Under the common Native protocol, HStem reaches 97.333\% accuracy and 93.683\% worst-RX accuracy. Against Spec+Siamese it combines an approximately 104-fold reduction in parameter count with 1.96 times the batch-128 throughput on the test GPU.
+Across matched LoRa fits, RF token construction changes accuracy even at the same nominal support and attention interface. Progressive tokenization yields a 2.835\,pp gain over Long-Patch. The parameterization and BN--GELU controls identify effects within the tokenizer, and the layerwise analysis locates the improved transmitter separation in the final embedding. Under the Native protocol HStem reaches 97.333\% accuracy and 93.683\% worst-RX accuracy. Relative to Spec+Siamese, it uses approximately one hundredth of the parameters and delivers 1.96 times the batch-128 throughput on the test GPU.
 
 The LoRa result concerns aligned windows and ten enrolled TXs from receivers with documented development history. A four-sample circular shift reduces HStem source accuracy from 98.175\% to 21.858/17.775\% for negative/positive shifts, showing the importance of packet alignment. An independently acquired set with the same enrolled TXs is needed for prospective RX generalization, and security operating points such as unknown-emitter rejection require separate evaluation.
 

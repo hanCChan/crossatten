@@ -209,6 +209,14 @@ def generate():
     assert f'{first["mean_delta_pp"]:.3f}' == "2.835"
     p_h0, p_lp = structure_cost["H0"]["params"], structure_cost["LP"]["params"]
     assert f"{100 * (p_lp / p_h0 - 1):.2f}" == "3.48"
+    accuracy = {row["arm"]: row["accuracy_pct"] for row in inputs["structure"]["summary"]}
+    result["matched_tokenizer_metrics.tex"] = (
+        "% Generated from the matched GPU comparison in the submission evidence ledger.\n"
+        f"\\def\\MatchedHStemAccuracy{{{accuracy['H0']:.3f}\\%}}\n"
+        f"\\def\\MatchedHStemParameters{{{p_h0:,}}}\n"
+        f"\\def\\MatchedLongPatchAccuracy{{{accuracy['LP']:.3f}\\%}}\n"
+        f"\\def\\MatchedLongPatchParameters{{{p_lp:,}}}\n"
+    )
     f = inputs["factorial"]["A"]["primary_interaction"]
     assert f'{f["mean_delta_pp"]:.3f}' == "1.350"
     assert not inputs["factorial"]["C"]["pilot"]["consistent_pilot_signal"]
@@ -221,8 +229,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
-    tables, origins = generate()
-    files = {HERE / "tables" / name: content for name, content in tables.items()}
+    artifacts, origins = generate()
+    files = {HERE / "tables" / name: content for name, content in artifacts.items()}
     files[HERE / "EVIDENCE_SOURCES.json"] = json.dumps(origins, indent=2) + "\n"
     for path, content in files.items():
         if args.check:
@@ -230,4 +238,5 @@ if __name__ == "__main__":
                 raise SystemExit(f"Evidence mismatch: {path.name}")
         else:
             path.write_text(content, encoding="utf-8", newline="\n")
-    print(f"Verified {len(tables)} tables against {len(origins)} frozen inputs")
+    print(f"{'Verified' if args.check else 'Generated'} {len(artifacts)} LaTeX artifacts "
+          f"from {len(origins)} frozen inputs")

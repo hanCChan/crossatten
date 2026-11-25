@@ -1,8 +1,11 @@
 % Spatial dimensions are reported as positions x channels.
+\input{tables/matched_tokenizer_metrics.tex}
 \begin{tikzpicture}[
   x=1mm,y=1mm,font=\fontsize{8}{9.2}\selectfont,text=rfInk,
   title/.style={font=\fontsize{8.6}{10}\selectfont\bfseries,anchor=west,inner sep=0pt},
   size/.style={font=\fontsize{7.7}{9}\selectfont,inner sep=0pt},
+  metric/.style={font=\fontsize{8}{9.5}\selectfont,
+    anchor=south west,align=left,inner sep=0pt},
   operation/.style={draw=rfRule,fill=white,line width=.52pt,
     minimum height=8.6mm,minimum width=19mm,align=center,inner sep=1pt},
   stage/.style={operation,draw=rfAccent,fill=rfAccent!7},
@@ -21,14 +24,17 @@
 \node[size,text=rfAccent] at (67.5,38.4) {$512 \times 64$};
 \node[size,text=rfAccent] at (92,38.4) {$128 \times 64$};
 \node[size,text=rfAccent] at (116.5,38.4) {$32 \times 64$};
+\node[metric,text=rfAccent] at (131,47.6)
+  {\textbf{\MatchedHStemAccuracy}\\\MatchedHStemParameters\ params};
 
 \node[title] at (31.5,30.3) {Long-Patch};
 \node[operation,minimum width=34mm] (grouped) at (54,22.5) {Grouped conv\\$340/256$, 8 groups};
 \node[operation,minimum width=27mm] (pointwise) at (100.5,22.5) {Pointwise conv\\$1/1$};
-\node[size] at (130,23) {kernel / stride};
+\node[metric] at (131,17.3)
+  {\textbf{\MatchedLongPatchAccuracy}\\\MatchedLongPatchParameters\ params};
 
 \node[align=center,inner sep=1pt] (features) at (10.5,34)
-  {Shared features\\$8192 \times 32$};
+  {CNN output\\$8192 \times 32$};
 \node[align=center,inner sep=1pt] (tokens) at (163,34)
   {Tokens\\$32 \times 64$};
 \draw[rfInk,line width=.6pt] (features.east) -- (24.6,34);

@@ -4,7 +4,7 @@
 
 | 项目 | 审阅结论 |
 |---|---|
-| 核心创新 | 同输入、32×64 Token、最终名义卷积支持、中心及 MHA 下对照 HStem 与 Long-Patch，增益 2.835 pp。Long-Patch 多 3.48% 参数。流程图按信号、特征和运算逐步展开，结构图单列两条 Tokenizer 路径，并用相同坐标展示 350 点支持、256 点步长及 94 点重叠。 |
+| 核心创新 | 在同输入、32×64 Token、名义卷积支持、中心和 MHA 架构下，HStem 较 Long-Patch 提升 2.835 pp，六组配对全部领先。Fig. 2 两条路径标出匹配结构评估的准确率 97.335% / 94.500% 与整网参数量 133,690 / 138,346。Native 主表中 HStem 的准确率为 97.333%。 |
 | 结构归因 | S26 同支持对照为主，S22 的参数化和归一化对照、S28 的 BN×GELU 正向交互与未达门槛的 held-source pilot 一并保留。 |
 | 外部协议 | 正文主要对照为 Spec+Siamese、Shen-DANN 和 Shen-CE，保留 Native 与 Strict-IB 的统一协议和配对统计。文献表标出各自 RX 划分和训练预算；Triad-GAN 的约 95.8% 为原文 Fig. 5(b) 中 15 个未见 RX 的估算均值。14→6 的两个结果引用关联 OOB 稿。 |
 | 统计与运行成本 | 新增 Accuracy–Parameters 和 Accuracy–Throughput 主图。配对条件区间统一进入结果表，保留 B1/B128 p50/p95、吞吐、峰值 PyTorch CUDA 分配和参数。S24 和 S26 的独立计时保留为历史补充。 |

@@ -1,25 +1,26 @@
 % The IQ traces and feature maps are schematic.
 \begin{tikzpicture}[
   x=1mm,y=1mm,font=\fontsize{8}{9.2}\selectfont,text=rfInk,
-  heading/.style={font=\fontsize{8.6}{10}\selectfont\bfseries},
+  heading/.style={font=\fontsize{8.6}{10}\selectfont\bfseries,text=rfInk!86},
   measure/.style={font=\fontsize{7.7}{9}\selectfont},
-  operator/.style={draw=rfRule,fill=white,line width=.48pt,
+  operator/.style={draw=rfRule,fill=white,line width=.42pt,
     minimum height=8mm,inner sep=1pt,align=center},
-  flow/.style={-{Latex[length=1.45mm,width=1mm]},draw=rfInk,line width=.58pt}]
+  flow/.style={-{Latex[length=1.45mm,width=1mm]},draw=rfInk!80,line width=.54pt}]
 
 \node[heading] at (12,29) {Aligned IQ};
 \node[heading] at (52,29) {Shared RF front-end};
-\node[heading,text=rfAccent] at (95,29) {HStem};
+\node[heading,font=\fontsize{9}{10}\selectfont\bfseries,text=rfAccent] at (95,29) {HStem};
 \node[heading] at (136,29) {Attention readout};
 \node[heading] at (169,29) {TX prediction};
-\foreach \leftedge/\rightedge in {0/24,28/76,80/110,114/155,159/178}
+\foreach \leftedge/\rightedge in {0/24,28/76,114/155,159/178}
   \draw[rfRule,line width=.42pt] (\leftedge,25.6) -- (\rightedge,25.6);
+\draw[rfAccent,line width=.85pt] (80,25.6) -- (110,25.6);
 
 % Analytic quadrature pair for the input window.
-\foreach \height/\component/\phase/\tone in {19.5/I/0/rfAccent,13.5/Q/-90/rfInk} {
+\foreach \height/\component/\phase in {19.5/I/0,13.5/Q/-90} {
   \node[measure,anchor=west,inner sep=0pt] at (0,\height) {$\component$};
   \draw[rfRule!60,line width=.35pt] (5,\height) -- (24,\height);
-  \draw[\tone,line width=.58pt,samples=105,domain=0:18,variable=\u]
+  \draw[rfInk!76,line width=.54pt,samples=105,domain=0:18,variable=\u]
     plot ({5+\u},{\height+1.62*cos(19*\u+1.9*\u*\u+\phase)});
 }
 
@@ -33,13 +34,13 @@
 
 % Four feature maps at progressively shorter sequence lengths.
 \foreach \center/\halfheight in {83.5/6.0,91/4.8,98.5/3.8,106/2.9} {
-  \draw[rfAccent,fill=rfAccent!11,line width=.55pt]
+  \draw[rfAccent,fill=rfAccent!18,line width=.63pt]
     (\center-1.5,16.5-\halfheight) rectangle (\center+1.5,16.5+\halfheight);
   \draw[rfAccent!50,line width=.32pt]
     (\center-1.5,16.5) -- (\center+1.5,16.5);
 }
 \foreach \leftedge/\rightedge in {85/89.5,92.5/97,100/104.5}
-  \draw[flow] (\leftedge,16.5) -- (\rightedge,16.5);
+  \draw[flow,draw=rfAccent,line width=.63pt] (\leftedge,16.5) -- (\rightedge,16.5);
 
 \node[operator,minimum width=12mm] (position) at (117.8,16.5) {Proj.\\$+$ position};
 \node[operator,minimum width=11mm] (attn) at (132.8,16.5) {MHA\\$\times\,2$};
