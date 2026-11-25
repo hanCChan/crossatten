@@ -1,0 +1,24 @@
+{
+  "fold": 0,
+  "seed": 201,
+  "rounds": 200,
+  "selected_round": 199,
+  "source_ce": 1.5863641500473022,
+  "source_accuracy": 0.3995000123977661,
+  "final_source_accuracy": 0.4125000238418579,
+  "updates": 125000,
+  "fit_seconds": 1603.4030835000158,
+  "params": 13383695,
+  "files": {
+    "research/s43_gul_federated/fit_gul.py": "473a5a4df8327b3ee83be114d7a89a4180770a5d944044b1aa9f2650533506e6",
+    "research/s43_gul_federated/PROTOCOL.zh-CN.md": "f44dc36075ec8ab07239b49afa54f243e52fd282a873eed34983e9e199c503cd",
+    "research/s42_lora_baselines/fit.py": "ff65c8299614bd63555546cfe039f50149c90c38259a6e425ad1a3bd1bbd12ac",
+    "lib/xa/models.py": "37062521feb82acdfe5a20064fb3002b502b6251ef62220576ac1519eef80ac3",
+    "lib/xa/frontends.py": "b5ce9c5a702234bbf06156b8ae1cc3fec69f7fbfee197c4eab46e2d2b2f146d0",
+    "lib/xa/data.py": "b5a2ea4351bf7a87556d72a87b47d8260a2e70c5c02dcb7b16a55848be9bcf51",
+    "configs/protocol.json": "1311eb35852a63f216a3f0c8e87ca9833ece8614975f9ff79ec28079b70b9127",
+    "26-long-patch-control/registration.json": "51477d37d2df63f1ddfb9f665bc1d8b3e8f6ff3d5ff19bd5847a2115691608e0"
+  },
+  "weights": "de40e5f6d47f8ae2061284901db04ecc38e1e61ffcc59ad29b3e10c1545291e3",
+  "history": "8e588ad4cf89e3935255bac800b8f32a861a784ef0a562841a74ad75511f4ce8"
+}
