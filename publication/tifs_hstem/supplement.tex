@@ -67,13 +67,22 @@ The left panel of Fig.~\ref{fig:limits} summarizes the archived source-validatio
 \end{figure*}
 
 \section{Timing and Throughput}
-The separate S26 timing session used an RTX 4060 Laptop GPU, synthetic resident IQ, FP32 tensors, TF32 off for matmul and on for cuDNN, three warmups, and 15 samples. Timings cover IQ-to-logits with GPU-resident inputs. Table~\ref{tab:timing} reports p50 and p95 batch times and the batch-128 rate at p50. The S24 Native timing table in the main paper was measured in a separate session with TF32 off. The two sessions yield within-session comparisons.
+The main paper's Native comparison uses three sealed fold-0, seed-201 fits in the same RTX 4060 Laptop GPU session (PyTorch 2.5.0, CUDA 12.4, cuDNN 9.1). Every method receives the same synthetic $B\times2\times8192$ FP32 tensor on the GPU. Timing covers the complete native signal front-end and TX classifier, from a resident packet window to logits. Networks use FP32 with AMP and TF32 disabled. The DANN CIS retains its original FP64 frontend. The DANN transmitter-only path produces identical logits to the full model at both measured batch sizes.
+
+Each batch size uses 12 warmups per model and 60 measured forwards per model. All six model orders are used in each of 10 blocks. Each sample starts before the forward call and ends after GPU synchronization. At batch 1, the respective median-derived rates for HStem, Spec+Siamese, and Shen-DANN are 456, 786, and 837\,packets/s. These rates describe sequential single-packet calls. Peak memory is separately measured with one model per process and includes deployed weights, buffers, input, and temporary tensors tracked by PyTorch. Driver memory and reserved allocator space are outside that measure.
+
+The separate S26 timing session used the same GPU model with synthetic resident IQ, FP32 tensors, TF32 off for matmul and on for cuDNN, three warmups, and 15 samples. Table~\ref{tab:timing} reports p50 and p95 batch times and the batch-128 rate at p50.
 \begin{table*}[t]\centering
 \caption{S26 common timing session. B1 and B128 times are p50/p95 in ms, and throughput is at batch 128.}
 \label{tab:timing}\input{tables/structure_timing.tex}
 \end{table*}
 
-Table~\ref{tab:strict-timing} reports the S24 common-band external timings from the same measurement protocol as S24 Native. The S24 HStem timing in the main paper already uses its in-band path. The Strict-IB ASKNet arm was deferred.
+Tables~\ref{tab:s24-native-timing} and \ref{tab:strict-timing} give historical S24 cost measurements. Those runs used three warmups, 15 measured forwards, and TF32 off. Literal LoRa ASK retains full-dimensional complex QR, and its 74,153,872 complex/real parameter elements correspond to 141,246,353 real degrees of freedom. The Strict-IB ASKNet arm was deferred. Dispatcher MACs for these models cover supported operations and omit FFT and QR. The shared main-paper session, S24, and S26 report separate within-session comparisons.
+
+\begin{table*}[t]\centering
+\caption{Historical S24 Native comparator timings. B1/B128 show p50/p95 in ms.}
+\label{tab:s24-native-timing}\input{tables/costs.tex}
+\end{table*}
 \begin{table*}[t]\centering
 \caption{S24 measured Strict-IB comparator timings. B1/B128 show p50/p95 in ms.}
 \label{tab:strict-timing}\input{tables/strict_timing.tex}
@@ -85,13 +94,6 @@ Ma et al.\ \cite{ma2025robust} train the from-scratch comparison with a shared n
 The paper specifies log-magnitude STFT without complete numerical front-end and channel parameters. The reimplementation uses the Shen STFT window and crop convention (128 rectangular samples, hop 64, centered 52 bins), producing a $52\times127$ log-magnitude input before the residual layers. SAME padding and $2\times2$ average pooling yield a $13\times32\times64$ feature map before the dense layers. This reproduces the published parameter scale. The implementation uses an exponential five-tap profile with fractional delays, an eight-tone low-Doppler Jakes approximation, and additive noise. It uses the paper's $5$--$300$ ns, $0$--$5$ Hz, and $10$--$40$ dB draw ranges.
 
 The Adam schedule starts at $3\times10^{-4}$, halves on a 10-epoch source CE plateau, stops after 30 epochs without improvement, and has a 160-epoch cap. Network training uses CUDA BF16 autocast, with FP32 signal processing, CE, and contrastive similarities. Source validation and report inference use FP32. All six source-selected weights enter the paired report. Their source accuracy spans 99.05--99.45\%. One fit stops at epoch 156. The remaining five reach 160 epochs. The cohort uses 239,000 updates and produces 60,000 held packet predictions on 10 RXs.
-
-\begin{table*}[t]\centering
-\caption{S42 Native timing in a separate RTX 4060 Laptop GPU session. Times are p50/p95 in ms. Throughput uses the B128 median. Timing includes the spectrogram and the network on GPU-resident IQ.}
-\label{tab:ma-timing}\input{tables/siamese_timing.tex}
-\end{table*}
-
-Table~\ref{tab:ma-timing} uses FP32 with TF32 off, three warmups, and 15 measured repeats. This session provides the Spec+Siamese operating point. Matching the entire timing session with S24 comparators would require new timings for those methods.
 
 For recent context, the source receivers listed for Fig.~5 in Triad-GAN \cite{wang2026triad} can be excluded from its vector bars. The resulting approximate means over 15 unseen RXs are 84.4\% for homogeneous training and 95.8\% for heterogeneous training. They describe the authors' receiver and training protocol. The available publication leaves key update details open for a same-protocol implementation.
 

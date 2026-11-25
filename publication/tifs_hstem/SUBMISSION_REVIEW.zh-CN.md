@@ -7,15 +7,16 @@
 | 核心创新 | 同输入、32×64 Token、最终名义卷积支持、中心及 MHA 下对照 HStem 与 Long-Patch。Long-Patch 多 3.48% 参数。相关工作分别区分卷积嵌入、分层注意力、分段对数频谱和 LoRa 跨 RX 学习。 |
 | 结构归因 | S26 同支持对照为主，S22 的参数化和归一化对照、S28 的 BN×GELU 正向交互与未达门槛的 held-source pilot 一并保留。 |
 | 外部协议 | Native 共享原包权限并保留原实现的处理方式。S42 新增同协议 Spec+Siamese 六拟合，95.890%，与 HStem 的配对差区间跨零。Strict-IB 约束带内信息，保留 ASKNet 延期和 Ma 的空栏以及逐 RX 差异。 |
-| 统计与运行成本 | 正文主表和补充表使用 RX 等权指标、六个折×种子的 SD 和接收机条件区间。S24 和 S26 分别给出测量会话、B1/B128 p50/p95、B128 吞吐与参数。计数的 MAC 范围注明。 |
+| 统计与运行成本 | 正文报告 RX 等权指标、六个折×种子的 SD 和以 RX 为单位的条件区间。新增三模型同会话 IQ-to-logits 表，报告 B1/B128 p50/p95、吞吐、峰值 PyTorch CUDA 分配和参数。DANN 计时走 TX 分类路径，并与完整模型核对 logits。S24 和 S26 的独立计时保留为历史补充。 |
 | WiSig | 正文只保留 S29 三个预定端点及 S31 的背景句，标注历史源域两视图。 |
-| 新 LoRa 采集 | 待获得可核验的新数据。旧 Confirm、旧盲测和已有 Location 变体均按历史语境处理。见[独立确认方案](INDEPENDENT_LORA_VALIDATION.zh-CN.md)。 |
+| 新 LoRa 采集 | 2026-11-25 复核工作区仍缺少带采集来源的新数据。给出 HStem、Spec+Siamese、Shen-DANN 的冻结评价及 Long-Patch 结构对照方案。[独立确认方案](INDEPENDENT_LORA_VALIDATION.zh-CN.md) |
+| OOB 论文贡献边界 | 两篇工作共享语料、TrueIB、五视图和前端。OOB 用冻结路径干预诊断频带依赖，当前稿用同一普通 MHA 后端和配对训练测量 Tokenizer 构造的效果。[关联工作说明](PRIOR_WORK_DISCLOSURE.md) |
 
 ## 投稿材料
 
 - 主稿为 10 页，补充材料为 6 页。16 页已渲染并检查，无未解析引用或越界警告。S42 独立复算 60,000 条 Spec+Siamese 逐包预测，复核与 S24 对照的同包身份。[S42 成绩与协议](../../research/s42_lora_baselines/RESULTS.zh-CN.md)
 - 英文 [LaTeX 主稿](main.tex)、[补充材料](supplement.tex)、[投稿信草稿](COVER_LETTER.md)和[关联工作说明](PRIOR_WORK_DISCLOSURE.md)。
-- [数字来源](EVIDENCE_SOURCES.json)以 Git 提交号、路径和 SHA-256 绑定 S24、S26、S28、S29、S31、S42。已有 S22/S25 表和图沿用 S26 封存稿，新增结构图为 LaTeX 源。用 Python 运行 [build_tables.py](build_tables.py) 的 check 模式可复核八张生成表。Git 对象须包含相应实验分支。
+- [数字来源](EVIDENCE_SOURCES.json)以 Git 提交号、路径和 SHA-256 绑定九个输入，包括本次[同会话逐次计时记录](../../research/s42_lora_baselines/evidence/NATIVE_COST_COMPARE.json)。已有 S22/S25 表和图沿用 S26 封存稿，新增结构图为 LaTeX 源。用 Python 运行 [build_tables.py](build_tables.py) 的 check 模式可复核八张生成表。Git 对象须包含相应实验分支。
 - 本地构建可用 TeX Live 的 latexmk。分别编译 main.tex 和 supplement.tex，或使用 [build_pdfs.py](build_pdfs.py)。两份 PDF 单独上传。期刊初投主稿上限为 13 页双栏，参考文献计入主稿，补材另算。[IEEE 作者指南](https://signalprocessingsociety.org/publications-resources/information-authors) [TIFS 可复现性说明](https://signalprocessingsociety.org/publications-resources/ieee-transactions-information-forensics-and-security)
 
 ## 需要作者确认

@@ -20,6 +20,7 @@ INPUTS = {
     "stress": ("b170624", "research/s29_wisig/evidence/SUMMARY.json"),
     "cfo_augmentation": ("f9698e4", "research/s31_wisig/evidence/SUMMARY.json"),
     "ma": ("607efa3", "research/s42_lora_baselines/evidence/RESULTS.json"),
+    "native_cost": ("9a20eb0", "research/s42_lora_baselines/evidence/NATIVE_COST_COMPARE.json"),
 }
 METHODS = (
     ("h0", "HStem"), ("ce", "Shen CE"), ("dann", "Shen DANN"),
@@ -92,6 +93,17 @@ def timing(name, result, params):
             f'{batch["p50_ms"]:.3f} / {batch["p95_ms"]:.3f}', f"{rate:,.0f}"]
 
 
+def native_cost_rows(results, external, ma):
+    accuracies = {row["method"]: row["acc"] for row in external["summary"] if row["view"] == "native"}
+    accuracies["ma"] = ma["methods"]["ma"]["acc"]
+    for key, name in (("h0", "HStem"), ("ma", "Spec+Siamese"), ("dann", "Shen DANN")):
+        row = results["rows"][key]
+        method, params, b1, b128, rate = timing(name, row, row["params"])
+        first, batch = (row["batches"][key] for key in ("1", "128"))
+        memory = " / ".join(f'{item["peak_pytorch_allocated_bytes"] / 2**20:.1f}' for item in (first, batch))
+        yield [method, f"{100*accuracies[key]:.3f}", params, b1, b128, rate, memory]
+
+
 def stress_rows(data):
     comparisons = data["raw_control"]["comparisons"]
     names = [
@@ -128,11 +140,10 @@ def generate():
         timing(name, structure_cost[key], structure_cost[key]["params"])
         for key, name, _, _ in STRUCTURE
     ])
-    ma = inputs["ma"]
-    assert len(ma["selected_source"]) == 6
-    result["siamese_timing.tex"] = table("lrrrr", cost_headers, [
-        timing("Spec+Siamese", ma["cost"], ma["selected_source"][0]["params"])
-    ])
+    result["native_cost.tex"] = table("lrrrrrr",
+        ["Method", r"Acc. (\%)", "Parameters", "B1 (ms)", "B128 (ms)", "B128 pkt/s", "B1/B128 MiB"],
+        native_cost_rows(inputs["native_cost"], inputs["external"], inputs["ma"]),
+    )
     result["wisig.tex"] = table("lrr", ["Endpoint", "Diff.", "95\\% interval"], stress_rows(inputs["stress"]))
     arms = {x["arm"]: x for x in inputs["factorial"]["A"]["dev_summary"]}
     result["bn_gelu.tex"] = table("ccrr", ["BN", "GELU", "Acc.", "Macro-F1"], [

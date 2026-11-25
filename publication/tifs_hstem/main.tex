@@ -59,7 +59,7 @@ where transmitter, channel, and receiver operators need not be linear or separat
 \subsection{Information Budget and Inherited Components}
 The public LoRa receiver corpus \cite{shen2024receiver} supplies fixed 8192-sample complex windows at 1 MHz, SF7, and 125 kHz bandwidth. We retain raw TX labels 31--40, mapped to ten classifier classes. The companion manuscript uses the same broader corpus, including receiver sets used there for development and blind evaluation \cite{oobcompanion}. Its former blind receivers cannot be renamed a newly independent test set.
 
-The inherited TrueIB operator removes out-of-band bins before all downstream views are reconstructed. The five-channel representation and local CNN front-end are also inherited. The present design studies what replaces the large-kernel token projection after that common front-end. Shared inputs, a 32-by-64 token interface, and familiar attention operations are not independent novelty claims.
+The companion study diagnoses dependence on out-of-band information by intervening on frozen digital pathways. We inherit its TrueIB operator, five-channel representation, kernel-7/kernel-5 front-end, and 32-by-64 token geometry. We train paired architectures to test how their tokenizer constructs features after that front-end. Our primary contrast compares HStem with a freely learned Long-Patch projection using the same standard MHA backend. The companion's HSTU-style mixer and out-of-band diagnostic pathway are outside this contrast.
 
 
 \subsection{Relation to Receiver-Robust and Tokenization Methods}
@@ -279,7 +279,7 @@ Spec+Siamese gives the highest observed external Native mean at 95.890\% (Table~
 DANN--CE is $+.673$pp Native, interval $[.208, 1.233]$, but $-.070$pp Strict-IB, interval $[-.247,.152]$. Adversarial training does not give an additional gain in both settings. IB stage 2 exceeds reused FAN stage 1 by .978\,pp Native (interval $[-.037, 2.195]$) and 3.983\,pp Strict-IB ($[3.373, 4.582]$). These describe the frozen adaptation rather than the general capability of the original method.
 
 \subsection{RX-by-TX Error Attribution}
-In Native, Spec+Siamese exceeds HStem on B200-mini-1, Pluto-1, and B210-1 by 2.45, 4.48, and 1.02\,pp. HStem is ahead on all seven RTL receivers in this cohort. This post-hoc profile describes receiver heterogeneity. The paired analysis uses the same labels and row identifiers. Native H0--DANN is negative on B200-mini-1 and B210-1 by 2.017 and 1.217\,pp and approximately tied on RTL-6. The supplement retains the complete S24 RX heatmap.
+In Native, Spec+Siamese exceeds HStem on B200-mini-1, Pluto-1, and B210-1 by 2.45, 4.48, and 1.02\,pp. HStem is ahead on all seven RTL receivers in this cohort. The observed per-model minima are 93.683\% for HStem (Pluto-1) and 91.517\% for Spec+Siamese (RTL-2), taken at different receivers. The paired analysis uses the same labels and row identifiers. Native H0--DANN is negative on B200-mini-1 and B210-1 by 2.017 and 1.217\,pp and approximately tied on RTL-6. The supplement retains the complete S24 RX heatmap.
 
 
 
@@ -292,20 +292,15 @@ Six Native ASK Dev accuracies are 87.220, 40.670, 74.520, 87.130, 89.320, 11.690
 
 Weak source learning substantially lowers the mean; it does not show that all successful models specifically fail at new receivers. No seed is discarded or replaced. Selecting successful fits would not define a legitimate formal average. Conditional RX intervals do not summarize this seed instability. Stable Shen comparisons carry the main competition argument.
 
-\subsection{Parameter Efficiency Is Not Uniform Speed}
+\subsection{Accuracy and Deployment Cost}
 \begin{table*}[t]\centering
-\caption{S24 Native GPU-resident IQ-to-logits costs, RTX 4060 Laptop, FP32 networks with TF32 off, original front-end precision retained. B1 and B128 are batch times, with p50/p95 in ms. Throughput uses B128 at p50. Three warmups and 15 samples; GPU-resident inputs.}
-\label{tab:costs}\input{tables/costs.tex}
+\caption{Native accuracy and deployment cost. Accuracy is the receiver-equal mean from six frozen fits. Costs use one representative frozen fit per method on an RTX 4060 Laptop GPU, with identical resident IQ. B1/B128 give synchronized batch latencies (p50/p95), B128 throughput is derived from p50, and MiB denotes peak live PyTorch CUDA allocations at each batch size.}
+\label{tab:costs}\input{tables/native_cost.tex}
 \end{table*}
-\begin{figure*}[t]\centering
-\includegraphics[width=.96\textwidth]{fig06_costs.pdf}
-\caption{Accuracy versus parameters and throughput. ASK's 74,153,872 complex/real parameter elements correspond to 141,246,353 real degrees of freedom. Parameter count, latency, and throughput are different axes.}
-\label{fig:costs}
-\end{figure*}
 
-Table~\ref{tab:costs} and Fig.~\ref{fig:costs} distinguish the S24 cost axes. HStem has approximately one hundredth Shen-DANN's parameter elements. Its batch 128 time is lower, 15.956 versus 22.961\,ms, while its batch 1 time is higher, 2.142 versus 1.108\,ms. FAN/IB have lower latency. HStem has 0.96\% of the parameters of Spec+Siamese. The separately measured Spec+Siamese timings are in the supplement. In a paired H0/P0 timing session, their batch 1 times are 1.866/1.724\,ms and batch 128 times are 15.164/13.119\,ms, respectively.
+HStem uses 0.96\% of the parameters of Spec+Siamese (Table~\ref{tab:costs}). HStem's median single-packet latency is 2.191\,ms, compared with 1.272\,ms for Spec+Siamese and 1.195\,ms for Shen-DANN. At batch 128 it reaches 8,148 packets/s, 1.94 times the Spec+Siamese rate, with lower peak allocated memory than Spec+Siamese and higher peak memory than Shen-DANN. The table counts all checkpoint parameters. Shen-DANN's transmitter-only path uses 13,442,954 parameters and is the path timed.
 
-Literal LoRa ASK takes about 2229\,ms batch 1 and 2260\,ms batch 128, retaining full-dimensional complex QR. This is an implementation measurement, not a reduced-rank or WiSig cost. Dispatcher MACs omit FFT, QR, and unsupported work; they are partial, not complete FLOPs. Separate timing sessions are not pooled, since desktop GPU load and clocks vary.
+This shared session used FP32 networks, disabled TF32, and retained each native frontend's arithmetic. Synthetic GPU-resident IQ lets us measure signal preprocessing and the classifier together without transfer and packet extraction. The supplement provides the timing procedure and historical comparator and tokenizer costs from their own sessions.
 
 \begin{table}[t]\centering
 \caption{Separate S26 common GPU-resident IQ-to-logits session, matching S26 precision flags. Partial MACs exclude FFT and unsupported work. Warmup 3, repetitions 15; B128 is whole-batch time.}
