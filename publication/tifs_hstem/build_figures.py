@@ -40,8 +40,10 @@ def efficiency(inputs):
                                                   sharey=True)
     prepare(params_ax, "Model parameters (log scale)", "Native RX-equal accuracy (%)")
     prepare(throughput_ax, "Batch-128 throughput (packets/s)")
-    offsets = {"h0": ((8, -4), (-8, -4)), "ma": ((-8, -4), (8, 4)),
-               "dann": ((-8, -4), (8, -4)), "gul": ((-8, 9), (8, 9))}
+    values = [100 * accuracy[key] for key, *_ in methods]
+    spread = max(values) - min(values)
+    offsets = {"h0": ((8, -4), (-8, -4)), "ma": ((-8, 7), (8, 4)),
+               "dann": ((-8, -7), (8, -4)), "gul": ((-8, 9), (8, 9))}
     for key, label, color, marker in methods:
         row = cost[key]
         y = 100 * accuracy[key]
@@ -50,9 +52,9 @@ def efficiency(inputs):
             ax.scatter(value, y, s=38, color=color, marker=marker, zorder=3)
             ax.annotate(label, (value, y), xytext=(dx, dy), textcoords="offset points",
                         ha="left" if dx > 0 else "right", va="center", color=color)
-    values = [100 * accuracy[key] for key, *_ in methods]
     params_ax.set(xscale="log", xlim=(95_000, 19_000_000),
-                  ylim=(min(93.6, min(values) - .6), max(98.0, max(values) + .8)))
+                  ylim=(min(93.6, min(values) - max(.6, .06 * spread)),
+                        max(98.0, max(values) + max(.8, .06 * spread))))
     params_ax.xaxis.set_major_locator(FixedLocator((100_000, 1_000_000, 10_000_000)))
     params_ax.set_xticklabels(("100k", "1M", "10M"))
     rates = [cost[key]["batches"]["128"]["packets_per_second"] for key, *_ in methods]
