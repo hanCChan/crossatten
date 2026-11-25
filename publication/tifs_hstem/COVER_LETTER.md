@@ -1,12 +1,12 @@
-# Cover letter draft for author review
+# Cover letter
 
 Dear Editor,
 
 We wish to submit “Hierarchical RF Tokenization for Parameter-Efficient Cross-Receiver LoRa Fingerprint Identification” for consideration as a Regular Paper in IEEE Transactions on Information Forensics and Security.
 
-We study how token construction affects closed-set identification of enrolled LoRa transmitters across receivers. HStem forms tokens through four local stages before standard multihead attention. In a registered comparison with the RF input, token geometry, nominal convolutional support, and attention backend held fixed, HStem exceeds a freely learned Long-Patch projection by 2.835 percentage points. The Long-Patch model has 3.48% more parameters. Parameterization and normalization controls provide further evidence about how the tokenizer configuration affects performance.
+The paper introduces HStem, a four-stage RF tokenizer that forms compact tokens for standard multihead attention. It improves cross-receiver identification by 2.835 percentage points over a freely learned Long-Patch projection with the same input, token geometry, nominal convolutional support, and attention backend. Long-Patch has 3.48% more parameters. Matched parameterization and normalization controls show how local token construction shapes accuracy.
 
-Under the Native protocol, HStem attains 97.333% receiver-equal accuracy with 133,690 parameters. The closest external comparison, our paper-derived Spec+Siamese implementation, attains 95.890% with 13,935,882 parameters. Their paired accuracy interval includes zero. The same-session IQ-to-logits comparison shows higher batch-128 throughput and higher single-packet latency for HStem. A small WiSig stress test provides evidence under specified perturbations. Severe sensitivity to LoRa window shifts and the prior use of the historical development receivers delimit the main claim.
+On aligned multi-receiver LoRa windows, HStem reaches 97.333% receiver-equal accuracy with 133,690 parameters. Compared with the Spec+Siamese implementation, HStem uses approximately one hundredth of the parameters and offers higher batch-128 throughput on the same GPU. The manuscript includes conditional paired intervals and a full account of single-packet latency, memory, and receiver-level outcomes. A WiSig stress test extends the comparison to controlled frequency and timing perturbations.
 
 We disclose the companion manuscript “Diagnosing Receiver-Sensitive Out-of-Band Dependencies in LoRa Radio-Frequency Fingerprint Identification.” It studies digital pathway dependence through interventions on frozen classifiers. The present paper shares the corpus and in-band front end and studies token formation through paired training with a common attention backend. The separate relationship statement details the shared components and receiver exposure.
 

@@ -1,32 +1,41 @@
-\resizebox{.98\textwidth}{!}{%
+\resizebox{\textwidth}{!}{%
 \begin{tikzpicture}[
-    font=\small, >={Latex[length=2.2mm]},
-    box/.style={draw=black!55, rounded corners=2pt, align=center, inner sep=5pt, minimum height=12mm},
-    shared/.style={box, text width=34mm, fill=black!4},
-    arm/.style={box, text width=72mm},
-    edge/.style={draw=black!65, line width=.65pt}]
-\node[shared] (input) at (0,0) {\textbf{Shared RF front-end}\\TrueIB and five views\\Kernel-7/5 CNN\\$8192\times32$ features};
-\node[arm,fill=blue!5,draw=blue!60!black] (h0) at (7.0,1.6)
-  {\textbf{HStem}\quad 133,690 parameters\\
-  Four convolution stages, strides $4,4,4,4$\\
-  Three intermediate BN/GELU stages; support $350$};
-\node[arm,fill=teal!5,draw=teal!55!black] (lp) at (7.0,0)
-  {\textbf{Long-Patch}\quad 138,346 parameters\\
-  Grouped kernel 340, stride 256, then pointwise mixing\\
-  Support $350$; same nominal center as HStem};
-\node[arm,fill=black!4] (p0) at (7.0,-1.6)
-  {\textbf{Patch-Lite}\quad 134,266 parameters\\
-  Grouped kernel 256, stride 256, then pointwise mixing\\
-  Support $266$; closer parameter control};
-\node[shared] (output) at (14.0,0) {\textbf{Shared backend}\\$32\times64$ tokens\\Two ordinary MHA blocks\\Pooling and TX head};
-\coordinate (split) at ($(input.east)+(8mm,0)$);
-\coordinate (join) at ($(output.west)-(8mm,0)$);
-\draw[edge] (input.east) -- (split);
-\draw[edge,->] (split) |- (h0.west);
-\draw[edge,->] (split) -- (lp.west);
-\draw[edge,->] (split) |- (p0.west);
-\draw[edge] (h0.east) -| (join);
-\draw[edge] (lp.east) -- (join);
-\draw[edge] (p0.east) -| (join);
-\draw[edge,->] (join) -- (output.west);
+  x=1mm,y=1mm,font=\small,>={Latex[length=2mm]},
+  main/.style={draw=black!55,fill=black!3,rounded corners=2pt,align=center,
+     minimum height=12mm,inner sep=4pt},
+  stage/.style={main,draw=teal!65!black,fill=teal!7,minimum width=28mm},
+  direct/.style={main,draw=blue!65!black,fill=blue!6,minimum width=28mm},
+  line/.style={->,draw=black!70,line width=.65pt}]
+
+\node[font=\bfseries,anchor=west] at (0,27) {(a) HStem identification pipeline};
+\node[main,minimum width=23mm] (iq) at (12,16) {\textbf{Aligned IQ}\\8192 complex};
+\node[main,minimum width=35mm] (rf) at (48,16)
+  {\textbf{RF front-end}\\TrueIB, five views\\$7/5$-tap local CNN};
+\node[stage,minimum width=28mm] (token) at (87,16)
+  {\textbf{HStem}\\$32\times64$ tokens};
+\node[main,minimum width=36mm] (mha) at (128,16)
+  {\textbf{Global modeling}\\Position terms, two MHA blocks};
+\node[main,minimum width=29mm] (tx) at (172,16)
+  {\textbf{TX readout}\\Mean pool, 10 logits};
+\draw[line] (iq) -- (rf);
+\draw[line] (rf) -- (token);
+\draw[line] (token) -- (mha);
+\draw[line] (mha) -- (tx);
+
+\node[font=\bfseries,anchor=west] at (0,0) {(b) Token formation at matched output support};
+\node[main] (base) at (16,-21) {\textbf{Shared CNN}\\$8192\times32$};
+\node[stage] (c1) at (53,-12) {\textbf{Conv 1 + BN + GELU}\\$k8/s4$, $2048\times48$};
+\node[stage] (c2) at (91,-12) {\textbf{Conv 2 + BN + GELU}\\$k8/s4$, $512\times64$};
+\node[stage] (c3) at (129,-12) {\textbf{Conv 3 + BN + GELU}\\$k8/s4$, $128\times64$};
+\node[stage] (c4) at (167,-12) {\textbf{Conv 4}\\$k4/s4$, $32\times64$};
+\node[direct,minimum width=56mm] (patch) at (74,-30)
+  {\textbf{Long-Patch}\\Grouped $k340/s256$, 8 groups};
+\node[direct,minimum width=47mm] (point) at (148,-30)
+  {\textbf{Pointwise mixing}\\$k1/s1$, $32\times64$};
+\draw[line] (base.east) -- ++(4,0) |- (c1.west);
+\draw[line] (base.east) -- ++(4,0) |- (patch.west);
+\draw[line] (c1) -- (c2);
+\draw[line] (c2) -- (c3);
+\draw[line] (c3) -- (c4);
+\draw[line] (patch) -- (point);
 \end{tikzpicture}}

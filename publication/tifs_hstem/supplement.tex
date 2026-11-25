@@ -105,6 +105,69 @@ The S25 TF32-off source analysis retained two net one-packet accuracy changes an
 The Spec+Siamese row uses the independent paper-derived implementation specified above. The published external-pretraining variant has a separate data budget. Neither the original two-source-RX test cohort nor a released author checkpoint enters the score.
 
 The ten-claim evidence matrix and ten reviewer answers are updated in the repository. They separate measured system effects, exploratory associations, architectural identities, and unresolved mechanisms. Full negative shift and weak-fit results are retained.
+
+\section{LoRa Dataset and Baseline Reproduction}
+Packet selection uses seed 20261012. For each TX/RX, the first 160 of the 200 fixed selected raw rows form the source-training set and the remaining 40 form source validation. External baseline training recipes follow their respective implementations within this row budget. External paths are CE, DANN, FAN stage 1, IB stage 2, and ASKNet. CE/DANN share encoder/transmitter initialization and noise streams. The TensorFlow-to-PyTorch port passed 103 forward/gradient checks. A misaligned RX validation-label slice in the author entrypoint is repaired and disclosed. Both controls select by source TX CE; DANN's RX loss participates in training. Batch 64, SGD $10^{-3}$, momentum .9, 500-epoch limit, and plateau/early-stop rules are retained. Fixed validation noise replaces dynamically resampled noise.
+
+FAN/IB retain two-stage training, Adam $10^{-3}$, batch 128, 200-epoch limits, and source-validation early stopping. Stage 2 starts from its matching stage-1 checkpoint. The 8192 adaptation uses patch 512/stride 256, 31 tokens of width 128, and the original CPU normalized-HSIC computation. Coefficient .004 was fixed from a historically explored adaptation, not optimized on new target scores. Stage 1 is reused for the FAN control rather than trained twice.
+
+ASKNet retains its complete 8191-mode complex transformation, gating candidates 128--4096, batch 128, Adam $10^{-3}$, 200-epoch limit, and patience 20. All seeds are retained. Full-model feasibility and a batch 128 update were checked before fitting. We retain all six Native ASK fits.
+
+The companion study used 14 source receivers and reported 99.24\% for Shen-CIS and 99.14\% for Shen-RA on six other receivers \cite{oobcompanion}. Its training and test cohorts differ from P-H5$\times$160. Within the present protocol, the historical external evaluation used CPU FP32 for HStem and the Shen/FAN/IB comparators. ASK and Spec+Siamese used CUDA FP32. The matched tokenizer table uses a separate common GPU evaluation (FP32 networks, matmul TF32 off, cuDNN TF32 on, batch 128). The matched-architecture and external HStem means are 97.335\% and 97.333\%, respectively. The receiver bootstrap uses seed 24016 for external comparisons and 26026 for the same-support comparison.
+
+\section{Tokenizer Fit and Receiver Breakdowns}
+\begin{figure*}[t]\centering
+\includegraphics[width=.96\textwidth]{fig08_long_patch.pdf}
+\caption{Same-support Long-Patch results by fold and seed (left) and by receiver (right).}
+\label{fig:long-cohort}
+\end{figure*}
+\begin{table}[t]\centering
+\caption{Shen tokenizer accuracy and macro-F1 from the common archived GPU evaluation.}
+\label{tab:ablations}
+\begin{tabular}{lrrrr}\toprule
+Arm & Parameters & Support & Acc.(\%) & F1(\%)\\\midrule
+P0 Patch-Lite &134266&266&94.648&94.625\\
+S1 Round-trip &134266&266&95.527&95.500\\
+H1 Expanded &134266&350&96.345&96.321\\
+H2 No-mid-BN &133338&350&96.145&96.135\\
+S2 Affine-only &133690&350&96.417&96.402\\
+H0 HStem &133690&350&97.335&97.326\\\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]\centering
+\caption{Tokenizer accuracy differences and conditional RX 95\% intervals (pp). Positive counts fold--seed means above zero.}
+\label{tab:contrasts}
+\begin{tabular}{lrrr}\toprule
+Contrast&Mean&95\% interval&Positive\\\midrule
+H1--S1&.818&[.562, 1.053]&6/6\\
+S1--P0&.878&[.547, 1.252]&5/6\\
+H0--S2&.918&[.492, 1.295]&4/6\\
+S2--H2&.272&[.135,.410]&5/6\\\bottomrule
+\end{tabular}
+\end{table}
+
+The archived criterion combined a mean gain of at least 0.5\,pp, a positive conditional lower bound, five of six positive fit pairs, and positive means in both folds. The smooth-parameterization and expansion contrasts met it. The HStem--affine and affine--No-BN contrasts did not. The same-support HStem--Long-Patch contrast met its corresponding criterion, and Long-Patch source accuracies ranged from 95.250\% to 96.900\%.
+
+\section{Additional External and Synchronization Results}
+DANN--CE is $+.673$pp Native, interval $[.208, 1.233]$, but $-.070$pp Strict-IB, interval $[-.247,.152]$. Adversarial training does not give an additional gain in both settings. IB stage 2 exceeds reused FAN stage 1 by .978\,pp Native (interval $[-.037, 2.195]$) and 3.983\,pp Strict-IB ($[3.373, 4.582]$). These differences characterize the given adaptations.
+
+In Native, Spec+Siamese exceeds HStem on B200-mini-1, Pluto-1, and B210-1 by 2.45, 4.48, and 1.02\,pp. HStem is ahead on all seven RTL receivers in this cohort. The observed per-model minima are 93.683\% for HStem (Pluto-1) and 91.517\% for Spec+Siamese (RTL-2), taken at different receivers. The paired analysis uses the same labels and row identifiers. Native H0--DANN is negative on B200-mini-1 and B210-1 by 2.017 and 1.217\,pp and approximately tied on RTL-6. Figure~\ref{fig:rx} includes the S24 RX heatmap.
+
+
+
+Strict-IB H0--CE on Pluto-1 is 21.533\,pp: 93.683\% versus 72.150\%. This RX contributes about 82\% of the overall 2.632\,pp difference. The other nine-RX mean difference is .531\,pp; RTL-6 slightly favors CE. This is a post-hoc decomposition, without removing Pluto-1 or changing the primary table.
+
+The common projection improves CE on most other RXs but decreases Pluto-1 from 85.817\% Native to 72.150\% Strict-IB. Its TX32/34/35/39 recalls are 53.833/34.500/10.833/24.333\%, versus H0's 94.500/79.167/82.500/88.333\%. The largest CE confusions are TX35-to-32, TX39-to-38, TX34-to-33, and TX32-to-31. Figure~\ref{fig:limits} shows all ten TXs; these patterns do not uniquely identify CFO, SNR, or RX hardware as a cause.
+
+Six Native ASK Dev accuracies are 87.220, 40.670, 74.520, 87.130, 89.320, 11.690\% (mean 65.092\%, fit SD 31.936\,pp). Source accuracies are 90.650, 40.050, 77.350, 90.550, 91.250, 11.500\%. The last selects epoch 1 and stops at 21 under its registered patience 20.
+
+Weak source learning substantially lowers the mean; it does not show that all successful models specifically fail at new receivers. These fit-to-fit differences explain why a receiver-level interval alone does not capture ASK performance variation.
+
+The aligned HStem source accuracy of 98.175\% falls to 21.858/17.775\% at shifts $-4/+4$. Patch-Lite falls to 22.567/16.983\%. The sensitivity persists with the original FFT magnitude held fixed. These comparisons use extracted windows and circular shifts. Figure~\ref{fig:limits} shows the full source perturbation curves.
+
+The S26 common timing comparison yields partial dispatcher counts of 95.028M, 55.346M, and 55.477M MACs for HStem, Patch-Lite, and Long-Patch, respectively. Partial counts omit unsupported operations including FFT.
+
 \bibliographystyle{IEEEtran}
 \bibliography{references}
 \clearpage

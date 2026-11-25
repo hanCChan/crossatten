@@ -9,10 +9,10 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 
 
-def build(stem, filename):
+def build(stem, filename, engine="-pdf"):
     temporary = HERE / "tmp/pdfs" / stem
     temporary.mkdir(parents=True, exist_ok=True)
-    command = ["latexmk", "-pdf", "-interaction=nonstopmode", "-halt-on-error",
+    command = ["latexmk", engine, "-interaction=nonstopmode", "-halt-on-error",
                "-file-line-error", f"-outdir={temporary.as_posix()}", f"{stem}.tex"]
     result = subprocess.run(command, cwd=HERE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     transcript = temporary / "build_stdout.txt"
@@ -40,3 +40,5 @@ def build(stem, filename):
 if __name__ == "__main__":
     build("main", "hstem_tifs_manuscript.pdf")
     build("supplement", "hstem_tifs_supplement.pdf")
+    build("cover_letter", "hstem_tifs_cover_letter.pdf", "-lualatex")
+    build("reproduction", "hstem_tifs_reproduction.pdf", "-lualatex")

@@ -55,7 +55,7 @@ def table(columns, headings, rows):
     ])
 
 
-def external(data, ma):
+def external(data, ma, gul=None):
     indexed = {(row["view"], row["method"]): row for row in data["summary"]}
     for method, name in METHODS:
         native, strict = (indexed[view, method] for view in ("native", "strict_ib"))
@@ -73,6 +73,9 @@ def external(data, ma):
         if method == "h0":
             yield ["Spec+Siamese", f'{100*ma["acc"]:.3f} $\\pm$ {100*ma["fit_sd"]:.3f}',
                    "--", f'{100*ma["macro_f1"]:.3f}', "--", f'{100*ma["worst_rx_acc"]:.3f}', "--"]
+            if gul is not None:
+                yield ["Gul Federated", f'{100*gul["acc"]:.3f} $\\pm$ {100*gul["fit_sd"]:.3f}',
+                       "--", f'{100*gul["macro_f1"]:.3f}', "--", f'{100*gul["worst_rx_acc"]:.3f}', "--"]
 
 
 def structure(data, costs):
@@ -93,15 +96,49 @@ def timing(name, result, params):
             f'{batch["p50_ms"]:.3f} / {batch["p95_ms"]:.3f}', f"{rate:,.0f}"]
 
 
-def native_cost_rows(results, external, ma):
+def native_cost_rows(results, external, ma, gul=None):
     accuracies = {row["method"]: row["acc"] for row in external["summary"] if row["view"] == "native"}
     accuracies["ma"] = ma["methods"]["ma"]["acc"]
-    for key, name in (("h0", "HStem"), ("ma", "Spec+Siamese"), ("dann", "Shen DANN")):
+    methods = [("h0", "HStem"), ("ma", "Spec+Siamese"), ("dann", "Shen-DANN")]
+    if gul is not None:
+        accuracies["gul"] = gul["acc"]
+        methods.append(("gul", "Gul Federated"))
+    for key, name in methods:
         row = results["rows"][key]
         method, params, b1, b128, rate = timing(name, row, row["params"])
-        first, batch = (row["batches"][key] for key in ("1", "128"))
+        first, batch = (row["batches"][size] for size in ("1", "128"))
         memory = " / ".join(f'{item["peak_pytorch_allocated_bytes"] / 2**20:.1f}' for item in (first, batch))
         yield [method, f"{100*accuracies[key]:.3f}", params, b1, b128, rate, memory]
+
+
+def paired_rows(inputs):
+    def fmt(name, mean, low, high):
+        return [name, "$" + f"{mean:+.3f}$", f"$[{low:+.3f}, {high:+.3f}]$"]
+
+    structure_names = {("H0", "LP"): "HStem -- Long-Patch", ("LP", "P0"): "Long-Patch -- Patch-Lite"}
+    for row in inputs["structure"]["paired_comparisons"]:
+        name = structure_names[row["a"], row["b"]]
+        yield fmt(name, row["mean_delta_pp"], *row["conditional_rx_ci95_pp"])
+    ma = inputs["ma"]["paired_ma_minus"]
+    low, high = ma["h0"]["conditional_interval95_pp"]
+    yield fmt("HStem -- Spec+Siamese (Native)", -ma["h0"]["mean_pp"], -high, -low)
+    yield fmt("Spec+Siamese -- Shen-DANN (Native)", ma["dann"]["mean_pp"],
+              *ma["dann"]["conditional_interval95_pp"])
+    if "gul_report" in inputs:
+        report = inputs["gul_report"]
+        for key, name in (("paired_h0_minus_gul", "HStem -- Gul Federated (Native)"),
+                          ("paired_gul_minus_ma", "Gul Federated -- Spec+Siamese (Native)"),
+                          ("paired_gul_minus_dann", "Gul Federated -- Shen-DANN (Native)")):
+            row = report[key]
+            yield fmt(name, row["mean_pp"], *row["conditional_interval95_pp"])
+    comparisons = inputs["external"]["paired_comparisons"]
+    for view, baseline, name in (
+        ("native", "dann", "HStem -- Shen-DANN (Native)"),
+        ("strict_ib", "ce", "HStem -- Shen-CE (Strict-IB)"),
+    ):
+        row = next(x for x in comparisons
+                   if (x["view"], x["a"], x["b"], x["metric"]) == (view, "h0", baseline, "acc"))
+        yield fmt(name, 100 * row["delta"], *(100 * x for x in row["conditional_rx_cluster_ci"]))
 
 
 def stress_rows(data):
@@ -120,12 +157,16 @@ def stress_rows(data):
 def generate():
     inputs, origins = read_inputs()
     result = {}
+    gul_data = inputs.get("gul_report", {}).get("methods", {}).get("gul")
     result["external.tex"] = table(
         "lrrrrrr", ["Method", "Native Acc.", "Strict-IB Acc.", "Native F1", "Strict F1",
-                    "Native Worst", "Strict Worst"], external(inputs["external"], inputs["ma"]["methods"]["ma"]))
+                    "Native Worst", "Strict Worst"],
+        external(inputs["external"], inputs["ma"]["methods"]["ma"], gul_data))
     result["long_patch.tex"] = table(
         "lrrrrrr", ["Tokenizer", "Params", "Support", "BN", r"Acc. $\pm$ fit SD", "F1", "Worst RX"],
         structure(inputs["structure"], inputs["structure_cost"]))
+    result["paired_accuracy.tex"] = table(
+        "lrr", ["Contrast", "Mean (pp)", "95\\% interval (pp)"], paired_rows(inputs))
     cost_headers = ["Method", "Parameters", "B1 (ms)", "B128 (ms)", "B128 packets/s"]
     native = {r["method"]: r for r in inputs["external_cost"]["rows"] if r["view"] == "native"}
     result["costs.tex"] = table("lrrrr", cost_headers, [
@@ -140,10 +181,15 @@ def generate():
         timing(name, structure_cost[key], structure_cost[key]["params"])
         for key, name, _, _ in STRUCTURE
     ])
-    result["native_cost.tex"] = table("lrrrrrr",
-        ["Method", r"Acc. (\%)", "Parameters", "B1 (ms)", "B128 (ms)", "B128 pkt/s", "B1/B128 MiB"],
-        native_cost_rows(inputs["native_cost"], inputs["external"], inputs["ma"]),
-    )
+    native_cost_headers = ["Method", r"Acc. (\%)", "Parameters", "B1 (ms)", "B128 (ms)",
+                           "B128 pkt/s", "B1/B128 MiB"]
+    historical = native_cost_rows(inputs["native_cost"], inputs["external"], inputs["ma"])
+    if gul_data is not None:
+        result["native_cost_s42.tex"] = table("lrrrrrr", native_cost_headers, historical)
+        session = native_cost_rows(inputs["gul_cost"], inputs["external"], inputs["ma"], gul_data)
+    else:
+        session = historical
+    result["native_cost.tex"] = table("lrrrrrr", native_cost_headers, session)
     result["wisig.tex"] = table("lrr", ["Endpoint", "Diff.", "95\\% interval"], stress_rows(inputs["stress"]))
     arms = {x["arm"]: x for x in inputs["factorial"]["A"]["dev_summary"]}
     result["bn_gelu.tex"] = table("ccrr", ["BN", "GELU", "Acc.", "Macro-F1"], [
