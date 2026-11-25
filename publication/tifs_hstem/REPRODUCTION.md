@@ -22,3 +22,5 @@ The external and paired tokenizer records are stored under 24-lora-external-audi
 ## Receiver and deployment scope
 
 Each accuracy is an equal-weight mean across ten historical development receivers and their three fits. The paired interval resamples receiver identities with the fitted models fixed. Batch-128 throughput is derived from median synchronized latency. Peak CUDA allocation includes the deployed PyTorch weights, input, and temporary tensors. The evaluation uses pre-extracted windows, with no target-side adaptation.
+
+The audit under research/s44_baseline_verification distinguishes published results, original-protocol checkpoint evaluation, and the common P-H5x160 adaptations. It pins the official ASKNet and IB-RFF source revisions and records whether corresponding LoRa artifacts are available.

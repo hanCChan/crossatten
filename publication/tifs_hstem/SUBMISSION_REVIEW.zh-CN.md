@@ -6,9 +6,9 @@
 |---|---|
 | 核心创新 | 同输入、32×64 Token、最终名义卷积支持、中心及 MHA 下对照 HStem 与 Long-Patch，增益 2.835 pp。Long-Patch 多 3.48% 参数。主图同时展示完整架构和四阶段与直接投影的对照。 |
 | 结构归因 | S26 同支持对照为主，S22 的参数化和归一化对照、S28 的 BN×GELU 正向交互与未达门槛的 held-source pilot 一并保留。 |
-| 外部协议 | Native 共享原包权限并保留原实现的处理方式。S42 新增同协议 Spec+Siamese 六拟合，95.890%，与 HStem 的配对差区间跨零。Strict-IB 约束带内信息，保留 ASKNet 延期和 Ma 的空栏以及逐 RX 差异。 |
+| 外部协议 | 正文主要对照为 Spec+Siamese、Shen-DANN 和 Shen-CE，保留 Native 与 Strict-IB 的统一协议和配对统计。补充材料保留 FAN、IB-RFF、ASKNet、Gul 的适配结果与原协议证据。 |
 | 统计与运行成本 | 新增 Accuracy–Parameters 和 Accuracy–Throughput 主图。配对条件区间统一进入结果表，保留 B1/B128 p50/p95、吞吐、峰值 PyTorch CUDA 分配和参数。S24 和 S26 的独立计时保留为历史补充。 |
-| 最后一项外部对照 | Gul Federated 的六组 Native 适配、逐 RX 对照及四模型同会话成本均已封存。42.725% 的适配结果保持可见，Spec+Siamese 仍是最强外部对照。[配对数据与复现说明](../../research/s43_gul_federated/RESULTS.zh-CN.md) |
+| 复现质量核验 | S44 核对 ASKNet 作者日志的逐日结果与截止候选、Gul 的优化预算及 IB-RFF 的公开 LoRa 配置和权重可用性。作者日志与统一协议成绩分别呈现。[S44 核验](../../research/s44_baseline_verification/RESULTS.zh-CN.md) |
 | WiSig | 正文只保留 S29 三个预定端点及 S31 的背景句，标注历史源域两视图。 |
 | 新 LoRa 采集 | 2026-11-25 复核工作区仍缺少带采集来源的新数据。给出 HStem、Spec+Siamese、Shen-DANN 的冻结评价及 Long-Patch 结构对照方案。[独立确认方案](INDEPENDENT_LORA_VALIDATION.zh-CN.md) |
 | OOB 论文贡献边界 | 两篇工作共享语料、TrueIB、五视图和前端。OOB 用冻结路径干预诊断频带依赖，当前稿用同一普通 MHA 后端和配对训练测量 Tokenizer 构造的效果。[关联工作说明](PRIOR_WORK_DISCLOSURE.md) |
@@ -19,7 +19,7 @@
 - [数字来源](EVIDENCE_SOURCES.json)以 Git 提交号、路径和 SHA-256 绑定表格和主结果图。用 Python 运行 [build_tables.py](build_tables.py) 的 check 模式核对生成表。[build_figures.py](build_figures.py)从相同输入重建效率与消融图。
 - 使用 [build_pdfs.py](build_pdfs.py) 和 TeX Live 构建。期刊初投主稿上限为 13 页双栏，参考文献计入主稿，补材另算。[IEEE 作者指南](https://signalprocessingsociety.org/publications-resources/information-authors) [TIFS 可复现性说明](https://signalprocessingsociety.org/publications-resources/ieee-transactions-information-forensics-and-security)
 
-S43 结束后冻结模型实验。HStem、既有权重及历史评价沿用冻结版本。
+S44 是既有外部对照的质量核验。HStem、既有权重及 P-H5×160 历史评价沿用冻结版本。
 
 ## 需要作者确认
 

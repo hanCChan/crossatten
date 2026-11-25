@@ -74,6 +74,13 @@ All clients start each round from the global weights. Their local SGD uses five 
 
 The six selected rounds are 199, 200, 200, 199, 200, and 198 in fold--seed order. Source-validation accuracy ranges from 34.600\% to 44.250\%. The reproduction ledger retains all six full source trajectories, same-packet paired contrasts, and per-RX metrics.
 
+The published five-client setting uses 720 training segments per TX/RX after the 90:10 split, compared with 160 in P-H5$\times$160. The corresponding source pools contain 36,000 and 8,000 training segments. Gul et al.'s Table~4 reports peak accuracy during training for the authors' evaluation cohort, while this adaptation evaluates source-CE-selected checkpoints. In a single source-only diagnostic, resetting SGD momentum to .9 at each client broadcast raises round-24 source accuracy from 13.35\% to 44.55\%. This is evidence of optimizer sensitivity in the adaptation. The authors disclose .9 momentum for their centralized comparison, while the federated local optimizer details are incomplete.
+
+\begin{table}[t]\centering
+\caption{Gul Federated adaptation contrasts on P-H5$\times$160 Native. Accuracy differences and conditional RX intervals are in percentage points.}
+\label{tab:paired-gul}\input{tables/paired_gul.tex}
+\end{table}
+
 The primary deployment comparison times the same four models on one device with twelve warmups and 72 measured forwards per model and batch size. Each of the 24 model orders is used in each of three blocks. The timing and memory definitions below apply to both shared sessions. Gul's receiver head is a training component and is excluded from deployment.
 
 \section{Timing and Throughput}
@@ -93,6 +100,11 @@ The separate S26 timing session used the same GPU model with synthetic resident 
 \end{table*}
 
 Tables~\ref{tab:s24-native-timing} and \ref{tab:strict-timing} give historical S24 cost measurements. Those runs used three warmups, 15 measured forwards, and TF32 off. Literal LoRa ASK retains full-dimensional complex QR, and its 74,153,872 complex/real parameter elements correspond to 141,246,353 real degrees of freedom. The Strict-IB ASKNet arm was deferred. Dispatcher MACs for these models cover supported operations and omit FFT and QR. The shared main-paper session, S24, and S26 report separate within-session comparisons.
+
+\begin{table*}[t]\centering
+\caption{Full four-model Native timing session. Batch times are p50/p95 in ms. Throughput uses the batch-128 median. Memory is peak live PyTorch allocation.}
+\label{tab:full-native-cost}\input{tables/native_cost_full.tex}
+\end{table*}
 
 \begin{table*}[t]\centering
 \caption{Historical S24 Native comparator timings. B1/B128 show p50/p95 in ms.}
@@ -127,6 +139,15 @@ Packet selection uses seed 20261012. For each TX/RX, the first 160 of the 200 fi
 FAN/IB retain two-stage training, Adam $10^{-3}$, batch 128, 200-epoch limits, and source-validation early stopping. Stage 2 starts from its matching stage-1 checkpoint. The 8192 adaptation uses patch 512/stride 256, 31 tokens of width 128, and the original CPU normalized-HSIC computation. Coefficient .004 was fixed from a historically explored adaptation, not optimized on new target scores. Stage 1 is reused for the FAN control rather than trained twice.
 
 ASKNet retains its complete 8191-mode complex transformation, gating candidates 128--4096, batch 128, Adam $10^{-3}$, 200-epoch limit, and patience 20. All seeds are retained. Full-model feasibility and a batch 128 update were checked before fitting. We retain all six Native ASK fits.
+
+\begin{table*}[t]\centering
+\caption{Additional P-H5$\times$160 adaptations. Accuracy and macro-F1 are RX-equal percentages, with accuracy SD across six fold--seed means. Worst RX is the lowest per-receiver seed mean. Gul Federated was evaluated in Native. ASKNet's Strict-IB arm was deferred.}
+\label{tab:adaptations}\input{tables/external_adaptations.tex}
+\end{table*}
+
+The \href{https://github.com/BeechburgPieStar/ASKNet-RFF/blob/f00846d68425315b68ae69b8c6b712e08559c2fe/Lora/logs/h5_rescisnet_k10_per800_trainrxn210_1_day1_seed2023.k_trace.txt}{ASKNet author log} gives 84.52\% mean accuracy on RTL-6 Days 2--4 after training on N210-1 Day 1. This value comes from the public receiver-drift log. Its eight cutoff candidates span 256--2048 and imply 4095 Koopman modes. The released default used for the P-H5$\times$160 adaptation has six candidates spanning 128--4096 and implies 8191 modes. The comparison therefore changes both the signal-refinement configuration and the packet protocol.
+
+The \href{https://github.com/BeechburgPieStar/IB-RFF/tree/5a03a04da86c4bbf5cf90f41a55c268bf2152203}{IB-RFF release} supplies ManyRx and ManySig launch settings, logs, and weights. The published study also includes a receiver-and-day LoRa experiment \cite{wang2026ib}. The public release does not provide the matching LoRa recipe or checkpoint, so the results in Table~\ref{tab:adaptations} use our 8192-sample adaptation.
 
 The companion study used 14 source receivers and reported 99.24\% for Shen-CIS and 99.14\% for Shen-RA on six other receivers \cite{oobcompanion}. Its training and test cohorts differ from P-H5$\times$160. Within the present protocol, the historical external evaluation used CPU FP32 for HStem and the Shen/FAN/IB comparators. ASK and Spec+Siamese used CUDA FP32. The matched tokenizer table uses a separate common GPU evaluation (FP32 networks, matmul TF32 off, cuDNN TF32 on, batch 128). The matched-architecture and external HStem means are 97.335\% and 97.333\%, respectively. The receiver bootstrap uses seed 24016 for external comparisons and 26026 for the same-support comparison.
 

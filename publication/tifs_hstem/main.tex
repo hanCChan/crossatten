@@ -137,7 +137,7 @@ HStem and its controls train for 200 epochs using cross-entropy, batch size 64, 
 \subsection{Native and Strict-IB Comparisons}
 The \emph{Native} comparison gives each method the same raw IQ packets and keeps its own feature pipeline, including HStem's TrueIB. The \emph{Strict-IB} comparison applies the common in-band restriction before the other methods' front-ends. Both views share packet identities, receiver roles, and enrolled transmitters. HStem therefore supplies the same in-band reference in both views.
 
-Shen-CE and Shen-DANN use the same CIS residual encoder with and without adversarial source-RX supervision. FAN and IB-RFF test feature attention and subsequent information-bottleneck training. ASKNet retains the full LoRa spectral transformation. The Native comparison also includes a paper-derived, from-scratch Spec+Siamese implementation with cross-RX same-TX pairs, channel and noise augmentation, and a classification and NT-Xent objective \cite{ma2025robust}. The Native table also includes Gul Federated, a paper-derived balanced all-client adaptation \cite{gul2026federated}. Each source receiver trains its local CIS classifier with a gradient-reversed RX branch, and the server aggregates model updates. The supplement gives method-specific training and adaptation details.
+Shen-CE and Shen-DANN use the same CIS residual encoder with and without adversarial source-RX supervision. The Native comparison includes a paper-derived, from-scratch Spec+Siamese implementation with cross-RX same-TX pairs, channel and noise augmentation, and a classification and NT-Xent objective \cite{ma2025robust}. These comparisons evaluate all models on the common P-H5$\times$160 packet budget. The supplement documents the FAN, IB-RFF, ASKNet, and Gul Federated adaptations and audits their correspondence to the authors' original protocols.
 
 \subsection{Metrics and Paired Estimates}
 We average accuracy and macro-F1 with equal receiver weights across the three seeds per RX. Worst-RX accuracy is the minimum of the ten RX means. Fit standard deviations summarize the six fold--seed means. Paired contrasts first average seed differences on each receiver, then use 10,000 paired bootstrap draws over the ten distinct RXs. The intervals describe receiver variation conditional on this fitted cohort and exclude variation across acquisitions and newly trained seeds. Table captions identify the evaluation sessions.
@@ -145,10 +145,10 @@ We average accuracy and macro-F1 with equal receiver weights across the three se
 
 \section{Identification Accuracy and Efficiency}
 \subsection{LoRa Baseline Comparisons}
-HStem attains 97.333\% receiver-equal Native accuracy. Spec+Siamese gives the highest external mean at 95.890\%, followed by Shen-DANN at 94.208\% (Table~\ref{tab:external}). The Gul Federated adaptation attains 42.725\% and also shows weak source fitting under the reduced packet budget (34.600--44.250\% across six fits). Table~\ref{tab:paired} reports paired intervals on the same RXs. With a common in-band restriction, HStem exceeds the strongest available external mean, Shen-CE, by 2.632\,pp.
+HStem attains 97.333\% receiver-equal Native accuracy. The primary external comparisons reach 95.890\% (Spec+Siamese), 94.208\% (Shen-DANN), and 93.535\% (Shen-CE) in Table~\ref{tab:external}. Table~\ref{tab:paired} reports paired intervals on the same RXs. With a common in-band restriction, HStem exceeds Shen-CE, the closest Strict-IB mean, by 2.632\,pp.
 
 \begin{table*}[t]\centering
-\caption{External LoRa comparisons. Accuracy and macro-F1 are RX-equal percentages. Fit SD is over six fold--seed means. Worst RX is the lowest per-receiver seed mean. The source-selected models share the evaluation packets. Spec+Siamese and Gul Federated are evaluated in Native. ASKNet's Strict-IB arm was deferred.}
+\caption{Primary LoRa comparisons on P-H5$\times$160. Accuracy and macro-F1 are RX-equal percentages. Fit SD is over six fold--seed means. Worst RX is the lowest per-receiver seed mean. All models share the evaluation packets. Spec+Siamese is evaluated in Native.}
 \label{tab:external}\input{tables/external.tex}
 \end{table*}
 
@@ -164,7 +164,7 @@ HStem's worst-RX accuracy is 93.683\% on Pluto-1, compared with Spec+Siamese's 9
 \subsection{Accuracy and Deployment Cost}
 \begin{figure*}[t]\centering
 \includegraphics[width=.96\textwidth]{native_efficiency.pdf}
-\caption{Native accuracy and efficiency for HStem, Spec+Siamese, and Shen-DANN in the common timing session. Left uses a logarithmic parameter axis. Right uses batch-128 throughput from the median synchronized batch latency. Table~\ref{tab:costs} includes all four timed methods.}
+\caption{Native accuracy and efficiency for HStem, Spec+Siamese, and Shen-DANN in the common timing session. Left uses a logarithmic parameter axis. Right uses batch-128 throughput from the median synchronized batch latency.}
 \label{fig:efficiency}
 \end{figure*}
 
@@ -173,9 +173,9 @@ HStem's worst-RX accuracy is 93.683\% on Pluto-1, compared with Spec+Siamese's 9
 \label{tab:costs}\input{tables/native_cost.tex}
 \end{table*}
 
-Figure~\ref{fig:efficiency} shows the accuracy and efficiency trade-off. HStem uses 0.96\% of the parameters of Spec+Siamese and processes 8,451 packets/s at batch 128 in the four-model session (1.96 times the Spec+Siamese rate). The earlier shared session gives a ratio of 1.94. The median single-packet times are 1.865, 1.164, 1.086, and 1.187\,ms for HStem, Spec+Siamese, Shen-DANN, and Gul Federated, respectively.
+Figure~\ref{fig:efficiency} shows the accuracy and efficiency trade-off. HStem uses 0.96\% of the parameters of Spec+Siamese and processes 8,451 packets/s at batch 128 (1.96 times the Spec+Siamese rate). The earlier shared session gives a ratio of 1.94. The median single-packet times are 1.865, 1.164, and 1.086\,ms for HStem, Spec+Siamese, and Shen-DANN, respectively.
 
-The timing covers each method's complete native front-end and TX classifier under FP32 network inference with TF32 disabled. It starts with an extracted IQ window already on the device. Table~\ref{tab:costs} counts checkpoint parameters. The timed transmitter-only paths use 13,442,954 parameters for Shen-DANN and 13,381,130 for Gul Federated. The supplement reports full measurement settings and the earlier timing comparisons.
+The timing covers each method's complete native front-end and TX classifier under FP32 network inference with TF32 disabled. It starts with an extracted IQ window already on the device. Table~\ref{tab:costs} counts checkpoint parameters. The timed transmitter-only path uses 13,442,954 parameters for Shen-DANN. The supplement gives the full timing session and the earlier measurements.
 
 
 \section{Tokenizer Ablations and Representation Analysis}

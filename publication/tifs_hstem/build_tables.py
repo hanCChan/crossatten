@@ -24,10 +24,9 @@ INPUTS = {
     "gul_cost": ("2fe246263f75", "research/s43_gul_federated/evidence/NATIVE_COST_COMPARE.json"),
     "native_cost": ("9a20eb0", "research/s42_lora_baselines/evidence/NATIVE_COST_COMPARE.json"),
 }
-METHODS = (
-    ("h0", "HStem"), ("ce", "Shen CE"), ("dann", "Shen DANN"),
-    ("fan", "FAN"), ("ib", "IB-RFF"), ("ask", "ASKNet"),
-)
+CORE_METHODS = (("h0", "HStem"), ("ce", "Shen CE"), ("dann", "Shen DANN"))
+ADAPTED_METHODS = (("fan", "FAN"), ("ib", "IB-RFF"), ("ask", "ASKNet"))
+METHODS = CORE_METHODS + ADAPTED_METHODS
 STRUCTURE = (("P0", "Patch-Lite", 266, 2), ("LP", "Long-Patch", 350, 2), ("H0", "HStem", 350, 5))
 
 
@@ -57,9 +56,9 @@ def table(columns, headings, rows):
     ])
 
 
-def external(data, ma, gul=None):
+def external(data, methods, ma=None, gul=None):
     indexed = {(row["view"], row["method"]): row for row in data["summary"]}
-    for method, name in METHODS:
+    for method, name in methods:
         native, strict = (indexed[view, method] for view in ("native", "strict_ib"))
         acc, f1, worst = {}, {}, {}
         for row in (native, strict):
@@ -72,12 +71,12 @@ def external(data, ma, gul=None):
                 f1[view] = f'{100 * row["macro_f1"]:.3f}'
                 worst[view] = f'{100 * row["worst_rx_acc"]:.3f}'
         yield [name, *acc.values(), *f1.values(), *worst.values()]
-        if method == "h0":
+        if method == "h0" and ma is not None:
             yield ["Spec+Siamese", f'{100*ma["acc"]:.3f} $\\pm$ {100*ma["fit_sd"]:.3f}',
                    "--", f'{100*ma["macro_f1"]:.3f}', "--", f'{100*ma["worst_rx_acc"]:.3f}', "--"]
-            if gul is not None:
-                yield ["Gul Federated", f'{100*gul["acc"]:.3f} $\\pm$ {100*gul["fit_sd"]:.3f}',
-                       "--", f'{100*gul["macro_f1"]:.3f}', "--", f'{100*gul["worst_rx_acc"]:.3f}', "--"]
+    if gul is not None:
+        yield ["Gul Federated", f'{100*gul["acc"]:.3f} $\\pm$ {100*gul["fit_sd"]:.3f}',
+               "--", f'{100*gul["macro_f1"]:.3f}', "--", f'{100*gul["worst_rx_acc"]:.3f}', "--"]
 
 
 def structure(data, costs):
@@ -113,26 +112,20 @@ def native_cost_rows(results, external, ma, gul=None):
         yield [method, f"{100*accuracies[key]:.3f}", params, b1, b128, rate, memory]
 
 
-def paired_rows(inputs):
-    def fmt(name, mean, low, high):
-        return [name, "$" + f"{mean:+.3f}$", f"$[{low:+.3f}, {high:+.3f}]$"]
+def paired_row(name, mean, low, high):
+    return [name, "$" + f"{mean:+.3f}$", f"$[{low:+.3f}, {high:+.3f}]$"]
 
+
+def paired_rows(inputs):
     structure_names = {("H0", "LP"): "HStem -- Long-Patch", ("LP", "P0"): "Long-Patch -- Patch-Lite"}
     for row in inputs["structure"]["paired_comparisons"]:
         name = structure_names[row["a"], row["b"]]
-        yield fmt(name, row["mean_delta_pp"], *row["conditional_rx_ci95_pp"])
+        yield paired_row(name, row["mean_delta_pp"], *row["conditional_rx_ci95_pp"])
     ma = inputs["ma"]["paired_ma_minus"]
     low, high = ma["h0"]["conditional_interval95_pp"]
-    yield fmt("HStem -- Spec+Siamese (Native)", -ma["h0"]["mean_pp"], -high, -low)
-    yield fmt("Spec+Siamese -- Shen-DANN (Native)", ma["dann"]["mean_pp"],
-              *ma["dann"]["conditional_interval95_pp"])
-    if "gul_report" in inputs:
-        report = inputs["gul_report"]
-        for key, name in (("paired_h0_minus_gul", "HStem -- Gul Federated (Native)"),
-                          ("paired_gul_minus_ma", "Gul Federated -- Spec+Siamese (Native)"),
-                          ("paired_gul_minus_dann", "Gul Federated -- Shen-DANN (Native)")):
-            row = report[key]
-            yield fmt(name, row["mean_pp"], *row["conditional_interval95_pp"])
+    yield paired_row("HStem -- Spec+Siamese (Native)", -ma["h0"]["mean_pp"], -high, -low)
+    yield paired_row("Spec+Siamese -- Shen-DANN (Native)", ma["dann"]["mean_pp"],
+                     *ma["dann"]["conditional_interval95_pp"])
     comparisons = inputs["external"]["paired_comparisons"]
     for view, baseline, name in (
         ("native", "dann", "HStem -- Shen-DANN (Native)"),
@@ -140,7 +133,15 @@ def paired_rows(inputs):
     ):
         row = next(x for x in comparisons
                    if (x["view"], x["a"], x["b"], x["metric"]) == (view, "h0", baseline, "acc"))
-        yield fmt(name, 100 * row["delta"], *(100 * x for x in row["conditional_rx_cluster_ci"]))
+        yield paired_row(name, 100 * row["delta"], *(100 * x for x in row["conditional_rx_cluster_ci"]))
+
+
+def gul_paired_rows(report):
+    for key, name in (("paired_h0_minus_gul", "HStem -- Gul Federated"),
+                      ("paired_gul_minus_ma", "Gul Federated -- Spec+Siamese"),
+                      ("paired_gul_minus_dann", "Gul Federated -- Shen-DANN")):
+        row = report[key]
+        yield paired_row(name, row["mean_pp"], *row["conditional_interval95_pp"])
 
 
 def stress_rows(data):
@@ -159,16 +160,21 @@ def stress_rows(data):
 def generate():
     inputs, origins = read_inputs()
     result = {}
-    gul_data = inputs.get("gul_report", {}).get("methods", {}).get("gul")
-    result["external.tex"] = table(
-        "lrrrrrr", ["Method", "Native Acc.", "Strict-IB Acc.", "Native F1", "Strict F1",
-                    "Native Worst", "Strict Worst"],
-        external(inputs["external"], inputs["ma"]["methods"]["ma"], gul_data))
+    gul_report = inputs["gul_report"]
+    gul_data = gul_report["methods"]["gul"]
+    external_headers = ["Method", "Native Acc.", "Strict-IB Acc.", "Native F1", "Strict F1",
+                        "Native Worst", "Strict Worst"]
+    result["external.tex"] = table("lrrrrrr", external_headers,
+        external(inputs["external"], CORE_METHODS, ma=inputs["ma"]["methods"]["ma"]))
+    result["external_adaptations.tex"] = table("lrrrrrr", external_headers,
+        external(inputs["external"], ADAPTED_METHODS, gul=gul_data))
     result["long_patch.tex"] = table(
         "lrrrrrr", ["Tokenizer", "Params", "Support", "BN", r"Acc. $\pm$ fit SD", "F1", "Worst RX"],
         structure(inputs["structure"], inputs["structure_cost"]))
     result["paired_accuracy.tex"] = table(
         "lrr", ["Contrast", "Mean (pp)", "95\\% interval (pp)"], paired_rows(inputs))
+    result["paired_gul.tex"] = table(
+        "lrr", ["Contrast", "Mean (pp)", "95\\% interval (pp)"], gul_paired_rows(gul_report))
     cost_headers = ["Method", "Parameters", "B1 (ms)", "B128 (ms)", "B128 packets/s"]
     native = {r["method"]: r for r in inputs["external_cost"]["rows"] if r["view"] == "native"}
     result["costs.tex"] = table("lrrrr", cost_headers, [
@@ -186,11 +192,10 @@ def generate():
     native_cost_headers = ["Method", r"Acc. (\%)", "Parameters", "B1 (ms)", "B128 (ms)",
                            "B128 pkt/s", "B1/B128 MiB"]
     historical = native_cost_rows(inputs["native_cost"], inputs["external"], inputs["ma"])
-    if gul_data is not None:
-        result["native_cost_s42.tex"] = table("lrrrrrr", native_cost_headers, historical)
-        session = native_cost_rows(inputs["gul_cost"], inputs["external"], inputs["ma"], gul_data)
-    else:
-        session = historical
+    result["native_cost_s42.tex"] = table("lrrrrrr", native_cost_headers, historical)
+    result["native_cost_full.tex"] = table("lrrrrrr", native_cost_headers,
+        native_cost_rows(inputs["gul_cost"], inputs["external"], inputs["ma"], gul_data))
+    session = native_cost_rows(inputs["gul_cost"], inputs["external"], inputs["ma"])
     result["native_cost.tex"] = table("lrrrrrr", native_cost_headers, session)
     result["wisig.tex"] = table("lrr", ["Endpoint", "Diff.", "95\\% interval"], stress_rows(inputs["stress"]))
     arms = {x["arm"]: x for x in inputs["factorial"]["A"]["dev_summary"]}
