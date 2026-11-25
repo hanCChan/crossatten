@@ -24,6 +24,21 @@
 
 [作者逐日原日志](https://github.com/BeechburgPieStar/ASKNet-RFF/blob/f00846d68425315b68ae69b8c6b712e08559c2fe/Lora/logs/h5_rescisnet_k10_per800_trainrxn210_1_day1_seed2023.k_trace.txt) · [官方默认入口](https://github.com/BeechburgPieStar/ASKNet-RFF/blob/f00846d68425315b68ae69b8c6b712e08559c2fe/Lora/run_CIS.py) · [复算和工程记录](UPSTREAM.json)
 
+作者链接的网盘目录 `ASKNet_Code/Lora/weights` 列有与日志同名的权重，文件大小为 162,653,512 字节。网页下载要求使用网盘客户端，本轮未取得作者权重，转用 [预登记协议](ASK_ORIGINAL_PROTOCOL.json) 中的一次从头复训。原协议使用独立于 P-H5×160 的公开 receiver-drift 捕获。
+
+### 单次原协议复训
+
+复训使用种子 2023、PyTorch 2.5.0、CUDA 12.4 和 RTX 4060 Laptop GPU。作者列出的环境为 PyTorch 1.11.0、CUDA 11.3 和 RTX 3080 Ti。按源验证交叉熵选择第 200 轮权重，源验证准确率为 99.21%（2381/2400），交叉熵为 0.044564。模型评估时的硬截止值为 768，作者日志为 512。每个 RX×日期单元包含 2000 包。以下为关闭 TF32 的预登记评价脚本结果。
+
+| 测试 RX | Day 1 | Day 2 | Day 3 | Day 4 | 四日均值 | Day 2–4 均值 |
+|---|---:|---:|---:|---:|---:|---:|
+| N210-1 | 99.80% | 99.15% | 99.95% | 98.85% | 99.438% | 99.317% |
+| RTL-6 | 95.00% | 95.45% | 96.10% | 94.90% | 95.363% | 95.483% |
+
+预登记的主要指标 RTL-6 Day 2–4 为 95.483%，比作者日志的 84.517% 高 10.967 pp。用作者原始测试入口评估同一权重，关闭 TF32 时八个单元的正确包数全部一致。该入口使用默认精度时，主要指标为 95.450%，每个单元最多相差 1 包。分别对官方预处理后的 float32 IQ 窗口求哈希，8000 个源池窗口与 16000 个测试窗口之间没有发现完全重复。
+
+作者日志所用配置在本地的原协议复训中达到 99.21% 源验证准确率和 95.48% 跨 RX、跨日准确率。单次复训的截止值、训练轨迹与环境均有差异，现有证据无法确定分差来源，也无法单独解释 P-H5×160 下的适配均值。[训练记录](ASK_ORIGINAL_FIT.json) · [逐日评价与核验](ASK_ORIGINAL_RESULT.json) · [作者环境](https://github.com/BeechburgPieStar/ASKNet-RFF/blob/f00846d68425315b68ae69b8c6b712e08559c2fe/README.md)
+
 ## S44-B Gul Federated
 
 核查刊载版第 VI 节及表 II、IV、V。典型五客户端使用每 TX/RX 800 个窗口，90:10 划分后共 36,000 包训练、4,000 包验证。S43 使用 8,000/2,000 包。输入均为 52×126 谱图，S43 的具体 Shen CIS、残差宽度和 AWGN 配置来自公开参考实现。原文未提供可核对的联邦本地优化器动量及完整前端配置。§VI-E 的 0.9 动量明确用于集中式比较。
@@ -44,7 +59,7 @@ S24 的 8192 长度、patch 512、stride 256 与固定 \(\alpha=0.004\) 属于�
 
 ## S44-D 预先登记的 ASKNet 修正对照
 
-候选修正只把固定版本 ASKNet 的截止列表替换为作者日志的八个候选，完整保留 4095 维复数 QR。数据沿用 P-H5×160 的现有包清单、两折与 201/202/203 三种子。每组从头训练并按源验证 CE 选权重。其余设置沿用 S24 Native，包含输入功率归一化、FP32/complex64、batch 128、Adam 0.001、最多 200 轮、早停 patience 20、CE plateau patience 10 与系数 0.1，以及 \(\tau=5.0\to0.1\) 的 200 轮日程。原协议 checkpoint 专用于 receiver-drift 核验。
+候选修正只把固定版本 ASKNet 的截止列表替换为作者日志的八个候选，完整保留 4095 维复数 QR。数据沿用 P-H5×160 的既有包清单、两折与 201/202/203 三种子。每组从头训练，按 RX 等权的源验证 TX 交叉熵选权重。其余设置沿用 S24 Native，包含输入功率归一化、FP32/complex64、关闭 TF32 和 AMP、batch 128、Adam 0.001、最多 200 轮、早停 patience 20、CE plateau patience 10 与系数 0.1，以及 \(\tau=5.0\to0.1\) 的 200 轮日程。原协议 checkpoint 专用于 receiver-drift 核验。[S24 包清单](../../24-lora-external-audit/PACKETS.csv) · [S24 注册表](../../24-lora-external-audit/phase2/pilot_registry.json)
 
 Native 为主要环境，使用同包的原 S24 Native 默认候选作为对照。六组修正权重完成并封存后统一读取历史留出 RX；保留全部拟合，报告源拟合质量、RX 等权准确率、Macro-F1、最差 RX、逐 RX 配对及以 RX 为单位的条件区间。主要配对为修正配置减 S24 默认配置。该差值估计替换截止候选配置的整套系统效应。
 

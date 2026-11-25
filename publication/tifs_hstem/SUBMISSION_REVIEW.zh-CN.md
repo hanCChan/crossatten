@@ -8,7 +8,7 @@
 | 结构归因 | S26 同支持对照为主，S22 的参数化和归一化对照、S28 的 BN×GELU 正向交互与未达门槛的 held-source pilot 一并保留。 |
 | 外部协议 | 正文主要对照为 Spec+Siamese、Shen-DANN 和 Shen-CE，保留 Native 与 Strict-IB 的统一协议和配对统计。补充材料保留 FAN、IB-RFF、ASKNet、Gul 的适配结果与原协议证据。 |
 | 统计与运行成本 | 新增 Accuracy–Parameters 和 Accuracy–Throughput 主图。配对条件区间统一进入结果表，保留 B1/B128 p50/p95、吞吐、峰值 PyTorch CUDA 分配和参数。S24 和 S26 的独立计时保留为历史补充。 |
-| 复现质量核验 | S44 核对 ASKNet 作者日志的逐日结果与截止候选、Gul 的优化预算及 IB-RFF 的公开 LoRa 配置和权重可用性。作者日志与统一协议成绩分别呈现。[S44 核验](../../research/s44_baseline_verification/RESULTS.zh-CN.md) |
+| 复现质量核验 | S44 的一次 ASKNet 原协议复训在 RTL-6 Day 2–4 达到 95.48%，作者日志为 84.52%。同时核对了 Gul 优化预算及 IB-RFF 的公开 LoRa 配置和权重可用性。[S44 核验](../../research/s44_baseline_verification/RESULTS.zh-CN.md) |
 | WiSig | 正文只保留 S29 三个预定端点及 S31 的背景句，标注历史源域两视图。 |
 | 新 LoRa 采集 | 2026-11-25 复核工作区仍缺少带采集来源的新数据。给出 HStem、Spec+Siamese、Shen-DANN 的冻结评价及 Long-Patch 结构对照方案。[独立确认方案](INDEPENDENT_LORA_VALIDATION.zh-CN.md) |
 | OOB 论文贡献边界 | 两篇工作共享语料、TrueIB、五视图和前端。OOB 用冻结路径干预诊断频带依赖，当前稿用同一普通 MHA 后端和配对训练测量 Tokenizer 构造的效果。[关联工作说明](PRIOR_WORK_DISCLOSURE.md) |
