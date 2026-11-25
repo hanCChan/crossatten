@@ -1,0 +1,8 @@
+# HStem figure style
+
+- Use a white canvas and square-corner geometry. Distinguish processing operators, feature tensors, receiver roles and measured metrics by shape and labeling. Tensor sizes are positions × channels and diagrams are schematic unless they have numerical axes.
+- Use DejaVu Sans for the artwork, with embedded TrueType text in PDFs and editable text in SVGs. Design for a 7.10 in double-column width with 8–9 pt labels, 0.65–1.2 pt rules and restrained grid lines.
+- HStem uses deep teal (#145C57) and filled circles. Direct Long-Patch uses slate blue (#355E9B) and triangles. Patch-Lite uses graphite (#4F5962) and squares. In the external comparison, Spec+Siamese uses ochre (#A45014), Shen-DANN uses slate blue and Shen-CE uses graphite. Retain distinct markers and line styles in grayscale. Pale fills encode processing regions and never carry a data value on their own.
+- Show every receiver in its assigned evaluation fold. Use percentage points for differences, log coordinates only where marked, and 95% intervals only for the conditional paired receiver summaries. Plot individual fit values or explicitly identified sample SD where the axis describes fit variation.
+- Label panels (a), (b) and (c) where the caption references a comparison. Use tabular quantities or short captions for precision that does not fit a plot. Draw padding outside the valid range with hatching and distinguish the spacing between centers from support overlap.
+- Export the main figures as PDF for IEEEtran and SVG for editing. Build from the pinned aggregate evidence and data-free architecture description. Keep the analytic chirp illustration and experimental marks visibly distinct.

@@ -1,245 +1,123 @@
 \documentclass[journal]{IEEEtran}
-\usepackage{amsmath,amssymb,booktabs,array,graphicx,cite,xurl}
+\usepackage{amsmath,amssymb,booktabs,array,tabularx,graphicx,cite,xurl}
 \usepackage[hidelinks]{hyperref}
 \hypersetup{pdftitle={Supplementary Evidence and Reproduction Records: Hierarchical RF Tokenization},pdfauthor={Anonymous working draft}}
 \graphicspath{{figures/}}
+\setlength{\tabcolsep}{4pt}
 \begin{document}
-\title{Supplementary Evidence and Reproduction Records}
-\author{Anonymous working draft}\maketitle
-\section{All New Fits and Common Inference}
-Only Long-Patch is newly trained. Every fit uses 200 epochs and minimum source RX-equal CE selection. The six source/Dev pairs below are complete, without deleting a weak seed. Target inference occurs after the full source seal. H0/P0 are reused weights; the primary comparison re-evaluates all three arms with identical current GPU precision flags. Historical CPU/GPU values remain separately archived.
-\begin{table*}[t]\centering\caption{All six Long-Patch fits; no replacement seeds.}\label{tab:allfits}
-\begin{tabular}{rrrrrrr}\toprule
-Fold&Seed&Epochs&Best epoch&Source acc.(\%)&Dev acc.(\%)&Fit wall(s)\\\midrule
-0&201&200&156&95.250&91.070&2167.7\\
-0&202&200&171&96.550&95.330&2162.8\\
-0&203&200&171&96.700&95.780&2158.1\\
-1&201&200&129&96.100&94.280&2155.4\\
-1&202&200&159&96.900&96.120&2123.6\\
-1&203&200&153&96.650&94.420&2125.7\\
-\bottomrule\end{tabular}\end{table*}
-The original S26 registration, data-free resource/recovery gate, source recovery, checkpoint/configuration/history seal, access log, saved predictions, and final recomputation audit provide the evidence chain. Summed per-fit wall times overlap under concurrent jobs and are not active GPU time. Atomic recovery restores optimizer, global and data-stream RNG states at a completed epoch; it does not reset a seed after observing a score.
+\title{Supplementary Evidence for Hierarchical RF Tokenization}
+\InputIfFileExists{author_metadata.tex}{}{\author{Anonymous working draft}}
+\maketitle
+\setcounter{figure}{8}
+\setcounter{table}{8}
 
-\section{Intermediate BN and GELU}
-The factorial comparison removes the three intermediate tokenizer BN layers (only 352 affine parameters) and/or the three GELUs. The inherited front-end, MHA, nominal support, and source fitting budget are shared. Six fits train the two GELU-deletion arms across both folds and all three seeds, with frozen HStem and No-mid-BN anchors. The paired interaction is $(\mathrm{HStem}-\mathrm{NoGELU})-(\mathrm{NoBN}-\mathrm{NoBNNoGELU})=+1.350$ pp, conditional 95\% RX interval $[0.930,1.750]$. GELU adds $0.752$ pp with BN ($[0.197,1.432]$) and has a mean effect of $-0.598$ pp without BN ($[-1.150,0.168]$). The latter interval includes zero.
+\section{LoRa Cohorts and Baseline Reproduction}
+\subsection{Common Packet and Receiver Protocol}
+For each transmitter--receiver cell, packet selection uses seed 20261012. The first 160 of 200 fixed selected rows train the source classifiers and the remaining 40 support validation. At a held receiver, all 200 selected rows per transmitter are evaluated. Each of two receiver folds uses seeds 201, 202, and 203. HStem, Shen, FAN, and IB used CPU FP32 in the archived external reporting pass. ASKNet and Spec+Siamese used CUDA FP32. The separately matched tokenizer pass used common GPU inference for all three arms (FP32, matmul TF32 off, cuDNN TF32 on, batch 128). HStem scores 97.333\% in Native and 97.335\% in the matched tokenizer pass. The bootstrap seeds are 24016 for the original external comparisons and 26026 for the same-support comparison.
 
-\begin{table}[t]\centering
-\caption{Four tokenizer BN--GELU configurations on the historical LoRa development cohort. Accuracy and macro-F1 are RX-equal percentages.}
-\label{tab:factorial}\input{tables/bn_gelu.tex}
-\end{table}
+Table~\ref{tab:protocol-context} records the original LoRa contexts. The Triad-GAN numbers summarize vector bar heights after removing the source receivers in each training condition \cite{wang2026triad}. The heterogeneous mean uses 15 receivers, omitting RTL-1, Pluto-1, B200-1, B200-mini-1, and B210-1. The corresponding homogeneous mean is approximately 84.4\%. RIFLE reports a cross-receiver mean for partial TX--RX coverage \cite{zhang2026rifle}. The companion CIS and RA results use its 14-to-6 receiver split \cite{oobcompanion}. The main-paper accuracy comparison uses a common packet protocol and cohort.
 
-The separately registered held-source pilot of the tokenizers used two receiver units. HStem improved absolute held accuracy by 4.583 pp and 1.383 pp, respectively. Its source-to-held gap changed by $-2.437$ pp and $-0.342$ pp. The second receiver missed the pre-specified gap reduction of 0.5 pp. The pilot limits a claim of receiver-specific degradation reduction even when the average held accuracy increases.
-
-\section{Kernel, Equivalence, and Metadata Evidence}
-\subsection{Kernel Evidence and Its Limits}
-Existing S23 effective-kernel spectra are reused. High-frequency energy over 0.25--0.5 cycles per frontend position averages 21.808/7.692/4.043\% for P0/S1/H1. Across the 18-model descriptive join, energy has Spearman correlation $-.556$ with final $J_w$ and $+.410$ with final conditional RX scatter. Arm, cohort, parameterization, and optimization confound the association (Fig.~\ref{fig:kernels}).
-
-\begin{figure*}[t]\centering
-\includegraphics[width=.96\textwidth]{fig04_mechanism_B.pdf}
-\caption{Mechanism B. Existing effective-kernel spectra and support (left) joined to new frozen source features (right). These filters act on frontend coordinates, not physical transmitter spectra. All 18 applicable fits are retained.}
-\label{fig:kernels}
-\end{figure*}
-
-S23 materialized six S1 models as ordinary 256-tap convolutions with bit-identical logits on 12,000 source predictions. For effective kernel $v=Tw$, $T$ has rank 256: the inference function class need not shrink, while optimization coordinates change. A $TT^\top$ interpretation for idealized SGD is not the exact update of AdamW.
-
-Frozen BN can be absorbed into preceding convolutions, but numerical execution matters. Default TF32-enabled execution failed the fixed logit tolerance in all six H0 checks (maximum difference about .01957), although classifications agreed. Disabling TF32 passed the same $10^{-4}$ tolerance (maximum $5.39\times 10^{-5}$). These failures distinguish training effects from removable inference structure.
-
-\subsection{Source Metadata Diagnostics}
-Only selected legal source-validation rows of supplied CFO/SNR fields were read. That loader does not read the waveform dataset, the fields never enter a network, and no target CFO/SNR was opened. Raw Spearman correlations with true-class margin are accompanied by fixed TX-by-RX-cell centering; constant residuals are NA.
-
-Across 24 models, raw SNR--margin correlations are negative, but centered correlations range approximately $-.028$ to $.058$. Centered absolute-CFO correlations range approximately $-.057$ to $.032$. This does not establish absence of RF effects: metadata, identity, acquisition, and margin scale are intertwined. It illustrates why raw associations cannot explain held-RX errors. Raw and cosine-weight margins include misclassified samples and every fit.
-
-
-\section{Complete External RX Attribution}
-These are the original S24 external and S22 matched archival GPU cohorts. The heatmap retains the two receivers where H0 loses to Native Shen-DANN and the concentration at Pluto-1. Its H0/P0 archival cohort is explicitly distinct from the new S26 common inference.
-\begin{figure*}[t]\centering
-\includegraphics[width=.97\textwidth]{fig05_mechanism_C.pdf}
-\caption{Mechanism C: all ten RXs. S24 H0--DANN uses the common new evaluation; H0--P0 is explicitly the matched archival GPU cohort. Positive favors H0. Neither is a newly independent test.}
-\label{fig:rx}
-\end{figure*}
-
-\section{LoRa Synchronization and TX-Specific Errors}
-The left panel of Fig.~\ref{fig:limits} summarizes the archived source-validation stress test. The right panel retains all ten TXs for Pluto-1 from the frozen external comparison. The panels report separate cohorts.
-\begin{figure*}[t]\centering
-\includegraphics[width=.96\textwidth]{fig07_limits.pdf}
-\caption{Source circular-shift sensitivity (left) and per-TX accuracy at Pluto-1 on the separately evaluated S24 external cohort (right).}
-\label{fig:limits}
-\end{figure*}
-
-
-\section{Gul Federated Adaptation}
-We implement the balanced, all-client version described by Gul et al.\ \cite{gul2026federated}. Each of the five source receivers in a fold acts as one client. The normalized residual embedding feeds a linear transmitter head and a separate gradient-reversed receiver head. The adaptation uses a $52\times126$ Shen CIS, stages with widths 32/32/64/64, and a 512-dimensional embedding. We use Shen's source-training AWGN range of 0--49\,dB and clean source validation.
-
-All clients start each round from the global weights. Their local SGD uses five epochs per round, batch size 64, learning rate $10^{-3}$, and gradient reversal $\lambda=.01$, one of the settings studied in the reference. The server averages updates by client packet count over 200 rounds. Training uses FP32 weights with BF16 convolution and dense execution. Source and held-receiver inference use FP32 networks. Each run supplies 125,000 local optimizer steps. We select the minimum clean source RX-equal TX cross-entropy across rounds. The reference's original test receivers and packet budget differ from P-H5$\times$160.
-
-The six selected rounds are 199, 200, 200, 199, 200, and 198 in fold--seed order. Source-validation accuracy ranges from 34.600\% to 44.250\%. The reproduction ledger retains all six full source trajectories, same-packet paired contrasts, and per-RX metrics.
-
-The published five-client setting uses 720 training segments per TX/RX after the 90:10 split, compared with 160 in P-H5$\times$160. The corresponding source pools contain 36,000 and 8,000 training segments. Gul et al.'s Table~4 reports peak accuracy during training for the authors' evaluation cohort, while this adaptation evaluates source-CE-selected checkpoints. In a single source-only diagnostic, resetting SGD momentum to .9 at each client broadcast raises round-24 source accuracy from 13.35\% to 44.55\%. This is evidence of optimizer sensitivity in the adaptation. The authors disclose .9 momentum for their centralized comparison, while the federated local optimizer details are incomplete.
-
-\begin{table}[t]\centering
-\caption{Gul Federated adaptation contrasts on P-H5$\times$160 Native. Accuracy differences and conditional RX intervals are in percentage points.}
-\label{tab:paired-gul}\input{tables/paired_gul.tex}
-\end{table}
-
-The primary deployment comparison times the same four models on one device with twelve warmups and 72 measured forwards per model and batch size. Each of the 24 model orders is used in each of three blocks. The timing and memory definitions below apply to both shared sessions. Gul's receiver head is a training component and is excluded from deployment.
-
-\section{Timing and Throughput}
-The earlier Native comparison uses three sealed fold-0, seed-201 fits in the same RTX 4060 Laptop GPU session (PyTorch 2.5.0, CUDA 12.4, cuDNN 9.1). Every method receives the same synthetic $B\times2\times8192$ FP32 tensor on the GPU. Timing covers the complete native signal front-end and TX classifier, from a resident packet window to logits. Networks use FP32 with AMP and TF32 disabled. The DANN CIS retains its original FP64 frontend. The DANN transmitter-only path produces identical logits to the full model at both measured batch sizes.
-
-Each batch size uses 12 warmups per model and 60 measured forwards per model. All six model orders are used in each of 10 blocks. Each sample starts before the forward call and ends after GPU synchronization. At batch 1, the respective median-derived rates for HStem, Spec+Siamese, and Shen-DANN are 456, 786, and 837\,packets/s. These rates describe sequential single-packet calls. Peak memory is separately measured with one model per process and includes deployed weights, buffers, input, and temporary tensors tracked by PyTorch. Driver memory and reserved allocator space are outside that measure.
-
-\begin{table*}[t]\centering
-\caption{Earlier three-model Native timing. B1/B128 show p50/p95 in ms, throughput is derived from B128 p50, and B1/B128 memory gives peak live PyTorch MiB.}
-\label{tab:previous-native-cost}\input{tables/native_cost_s42.tex}
+\begin{table*}[!t]\centering
+\caption{Published and historical LoRa protocol context. Each score is tied to its own data availability and exposure.}
+\label{tab:protocol-context}\input{tables/lora_protocol_context.tex}
 \end{table*}
 
-The separate S26 timing session used the same GPU model with synthetic resident IQ, FP32 tensors, TF32 off for matmul and on for cuDNN, three warmups, and 15 samples. Table~\ref{tab:timing} reports p50 and p95 batch times and the batch-128 rate at p50.
-\begin{table*}[t]\centering
-\caption{S26 common timing session. B1 and B128 times are p50/p95 in ms, and throughput is at batch 128.}
-\label{tab:timing}\input{tables/structure_timing.tex}
-\end{table*}
+\subsection{Primary Baseline Implementations}
+\textit{Shen CE and DANN.} The two arms share the same $52\times126$ CIS input and residual encoder/TX head. The TensorFlow-to-PyTorch implementation passed 103 forward and gradient parity checks. The adaptation corrects a misaligned RX validation-label slice in the author entrypoint and fixes validation noise across epochs. The arms share initial encoder and TX weights and noise streams, and use batch 64, SGD at $10^{-3}$, .9 momentum, a 500-epoch cap, and plateau and early-stop rules. DANN adds the source-RX gradient-reversal objective. DANN minus CE is \(+0.673\) pp Native with conditional interval \([0.208,1.233]\), and \(-0.070\) pp Strict-IB with interval \([-0.247,0.152]\) \cite{shen2024receiver}.
 
-Tables~\ref{tab:s24-native-timing} and \ref{tab:strict-timing} give historical S24 cost measurements. Those runs used three warmups, 15 measured forwards, and TF32 off. Literal LoRa ASK retains full-dimensional complex QR, and its 74,153,872 complex/real parameter elements correspond to 141,246,353 real degrees of freedom. The Strict-IB ASKNet arm was deferred. Dispatcher MACs for these models cover supported operations and omit FFT and QR. The shared main-paper session, S24, and S26 report separate within-session comparisons.
+\textit{Ma Spec+Siamese.} Our paper-derived from-scratch arm uses a shared nine-convolution residual extractor, pooling, 512- and 256-unit layers, and a TX head \cite{ma2025robust}. Each epoch visits every source training example as an anchor and samples a same-TX, different-source-RX partner. Thirty-two pairs make a batch of 64 views with independent channel and noise draws. The objective adds example means of TX cross-entropy and NT-Xent with temperature .05. The log-magnitude STFT uses 128 rectangular samples, hop 64 and a centered 52-bin crop, giving \(52\times127\). SAME padding and \(2\times2\) average pooling yield a \(13\times32\times64\) feature map. The exponential five-tap channel model uses fractional delays and an eight-tone low-Doppler Jakes approximation, with 5--300 ns delay, 0--5 Hz Doppler and 10--40 dB SNR ranges.
 
-\begin{table*}[t]\centering
-\caption{Full four-model Native timing session. Batch times are p50/p95 in ms. Throughput uses the batch-128 median. Memory is peak live PyTorch allocation.}
-\label{tab:full-native-cost}\input{tables/native_cost_full.tex}
-\end{table*}
+Adam starts at \(3\times10^{-4}\), halves after ten epochs of stalled source-validation CE, and stops after 30 unimproved epochs or 160 total epochs. Training uses BF16 GPU autocast for network operations and FP32 processing for features and losses. Source validation and report inference use FP32. Source accuracy ranges from 99.05\% to 99.45\%; one fit stops at epoch 156 and five reach 160. The six fits contribute 239,000 updates and 60,000 held packet predictions. The published pretraining variant uses additional data; P-H5\(\times\)160 evaluates the from-scratch variant.
 
-\begin{table*}[t]\centering
-\caption{Historical S24 Native comparator timings. B1/B128 show p50/p95 in ms.}
-\label{tab:s24-native-timing}\input{tables/costs.tex}
-\end{table*}
-\begin{table*}[t]\centering
-\caption{S24 measured Strict-IB comparator timings. B1/B128 show p50/p95 in ms.}
-\label{tab:strict-timing}\input{tables/strict_timing.tex}
-\end{table*}
+\subsection{Additional Adaptations}
+Table~\ref{tab:adaptations} retains the complete Native and available Strict-IB summaries. \textit{FAN and IB-RFF} use the released frequency-aware backbone adapted to length 8192, with patch 512, stride 256 and 31 tokens of width 128. FAN and the second-stage IB-RFF use Adam at \(10^{-3}\), batch 128, a 200-epoch cap, and source-validation early stopping. IB starts from the matching FAN checkpoint and uses CPU normalized-HSIC with the previously fixed .004 coefficient. Stage 2 minus stage 1 is \(+0.978\) pp in Native and \(+3.983\) pp in Strict-IB with conditional intervals \([-0.037,2.195]\) and \([3.373,4.582]\). The \href{https://github.com/BeechburgPieStar/IB-RFF/tree/5a03a04da86c4bbf5cf90f41a55c268bf2152203}{public IB-RFF release} supplies WiSig code, logs and weights. The exact recipe and checkpoint for the published LoRa receiver-and-day result are unavailable in that release \cite{wang2026ib}.
 
-\section{Spec+Siamese Reimplementation}
-Ma et al.\ \cite{ma2025robust} train the from-scratch comparison with a shared nine-convolution residual extractor, one pooling layer, 512- and 256-unit dense layers, and a linear TX head. Their Shen evaluation uses two source receivers. We apply that objective to the registered P-H5$\times$160 source data and six fold/seed pairs. Each epoch visits every source training packet as an anchor and samples a partner with the same TX from a different source RX. Independent channel and noise draws yield 32 pairs per step. For each of the 64 anchors the denominator in NT-Xent includes all other views. The contrastive temperature is 0.05. Classification and contrastive example means are summed.
-
-The paper specifies log-magnitude STFT without complete numerical front-end and channel parameters. The reimplementation uses the Shen STFT window and crop convention (128 rectangular samples, hop 64, centered 52 bins), producing a $52\times127$ log-magnitude input before the residual layers. SAME padding and $2\times2$ average pooling yield a $13\times32\times64$ feature map before the dense layers. This reproduces the published parameter scale. The implementation uses an exponential five-tap profile with fractional delays, an eight-tone low-Doppler Jakes approximation, and additive noise. It uses the paper's $5$--$300$ ns, $0$--$5$ Hz, and $10$--$40$ dB draw ranges.
-
-The Adam schedule starts at $3\times10^{-4}$, halves on a 10-epoch source CE plateau, stops after 30 epochs without improvement, and has a 160-epoch cap. Network training uses CUDA BF16 autocast, with FP32 signal processing, CE, and contrastive similarities. Source validation and report inference use FP32. All six source-selected weights enter the paired report. Their source accuracy spans 99.05--99.45\%. One fit stops at epoch 156. The remaining five reach 160 epochs. The cohort uses 239,000 updates and produces 60,000 held packet predictions on 10 RXs.
-
-\section{Audit Boundaries and Companion Overlap}
-The existing source validation packets already selected checkpoints; feature diagnostics are exploratory. TrueIB, five views, local frontend, token geometry, and data origin are inherited from the companion OOB manuscript \cite{oobcompanion}. The old six-RX blind set and Confirm RXs have research history and are not newly independent. No new capture is available. Unknown-TX rejection, FAR/FRR, active spoofing, and calibrated real synchronization-offset robustness are untested.
-
-The S25 TF32-off source analysis retained two net one-packet accuracy changes and one additional changed confusion pattern despite identical weights. Its final ratios are computed from that single analysis execution. S26's separate original-precision source recovery and common target-inference comparisons are recorded without overwriting these historical files. Numeric recovery is an execution observation, not permission to select a better result.
-
-The Spec+Siamese row uses the independent paper-derived implementation specified above. The published external-pretraining variant has a separate data budget. Neither the original two-source-RX test cohort nor a released author checkpoint enters the score.
-
-The ten-claim evidence matrix and ten reviewer answers are updated in the repository. They separate measured system effects, exploratory associations, architectural identities, and unresolved mechanisms. Full negative shift and weak-fit results are retained.
-
-\section{LoRa Dataset and Baseline Reproduction}
-Packet selection uses seed 20261012. For each TX/RX, the first 160 of the 200 fixed selected raw rows form the source-training set and the remaining 40 form source validation. External baseline training recipes follow their respective implementations within this row budget. External paths are CE, DANN, FAN stage 1, IB stage 2, and ASKNet. CE/DANN share encoder/transmitter initialization and noise streams. The TensorFlow-to-PyTorch port passed 103 forward/gradient checks. A misaligned RX validation-label slice in the author entrypoint is repaired and disclosed. Both controls select by source TX CE; DANN's RX loss participates in training. Batch 64, SGD $10^{-3}$, momentum .9, 500-epoch limit, and plateau/early-stop rules are retained. Fixed validation noise replaces dynamically resampled noise.
-
-FAN/IB retain two-stage training, Adam $10^{-3}$, batch 128, 200-epoch limits, and source-validation early stopping. Stage 2 starts from its matching stage-1 checkpoint. The 8192 adaptation uses patch 512/stride 256, 31 tokens of width 128, and the original CPU normalized-HSIC computation. Coefficient .004 was fixed from a historically explored adaptation, not optimized on new target scores. Stage 1 is reused for the FAN control rather than trained twice.
-
-ASKNet retains its complete 8191-mode complex transformation, gating candidates 128--4096, batch 128, Adam $10^{-3}$, 200-epoch limit, and patience 20. All seeds are retained. Full-model feasibility and a batch 128 update were checked before fitting. We retain all six Native ASK fits.
-
-\begin{table*}[t]\centering
-\caption{Additional P-H5$\times$160 adaptations. Accuracy and macro-F1 are RX-equal percentages, with accuracy SD across six fold--seed means. Worst RX is the lowest per-receiver seed mean. Gul Federated was evaluated in Native. ASKNet's Strict-IB arm was deferred.}
+\begin{table*}[!t]\centering
+\caption{Additional P-H5\(\times\)160 adaptations. Accuracies, F1 and worst-RX means are percentages. The \(\pm\) terms are sample fit SDs in pp.}
 \label{tab:adaptations}\input{tables/external_adaptations.tex}
 \end{table*}
 
-The \href{https://github.com/BeechburgPieStar/ASKNet-RFF/blob/f00846d68425315b68ae69b8c6b712e08559c2fe/Lora/logs/h5_rescisnet_k10_per800_trainrxn210_1_day1_seed2023.k_trace.txt}{ASKNet author log} gives 84.52\% mean accuracy on RTL-6 Days 2--4 after training on N210-1 Day 1. This value comes from the public receiver-drift log. Its eight cutoff candidates span 256--2048 and imply 4095 Koopman modes. The released default used for the P-H5$\times$160 adaptation has six candidates spanning 128--4096 and implies 8191 modes. The comparison therefore changes both the signal-refinement configuration and the packet protocol.
+\textit{ASKNet.} The six P-H5\(\times\)160 fits use the public default candidate set, 8191 complex transformation modes, batch 128, Adam at \(10^{-3}\), a 200-epoch cap and patience 20 \cite{liu2026ask}. Held accuracies in fold--seed order are 87.220/40.670/74.520/87.130/89.320/11.690\%. Corresponding source accuracies are 90.650/40.050/77.350/90.550/91.250/11.500\%. The last fit selects epoch 1 and stops at epoch 21. Weak fit and validation results contribute to the reported dispersion. The \href{https://github.com/BeechburgPieStar/ASKNet-RFF/blob/f00846d68425315b68ae69b8c6b712e08559c2fe/Lora/logs/h5_rescisnet_k10_per800_trainrxn210_1_day1_seed2023.k_trace.txt}{author log} uses eight cutoff candidates and 4095 modes on a separate public receiver-drift protocol. The locked, single-seed rerun on that protocol selected by source CE and obtained 95.48\% on RTL-6 Days 2--4, compared with the author log's 84.52\%. The learned cutoffs were 768 and 512, respectively. The \href{https://github.com/hanCChan/crossatten/blob/59c44e1/research/s44_baseline_verification/RESULTS.zh-CN.md}{verification record} gives dataset identifiers, environment, configuration and correct counts.
 
-A one-seed rerun on the public receiver-drift protocol used the eight logged candidates and selected its checkpoint on N210-1 Day 1 validation cross-entropy. It reached 95.48\% on RTL-6 Days 2--4 (+10.97\,pp relative to the author log) with a learned cutoff of 768 (author log: 512). The rerun used PyTorch 2.5 and an RTX 4060 Laptop GPU. The reproduction audit gives the source revision, capture hashes, and daily counts. Table~\ref{tab:adaptations} reports the separate P-H5$\times$160 fits.
+\textit{Gul Federated.} Our adaptation treats each source receiver as a client in the balanced all-client training configuration \cite{gul2026federated}. A $52\times126$ CIS passes through residual widths 32/32/64/64 and a normalized 512-dimensional embedding to a TX head and a gradient-reversed RX head. Settings include source AWGN at 0--49 dB, local SGD with five epochs per round, batch 64, learning rate \(10^{-3}\), and gradient reversal \(\lambda=.01\). The server averages client weights by packet count over 200 rounds; each fit has 125,000 local updates. Training uses FP32 weights and BF16 network operations. The minimum clean source RX-equal CE selects rounds 199/200/200/199/200/198, with source accuracy 34.600--44.250\%. The authors' five-client setting uses 720 segments per TX/RX for training and reports peak evaluation accuracy, compared with 160 and source-only selection here. A single source-only diagnostic with reset local momentum .9 increased round-24 source accuracy from 13.35\% to 44.55\%. The \href{https://github.com/hanCChan/crossatten/tree/2fe246263f75/research/s43_gul_federated}{frozen comparison} retains the six trajectories and receiver-paired estimates.
 
-The \href{https://github.com/BeechburgPieStar/IB-RFF/tree/5a03a04da86c4bbf5cf90f41a55c268bf2152203}{IB-RFF release} supplies ManyRx and ManySig launch settings, logs, and weights. The published study also includes a receiver-and-day LoRa experiment \cite{wang2026ib}. The public release does not provide the matching LoRa recipe or checkpoint, so the results in Table~\ref{tab:adaptations} use our 8192-sample adaptation.
+\begin{table}[!t]\centering
+\caption{Gul adaptation contrasts on Native, in pp. Intervals are conditional on receivers and fits.}
+\label{tab:paired-gul}\input{tables/paired_gul.tex}
+\end{table}
 
-The companion study used 14 source receivers and reported 99.24\% for Shen-CIS and 99.14\% for Shen-RA on six other receivers \cite{oobcompanion}. Its training and test cohorts differ from P-H5$\times$160. Within the present protocol, the historical external evaluation used CPU FP32 for HStem and the Shen/FAN/IB comparators. ASK and Spec+Siamese used CUDA FP32. The matched tokenizer table uses a separate common GPU evaluation (FP32 networks, matmul TF32 off, cuDNN TF32 on, batch 128). The matched-architecture and external HStem means are 97.335\% and 97.333\%, respectively. The receiver bootstrap uses seed 24016 for external comparisons and 26026 for the same-support comparison.
+\section{Tokenizer Controls and Feature Diagnostics}
+\subsection{Pairing and Factorial Results}
+The data-free parameter-matching rule selected Patch-Lite, with 134,266 parameters (0.43\% over HStem). The archived full Patch has 571,434. Long-Patch's six source-selected epochs are 156/171/171/129/159/153 from the 200-epoch schedule. In the same order the source accuracies are 95.250/96.550/96.700/96.100/96.900/96.650\%, and the held accuracies are 91.070/95.330/95.780/94.280/96.120/94.420\%. The \href{https://github.com/hanCChan/crossatten/tree/ad5443e/26-long-patch-control}{paired experiment record} contains the configurations, fit timing, raw-row provenance, joint inference records, and archived predictions' identifiers. Restore procedures retain epoch and RNG state.
 
-Shen et al.'s heterogeneous receiver-change experiment uses five source SDRs and reports results on the 20-receiver collection \cite{shen2024receiver}. Ma et al.'s Spec+Siamese setup uses two source SDRs and reports per-receiver performance on the 20-SDR test set A \cite{ma2025robust}. To summarize Triad-GAN's Fig.~5 \cite{wang2026triad}, we read the vector bar heights and average the 15 receiver values after removing the five source receivers in each setting. For heterogeneous training we exclude RTL-1, Pluto-1, B200-1, B200 mini-1, and B210-1. The estimated means are 84.4\% for homogeneous training and 95.8\% for heterogeneous training. The RIFLE value is the published cross-receiver mean for partially observed transmitter--receiver pairs \cite{zhang2026rifle}.
+\begin{table}[!t]\centering
+\caption{Four BN--GELU configurations. Accuracies and macro-F1 are held-RX-equal percentages.}
+\label{tab:factorial}\input{tables/bn_gelu.tex}
+\end{table}
 
-\section{Tokenizer Fit and Receiver Breakdowns}
-The data-free parameter-matching rule selected Patch-Lite within 1\% of HStem's parameter count. Patch-Lite has 134,266 parameters (0.43\% above HStem). The archived full Patch model has 571,434 parameters.
-\begin{figure*}[t]\centering
-\includegraphics[width=.96\textwidth]{fig08_long_patch.pdf}
-\caption{Same-support Long-Patch results by fold and seed (left) and by receiver (right).}
-\label{fig:long-cohort}
+The three intermediate BNs account for 352 affine parameters. The factorial shares the nominal support, fitting budget and the rest of the network (Table~\ref{tab:factorial}). Adding GELU gives \(+0.752\) pp (\([0.197,1.432]\)) with BN and \(-0.598\) pp (\([-1.150,0.168]\)) without BN. The paired interaction is \(+1.350\) pp (\([0.930,1.750]\)). Removing both intermediate operations retains 96.743\% held accuracy, compared with Long-Patch's 94.500\%. In a separate two-receiver, held-source pilot, HStem improves held accuracy by 4.583 and 1.383 pp. Its source-to-held gap shrinks by 2.437 and 0.342 pp, with the second receiver below the 0.5 pp pilot criterion.
+
+\subsection{Effective Kernels and Source Geometry}
+The round-trip kernel transform has rank 256. Its coefficients can be materialized as a standard inference convolution. Six S1 checkpoints had bit-identical logits on 12,000 source predictions after materialization. BN folding also agrees at a fixed \(10^{-4}\) logit tolerance in all six arms when TF32 is off (maximum \(5.39\times10^{-5}\)). TF32-enabled execution exceeds that tolerance (maximum approximately .01957), with classification agreement. These execution checks use the registered inputs and frozen models.
+
+\begin{table}[!t]\centering
+\caption{Source-validation final geometry. Each statistic is averaged across six fits.}
+\label{tab:source-geometry}\input{tables/source_geometry.tex}
+\end{table}
+
+The effective-kernel energy at 0.25--0.5 cycles per front-end position is 21.808/7.692/4.043\% for P0/S1/H1. In the frozen 18-model join, Spearman correlations with final \(J_w\) and conditional RX scatter are \(-.556\) and \(+.410\). Figure~\ref{fig:kernels} visualizes the frozen measurements. These descriptive associations combine kernels from different interventions and operate in feature coordinates. Table~\ref{tab:source-geometry} adds total between-TX scatter and source accuracy. Centering archived SNR and CFO metadata within TX-by-RX cells yields small SNR--margin and absolute-CFO--margin rank correlations, approximately \([-.028,.058]\) and \([-.057,.032]\) across 24 models. This clarifies why marginal metadata associations cannot identify a single physical cause for held-RX errors. The \href{https://github.com/hanCChan/crossatten/tree/308bb6f/25-tifs-integration}{source geometry analyses} provide layerwise and per-fit statistics.
+
+\begin{figure*}[!t]\centering
+\includegraphics[width=.94\textwidth]{fig04_mechanism_B.pdf}
+\caption{Frozen effective-kernel energy and the descriptive relationship to final $J_w$. The spectral bins refer to the shared front-end coordinates.}
+\label{fig:kernels}
 \end{figure*}
-\begin{table}[t]\centering
-\caption{Shen tokenizer accuracy and macro-F1 from the common archived GPU evaluation.}
-\label{tab:ablations}
-\begin{tabular}{lrrrr}\toprule
-Arm & Parameters & Support & Acc.(\%) & F1(\%)\\\midrule
-P0 Patch-Lite &134266&266&94.648&94.625\\
-S1 Round-trip &134266&266&95.527&95.500\\
-H1 Expanded &134266&350&96.345&96.321\\
-H2 No-mid-BN &133338&350&96.145&96.135\\
-S2 Affine-only &133690&350&96.417&96.402\\
-H0 HStem &133690&350&97.335&97.326\\\bottomrule
-\end{tabular}
+
+\subsection{Receiver and Synchronization Diagnostics}
+HStem's Native mean exceeds Ma's on seven RTL receivers. Ma leads on B200-mini-1, Pluto-1, and B210-1. The archived HStem--DANN Native contrast is negative at B200-mini-1 and B210-1 by 2.017 and 1.217 pp and close to zero on RTL-6. Pluto-1 contributes about 82\% of the 2.632\,pp HStem--Shen-CE Strict-IB difference. The other nine receivers average 0.531 pp. Under Strict-IB, Shen-CE's Pluto-1 recalls on TX32/34/35/39 are 53.833/34.500/10.833/24.333\%, versus 94.500/79.167/82.500/88.333\% for HStem. Largest Shen-CE confusions include TX35-to-32, TX39-to-38, TX34-to-33 and TX32-to-31.
+
+The source circular-shift test reduces HStem from 98.175\% to 21.858/17.775\% at shifts \(-4/+4\). Patch-Lite falls to 22.567/16.983\%. The shift sensitivity remains when the original FFT magnitude is held fixed. Figure~\ref{fig:limits} retains the archived shift curve and the full set of Pluto-1 TXs. These are separate diagnostic cohorts.
+
+\begin{figure*}[!t]\centering
+\includegraphics[width=\textwidth]{fig07_limits.pdf}
+\caption{Circular-shift sensitivity on source-validation windows (left) and per-TX Pluto-1 accuracy in the archived external evaluation (right).}
+\label{fig:limits}
+\end{figure*}
+
+\section{Cost and Cross-Waveform Evaluation}
+The shared Native timing session uses a GeForce RTX 4060 Laptop GPU, PyTorch 2.5.0 and CUDA 12.4. Identical synthetic IQ is resident on the GPU. It times IQ-to-TX-logits under FP32 networks with AMP and TF32 disabled; Shen's CIS retains its FP64 frontend. Each model and batch size has 12 warmups and 72 measured forwards. Each of the 24 model orders is used in three blocks. The live CUDA peak includes deployed PyTorch weights, buffers, input and temporary tensors. The stored Shen-DANN and Gul checkpoints also include their training-only RX heads. The \href{https://github.com/hanCChan/crossatten/tree/2fe246263f75/research/s43_gul_federated/evidence}{same-session timing record} gives all four models and raw synchronized samples, including Gul's B1 median of 1.187 ms and B128 rate of 3,823 packets/s.
+
+\begin{table}[!t]\centering
+\caption{Separate matched tokenizer timing. Batch latencies are p50/p95 in ms.}
+\label{tab:structure-timing}
+\setlength{\tabcolsep}{2.5pt}
+\input{tables/structure_timing.tex}
 \end{table}
 
-\begin{table}[t]\centering
-\caption{Tokenizer accuracy differences and conditional RX 95\% intervals (pp). Positive counts fold--seed means above zero.}
-\label{tab:contrasts}
-\begin{tabular}{lrrr}\toprule
-Contrast&Mean&95\% interval&Positive\\\midrule
-H1--S1&.818&[.562, 1.053]&6/6\\
-S1--P0&.878&[.547, 1.252]&5/6\\
-H0--S2&.918&[.492, 1.295]&4/6\\
-S2--H2&.272&[.135,.410]&5/6\\\bottomrule
-\end{tabular}
-\end{table}
+The matched tokenizer timing session uses the same type of GPU, three warmups and 15 samples, with matmul TF32 off and cuDNN TF32 on (Table~\ref{tab:structure-timing}). The partial operation counts are 95.028M, 55.346M, and 55.477M MACs for HStem, Patch-Lite, and Long-Patch and omit operations such as FFT. Other timing sessions, including the historical Strict-IB timings and the larger literal LoRa ASKNet, remain in the \href{https://github.com/hanCChan/crossatten/tree/bd671cd/publication/tifs_hstem/tables}{archived timing tables}. The literal ASKNet variant has 74,153,872 complex/real elements, or 141,246,353 real degrees of freedom.
 
-The archived criterion combined a mean gain of at least 0.5\,pp, a positive conditional lower bound, five of six positive fit pairs, and positive means in both folds. The smooth-parameterization and expansion contrasts met it. The HStem--affine and affine--No-BN contrasts did not. The same-support HStem--Long-Patch contrast met its corresponding criterion, and Long-Patch source accuracies ranged from 95.250\% to 96.900\%.
+The WiSig ManyRx comparison uses days 1 and 2, with 11,468 and 11,500 evaluation packets across two inner source-domain views and six held receivers per view \cite{hanna2022wisig}. The paired bootstrap resamples receivers within view. Natural accuracies are 84.46\% and 83.60\% for HStem and Long-Patch. The \(\pm10\) kHz losses are 22.61 and 27.66 pp, and equal-content \(\pm9\)-sample placement losses are 0.77 and 4.28 pp. For the CFO contrast one of four fit differences is negative; the placement contrast favors HStem in all four. The \href{https://github.com/hanCChan/crossatten/tree/b170624/research/s29_wisig}{WiSig experiment record} documents input IDs, the equal-content control and the frozen evaluation protocol.
 
-\section{Additional External and Synchronization Results}
-
-The two WiSig source-domain views each hold out six receivers across the first two days. Natural-input accuracy is 84.46\% for HStem and 83.60\% for Long-Patch. In a \href{https://github.com/hanCChan/crossatten/blob/f9698e4/research/s31_wisig/RESULTS.zh-CN.md}{separate CFO augmentation study}, HStem improves under injected offsets, and the paired natural-input change is \(+0.19\)\,pp with conditional interval \([-0.77,1.27]\). The two views yield natural-input changes of \(-0.71\) and \(+1.09\)\,pp.
-
-DANN--CE is $+.673$pp Native, interval $[.208, 1.233]$, but $-.070$pp Strict-IB, interval $[-.247,.152]$. Adversarial training does not give an additional gain in both settings. IB stage 2 exceeds reused FAN stage 1 by .978\,pp Native (interval $[-.037, 2.195]$) and 3.983\,pp Strict-IB ($[3.373, 4.582]$). These differences characterize the given adaptations.
-
-In Native, Spec+Siamese exceeds HStem on B200-mini-1, Pluto-1, and B210-1 by 2.45, 4.48, and 1.02\,pp. HStem is ahead on all seven RTL receivers in this cohort. The observed per-model minima are 93.683\% for HStem (Pluto-1) and 91.517\% for Spec+Siamese (RTL-2), taken at different receivers. The paired analysis uses the same labels and row identifiers. Native H0--DANN is negative on B200-mini-1 and B210-1 by 2.017 and 1.217\,pp and approximately tied on RTL-6. Figure~\ref{fig:rx} includes the S24 RX heatmap.
-
-
-
-Strict-IB H0--CE on Pluto-1 is 21.533\,pp: 93.683\% versus 72.150\%. This RX contributes about 82\% of the overall 2.632\,pp difference. The other nine-RX mean difference is .531\,pp; RTL-6 slightly favors CE. This is a post-hoc decomposition, without removing Pluto-1 or changing the primary table.
-
-The common projection improves CE on most other RXs but decreases Pluto-1 from 85.817\% Native to 72.150\% Strict-IB. Its TX32/34/35/39 recalls are 53.833/34.500/10.833/24.333\%, versus H0's 94.500/79.167/82.500/88.333\%. The largest CE confusions are TX35-to-32, TX39-to-38, TX34-to-33, and TX32-to-31. Figure~\ref{fig:limits} shows all ten TXs; these patterns do not uniquely identify CFO, SNR, or RX hardware as a cause.
-
-Six Native ASK Dev accuracies are 87.220, 40.670, 74.520, 87.130, 89.320, 11.690\% (mean 65.092\%, fit SD 31.936\,pp). Source accuracies are 90.650, 40.050, 77.350, 90.550, 91.250, 11.500\%. The last selects epoch 1 and stops at 21 under its registered patience 20.
-
-Weak source learning substantially lowers the mean; it does not show that all successful models specifically fail at new receivers. These fit-to-fit differences explain why a receiver-level interval alone does not capture ASK performance variation.
-
-The aligned HStem source accuracy of 98.175\% falls to 21.858/17.775\% at shifts $-4/+4$. Patch-Lite falls to 22.567/16.983\%. The sensitivity persists with the original FFT magnitude held fixed. These comparisons use extracted windows and circular shifts. Figure~\ref{fig:limits} shows the full source perturbation curves.
-
-The S26 common timing comparison yields partial dispatcher counts of 95.028M, 55.346M, and 55.477M MACs for HStem, Patch-Lite, and Long-Patch, respectively. Partial counts omit unsupported operations including FFT.
-
-\IEEEtriggeratref{3}
+\IEEEtriggeratref{5}
 \bibliographystyle{IEEEtran}
 \bibliography{references}
+
 \clearpage
 \onecolumn
-\section{Frozen-Source PCA Cohorts}
-Each arm uses its own deterministic top-two PCA components of final per-packet L2 features. Every panel shows 50 TX-by-RX source cell centroids. Colors identify TX31--40 and shape identifies source RX. Each model has a separate coordinate system. The main paper reports the quantitative scatter measures.
-\begin{center}
-\includegraphics[width=.94\textwidth]{supp_pca_f0_s201.pdf}\\[2pt]
-\small Fold 0, seed 201. P0, S1, H1, and H0 in separate coordinate systems.
-\end{center}
-\begin{center}
-\includegraphics[width=.94\textwidth]{supp_pca_f0_s202.pdf}\\[2pt]
-\small Fold 0, seed 202. P0, S1, H1, and H0 in separate coordinate systems.
-\end{center}
-\begin{center}
-\includegraphics[width=.94\textwidth]{supp_pca_f0_s203.pdf}\\[2pt]
-\small Fold 0, seed 203. P0, S1, H1, and H0 in separate coordinate systems.
-\end{center}
-\newpage
-\begin{center}
-\includegraphics[width=.94\textwidth]{supp_pca_f1_s201.pdf}\\[2pt]
-\small Fold 1, seed 201. P0, S1, H1, and H0 in separate coordinate systems.
-\end{center}
-\begin{center}
-\includegraphics[width=.94\textwidth]{supp_pca_f1_s202.pdf}\\[2pt]
-\small Fold 1, seed 202. P0, S1, H1, and H0 in separate coordinate systems.
-\end{center}
-\begin{center}
-\includegraphics[width=.94\textwidth]{supp_pca_f1_s203.pdf}\\[2pt]
-\small Fold 1, seed 203. P0, S1, H1, and H0 in separate coordinate systems.
-\end{center}
+\section{Frozen Source-Validation PCA Cohorts}
+Each model has its own top-two PCA basis, fit to final per-packet L2-normalized embeddings. Every panel shows the 50 TX-by-RX cell centroids; color identifies TX and marker shape identifies source RX. Axes describe separate model-specific coordinate systems. The original-dimensional results are in the main manuscript and Table~\ref{tab:source-geometry}.
+
+\begin{figure}[!ht]\centering
+\includegraphics[width=.94\textwidth]{supp_pca_f0_s201.pdf}\par
+\includegraphics[width=.94\textwidth]{supp_pca_f0_s202.pdf}\par
+\includegraphics[width=.94\textwidth]{supp_pca_f0_s203.pdf}
+\caption{All three fold-0 seeds in ascending order. Each row shows Patch-Lite, S1, H1, and HStem.}
+\end{figure}
+\clearpage
+\begin{figure}[!ht]\centering
+\includegraphics[width=.94\textwidth]{supp_pca_f1_s201.pdf}\par
+\includegraphics[width=.94\textwidth]{supp_pca_f1_s202.pdf}\par
+\includegraphics[width=.94\textwidth]{supp_pca_f1_s203.pdf}
+\caption{All three fold-1 seeds in ascending order. Each row shows Patch-Lite, S1, H1, and HStem.}
+\end{figure}
 \end{document}

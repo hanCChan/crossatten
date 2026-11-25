@@ -14,6 +14,31 @@
     "path": "26-long-patch-control/RESULTS.json",
     "sha256": "0888d8b3143aac8e89d3791aafc04995a3e9bdd50ba933773fc73ed8cad687d1"
   },
+  "method_geometry": {
+    "commit": "ad5443e5a3242208fe0474441a21df3fa3536fd0",
+    "path": "26-long-patch-control/METHOD_DERIVATION.json",
+    "sha256": "1cef1e758e080ab92327dcf2ea0adb1353499d155198b251cd99fe20f6f12e87"
+  },
+  "kernel_controls": {
+    "commit": "f856725147ce8e9f733ca0c761c878588e0a1148",
+    "path": "22-mechanism-closure/summary.json",
+    "sha256": "d0b43443be63be318e513abae670220e9aa88ff1521d23d49482e4544d0d9119"
+  },
+  "geometry": {
+    "commit": "308bb6ff9ec33f4ed70e4bb0e58cc831366a8f18",
+    "path": "25-tifs-integration/MECHANISM_EXTENSION.json",
+    "sha256": "1e2bb836975752a8ccfd874e1c21b7c09aab32b616995bf8acbb25ff5263a450"
+  },
+  "source_accuracy": {
+    "commit": "308bb6ff9ec33f4ed70e4bb0e58cc831366a8f18",
+    "path": "25-tifs-integration/source_tx_rx_margins.csv",
+    "sha256": "ce87046ed69717a397d116213b6ae82ec6f10cd5d79893884c123a92a6654499"
+  },
+  "pca": {
+    "commit": "308bb6ff9ec33f4ed70e4bb0e58cc831366a8f18",
+    "path": "25-tifs-integration/PCA_PROVENANCE.json",
+    "sha256": "15dcf2936a57a91ab376559a9779f6d97d9e77de310cbeb1a05385065263c4b0"
+  },
   "structure_cost": {
     "commit": "ad5443e5a3242208fe0474441a21df3fa3536fd0",
     "path": "26-long-patch-control/COSTS.json",

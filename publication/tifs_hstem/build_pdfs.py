@@ -25,8 +25,10 @@ def build(stem, filename, engine="-pdf"):
         raise SystemExit(f"Unresolved LaTeX reference: {stem}")
     info = subprocess.check_output(["pdfinfo", str(pdf)], text=True)
     count = int(re.search(r"(?m)^Pages:\s+(\d+)", info).group(1))
-    if stem == "main" and count > 13:
-        raise SystemExit(f"Manuscript has {count} pages; the first-submission limit is 13")
+    if stem == "main" and count != 12:
+        raise SystemExit(f"Manuscript has {count} pages; this revision requires 12")
+    if stem == "supplement" and count > 6:
+        raise SystemExit(f"Supplement has {count} pages; the submission bundle budgets six")
     output = HERE / "output/pdf" / filename
     output.parent.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(pdf, output)

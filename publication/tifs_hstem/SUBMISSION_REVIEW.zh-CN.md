@@ -1,29 +1,24 @@
-# HStem TIFS 投稿审阅
+# HStem TIFS 投稿审阅清单
 
-稿件以高效跨接收机 LoRa 识别为主线。正文先给出 HStem 的分层构造和参数效率，再用同支持对照、BN×GELU 与冻结表征结果解释性能。接收机来源在协议中说明，同步和独立采集边界集中在 Discussion。
-
-| 项目 | 审阅结论 |
+| 审阅项目 | 当前交付 |
 |---|---|
-| 核心创新 | 在同输入、32×64 Token、名义卷积支持、中心和 MHA 架构下，HStem 较 Long-Patch 提升 2.835 pp，六组配对全部领先。Fig. 2 两条路径标出匹配结构评估的准确率 97.335% / 94.500% 与整网参数量 133,690 / 138,346。Native 主表中 HStem 的准确率为 97.333%。 |
-| 结构归因 | S26 同支持对照为主，S22 的参数化和归一化对照、S28 的 BN×GELU 正向交互与未达门槛的 held-source pilot 一并保留。 |
-| 外部协议 | 正文主要对照为 Spec+Siamese、Shen-DANN 和 Shen-CE，保留 Native 与 Strict-IB 的统一协议和配对统计。文献表标出各自 RX 划分和训练预算；Triad-GAN 的约 95.8% 为原文 Fig. 5(b) 中 15 个未见 RX 的估算均值。14→6 的两个结果引用关联 OOB 稿。 |
-| 统计与运行成本 | 新增 Accuracy–Parameters 和 Accuracy–Throughput 主图。配对条件区间统一进入结果表，保留 B1/B128 p50/p95、吞吐、峰值 PyTorch CUDA 分配和参数。S24 和 S26 的独立计时保留为历史补充。 |
-| 复现质量核验 | S44 的一次 ASKNet 原协议复训在 RTL-6 Day 2–4 达到 95.48%，作者日志为 84.52%。同时核对了 Gul 优化预算及 IB-RFF 的公开 LoRa 配置和权重可用性。[S44 核验](../../research/s44_baseline_verification/RESULTS.zh-CN.md) |
-| WiSig | 正文保留天然输入、受控频偏和时移三个对照及条件区间。两套历史源域视图的详情与 CFO 增强结果收在补充材料。 |
-| 新 LoRa 采集 | 2026-11-25 复核工作区仍缺少带采集来源的新数据。给出 HStem、Spec+Siamese、Shen-DANN 的冻结评价及 Long-Patch 结构对照方案。[独立确认方案](INDEPENDENT_LORA_VALIDATION.zh-CN.md) |
-| OOB 论文贡献边界 | 两篇工作共享语料、TrueIB、五视图和前端。OOB 用冻结路径干预诊断频带依赖，当前稿用同一普通 MHA 后端和配对训练测量 Tokenizer 构造的效果。[关联工作说明](PRIOR_WORK_DISCLOSURE.md) |
+| 主稿 | 12 页英文 IEEEtran 双栏稿，参考文献计入页数。八张主图提供 PDF 和 SVG，LaTeX 编译无未解析的引用和越界警告。 |
+| 补充材料 | 6 页英文稿。保留额外基线全组均值和复现细节、原文协议对照、因子消融、分层几何、逐 TX 与同步诊断，以及全部六组源域 PCA。 |
+| 关键证据 | 同支持 GPU 中 HStem 97.335%、Long-Patch 94.500%，六组配对均领先，均值 2.835 pp，条件 95% 区间 [2.253, 3.530] pp。Native HStem 为 97.333% 准确率、97.325% Macro-F1、93.683% 最差 RX。 |
+| 参数与计时 | HStem 133,690 参数，Long-Patch 138,346。相对 Native Spec+Siamese 缩减 99.04%。同 GPU 会话 B128 8,451 packets/s，为 Spec+Siamese 的 1.96 倍。B1 p50/p95 及峰值显存保留。复算了原始 B128 计时样本的中位数和吞吐。 |
+| 额外对照 | Native/Strict-IB 分开。参数化、支持扩张、BN×GELU 和 WiSig 结果保留对应条件区间。WiSig 两套视图的样本数和相同内容的时间位移对照写入正文与补充材料。 |
+| 冻结边界 | 本次只读模型实现、论文和冻结汇总。模型训练 0 次，封存目标波形访问 0 次。未改模型、权重、协议和实验记录。 |
+| 关联工作 | TrueIB、五视图、共享 CNN 和 token 接口明确归属于关联 OOB 工作。贡献定位为渐进式 token 构造、同支持对照和效率。见 [重叠披露](PRIOR_WORK_DISCLOSURE.md)。 |
+| 文献与插图 | 六篇全文完成下载、文本核阅与渲染。Wang 的 IB-RFF 按官方出版及作者材料核对元数据，全文标为未取得。见 [文献调研](TIFS_REFERENCE_REVIEW.zh-CN.md)、[图稿审阅](FIGURE_REVIEW.zh-CN.md)。 |
 
-## 投稿材料
+## 投稿文件
 
-- 英文 [LaTeX 主稿](main.tex)、[补充材料](supplement.tex)、[投稿信草稿](COVER_LETTER.md)、[复现说明](REPRODUCTION.md)和[关联工作说明](PRIOR_WORK_DISCLOSURE.md)。构建脚本生成并逐页渲染四份 PDF。
-- [数字来源](EVIDENCE_SOURCES.json)以 Git 提交号、路径和 SHA-256 绑定表格和主结果图。用 Python 运行 [build_tables.py](build_tables.py) 的 check 模式核对生成表。[build_figures.py](build_figures.py)从相同输入重建效率与消融图。
-- 使用 [build_pdfs.py](build_pdfs.py) 和 TeX Live 构建。期刊初投主稿上限为 13 页双栏，参考文献计入主稿，补材另算。[IEEE 作者指南](https://signalprocessingsociety.org/publications-resources/information-authors) [TIFS 可复现性说明](https://signalprocessingsociety.org/publications-resources/ieee-transactions-information-forensics-and-security)
+- [主稿](output/pdf/hstem_tifs_manuscript.pdf)、[补充材料](output/pdf/hstem_tifs_supplement.pdf)、[投稿信](output/pdf/hstem_tifs_cover_letter.pdf)、[复现说明](output/pdf/hstem_tifs_reproduction.pdf)。
+- [主稿源码](main.tex)、[补充材料源码](supplement.tex)、[证据清单](EVIDENCE_SOURCES.json)、[绘图规范](FIGURE_STYLE.md)、[新旧页对照](output/pdf/hstem_tifs_page_comparison.pdf)。
+- 首投 Regular Paper 上限 13 页，通常无需编辑批准的补材篇幅为 6 页。参见 [IEEE SPS 作者指南](https://signalprocessingsociety.org/publications-resources/information-authors) 与 [TIFS 期刊页面](https://signalprocessingsociety.org/publications-resources/ieee-transactions-information-forensics-and-security)。
 
-S44 是既有外部对照的质量核验。HStem、既有权重及 P-H5×160 历史评价沿用冻结版本。
+## 提交前由作者确认
 
-## 需要作者确认
-
-- 作者名单、排序、单位、通讯方式、ORCID、基金和利益声明。当前 PDF 留作无署名审阅版本。
-- 关联 OOB 论文的实际投稿或出版状态、正式引用与可提供的版本。核实后同步更新参考文献与披露材料。
-- 最终数据及代码可用性声明，包含大体量数据、权重、逐包预测和受限数据的实际访问方式。
-- 独立 LoRa 采集结果若可获得，须先完成来源核验和一次冻结评价，再决定如何加入正文。当前版本保留已对齐、历史留出 RX 的研究范围。
+- 作者顺序、单位与通讯信息，ORCID、基金与利益声明。当前稿为匿名审阅版。以四作者及两条脚注测试版面，仍为 12 页。填充 [作者信息模板](author_metadata.example.tex) 后复核篇幅与投稿信签名。
+- 关联 OOB 工作的出版或投稿状态、正式引用及可供编辑审阅的版本。
+- 正式数据与代码可用性声明，特别是权重、逐包预测和波形的获得方式。

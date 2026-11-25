@@ -1,10 +1,12 @@
 """Build submission tables from immutable aggregate evidence, without model or IQ I/O."""
 
 import argparse
+import csv
 import hashlib
 import json
 from pathlib import Path
 import subprocess
+from statistics import mean
 
 
 HERE = Path(__file__).resolve().parent
@@ -15,6 +17,11 @@ INPUTS = {
     "external": ("dde0ef9", f"{S24}/RESULTS.json"),
     "external_cost": ("dde0ef9", f"{S24}/COSTS.json"),
     "structure": ("ad5443e", f"{S26}/RESULTS.json"),
+    "method_geometry": ("ad5443e", f"{S26}/METHOD_DERIVATION.json"),
+    "kernel_controls": ("f856725", "22-mechanism-closure/summary.json"),
+    "geometry": ("308bb6f", "25-tifs-integration/MECHANISM_EXTENSION.json"),
+    "source_accuracy": ("308bb6f", "25-tifs-integration/source_tx_rx_margins.csv"),
+    "pca": ("308bb6f", "25-tifs-integration/PCA_PROVENANCE.json"),
     "structure_cost": ("ad5443e", f"{S26}/COSTS.json"),
     "factorial": ("bebf7d6", "28ac-mechanism-training/RESULTS.json"),
     "stress": ("b170624", "research/s29_wisig/evidence/SUMMARY.json"),
@@ -40,7 +47,10 @@ def read_inputs():
         commit = git_bytes("rev-parse", revision).decode().strip()
         payload = git_bytes("show", f"{commit}:{path}")
         origins[name] = {"commit": commit, "path": path, "sha256": hashlib.sha256(payload).hexdigest()}
-        values[name] = json.loads(payload)
+        if path.endswith(".csv"):
+            values[name] = list(csv.DictReader(payload.decode().splitlines()))
+        else:
+            values[name] = json.loads(payload)
     return values, origins
 
 
@@ -204,19 +214,27 @@ def generate():
         for key, bn, gelu in (("H0", "Yes", "Yes"), ("LA", "Yes", "No"),
                               ("H2", "No", "Yes"), ("H2_LA", "No", "No"))
     ])
+    final_rows = [row for row in inputs["geometry"]["geometry"] if row["layer"] == "final"]
+    geometry_rows = []
+    for arm in ("P0", "S1", "H1", "H0"):
+        fits = [row for row in final_rows if row["arm"] == arm]
+        scores = [float(row["accuracy_pct"]) for row in inputs["source_accuracy"] if row["arm"] == arm]
+        assert len(fits) == 6 and len(scores) == 300
+        geometry_rows.append([
+            arm, f"{mean(scores):.3f}",
+            f"{mean(row['between_tx'] for row in fits):.3f}",
+            f"{mean(row['conditional_rx'] for row in fits):.4f}",
+            f"{mean(row['tx_to_rx_centroid_ratio'] for row in fits):.3f}",
+            f"{mean(row['tx_to_within_class_ratio'] for row in fits):.3f}",
+        ])
+    result["source_geometry.tex"] = table("lrrrrr",
+        ["Arm", "Source Acc.", r"$B_{\rm TX}$", r"$D_{\rm RX|TX}$", r"$J_c$", r"$J_w$"],
+        geometry_rows)
     first = inputs["structure"]["paired_comparisons"][0]
     assert (first["a"], first["b"], first["positive_fit_pairs"]) == ("H0", "LP", 6)
     assert f'{first["mean_delta_pp"]:.3f}' == "2.835"
     p_h0, p_lp = structure_cost["H0"]["params"], structure_cost["LP"]["params"]
     assert f"{100 * (p_lp / p_h0 - 1):.2f}" == "3.48"
-    accuracy = {row["arm"]: row["accuracy_pct"] for row in inputs["structure"]["summary"]}
-    result["matched_tokenizer_metrics.tex"] = (
-        "% Generated from the matched GPU comparison in the submission evidence ledger.\n"
-        f"\\def\\MatchedHStemAccuracy{{{accuracy['H0']:.3f}\\%}}\n"
-        f"\\def\\MatchedHStemParameters{{{p_h0:,}}}\n"
-        f"\\def\\MatchedLongPatchAccuracy{{{accuracy['LP']:.3f}\\%}}\n"
-        f"\\def\\MatchedLongPatchParameters{{{p_lp:,}}}\n"
-    )
     f = inputs["factorial"]["A"]["primary_interaction"]
     assert f'{f["mean_delta_pp"]:.3f}' == "1.350"
     assert not inputs["factorial"]["C"]["pilot"]["consistent_pilot_signal"]
