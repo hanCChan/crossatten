@@ -11,7 +11,7 @@ From the submission source directory, use Python 3 with Matplotlib and a TeX Liv
     python build_figures.py
     python build_pdfs.py
 
-The evidence ledger records the Git revision, source path, and SHA-256 for every generated table and results plot. Fetch the historical experiment branches to make those Git objects available. PDF outputs are in the output/pdf directory. The architecture and matched tokenizer diagrams are generated from the LaTeX source.
+The evidence ledger binds generated results tables and plots to experiment artifacts. Fetch the historical branches for those Git objects. The LaTeX source contains the vector diagrams and literature protocol table. Submission PDFs are in output/pdf.
 
 ## Reproduce LoRa pairing
 

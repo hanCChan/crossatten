@@ -1,0 +1,14 @@
+% Published protocols and the two project results are explicitly identified.
+\begin{tabularx}{\textwidth}{@{}ll>{\raggedright\arraybackslash}Xl@{}}
+\toprule
+Study / method & Source and evaluation RXs & Training data or evaluation condition & Accuracy (\%)\\
+\midrule
+Shen et al.\ \cite{shen2024receiver} & 5 heterogeneous / 20 tested & 800 captures per source TX/RX before augmentation & Per RX (Fig.~9b)\\
+Ma Spec+Siamese \cite{ma2025robust} & 2 source / 20 tested & 800 source packets per TX/RX; high-SNR test dataset A & Per RX (Fig.~11)\\
+Triad-GAN \cite{wang2026triad} & 5 heterogeneous / 15 held out & Equal mean over held-out bars digitized from Fig.~5(b) & $\approx95.8$\\
+RIFLE \cite{zhang2026rifle} & 20-RX corpus & Partial TX--RX coverage; published cross-RX mean & 93.90\\
+ASKNet \cite{liu2026ask} & N210-1 / RTL-6 & 5,600 training packets in rerun; Day 2--4 mean & 84.52 (log) / 95.48 (rerun)\\
+Companion CIS / RA \cite{oobcompanion} & 14 source / 6 held out & Historical companion experiments & 99.24 / 99.14\\
+HStem (this work) & 5 source / 5 held out per fold & 160 training packets per TX/RX; two folds, three seeds & 97.333\\
+\bottomrule
+\end{tabularx}

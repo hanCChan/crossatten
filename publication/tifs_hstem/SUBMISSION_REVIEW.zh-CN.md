@@ -4,12 +4,12 @@
 
 | 项目 | 审阅结论 |
 |---|---|
-| 核心创新 | 同输入、32×64 Token、最终名义卷积支持、中心及 MHA 下对照 HStem 与 Long-Patch，增益 2.835 pp。Long-Patch 多 3.48% 参数。主图同时展示完整架构和四阶段与直接投影的对照。 |
+| 核心创新 | 同输入、32×64 Token、最终名义卷积支持、中心及 MHA 下对照 HStem 与 Long-Patch，增益 2.835 pp。Long-Patch 多 3.48% 参数。流程图按信号、特征和运算逐步展开，结构图单列两条 Tokenizer 路径，并用相同坐标展示 350 点支持、256 点步长及 94 点重叠。 |
 | 结构归因 | S26 同支持对照为主，S22 的参数化和归一化对照、S28 的 BN×GELU 正向交互与未达门槛的 held-source pilot 一并保留。 |
-| 外部协议 | 正文主要对照为 Spec+Siamese、Shen-DANN 和 Shen-CE，保留 Native 与 Strict-IB 的统一协议和配对统计。补充材料保留 FAN、IB-RFF、ASKNet、Gul 的适配结果与原协议证据。 |
+| 外部协议 | 正文主要对照为 Spec+Siamese、Shen-DANN 和 Shen-CE，保留 Native 与 Strict-IB 的统一协议和配对统计。文献表标出各自 RX 划分和训练预算；Triad-GAN 的约 95.8% 为原文 Fig. 5(b) 中 15 个未见 RX 的估算均值。14→6 的两个结果引用关联 OOB 稿。 |
 | 统计与运行成本 | 新增 Accuracy–Parameters 和 Accuracy–Throughput 主图。配对条件区间统一进入结果表，保留 B1/B128 p50/p95、吞吐、峰值 PyTorch CUDA 分配和参数。S24 和 S26 的独立计时保留为历史补充。 |
 | 复现质量核验 | S44 的一次 ASKNet 原协议复训在 RTL-6 Day 2–4 达到 95.48%，作者日志为 84.52%。同时核对了 Gul 优化预算及 IB-RFF 的公开 LoRa 配置和权重可用性。[S44 核验](../../research/s44_baseline_verification/RESULTS.zh-CN.md) |
-| WiSig | 正文只保留 S29 三个预定端点及 S31 的背景句，标注历史源域两视图。 |
+| WiSig | 正文保留天然输入、受控频偏和时移三个对照及条件区间。两套历史源域视图的详情与 CFO 增强结果收在补充材料。 |
 | 新 LoRa 采集 | 2026-11-25 复核工作区仍缺少带采集来源的新数据。给出 HStem、Spec+Siamese、Shen-DANN 的冻结评价及 Long-Patch 结构对照方案。[独立确认方案](INDEPENDENT_LORA_VALIDATION.zh-CN.md) |
 | OOB 论文贡献边界 | 两篇工作共享语料、TrueIB、五视图和前端。OOB 用冻结路径干预诊断频带依赖，当前稿用同一普通 MHA 后端和配对训练测量 Tokenizer 构造的效果。[关联工作说明](PRIOR_WORK_DISCLOSURE.md) |
 

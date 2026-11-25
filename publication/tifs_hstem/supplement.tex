@@ -122,8 +122,6 @@ The paper specifies log-magnitude STFT without complete numerical front-end and 
 
 The Adam schedule starts at $3\times10^{-4}$, halves on a 10-epoch source CE plateau, stops after 30 epochs without improvement, and has a 160-epoch cap. Network training uses CUDA BF16 autocast, with FP32 signal processing, CE, and contrastive similarities. Source validation and report inference use FP32. All six source-selected weights enter the paired report. Their source accuracy spans 99.05--99.45\%. One fit stops at epoch 156. The remaining five reach 160 epochs. The cohort uses 239,000 updates and produces 60,000 held packet predictions on 10 RXs.
 
-For recent context, the source receivers listed for Fig.~5 in Triad-GAN \cite{wang2026triad} can be excluded from its vector bars. The resulting approximate means over 15 unseen RXs are 84.4\% for homogeneous training and 95.8\% for heterogeneous training. They describe the authors' receiver and training protocol. The available publication leaves key update details open for a same-protocol implementation.
-
 \section{Audit Boundaries and Companion Overlap}
 The existing source validation packets already selected checkpoints; feature diagnostics are exploratory. TrueIB, five views, local frontend, token geometry, and data origin are inherited from the companion OOB manuscript \cite{oobcompanion}. The old six-RX blind set and Confirm RXs have research history and are not newly independent. No new capture is available. Unknown-TX rejection, FAR/FRR, active spoofing, and calibrated real synchronization-offset robustness are untested.
 
@@ -153,7 +151,10 @@ The \href{https://github.com/BeechburgPieStar/IB-RFF/tree/5a03a04da86c4bbf5cf90f
 
 The companion study used 14 source receivers and reported 99.24\% for Shen-CIS and 99.14\% for Shen-RA on six other receivers \cite{oobcompanion}. Its training and test cohorts differ from P-H5$\times$160. Within the present protocol, the historical external evaluation used CPU FP32 for HStem and the Shen/FAN/IB comparators. ASK and Spec+Siamese used CUDA FP32. The matched tokenizer table uses a separate common GPU evaluation (FP32 networks, matmul TF32 off, cuDNN TF32 on, batch 128). The matched-architecture and external HStem means are 97.335\% and 97.333\%, respectively. The receiver bootstrap uses seed 24016 for external comparisons and 26026 for the same-support comparison.
 
+Shen et al.'s heterogeneous receiver-change experiment uses five source SDRs and reports results on the 20-receiver collection \cite{shen2024receiver}. Ma et al.'s Spec+Siamese setup uses two source SDRs and reports per-receiver performance on the 20-SDR test set A \cite{ma2025robust}. To summarize Triad-GAN's Fig.~5 \cite{wang2026triad}, we read the vector bar heights and average the 15 receiver values after removing the five source receivers in each setting. For heterogeneous training we exclude RTL-1, Pluto-1, B200-1, B200 mini-1, and B210-1. The estimated means are 84.4\% for homogeneous training and 95.8\% for heterogeneous training. The RIFLE value is the published cross-receiver mean for partially observed transmitter--receiver pairs \cite{zhang2026rifle}.
+
 \section{Tokenizer Fit and Receiver Breakdowns}
+The data-free parameter-matching rule selected Patch-Lite within 1\% of HStem's parameter count. Patch-Lite has 134,266 parameters (0.43\% above HStem). The archived full Patch model has 571,434 parameters.
 \begin{figure*}[t]\centering
 \includegraphics[width=.96\textwidth]{fig08_long_patch.pdf}
 \caption{Same-support Long-Patch results by fold and seed (left) and by receiver (right).}
@@ -188,6 +189,9 @@ S2--H2&.272&[.135,.410]&5/6\\\bottomrule
 The archived criterion combined a mean gain of at least 0.5\,pp, a positive conditional lower bound, five of six positive fit pairs, and positive means in both folds. The smooth-parameterization and expansion contrasts met it. The HStem--affine and affine--No-BN contrasts did not. The same-support HStem--Long-Patch contrast met its corresponding criterion, and Long-Patch source accuracies ranged from 95.250\% to 96.900\%.
 
 \section{Additional External and Synchronization Results}
+
+The two WiSig source-domain views each hold out six receivers across the first two days. Natural-input accuracy is 84.46\% for HStem and 83.60\% for Long-Patch. In a \href{https://github.com/hanCChan/crossatten/blob/f9698e4/research/s31_wisig/RESULTS.zh-CN.md}{separate CFO augmentation study}, HStem improves under injected offsets, and the paired natural-input change is \(+0.19\)\,pp with conditional interval \([-0.77,1.27]\). The two views yield natural-input changes of \(-0.71\) and \(+1.09\)\,pp.
+
 DANN--CE is $+.673$pp Native, interval $[.208, 1.233]$, but $-.070$pp Strict-IB, interval $[-.247,.152]$. Adversarial training does not give an additional gain in both settings. IB stage 2 exceeds reused FAN stage 1 by .978\,pp Native (interval $[-.037, 2.195]$) and 3.983\,pp Strict-IB ($[3.373, 4.582]$). These differences characterize the given adaptations.
 
 In Native, Spec+Siamese exceeds HStem on B200-mini-1, Pluto-1, and B210-1 by 2.45, 4.48, and 1.02\,pp. HStem is ahead on all seven RTL receivers in this cohort. The observed per-model minima are 93.683\% for HStem (Pluto-1) and 91.517\% for Spec+Siamese (RTL-2), taken at different receivers. The paired analysis uses the same labels and row identifiers. Native H0--DANN is negative on B200-mini-1 and B210-1 by 2.017 and 1.217\,pp and approximately tied on RTL-6. Figure~\ref{fig:rx} includes the S24 RX heatmap.

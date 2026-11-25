@@ -1,0 +1,60 @@
+% The IQ traces and feature maps are schematic.
+\begin{tikzpicture}[
+  x=1mm,y=1mm,font=\fontsize{8}{9.2}\selectfont,text=rfInk,
+  heading/.style={font=\fontsize{8.6}{10}\selectfont\bfseries},
+  measure/.style={font=\fontsize{7.7}{9}\selectfont},
+  operator/.style={draw=rfRule,fill=white,line width=.48pt,
+    minimum height=8mm,inner sep=1pt,align=center},
+  flow/.style={-{Latex[length=1.45mm,width=1mm]},draw=rfInk,line width=.58pt}]
+
+\node[heading] at (12,29) {Aligned IQ};
+\node[heading] at (52,29) {Shared RF front-end};
+\node[heading,text=rfAccent] at (95,29) {HStem};
+\node[heading] at (136,29) {Attention readout};
+\node[heading] at (169,29) {TX prediction};
+\foreach \leftedge/\rightedge in {0/24,28/76,80/110,114/155,159/178}
+  \draw[rfRule,line width=.42pt] (\leftedge,25.6) -- (\rightedge,25.6);
+
+% Analytic quadrature pair for the input window.
+\foreach \height/\component/\phase/\tone in {19.5/I/0/rfAccent,13.5/Q/-90/rfInk} {
+  \node[measure,anchor=west,inner sep=0pt] at (0,\height) {$\component$};
+  \draw[rfRule!60,line width=.35pt] (5,\height) -- (24,\height);
+  \draw[\tone,line width=.58pt,samples=105,domain=0:18,variable=\u]
+    plot ({5+\u},{\height+1.62*cos(19*\u+1.9*\u*\u+\phase)});
+}
+
+\node[operator,minimum width=13mm] (band) at (35.4,16.5) {RMS\\TrueIB};
+\node[measure,inner sep=0pt] (views) at (52.6,16.5) {$I\;Q\;S\;A\;\phi$};
+\node[operator,minimum width=12mm] (cnn) at (69.2,16.5) {7/5-tap\\CNN};
+\draw[flow] (25,16.5) -- (band.west);
+\draw[flow] (band.east) -- (views.west);
+\draw[flow] (views.east) -- (cnn.west);
+\draw[flow] (cnn.east) -- (82,16.5);
+
+% Four feature maps at progressively shorter sequence lengths.
+\foreach \center/\halfheight in {83.5/6.0,91/4.8,98.5/3.8,106/2.9} {
+  \draw[rfAccent,fill=rfAccent!11,line width=.55pt]
+    (\center-1.5,16.5-\halfheight) rectangle (\center+1.5,16.5+\halfheight);
+  \draw[rfAccent!50,line width=.32pt]
+    (\center-1.5,16.5) -- (\center+1.5,16.5);
+}
+\foreach \leftedge/\rightedge in {85/89.5,92.5/97,100/104.5}
+  \draw[flow] (\leftedge,16.5) -- (\rightedge,16.5);
+
+\node[operator,minimum width=12mm] (position) at (117.8,16.5) {Proj.\\$+$ position};
+\node[operator,minimum width=11mm] (attn) at (132.8,16.5) {MHA\\$\times\,2$};
+\node[operator,minimum width=11mm] (pool) at (147.2,16.5) {LN\\Mean};
+\node[operator,minimum width=9mm] (linear) at (161.1,16.5) {Linear};
+\node (prediction) at (174.1,16.5) {$\hat y$};
+\draw[flow] (107.5,16.5) -- (position.west);
+\draw[flow] (position.east) -- (attn.west);
+\draw[flow] (attn.east) -- (pool.west);
+\draw[flow] (pool.east) -- (linear.west);
+\draw[flow] (linear.east) -- (prediction.west);
+
+\node[measure] at (12,5.1) {$8192$ complex samples};
+\node[measure] at (52,5.1) {$8192 \times 32$ features};
+\node[measure,text=rfAccent] at (95,5.1) {$32 \times 64$ tokens};
+\node[measure] at (136,5.1) {$64$-dimensional embedding};
+\node[measure] at (169,5.1) {$10$ logits};
+\end{tikzpicture}
