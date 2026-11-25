@@ -105,14 +105,17 @@ def fit(source, validation, directory, registered, fold, seed):
 
     torch.manual_seed(seed + fold * 10000)
     generator = torch.Generator(device=DEVICE).manual_seed(seed + fold * 10000 + 43000)
-    x, label, rx = (torch.as_tensor(item, device=DEVICE) for item in source)
+    iq, tx_labels, receiver_labels = source
+    x = torch.as_tensor(iq, device=DEVICE)
+    label = torch.as_tensor(tx_labels, dtype=torch.long, device=DEVICE)
+    rx = torch.as_tensor(receiver_labels, dtype=torch.long, device=DEVICE)
     clients = [torch.where(rx == r)[0] for r in range(CLIENTS)]
     if any(len(i) != CLIENT_PACKETS for i in clients):
         raise ValueError("Unequal client counts in registered balanced protocol")
     val_iq, val_y, _ = validation
     val = torch.cat([shen_cis(batch) for batch in torch.as_tensor(val_iq, device=DEVICE).split(128)])
     val = val.contiguous(memory_format=torch.channels_last)
-    val_y = torch.as_tensor(val_y, device=DEVICE)
+    val_y = torch.as_tensor(val_y, dtype=torch.long, device=DEVICE)
 
     model = GulModel().to(DEVICE, memory_format=torch.channels_last)
     optimizer = torch.optim.SGD(model.parameters(), lr=LR, foreach=True)
