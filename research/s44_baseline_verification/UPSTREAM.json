@@ -1,0 +1,162 @@
+{
+  "asknet": {
+    "commit": "f00846d68425315b68ae69b8c6b712e08559c2fe",
+    "evidence": "author log, engineering only locally",
+    "sha256": {
+      "Lora/logs/h5_rescisnet_k10_per800_trainrxn210_1_day1_seed2023.k_trace.txt": "212bb54ba07eabfc911daca90198f7f5da3ca8d49304050302ef85b6a6c501f2",
+      "Lora/run_CIS.py": "5f09ca0a47d4b787ca071a3ccbd2c468cda4a598224c2904a1c30cdd71f61472",
+      "Lora/backbones/ResCISNet.py": "1de366c42881413dc8e4cc25d105e2c563b99f018ff31ffda9b2beb4ae21d29c",
+      "README.md": "75d55dc5f064487248fb109ead19145cc0a6b013339d34a62480f938ff6b2fdc",
+      "weights&datasets.txt": "67e3e21cc04de75a47aa2a86af5f942308863ea2c783c64f285ac2d7861956da"
+    },
+    "accuracy": {
+      "n210_1": {
+        "train_rx": "n210_1",
+        "train_day": 1,
+        "selected_k": 512,
+        "day_accuracy": {
+          "1": 0.9455,
+          "2": 0.9175,
+          "3": 0.96,
+          "4": 0.957
+        },
+        "reported_mean": 0.945,
+        "four_day_mean": 0.945,
+        "days_2_to_4_mean": 0.9448333333333333
+      },
+      "rtl_6": {
+        "train_rx": "n210_1",
+        "train_day": 1,
+        "selected_k": 512,
+        "day_accuracy": {
+          "1": 0.9175,
+          "2": 0.835,
+          "3": 0.854,
+          "4": 0.8465
+        },
+        "reported_mean": 0.8633,
+        "four_day_mean": 0.86325,
+        "days_2_to_4_mean": 0.8451666666666666
+      }
+    },
+    "last_logged_epoch": 148,
+    "selected_pool": 8000,
+    "train_val_sizes": [
+      5600,
+      2400
+    ],
+    "author_log_architecture": {
+      "candidates": [
+        256,
+        512,
+        768,
+        1024,
+        1280,
+        1536,
+        1792,
+        2048
+      ],
+      "koopman_dimension": 4095,
+      "parameter_elements": 23826322,
+      "real_parameter_dofs": 40595347
+    },
+    "released_default_architecture": {
+      "candidates": [
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096
+      ],
+      "koopman_dimension": 8191,
+      "parameter_elements": 74153872,
+      "real_parameter_dofs": 141246353
+    },
+    "tracked_weights": [],
+    "synthetic_logged_architecture": {
+      "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "torch_version": "2.5.0+cu124",
+      "seed": 4401,
+      "batch": 128,
+      "synthetic_optimizer_steps": 3,
+      "fit_count": 0,
+      "seconds": [
+        1.4191925000050105,
+        0.9314546000096016,
+        0.9016943999740761
+      ],
+      "peak_allocated_bytes": 1777138176,
+      "fewer_candidate_train_hours_at_148_epochs": 1.6579814288741261
+    }
+  },
+  "ib_rff": {
+    "commit": "5a03a04da86c4bbf5cf90f41a55c268bf2152203",
+    "sha256": {
+      "README.md": "dacdb36d57ffb58f4c0c7cac1005c1d90531def8e04fe906a869908b2a1d641b",
+      "dataset/link.txt": "a38bc1a134746ac5034c2f9fef01eadaafa7a9140f48c46f54ec949efb7b614c",
+      "utils/load_data.py": "039c2e52e0ae6ca6f0c5698c7f4a2b62cd48274b3e58dc14c2fcd35be132a24a",
+      "main.py": "604a6c2006bf0a3f729981f432b2bebb458df600e662457cbfc6f8ab7cdefff1",
+      "run_all.sh": "58900343f74e420ff307821a3719ae89e6daab822945ea8e4bf596db8cd26215"
+    },
+    "launcher_patch_sizes": {
+      "ManyRx": 16,
+      "ManySig": 32
+    },
+    "datasets": [
+      "ManyRx",
+      "ManySig"
+    ],
+    "weights": [
+      "weights/FAN_DSCNN_16_128_2.0_0.004_1_ManyRx_[1, 2]_test_round=2_seed=2023.pth",
+      "weights/FAN_DSCNN_16_128_2.0_0.004_1_ManyRx_[1, 2]_test_round=3_seed=2023.pth",
+      "weights/FAN_DSCNN_16_128_2.0_0.008_1_ManyRx_[1, 2]_test_round=1_seed=2023.pth",
+      "weights/FAN_DSCNN_16_128_2.0_0.01_1_ManyRx_[1, 2]_test_round=0_seed=2023.pth",
+      "weights/FAN_DSCNN_16_128_2.0_0.01_1_ManyRx_[1, 2]_test_round=3_seed=2023.pth",
+      "weights/FAN_DSCNN_16_128_2.0_0.08_1_ManyRx_[1, 2]_test_round=0_seed=2023.pth",
+      "weights/FAN_DSCNN_16_128_2.0_0.08_1_ManyRx_[1, 2]_test_round=2_seed=2023.pth",
+      "weights/FAN_DSCNN_16_128_2.0_0.0_0_ManyRx_[1, 2]_test_round=0_seed=2023.pth",
+      "weights/FAN_DSCNN_16_128_2.0_0.0_0_ManyRx_[1, 2]_test_round=1_seed=2023.pth",
+      "weights/FAN_DSCNN_16_128_2.0_0.0_0_ManyRx_[1, 2]_test_round=2_seed=2023.pth",
+      "weights/FAN_DSCNN_16_128_2.0_0.0_0_ManyRx_[1, 2]_test_round=3_seed=2023.pth",
+      "weights/FAN_DSCNN_32_128_2.0_0.001_1_ManySig_[1, 2]_test_round=1_seed=2023.pth",
+      "weights/FAN_DSCNN_32_128_2.0_0.004_1_ManySig_[1, 2]_test_round=1_seed=2023.pth",
+      "weights/FAN_DSCNN_32_128_2.0_0.04_1_ManySig_[1, 2]_test_round=0_seed=2023.pth",
+      "weights/FAN_DSCNN_32_128_2.0_0.08_1_ManySig_[1, 2]_test_round=2_seed=2023.pth",
+      "weights/FAN_DSCNN_32_128_2.0_0.0_0_ManySig_[1, 2]_test_round=0_seed=2023.pth",
+      "weights/FAN_DSCNN_32_128_2.0_0.0_0_ManySig_[1, 2]_test_round=1_seed=2023.pth",
+      "weights/FAN_DSCNN_32_128_2.0_0.0_0_ManySig_[1, 2]_test_round=2_seed=2023.pth",
+      "weights/FAN_DSCNN_32_128_2.0_0.0_0_ManySig_[1, 2]_test_round=3_seed=2023.pth",
+      "weights/FAN_DSCNN_32_128_2.0_0.1_1_ManySig_[1, 2]_test_round=0_seed=2023.pth",
+      "weights/FAN_DSCNN_32_128_2.0_0.1_1_ManySig_[1, 2]_test_round=3_seed=2023.pth"
+    ],
+    "logs": [
+      "logs/stage1/ManyRx_pre0_a0.0_round0.log",
+      "logs/stage1/ManyRx_pre0_a0.0_round1.log",
+      "logs/stage1/ManyRx_pre0_a0.0_round2.log",
+      "logs/stage1/ManyRx_pre0_a0.0_round3.log",
+      "logs/stage1/ManySig_pre0_a0.0_round0.log",
+      "logs/stage1/ManySig_pre0_a0.0_round1.log",
+      "logs/stage1/ManySig_pre0_a0.0_round2.log",
+      "logs/stage1/ManySig_pre0_a0.0_round3.log",
+      "logs/stage2/ManyRx_CRD_pre1_a0.004_round3.log",
+      "logs/stage2/ManyRx_CRD_pre1_a0.008_round1.log",
+      "logs/stage2/ManyRx_CRD_pre1_a0.01_round0.log",
+      "logs/stage2/ManyRx_CRD_pre1_a0.08_round2.log",
+      "logs/stage2/ManyRx_CR_pre1_a0.004_round2.log",
+      "logs/stage2/ManyRx_CR_pre1_a0.008_round1.log",
+      "logs/stage2/ManyRx_CR_pre1_a0.01_round3.log",
+      "logs/stage2/ManyRx_CR_pre1_a0.08_round0.log",
+      "logs/stage2/ManySig_CRD_pre1_a0.001_round1.log",
+      "logs/stage2/ManySig_CRD_pre1_a0.04_round0.log",
+      "logs/stage2/ManySig_CRD_pre1_a0.08_round2.log",
+      "logs/stage2/ManySig_CRD_pre1_a0.1_round3.log",
+      "logs/stage2/ManySig_CR_pre1_a0.004_round1.log",
+      "logs/stage2/ManySig_CR_pre1_a0.08_round2.log",
+      "logs/stage2/ManySig_CR_pre1_a0.1_round0.log",
+      "logs/stage2/ManySig_CR_pre1_a0.1_round3.log"
+    ],
+    "tracked_lora_weights": [],
+    "tracked_lora_logs": []
+  }
+}

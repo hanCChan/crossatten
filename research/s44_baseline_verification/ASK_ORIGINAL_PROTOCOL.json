@@ -1,0 +1,36 @@
+{
+  "source_revision": "f00846d68425315b68ae69b8c6b712e08559c2fe",
+  "source_capture": {
+    "dataset": "Shen receiver_drift",
+    "file": "Train/n210_1_day1_wireless_train.h5",
+    "packet_pool": 8000,
+    "training_packets": 5600,
+    "source_validation_packets": 2400
+  },
+  "model": {
+    "iq_length": 8192,
+    "classes": 10,
+    "cutoff_candidates": [256, 512, 768, 1024, 1280, 1536, 1792, 2048],
+    "koopman_modes": 4095,
+    "cis_window": 128,
+    "cis_crop": 0.3
+  },
+  "source_selected_training_fallback": {
+    "seed": 2023,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "maximum_epochs": 200,
+    "batch_size": 128,
+    "early_stopping_patience": 20,
+    "maximum_fits": 1
+  },
+  "evaluation": {
+    "preferred_artifact": "h5_rescisnet_k10_per800_trainrxn210_1_day1_seed2023.pth",
+    "receivers": ["n210_1", "rtl_6"],
+    "days": [1, 2, 3, 4],
+    "batch_size": 512,
+    "packets_per_receiver_day": 2000,
+    "primary_summary": "RTL-6 mean accuracy on Days 2-4",
+    "provenance": "public receiver_drift captures, separate from P-H5x160"
+  }
+}
