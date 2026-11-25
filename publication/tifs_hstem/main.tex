@@ -108,7 +108,7 @@ Stage 3&8&4&2&64&128&158&8192\\
 Stage 4&4&4&0&64&32&350&2048\\\bottomrule
 \end{tabular}\end{table*}
 
-The coordinate count falls from 262,144 after the shared front-end to 2,048 at the token interface. Each stage processes overlapping neighborhoods before reducing the coordinate resolution. Frozen BN is pointwise for this support calculation. The front-end's Fourier operations depend on the complete acquired window.
+The coordinate count falls from 262,144 after the shared front-end to 2,048 at the token interface. The first three stages mix overlapping neighborhoods before reducing their resolution. The last stage groups four adjacent stage-3 positions. Adjacent output tokens consequently share 94 positions of nominal support ($350-256$) in the upstream coordinate system. Frozen BN is pointwise for this calculation. The front-end's Fourier operations depend on the complete acquired window.
 
 \subsection{Long Projection, Nonlinearity, and Budget}
 For fixed frontend features $h$, the two-convolution P0/Long-Patch tokenizer is affine: its effective kernel is a product of the grouped projection and pointwise mixing. HStem interleaves three BN/GELU stages before its final convolution. With frozen BN, its Jacobian can be written
