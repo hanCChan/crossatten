@@ -19,4 +19,6 @@ Gul Federated 在两折、三种子的源域选权评价中达到 42.725% RX 等
 
 六组均完成 200 轮，各 125,000 次源域本地更新。逐 RX 比较见 JSON 和 CSV。保留全部种子。结果只来自历史留出 RX，正式 Confirm 与旧盲测未打开。
 
+源域选中权重准确率为 34.60%–44.25%。本次实现存在源域拟合差距，未形成有竞争力的新外部基线。独立的源域动量诊断已归档。[源域优化诊断](SOURCE_OPTIMIZER_AUDIT.zh-CN.md)
+
 [六组成绩和配对差](evidence/RESULTS.json) · [逐 RX 指标](evidence/RX_METRICS.csv) · [同会话计时](evidence/NATIVE_COST_COMPARE.json) · [源域注册与改动](PROTOCOL.zh-CN.md)

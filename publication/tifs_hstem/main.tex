@@ -13,7 +13,7 @@
 \markboth{Hierarchical RF Tokenization for Cross-Receiver LoRa Identification}{Hierarchical RF Tokenization for Cross-Receiver LoRa Identification}
 \maketitle
 \begin{abstract}
-Radio-frequency fingerprint identification (RFFI) across receivers requires representations that distinguish transmitters under changes in receiver hardware. We propose HStem, a four-stage convolutional tokenizer that progressively transforms local RF features into compact tokens for global attention. On aligned windows from a public multi-receiver LoRa dataset, HStem achieves 97.333\% receiver-equal accuracy with 133,690 parameters. In a controlled experiment with shared input views, token geometry, nominal convolutional support, and attention backend, HStem improves accuracy by 2.835 percentage points over a direct Long-Patch projection with a comparable parameter budget. HStem attains a higher observed mean than a recent Spec+Siamese baseline while using 0.96\% of its parameters and delivering 1.94 times its batch-128 throughput on the same GPU. A matched WiSig experiment shows smaller accuracy losses under controlled frequency offsets and time shifts. The results demonstrate the value of staged RF token formation for parameter-efficient cross-receiver fingerprint identification.
+Radio-frequency fingerprint identification (RFFI) across receivers requires representations that distinguish transmitters under changes in receiver hardware. We propose HStem, a four-stage convolutional tokenizer that progressively transforms local RF features into compact tokens for global attention. On aligned windows from a public multi-receiver LoRa dataset, HStem achieves 97.333\% receiver-equal accuracy with 133,690 parameters. In a controlled experiment with shared input views, token geometry, nominal convolutional support, and attention backend, HStem improves accuracy by 2.835 percentage points over a direct Long-Patch projection with a comparable parameter budget. HStem attains a higher observed mean than a recent Spec+Siamese baseline while using 0.96\% of its parameters and delivering 1.94 times its batch-128 throughput in a shared GPU session. A matched WiSig experiment shows smaller accuracy losses under controlled frequency offsets and time shifts. The results demonstrate the value of staged RF token formation for parameter-efficient cross-receiver fingerprint identification.
 \end{abstract}
 \begin{IEEEkeywords}
 Radio-frequency fingerprint identification, LoRa, cross-receiver identification, tokenization, parameter efficiency, representation analysis.
@@ -137,7 +137,7 @@ HStem and its controls train for 200 epochs using cross-entropy, batch size 64, 
 \subsection{Native and Strict-IB Comparisons}
 The \emph{Native} comparison gives each method the same raw IQ packets and keeps its own feature pipeline, including HStem's TrueIB. The \emph{Strict-IB} comparison applies the common in-band restriction before the other methods' front-ends. Both views share packet identities, receiver roles, and enrolled transmitters. HStem therefore supplies the same in-band reference in both views.
 
-Shen-CE and Shen-DANN use the same CIS residual encoder with and without adversarial source-RX supervision. FAN and IB-RFF test feature attention and subsequent information-bottleneck training. ASKNet retains the full LoRa spectral transformation. The Native comparison also includes a paper-derived, from-scratch Spec+Siamese implementation with cross-RX same-TX pairs, channel and noise augmentation, and a classification and NT-Xent objective \cite{ma2025robust}. The supplement gives method-specific training details and adaptations.
+Shen-CE and Shen-DANN use the same CIS residual encoder with and without adversarial source-RX supervision. FAN and IB-RFF test feature attention and subsequent information-bottleneck training. ASKNet retains the full LoRa spectral transformation. The Native comparison also includes a paper-derived, from-scratch Spec+Siamese implementation with cross-RX same-TX pairs, channel and noise augmentation, and a classification and NT-Xent objective \cite{ma2025robust}. The Native table also includes Gul Federated, a paper-derived balanced all-client adaptation \cite{gul2026federated}. Each source receiver trains its local CIS classifier with a gradient-reversed RX branch, and the server aggregates model updates. The supplement gives method-specific training and adaptation details.
 
 \subsection{Metrics and Paired Estimates}
 We average accuracy and macro-F1 with equal receiver weights across the three seeds per RX. Worst-RX accuracy is the minimum of the ten RX means. Fit standard deviations summarize the six fold--seed means. Paired contrasts first average seed differences on each receiver, then use 10,000 paired bootstrap draws over the ten distinct RXs. The intervals describe receiver variation conditional on this fitted cohort and exclude variation across acquisitions and newly trained seeds. Table captions identify the evaluation sessions.
@@ -145,10 +145,10 @@ We average accuracy and macro-F1 with equal receiver weights across the three se
 
 \section{Identification Accuracy and Efficiency}
 \subsection{LoRa Baseline Comparisons}
-HStem attains 97.333\% receiver-equal Native accuracy. Spec+Siamese is the closest external mean at 95.890\%, and Shen-DANN achieves 94.208\% (Table~\ref{tab:external}). Table~\ref{tab:paired} reports paired uncertainty on the same RXs. With a common in-band restriction, HStem exceeds the strongest available external mean, Shen-CE, by 2.632\,pp.
+HStem attains 97.333\% receiver-equal Native accuracy. Spec+Siamese gives the highest external mean at 95.890\%, followed by Shen-DANN at 94.208\% (Table~\ref{tab:external}). The Gul Federated adaptation attains 42.725\% and also shows weak source fitting under the reduced packet budget (34.600--44.250\% across six fits). Table~\ref{tab:paired} reports paired intervals on the same RXs. With a common in-band restriction, HStem exceeds the strongest available external mean, Shen-CE, by 2.632\,pp.
 
 \begin{table*}[t]\centering
-\caption{External LoRa comparisons. Accuracy and macro-F1 are RX-equal percentages. Fit SD is over six fold--seed means. Worst RX is the lowest per-receiver seed mean. The source-selected models share the evaluation packets. Spec+Siamese is evaluated in Native, and ASKNet's Strict-IB run was deferred.}
+\caption{External LoRa comparisons. Accuracy and macro-F1 are RX-equal percentages. Fit SD is over six fold--seed means. Worst RX is the lowest per-receiver seed mean. The source-selected models share the evaluation packets. Spec+Siamese and Gul Federated are evaluated in Native. ASKNet's Strict-IB arm was deferred.}
 \label{tab:external}\input{tables/external.tex}
 \end{table*}
 
@@ -164,7 +164,7 @@ HStem's worst-RX accuracy is 93.683\% on Pluto-1, compared with Spec+Siamese's 9
 \subsection{Accuracy and Deployment Cost}
 \begin{figure*}[t]\centering
 \includegraphics[width=.96\textwidth]{native_efficiency.pdf}
-\caption{Accuracy and efficiency for the Native deployment comparisons measured in a shared session. Left uses a logarithmic parameter axis. Right uses batch-128 throughput from the median synchronized batch latency.}
+\caption{Native accuracy and efficiency for HStem, Spec+Siamese, and Shen-DANN in the common timing session. Left uses a logarithmic parameter axis. Right uses batch-128 throughput from the median synchronized batch latency. Table~\ref{tab:costs} includes all four timed methods.}
 \label{fig:efficiency}
 \end{figure*}
 
@@ -173,9 +173,9 @@ HStem's worst-RX accuracy is 93.683\% on Pluto-1, compared with Spec+Siamese's 9
 \label{tab:costs}\input{tables/native_cost.tex}
 \end{table*}
 
-Figure~\ref{fig:efficiency} shows the joint accuracy and efficiency comparison. HStem uses 0.96\% of the parameters of Spec+Siamese and processes 8,148 packets/s at batch 128, 1.94 times the Spec+Siamese rate. HStem has the lowest peak memory at batch 1. Its median single-packet latency is 2.191\,ms, compared with 1.272\,ms for Spec+Siamese and 1.195\,ms for Shen-DANN. The smaller parameter count benefits storage and batched throughput while the staged operations add single-packet latency on this device.
+Figure~\ref{fig:efficiency} shows the accuracy and efficiency trade-off. HStem uses 0.96\% of the parameters of Spec+Siamese and processes 8,451 packets/s at batch 128 in the four-model session (1.96 times the Spec+Siamese rate). The earlier shared session gives a ratio of 1.94. The median single-packet times are 1.865, 1.164, 1.086, and 1.187\,ms for HStem, Spec+Siamese, Shen-DANN, and Gul Federated, respectively.
 
-The timing covers each method's complete native front-end and TX classifier under FP32 network inference with TF32 disabled. It starts with an extracted IQ window already on the device. Table~\ref{tab:costs} counts checkpoint parameters. The transmitter-only DANN path that we time uses 13,442,954 parameters. The supplement reports full measurement settings and the earlier timing comparisons.
+The timing covers each method's complete native front-end and TX classifier under FP32 network inference with TF32 disabled. It starts with an extracted IQ window already on the device. Table~\ref{tab:costs} counts checkpoint parameters. The timed transmitter-only paths use 13,442,954 parameters for Shen-DANN and 13,381,130 for Gul Federated. The supplement reports full measurement settings and the earlier timing comparisons.
 
 
 \section{Tokenizer Ablations and Representation Analysis}
@@ -248,6 +248,7 @@ The LoRa result concerns aligned windows and ten enrolled TXs from receivers wit
 \section{Reproduction Resources}
 The \href{https://github.com/hanCChan/crossatten}{research repository} provides experiment definitions, evaluation code, figures, and aggregate results. The supplement describes the source-selected cohorts, numerical execution, training choices, and receiver-level analyses. The raw waveform archive, model weights, and packet predictions are maintained separately.
 
+\IEEEtriggeratref{22}
 \bibliographystyle{IEEEtran}
 \bibliography{references}
 \end{document}

@@ -66,10 +66,25 @@ The left panel of Fig.~\ref{fig:limits} summarizes the archived source-validatio
 \label{fig:limits}
 \end{figure*}
 
+
+\section{Gul Federated Adaptation}
+We implement the balanced, all-client version described by Gul et al.\ \cite{gul2026federated}. Each of the five source receivers in a fold acts as one client. The normalized residual embedding feeds a linear transmitter head and a separate gradient-reversed receiver head. The adaptation uses a $52\times126$ Shen CIS, stages with widths 32/32/64/64, and a 512-dimensional embedding. We use Shen's source-training AWGN range of 0--49\,dB and clean source validation.
+
+All clients start each round from the global weights. Their local SGD uses five epochs per round, batch size 64, learning rate $10^{-3}$, and gradient reversal $\lambda=.01$, one of the settings studied in the reference. The server averages updates by client packet count over 200 rounds. Training uses FP32 weights with BF16 convolution and dense execution. Source and held-receiver inference use FP32 networks. Each run supplies 125,000 local optimizer steps. We select the minimum clean source RX-equal TX cross-entropy across rounds. The reference's original test receivers and packet budget differ from P-H5$\times$160.
+
+The six selected rounds are 199, 200, 200, 199, 200, and 198 in fold--seed order. Source-validation accuracy ranges from 34.600\% to 44.250\%. The reproduction ledger retains all six full source trajectories, same-packet paired contrasts, and per-RX metrics.
+
+The primary deployment comparison times the same four models on one device with twelve warmups and 72 measured forwards per model and batch size. Each of the 24 model orders is used in each of three blocks. The timing and memory definitions below apply to both shared sessions. Gul's receiver head is a training component and is excluded from deployment.
+
 \section{Timing and Throughput}
-The main paper's Native comparison uses three sealed fold-0, seed-201 fits in the same RTX 4060 Laptop GPU session (PyTorch 2.5.0, CUDA 12.4, cuDNN 9.1). Every method receives the same synthetic $B\times2\times8192$ FP32 tensor on the GPU. Timing covers the complete native signal front-end and TX classifier, from a resident packet window to logits. Networks use FP32 with AMP and TF32 disabled. The DANN CIS retains its original FP64 frontend. The DANN transmitter-only path produces identical logits to the full model at both measured batch sizes.
+The earlier Native comparison uses three sealed fold-0, seed-201 fits in the same RTX 4060 Laptop GPU session (PyTorch 2.5.0, CUDA 12.4, cuDNN 9.1). Every method receives the same synthetic $B\times2\times8192$ FP32 tensor on the GPU. Timing covers the complete native signal front-end and TX classifier, from a resident packet window to logits. Networks use FP32 with AMP and TF32 disabled. The DANN CIS retains its original FP64 frontend. The DANN transmitter-only path produces identical logits to the full model at both measured batch sizes.
 
 Each batch size uses 12 warmups per model and 60 measured forwards per model. All six model orders are used in each of 10 blocks. Each sample starts before the forward call and ends after GPU synchronization. At batch 1, the respective median-derived rates for HStem, Spec+Siamese, and Shen-DANN are 456, 786, and 837\,packets/s. These rates describe sequential single-packet calls. Peak memory is separately measured with one model per process and includes deployed weights, buffers, input, and temporary tensors tracked by PyTorch. Driver memory and reserved allocator space are outside that measure.
+
+\begin{table*}[t]\centering
+\caption{Earlier three-model Native timing. B1/B128 show p50/p95 in ms, throughput is derived from B128 p50, and B1/B128 memory gives peak live PyTorch MiB.}
+\label{tab:previous-native-cost}\input{tables/native_cost_s42.tex}
+\end{table*}
 
 The separate S26 timing session used the same GPU model with synthetic resident IQ, FP32 tensors, TF32 off for matmul and on for cuDNN, three warmups, and 15 samples. Table~\ref{tab:timing} reports p50 and p95 batch times and the batch-128 rate at p50.
 \begin{table*}[t]\centering
@@ -168,6 +183,7 @@ The aligned HStem source accuracy of 98.175\% falls to 21.858/17.775\% at shifts
 
 The S26 common timing comparison yields partial dispatcher counts of 95.028M, 55.346M, and 55.477M MACs for HStem, Patch-Lite, and Long-Patch, respectively. Partial counts omit unsupported operations including FFT.
 
+\IEEEtriggeratref{3}
 \bibliographystyle{IEEEtran}
 \bibliography{references}
 \clearpage

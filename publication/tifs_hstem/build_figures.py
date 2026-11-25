@@ -32,19 +32,15 @@ def efficiency(inputs):
     cost = inputs.get("gul_cost", inputs["native_cost"])["rows"]
     accuracy = {r["method"]: r["acc"] for r in inputs["external"]["summary"] if r["view"] == "native"}
     accuracy["ma"] = inputs["ma"]["methods"]["ma"]["acc"]
-    methods = list(METHODS)
-    if "gul_report" in inputs:
-        methods.append(("gul", "Gul Federated", "#694687", "D"))
-        accuracy["gul"] = inputs["gul_report"]["methods"]["gul"]["acc"]
     fig, (params_ax, throughput_ax) = plt.subplots(1, 2, figsize=(7.1, 2.50), layout="constrained",
                                                   sharey=True)
     prepare(params_ax, "Model parameters (log scale)", "Native RX-equal accuracy (%)")
     prepare(throughput_ax, "Batch-128 throughput (packets/s)")
-    values = [100 * accuracy[key] for key, *_ in methods]
+    values = [100 * accuracy[key] for key, *_ in METHODS]
     spread = max(values) - min(values)
     offsets = {"h0": ((8, -4), (-8, -4)), "ma": ((-8, 7), (8, 4)),
-               "dann": ((-8, -7), (8, -4)), "gul": ((-8, 9), (8, 9))}
-    for key, label, color, marker in methods:
+               "dann": ((-8, -7), (8, -4))}
+    for key, label, color, marker in METHODS:
         row = cost[key]
         y = 100 * accuracy[key]
         x = row["params"], row["batches"]["128"]["packets_per_second"]
@@ -57,7 +53,7 @@ def efficiency(inputs):
                         max(98.0, max(values) + max(.8, .06 * spread))))
     params_ax.xaxis.set_major_locator(FixedLocator((100_000, 1_000_000, 10_000_000)))
     params_ax.set_xticklabels(("100k", "1M", "10M"))
-    rates = [cost[key]["batches"]["128"]["packets_per_second"] for key, *_ in methods]
+    rates = [cost[key]["batches"]["128"]["packets_per_second"] for key, *_ in METHODS]
     throughput_ax.set(xlim=(min(3500, min(rates)-400), max(8950, max(rates)+500)))
     throughput_ax.xaxis.set_major_formatter(FuncFormatter(lambda x, _: f"{x:,.0f}"))
     fig.savefig(HERE / "figures/native_efficiency.pdf", metadata=METADATA)

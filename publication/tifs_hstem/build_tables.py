@@ -20,6 +20,8 @@ INPUTS = {
     "stress": ("b170624", "research/s29_wisig/evidence/SUMMARY.json"),
     "cfo_augmentation": ("f9698e4", "research/s31_wisig/evidence/SUMMARY.json"),
     "ma": ("607efa3", "research/s42_lora_baselines/evidence/RESULTS.json"),
+    "gul_report": ("2fe246263f75", "research/s43_gul_federated/evidence/RESULTS.json"),
+    "gul_cost": ("2fe246263f75", "research/s43_gul_federated/evidence/NATIVE_COST_COMPARE.json"),
     "native_cost": ("9a20eb0", "research/s42_lora_baselines/evidence/NATIVE_COST_COMPARE.json"),
 }
 METHODS = (
